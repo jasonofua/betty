@@ -1,0 +1,201 @@
+#!/usr/bin/env python3
+"""Book from the dynamic evaluator.
+
+  python3 book_dynamic.py [--until HH] [--days N] [--dry] [--floor X] [--legs N] [--rank 1,2,3]
+
+Slips are split into parts of at most MAX_LEGS (SportyBet's cap); --legs N
+makes them smaller, which is usually what you want - a 50-leg accumulator
+needs all 50.
+
+Each match contributes up to three options, ranked by how well its own stat
+record supports them. Slip 1 takes every match's BEST option, slip 2 the second,
+slip 3 the third - so the three slips are independent reads of the same board
+rather than three shuffles of one list.
+"""
+import sys, datetime as dt, collections
+
+sys.path.insert(0, '/Users/apple/Downloads/draw')
+import acca as A
+import book_v3 as B
+import fetcher_v2 as F2
+import dynamic_v4 as D
+
+
+def build(until_h=10, floor=None, verbose=True, days=0):
+    """`days` pushes the cutoff that many extra days out - `--until 23 --days 2`
+    means 23:00 the day after tomorrow. Without it the window can never exceed
+    24 hours, because the cutoff is the next occurrence of that hour."""
+    now = dt.datetime.now(A.WAT)
+    cutoff = now.replace(hour=until_h, minute=0, second=0, microsecond=0)
+    if cutoff <= now:
+        cutoff += dt.timedelta(days=1)
+    cutoff += dt.timedelta(days=days)
+    if verbose:
+        print(f"window {now:%a %H:%M} -> {cutoff:%a %d %H:%M} WAT", flush=True)
+
+    evs = [e for e in B.fetch_events_rich()
+           if now < dt.datetime.fromtimestamp(int(e.get('estimateStartTime', 0)) / 1000,
+                                              tz=A.WAT) <= cutoff]
+    # Flashscore fixture days must cover the whole window or the far end joins to
+    # nothing. book_v3 scales this with --days; here it is derived from the cutoff
+    # itself, so a late-evening run that rolls the cutoff forward still fetches
+    # far enough. Offsets 0..N inclusive, never fewer than three days.
+    seen, fx = set(), []
+    span = max(2, (cutoff.date() - now.date()).days)
+    for off in range(span + 1):
+        for f in F2.get_fixtures(off):
+            if f['id'] not in seen:
+                seen.add(f['id'])
+                fx.append(f)
+
+    pairs = D.join(evs, fx,
+                   lambda e: dt.datetime.fromtimestamp(int(e['estimateStartTime']) / 1000, tz=A.WAT),
+                   lambda f: dt.datetime.fromtimestamp(f['ts'], tz=A.WAT))
+    if verbose:
+        print(f"sportybet in window {len(evs)}  |  joined to flashscore {len(pairs)}", flush=True)
+
+    board, st = [], collections.Counter()
+    for ev, f, _s in pairs:
+        h, a = D.records_for(f['id'])
+        if not h or not h.quantities() or not a.quantities():
+            st['no record'] += 1
+            continue
+        kw = {'min_odds': floor} if floor else {}
+        # team names, so markets written as "CD Real Tomayapo Over/Under" resolve
+        # to that team instead of being read as a match total
+        kw['teams'] = (ev.get('homeTeamName'), ev.get('awayTeamName'))
+        picks = D.best_three(ev.get('markets') or [], h, a, **kw)
+        if not picks:
+            st['nothing supported'] += 1
+            continue
+        st['with picks'] += 1
+        ts = dt.datetime.fromtimestamp(int(ev['estimateStartTime']) / 1000, tz=A.WAT)
+        board.append({
+            'ts': ts, 'eid': ev['eventId'], 'fx': f, 'rec': h, 'rec_a': a,
+            'games': len(h.pairs('goals')), 'picks': picks,
+        })
+    board.sort(key=lambda x: x['ts'])
+    if verbose:
+        for k, v in st.most_common():
+            print(f"   {k}: {v}", flush=True)
+    return board
+
+
+# SportyBet caps a slip; anything past this is silently dropped rather than
+# refused - slip 1 asked for 62 legs, the code came back with 60, and the booker
+# reported no shortfall. Split into parts instead of losing legs.
+MAX_LEGS = 50
+
+
+def _fmt(series):
+    """Compact per-game list: whole numbers stay whole."""
+    return "[" + ", ".join(f"{v:g}" for v in series) + "]"
+
+
+def stat_lines(m, pick):
+    """EVERY series behind a pick, for bookings.md.
+
+    The log used to keep one line - "5 games, support 86%" - which is unusable
+    later: you cannot re-check a pick, re-grade it by hand, or see what the
+    engine was looking at when it chose. This writes the whole record for both
+    teams, so a booked slip stays auditable after the caches expire."""
+    out = []
+    q, per, side = D.parse_market(pick['market'],
+                                  set(m['rec'].quantities()) | set(m['rec_a'].quantities()))
+    qk = q if per == 'ft' else (per if q == 'goals' else f'{q}_{per}')
+    out.append(f"support {pick['rate']:.0%}  tally {pick['tally']}  "
+               f"reads '{qk}'  book implies {1 / pick['odds']:.0%}")
+    out.append(f"DECIDED BY  {qk}:")
+    for tag, rec in (('home', m['rec']), ('away', m['rec_a'])):
+        pr = rec.pairs(qk)
+        if pr:
+            out.append(f"   {tag} for {_fmt([f for f, _ in pr])}  "
+                       f"against {_fmt([a for _, a in pr])}")
+    out.append("FULL RECORD:")
+    for tag, rec in (('home', m['rec']), ('away', m['rec_a'])):
+        for quant in rec.quantities():
+            pr = rec.pairs(quant)
+            out.append(f"   {tag} {quant:<16} for {_fmt([f for f, _ in pr])}  "
+                       f"against {_fmt([a for _, a in pr])}")
+    return out
+
+
+def slip(board, rank):
+    """Every match's option at this rank, as bookable selections."""
+    legs, seen_ev = [], set()
+    for m in board:
+        if len(m['picks']) <= rank:
+            continue
+        if m['eid'] in seen_ev:
+            continue                     # same event twice - SportyBet merges them
+        seen_ev.add(m['eid'])
+        p = m['picks'][rank]
+        legs.append({
+            'ts': m['ts'], 'match': f"{m['fx']['home']} v {m['fx']['away']}",
+            'league': m['fx']['league'], 'games': m['games'],
+            'label': f"{p['market']} / {p['outcome']}  [{p['tally']}]",
+            'odds': p['odds'], 'rate': p['rate'], 'stats': stat_lines(m, p),
+            'bs': dict(eventId=m['eid'], productId=3, marketId=str(p['mid']),
+                       specifier=p['spec'], outcomeId=str(p['oid'])),
+        })
+    return legs
+
+
+def main():
+    dry = '--dry' in sys.argv
+    until = int(sys.argv[sys.argv.index('--until') + 1]) if '--until' in sys.argv else 10
+    floor = float(sys.argv[sys.argv.index('--floor') + 1]) if '--floor' in sys.argv else None
+    days = int(sys.argv[sys.argv.index('--days') + 1]) if '--days' in sys.argv else 0
+    board = build(until, floor, days=days)
+    if not board:
+        print("\n>> no supported options on this board")
+        return
+
+    only = None
+    if '--rank' in sys.argv:
+        only = {int(x) - 1 for x in sys.argv[sys.argv.index('--rank') + 1].split(',')}
+    for rank in range(D.TOP_N):
+        if only is not None and rank not in only:
+            continue
+        allpicks = slip(board, rank)
+        if not allpicks:
+            print(f"\n=== SLIP {rank + 1}: no match had a #{rank + 1} option")
+            continue
+        size = int(sys.argv[sys.argv.index('--legs') + 1]) if '--legs' in sys.argv else MAX_LEGS
+        size = max(1, min(size, MAX_LEGS))
+        # ONE code per rank. When the board has more than `size` picks, keep the
+        # best-supported `size` of them and drop the rest - do not spill into a
+        # second code. Ranked by support rate, ties to the larger sample.
+        dropped = max(0, len(allpicks) - size)
+        legs = sorted(allpicks, key=lambda l: (-l['rate'], -l['games']))[:size]
+        legs.sort(key=lambda l: l['ts'])          # back into kickoff order to read
+        combo = 1.0
+        for l in legs:
+            combo *= l['odds']
+        print(f"\n=== SLIP {rank + 1} — each match's #{rank + 1} option — "
+              f"{len(legs)} legs, combined ~{combo:,.0f}x"
+              + (f"   ({dropped} weakest dropped from {len(allpicks)})" if dropped else ""))
+        for l in legs:
+            print(f"   {l['ts']:%a %H:%M}  {l['match'][:40]:<40} {l['games']}g  "
+                  f"{l['rate']:>4.0%}  {l['label']}  @{l['odds']}")
+        if dry:
+            continue
+        bk = A.book([l['bs'] for l in legs])
+        if bk and bk.get('code'):
+            # `booked` is the count SportyBet echoes in the POST reply; `verified`
+            # is what re-reading the finished code actually returns. They can
+            # disagree - R3KM21 echoed 25 and held 23, and comparing only `booked`
+            # reported a full slip while Bidhannagar and EL Nacional were gone.
+            got = bk.get('verified') or bk['booked']
+            extra = "" if got == bk['req'] else f"  (booked {got}/{bk['req']})"
+            print(f"   >> CODE {bk['code']}   {bk['url']}{extra}")
+            A.log_booking(bk['code'], bk['url'],
+                          f"dynamic_v4 slip{rank + 1} until {until}:00" + (f" +{days}d" if days else ""),
+                          [(l['ts'].timestamp(), l['match'], l['label'], l['odds'],
+                            l['stats']) for l in legs])
+        else:
+            print(f"   >> booking failed: {bk.get('msg') if bk else 'no selections'}")
+
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,6860 @@
+{
+ "Africa: Africa Cup of Nations Women": {
+  "mean": 2.864,
+  "n": 249,
+  "sd": 2.28,
+  "var": 5.199
+ },
+ "Africa: CAF Champions League": {
+  "mean": 1.929,
+  "n": 14,
+  "sd": 1.28,
+  "var": 1.638
+ },
+ "Africa: CAF Confederation Cup": {
+  "mean": 2.375,
+  "n": 8,
+  "sd": 1.111,
+  "var": 1.234
+ },
+ "Africa: CECAFA Championship Women": {
+  "mean": 4.077,
+  "n": 26,
+  "sd": 3.092,
+  "var": 9.561
+ },
+ "Africa: CECAFA Clubs Cup": {
+  "mean": 2.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Africa: CECAFA Kagame Cup": {
+  "mean": 2.077,
+  "n": 13,
+  "sd": 1.328,
+  "var": 1.763
+ },
+ "Africa: COSAFA Cup Women": {
+  "mean": 3.51,
+  "n": 49,
+  "sd": 2.516,
+  "var": 6.332
+ },
+ "Argentina: Copa Argentina": {
+  "mean": 2.642,
+  "n": 668,
+  "sd": 1.391,
+  "var": 1.936
+ },
+ "Argentina: Copa Diego Maradona": {
+  "mean": 2.333,
+  "n": 6,
+  "sd": 0.457,
+  "var": 0.209
+ },
+ "Argentina: Copa de la Liga Profesional": {
+  "mean": 1.854,
+  "n": 138,
+  "sd": 1.385,
+  "var": 1.917
+ },
+ "Argentina: Copa de la Superliga": {
+  "mean": 1.417,
+  "n": 12,
+  "sd": 0.479,
+  "var": 0.229
+ },
+ "Argentina: International Super Cup": {
+  "mean": 2.0,
+  "n": 9,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Argentina: Liga Profesional": {
+  "mean": 2.097,
+  "n": 2186,
+  "sd": 1.507,
+  "stats": {
+   "corners": {
+    "mean": 4.333,
+    "n": 36
+   },
+   "fouls": {
+    "mean": 12.861,
+    "n": 36
+   },
+   "offsides": {
+    "mean": 1.417,
+    "n": 36
+   },
+   "shots": {
+    "mean": 12.806,
+    "n": 36
+   },
+   "sot": {
+    "mean": 4.111,
+    "n": 36
+   },
+   "yellow": {
+    "mean": 2.111,
+    "n": 36
+   }
+  },
+  "var": 2.27
+ },
+ "Argentina: Primera A Women": {
+  "mean": 2.434,
+  "n": 554,
+  "sd": 1.785,
+  "stats": {
+   "corners": {
+    "mean": 4.286,
+    "n": 28
+   },
+   "shots": {
+    "mean": 7.143,
+    "n": 28
+   },
+   "sot": {
+    "mean": 3.571,
+    "n": 28
+   }
+  },
+  "var": 3.187
+ },
+ "Argentina: Primera B": {
+  "mean": 2.057,
+  "n": 2149,
+  "sd": 1.372,
+  "stats": {
+   "corners": {
+    "mean": 4.452,
+    "n": 124
+   },
+   "shots": {
+    "mean": 8.766,
+    "n": 124
+   },
+   "sot": {
+    "mean": 4.774,
+    "n": 124
+   },
+   "yellow": {
+    "mean": 2.226,
+    "n": 124
+   }
+  },
+  "var": 1.882
+ },
+ "Argentina: Primera B Metropolitana": {
+  "mean": 1.931,
+  "n": 58,
+  "sd": 1.616,
+  "var": 2.61
+ },
+ "Argentina: Primera B Nacional": {
+  "mean": 2.095,
+  "n": 329,
+  "sd": 1.662,
+  "var": 2.762
+ },
+ "Argentina: Primera C": {
+  "mean": 2.028,
+  "n": 11623,
+  "sd": 1.526,
+  "stats": {
+   "corners": {
+    "mean": 4.455,
+    "n": 112
+   },
+   "shots": {
+    "mean": 7.736,
+    "n": 110
+   },
+   "sot": {
+    "mean": 3.875,
+    "n": 112
+   }
+  },
+  "var": 2.33
+ },
+ "Argentina: Primera C Metropolitana": {
+  "mean": 2.007,
+  "n": 679,
+  "sd": 1.704,
+  "var": 2.905
+ },
+ "Argentina: Primera D": {
+  "mean": 1.83,
+  "n": 286,
+  "sd": 1.634,
+  "var": 2.671
+ },
+ "Argentina: Primera D Metropolitana": {
+  "mean": 1.577,
+  "n": 1047,
+  "sd": 1.271,
+  "var": 1.614
+ },
+ "Argentina: Primera Division": {
+  "mean": 2.187,
+  "n": 899,
+  "sd": 1.506,
+  "var": 2.269
+ },
+ "Argentina: Primera Nacional": {
+  "mean": 1.893,
+  "n": 3881,
+  "sd": 1.347,
+  "stats": {
+   "corners": {
+    "mean": 4.363,
+    "n": 102
+   },
+   "shots": {
+    "mean": 8.186,
+    "n": 102
+   },
+   "sot": {
+    "mean": 4.824,
+    "n": 102
+   },
+   "yellow": {
+    "mean": 2.276,
+    "n": 98
+   }
+  },
+  "var": 1.815
+ },
+ "Argentina: Reserve League": {
+  "mean": 2.425,
+  "n": 548,
+  "sd": 1.529,
+  "var": 2.339
+ },
+ "Argentina: Super Cup": {
+  "mean": 2.0,
+  "n": 9,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Argentina: Superliga": {
+  "mean": 1.848,
+  "n": 105,
+  "sd": 1.203,
+  "var": 1.447
+ },
+ "Argentina: Torneo Betano": {
+  "mean": 1.939,
+  "n": 2284,
+  "sd": 1.29,
+  "var": 1.665
+ },
+ "Argentina: Torneo Federal": {
+  "mean": 2.053,
+  "n": 2892,
+  "sd": 1.471,
+  "stats": {
+   "corners": {
+    "mean": 4.159,
+    "n": 176
+   },
+   "fouls": {
+    "mean": 12.788,
+    "n": 52
+   },
+   "offsides": {
+    "mean": 2.26,
+    "n": 50
+   },
+   "shots": {
+    "mean": 8.864,
+    "n": 176
+   },
+   "sot": {
+    "mean": 3.847,
+    "n": 176
+   },
+   "yellow": {
+    "mean": 2.125,
+    "n": 168
+   }
+  },
+  "var": 2.165
+ },
+ "Argentina: Torneo Promocional Amateur": {
+  "mean": 2.251,
+  "n": 385,
+  "sd": 1.489,
+  "var": 2.216
+ },
+ "Argentina: Torneos De Verano": {
+  "mean": 2.512,
+  "n": 41,
+  "sd": 1.481,
+  "var": 2.194
+ },
+ "Argentina: Trofeo de Campeones": {
+  "mean": 2.955,
+  "n": 22,
+  "sd": 0.544,
+  "var": 0.296
+ },
+ "Armenia: Armenian Cup": {
+  "mean": 3.402,
+  "n": 97,
+  "sd": 1.883,
+  "var": 3.544
+ },
+ "Armenia: First League": {
+  "mean": 3.366,
+  "n": 426,
+  "sd": 2.017,
+  "var": 4.067
+ },
+ "Armenia: Premier League": {
+  "mean": 2.758,
+  "n": 1013,
+  "sd": 1.702,
+  "stats": {
+   "corners": {
+    "mean": 3.5,
+    "n": 4
+   },
+   "shots": {
+    "mean": 7.75,
+    "n": 4
+   },
+   "sot": {
+    "mean": 4.0,
+    "n": 4
+   },
+   "yellow": {
+    "mean": 1.75,
+    "n": 4
+   }
+  },
+  "var": 2.898
+ },
+ "Armenia: Super Cup": {
+  "mean": 1.445,
+  "n": 9,
+  "sd": 0.544,
+  "var": 0.296
+ },
+ "Armenia: VBET Premier League": {
+  "mean": 2.406,
+  "n": 32,
+  "sd": 1.57,
+  "var": 2.464
+ },
+ "Asia: AFC Challenge Cup": {
+  "mean": 2.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Asia: AFC Challenge League": {
+  "mean": 3.016,
+  "n": 62,
+  "sd": 1.525,
+  "stats": {
+   "corners": {
+    "mean": 3.0,
+    "n": 2
+   },
+   "fouls": {
+    "mean": 4.5,
+    "n": 2
+   },
+   "offsides": {
+    "mean": 1.0,
+    "n": 2
+   },
+   "shots": {
+    "mean": 15.5,
+    "n": 2
+   },
+   "sot": {
+    "mean": 5.0,
+    "n": 2
+   },
+   "yellow": {
+    "mean": 1.0,
+    "n": 2
+   }
+  },
+  "var": 2.326
+ },
+ "Asia: AFC Champions League": {
+  "mean": 2.264,
+  "n": 53,
+  "sd": 1.556,
+  "var": 2.421
+ },
+ "Asia: AFC Champions League 2": {
+  "mean": 1.75,
+  "n": 8,
+  "sd": 0.661,
+  "var": 0.438
+ },
+ "Asia: AFC Solidarity Cup": {
+  "mean": 2.0,
+  "n": 14,
+  "sd": 2.0,
+  "var": 4.0
+ },
+ "Asia: AFF Championship": {
+  "mean": 3.594,
+  "n": 345,
+  "sd": 1.853,
+  "var": 3.435
+ },
+ "Asia: AFF Suzuki Cup": {
+  "mean": 3.407,
+  "n": 602,
+  "sd": 1.696,
+  "var": 2.877
+ },
+ "Asia: ASEAN Championship": {
+  "mean": 3.73,
+  "n": 599,
+  "sd": 2.104,
+  "stats": {
+   "corners": {
+    "mean": 4.438,
+    "n": 16
+   },
+   "fouls": {
+    "mean": 11.0,
+    "n": 16
+   },
+   "offsides": {
+    "mean": 1.938,
+    "n": 16
+   },
+   "shots": {
+    "mean": 14.375,
+    "n": 16
+   },
+   "sot": {
+    "mean": 5.25,
+    "n": 16
+   },
+   "yellow": {
+    "mean": 1.75,
+    "n": 16
+   }
+  },
+  "var": 4.426
+ },
+ "Asia: Asian Cup": {
+  "mean": 3.097,
+  "n": 802,
+  "sd": 1.856,
+  "var": 3.445
+ },
+ "Asia: Merdeka Cup": {
+  "mean": 2.069,
+  "n": 43,
+  "sd": 1.133,
+  "var": 1.284
+ },
+ "Australia & Oceania: OFC Pro League": {
+  "mean": 4.211,
+  "n": 19,
+  "sd": 1.962,
+  "var": 3.85
+ },
+ "Australia: Australia Cup": {
+  "mean": 3.148,
+  "n": 54,
+  "sd": 1.442,
+  "var": 2.08
+ },
+ "Australia: Australian Championship": {
+  "mean": 3.236,
+  "n": 55,
+  "sd": 1.829,
+  "var": 3.344
+ },
+ "Australia: Brisbane Premier League": {
+  "mean": 3.188,
+  "n": 16,
+  "sd": 2.128,
+  "var": 4.527
+ },
+ "Australia: Capital Premier League": {
+  "mean": 3.57,
+  "n": 249,
+  "sd": 2.005,
+  "var": 4.022
+ },
+ "Australia: Capital Territory": {
+  "mean": 3.563,
+  "n": 80,
+  "sd": 1.477,
+  "var": 2.181
+ },
+ "Australia: NPL ACT": {
+  "mean": 3.57,
+  "n": 917,
+  "sd": 2.004,
+  "stats": {
+   "corners": {
+    "mean": 5.5,
+    "n": 18
+   },
+   "shots": {
+    "mean": 11.556,
+    "n": 18
+   },
+   "sot": {
+    "mean": 6.111,
+    "n": 18
+   }
+  },
+  "var": 4.018
+ },
+ "Australia: NPL NSW": {
+  "mean": 2.937,
+  "n": 600,
+  "sd": 1.751,
+  "stats": {
+   "corners": {
+    "mean": 4.464,
+    "n": 28
+   },
+   "shots": {
+    "mean": 9.536,
+    "n": 28
+   },
+   "sot": {
+    "mean": 4.714,
+    "n": 28
+   },
+   "yellow": {
+    "mean": 0.5,
+    "n": 4
+   }
+  },
+  "var": 3.066
+ },
+ "Australia: NPL NSW U20": {
+  "mean": 3.802,
+  "n": 182,
+  "sd": 2.066,
+  "var": 4.269
+ },
+ "Australia: NPL Northern NSW": {
+  "mean": 3.633,
+  "n": 221,
+  "sd": 2.028,
+  "var": 4.115
+ },
+ "Australia: NPL Queensland": {
+  "mean": 3.371,
+  "n": 286,
+  "sd": 1.823,
+  "var": 3.324
+ },
+ "Australia: NPL Queensland U23": {
+  "mean": 4.319,
+  "n": 69,
+  "sd": 2.242,
+  "var": 5.029
+ },
+ "Australia: NPL Queensland Women": {
+  "mean": 3.235,
+  "n": 81,
+  "sd": 2.332,
+  "var": 5.439
+ },
+ "Australia: NPL South Australia": {
+  "mean": 3.449,
+  "n": 265,
+  "sd": 2.052,
+  "var": 4.211
+ },
+ "Australia: NPL South Australian": {
+  "mean": 3.029,
+  "n": 35,
+  "sd": 1.824,
+  "var": 3.327
+ },
+ "Australia: NPL Tasmania": {
+  "mean": 4.312,
+  "n": 260,
+  "sd": 2.403,
+  "var": 5.776
+ },
+ "Australia: NPL Victoria": {
+  "mean": 3.316,
+  "n": 485,
+  "sd": 1.821,
+  "var": 3.316
+ },
+ "Australia: NPL Victoria Women": {
+  "mean": 4.333,
+  "n": 42,
+  "sd": 2.357,
+  "var": 5.556
+ },
+ "Australia: NPL Western Australia": {
+  "mean": 3.574,
+  "n": 317,
+  "sd": 1.968,
+  "var": 3.872
+ },
+ "Australia: NSW League One": {
+  "mean": 3.231,
+  "n": 411,
+  "sd": 1.853,
+  "var": 3.433
+ },
+ "Australia: NSW Premier League": {
+  "mean": 3.158,
+  "n": 38,
+  "sd": 1.442,
+  "var": 2.08
+ },
+ "Australia: Northern NSW": {
+  "mean": 3.333,
+  "n": 6,
+  "sd": 1.599,
+  "var": 2.556
+ },
+ "Australia: Northern NSW State League": {
+  "mean": 3.902,
+  "n": 224,
+  "sd": 2.163,
+  "var": 4.678
+ },
+ "Australia: Queensland Premier League": {
+  "mean": 3.586,
+  "n": 152,
+  "sd": 2.079,
+  "var": 4.322
+ },
+ "Australia: SA State League": {
+  "mean": 3.269,
+  "n": 164,
+  "sd": 1.744,
+  "var": 3.04
+ },
+ "Australia: South Australian Super League": {
+  "mean": 4.75,
+  "n": 4,
+  "sd": 0.829,
+  "var": 0.688
+ },
+ "Australia: T-League": {
+  "mean": 4.833,
+  "n": 12,
+  "sd": 2.734,
+  "var": 7.472
+ },
+ "Australia: Tasmania Northern Championship": {
+  "mean": 5.697,
+  "n": 33,
+  "sd": 2.876,
+  "var": 8.272
+ },
+ "Australia: Tasmania Southern Championship": {
+  "mean": 6.455,
+  "n": 33,
+  "sd": 2.924,
+  "var": 8.551
+ },
+ "Australia: Victoria Premier League": {
+  "mean": 3.334,
+  "n": 544,
+  "sd": 1.739,
+  "stats": {
+   "yellow": {
+    "mean": 0.5,
+    "n": 2
+   }
+  },
+  "var": 3.022
+ },
+ "Australia: Victorian Premier League": {
+  "mean": 2.0,
+  "n": 4,
+  "sd": 1.225,
+  "var": 1.5
+ },
+ "Australia: WA State League": {
+  "mean": 3.231,
+  "n": 26,
+  "sd": 1.367,
+  "var": 1.87
+ },
+ "Australia: Western Australia Premier League": {
+  "mean": 3.731,
+  "n": 26,
+  "sd": 1.952,
+  "var": 3.812
+ },
+ "Austria: 2. Liga": {
+  "mean": 2.522,
+  "n": 205,
+  "sd": 1.529,
+  "stats": {
+   "corners": {
+    "mean": 5.5,
+    "n": 8
+   },
+   "shots": {
+    "mean": 10.375,
+    "n": 8
+   },
+   "sot": {
+    "mean": 4.625,
+    "n": 8
+   },
+   "yellow": {
+    "mean": 1.375,
+    "n": 8
+   }
+  },
+  "var": 2.337
+ },
+ "Austria: ADEG Erste Liga": {
+  "mean": 2.625,
+  "n": 8,
+  "sd": 1.317,
+  "var": 1.734
+ },
+ "Austria: Bundesliga": {
+  "mean": 2.586,
+  "n": 256,
+  "sd": 1.508,
+  "stats": {
+   "corners": {
+    "mean": 6.125,
+    "n": 8
+   },
+   "fouls": {
+    "mean": 10.5,
+    "n": 8
+   },
+   "offsides": {
+    "mean": 2.5,
+    "n": 8
+   },
+   "shots": {
+    "mean": 16.0,
+    "n": 8
+   },
+   "sot": {
+    "mean": 4.625,
+    "n": 8
+   },
+   "yellow": {
+    "mean": 1.833,
+    "n": 6
+   }
+  },
+  "var": 2.275
+ },
+ "Austria: Erste Liga": {
+  "mean": 2.0,
+  "n": 4,
+  "sd": 1.414,
+  "var": 2.0
+ },
+ "Austria: OFB Cup": {
+  "mean": 3.65,
+  "n": 60,
+  "sd": 1.799,
+  "var": 3.236
+ },
+ "Austria: Regionalliga Central": {
+  "mean": 4.467,
+  "n": 30,
+  "sd": 1.857,
+  "var": 3.449
+ },
+ "Austria: Regionalliga West": {
+  "mean": 3.496,
+  "n": 151,
+  "sd": 1.959,
+  "var": 3.837
+ },
+ "Austria: Regionalliga West - Vorarlberg": {
+  "mean": 3.643,
+  "n": 14,
+  "sd": 1.109,
+  "var": 1.23
+ },
+ "Austria: T-Mobile Bundesliga": {
+  "mean": 3.0,
+  "n": 8,
+  "sd": 1.118,
+  "var": 1.25
+ },
+ "Austria: Tipico Bundesliga": {
+  "mean": 2.759,
+  "n": 58,
+  "sd": 1.516,
+  "var": 2.3
+ },
+ "Austria: Tirol": {
+  "mean": 3.913,
+  "n": 46,
+  "sd": 1.909,
+  "var": 3.645
+ },
+ "Austria: Vorarlberg": {
+  "mean": 3.667,
+  "n": 87,
+  "sd": 2.004,
+  "var": 4.015
+ },
+ "Austria: max-Bundesliga": {
+  "mean": 2.542,
+  "n": 24,
+  "sd": 1.562,
+  "var": 2.441
+ },
+ "Austria: tipp3-Bundesliga": {
+  "mean": 4.6,
+  "n": 10,
+  "sd": 3.382,
+  "var": 11.44
+ },
+ "Belarus: Belarusian Cup": {
+  "mean": 2.846,
+  "n": 26,
+  "sd": 1.915,
+  "var": 3.669
+ },
+ "Belarus: Super Cup": {
+  "mean": 5.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Belarus: Vysshaya Liga": {
+  "mean": 2.322,
+  "n": 208,
+  "sd": 1.518,
+  "stats": {
+   "corners": {
+    "mean": 4.404,
+    "n": 52
+   },
+   "fouls": {
+    "mean": 11.135,
+    "n": 52
+   },
+   "offsides": {
+    "mean": 1.577,
+    "n": 52
+   },
+   "shots": {
+    "mean": 9.038,
+    "n": 52
+   },
+   "sot": {
+    "mean": 3.596,
+    "n": 52
+   },
+   "yellow": {
+    "mean": 1.423,
+    "n": 52
+   }
+  },
+  "var": 2.305
+ },
+ "Belgium: 1B Pro League": {
+  "mean": 3.0,
+  "n": 4,
+  "sd": 1.871,
+  "var": 3.5
+ },
+ "Belgium: Belgian Cup": {
+  "mean": 3.0,
+  "n": 16,
+  "sd": 1.62,
+  "var": 2.625
+ },
+ "Belgium: Jupiler League": {
+  "mean": 2.983,
+  "n": 59,
+  "sd": 1.873,
+  "var": 3.508
+ },
+ "Belgium: Jupiler Pro League": {
+  "mean": 2.69,
+  "n": 155,
+  "sd": 1.714,
+  "stats": {
+   "corners": {
+    "mean": 5.407,
+    "n": 54
+   },
+   "fouls": {
+    "mean": 10.611,
+    "n": 54
+   },
+   "offsides": {
+    "mean": 2.315,
+    "n": 54
+   },
+   "shots": {
+    "mean": 13.315,
+    "n": 54
+   },
+   "sot": {
+    "mean": 4.815,
+    "n": 54
+   },
+   "yellow": {
+    "mean": 1.889,
+    "n": 54
+   }
+  },
+  "var": 2.936
+ },
+ "Belgium: Proximus League": {
+  "mean": 2.286,
+  "n": 14,
+  "sd": 1.097,
+  "var": 1.204
+ },
+ "Belgium: Super Cup": {
+  "mean": 3.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Bhutan: Premier League": {
+  "mean": 4.478,
+  "n": 454,
+  "sd": 3.199,
+  "stats": {
+   "corners": {
+    "mean": 3.5,
+    "n": 16
+   },
+   "shots": {
+    "mean": 12.0,
+    "n": 16
+   },
+   "sot": {
+    "mean": 3.75,
+    "n": 16
+   }
+  },
+  "var": 10.231
+ },
+ "Bolivia: Copa Pacena": {
+  "mean": 3.721,
+  "n": 1444,
+  "sd": 1.793,
+  "var": 3.216
+ },
+ "Bolivia: Division Profesional": {
+  "mean": 3.597,
+  "n": 4164,
+  "sd": 1.95,
+  "stats": {
+   "corners": {
+    "mean": 4.591,
+    "n": 22
+   },
+   "fouls": {
+    "mean": 12.682,
+    "n": 22
+   },
+   "offsides": {
+    "mean": 1.636,
+    "n": 22
+   },
+   "shots": {
+    "mean": 14.091,
+    "n": 22
+   },
+   "sot": {
+    "mean": 5.136,
+    "n": 22
+   },
+   "yellow": {
+    "mean": 2.182,
+    "n": 22
+   }
+  },
+  "var": 3.802
+ },
+ "Bolivia: Liga de Futbol Prof": {
+  "mean": 2.889,
+  "n": 81,
+  "sd": 1.199,
+  "var": 1.438
+ },
+ "Bolivia: Nacional B": {
+  "mean": 2.5,
+  "n": 46,
+  "sd": 0.5,
+  "var": 0.25
+ },
+ "Bolivia: Torneo Amistoso de Verano": {
+  "mean": 3.836,
+  "n": 394,
+  "sd": 1.72,
+  "var": 2.958
+ },
+ "Bosnia and Herzegovina: Bosnia and Herzegovina Cup": {
+  "mean": 3.2,
+  "n": 20,
+  "sd": 1.913,
+  "var": 3.66
+ },
+ "Bosnia and Herzegovina: Premier League": {
+  "mean": 2.71,
+  "n": 31,
+  "sd": 1.507,
+  "var": 2.271
+ },
+ "Bosnia and Herzegovina: Premijer liga BiH": {
+  "mean": 2.0,
+  "n": 3,
+  "sd": 0.816,
+  "var": 0.667
+ },
+ "Bosnia and Herzegovina: Super Cup": {
+  "mean": 1.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Bosnia and Herzegovina: WWIN Liga BiH": {
+  "mean": 2.202,
+  "n": 129,
+  "sd": 1.625,
+  "stats": {
+   "corners": {
+    "mean": 3.761,
+    "n": 46
+   },
+   "shots": {
+    "mean": 8.674,
+    "n": 46
+   },
+   "sot": {
+    "mean": 3.717,
+    "n": 46
+   },
+   "yellow": {
+    "mean": 2.136,
+    "n": 44
+   }
+  },
+  "var": 2.642
+ },
+ "Brazil: Amazonense U20": {
+  "mean": 4.943,
+  "n": 35,
+  "sd": 3.153,
+  "var": 9.94
+ },
+ "Brazil: Baiano": {
+  "mean": 2.091,
+  "n": 11,
+  "sd": 1.379,
+  "var": 1.901
+ },
+ "Brazil: Brasileiro U17": {
+  "mean": 3.442,
+  "n": 321,
+  "sd": 1.965,
+  "var": 3.86
+ },
+ "Brazil: Brasileiro Women": {
+  "mean": 3.211,
+  "n": 57,
+  "sd": 1.495,
+  "var": 2.236
+ },
+ "Brazil: Carioca Women": {
+  "mean": 6.273,
+  "n": 11,
+  "sd": 6.369,
+  "var": 40.562
+ },
+ "Brazil: Catarinense": {
+  "mean": 2.25,
+  "n": 12,
+  "sd": 1.639,
+  "var": 2.688
+ },
+ "Brazil: Copa Betano do Brasil": {
+  "mean": 2.2,
+  "n": 50,
+  "sd": 1.48,
+  "var": 2.189
+ },
+ "Brazil: Copa Centro-Oeste": {
+  "mean": 2.833,
+  "n": 6,
+  "sd": 1.951,
+  "var": 3.806
+ },
+ "Brazil: Copa Norte": {
+  "mean": 2.4,
+  "n": 5,
+  "sd": 0.8,
+  "var": 0.64
+ },
+ "Brazil: Copa Paulista": {
+  "mean": 2.036,
+  "n": 28,
+  "sd": 1.239,
+  "var": 1.534
+ },
+ "Brazil: Copa Rio Women": {
+  "mean": 3.667,
+  "n": 6,
+  "sd": 1.599,
+  "var": 2.556
+ },
+ "Brazil: Copa Santa Catarina": {
+  "mean": 3.417,
+  "n": 12,
+  "sd": 1.037,
+  "var": 1.076
+ },
+ "Brazil: Copa Sao Paulo de juniores": {
+  "mean": 3.042,
+  "n": 24,
+  "sd": 1.567,
+  "var": 2.457
+ },
+ "Brazil: Copa Sul-Sudeste": {
+  "mean": 2.917,
+  "n": 12,
+  "sd": 1.477,
+  "var": 2.18
+ },
+ "Brazil: Copa do Brasil": {
+  "mean": 2.083,
+  "n": 12,
+  "sd": 1.007,
+  "var": 1.014
+ },
+ "Brazil: Copa do Brasil U17": {
+  "mean": 3.97,
+  "n": 33,
+  "sd": 2.316,
+  "var": 5.363
+ },
+ "Brazil: Copa do Brasil U20": {
+  "mean": 2.65,
+  "n": 20,
+  "sd": 1.459,
+  "var": 2.127
+ },
+ "Brazil: Copa do Brasil Women": {
+  "mean": 2.375,
+  "n": 8,
+  "sd": 1.728,
+  "var": 2.984
+ },
+ "Brazil: Copa do Nordeste": {
+  "mean": 3.259,
+  "n": 27,
+  "sd": 1.683,
+  "var": 2.834
+ },
+ "Brazil: Copinha": {
+  "mean": 3.542,
+  "n": 24,
+  "sd": 1.802,
+  "var": 3.248
+ },
+ "Brazil: Gaucho": {
+  "mean": 2.806,
+  "n": 31,
+  "sd": 1.378,
+  "var": 1.898
+ },
+ "Brazil: Goiano": {
+  "mean": 2.833,
+  "n": 12,
+  "sd": 1.462,
+  "var": 2.139
+ },
+ "Brazil: Mineiro": {
+  "mean": 2.414,
+  "n": 29,
+  "sd": 2.023,
+  "var": 4.094
+ },
+ "Brazil: Paraense": {
+  "mean": 2.5,
+  "n": 10,
+  "sd": 1.5,
+  "var": 2.25
+ },
+ "Brazil: Paraibano": {
+  "mean": 2.154,
+  "n": 13,
+  "sd": 1.46,
+  "var": 2.13
+ },
+ "Brazil: Paranaense": {
+  "mean": 3.0,
+  "n": 10,
+  "sd": 1.414,
+  "var": 2.0
+ },
+ "Brazil: Paulista": {
+  "mean": 2.25,
+  "n": 28,
+  "sd": 1.199,
+  "var": 1.438
+ },
+ "Brazil: Paulista A2": {
+  "mean": 2.15,
+  "n": 93,
+  "sd": 1.451,
+  "var": 2.107
+ },
+ "Brazil: Paulista Women": {
+  "mean": 2.765,
+  "n": 17,
+  "sd": 1.832,
+  "var": 3.356
+ },
+ "Brazil: Pernambucano": {
+  "mean": 2.952,
+  "n": 21,
+  "sd": 1.588,
+  "var": 2.522
+ },
+ "Brazil: Piauiense U20": {
+  "mean": 3.297,
+  "n": 37,
+  "sd": 1.753,
+  "var": 3.074
+ },
+ "Brazil: Potiguar U20": {
+  "mean": 3.05,
+  "n": 20,
+  "sd": 1.802,
+  "var": 3.248
+ },
+ "Brazil: Recopa Catarinense": {
+  "mean": 6.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Brazil: Recopa Gaucho": {
+  "mean": 3.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Brazil: Serie A": {
+  "mean": 2.438,
+  "n": 89,
+  "sd": 1.491,
+  "var": 2.224
+ },
+ "Brazil: Serie A Betano": {
+  "mean": 2.651,
+  "n": 249,
+  "sd": 1.535,
+  "stats": {
+   "corners": {
+    "mean": 5.056,
+    "n": 18
+   },
+   "fouls": {
+    "mean": 11.111,
+    "n": 18
+   },
+   "offsides": {
+    "mean": 1.278,
+    "n": 18
+   },
+   "shots": {
+    "mean": 12.667,
+    "n": 18
+   },
+   "sot": {
+    "mean": 4.111,
+    "n": 18
+   },
+   "yellow": {
+    "mean": 1.667,
+    "n": 18
+   }
+  },
+  "var": 2.358
+ },
+ "Brazil: Serie B": {
+  "mean": 2.074,
+  "n": 108,
+  "sd": 1.446,
+  "stats": {
+   "corners": {
+    "mean": 5.296,
+    "n": 54
+   },
+   "fouls": {
+    "mean": 15.074,
+    "n": 54
+   },
+   "offsides": {
+    "mean": 1.759,
+    "n": 54
+   },
+   "shots": {
+    "mean": 13.093,
+    "n": 54
+   },
+   "sot": {
+    "mean": 4.259,
+    "n": 54
+   },
+   "yellow": {
+    "mean": 2.148,
+    "n": 54
+   }
+  },
+  "var": 2.092
+ },
+ "Brazil: Serie B Superbet": {
+  "mean": 2.554,
+  "n": 74,
+  "sd": 1.361,
+  "var": 1.852
+ },
+ "Brazil: Serie C": {
+  "mean": 2.047,
+  "n": 86,
+  "sd": 1.284,
+  "stats": {
+   "corners": {
+    "mean": 5.519,
+    "n": 52
+   },
+   "shots": {
+    "mean": 11.115,
+    "n": 52
+   },
+   "sot": {
+    "mean": 3.923,
+    "n": 52
+   },
+   "yellow": {
+    "mean": 2.692,
+    "n": 52
+   }
+  },
+  "var": 1.649
+ },
+ "Brazil: Serie D": {
+  "mean": 1.909,
+  "n": 22,
+  "sd": 1.311,
+  "var": 1.719
+ },
+ "Brazil: Supercopa do Brasil": {
+  "mean": 2.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Brazil: Supercopa do Brasil Women": {
+  "mean": 3.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Brazil: S\u00e9rie A": {
+  "mean": 2.694,
+  "n": 85,
+  "sd": 1.533,
+  "var": 2.35
+ },
+ "Brazil: S\u00e9rie B": {
+  "mean": 2.4,
+  "n": 15,
+  "sd": 1.784,
+  "var": 3.182
+ },
+ "Bulgaria: A PFG": {
+  "mean": 2.545,
+  "n": 176,
+  "sd": 1.233,
+  "var": 1.521
+ },
+ "Bulgaria: B PFG": {
+  "mean": 4.0,
+  "n": 14,
+  "sd": 1.0,
+  "var": 1.0
+ },
+ "Bulgaria: B PFG West": {
+  "mean": 3.5,
+  "n": 28,
+  "sd": 1.118,
+  "var": 1.25
+ },
+ "Bulgaria: Bulgarian Cup": {
+  "mean": 3.33,
+  "n": 158,
+  "sd": 0.947,
+  "var": 0.896
+ },
+ "Bulgaria: Parva liga": {
+  "mean": 2.275,
+  "n": 51,
+  "sd": 1.354,
+  "var": 1.834
+ },
+ "Bulgaria: Third League - South-East": {
+  "mean": 3.833,
+  "n": 720,
+  "sd": 2.455,
+  "var": 6.028
+ },
+ "Bulgaria: Vtora liga": {
+  "mean": 2.589,
+  "n": 1963,
+  "sd": 1.756,
+  "var": 3.083
+ },
+ "Bulgaria: efbet League": {
+  "mean": 2.211,
+  "n": 1435,
+  "sd": 1.457,
+  "stats": {
+   "corners": {
+    "mean": 4.364,
+    "n": 22
+   },
+   "fouls": {
+    "mean": 6.773,
+    "n": 22
+   },
+   "offsides": {
+    "mean": 1.136,
+    "n": 22
+   },
+   "shots": {
+    "mean": 11.545,
+    "n": 22
+   },
+   "sot": {
+    "mean": 4.818,
+    "n": 22
+   },
+   "yellow": {
+    "mean": 1.455,
+    "n": 22
+   }
+  },
+  "var": 2.123
+ },
+ "Canada: Canadian Premier League": {
+  "mean": 2.817,
+  "n": 289,
+  "sd": 1.55,
+  "stats": {
+   "corners": {
+    "mean": 4.595,
+    "n": 42
+   },
+   "fouls": {
+    "mean": 11.024,
+    "n": 42
+   },
+   "offsides": {
+    "mean": 0.69,
+    "n": 42
+   },
+   "shots": {
+    "mean": 13.595,
+    "n": 42
+   },
+   "sot": {
+    "mean": 4.857,
+    "n": 42
+   },
+   "yellow": {
+    "mean": 1.875,
+    "n": 40
+   }
+  },
+  "var": 2.403
+ },
+ "Canada: Championship": {
+  "mean": 3.522,
+  "n": 23,
+  "sd": 1.365,
+  "stats": {
+   "corners": {
+    "mean": 3.5,
+    "n": 2
+   },
+   "fouls": {
+    "mean": 14.0,
+    "n": 2
+   },
+   "offsides": {
+    "mean": 0.5,
+    "n": 2
+   },
+   "shots": {
+    "mean": 12.5,
+    "n": 2
+   },
+   "sot": {
+    "mean": 6.0,
+    "n": 2
+   },
+   "yellow": {
+    "mean": 2.5,
+    "n": 2
+   }
+  },
+  "var": 1.862
+ },
+ "Canada: NSL Women": {
+  "mean": 2.727,
+  "n": 22,
+  "sd": 1.483,
+  "var": 2.198
+ },
+ "Chile: Chilean Cup": {
+  "mean": 2.433,
+  "n": 30,
+  "sd": 1.274,
+  "var": 1.623
+ },
+ "Chile: Copa Chile": {
+  "mean": 2.736,
+  "n": 144,
+  "sd": 1.509,
+  "var": 2.276
+ },
+ "Chile: Copa de la Liga": {
+  "mean": 2.639,
+  "n": 36,
+  "sd": 1.224,
+  "var": 1.499
+ },
+ "Chile: Liga de Ascenso": {
+  "mean": 2.499,
+  "n": 501,
+  "sd": 1.642,
+  "stats": {
+   "corners": {
+    "mean": 5.0,
+    "n": 20
+   },
+   "fouls": {
+    "mean": 10.5,
+    "n": 8
+   },
+   "offsides": {
+    "mean": 2.125,
+    "n": 8
+   },
+   "shots": {
+    "mean": 9.9,
+    "n": 20
+   },
+   "sot": {
+    "mean": 4.1,
+    "n": 20
+   },
+   "yellow": {
+    "mean": 2.722,
+    "n": 18
+   }
+  },
+  "var": 2.696
+ },
+ "Chile: Liga de Primera": {
+  "mean": 2.692,
+  "n": 198,
+  "sd": 1.626,
+  "stats": {
+   "corners": {
+    "mean": 5.381,
+    "n": 42
+   },
+   "fouls": {
+    "mean": 9.929,
+    "n": 42
+   },
+   "offsides": {
+    "mean": 1.833,
+    "n": 42
+   },
+   "shots": {
+    "mean": 14.881,
+    "n": 42
+   },
+   "sot": {
+    "mean": 5.143,
+    "n": 42
+   },
+   "yellow": {
+    "mean": 2.048,
+    "n": 42
+   }
+  },
+  "var": 2.645
+ },
+ "Chile: Primera B": {
+  "mean": 2.377,
+  "n": 138,
+  "sd": 1.673,
+  "var": 2.798
+ },
+ "Chile: Primera Division": {
+  "mean": 2.747,
+  "n": 83,
+  "sd": 1.862,
+  "var": 3.467
+ },
+ "Chile: Primera Division Women": {
+  "mean": 2.916,
+  "n": 83,
+  "sd": 1.831,
+  "var": 3.354
+ },
+ "Chile: Super Cup": {
+  "mean": 4.0,
+  "n": 3,
+  "sd": 2.16,
+  "var": 4.667
+ },
+ "China: FA Cup": {
+  "mean": 2.83,
+  "n": 118,
+  "sd": 1.533,
+  "var": 2.349
+ },
+ "China: Jia League": {
+  "mean": 2.625,
+  "n": 8,
+  "sd": 1.495,
+  "var": 2.234
+ },
+ "China: League One": {
+  "mean": 2.572,
+  "n": 264,
+  "sd": 1.624,
+  "stats": {
+   "corners": {
+    "mean": 4.625,
+    "n": 88
+   },
+   "fouls": {
+    "mean": 14.386,
+    "n": 88
+   },
+   "offsides": {
+    "mean": 1.523,
+    "n": 88
+   },
+   "shots": {
+    "mean": 11.886,
+    "n": 88
+   },
+   "sot": {
+    "mean": 3.864,
+    "n": 88
+   },
+   "yellow": {
+    "mean": 1.962,
+    "n": 80
+   }
+  },
+  "var": 2.639
+ },
+ "China: League Two": {
+  "mean": 2.259,
+  "n": 1109,
+  "sd": 1.595,
+  "stats": {
+   "corners": {
+    "mean": 4.386,
+    "n": 132
+   },
+   "fouls": {
+    "mean": 14.273,
+    "n": 132
+   },
+   "offsides": {
+    "mean": 1.826,
+    "n": 132
+   },
+   "shots": {
+    "mean": 11.045,
+    "n": 132
+   },
+   "sot": {
+    "mean": 3.712,
+    "n": 132
+   },
+   "yellow": {
+    "mean": 1.539,
+    "n": 128
+   }
+  },
+  "var": 2.543
+ },
+ "China: Super League": {
+  "mean": 3.085,
+  "n": 272,
+  "sd": 1.725,
+  "stats": {
+   "corners": {
+    "mean": 4.908,
+    "n": 76
+   },
+   "fouls": {
+    "mean": 12.421,
+    "n": 76
+   },
+   "offsides": {
+    "mean": 2.171,
+    "n": 76
+   },
+   "shots": {
+    "mean": 14.039,
+    "n": 76
+   },
+   "sot": {
+    "mean": 4.763,
+    "n": 76
+   },
+   "yellow": {
+    "mean": 2.092,
+    "n": 76
+   }
+  },
+  "var": 2.974
+ },
+ "China: Yi League": {
+  "mean": 2.5,
+  "n": 16,
+  "sd": 2.5,
+  "var": 6.25
+ },
+ "Colombia: Copa Aguila": {
+  "mean": 1.863,
+  "n": 212,
+  "sd": 1.005,
+  "var": 1.011
+ },
+ "Colombia: Copa Colombia": {
+  "mean": 2.394,
+  "n": 954,
+  "sd": 1.707,
+  "var": 2.913
+ },
+ "Colombia: Copa Postobon": {
+  "mean": 3.195,
+  "n": 46,
+  "sd": 2.279,
+  "var": 5.193
+ },
+ "Colombia: Cuadrangulares de Ascenso": {
+  "mean": 2.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Colombia: Liga Aguila": {
+  "mean": 2.359,
+  "n": 562,
+  "sd": 1.469,
+  "var": 2.159
+ },
+ "Colombia: Liga Aguila Women": {
+  "mean": 1.667,
+  "n": 6,
+  "sd": 0.943,
+  "var": 0.889
+ },
+ "Colombia: Liga Postobon": {
+  "mean": 2.453,
+  "n": 1217,
+  "sd": 1.637,
+  "var": 2.681
+ },
+ "Colombia: Liga Women": {
+  "mean": 2.525,
+  "n": 257,
+  "sd": 1.713,
+  "var": 2.934
+ },
+ "Colombia: Primera A": {
+  "mean": 2.36,
+  "n": 5453,
+  "sd": 1.457,
+  "stats": {
+   "corners": {
+    "mean": 4.312,
+    "n": 16
+   },
+   "fouls": {
+    "mean": 10.812,
+    "n": 16
+   },
+   "offsides": {
+    "mean": 2.062,
+    "n": 16
+   },
+   "shots": {
+    "mean": 13.75,
+    "n": 16
+   },
+   "sot": {
+    "mean": 5.562,
+    "n": 16
+   },
+   "yellow": {
+    "mean": 2.438,
+    "n": 16
+   }
+  },
+  "var": 2.123
+ },
+ "Colombia: Primera B": {
+  "mean": 2.232,
+  "n": 1098,
+  "sd": 1.392,
+  "var": 1.938
+ },
+ "Colombia: Super Cup": {
+  "mean": 2.5,
+  "n": 4,
+  "sd": 0.5,
+  "var": 0.25
+ },
+ "Colombia: Torneo Aguila": {
+  "mean": 2.679,
+  "n": 228,
+  "sd": 1.408,
+  "var": 1.981
+ },
+ "Colombia: Torneo Postobon": {
+  "mean": 2.101,
+  "n": 99,
+  "sd": 1.068,
+  "var": 1.141
+ },
+ "Colombia: Torneo Postob\u00f3n": {
+  "mean": 2.25,
+  "n": 4,
+  "sd": 0.829,
+  "var": 0.688
+ },
+ "Costa Rica: Copa Costa Rica": {
+  "mean": 3.229,
+  "n": 48,
+  "sd": 2.07,
+  "var": 4.285
+ },
+ "Costa Rica: Liga de Ascenso": {
+  "mean": 2.941,
+  "n": 170,
+  "sd": 1.696,
+  "stats": {
+   "corners": {
+    "mean": 3.5,
+    "n": 2
+   },
+   "fouls": {
+    "mean": 13.5,
+    "n": 2
+   },
+   "offsides": {
+    "mean": 3.0,
+    "n": 2
+   },
+   "shots": {
+    "mean": 10.0,
+    "n": 2
+   },
+   "sot": {
+    "mean": 4.5,
+    "n": 2
+   }
+  },
+  "var": 2.878
+ },
+ "Costa Rica: Primera Division": {
+  "mean": 2.626,
+  "n": 587,
+  "sd": 1.605,
+  "stats": {
+   "corners": {
+    "mean": 5.577,
+    "n": 26
+   },
+   "fouls": {
+    "mean": 11.417,
+    "n": 24
+   },
+   "offsides": {
+    "mean": 0.769,
+    "n": 26
+   },
+   "shots": {
+    "mean": 9.885,
+    "n": 26
+   },
+   "sot": {
+    "mean": 3.769,
+    "n": 26
+   },
+   "yellow": {
+    "mean": 2.885,
+    "n": 26
+   }
+  },
+  "var": 2.575
+ },
+ "Costa Rica: Recopa de Costa Rica": {
+  "mean": 1.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Costa Rica: Super Cup": {
+  "mean": 1.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Croatia: 1. HNL": {
+  "mean": 3.0,
+  "n": 24,
+  "sd": 1.607,
+  "var": 2.583
+ },
+ "Croatia: Croatian Cup": {
+  "mean": 4.167,
+  "n": 12,
+  "sd": 1.724,
+  "var": 2.972
+ },
+ "Croatia: HNL": {
+  "mean": 2.531,
+  "n": 113,
+  "sd": 1.529,
+  "stats": {
+   "corners": {
+    "mean": 5.0,
+    "n": 6
+   },
+   "fouls": {
+    "mean": 11.333,
+    "n": 6
+   },
+   "offsides": {
+    "mean": 1.0,
+    "n": 6
+   },
+   "shots": {
+    "mean": 17.167,
+    "n": 6
+   },
+   "sot": {
+    "mean": 6.333,
+    "n": 6
+   },
+   "yellow": {
+    "mean": 1.667,
+    "n": 6
+   }
+  },
+  "var": 2.338
+ },
+ "Croatia: Prva NL": {
+  "mean": 2.275,
+  "n": 40,
+  "sd": 1.673,
+  "var": 2.799
+ },
+ "Czech Republic: 1. Liga": {
+  "mean": 2.077,
+  "n": 13,
+  "sd": 1.141,
+  "var": 1.302
+ },
+ "Czech Republic: 3. CFL - Group A": {
+  "mean": 3.806,
+  "n": 108,
+  "sd": 1.979,
+  "stats": {
+   "corners": {
+    "mean": 4.925,
+    "n": 40
+   },
+   "fouls": {
+    "mean": 10.5,
+    "n": 4
+   },
+   "offsides": {
+    "mean": 2.5,
+    "n": 4
+   },
+   "shots": {
+    "mean": 9.95,
+    "n": 40
+   },
+   "sot": {
+    "mean": 5.375,
+    "n": 40
+   },
+   "yellow": {
+    "mean": 2.184,
+    "n": 38
+   }
+  },
+  "var": 3.916
+ },
+ "Czech Republic: 3. CFL - Group B": {
+  "mean": 3.795,
+  "n": 73,
+  "sd": 2.139,
+  "stats": {
+   "corners": {
+    "mean": 4.893,
+    "n": 28
+   },
+   "fouls": {
+    "mean": 10.5,
+    "n": 2
+   },
+   "offsides": {
+    "mean": 1.5,
+    "n": 2
+   },
+   "shots": {
+    "mean": 10.357,
+    "n": 28
+   },
+   "sot": {
+    "mean": 5.679,
+    "n": 28
+   },
+   "yellow": {
+    "mean": 2.458,
+    "n": 24
+   }
+  },
+  "var": 4.574
+ },
+ "Czech Republic: 3. CFL - Play Offs": {
+  "mean": 3.5,
+  "n": 2,
+  "sd": 0.5,
+  "var": 0.25
+ },
+ "Czech Republic: 3. MSFL": {
+  "mean": 3.17,
+  "n": 100,
+  "sd": 1.761,
+  "stats": {
+   "corners": {
+    "mean": 5.375,
+    "n": 8
+   },
+   "fouls": {
+    "mean": 13.5,
+    "n": 6
+   },
+   "offsides": {
+    "mean": 1.5,
+    "n": 6
+   },
+   "shots": {
+    "mean": 11.25,
+    "n": 8
+   },
+   "sot": {
+    "mean": 6.25,
+    "n": 8
+   },
+   "yellow": {
+    "mean": 2.875,
+    "n": 8
+   }
+  },
+  "var": 3.101
+ },
+ "Czech Republic: 4. liga - Group A": {
+  "mean": 5.75,
+  "n": 4,
+  "sd": 2.046,
+  "var": 4.188
+ },
+ "Czech Republic: 4. liga - Group C": {
+  "mean": 3.75,
+  "n": 8,
+  "sd": 2.278,
+  "var": 5.188
+ },
+ "Czech Republic: 4. liga - Group E": {
+  "mean": 4.2,
+  "n": 5,
+  "sd": 1.6,
+  "var": 2.56
+ },
+ "Czech Republic: 4. liga - Group F": {
+  "mean": 4.217,
+  "n": 46,
+  "sd": 2.063,
+  "var": 4.257
+ },
+ "Czech Republic: CFL": {
+  "mean": 3.333,
+  "n": 12,
+  "sd": 1.841,
+  "var": 3.389
+ },
+ "Czech Republic: CFL - Group A": {
+  "mean": 3.3,
+  "n": 10,
+  "sd": 1.345,
+  "var": 1.81
+ },
+ "Czech Republic: ChNL": {
+  "mean": 2.571,
+  "n": 35,
+  "sd": 1.42,
+  "stats": {
+   "corners": {
+    "mean": 5.357,
+    "n": 14
+   },
+   "shots": {
+    "mean": 7.857,
+    "n": 14
+   },
+   "sot": {
+    "mean": 3.643,
+    "n": 14
+   },
+   "yellow": {
+    "mean": 1.929,
+    "n": 14
+   }
+  },
+  "var": 2.016
+ },
+ "Czech Republic: Chance Liga": {
+  "mean": 2.608,
+  "n": 171,
+  "sd": 1.698,
+  "stats": {
+   "corners": {
+    "mean": 5.55,
+    "n": 20
+   },
+   "fouls": {
+    "mean": 12.7,
+    "n": 20
+   },
+   "offsides": {
+    "mean": 1.1,
+    "n": 20
+   },
+   "shots": {
+    "mean": 13.35,
+    "n": 20
+   },
+   "sot": {
+    "mean": 4.2,
+    "n": 20
+   },
+   "yellow": {
+    "mean": 2.111,
+    "n": 18
+   }
+  },
+  "var": 2.882
+ },
+ "Czech Republic: Division 2": {
+  "mean": 1.75,
+  "n": 4,
+  "sd": 0.829,
+  "var": 0.688
+ },
+ "Czech Republic: Division A": {
+  "mean": 3.0,
+  "n": 2,
+  "sd": 2.0,
+  "var": 4.0
+ },
+ "Czech Republic: Division C": {
+  "mean": 2.0,
+  "n": 2,
+  "sd": 1.0,
+  "var": 1.0
+ },
+ "Czech Republic: Division E": {
+  "mean": 4.5,
+  "n": 2,
+  "sd": 1.5,
+  "var": 2.25
+ },
+ "Czech Republic: Division F": {
+  "mean": 3.0,
+  "n": 5,
+  "sd": 1.095,
+  "var": 1.2
+ },
+ "Czech Republic: FORTUNA:LIGA": {
+  "mean": 3.205,
+  "n": 39,
+  "sd": 2.127,
+  "var": 4.522
+ },
+ "Czech Republic: Gambrinus liga": {
+  "mean": 2.936,
+  "n": 47,
+  "sd": 1.655,
+  "var": 2.741
+ },
+ "Czech Republic: MOL Cup": {
+  "mean": 3.556,
+  "n": 36,
+  "sd": 1.907,
+  "var": 3.636
+ },
+ "Czech Republic: Pohar CMFS": {
+  "mean": 3.0,
+  "n": 2,
+  "sd": 2.0,
+  "var": 4.0
+ },
+ "Czech Republic: Pohar Ceske posty": {
+  "mean": 2.5,
+  "n": 6,
+  "sd": 0.957,
+  "var": 0.917
+ },
+ "Czech Republic: Synot liga": {
+  "mean": 2.3,
+  "n": 10,
+  "sd": 1.9,
+  "var": 3.61
+ },
+ "Czech Republic: Tipsport liga": {
+  "mean": 3.5,
+  "n": 18,
+  "sd": 1.5,
+  "var": 2.25
+ },
+ "Denmark: 1st Division": {
+  "mean": 2.924,
+  "n": 79,
+  "sd": 1.515,
+  "var": 2.297
+ },
+ "Denmark: 2nd Division": {
+  "mean": 2.763,
+  "n": 228,
+  "sd": 1.587,
+  "stats": {
+   "corners": {
+    "mean": 5.125,
+    "n": 8
+   },
+   "fouls": {
+    "mean": 11.167,
+    "n": 6
+   },
+   "offsides": {
+    "mean": 2.333,
+    "n": 6
+   },
+   "shots": {
+    "mean": 9.5,
+    "n": 8
+   },
+   "sot": {
+    "mean": 4.375,
+    "n": 8
+   },
+   "yellow": {
+    "mean": 0.5,
+    "n": 2
+   }
+  },
+  "var": 2.518
+ },
+ "Denmark: 2nd Division - Group 1": {
+  "mean": 2.75,
+  "n": 4,
+  "sd": 0.791,
+  "var": 0.625
+ },
+ "Denmark: 2nd Division East": {
+  "mean": 3.292,
+  "n": 137,
+  "sd": 1.752,
+  "var": 3.068
+ },
+ "Denmark: 2nd Division West": {
+  "mean": 3.267,
+  "n": 30,
+  "sd": 1.389,
+  "var": 1.929
+ },
+ "Denmark: 3rd Division": {
+  "mean": 2.986,
+  "n": 344,
+  "sd": 1.867,
+  "var": 3.486
+ },
+ "Denmark: Betano Pokalen": {
+  "mean": 4.286,
+  "n": 7,
+  "sd": 3.01,
+  "var": 9.061
+ },
+ "Denmark: Landspokal Cup": {
+  "mean": 4.379,
+  "n": 227,
+  "sd": 2.492,
+  "var": 6.21
+ },
+ "Denmark: Superliga": {
+  "mean": 3.121,
+  "n": 824,
+  "sd": 1.608,
+  "stats": {
+   "corners": {
+    "mean": 5.5,
+    "n": 28
+   },
+   "fouls": {
+    "mean": 11.607,
+    "n": 28
+   },
+   "offsides": {
+    "mean": 1.607,
+    "n": 28
+   },
+   "shots": {
+    "mean": 13.357,
+    "n": 28
+   },
+   "sot": {
+    "mean": 4.857,
+    "n": 28
+   },
+   "yellow": {
+    "mean": 1.667,
+    "n": 24
+   }
+  },
+  "var": 2.586
+ },
+ "Ecuador: Copa Ecuador": {
+  "mean": 3.133,
+  "n": 45,
+  "sd": 1.618,
+  "var": 2.618
+ },
+ "Ecuador: Liga Pro": {
+  "mean": 2.168,
+  "n": 309,
+  "sd": 1.492,
+  "stats": {
+   "corners": {
+    "mean": 4.357,
+    "n": 28
+   },
+   "fouls": {
+    "mean": 12.714,
+    "n": 28
+   },
+   "offsides": {
+    "mean": 1.571,
+    "n": 28
+   },
+   "shots": {
+    "mean": 13.536,
+    "n": 28
+   },
+   "sot": {
+    "mean": 4.571,
+    "n": 28
+   },
+   "yellow": {
+    "mean": 2.464,
+    "n": 28
+   }
+  },
+  "var": 2.225
+ },
+ "Ecuador: Serie A": {
+  "mean": 2.5,
+  "n": 24,
+  "sd": 1.848,
+  "var": 3.417
+ },
+ "Ecuador: Serie B": {
+  "mean": 1.985,
+  "n": 133,
+  "sd": 1.515,
+  "stats": {
+   "corners": {
+    "mean": 4.536,
+    "n": 28
+   },
+   "fouls": {
+    "mean": 15.25,
+    "n": 28
+   },
+   "offsides": {
+    "mean": 2.429,
+    "n": 28
+   },
+   "shots": {
+    "mean": 7.714,
+    "n": 28
+   },
+   "sot": {
+    "mean": 3.393,
+    "n": 28
+   }
+  },
+  "var": 2.295
+ },
+ "Ecuador: Super Cup": {
+  "mean": 4.5,
+  "n": 4,
+  "sd": 1.5,
+  "var": 2.25
+ },
+ "El Salvador: Copa Presidente": {
+  "mean": 4.0,
+  "n": 5,
+  "sd": 1.673,
+  "var": 2.8
+ },
+ "El Salvador: Primera Division": {
+  "mean": 3.085,
+  "n": 47,
+  "sd": 1.366,
+  "var": 1.865
+ },
+ "England: Blue Square Bet North": {
+  "mean": 3.25,
+  "n": 12,
+  "sd": 1.689,
+  "var": 2.854
+ },
+ "England: Blue Square Bet Premier": {
+  "mean": 2.0,
+  "n": 2,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "England: Blue Square Bet South": {
+  "mean": 4.125,
+  "n": 8,
+  "sd": 2.027,
+  "var": 4.109
+ },
+ "England: Blue Square North": {
+  "mean": 2.417,
+  "n": 12,
+  "sd": 1.32,
+  "var": 1.743
+ },
+ "England: Blue Square Premier": {
+  "mean": 3.0,
+  "n": 8,
+  "sd": 1.708,
+  "var": 2.917
+ },
+ "England: EFL Trophy": {
+  "mean": 3.364,
+  "n": 11,
+  "sd": 1.62,
+  "var": 2.625
+ },
+ "England: FA Cup": {
+  "mean": 3.341,
+  "n": 246,
+  "sd": 1.78,
+  "var": 3.167
+ },
+ "England: FA Trophy": {
+  "mean": 3.068,
+  "n": 192,
+  "sd": 1.636,
+  "var": 2.678
+ },
+ "England: Isthmian League Premier Division": {
+  "mean": 3.102,
+  "n": 354,
+  "sd": 1.779,
+  "stats": {
+   "yellow": {
+    "mean": 0.5,
+    "n": 8
+   }
+  },
+  "var": 3.165
+ },
+ "England: League Two": {
+  "mean": 2.587,
+  "n": 126,
+  "sd": 1.461,
+  "stats": {
+   "corners": {
+    "mean": 5.321,
+    "n": 28
+   },
+   "fouls": {
+    "mean": 11.25,
+    "n": 28
+   },
+   "offsides": {
+    "mean": 2.179,
+    "n": 28
+   },
+   "shots": {
+    "mean": 13.0,
+    "n": 28
+   },
+   "sot": {
+    "mean": 3.929,
+    "n": 28
+   },
+   "yellow": {
+    "mean": 1.643,
+    "n": 28
+   }
+  },
+  "var": 2.136
+ },
+ "England: NPL Premier Division": {
+  "mean": 2.6,
+  "n": 438,
+  "sd": 1.546,
+  "stats": {
+   "yellow": {
+    "mean": 0.5,
+    "n": 2
+   }
+  },
+  "var": 2.391
+ },
+ "England: National League": {
+  "mean": 2.959,
+  "n": 531,
+  "sd": 1.671,
+  "stats": {
+   "corners": {
+    "mean": 4.799,
+    "n": 164
+   },
+   "shots": {
+    "mean": 8.366,
+    "n": 164
+   },
+   "sot": {
+    "mean": 4.567,
+    "n": 164
+   },
+   "yellow": {
+    "mean": 1.967,
+    "n": 152
+   }
+  },
+  "var": 2.792
+ },
+ "England: National League Cup": {
+  "mean": 3.417,
+  "n": 36,
+  "sd": 1.689,
+  "var": 2.854
+ },
+ "England: National League North": {
+  "mean": 3.011,
+  "n": 546,
+  "sd": 1.709,
+  "stats": {
+   "yellow": {
+    "mean": 0.5,
+    "n": 10
+   }
+  },
+  "var": 2.919
+ },
+ "England: National League South": {
+  "mean": 2.885,
+  "n": 521,
+  "sd": 1.745,
+  "stats": {
+   "yellow": {
+    "mean": 0.5,
+    "n": 4
+   }
+  },
+  "var": 3.046
+ },
+ "England: Nationwide Conference": {
+  "mean": 2.312,
+  "n": 16,
+  "sd": 1.53,
+  "var": 2.34
+ },
+ "England: Nationwide Conference North": {
+  "mean": 1.667,
+  "n": 6,
+  "sd": 0.943,
+  "var": 0.889
+ },
+ "England: Northern Premier League": {
+  "mean": 3.214,
+  "n": 14,
+  "sd": 1.319,
+  "var": 1.74
+ },
+ "England: Ryman League": {
+  "mean": 3.25,
+  "n": 20,
+  "sd": 1.374,
+  "var": 1.887
+ },
+ "England: Southern League Central Division": {
+  "mean": 2.471,
+  "n": 17,
+  "sd": 1.5,
+  "var": 2.249
+ },
+ "England: Southern League Premier Central": {
+  "mean": 2.882,
+  "n": 416,
+  "sd": 1.671,
+  "stats": {
+   "yellow": {
+    "mean": 0.5,
+    "n": 2
+   }
+  },
+  "var": 2.791
+ },
+ "England: Southern League Premier South": {
+  "mean": 3.089,
+  "n": 438,
+  "sd": 1.824,
+  "stats": {
+   "yellow": {
+    "mean": 0.5,
+    "n": 2
+   }
+  },
+  "var": 3.328
+ },
+ "England: Southern League South Division": {
+  "mean": 2.5,
+  "n": 4,
+  "sd": 2.062,
+  "var": 4.25
+ },
+ "England: Southern Premier League": {
+  "mean": 2.667,
+  "n": 15,
+  "sd": 1.247,
+  "var": 1.556
+ },
+ "England: The Skrill North": {
+  "mean": 3.333,
+  "n": 6,
+  "sd": 1.247,
+  "var": 1.556
+ },
+ "England: The Skrill Premier": {
+  "mean": 2.0,
+  "n": 2,
+  "sd": 1.0,
+  "var": 1.0
+ },
+ "England: Vanarama Conference": {
+  "mean": 3.0,
+  "n": 4,
+  "sd": 1.581,
+  "var": 2.5
+ },
+ "England: Vanarama Conference North": {
+  "mean": 2.5,
+  "n": 2,
+  "sd": 1.5,
+  "var": 2.25
+ },
+ "England: Vanarama Conference South": {
+  "mean": 4.0,
+  "n": 2,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Estonia: Esiliiga": {
+  "mean": 3.405,
+  "n": 588,
+  "sd": 1.741,
+  "stats": {
+   "corners": {
+    "mean": 5.622,
+    "n": 74
+   },
+   "fouls": {
+    "mean": 12.25,
+    "n": 68
+   },
+   "offsides": {
+    "mean": 1.891,
+    "n": 64
+   },
+   "shots": {
+    "mean": 10.149,
+    "n": 74
+   },
+   "sot": {
+    "mean": 4.932,
+    "n": 74
+   },
+   "yellow": {
+    "mean": 0.5,
+    "n": 4
+   }
+  },
+  "var": 3.033
+ },
+ "Estonia: Esiliiga B": {
+  "mean": 4.627,
+  "n": 338,
+  "sd": 2.014,
+  "var": 4.054
+ },
+ "Estonia: Estonian Cup": {
+  "mean": 4.906,
+  "n": 106,
+  "sd": 2.527,
+  "var": 6.387
+ },
+ "Estonia: Meistriliiga": {
+  "mean": 3.324,
+  "n": 296,
+  "sd": 1.875,
+  "stats": {
+   "corners": {
+    "mean": 5.107,
+    "n": 28
+   },
+   "shots": {
+    "mean": 12.357,
+    "n": 28
+   },
+   "sot": {
+    "mean": 4.321,
+    "n": 28
+   },
+   "yellow": {
+    "mean": 1.964,
+    "n": 28
+   }
+  },
+  "var": 3.517
+ },
+ "Estonia: Super Cup": {
+  "mean": 4.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Europe: Conference League": {
+  "mean": 3.086,
+  "n": 804,
+  "sd": 1.624,
+  "var": 2.638
+ },
+ "Europe: Europa League": {
+  "mean": 2.844,
+  "n": 237,
+  "sd": 1.496,
+  "var": 2.237
+ },
+ "Europe: UEFA Champions League": {
+  "mean": 3.538,
+  "n": 180,
+  "sd": 2.119,
+  "var": 4.49
+ },
+ "Europe: UEFA Youth League": {
+  "mean": 8.5,
+  "n": 14,
+  "sd": 4.5,
+  "var": 20.25
+ },
+ "Faroe Islands: Faroe Islands Cup": {
+  "mean": 3.882,
+  "n": 119,
+  "sd": 1.811,
+  "var": 3.28
+ },
+ "Faroe Islands: Formuladeildin": {
+  "mean": 3.412,
+  "n": 119,
+  "sd": 1.817,
+  "var": 3.301
+ },
+ "Faroe Islands: Premier League": {
+  "mean": 3.553,
+  "n": 798,
+  "sd": 1.97,
+  "stats": {
+   "corners": {
+    "mean": 6.071,
+    "n": 28
+   },
+   "shots": {
+    "mean": 10.429,
+    "n": 28
+   },
+   "sot": {
+    "mean": 4.679,
+    "n": 28
+   },
+   "yellow": {
+    "mean": 1.958,
+    "n": 24
+   }
+  },
+  "var": 3.879
+ },
+ "Faroe Islands: Super Cup": {
+  "mean": 2.5,
+  "n": 14,
+  "sd": 1.5,
+  "var": 2.25
+ },
+ "Finland: Kakkonen Group A": {
+  "mean": 4.15,
+  "n": 160,
+  "sd": 2.032,
+  "var": 4.127
+ },
+ "Finland: Kakkonen Group C": {
+  "mean": 4.545,
+  "n": 385,
+  "sd": 2.682,
+  "stats": {
+   "corners": {
+    "mean": 4.769,
+    "n": 26
+   },
+   "shots": {
+    "mean": 11.385,
+    "n": 26
+   },
+   "sot": {
+    "mean": 5.346,
+    "n": 26
+   },
+   "yellow": {
+    "mean": 1.769,
+    "n": 26
+   }
+  },
+  "var": 7.193
+ },
+ "Finland: Kakkonen Play Offs": {
+  "mean": 5.37,
+  "n": 46,
+  "sd": 2.155,
+  "var": 4.643
+ },
+ "Finland: Kakkonen South": {
+  "mean": 4.0,
+  "n": 10,
+  "sd": 2.145,
+  "var": 4.6
+ },
+ "Finland: Liiga Cup": {
+  "mean": 3.167,
+  "n": 12,
+  "sd": 1.344,
+  "var": 1.806
+ },
+ "Finland: Suomen Cup": {
+  "mean": 4.444,
+  "n": 263,
+  "sd": 2.468,
+  "var": 6.089
+ },
+ "Finland: Veikkausliiga": {
+  "mean": 3.232,
+  "n": 99,
+  "sd": 1.948,
+  "var": 3.795
+ },
+ "Finland: Ykkonen": {
+  "mean": 3.417,
+  "n": 1457,
+  "sd": 1.956,
+  "var": 3.827
+ },
+ "Finland: Ykkoscup": {
+  "mean": 4.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Finland: Ykkosliiga": {
+  "mean": 2.867,
+  "n": 316,
+  "sd": 1.68,
+  "stats": {
+   "corners": {
+    "mean": 5.464,
+    "n": 28
+   },
+   "fouls": {
+    "mean": 9.321,
+    "n": 28
+   },
+   "offsides": {
+    "mean": 1.214,
+    "n": 28
+   },
+   "shots": {
+    "mean": 7.929,
+    "n": 28
+   },
+   "sot": {
+    "mean": 3.821,
+    "n": 28
+   },
+   "yellow": {
+    "mean": 1.929,
+    "n": 28
+   }
+  },
+  "var": 2.822
+ },
+ "Finland: Ykkosliigacup": {
+  "mean": 2.333,
+  "n": 9,
+  "sd": 1.333,
+  "var": 1.778
+ },
+ "France: Coupe de France": {
+  "mean": 3.595,
+  "n": 42,
+  "sd": 2.139,
+  "var": 4.574
+ },
+ "France: Coupe de la Ligue": {
+  "mean": 3.375,
+  "n": 8,
+  "sd": 0.696,
+  "var": 0.484
+ },
+ "France: Division 1": {
+  "mean": 2.942,
+  "n": 69,
+  "sd": 1.848,
+  "var": 3.417
+ },
+ "France: Division 2": {
+  "mean": 4.0,
+  "n": 4,
+  "sd": 1.225,
+  "var": 1.5
+ },
+ "France: Ligue 1": {
+  "mean": 2.71,
+  "n": 124,
+  "sd": 1.933,
+  "stats": {
+   "corners": {
+    "mean": 5.5,
+    "n": 32
+   },
+   "fouls": {
+    "mean": 11.688,
+    "n": 32
+   },
+   "offsides": {
+    "mean": 1.781,
+    "n": 32
+   },
+   "shots": {
+    "mean": 13.125,
+    "n": 32
+   },
+   "sot": {
+    "mean": 4.312,
+    "n": 32
+   },
+   "yellow": {
+    "mean": 1.656,
+    "n": 32
+   }
+  },
+  "var": 3.738
+ },
+ "France: Ligue 2": {
+  "mean": 2.575,
+  "n": 348,
+  "sd": 1.774,
+  "stats": {
+   "corners": {
+    "mean": 4.464,
+    "n": 110
+   },
+   "fouls": {
+    "mean": 13.045,
+    "n": 110
+   },
+   "offsides": {
+    "mean": 2.118,
+    "n": 110
+   },
+   "shots": {
+    "mean": 11.382,
+    "n": 110
+   },
+   "sot": {
+    "mean": 4.145,
+    "n": 110
+   },
+   "yellow": {
+    "mean": 1.779,
+    "n": 104
+   }
+  },
+  "var": 3.147
+ },
+ "France: National": {
+  "mean": 2.469,
+  "n": 81,
+  "sd": 1.603,
+  "stats": {
+   "corners": {
+    "mean": 4.038,
+    "n": 26
+   },
+   "shots": {
+    "mean": 8.192,
+    "n": 26
+   },
+   "sot": {
+    "mean": 3.577,
+    "n": 26
+   },
+   "yellow": {
+    "mean": 1.833,
+    "n": 24
+   }
+  },
+  "var": 2.57
+ },
+ "Georgia: Crystalbet Erovnuli Liga": {
+  "mean": 2.959,
+  "n": 146,
+  "sd": 1.507,
+  "stats": {
+   "corners": {
+    "mean": 4.786,
+    "n": 28
+   },
+   "shots": {
+    "mean": 9.5,
+    "n": 28
+   },
+   "sot": {
+    "mean": 4.036,
+    "n": 28
+   },
+   "yellow": {
+    "mean": 2.333,
+    "n": 24
+   }
+  },
+  "var": 2.272
+ },
+ "Georgia: Crystalbet Erovnuli Liga 2": {
+  "mean": 2.395,
+  "n": 177,
+  "sd": 1.526,
+  "stats": {
+   "yellow": {
+    "mean": 2.397,
+    "n": 68
+   }
+  },
+  "var": 2.329
+ },
+ "Georgia: Georgian Cup": {
+  "mean": 3.175,
+  "n": 40,
+  "sd": 2.023,
+  "var": 4.094
+ },
+ "Georgia: Liga 3": {
+  "mean": 3.144,
+  "n": 90,
+  "sd": 2.219,
+  "var": 4.924
+ },
+ "Georgia: Pirveli Liga": {
+  "mean": 2.0,
+  "n": 2,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Georgia: Umaglesi Liga": {
+  "mean": 1.5,
+  "n": 2,
+  "sd": 0.5,
+  "var": 0.25
+ },
+ "Germany: 2. Bundesliga": {
+  "mean": 2.925,
+  "n": 281,
+  "sd": 1.697,
+  "stats": {
+   "corners": {
+    "mean": 4.83,
+    "n": 88
+   },
+   "fouls": {
+    "mean": 11.216,
+    "n": 88
+   },
+   "offsides": {
+    "mean": 1.545,
+    "n": 88
+   },
+   "shots": {
+    "mean": 12.943,
+    "n": 88
+   },
+   "sot": {
+    "mean": 4.239,
+    "n": 88
+   },
+   "yellow": {
+    "mean": 2.095,
+    "n": 84
+   }
+  },
+  "var": 2.881
+ },
+ "Germany: 3. Liga": {
+  "mean": 3.016,
+  "n": 305,
+  "sd": 1.756,
+  "stats": {
+   "corners": {
+    "mean": 5.213,
+    "n": 94
+   },
+   "fouls": {
+    "mean": 11.277,
+    "n": 94
+   },
+   "offsides": {
+    "mean": 1.83,
+    "n": 94
+   },
+   "shots": {
+    "mean": 9.766,
+    "n": 94
+   },
+   "sot": {
+    "mean": 5.213,
+    "n": 94
+   },
+   "yellow": {
+    "mean": 2.053,
+    "n": 94
+   }
+  },
+  "var": 3.085
+ },
+ "Germany: Bundesliga": {
+  "mean": 3.218,
+  "n": 110,
+  "sd": 1.811,
+  "stats": {
+   "corners": {
+    "mean": 5.429,
+    "n": 28
+   },
+   "fouls": {
+    "mean": 9.214,
+    "n": 28
+   },
+   "offsides": {
+    "mean": 1.571,
+    "n": 28
+   },
+   "shots": {
+    "mean": 13.714,
+    "n": 28
+   },
+   "sot": {
+    "mean": 4.964,
+    "n": 28
+   },
+   "yellow": {
+    "mean": 1.464,
+    "n": 28
+   }
+  },
+  "var": 3.28
+ },
+ "Germany: DFB Pokal": {
+  "mean": 3.828,
+  "n": 29,
+  "sd": 2.151,
+  "var": 4.625
+ },
+ "Germany: Regionalliga Bayern": {
+  "mean": 2.838,
+  "n": 37,
+  "sd": 1.794,
+  "var": 3.217
+ },
+ "Germany: Regionalliga North": {
+  "mean": 3.833,
+  "n": 42,
+  "sd": 1.863,
+  "var": 3.472
+ },
+ "Germany: Regionalliga Play Offs": {
+  "mean": 2.25,
+  "n": 4,
+  "sd": 0.829,
+  "stats": {
+   "corners": {
+    "mean": 4.25,
+    "n": 4
+   },
+   "shots": {
+    "mean": 10.0,
+    "n": 4
+   },
+   "sot": {
+    "mean": 5.25,
+    "n": 4
+   }
+  },
+  "var": 0.688
+ },
+ "Germany: Regionalliga Sudwest": {
+  "mean": 3.794,
+  "n": 34,
+  "sd": 1.53,
+  "var": 2.34
+ },
+ "Germany: Regionalliga West": {
+  "mean": 3.027,
+  "n": 37,
+  "sd": 1.652,
+  "var": 2.729
+ },
+ "Guatemala: Liga Nacional": {
+  "mean": 2.381,
+  "n": 572,
+  "sd": 1.542,
+  "stats": {
+   "corners": {
+    "mean": 4.188,
+    "n": 16
+   },
+   "fouls": {
+    "mean": 12.5,
+    "n": 6
+   },
+   "offsides": {
+    "mean": 1.333,
+    "n": 6
+   },
+   "shots": {
+    "mean": 10.062,
+    "n": 16
+   },
+   "sot": {
+    "mean": 4.062,
+    "n": 16
+   },
+   "yellow": {
+    "mean": 1.938,
+    "n": 16
+   }
+  },
+  "var": 2.377
+ },
+ "Honduras: Liga Nacional": {
+  "mean": 2.644,
+  "n": 326,
+  "sd": 1.608,
+  "stats": {
+   "corners": {
+    "mean": 3.75,
+    "n": 4
+   },
+   "shots": {
+    "mean": 13.25,
+    "n": 4
+   },
+   "sot": {
+    "mean": 4.0,
+    "n": 4
+   },
+   "yellow": {
+    "mean": 1.0,
+    "n": 2
+   }
+  },
+  "var": 2.584
+ },
+ "Honduras: Super Cup": {
+  "mean": 1.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Hungary: Hungarian Cup": {
+  "mean": 4.9,
+  "n": 10,
+  "sd": 3.39,
+  "var": 11.49
+ },
+ "Hungary: League Cup": {
+  "mean": 3.125,
+  "n": 8,
+  "sd": 0.781,
+  "var": 0.609
+ },
+ "Hungary: NB I": {
+  "mean": 2.8,
+  "n": 10,
+  "sd": 0.98,
+  "var": 0.96
+ },
+ "Hungary: NB I.": {
+  "mean": 3.032,
+  "n": 62,
+  "sd": 1.759,
+  "var": 3.096
+ },
+ "Hungary: OTP Bank Liga": {
+  "mean": 4.3,
+  "n": 20,
+  "sd": 1.952,
+  "var": 3.81
+ },
+ "Iceland: Besta deild karla": {
+  "mean": 3.69,
+  "n": 2768,
+  "sd": 2.133,
+  "stats": {
+   "corners": {
+    "mean": 6.182,
+    "n": 22
+   },
+   "fouls": {
+    "mean": 11.409,
+    "n": 22
+   },
+   "offsides": {
+    "mean": 1.545,
+    "n": 22
+   },
+   "shots": {
+    "mean": 16.727,
+    "n": 22
+   },
+   "sot": {
+    "mean": 5.955,
+    "n": 22
+   },
+   "yellow": {
+    "mean": 2.136,
+    "n": 22
+   }
+  },
+  "var": 4.55
+ },
+ "Iceland: Division 1": {
+  "mean": 3.721,
+  "n": 1072,
+  "sd": 1.846,
+  "var": 3.408
+ },
+ "Iceland: Division 2": {
+  "mean": 3.346,
+  "n": 182,
+  "sd": 1.9,
+  "var": 3.611
+ },
+ "Iceland: Fotbolti.net Cup": {
+  "mean": 3.903,
+  "n": 31,
+  "sd": 1.58,
+  "var": 2.495
+ },
+ "Iceland: Icelandic Cup": {
+  "mean": 3.859,
+  "n": 561,
+  "sd": 1.753,
+  "var": 3.074
+ },
+ "Iceland: Inkasso-deildin": {
+  "mean": 3.059,
+  "n": 34,
+  "sd": 1.572,
+  "var": 2.472
+ },
+ "Iceland: Landsbankadeild": {
+  "mean": 3.167,
+  "n": 120,
+  "sd": 1.951,
+  "var": 3.806
+ },
+ "Iceland: League Cup": {
+  "mean": 3.855,
+  "n": 829,
+  "sd": 2.043,
+  "var": 4.175
+ },
+ "Iceland: Lengjudeildin": {
+  "mean": 4.5,
+  "n": 14,
+  "sd": 0.5,
+  "var": 0.25
+ },
+ "Iceland: Pepsideild": {
+  "mean": 3.255,
+  "n": 630,
+  "sd": 1.491,
+  "var": 2.223
+ },
+ "Iceland: Reykjavik Cup": {
+  "mean": 4.501,
+  "n": 52,
+  "sd": 1.806,
+  "var": 3.261
+ },
+ "Iceland: Super Cup": {
+  "mean": 3.021,
+  "n": 45,
+  "sd": 1.153,
+  "var": 1.33
+ },
+ "India: Calcutta Premier Division": {
+  "mean": 2.765,
+  "n": 209,
+  "sd": 1.75,
+  "stats": {
+   "corners": {
+    "mean": 4.25,
+    "n": 16
+   },
+   "shots": {
+    "mean": 7.812,
+    "n": 16
+   },
+   "sot": {
+    "mean": 3.062,
+    "n": 16
+   }
+  },
+  "var": 3.063
+ },
+ "India: Calcutta Premier Division A": {
+  "mean": 2.429,
+  "n": 42,
+  "sd": 1.237,
+  "var": 1.531
+ },
+ "India: Durand Cup": {
+  "mean": 3.559,
+  "n": 34,
+  "sd": 2.181,
+  "var": 4.756
+ },
+ "India: I-League": {
+  "mean": 4.05,
+  "n": 20,
+  "sd": 2.376,
+  "var": 5.647
+ },
+ "India: I-League 2": {
+  "mean": 2.542,
+  "n": 24,
+  "sd": 1.732,
+  "var": 2.998
+ },
+ "India: I-League 3": {
+  "mean": 3.179,
+  "n": 28,
+  "sd": 1.833,
+  "var": 3.361
+ },
+ "India: IFA Shield": {
+  "mean": 3.0,
+  "n": 9,
+  "sd": 0.817,
+  "var": 0.667
+ },
+ "India: ISL": {
+  "mean": 3.108,
+  "n": 65,
+  "sd": 1.835,
+  "var": 3.368
+ },
+ "India: Super Cup": {
+  "mean": 2.682,
+  "n": 22,
+  "sd": 1.588,
+  "var": 2.522
+ },
+ "Ireland: Division 1": {
+  "mean": 2.756,
+  "n": 2212,
+  "sd": 1.721,
+  "stats": {
+   "corners": {
+    "mean": 4.471,
+    "n": 104
+   },
+   "fouls": {
+    "mean": 13.0,
+    "n": 14
+   },
+   "offsides": {
+    "mean": 1.5,
+    "n": 12
+   },
+   "shots": {
+    "mean": 8.279,
+    "n": 104
+   },
+   "sot": {
+    "mean": 4.683,
+    "n": 104
+   },
+   "yellow": {
+    "mean": 2.59,
+    "n": 100
+   }
+  },
+  "var": 2.963
+ },
+ "Ireland: FAI Cup": {
+  "mean": 3.647,
+  "n": 238,
+  "sd": 2.195,
+  "var": 4.817
+ },
+ "Ireland: League Cup": {
+  "mean": 4.0,
+  "n": 14,
+  "sd": 1.0,
+  "var": 1.0
+ },
+ "Ireland: Premier Division": {
+  "mean": 2.684,
+  "n": 266,
+  "sd": 1.591,
+  "var": 2.532
+ },
+ "Italy: Coppa Italia": {
+  "mean": 2.5,
+  "n": 2,
+  "sd": 0.5,
+  "var": 0.25
+ },
+ "Italy: Coppa Italia Serie C": {
+  "mean": 2.636,
+  "n": 11,
+  "sd": 1.772,
+  "var": 3.14
+ },
+ "Italy: Serie A": {
+  "mean": 2.071,
+  "n": 14,
+  "sd": 1.223,
+  "var": 1.495
+ },
+ "Italy: Serie B": {
+  "mean": 2.5,
+  "n": 10,
+  "sd": 1.285,
+  "var": 1.65
+ },
+ "Italy: Serie C - Group A": {
+  "mean": 2.538,
+  "n": 39,
+  "sd": 1.599,
+  "stats": {
+   "corners": {
+    "mean": 4.143,
+    "n": 14
+   },
+   "shots": {
+    "mean": 8.786,
+    "n": 14
+   },
+   "sot": {
+    "mean": 4.5,
+    "n": 14
+   },
+   "yellow": {
+    "mean": 1.25,
+    "n": 12
+   }
+  },
+  "var": 2.556
+ },
+ "Italy: Serie C - Group B": {
+  "mean": 2.333,
+  "n": 39,
+  "sd": 1.525,
+  "stats": {
+   "corners": {
+    "mean": 6.5,
+    "n": 2
+   },
+   "shots": {
+    "mean": 10.5,
+    "n": 2
+   },
+   "sot": {
+    "mean": 6.5,
+    "n": 2
+   },
+   "yellow": {
+    "mean": 1.0,
+    "n": 2
+   }
+  },
+  "var": 2.325
+ },
+ "Italy: Serie C - Group C": {
+  "mean": 2.494,
+  "n": 77,
+  "sd": 1.543,
+  "stats": {
+   "corners": {
+    "mean": 4.5,
+    "n": 10
+   },
+   "shots": {
+    "mean": 8.6,
+    "n": 10
+   },
+   "sot": {
+    "mean": 3.6,
+    "n": 10
+   },
+   "yellow": {
+    "mean": 1.5,
+    "n": 10
+   }
+  },
+  "var": 2.38
+ },
+ "Italy: Serie C - Promotion - Play Offs": {
+  "mean": 2.444,
+  "n": 18,
+  "sd": 1.739,
+  "stats": {
+   "corners": {
+    "mean": 4.4,
+    "n": 20
+   },
+   "fouls": {
+    "mean": 17.0,
+    "n": 2
+   },
+   "offsides": {
+    "mean": 1.5,
+    "n": 2
+   },
+   "shots": {
+    "mean": 8.9,
+    "n": 20
+   },
+   "sot": {
+    "mean": 3.95,
+    "n": 20
+   },
+   "yellow": {
+    "mean": 1.667,
+    "n": 18
+   }
+  },
+  "var": 3.025
+ },
+ "Italy: Super Cup (Serie C)": {
+  "mean": 6.0,
+  "n": 2,
+  "sd": 1.0,
+  "var": 1.0
+ },
+ "Japan: Emperors Cup": {
+  "mean": 3.121,
+  "n": 33,
+  "sd": 1.343,
+  "var": 1.803
+ },
+ "Japan: J-League": {
+  "mean": 2.983,
+  "n": 59,
+  "sd": 1.568,
+  "var": 2.457
+ },
+ "Japan: J-League Division 2": {
+  "mean": 2.636,
+  "n": 11,
+  "sd": 1.72,
+  "var": 2.959
+ },
+ "Japan: J1 League": {
+  "mean": 2.713,
+  "n": 345,
+  "sd": 1.655,
+  "stats": {
+   "corners": {
+    "mean": 4.571,
+    "n": 126
+   },
+   "fouls": {
+    "mean": 10.079,
+    "n": 126
+   },
+   "offsides": {
+    "mean": 1.825,
+    "n": 126
+   },
+   "shots": {
+    "mean": 12.397,
+    "n": 126
+   },
+   "sot": {
+    "mean": 4.333,
+    "n": 126
+   },
+   "yellow": {
+    "mean": 1.236,
+    "n": 110
+   }
+  },
+  "var": 2.738
+ },
+ "Japan: J2 League": {
+  "mean": 2.31,
+  "n": 58,
+  "sd": 1.621,
+  "var": 2.628
+ },
+ "Japan: J2/J3 League": {
+  "mean": 2.769,
+  "n": 78,
+  "sd": 1.527,
+  "stats": {
+   "corners": {
+    "mean": 5.087,
+    "n": 46
+   },
+   "fouls": {
+    "mean": 11.0,
+    "n": 4
+   },
+   "offsides": {
+    "mean": 1.5,
+    "n": 4
+   },
+   "shots": {
+    "mean": 8.543,
+    "n": 46
+   },
+   "sot": {
+    "mean": 3.413,
+    "n": 46
+   },
+   "yellow": {
+    "mean": 1.227,
+    "n": 44
+   }
+  },
+  "var": 2.331
+ },
+ "Japan: J3 League": {
+  "mean": 2.541,
+  "n": 111,
+  "sd": 1.67,
+  "var": 2.789
+ },
+ "Japan: Nabisco Cup": {
+  "mean": 3.4,
+  "n": 10,
+  "sd": 2.154,
+  "var": 4.64
+ },
+ "Japan: YBC Levain Cup": {
+  "mean": 3.043,
+  "n": 23,
+  "sd": 1.601,
+  "var": 2.563
+ },
+ "Kazakhstan: League Women": {
+  "mean": 4.633,
+  "n": 49,
+  "sd": 4.402,
+  "var": 19.375
+ },
+ "Kenya: FKF Mozzart Bet Cup": {
+  "mean": 2.5,
+  "n": 8,
+  "sd": 1.225,
+  "var": 1.5
+ },
+ "Kenya: Premier League": {
+  "mean": 1.988,
+  "n": 84,
+  "sd": 1.435,
+  "var": 2.059
+ },
+ "Latvia: 1. Liga": {
+  "mean": 4.473,
+  "n": 146,
+  "sd": 2.469,
+  "var": 6.095
+ },
+ "Latvia: Latvian Cup": {
+  "mean": 4.475,
+  "n": 61,
+  "sd": 2.099,
+  "var": 4.405
+ },
+ "Latvia: Nakotnes liga": {
+  "mean": 3.463,
+  "n": 658,
+  "sd": 2.011,
+  "stats": {
+   "corners": {
+    "mean": 5.25,
+    "n": 76
+   },
+   "shots": {
+    "mean": 10.474,
+    "n": 76
+   },
+   "sot": {
+    "mean": 5.184,
+    "n": 76
+   }
+  },
+  "var": 4.044
+ },
+ "Latvia: Optibet Virsliga": {
+  "mean": 2.727,
+  "n": 11,
+  "sd": 1.911,
+  "var": 3.653
+ },
+ "Latvia: Virsliga": {
+  "mean": 2.923,
+  "n": 155,
+  "sd": 1.861,
+  "stats": {
+   "corners": {
+    "mean": 4.286,
+    "n": 28
+   },
+   "fouls": {
+    "mean": 12.429,
+    "n": 28
+   },
+   "offsides": {
+    "mean": 1.429,
+    "n": 28
+   },
+   "shots": {
+    "mean": 14.143,
+    "n": 28
+   },
+   "sot": {
+    "mean": 4.893,
+    "n": 28
+   },
+   "yellow": {
+    "mean": 1.571,
+    "n": 28
+   }
+  },
+  "var": 3.464
+ },
+ "Lithuania: A Lyga": {
+  "mean": 2.455,
+  "n": 528,
+  "sd": 1.705,
+  "var": 2.907
+ },
+ "Lithuania: Division 2": {
+  "mean": 3.5,
+  "n": 12,
+  "sd": 2.5,
+  "var": 6.25
+ },
+ "Lithuania: I Lyga": {
+  "mean": 3.1,
+  "n": 420,
+  "sd": 2.022,
+  "stats": {
+   "corners": {
+    "mean": 5.214,
+    "n": 28
+   },
+   "fouls": {
+    "mean": 10.875,
+    "n": 8
+   },
+   "offsides": {
+    "mean": 2.25,
+    "n": 8
+   },
+   "shots": {
+    "mean": 9.393,
+    "n": 28
+   },
+   "sot": {
+    "mean": 4.179,
+    "n": 28
+   },
+   "yellow": {
+    "mean": 0.5,
+    "n": 4
+   }
+  },
+  "var": 4.09
+ },
+ "Lithuania: Lithuanian Cup": {
+  "mean": 2.857,
+  "n": 126,
+  "sd": 1.32,
+  "var": 1.741
+ },
+ "Lithuania: Super Cup": {
+  "mean": 1.0,
+  "n": 6,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Lithuania: TOPLYGA": {
+  "mean": 2.571,
+  "n": 462,
+  "sd": 1.558,
+  "stats": {
+   "corners": {
+    "mean": 4.833,
+    "n": 54
+   },
+   "shots": {
+    "mean": 8.648,
+    "n": 54
+   },
+   "sot": {
+    "mean": 3.685,
+    "n": 54
+   },
+   "yellow": {
+    "mean": 2.08,
+    "n": 50
+   }
+  },
+  "var": 2.427
+ },
+ "Luxembourg: BGL Ligue": {
+  "mean": 3.16,
+  "n": 1360,
+  "sd": 1.862,
+  "stats": {
+   "yellow": {
+    "mean": 3.0,
+    "n": 18
+   }
+  },
+  "var": 3.468
+ },
+ "Luxembourg: Luxembourg Cup": {
+  "mean": 4.802,
+  "n": 191,
+  "sd": 2.253,
+  "var": 5.076
+ },
+ "Luxembourg: National Division": {
+  "mean": 3.6,
+  "n": 30,
+  "sd": 1.541,
+  "var": 2.373
+ },
+ "Luxembourg: Super Cup": {
+  "mean": 3.0,
+  "n": 19,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Moldova: Moldovan Cup": {
+  "mean": 3.25,
+  "n": 8,
+  "sd": 2.385,
+  "var": 5.688
+ },
+ "Moldova: Super Liga": {
+  "mean": 3.029,
+  "n": 70,
+  "sd": 1.74,
+  "stats": {
+   "corners": {
+    "mean": 4.708,
+    "n": 24
+   },
+   "fouls": {
+    "mean": 12.583,
+    "n": 24
+   },
+   "offsides": {
+    "mean": 1.458,
+    "n": 24
+   },
+   "shots": {
+    "mean": 8.875,
+    "n": 24
+   },
+   "sot": {
+    "mean": 4.208,
+    "n": 24
+   },
+   "yellow": {
+    "mean": 2.077,
+    "n": 26
+   }
+  },
+  "var": 3.028
+ },
+ "Montenegro: Montenegrin Cup": {
+  "mean": 2.481,
+  "n": 81,
+  "sd": 1.426,
+  "var": 2.035
+ },
+ "Montenegro: Prva Crnogorska Liga": {
+  "mean": 2.431,
+  "n": 948,
+  "sd": 1.668,
+  "stats": {
+   "corners": {
+    "mean": 6.0,
+    "n": 4
+   },
+   "fouls": {
+    "mean": 13.5,
+    "n": 4
+   },
+   "offsides": {
+    "mean": 1.25,
+    "n": 4
+   },
+   "shots": {
+    "mean": 7.75,
+    "n": 4
+   },
+   "sot": {
+    "mean": 2.25,
+    "n": 4
+   },
+   "yellow": {
+    "mean": 1.25,
+    "n": 4
+   }
+  },
+  "var": 2.783
+ },
+ "Netherlands: Eerste Divisie": {
+  "mean": 3.274,
+  "n": 197,
+  "sd": 1.642,
+  "stats": {
+   "corners": {
+    "mean": 5.043,
+    "n": 46
+   },
+   "fouls": {
+    "mean": 11.217,
+    "n": 46
+   },
+   "offsides": {
+    "mean": 1.674,
+    "n": 46
+   },
+   "shots": {
+    "mean": 13.804,
+    "n": 46
+   },
+   "sot": {
+    "mean": 4.935,
+    "n": 46
+   },
+   "yellow": {
+    "mean": 1.725,
+    "n": 40
+   }
+  },
+  "var": 2.696
+ },
+ "Netherlands: Eredivisie": {
+  "mean": 3.258,
+  "n": 326,
+  "sd": 1.734,
+  "stats": {
+   "corners": {
+    "mean": 5.615,
+    "n": 52
+   },
+   "fouls": {
+    "mean": 10.308,
+    "n": 52
+   },
+   "offsides": {
+    "mean": 1.596,
+    "n": 52
+   },
+   "shots": {
+    "mean": 14.615,
+    "n": 52
+   },
+   "sot": {
+    "mean": 5.365,
+    "n": 52
+   },
+   "yellow": {
+    "mean": 1.591,
+    "n": 44
+   }
+  },
+  "var": 3.007
+ },
+ "Netherlands: Johan Cruyff Shield": {
+  "mean": 4.0,
+  "n": 1,
+  "sd": 0.0,
+  "stats": {
+   "corners": {
+    "mean": 4.5,
+    "n": 2
+   },
+   "fouls": {
+    "mean": 9.5,
+    "n": 2
+   },
+   "offsides": {
+    "mean": 1.0,
+    "n": 2
+   },
+   "shots": {
+    "mean": 18.5,
+    "n": 2
+   },
+   "sot": {
+    "mean": 7.5,
+    "n": 2
+   },
+   "yellow": {
+    "mean": 2.5,
+    "n": 2
+   }
+  },
+  "var": 0.0
+ },
+ "Netherlands: KNVB Beker": {
+  "mean": 3.903,
+  "n": 31,
+  "sd": 1.653,
+  "var": 2.733
+ },
+ "Nicaragua: Copa Primera": {
+  "mean": 3.5,
+  "n": 4,
+  "sd": 1.118,
+  "var": 1.25
+ },
+ "Nicaragua: Liga Primera": {
+  "mean": 2.813,
+  "n": 107,
+  "sd": 1.697,
+  "stats": {
+   "corners": {
+    "mean": 3.833,
+    "n": 12
+   },
+   "fouls": {
+    "mean": 11.0,
+    "n": 2
+   },
+   "offsides": {
+    "mean": 0.5,
+    "n": 2
+   },
+   "shots": {
+    "mean": 9.833,
+    "n": 12
+   },
+   "sot": {
+    "mean": 3.667,
+    "n": 12
+   }
+  },
+  "var": 2.881
+ },
+ "North & Central America: CONCACAF Central American Cup": {
+  "mean": 2.944,
+  "n": 54,
+  "sd": 2.131,
+  "var": 4.54
+ },
+ "North & Central America: CONCACAF Champions Cup": {
+  "mean": 1.812,
+  "n": 16,
+  "sd": 1.411,
+  "var": 1.99
+ },
+ "North & Central America: Leagues Cup": {
+  "mean": 3.333,
+  "n": 3,
+  "sd": 1.247,
+  "var": 1.556
+ },
+ "North & Central America: SuperLiga": {
+  "mean": 5.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "North Macedonia: 1. MFL": {
+  "mean": 3.171,
+  "n": 35,
+  "sd": 1.949,
+  "stats": {
+   "corners": {
+    "mean": 3.5,
+    "n": 4
+   },
+   "fouls": {
+    "mean": 11.5,
+    "n": 4
+   },
+   "offsides": {
+    "mean": 1.0,
+    "n": 4
+   },
+   "shots": {
+    "mean": 11.25,
+    "n": 4
+   },
+   "sot": {
+    "mean": 4.0,
+    "n": 4
+   },
+   "yellow": {
+    "mean": 2.0,
+    "n": 4
+   }
+  },
+  "var": 3.799
+ },
+ "North Macedonia: 2. MFL": {
+  "mean": 2.581,
+  "n": 43,
+  "sd": 2.105,
+  "var": 4.429
+ },
+ "North Macedonia: Macedonian Cup": {
+  "mean": 4.667,
+  "n": 3,
+  "sd": 1.247,
+  "var": 1.556
+ },
+ "Northern Ireland: Charity Shield": {
+  "mean": 1.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Northern Ireland: IFA Championship 1": {
+  "mean": 2.833,
+  "n": 6,
+  "sd": 1.572,
+  "var": 2.472
+ },
+ "Northern Ireland: IFA Premiership": {
+  "mean": 2.635,
+  "n": 52,
+  "sd": 1.871,
+  "var": 3.501
+ },
+ "Northern Ireland: Irish Cup": {
+  "mean": 3.622,
+  "n": 37,
+  "sd": 1.682,
+  "var": 2.83
+ },
+ "Northern Ireland: Irish League Cup": {
+  "mean": 3.387,
+  "n": 31,
+  "sd": 2.18,
+  "var": 4.753
+ },
+ "Northern Ireland: NIFL Championship": {
+  "mean": 2.938,
+  "n": 113,
+  "sd": 1.952,
+  "var": 3.81
+ },
+ "Northern Ireland: NIFL Premiership": {
+  "mean": 2.968,
+  "n": 285,
+  "sd": 1.629,
+  "stats": {
+   "corners": {
+    "mean": 4.409,
+    "n": 66
+   },
+   "shots": {
+    "mean": 7.394,
+    "n": 66
+   },
+   "sot": {
+    "mean": 3.485,
+    "n": 66
+   },
+   "yellow": {
+    "mean": 1.75,
+    "n": 48
+   }
+  },
+  "var": 2.655
+ },
+ "Norway: Adeccoligaen": {
+  "mean": 2.0,
+  "n": 2,
+  "sd": 1.0,
+  "var": 1.0
+ },
+ "Norway: Division 2 - Group 1": {
+  "mean": 3.47,
+  "n": 302,
+  "sd": 1.869,
+  "stats": {
+   "corners": {
+    "mean": 4.5,
+    "n": 42
+   },
+   "fouls": {
+    "mean": 12.643,
+    "n": 14
+   },
+   "offsides": {
+    "mean": 1.929,
+    "n": 14
+   },
+   "shots": {
+    "mean": 8.952,
+    "n": 42
+   },
+   "sot": {
+    "mean": 4.31,
+    "n": 42
+   },
+   "yellow": {
+    "mean": 1.625,
+    "n": 40
+   }
+  },
+  "var": 3.494
+ },
+ "Norway: Division 2 - Group 2": {
+  "mean": 3.923,
+  "n": 234,
+  "sd": 1.979,
+  "stats": {
+   "corners": {
+    "mean": 6.5,
+    "n": 2
+   },
+   "shots": {
+    "mean": 10.5,
+    "n": 2
+   },
+   "sot": {
+    "mean": 3.5,
+    "n": 2
+   },
+   "yellow": {
+    "mean": 0.5,
+    "n": 2
+   }
+  },
+  "var": 3.917
+ },
+ "Norway: Division 2 - Group 3": {
+  "mean": 4.5,
+  "n": 24,
+  "sd": 1.658,
+  "var": 2.75
+ },
+ "Norway: Division 2 - Group 4": {
+  "mean": 2.885,
+  "n": 26,
+  "sd": 1.127,
+  "var": 1.27
+ },
+ "Norway: Division 3 - Group 1": {
+  "mean": 4.9,
+  "n": 120,
+  "sd": 1.758,
+  "var": 3.09
+ },
+ "Norway: Division 3 - Group 2": {
+  "mean": 4.15,
+  "n": 1476,
+  "sd": 2.081,
+  "stats": {
+   "yellow": {
+    "mean": 0.5,
+    "n": 2
+   }
+  },
+  "var": 4.331
+ },
+ "Norway: Division 3 - Group 3": {
+  "mean": 4.449,
+  "n": 642,
+  "sd": 1.901,
+  "stats": {
+   "yellow": {
+    "mean": 1.0,
+    "n": 2
+   }
+  },
+  "var": 3.612
+ },
+ "Norway: Division 3 - Group 4": {
+  "mean": 4.342,
+  "n": 749,
+  "sd": 2.192,
+  "var": 4.806
+ },
+ "Norway: Division 3 - Group 5": {
+  "mean": 4.579,
+  "n": 684,
+  "sd": 2.313,
+  "stats": {
+   "yellow": {
+    "mean": 0.5,
+    "n": 4
+   }
+  },
+  "var": 5.349
+ },
+ "Norway: Division 3 - Group 6": {
+  "mean": 3.847,
+  "n": 786,
+  "sd": 1.99,
+  "var": 3.961
+ },
+ "Norway: Eliteserien": {
+  "mean": 3.221,
+  "n": 289,
+  "sd": 1.592,
+  "stats": {
+   "corners": {
+    "mean": 4.957,
+    "n": 46
+   },
+   "fouls": {
+    "mean": 11.63,
+    "n": 46
+   },
+   "offsides": {
+    "mean": 1.348,
+    "n": 46
+   },
+   "shots": {
+    "mean": 14.0,
+    "n": 46
+   },
+   "sot": {
+    "mean": 4.391,
+    "n": 46
+   },
+   "yellow": {
+    "mean": 1.864,
+    "n": 44
+   }
+  },
+  "var": 2.534
+ },
+ "Norway: NM Cup": {
+  "mean": 4.029,
+  "n": 140,
+  "sd": 2.019,
+  "var": 4.078
+ },
+ "Norway: OBOS Supercup": {
+  "mean": 3.8,
+  "n": 30,
+  "sd": 1.6,
+  "var": 2.56
+ },
+ "Norway: OBOS-ligaen": {
+  "mean": 3.966,
+  "n": 432,
+  "sd": 1.869,
+  "stats": {
+   "corners": {
+    "mean": 5.75,
+    "n": 28
+   },
+   "shots": {
+    "mean": 12.643,
+    "n": 28
+   },
+   "sot": {
+    "mean": 5.393,
+    "n": 28
+   },
+   "yellow": {
+    "mean": 1.308,
+    "n": 26
+   }
+  },
+  "var": 3.494
+ },
+ "Norway: Tippeligaen": {
+  "mean": 2.842,
+  "n": 38,
+  "sd": 1.71,
+  "var": 2.922
+ },
+ "Panama: LPF": {
+  "mean": 2.519,
+  "n": 212,
+  "sd": 1.728,
+  "stats": {
+   "corners": {
+    "mean": 5.231,
+    "n": 26
+   },
+   "shots": {
+    "mean": 8.5,
+    "n": 26
+   },
+   "sot": {
+    "mean": 4.462,
+    "n": 26
+   },
+   "yellow": {
+    "mean": 2.615,
+    "n": 26
+   }
+  },
+  "var": 2.985
+ },
+ "Paraguay: Copa Paraguay": {
+  "mean": 1.696,
+  "n": 23,
+  "sd": 0.905,
+  "var": 0.819
+ },
+ "Paraguay: Division Intermedia": {
+  "mean": 2.67,
+  "n": 557,
+  "sd": 1.646,
+  "stats": {
+   "corners": {
+    "mean": 4.464,
+    "n": 28
+   },
+   "fouls": {
+    "mean": 11.4,
+    "n": 10
+   },
+   "offsides": {
+    "mean": 2.7,
+    "n": 10
+   },
+   "shots": {
+    "mean": 8.714,
+    "n": 28
+   },
+   "sot": {
+    "mean": 3.5,
+    "n": 28
+   },
+   "yellow": {
+    "mean": 0.5,
+    "n": 2
+   }
+  },
+  "var": 2.709
+ },
+ "Peru: Copa de la Liga": {
+  "mean": 2.688,
+  "n": 16,
+  "sd": 1.722,
+  "var": 2.965
+ },
+ "Peru: Liga 1": {
+  "mean": 2.434,
+  "n": 173,
+  "sd": 1.54,
+  "stats": {
+   "corners": {
+    "mean": 4.182,
+    "n": 22
+   },
+   "fouls": {
+    "mean": 11.227,
+    "n": 22
+   },
+   "offsides": {
+    "mean": 1.955,
+    "n": 22
+   },
+   "shots": {
+    "mean": 13.136,
+    "n": 22
+   },
+   "sot": {
+    "mean": 4.409,
+    "n": 22
+   },
+   "yellow": {
+    "mean": 2.227,
+    "n": 22
+   }
+  },
+  "var": 2.373
+ },
+ "Peru: Liga 2": {
+  "mean": 2.603,
+  "n": 141,
+  "sd": 1.624,
+  "stats": {
+   "corners": {
+    "mean": 4.3,
+    "n": 20
+   },
+   "fouls": {
+    "mean": 19.75,
+    "n": 4
+   },
+   "offsides": {
+    "mean": 2.0,
+    "n": 4
+   },
+   "shots": {
+    "mean": 10.3,
+    "n": 20
+   },
+   "sot": {
+    "mean": 4.45,
+    "n": 20
+   },
+   "yellow": {
+    "mean": 2.15,
+    "n": 20
+   }
+  },
+  "var": 2.637
+ },
+ "Poland: 1. Liga": {
+  "mean": 2.833,
+  "n": 6,
+  "sd": 1.675,
+  "var": 2.806
+ },
+ "Poland: Division 1": {
+  "mean": 2.561,
+  "n": 707,
+  "sd": 1.334,
+  "stats": {
+   "corners": {
+    "mean": 4.708,
+    "n": 24
+   },
+   "fouls": {
+    "mean": 12.542,
+    "n": 24
+   },
+   "offsides": {
+    "mean": 1.667,
+    "n": 24
+   },
+   "shots": {
+    "mean": 10.292,
+    "n": 24
+   },
+   "sot": {
+    "mean": 3.125,
+    "n": 24
+   },
+   "yellow": {
+    "mean": 1.682,
+    "n": 22
+   }
+  },
+  "var": 1.779
+ },
+ "Poland: Division 2": {
+  "mean": 2.816,
+  "n": 196,
+  "sd": 1.612,
+  "stats": {
+   "corners": {
+    "mean": 5.5,
+    "n": 18
+   },
+   "fouls": {
+    "mean": 13.833,
+    "n": 18
+   },
+   "offsides": {
+    "mean": 1.278,
+    "n": 18
+   },
+   "shots": {
+    "mean": 9.778,
+    "n": 18
+   },
+   "sot": {
+    "mean": 4.5,
+    "n": 18
+   },
+   "yellow": {
+    "mean": 2.188,
+    "n": 16
+   }
+  },
+  "var": 2.599
+ },
+ "Poland: Division 2 - East": {
+  "mean": 2.5,
+  "n": 4,
+  "sd": 1.803,
+  "var": 3.25
+ },
+ "Poland: Division 2 - West": {
+  "mean": 3.312,
+  "n": 16,
+  "sd": 2.103,
+  "var": 4.422
+ },
+ "Poland: Ekstraklasa": {
+  "mean": 2.716,
+  "n": 870,
+  "sd": 1.707,
+  "stats": {
+   "corners": {
+    "mean": 4.778,
+    "n": 18
+   },
+   "fouls": {
+    "mean": 12.778,
+    "n": 18
+   },
+   "offsides": {
+    "mean": 1.278,
+    "n": 18
+   },
+   "shots": {
+    "mean": 15.444,
+    "n": 18
+   },
+   "sot": {
+    "mean": 4.333,
+    "n": 18
+   },
+   "yellow": {
+    "mean": 2.188,
+    "n": 16
+   }
+  },
+  "var": 2.915
+ },
+ "Poland: III Liga - Group I": {
+  "mean": 3.341,
+  "n": 267,
+  "sd": 1.782,
+  "var": 3.176
+ },
+ "Poland: III Liga - Group II": {
+  "mean": 3.245,
+  "n": 298,
+  "sd": 1.792,
+  "var": 3.212
+ },
+ "Poland: III Liga - Group III": {
+  "mean": 3.093,
+  "n": 367,
+  "sd": 1.914,
+  "var": 3.664
+ },
+ "Poland: III Liga - Group IV": {
+  "mean": 3.239,
+  "n": 318,
+  "sd": 1.944,
+  "var": 3.779
+ },
+ "Poland: III Liga - Group VII": {
+  "mean": 1.75,
+  "n": 4,
+  "sd": 0.829,
+  "var": 0.688
+ },
+ "Poland: Polish Cup": {
+  "mean": 3.0,
+  "n": 97,
+  "sd": 1.823,
+  "var": 3.322
+ },
+ "Poland: Super Cup": {
+  "mean": 4.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Portugal: Campeonato de Portugal - Group C": {
+  "mean": 1.786,
+  "n": 42,
+  "sd": 1.319,
+  "stats": {
+   "corners": {
+    "mean": 3.5,
+    "n": 2
+   },
+   "shots": {
+    "mean": 7.5,
+    "n": 2
+   },
+   "sot": {
+    "mean": 4.5,
+    "n": 2
+   }
+  },
+  "var": 1.74
+ },
+ "Portugal: Campeonato de Portugal - Group D": {
+  "mean": 2.38,
+  "n": 50,
+  "sd": 1.672,
+  "stats": {
+   "corners": {
+    "mean": 2.0,
+    "n": 2
+   },
+   "shots": {
+    "mean": 4.5,
+    "n": 2
+   },
+   "sot": {
+    "mean": 3.5,
+    "n": 2
+   }
+  },
+  "var": 2.796
+ },
+ "Portugal: Campeonato de Portugal - Play Offs": {
+  "mean": 3.0,
+  "n": 2,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Portugal: Campeonato de Portugal - Promotion Group": {
+  "mean": 2.611,
+  "n": 18,
+  "sd": 1.496,
+  "stats": {
+   "corners": {
+    "mean": 3.9,
+    "n": 20
+   },
+   "shots": {
+    "mean": 7.35,
+    "n": 20
+   },
+   "sot": {
+    "mean": 3.0,
+    "n": 20
+   }
+  },
+  "var": 2.238
+ },
+ "Portugal: Campeonato de Portugal Prio - Relegation Group": {
+  "mean": 3.5,
+  "n": 2,
+  "sd": 2.5,
+  "var": 6.25
+ },
+ "Portugal: League Cup": {
+  "mean": 2.889,
+  "n": 9,
+  "sd": 1.449,
+  "var": 2.099
+ },
+ "Portugal: Liga 3": {
+  "mean": 2.263,
+  "n": 259,
+  "sd": 1.39,
+  "stats": {
+   "corners": {
+    "mean": 4.857,
+    "n": 84
+   },
+   "shots": {
+    "mean": 8.107,
+    "n": 84
+   },
+   "sot": {
+    "mean": 3.81,
+    "n": 84
+   },
+   "yellow": {
+    "mean": 1.988,
+    "n": 82
+   }
+  },
+  "var": 1.931
+ },
+ "Portugal: Liga Portugal": {
+  "mean": 2.793,
+  "n": 193,
+  "sd": 1.612,
+  "stats": {
+   "corners": {
+    "mean": 4.757,
+    "n": 70
+   },
+   "fouls": {
+    "mean": 12.971,
+    "n": 70
+   },
+   "offsides": {
+    "mean": 1.6,
+    "n": 70
+   },
+   "shots": {
+    "mean": 11.857,
+    "n": 70
+   },
+   "sot": {
+    "mean": 3.857,
+    "n": 70
+   },
+   "yellow": {
+    "mean": 2.614,
+    "n": 70
+   }
+  },
+  "var": 2.6
+ },
+ "Portugal: Liga Portugal 2": {
+  "mean": 2.467,
+  "n": 199,
+  "sd": 1.634,
+  "stats": {
+   "corners": {
+    "mean": 4.339,
+    "n": 62
+   },
+   "fouls": {
+    "mean": 13.968,
+    "n": 62
+   },
+   "offsides": {
+    "mean": 1.677,
+    "n": 62
+   },
+   "shots": {
+    "mean": 8.806,
+    "n": 62
+   },
+   "sot": {
+    "mean": 4.0,
+    "n": 62
+   },
+   "yellow": {
+    "mean": 2.387,
+    "n": 62
+   }
+  },
+  "var": 2.671
+ },
+ "Portugal: Liga de Honra": {
+  "mean": 2.5,
+  "n": 20,
+  "sd": 1.688,
+  "var": 2.85
+ },
+ "Portugal: LigaPro": {
+  "mean": 3.75,
+  "n": 4,
+  "sd": 0.829,
+  "var": 0.688
+ },
+ "Portugal: Primeira Liga": {
+  "mean": 2.524,
+  "n": 84,
+  "sd": 1.967,
+  "var": 3.868
+ },
+ "Portugal: Second Division - Zona Centro": {
+  "mean": 1.0,
+  "n": 2,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Portugal: Segunda Liga": {
+  "mean": 2.0,
+  "n": 6,
+  "sd": 1.0,
+  "var": 1.0
+ },
+ "Portugal: Ta\u00e7a de Portugal": {
+  "mean": 2.709,
+  "n": 55,
+  "sd": 1.569,
+  "stats": {
+   "corners": {
+    "mean": 5.0,
+    "n": 2
+   },
+   "fouls": {
+    "mean": 15.0,
+    "n": 2
+   },
+   "offsides": {
+    "mean": 0.0,
+    "n": 2
+   },
+   "shots": {
+    "mean": 10.0,
+    "n": 2
+   },
+   "sot": {
+    "mean": 2.0,
+    "n": 2
+   },
+   "yellow": {
+    "mean": 3.0,
+    "n": 2
+   }
+  },
+  "var": 2.461
+ },
+ "Romania: Cupa Ligii": {
+  "mean": 3.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Romania: Liga 1": {
+  "mean": 2.546,
+  "n": 350,
+  "sd": 1.308,
+  "var": 1.712
+ },
+ "Romania: Liga 2": {
+  "mean": 2.705,
+  "n": 1402,
+  "sd": 1.629,
+  "var": 2.652
+ },
+ "Romania: Liga 3 - Promotion Group": {
+  "mean": 1.875,
+  "n": 152,
+  "sd": 0.927,
+  "var": 0.859
+ },
+ "Romania: Liga 3 - Promotion Play Offs": {
+  "mean": 3.208,
+  "n": 96,
+  "sd": 0.73,
+  "var": 0.534
+ },
+ "Romania: Liga 3 - Seria 10": {
+  "mean": 2.071,
+  "n": 140,
+  "sd": 0.961,
+  "var": 0.923
+ },
+ "Romania: Liga 3 - Seria 7": {
+  "mean": 2.955,
+  "n": 418,
+  "sd": 1.744,
+  "var": 3.043
+ },
+ "Romania: Liga 3 - Seria 9": {
+  "mean": 2.222,
+  "n": 171,
+  "sd": 1.133,
+  "var": 1.284
+ },
+ "Romania: Romanian Cup": {
+  "mean": 3.465,
+  "n": 308,
+  "sd": 1.868,
+  "var": 3.491
+ },
+ "Romania: Super Cup": {
+  "mean": 3.0,
+  "n": 6,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Romania: Superliga": {
+  "mean": 2.626,
+  "n": 1028,
+  "sd": 1.579,
+  "stats": {
+   "corners": {
+    "mean": 3.833,
+    "n": 24
+   },
+   "fouls": {
+    "mean": 12.0,
+    "n": 24
+   },
+   "offsides": {
+    "mean": 1.25,
+    "n": 24
+   },
+   "shots": {
+    "mean": 14.25,
+    "n": 24
+   },
+   "sot": {
+    "mean": 4.667,
+    "n": 24
+   },
+   "yellow": {
+    "mean": 2.2,
+    "n": 20
+   }
+  },
+  "var": 2.493
+ },
+ "Russia: Division 2 - Center": {
+  "mean": 2.154,
+  "n": 13,
+  "sd": 1.915,
+  "var": 3.669
+ },
+ "Russia: FNL": {
+  "mean": 2.31,
+  "n": 912,
+  "sd": 1.583,
+  "stats": {
+   "corners": {
+    "mean": 4.84,
+    "n": 50
+   },
+   "shots": {
+    "mean": 7.74,
+    "n": 50
+   },
+   "sot": {
+    "mean": 3.94,
+    "n": 50
+   },
+   "yellow": {
+    "mean": 2.083,
+    "n": 48
+   }
+  },
+  "var": 2.507
+ },
+ "Russia: FNL 2 - Division A Gold": {
+  "mean": 2.186,
+  "n": 258,
+  "sd": 1.688,
+  "stats": {
+   "yellow": {
+    "mean": 2.583,
+    "n": 12
+   }
+  },
+  "var": 2.849
+ },
+ "Russia: FNL 2 - Division A Silver": {
+  "mean": 5.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Russia: FNL 2 - Division B - Group 1": {
+  "mean": 2.411,
+  "n": 297,
+  "sd": 1.563,
+  "stats": {
+   "yellow": {
+    "mean": 0.5,
+    "n": 8
+   }
+  },
+  "var": 2.444
+ },
+ "Russia: FNL 2 - Division B - Group 2": {
+  "mean": 2.846,
+  "n": 91,
+  "sd": 1.54,
+  "stats": {
+   "yellow": {
+    "mean": 0.5,
+    "n": 4
+   }
+  },
+  "var": 2.372
+ },
+ "Russia: FNL 2 - Division B - Group 3": {
+  "mean": 2.721,
+  "n": 251,
+  "sd": 1.644,
+  "stats": {
+   "yellow": {
+    "mean": 0.5,
+    "n": 4
+   }
+  },
+  "var": 2.703
+ },
+ "Russia: FNL 2 - Division B - Group 4": {
+  "mean": 2.737,
+  "n": 201,
+  "sd": 1.772,
+  "var": 3.139
+ },
+ "Russia: FNL 2 - Group 1": {
+  "mean": 4.75,
+  "n": 4,
+  "sd": 2.586,
+  "var": 6.688
+ },
+ "Russia: FNL 2 - Group 3": {
+  "mean": 1.75,
+  "n": 4,
+  "sd": 1.09,
+  "var": 1.188
+ },
+ "Russia: PFL - Center": {
+  "mean": 2.176,
+  "n": 17,
+  "sd": 1.947,
+  "var": 3.792
+ },
+ "Russia: PFL - Group 3": {
+  "mean": 4.0,
+  "n": 4,
+  "sd": 1.225,
+  "var": 1.5
+ },
+ "Russia: PFL - Ural-Povolzhye": {
+  "mean": 1.0,
+  "n": 3,
+  "sd": 0.816,
+  "var": 0.667
+ },
+ "Russia: Premier League": {
+  "mean": 2.518,
+  "n": 274,
+  "sd": 1.556,
+  "stats": {
+   "corners": {
+    "mean": 4.6,
+    "n": 20
+   },
+   "fouls": {
+    "mean": 13.4,
+    "n": 20
+   },
+   "offsides": {
+    "mean": 1.5,
+    "n": 20
+   },
+   "shots": {
+    "mean": 14.45,
+    "n": 20
+   },
+   "sot": {
+    "mean": 4.9,
+    "n": 20
+   },
+   "yellow": {
+    "mean": 1.833,
+    "n": 18
+   }
+  },
+  "var": 2.421
+ },
+ "Russia: Russian Cup": {
+  "mean": 2.898,
+  "n": 167,
+  "sd": 1.324,
+  "var": 1.752
+ },
+ "Russia: Super Cup": {
+  "mean": 4.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Rwanda: Peace Cup": {
+  "mean": 1.2,
+  "n": 5,
+  "sd": 1.166,
+  "var": 1.36
+ },
+ "Rwanda: Premier League": {
+  "mean": 2.4,
+  "n": 70,
+  "sd": 1.377,
+  "var": 1.897
+ },
+ "Rwanda: Super Cup": {
+  "mean": 5.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Scotland: Challenge Cup": {
+  "mean": 3.842,
+  "n": 120,
+  "sd": 1.853,
+  "var": 3.433
+ },
+ "Scotland: Championship": {
+  "mean": 2.439,
+  "n": 253,
+  "sd": 1.664,
+  "stats": {
+   "corners": {
+    "mean": 3.7,
+    "n": 10
+   },
+   "shots": {
+    "mean": 9.5,
+    "n": 10
+   },
+   "sot": {
+    "mean": 3.9,
+    "n": 10
+   },
+   "yellow": {
+    "mean": 1.625,
+    "n": 8
+   }
+  },
+  "var": 2.768
+ },
+ "Scotland: Division 1": {
+  "mean": 2.71,
+  "n": 31,
+  "sd": 1.708,
+  "var": 2.916
+ },
+ "Scotland: Division 2": {
+  "mean": 2.875,
+  "n": 48,
+  "sd": 1.9,
+  "var": 3.609
+ },
+ "Scotland: Division 3": {
+  "mean": 3.429,
+  "n": 49,
+  "sd": 2.1,
+  "var": 4.408
+ },
+ "Scotland: Insurance League Cup": {
+  "mean": 2.8,
+  "n": 25,
+  "sd": 1.321,
+  "var": 1.745
+ },
+ "Scotland: League Cup": {
+  "mean": 3.741,
+  "n": 158,
+  "sd": 1.554,
+  "var": 2.414
+ },
+ "Scotland: League One": {
+  "mean": 2.738,
+  "n": 233,
+  "sd": 1.593,
+  "stats": {
+   "corners": {
+    "mean": 5.2,
+    "n": 10
+   },
+   "fouls": {
+    "mean": 0.0,
+    "n": 10
+   },
+   "offsides": {
+    "mean": 0.0,
+    "n": 10
+   },
+   "shots": {
+    "mean": 9.0,
+    "n": 10
+   },
+   "sot": {
+    "mean": 3.9,
+    "n": 10
+   },
+   "yellow": {
+    "mean": 2.5,
+    "n": 8
+   }
+  },
+  "var": 2.537
+ },
+ "Scotland: League Two": {
+  "mean": 2.843,
+  "n": 217,
+  "sd": 1.564,
+  "stats": {
+   "corners": {
+    "mean": 5.4,
+    "n": 10
+   },
+   "fouls": {
+    "mean": 0.0,
+    "n": 10
+   },
+   "offsides": {
+    "mean": 0.0,
+    "n": 10
+   },
+   "shots": {
+    "mean": 9.1,
+    "n": 10
+   },
+   "sot": {
+    "mean": 4.7,
+    "n": 10
+   },
+   "yellow": {
+    "mean": 2.2,
+    "n": 10
+   }
+  },
+  "var": 2.445
+ },
+ "Scotland: Lowland League": {
+  "mean": 2.167,
+  "n": 6,
+  "sd": 1.462,
+  "var": 2.139
+ },
+ "Scotland: Premier League": {
+  "mean": 3.35,
+  "n": 197,
+  "sd": 1.907,
+  "var": 3.635
+ },
+ "Scotland: Premiership": {
+  "mean": 2.953,
+  "n": 804,
+  "sd": 1.665,
+  "stats": {
+   "corners": {
+    "mean": 5.75,
+    "n": 8
+   },
+   "fouls": {
+    "mean": 12.375,
+    "n": 8
+   },
+   "offsides": {
+    "mean": 1.25,
+    "n": 8
+   },
+   "shots": {
+    "mean": 13.5,
+    "n": 8
+   },
+   "sot": {
+    "mean": 3.625,
+    "n": 8
+   },
+   "yellow": {
+    "mean": 1.875,
+    "n": 8
+   }
+  },
+  "var": 2.773
+ },
+ "Scotland: Scottish Cup": {
+  "mean": 3.154,
+  "n": 130,
+  "sd": 1.798,
+  "var": 3.231
+ },
+ "Serbia and Montenegro: Prva liga": {
+  "mean": 1.677,
+  "n": 31,
+  "sd": 0.863,
+  "var": 0.744
+ },
+ "Serbia: Mozzart Bet Prva Liga": {
+  "mean": 2.249,
+  "n": 398,
+  "sd": 1.337,
+  "stats": {
+   "corners": {
+    "mean": 3.643,
+    "n": 14
+   },
+   "fouls": {
+    "mean": 14.0,
+    "n": 10
+   },
+   "offsides": {
+    "mean": 2.6,
+    "n": 10
+   },
+   "shots": {
+    "mean": 7.429,
+    "n": 14
+   },
+   "sot": {
+    "mean": 3.75,
+    "n": 12
+   },
+   "yellow": {
+    "mean": 3.25,
+    "n": 12
+   }
+  },
+  "var": 1.788
+ },
+ "Serbia: Mozzart Bet Super Liga": {
+  "mean": 2.523,
+  "n": 865,
+  "sd": 1.711,
+  "stats": {
+   "corners": {
+    "mean": 4.667,
+    "n": 18
+   },
+   "fouls": {
+    "mean": 11.667,
+    "n": 18
+   },
+   "offsides": {
+    "mean": 1.222,
+    "n": 18
+   },
+   "shots": {
+    "mean": 15.333,
+    "n": 18
+   },
+   "sot": {
+    "mean": 5.556,
+    "n": 18
+   },
+   "yellow": {
+    "mean": 2.278,
+    "n": 18
+   }
+  },
+  "var": 2.927
+ },
+ "Serbia: Mozzart Serbian Cup": {
+  "mean": 3.469,
+  "n": 79,
+  "sd": 1.243,
+  "var": 1.546
+ },
+ "Serbia: Prva Liga": {
+  "mean": 2.543,
+  "n": 35,
+  "sd": 1.872,
+  "var": 3.505
+ },
+ "Serbia: Serbian Cup": {
+  "mean": 3.25,
+  "n": 4,
+  "sd": 2.861,
+  "var": 8.188
+ },
+ "Serbia: Srpska Liga - Belgrade": {
+  "mean": 3.255,
+  "n": 47,
+  "sd": 2.078,
+  "var": 4.318
+ },
+ "Serbia: Srpska Liga - East": {
+  "mean": 4.755,
+  "n": 49,
+  "sd": 3.273,
+  "var": 10.716
+ },
+ "Serbia: Srpska Liga - West": {
+  "mean": 2.07,
+  "n": 57,
+  "sd": 1.485,
+  "var": 2.206
+ },
+ "Serbia: Super Liga": {
+  "mean": 2.372,
+  "n": 137,
+  "sd": 1.844,
+  "var": 3.402
+ },
+ "Slovakia: 1. Liga": {
+  "mean": 2.333,
+  "n": 3,
+  "sd": 0.471,
+  "var": 0.222
+ },
+ "Slovakia: 2. Liga - East": {
+  "mean": 3.75,
+  "n": 4,
+  "sd": 1.92,
+  "var": 3.688
+ },
+ "Slovakia: 2. liga": {
+  "mean": 2.952,
+  "n": 630,
+  "sd": 1.865,
+  "stats": {
+   "corners": {
+    "mean": 5.607,
+    "n": 28
+   },
+   "fouls": {
+    "mean": 13.321,
+    "n": 28
+   },
+   "offsides": {
+    "mean": 1.615,
+    "n": 26
+   },
+   "shots": {
+    "mean": 9.536,
+    "n": 28
+   },
+   "sot": {
+    "mean": 5.0,
+    "n": 28
+   },
+   "yellow": {
+    "mean": 2.143,
+    "n": 28
+   }
+  },
+  "var": 3.478
+ },
+ "Slovakia: 3. Liga - Central": {
+  "mean": 3.346,
+  "n": 26,
+  "sd": 1.568,
+  "var": 2.457
+ },
+ "Slovakia: 3. Liga - East": {
+  "mean": 4.154,
+  "n": 26,
+  "sd": 1.833,
+  "var": 3.361
+ },
+ "Slovakia: 3. Liga - Promotion Play Offs": {
+  "mean": 1.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Slovakia: 3. Liga - West": {
+  "mean": 3.545,
+  "n": 66,
+  "sd": 2.668,
+  "var": 7.116
+ },
+ "Slovakia: 4. liga - Central": {
+  "mean": 3.444,
+  "n": 18,
+  "sd": 2.242,
+  "var": 5.025
+ },
+ "Slovakia: Corgon Liga": {
+  "mean": 2.147,
+  "n": 34,
+  "sd": 1.517,
+  "var": 2.302
+ },
+ "Slovakia: Fortuna liga": {
+  "mean": 2.739,
+  "n": 23,
+  "sd": 1.538,
+  "var": 2.367
+ },
+ "Slovakia: Mars Superliga": {
+  "mean": 6.0,
+  "n": 3,
+  "sd": 1.414,
+  "var": 2.0
+ },
+ "Slovakia: Nike liga": {
+  "mean": 2.758,
+  "n": 165,
+  "sd": 1.626,
+  "stats": {
+   "corners": {
+    "mean": 5.95,
+    "n": 20
+   },
+   "fouls": {
+    "mean": 11.6,
+    "n": 20
+   },
+   "offsides": {
+    "mean": 1.3,
+    "n": 20
+   },
+   "shots": {
+    "mean": 14.4,
+    "n": 20
+   },
+   "sot": {
+    "mean": 4.85,
+    "n": 20
+   },
+   "yellow": {
+    "mean": 2.062,
+    "n": 16
+   }
+  },
+  "var": 2.644
+ },
+ "Slovakia: Slovak Cup": {
+  "mean": 4.037,
+  "n": 81,
+  "sd": 1.984,
+  "var": 3.937
+ },
+ "Slovenia: 2. SNL": {
+  "mean": 2.795,
+  "n": 195,
+  "sd": 1.977,
+  "stats": {
+   "yellow": {
+    "mean": 0.5,
+    "n": 2
+   }
+  },
+  "var": 3.907
+ },
+ "Slovenia: 3. SNL - East": {
+  "mean": 3.0,
+  "n": 45,
+  "sd": 1.52,
+  "var": 2.311
+ },
+ "Slovenia: 3. SNL - West": {
+  "mean": 3.143,
+  "n": 21,
+  "sd": 1.859,
+  "var": 3.456
+ },
+ "Slovenia: Prva liga": {
+  "mean": 2.73,
+  "n": 122,
+  "sd": 1.699,
+  "stats": {
+   "corners": {
+    "mean": 3.7,
+    "n": 10
+   },
+   "fouls": {
+    "mean": 14.5,
+    "n": 8
+   },
+   "offsides": {
+    "mean": 1.6,
+    "n": 10
+   },
+   "shots": {
+    "mean": 12.3,
+    "n": 10
+   },
+   "sot": {
+    "mean": 3.8,
+    "n": 10
+   },
+   "yellow": {
+    "mean": 2.0,
+    "n": 10
+   }
+  },
+  "var": 2.886
+ },
+ "Slovenia: Slovenian Cup": {
+  "mean": 3.105,
+  "n": 19,
+  "sd": 1.552,
+  "var": 2.41
+ },
+ "South America: Brasil Ladies Cup Women": {
+  "mean": 3.1,
+  "n": 10,
+  "sd": 1.624,
+  "var": 2.638
+ },
+ "South America: Copa Libertadores": {
+  "mean": 2.192,
+  "n": 1043,
+  "sd": 1.34,
+  "var": 1.796
+ },
+ "South America: Copa Libertadores Women": {
+  "mean": 2.3,
+  "n": 20,
+  "sd": 2.532,
+  "var": 6.41
+ },
+ "South America: Copa Sudamericana": {
+  "mean": 2.365,
+  "n": 902,
+  "sd": 1.434,
+  "var": 2.057
+ },
+ "South America: Recopa Sudamericana": {
+  "mean": 3.0,
+  "n": 4,
+  "sd": 2.0,
+  "var": 4.0
+ },
+ "South America: Serie Rio de la Plata": {
+  "mean": 2.527,
+  "n": 125,
+  "sd": 1.726,
+  "var": 2.98
+ },
+ "South Korea: K League 1": {
+  "mean": 2.522,
+  "n": 343,
+  "sd": 1.589,
+  "stats": {
+   "corners": {
+    "mean": 4.514,
+    "n": 72
+   },
+   "fouls": {
+    "mean": 10.139,
+    "n": 72
+   },
+   "offsides": {
+    "mean": 1.528,
+    "n": 72
+   },
+   "shots": {
+    "mean": 11.625,
+    "n": 72
+   },
+   "sot": {
+    "mean": 4.042,
+    "n": 72
+   },
+   "yellow": {
+    "mean": 1.614,
+    "n": 70
+   }
+  },
+  "var": 2.524
+ },
+ "South Korea: K League 2": {
+  "mean": 2.592,
+  "n": 179,
+  "sd": 1.802,
+  "stats": {
+   "corners": {
+    "mean": 4.269,
+    "n": 52
+   },
+   "fouls": {
+    "mean": 10.558,
+    "n": 52
+   },
+   "offsides": {
+    "mean": 1.346,
+    "n": 52
+   },
+   "shots": {
+    "mean": 12.519,
+    "n": 52
+   },
+   "sot": {
+    "mean": 4.596,
+    "n": 52
+   },
+   "yellow": {
+    "mean": 2.019,
+    "n": 52
+   }
+  },
+  "var": 3.247
+ },
+ "South Korea: K League Challenge": {
+  "mean": 2.762,
+  "n": 21,
+  "sd": 1.444,
+  "var": 2.086
+ },
+ "South Korea: K League Classic": {
+  "mean": 2.333,
+  "n": 6,
+  "sd": 0.745,
+  "var": 0.556
+ },
+ "South Korea: K-League": {
+  "mean": 2.717,
+  "n": 53,
+  "sd": 1.946,
+  "var": 3.788
+ },
+ "South Korea: K-League Classic": {
+  "mean": 2.795,
+  "n": 39,
+  "sd": 1.304,
+  "var": 1.702
+ },
+ "South Korea: K3 League": {
+  "mean": 2.074,
+  "n": 27,
+  "sd": 1.184,
+  "var": 1.402
+ },
+ "South Korea: Korean Cup": {
+  "mean": 2.968,
+  "n": 31,
+  "sd": 1.47,
+  "var": 2.16
+ },
+ "South Korea: League Cup": {
+  "mean": 0.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "South Korea: Super Cup": {
+  "mean": 2.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Sweden: Allsvenskan": {
+  "mean": 3.094,
+  "n": 287,
+  "sd": 1.843,
+  "stats": {
+   "corners": {
+    "mean": 4.75,
+    "n": 48
+   },
+   "fouls": {
+    "mean": 11.979,
+    "n": 48
+   },
+   "offsides": {
+    "mean": 1.271,
+    "n": 48
+   },
+   "shots": {
+    "mean": 13.792,
+    "n": 48
+   },
+   "sot": {
+    "mean": 4.458,
+    "n": 48
+   },
+   "yellow": {
+    "mean": 1.896,
+    "n": 48
+   }
+  },
+  "var": 3.396
+ },
+ "Sweden: Division 1 - Norra": {
+  "mean": 3.267,
+  "n": 656,
+  "sd": 1.976,
+  "stats": {
+   "corners": {
+    "mean": 4.295,
+    "n": 44
+   },
+   "fouls": {
+    "mean": 12.529,
+    "n": 34
+   },
+   "offsides": {
+    "mean": 1.433,
+    "n": 30
+   },
+   "shots": {
+    "mean": 8.205,
+    "n": 44
+   },
+   "sot": {
+    "mean": 3.864,
+    "n": 44
+   },
+   "yellow": {
+    "mean": 1.714,
+    "n": 42
+   }
+  },
+  "var": 3.905
+ },
+ "Sweden: Division 1 - Relegation": {
+  "mean": 1.5,
+  "n": 2,
+  "sd": 0.5,
+  "var": 0.25
+ },
+ "Sweden: Division 1 - S\u00f6dra": {
+  "mean": 2.977,
+  "n": 129,
+  "sd": 1.811,
+  "stats": {
+   "corners": {
+    "mean": 5.182,
+    "n": 22
+   },
+   "fouls": {
+    "mean": 11.062,
+    "n": 16
+   },
+   "offsides": {
+    "mean": 1.929,
+    "n": 14
+   },
+   "shots": {
+    "mean": 9.5,
+    "n": 24
+   },
+   "sot": {
+    "mean": 4.375,
+    "n": 24
+   },
+   "yellow": {
+    "mean": 1.167,
+    "n": 24
+   }
+  },
+  "var": 3.279
+ },
+ "Sweden: Division 2 - Norra G\u00f6taland": {
+  "mean": 3.429,
+  "n": 105,
+  "sd": 1.931,
+  "stats": {
+   "yellow": {
+    "mean": 0.5,
+    "n": 2
+   }
+  },
+  "var": 3.731
+ },
+ "Sweden: Division 2 - Norra Svealand": {
+  "mean": 3.339,
+  "n": 124,
+  "sd": 1.67,
+  "stats": {
+   "yellow": {
+    "mean": 0.5,
+    "n": 2
+   }
+  },
+  "var": 2.789
+ },
+ "Sweden: Division 2 - Norrland": {
+  "mean": 3.398,
+  "n": 103,
+  "sd": 1.72,
+  "stats": {
+   "yellow": {
+    "mean": 0.5,
+    "n": 2
+   }
+  },
+  "var": 2.958
+ },
+ "Sweden: Division 2 - S\u00f6dra Svealand": {
+  "mean": 3.462,
+  "n": 106,
+  "sd": 1.874,
+  "stats": {
+   "yellow": {
+    "mean": 0.5,
+    "n": 2
+   }
+  },
+  "var": 3.513
+ },
+ "Sweden: Division 2 - V\u00e4stra G\u00f6taland": {
+  "mean": 3.601,
+  "n": 153,
+  "sd": 2.075,
+  "var": 4.305
+ },
+ "Sweden: Superettan": {
+  "mean": 2.9,
+  "n": 450,
+  "sd": 1.857,
+  "stats": {
+   "corners": {
+    "mean": 4.58,
+    "n": 50
+   },
+   "fouls": {
+    "mean": 12.559,
+    "n": 34
+   },
+   "offsides": {
+    "mean": 1.1,
+    "n": 50
+   },
+   "shots": {
+    "mean": 10.58,
+    "n": 50
+   },
+   "sot": {
+    "mean": 4.2,
+    "n": 50
+   },
+   "yellow": {
+    "mean": 1.86,
+    "n": 50
+   }
+  },
+  "var": 3.447
+ },
+ "Sweden: Svenska Cupen": {
+  "mean": 3.474,
+  "n": 137,
+  "sd": 1.705,
+  "stats": {
+   "corners": {
+    "mean": 5.75,
+    "n": 16
+   },
+   "shots": {
+    "mean": 11.75,
+    "n": 16
+   },
+   "sot": {
+    "mean": 6.125,
+    "n": 16
+   }
+  },
+  "var": 2.908
+ },
+ "Switzerland: 1.Liga Classic Group 3": {
+  "mean": 2.6,
+  "n": 5,
+  "sd": 1.497,
+  "var": 2.24
+ },
+ "Switzerland: 1.Liga Classic Play Offs": {
+  "mean": 3.25,
+  "n": 4,
+  "sd": 1.785,
+  "var": 3.188
+ },
+ "Switzerland: 1.Liga Gruppe 3": {
+  "mean": 3.0,
+  "n": 2,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Switzerland: Challenge League": {
+  "mean": 3.0,
+  "n": 6,
+  "sd": 1.414,
+  "var": 2.0
+ },
+ "Switzerland: Promotion League": {
+  "mean": 3.492,
+  "n": 382,
+  "sd": 1.899,
+  "var": 3.606
+ },
+ "Switzerland: Super League": {
+  "mean": 3.673,
+  "n": 104,
+  "sd": 2.159,
+  "stats": {
+   "corners": {
+    "mean": 4.625,
+    "n": 8
+   },
+   "fouls": {
+    "mean": 15.375,
+    "n": 8
+   },
+   "offsides": {
+    "mean": 0.75,
+    "n": 8
+   },
+   "shots": {
+    "mean": 13.75,
+    "n": 8
+   },
+   "sot": {
+    "mean": 5.25,
+    "n": 8
+   },
+   "yellow": {
+    "mean": 2.25,
+    "n": 8
+   }
+  },
+  "var": 4.662
+ },
+ "Switzerland: Swiss Cup": {
+  "mean": 3.786,
+  "n": 14,
+  "sd": 1.82,
+  "var": 3.311
+ },
+ "Turkey: 1. Lig": {
+  "mean": 2.715,
+  "n": 239,
+  "sd": 1.796,
+  "stats": {
+   "corners": {
+    "mean": 4.851,
+    "n": 74
+   },
+   "fouls": {
+    "mean": 10.514,
+    "n": 74
+   },
+   "offsides": {
+    "mean": 1.851,
+    "n": 74
+   },
+   "shots": {
+    "mean": 11.892,
+    "n": 74
+   },
+   "sot": {
+    "mean": 3.946,
+    "n": 74
+   },
+   "yellow": {
+    "mean": 1.944,
+    "n": 72
+   }
+  },
+  "var": 3.224
+ },
+ "Turkey: 2. Lig Play Offs": {
+  "mean": 1.333,
+  "n": 3,
+  "sd": 1.247,
+  "stats": {
+   "corners": {
+    "mean": 2.0,
+    "n": 2
+   },
+   "shots": {
+    "mean": 7.5,
+    "n": 2
+   },
+   "sot": {
+    "mean": 3.5,
+    "n": 2
+   }
+  },
+  "var": 1.556
+ },
+ "Turkey: 2. Lig Red Group": {
+  "mean": 2.706,
+  "n": 34,
+  "sd": 1.582,
+  "var": 2.502
+ },
+ "Turkey: 3. Lig Group 4": {
+  "mean": 3.545,
+  "n": 11,
+  "sd": 1.876,
+  "var": 3.521
+ },
+ "Turkey: Bank Asya 1. Lig": {
+  "mean": 2.929,
+  "n": 14,
+  "sd": 1.668,
+  "var": 2.781
+ },
+ "Turkey: Spor Toto 2. Lig Play Offs": {
+  "mean": 1.5,
+  "n": 2,
+  "sd": 0.5,
+  "var": 0.25
+ },
+ "Turkey: Spor Toto 2. Lig White Group": {
+  "mean": 1.0,
+  "n": 2,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Turkey: Super Lig": {
+  "mean": 2.583,
+  "n": 48,
+  "sd": 1.858,
+  "stats": {
+   "corners": {
+    "mean": 5.0,
+    "n": 14
+   },
+   "fouls": {
+    "mean": 15.143,
+    "n": 14
+   },
+   "offsides": {
+    "mean": 2.214,
+    "n": 14
+   },
+   "shots": {
+    "mean": 13.286,
+    "n": 14
+   },
+   "sot": {
+    "mean": 4.5,
+    "n": 14
+   },
+   "yellow": {
+    "mean": 3.786,
+    "n": 14
+   }
+  },
+  "var": 3.451
+ },
+ "Turkey: Turkish Cup": {
+  "mean": 3.643,
+  "n": 28,
+  "sd": 2.191,
+  "var": 4.801
+ },
+ "USA: Atlanta MLS Challenge": {
+  "mean": 4.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "USA: MLS": {
+  "mean": 2.959,
+  "n": 123,
+  "sd": 1.698,
+  "stats": {
+   "corners": {
+    "mean": 4.667,
+    "n": 12
+   },
+   "fouls": {
+    "mean": 10.5,
+    "n": 12
+   },
+   "offsides": {
+    "mean": 1.5,
+    "n": 12
+   },
+   "shots": {
+    "mean": 13.333,
+    "n": 12
+   },
+   "sot": {
+    "mean": 4.417,
+    "n": 12
+   },
+   "yellow": {
+    "mean": 1.667,
+    "n": 12
+   }
+  },
+  "var": 2.885
+ },
+ "USA: MLS Next Pro": {
+  "mean": 3.637,
+  "n": 273,
+  "sd": 1.88,
+  "stats": {
+   "corners": {
+    "mean": 4.824,
+    "n": 74
+   },
+   "fouls": {
+    "mean": 13.459,
+    "n": 74
+   },
+   "offsides": {
+    "mean": 2.108,
+    "n": 74
+   },
+   "shots": {
+    "mean": 12.405,
+    "n": 74
+   },
+   "sot": {
+    "mean": 4.743,
+    "n": 74
+   },
+   "yellow": {
+    "mean": 2.527,
+    "n": 74
+   }
+  },
+  "var": 3.535
+ },
+ "USA: US Open Cup": {
+  "mean": 3.329,
+  "n": 85,
+  "sd": 1.733,
+  "var": 3.005
+ },
+ "USA: USL": {
+  "mean": 3.845,
+  "n": 58,
+  "sd": 1.012,
+  "var": 1.024
+ },
+ "USA: USL Championship": {
+  "mean": 2.649,
+  "n": 1800,
+  "sd": 1.696,
+  "stats": {
+   "corners": {
+    "mean": 4.357,
+    "n": 56
+   },
+   "fouls": {
+    "mean": 13.143,
+    "n": 56
+   },
+   "offsides": {
+    "mean": 1.75,
+    "n": 56
+   },
+   "shots": {
+    "mean": 11.946,
+    "n": 56
+   },
+   "sot": {
+    "mean": 3.732,
+    "n": 56
+   },
+   "yellow": {
+    "mean": 2.554,
+    "n": 56
+   }
+  },
+  "var": 2.877
+ },
+ "USA: USL Cup": {
+  "mean": 2.711,
+  "n": 304,
+  "sd": 1.538,
+  "var": 2.364
+ },
+ "Ukraine: Druha Liga": {
+  "mean": 2.0,
+  "n": 6,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Ukraine: Persha Liga": {
+  "mean": 2.981,
+  "n": 261,
+  "sd": 1.579,
+  "stats": {
+   "yellow": {
+    "mean": 2.125,
+    "n": 8
+   }
+  },
+  "var": 2.494
+ },
+ "Ukraine: Premier League": {
+  "mean": 2.533,
+  "n": 527,
+  "sd": 1.679,
+  "stats": {
+   "corners": {
+    "mean": 3.9,
+    "n": 10
+   },
+   "fouls": {
+    "mean": 10.75,
+    "n": 8
+   },
+   "offsides": {
+    "mean": 1.75,
+    "n": 8
+   },
+   "shots": {
+    "mean": 8.9,
+    "n": 10
+   },
+   "sot": {
+    "mean": 3.8,
+    "n": 10
+   },
+   "yellow": {
+    "mean": 1.7,
+    "n": 10
+   }
+  },
+  "var": 2.818
+ },
+ "Ukraine: Ukrainian Cup": {
+  "mean": 1.957,
+  "n": 70,
+  "sd": 0.996,
+  "var": 0.993
+ },
+ "Uruguay: Copa Uruguay": {
+  "mean": 2.197,
+  "n": 117,
+  "sd": 0.82,
+  "var": 0.673
+ },
+ "Uruguay: Copa de la Liga AUF": {
+  "mean": 2.375,
+  "n": 56,
+  "sd": 1.491,
+  "var": 2.223
+ },
+ "Uruguay: Liga AUF Uruguaya": {
+  "mean": 2.224,
+  "n": 1431,
+  "sd": 1.403,
+  "stats": {
+   "corners": {
+    "mean": 4.459,
+    "n": 74
+   },
+   "shots": {
+    "mean": 7.662,
+    "n": 74
+   },
+   "sot": {
+    "mean": 3.554,
+    "n": 74
+   },
+   "yellow": {
+    "mean": 3.0,
+    "n": 72
+   }
+  },
+  "var": 1.969
+ },
+ "Uruguay: Liguilla": {
+  "mean": 2.621,
+  "n": 37,
+  "sd": 0.747,
+  "var": 0.558
+ },
+ "Uruguay: Primera Division": {
+  "mean": 2.61,
+  "n": 785,
+  "sd": 1.626,
+  "var": 2.645
+ },
+ "Uruguay: Segunda Division": {
+  "mean": 2.364,
+  "n": 1413,
+  "sd": 1.629,
+  "stats": {
+   "corners": {
+    "mean": 4.871,
+    "n": 70
+   },
+   "fouls": {
+    "mean": 13.132,
+    "n": 68
+   },
+   "offsides": {
+    "mean": 2.435,
+    "n": 62
+   },
+   "shots": {
+    "mean": 7.957,
+    "n": 70
+   },
+   "sot": {
+    "mean": 3.571,
+    "n": 70
+   },
+   "yellow": {
+    "mean": 0.5,
+    "n": 4
+   }
+  },
+  "var": 2.652
+ },
+ "Uruguay: Super Cup": {
+  "mean": 1.0,
+  "n": 9,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Uruguay: Torneo Preparacion": {
+  "mean": 1.0,
+  "n": 8,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "Uzbekistan: Pro Liga": {
+  "mean": 2.611,
+  "n": 1462,
+  "sd": 1.542,
+  "stats": {
+   "corners": {
+    "mean": 4.25,
+    "n": 28
+   },
+   "fouls": {
+    "mean": 11.125,
+    "n": 8
+   },
+   "offsides": {
+    "mean": 3.375,
+    "n": 8
+   },
+   "shots": {
+    "mean": 10.464,
+    "n": 28
+   },
+   "sot": {
+    "mean": 4.464,
+    "n": 28
+   },
+   "yellow": {
+    "mean": 0.5,
+    "n": 2
+   }
+  },
+  "var": 2.379
+ },
+ "Uzbekistan: Super League": {
+  "mean": 2.117,
+  "n": 836,
+  "sd": 1.568,
+  "var": 2.458
+ },
+ "Uzbekistan: Uzbekistan Cup": {
+  "mean": 3.114,
+  "n": 53,
+  "sd": 1.125,
+  "var": 1.266
+ },
+ "Venezuela: Copa Venezuela": {
+  "mean": 2.478,
+  "n": 537,
+  "sd": 1.877,
+  "var": 3.522
+ },
+ "Venezuela: Liga FUTVE": {
+  "mean": 2.424,
+  "n": 2670,
+  "sd": 1.668,
+  "stats": {
+   "corners": {
+    "mean": 5.0,
+    "n": 8
+   },
+   "fouls": {
+    "mean": 13.375,
+    "n": 8
+   },
+   "offsides": {
+    "mean": 1.75,
+    "n": 8
+   },
+   "shots": {
+    "mean": 15.25,
+    "n": 8
+   },
+   "sot": {
+    "mean": 4.75,
+    "n": 8
+   },
+   "yellow": {
+    "mean": 1.75,
+    "n": 8
+   }
+  },
+  "var": 2.781
+ },
+ "Venezuela: Liga FUTVE 2": {
+  "mean": 2.102,
+  "n": 1109,
+  "sd": 1.408,
+  "var": 1.983
+ },
+ "Venezuela: Primera Division": {
+  "mean": 2.563,
+  "n": 1763,
+  "sd": 1.856,
+  "var": 3.443
+ },
+ "World: Atlantic Cup": {
+  "mean": 3.0,
+  "n": 2,
+  "sd": 2.0,
+  "var": 4.0
+ },
+ "World: Bangabandhu Gold Cup": {
+  "mean": 2.5,
+  "n": 32,
+  "sd": 1.5,
+  "var": 2.25
+ },
+ "World: Club Friendly": {
+  "mean": 3.186,
+  "n": 9095,
+  "sd": 1.996,
+  "var": 3.985
+ },
+ "World: Club Friendly Women": {
+  "mean": 3.923,
+  "n": 13,
+  "sd": 1.624,
+  "var": 2.636
+ },
+ "World: Desert Diamond Cup": {
+  "mean": 2.5,
+  "n": 2,
+  "sd": 0.5,
+  "var": 0.25
+ },
+ "World: FIFA Series": {
+  "mean": 2.5,
+  "n": 14,
+  "sd": 1.5,
+  "stats": {
+   "corners": {
+    "mean": 5.25,
+    "n": 4
+   },
+   "shots": {
+    "mean": 6.75,
+    "n": 4
+   },
+   "sot": {
+    "mean": 3.75,
+    "n": 4
+   },
+   "yellow": {
+    "mean": 1.0,
+    "n": 4
+   }
+  },
+  "var": 2.25
+ },
+ "World: FIFA Women's Champions Cup": {
+  "mean": 3.0,
+  "n": 2,
+  "sd": 2.0,
+  "var": 4.0
+ },
+ "World: Friendly International": {
+  "mean": 2.846,
+  "n": 1657,
+  "sd": 1.763,
+  "var": 3.107
+ },
+ "World: Friendly International Women": {
+  "mean": 3.046,
+  "n": 371,
+  "sd": 2.186,
+  "var": 4.778
+ },
+ "World: Kings Cup (Thailand)": {
+  "mean": 3.126,
+  "n": 142,
+  "sd": 1.129,
+  "var": 1.275
+ },
+ "World: La Manga Cup": {
+  "mean": 3.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "World: Mobile Mini Sun Cup": {
+  "mean": 3.0,
+  "n": 1,
+  "sd": 0.0,
+  "var": 0.0
+ },
+ "World: Olympic Games Women": {
+  "mean": 2.419,
+  "n": 74,
+  "sd": 1.786,
+  "var": 3.189
+ },
+ "World: World Championship": {
+  "mean": 3.23,
+  "n": 590,
+  "sd": 1.91,
+  "var": 3.648
+ },
+ "World: World Cup": {
+  "mean": 3.837,
+  "n": 182,
+  "sd": 2.941,
+  "var": 8.648
+ },
+ "World: World Cup Women": {
+  "mean": 2.334,
+  "n": 18,
+  "sd": 1.561,
+  "var": 2.437
+ }
+}
