@@ -658,6 +658,17 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
         # both match-total SoT legs on the same board won.
         if quantity == 'sot' and side in ('home', 'away'):
             continue
+        # INDIVIDUAL goal Over/Under banned 17 Aug. Team goal totals cost more
+        # legs than anything else on the 16 Aug board - Tristan Suarez U2.5,
+        # Bohemians U3.5, Douglas Haig U2.5, Gama U2.5 and 1H Breidablik U1.5,
+        # five of the seventeen losses. Match goal totals are unaffected.
+        if qkey in GOAL_FAMILY and side in ('home', 'away'):
+            continue
+        # FOULS: team lines only. The two match-fouls legs booked both lost
+        # (New York City Under 26.5, and the Lens saves/fouls pair), while a
+        # team's own foul count is the thing its record actually measures.
+        if quantity == 'fouls' and side == 'match':
+            continue
         for o in (m.get('outcomes') or []):
             if not o.get('isActive', 1):
                 continue
@@ -682,6 +693,8 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
             # corner totals are untouched: they aggregate both teams and the one
             # booked that day, Fluminense Over 6.5, won.
             if quantity == 'corners' and side in ('home', 'away') and d.startswith('over'):
+                continue
+            if quantity == 'fouls' and d.startswith('over'):
                 continue
             # NO PRICE BAND ON UNDERS. A 1.10-1.19 band was added 8 Aug off a
             # measurement that said those legs went 28W-1L, and REMOVED 11 Aug
@@ -773,6 +786,34 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
     # Under 3.5 -> 4.5, Multigoals 1-2 -> 1-3, 2H Under 0.5 -> 1.5,
     # Over 1.5 -> 0.5. When the evidence cannot separate two lines, take the
     # one with more room.
+    # HIGHEST LINE WINS. For an Under, a higher line is strictly safer - it
+    # contains every outcome the lower line does and more. The engine was
+    # picking whichever line the model liked best, which is usually the tightest
+    # one because that is where it disagrees most with the price. Every offsides
+    # leg on 16 Aug lost with the match finishing on exactly 5 against an Under
+    # 4.5; Under 5.5 was sitting there and would have pushed or won. Same for
+    # SoT Under 10.5. Within one market and side, keep only the highest Under.
+    best_line = {}
+    for r in out:
+        d = (r['outcome'] or '').strip().lower()
+        m = re.match(r'^under\s+([\d.]+)$', d)
+        if not m:
+            continue
+        key = (re.sub(r'\s*[\d.]+', '', r['market']).strip().lower(), r['side'])
+        ln = float(m.group(1))
+        if key not in best_line or ln > best_line[key]:
+            best_line[key] = ln
+    keep = []
+    for r in out:
+        d = (r['outcome'] or '').strip().lower()
+        m = re.match(r'^under\s+([\d.]+)$', d)
+        if m:
+            key = (re.sub(r'\s*[\d.]+', '', r['market']).strip().lower(), r['side'])
+            if float(m.group(1)) < best_line.get(key, 0):
+                continue
+        keep.append(r)
+    out = keep
+
     # STAT MARKETS FIRST. M0347R was corners, fouls and offsides with not one
     # goal leg on it and went 8 from 8, while the two codes from the same board
     # built mostly on goals went 77% and 75%. A goal market is now only reached
