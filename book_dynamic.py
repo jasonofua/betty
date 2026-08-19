@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Book from the dynamic evaluator.
 
-  python3 book_dynamic.py [--until HH] [--days N] [--dry] [--floor X] [--legs N] [--rank 1,2,3]
+  python3 book_dynamic.py [--until HH] [--days N] [--target Nx] [--dry] [--floor X] [--legs N] [--rank 1,2,3]
 
 Slips are split into parts of at most MAX_LEGS (SportyBet's cap); --legs N
 makes them smaller, which is usually what you want - a 50-leg accumulator
@@ -120,6 +120,74 @@ def stat_lines(m, pick):
     return out
 
 
+
+# ── target-payout selection ──────────────────────────────────────────────────
+# Measured on 2,225 settled legs: what a booked price ACTUALLY wins at, and the
+# margin the book takes at that price. De-vigged, the book is calibrated to
+# within two points at every band, while our Poisson model was 13 points
+# optimistic - so the price is the probability estimate, not the model.
+#
+#   book implied   actual    effective margin
+#     >=0.95        94.3%        1.039
+#     0.90-0.95     88.3%        1.044
+#     0.85-0.90     80.0%        1.094
+#     0.80-0.85     76.4%        1.081
+#      <0.80        64.1%        1.106
+# One leg per fixture unless raised - see pick_for_target.
+MAX_PER_MATCH = 1
+
+CALIB = ((0.95, 0.943), (0.90, 0.883), (0.85, 0.800), (0.80, 0.764), (0.0, 0.641))
+
+
+def true_prob(odds):
+    """What a leg at this price really wins at, from the calibration table."""
+    implied = 1.0 / odds
+    for lo, w in CALIB:
+        if implied >= lo:
+            return w
+    return CALIB[-1][1]
+
+
+def pick_for_target(legs, target):
+    """Shortest slip whose combined odds reach `target`, chosen to maximise the
+    chance it lands.
+
+    Maximising P(land) subject to prod(odds) >= T means maximising sum(log w)
+    subject to sum(log price) >= log T. That is a knapsack, and the greedy
+    ordering is by payout bought per unit of survival spent:
+
+        ratio = log(price) / -log(true_prob)
+
+    Ranking by price alone would buy the longest odds regardless of how much
+    survival they cost; ranking by probability alone is what the engine used to
+    do, and it needed 114 legs to reach 10x."""
+    import math
+    scored = []
+    for l in legs:
+        w = true_prob(l['odds'])
+        cost = -math.log(w)
+        if cost <= 0 or l['odds'] <= 1.0:
+            continue
+        scored.append((math.log(l['odds']) / cost, w, l))
+    scored.sort(key=lambda x: -x[0])
+    # At most MAX_PER_MATCH legs from one fixture. Deduping on market alone put
+    # three legs on Internacional v Remo and three on Pachuca v Puebla - six of
+    # twelve from three games. Those are not independent: if one side dominates,
+    # its corners, bookings and win-both-halves legs fail together, so the
+    # survival estimate below (a plain product) would be badly overstated.
+    out, combo, surv = [], 1.0, 1.0
+    per_match = collections.Counter()
+    for _, w, l in scored:
+        if combo >= target:
+            break
+        ev = l['bs']['eventId']
+        if per_match[ev] >= MAX_PER_MATCH:
+            continue
+        per_match[ev] += 1
+        out.append(l); combo *= l['odds']; surv *= w
+    return out, combo, surv
+
+
 def slip(board, rank):
     """Every match's option at this rank, as bookable selections."""
     legs, seen_ev = [], set()
@@ -149,6 +217,50 @@ def main():
     board = build(until, floor, days=days)
     if not board:
         print("\n>> no supported options on this board")
+        return
+
+    if '--target' in sys.argv:
+        target = float(sys.argv[sys.argv.index('--target') + 1])
+        pool, seen_ev = [], set()
+        for rank in range(D.TOP_N):
+            for l in slip(board, rank):
+                k = (l['bs']['eventId'], l['bs']['marketId'], l['bs']['specifier'])
+                if k in seen_ev:
+                    continue
+                seen_ev.add(k)
+                pool.append(l)
+        legs, combo, surv = pick_for_target(pool, target)
+        if not legs:
+            print(f"\n>> nothing on the board can reach {target}x")
+            return
+        if combo < target:
+            # Booking a slip that misses the target is not a smaller version of
+            # the same bet - it is a different bet with the same risk and a
+            # fraction of the payout. The 21:46 run took all 12 available legs
+            # and reached 6.2x against a 25x target.
+            print(f"\n>> CANNOT REACH {target:g}x on this board — best is "
+                  f"{combo:,.1f}x from {len(legs)} legs (pool of {len(pool)}). "
+                  f"Nothing booked.\n>> widen the window, or ask for a lower target.")
+            return
+        legs.sort(key=lambda l: l['ts'])
+        print(f"\n=== TARGET {target:g}x — {len(legs)} legs, combined ~{combo:,.1f}x, "
+              f"estimated {surv:.1%} chance of landing   (pool of {len(pool)})")
+        for l in legs:
+            print(f"   {l['ts']:%a %H:%M}  {l['match'][:38]:<38} {l['games']}g  "
+                  f"{true_prob(l['odds']):>4.0%}  {l['label']}  @{l['odds']}")
+        if dry:
+            return
+        bk = A.book([l['bs'] for l in legs])
+        if bk and bk.get('code'):
+            got = bk.get('verified') or bk['booked']
+            extra = "" if got == bk['req'] else f"  (booked {got}/{bk['req']})"
+            print(f"   >> CODE {bk['code']}   {bk['url']}{extra}")
+            A.log_booking(bk['code'], bk['url'],
+                          f"dynamic_v4 target {target:g}x until {until}:00",
+                          [(l['ts'].timestamp(), l['match'], l['label'], l['odds'],
+                            l['stats']) for l in legs])
+        else:
+            print(f"   >> booking failed: {bk.get('msg') if bk else 'no selections'}")
         return
 
     only = None

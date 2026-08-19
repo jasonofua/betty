@@ -606,6 +606,30 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
     `markets` is the event's own market list, straight from SportyBet, so the
     range of what gets considered is set by the match, not by this file."""
     out = []
+    avail = set(home_rec.quantities()) | set(away_rec.quantities())
+
+    # PRE-PASS: the highest Under line the book prints for each market+side,
+    # counted across EVERY market including suspended ones. Each line is its own
+    # market with its own status, and the main loop below drops suspended ones
+    # before reaching their outcomes - so a frozen "Under 4.5" used to vanish and
+    # let "Under 3.5" be promoted to highest-offered. Birkirkara finished 4-0 on
+    # an Under 3.5 and Ramat Gan's first half finished on 3 against an Under 2.5;
+    # both were one line short, which is exactly what this rule exists to stop.
+    offered_lines = {}
+    for m in markets:
+        nlow = (m.get('name') or m.get('desc') or '').strip().lower()
+        if any(x in nlow for x in EXCLUDE) or nlow in EXCLUDE_EXACT:
+            continue
+        name = m.get('name') or m.get('desc') or ''
+        if not spec_ok(m.get('specifier', '') or ''):
+            continue
+        _q, _p, _side = parse_market(name, avail, teams)
+        key = (re.sub(r'\s*[\d.]+', '', name).strip().lower(), _side)
+        for o in (m.get('outcomes') or []):
+            mu = re.match(r'^under\s+([\d.]+)$', (o.get('desc') or '').strip().lower())
+            if mu and float(mu.group(1)) > offered_lines.get(key, 0):
+                offered_lines[key] = float(mu.group(1))
+
     for m in markets:
         name = m.get('name') or m.get('desc') or ''
         nlow = name.strip().lower()
@@ -622,7 +646,6 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
         spec = m.get('specifier', '') or ''
         if not spec_ok(spec):
             continue                            # parameter we cannot interpret
-        avail = set(home_rec.quantities()) | set(away_rec.quantities())
         quantity, period, side = parse_market(name, avail, teams)
         # the period picks which variant of that quantity to read
         if period == 'ft':
@@ -669,6 +692,16 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
         # team's own foul count is the thing its record actually measures.
         if quantity == 'fouls' and side == 'match':
             continue
+        # Match goal totals at FULL TIME and FIRST HALF, banned 18 Aug on
+        # request. These are the legs that keep losing by exactly one goal:
+        # Resita 2:2 on Under 3.5, Rodina 3 in the half on 1H Under 2.5,
+        # Birkirkara 4-0 on Under 3.5, Ramat Gan 3 in the half on 1H Under 2.5.
+        # A match averages ~2.7 goals, so one unexpected goal is a 37% swing in
+        # the count and there is no wider line to retreat to - the highest-line
+        # rule is already taking the top of the ladder. SECOND-HALF totals are
+        # left alone.
+        if quantity == 'goals' and side == 'match' and period in ('ft', 'h1'):
+            continue
         for o in (m.get('outcomes') or []):
             if not o.get('isActive', 1):
                 continue
@@ -682,8 +715,18 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
             # of the eight losses were the team failing to score at all. It is
             # the "needs a goal" class wearing its third name, after Clean Sheet
             # and Multigoals. Corner overs are NOT touched - they ran 20W-4L.
-            if qkey in GOAL_FAMILY and d.startswith('over'):
-                continue
+            # An OVER on goals, however it is spelled. Checking the label for
+            # "over" missed "2nd Half - Exact Goals / 2+", whose predicate is
+            # byte-for-byte identical to 2H Over 1.5 - the banned bet under a
+            # different market name. Probe the predicate instead: false when
+            # nobody scores, true when everybody does, is an Over.
+            if qkey in GOAL_FAMILY:
+                _t = parse_outcome(name, o.get('desc'), spec, avail, teams)
+                try:
+                    if _t is not None and not _t(0, 0) and _t(9, 9):
+                        continue
+                except Exception:
+                    pass
             # Team-corner Overs blacklisted 11 Aug. Both booked that day lost:
             # "1H Away Corners Over 0.5" needed Brann to win one corner in the
             # half and they won none, "Away Corners Over 1.5" needed Sparta to
@@ -793,16 +836,25 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
     # leg on 16 Aug lost with the match finishing on exactly 5 against an Under
     # 4.5; Under 5.5 was sitting there and would have pushed or won. Same for
     # SoT Under 10.5. Within one market and side, keep only the highest Under.
+    # best_line is built from EVERY line the book offered, not just the ones
+    # that cleared the gates. Otherwise a market whose top line fails the edge
+    # test quietly falls back to a tighter one, which is the behaviour this rule
+    # exists to stop - Athens Kallithea went on at Under 3.5 with 4.5 available.
+    # If the highest line does not qualify, that market contributes nothing.
+    # RELAXED 18 Aug: the highest line that QUALIFIES, not the highest the book
+    # prints. The strict version blocked a whole market whenever its top line
+    # failed the edge test - and the top line is always the cheapest, so it
+    # fails most often. That cost 1,461 markets on one board. A lower line is
+    # still allowed now, it just cannot be taken while a higher one is also
+    # playable.
     best_line = {}
     for r in out:
-        d = (r['outcome'] or '').strip().lower()
-        m = re.match(r'^under\s+([\d.]+)$', d)
-        if not m:
+        mm = re.match(r'^under\s+([\d.]+)$', (r['outcome'] or '').strip().lower())
+        if not mm:
             continue
-        key = (re.sub(r'\s*[\d.]+', '', r['market']).strip().lower(), r['side'])
-        ln = float(m.group(1))
-        if key not in best_line or ln > best_line[key]:
-            best_line[key] = ln
+        k = (re.sub(r'\s*[\d.]+', '', r['market']).strip().lower(), r['side'])
+        if float(mm.group(1)) > best_line.get(k, 0):
+            best_line[k] = float(mm.group(1))
     keep = []
     for r in out:
         d = (r['outcome'] or '').strip().lower()
