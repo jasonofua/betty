@@ -155,7 +155,16 @@ def recent_kc(raw):
         except ValueError: continue
         v = s.get('KS', '')
         if blk and blk.startswith('Last matches'):
-            if DROP_COMP.search(s.get('KF', '')): continue   # league form only - drop friendlies/cups
+            comp = s.get('KF', '')
+            # NO COMPETITION FILTER (19 Aug). DROP_COMP used to strip friendlies,
+            # cups and continental football from the form sample on the grounds
+            # that rested squads and mismatched opposition distort the averages.
+            # At season start that left teams with nothing: Kifisia's five
+            # July/August friendlies were discarded and the newest usable match
+            # was 21 May, three months before kickoff, which is the record the
+            # engine bet Zakynthos v Kifisia on. Every match now counts; rows are
+            # tagged so a caller can still weight or exclude them.
+            friendly = bool(re.search(r'Friendl', comp, re.I))
             gf, ga = (ku, kt) if v == 'home' else (kt, ku)
             # Half-time goals from KX/KY - gives 100% HT coverage from this feed
             try: ht_h_g = int(s.get('KX', ''))
@@ -163,7 +172,8 @@ def recent_kc(raw):
             try: ht_a_g = int(s.get('KY', ''))
             except ValueError: ht_a_g = None
             last.setdefault(blk, []).append(dict(ks=v, gf=gf, ga=ga, kc=int(s.get('KC', 0)),
-                                                  ht_h=ht_h_g, ht_a=ht_a_g))
+                                                  ht_h=ht_h_g, ht_a=ht_a_g,
+                                                  friendly=friendly, comp=comp))
         elif blk == 'Head-to-head matches':
             h2h.append(dict(home=s.get('KJ', '').lstrip('*'), away=s.get('KK', ''), hg=ku, ag=kt))
     names = list(last)

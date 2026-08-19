@@ -383,7 +383,11 @@ def parse_history(raw):
         if not blk or not blk.startswith("Last matches"):
             continue
         if "KJ" in f and "KK" in f and tab == "Overall":
-            if DROP_COMP.search(f.get("KF", "")):
+            _comp = f.get("KF", "")
+            # No competition filter - see the note in acca.recent_kc. Kept as a
+            # dead branch so the deep sample and the form rows stay drawn from
+            # the SAME match universe if the rule ever comes back.
+            if False:
                 continue
             try:
                 hg, ag = int(f.get("KU", "")), int(f.get("KT", ""))

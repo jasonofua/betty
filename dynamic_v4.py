@@ -792,6 +792,29 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
             # The 80% gate passes [6/7+6/7], which IS the 62% bucket - Blooming
             # v Always Ready finished 0-0 and took "Home Clean Sheet / No" with
             # it, while "Blooming Under 2.5" on the same game paid.
+            # A series with NO VARIATION cannot support a bet. Zakynthos v
+            # Kifisia read 7/7+7/7 on "away will not win both halves" off a
+            # win_both series of 27 zeros and one 1 - the predicate is trivially
+            # true for any team you feed it, so the tally is measuring the base
+            # rate, not these teams. Kifisia won 6-1. Same failure as Veranopolis
+            # and Atletico Tucuman on 12 Aug, both [0,0,0] and both lost.
+            if primary is not None:
+                H_, A_ = home_rec.pairs(qkey), away_rec.pairs(qkey)
+                # count_outcome mirrors the away record for home-side markets and
+                # the home record for away-side ones; `primary` picks which of the
+                # two SEQUENCES decides, not which column. reads() then says which
+                # COLUMN of that sequence the predicate actually depends on - the
+                # pair can vary while the deciding column is constant.
+                if side == 'away':
+                    dec = _mirror(H_) if primary == 0 else A_
+                else:
+                    dec = H_ if primary == 0 else _mirror(A_)
+                rf_, ra_ = reads(test)
+                col = ([f for f, _ in dec] if rf_ and not ra_
+                       else [a for _, a in dec] if ra_ and not rf_
+                       else list(dec))
+                if len(set(col)) <= 1:
+                    continue
             try:
                 dies_goalless = not test(0, 0)
             except Exception:
