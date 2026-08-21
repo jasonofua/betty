@@ -539,6 +539,20 @@ def _half_win_prob(own_rec, opp_rec, half, grid=10):
     return p
 
 
+def _half_mu(own_rec, opp_rec, half, mode):
+    """Blended Poisson mean for one half: the named team's scoring in that
+    half ('team' - own scored blended with opponent conceded) or the whole
+    match's total in that half ('match' - both records' totals)."""
+    O, P = own_rec.pairs(half), opp_rec.pairs(half)
+    if len(O) < MIN_GAMES or len(P) < MIN_GAMES:
+        return None
+    if mode == 'team':
+        own = [f for f, _ in O]; opp = [a for _, a in P]
+    else:
+        own = [f + a for f, a in O]; opp = [f + a for f, a in P]
+    return max(0.02, (sum(own) / len(own) + sum(opp) / len(opp)) / 2)
+
+
 def model_prob(home_rec, away_rec, quantity, side, test, grid=16):
     # WIN BOTH HALVES: composed from the two halves, never from the derived
     # 0/1 flag. Counting the compound event directly is one noisy occurrence -
@@ -559,6 +573,43 @@ def model_prob(home_rec, away_rec, quantity, side, test, grid=16):
             except Exception:
                 is_yes = False
             return p_yes if is_yes else 1.0 - p_yes
+    # HALF-COMPARISON MARKETS: their series pair is (H1, H2) of the SAME
+    # games, not a for/against pair, so the generic blend below would average
+    # a team's H1 with the opponent's H2 and flip the read (33% vs 56% for
+    # "2nd half highest" on a normal H2-heavy profile). Build each half's own
+    # mean from the h1/h2 series instead and put the unchanged predicate
+    # through an (H1, H2) grid. bh_line's predicate reads (lowest half,
+    # highest half), which is (min, max) of the same two draws - so the grid
+    # also stops assigning probability to min > max, which the generic
+    # independent-columns path happily did.
+    if quantity in ('hsh', 'hsh_match', 'bh_line'):
+        if quantity == 'hsh' and side in ('home', 'away'):
+            own = home_rec if side == 'home' else away_rec
+            opp = away_rec if side == 'home' else home_rec
+            mu1 = _half_mu(own, opp, 'h1', 'team')
+            mu2 = _half_mu(own, opp, 'h2', 'team')
+        else:
+            mu1 = _half_mu(home_rec, away_rec, 'h1', 'match')
+            mu2 = _half_mu(home_rec, away_rec, 'h2', 'match')
+        if mu1 is None or mu2 is None:
+            return None
+        p = 0.0
+        for t1 in range(grid):
+            p1 = _pois(t1, mu1)
+            if p1 < 1e-9:
+                continue
+            for t2 in range(grid):
+                p2 = _pois(t2, mu2)
+                if p2 < 1e-9:
+                    continue
+                try:
+                    fa = ((min(t1, t2), max(t1, t2)) if quantity == 'bh_line'
+                          else (t1, t2))
+                    if test(*fa):
+                        p += p1 * p2
+                except Exception:
+                    return None
+        return min(max(p, 0.0), 1.0)
     """P(this outcome) for THIS match, not "how often did it happen".
 
     The tally cannot distinguish cases it should. Sirius had first-half corners
