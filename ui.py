@@ -56,11 +56,15 @@ def run_job(target, until, days, dry):
                     seen.add(k)
                     pool.append(l)
             legs, combo, surv = BD.pick_for_target(pool, target)
-            if not legs or combo < target:
-                JOB.update(state='done', result={
-                    'error': f'cannot reach {target:g}x - best is {combo:,.1f}x '
-                             f'from {len(legs)} legs (pool of {len(pool)})'})
+            if not legs:
+                JOB.update(state='done', result={'error': 'no bookable legs on this board'})
                 return
+            warn = None
+            if combo < target:
+                # Asked-for target not reachable: warn, then book the best the
+                # board offers instead of refusing (changed 21 Aug on request).
+                warn = (f'{target:g}x not reachable — booked the best available: '
+                        f'{combo:,.1f}x from {len(legs)} legs (pool of {len(pool)})')
             legs.sort(key=lambda l: l['ts'])
             res = {
                 'combo': round(combo, 1), 'est': round(surv * 100, 2),
@@ -71,6 +75,8 @@ def run_job(target, until, days, dry):
                               prob=round(BD.true_prob(l['odds']) * 100))
                          for l in legs],
             }
+            if warn:
+                res['warn'] = warn
             if dry:
                 res['dry'] = True
             else:

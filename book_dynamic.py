@@ -243,14 +243,12 @@ def main():
             print(f"\n>> nothing on the board can reach {target}x")
             return
         if combo < target:
-            # Booking a slip that misses the target is not a smaller version of
-            # the same bet - it is a different bet with the same risk and a
-            # fraction of the payout. The 21:46 run took all 12 available legs
-            # and reached 6.2x against a 25x target.
-            print(f"\n>> CANNOT REACH {target:g}x on this board — best is "
-                  f"{combo:,.1f}x from {len(legs)} legs (pool of {len(pool)}). "
-                  f"Nothing booked.\n>> widen the window, or ask for a lower target.")
-            return
+            # Changed 21 Aug on request: warn loudly, then book the reachable
+            # best instead of refusing. The old refuse-outright behaviour cost
+            # a usable 235x board because 300x was asked for.
+            print(f"\n>> WARNING: cannot reach {target:g}x — booking the best "
+                  f"available instead: {combo:,.1f}x from {len(legs)} legs "
+                  f"(pool of {len(pool)}).")
         legs.sort(key=lambda l: l['ts'])
         print(f"\n=== TARGET {target:g}x — {len(legs)} legs, combined ~{combo:,.1f}x, "
               f"estimated {surv:.1%} chance of landing   (pool of {len(pool)})")

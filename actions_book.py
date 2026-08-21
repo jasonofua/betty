@@ -52,11 +52,13 @@ try:
                     seen.add(k)
                     pool.append(l)
             legs, combo, surv = BD.pick_for_target(pool, target)
-            if not legs or combo < target:
-                out['result'] = {'error': f'cannot reach {target:g}x - best is '
-                                          f'{combo:,.1f}x from {len(legs)} legs '
-                                          f'(pool of {len(pool)})'}
+            if not legs:
+                out['result'] = {'error': 'no bookable legs on this board'}
             else:
+                warn = None
+                if combo < target:
+                    warn = (f'{target:g}x not reachable — booked the best '
+                            f'available: {combo:,.1f}x from {len(legs)} legs')
                 legs.sort(key=lambda l: l['ts'])
                 res = {'combo': round(combo, 1), 'est': round(surv * 100, 2),
                        'pool': len(pool),
@@ -65,6 +67,8 @@ try:
                                      odds=l['odds'],
                                      prob=round(BD.true_prob(l['odds']) * 100))
                                 for l in legs]}
+                if warn:
+                    res['warn'] = warn
                 if dry:
                     res['dry'] = True
                 else:

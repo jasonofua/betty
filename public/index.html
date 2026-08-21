@@ -464,6 +464,7 @@ function showResult(r){
     +'<div class="x">~'+r.combo+'×</div>'
     +'<div class="meta"><b>'+r.legs.length+' legs</b> · est. '+r.est+'% to land · pool of '+r.pool+'</div>';
   if(r.dry)h+='<span class="pill dry">dry run — nothing booked</span>';
+  if(r.warn)h+='<span class="pill warn">'+esc(r.warn)+'</span>';
   if(r.short)h+='<span class="pill warn">'+esc(r.short)+'</span>';
   h+='</div>';
   if(r.code)h+='<div class="codebox"><a href="'+r.url+'" target="_blank" rel="noopener">'+r.code+'</a>'
