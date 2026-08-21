@@ -26,16 +26,21 @@ def build(until_h=10, floor=None, verbose=True, days=0):
     means 23:00 the day after tomorrow. Without it the window can never exceed
     24 hours, because the cutoff is the next occurrence of that hour."""
     now = dt.datetime.now(A.WAT)
+    # The window opens an hour out (standing rule, 21 Aug): a build can take
+    # an hour on a big board, and a leg that kicks off before the code is
+    # played is dead weight - SportyBet drops in-play legs without live
+    # coverage and returns them at settlement.
+    start = now + dt.timedelta(hours=1)
     cutoff = now.replace(hour=until_h, minute=0, second=0, microsecond=0)
     if cutoff <= now:
         cutoff += dt.timedelta(days=1)
     cutoff += dt.timedelta(days=days)
     if verbose:
-        print(f"window {now:%a %H:%M} -> {cutoff:%a %d %H:%M} WAT", flush=True)
+        print(f"window {start:%a %H:%M} -> {cutoff:%a %d %H:%M} WAT", flush=True)
 
     evs = [e for e in B.fetch_events_rich()
-           if now < dt.datetime.fromtimestamp(int(e.get('estimateStartTime', 0)) / 1000,
-                                              tz=A.WAT) <= cutoff]
+           if start < dt.datetime.fromtimestamp(int(e.get('estimateStartTime', 0)) / 1000,
+                                                tz=A.WAT) <= cutoff]
     # Flashscore fixture days must cover the whole window or the far end joins to
     # nothing. book_v3 scales this with --days; here it is derived from the cutoff
     # itself, so a late-evening run that rolls the cutoff forward still fetches
