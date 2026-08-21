@@ -520,7 +520,45 @@ def _pois(k, mu):
     return _e(-mu) * mu ** k / _fa(k) if mu > 0 else (1.0 if k == 0 else 0.0)
 
 
+def _half_win_prob(own_rec, opp_rec, half, grid=10):
+    """P(this team outscores its opponent in the given half), Poisson-composed
+    from that half's own series - NOT from any derived flag."""
+    O = own_rec.pairs(half)
+    P = opp_rec.pairs(half)
+    if len(O) < MIN_GAMES or len(P) < MIN_GAMES:
+        return None
+    of = [f for f, _ in O]; oa = [a for _, a in O]
+    pf = [f for f, _ in P]; pa = [a for _, a in P]
+    mu_f = max(0.02, (sum(of)/len(of) + sum(pa)/len(pa)) / 2)
+    mu_a = max(0.02, (sum(oa)/len(oa) + sum(pf)/len(pf)) / 2)
+    p = 0.0
+    for f in range(grid):
+        for a in range(grid):
+            if f > a:
+                p += _pois(f, mu_f) * _pois(a, mu_a)
+    return p
+
+
 def model_prob(home_rec, away_rec, quantity, side, test, grid=16):
+    # WIN BOTH HALVES: composed from the two halves, never from the derived
+    # 0/1 flag. Counting the compound event directly is one noisy occurrence -
+    # Auda read 1-in-7, Laplace'd to an 88% "No", while their half-by-half
+    # record said they win H1 ~4/7 and H2 ~3/7, so P(both) ~24% and "No" ~76%.
+    # The book had 78%. The flag count was the outlier, and Auda won both.
+    if quantity == 'win_both' and side in ('home', 'away'):
+        own = home_rec if side == 'home' else away_rec
+        opp = away_rec if side == 'home' else home_rec
+        p1 = _half_win_prob(own, opp, 'h1')
+        p2 = _half_win_prob(own, opp, 'h2')
+        if p1 is not None and p2 is not None:
+            # halves are positively correlated through team strength, so raw
+            # independence understates P(both); shade it up modestly.
+            p_yes = min(1.0, p1 * p2 * 1.15)
+            try:
+                is_yes = bool(test(1, 0)) and not bool(test(0, 0))
+            except Exception:
+                is_yes = False
+            return p_yes if is_yes else 1.0 - p_yes
     """P(this outcome) for THIS match, not "how often did it happen".
 
     The tally cannot distinguish cases it should. Sirius had first-half corners
