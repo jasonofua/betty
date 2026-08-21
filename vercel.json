@@ -12,6 +12,10 @@
   ],
   "routes": [
     {
+      "src": "/api/grade",
+      "dest": "api/grade.py"
+    },
+    {
       "src": "/api/rollover",
       "dest": "api/rollover.py"
     },
@@ -22,6 +26,10 @@
     {
       "src": "/api/baseball",
       "dest": "api/baseball.py"
+    },
+    {
+      "src": "/",
+      "dest": "public/index.html"
     },
     {
       "src": "/(.*)",
