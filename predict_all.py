@@ -5,7 +5,7 @@ FT markets from recent full-time scores; HT markets from each team's recent
 team has >=4 matches with half-time data."""
 import sys, time, urllib.request
 from math import exp, factorial
-sys.path.append('/Users/apple/Downloads/draw')
+import os as _o; sys.path.append(_o.path.dirname(_o.path.abspath(__file__)))
 import fetcher_v2 as F
 from datetime import datetime, timezone
 

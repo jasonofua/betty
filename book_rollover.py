@@ -22,7 +22,7 @@ Usage:
 import sys, time, json, re
 from datetime import datetime, timezone, timedelta
 
-sys.path.append('/Users/apple/Downloads/draw')
+import os as _o; sys.path.append(_o.path.dirname(_o.path.abspath(__file__)))
 import book_v3 as V3
 import book_baseball as BB
 import acca as A

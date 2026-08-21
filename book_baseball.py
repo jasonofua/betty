@@ -8,7 +8,7 @@ import sys, time, json, re, urllib.request, urllib.error
 from math import exp as mexp, factorial
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
-sys.path.append('/Users/apple/Downloads/draw')
+import os as _o; sys.path.append(_o.path.dirname(_o.path.abspath(__file__)))
 import fetcher_baseball as F
 import sportybet as S
 

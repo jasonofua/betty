@@ -38,7 +38,7 @@ from datetime import datetime, timedelta, timezone
 from math import exp as mexp, factorial
 
 # ── local imports ──────────────────────────────────────────────────────────────
-sys.path.insert(0, '/Users/apple/Downloads/draw')
+import os as _o; sys.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
 import acca    as A
 import fetcher_v2 as F
 import fetcher_v3 as F3

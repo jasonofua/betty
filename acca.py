@@ -32,11 +32,11 @@ Usage: python3 acca.py            # full run + books a code per day/time bucket
        python3 acca.py --dry --limit 60
        python3 acca.py --only AFTERNOON,EVENING,NIGHT
 """
-import sys, time, json, re, urllib.request, urllib.error
+import os, sys, time, json, re, urllib.request, urllib.error
 from math import exp as mexp, factorial
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
-sys.path.append('/Users/apple/Downloads/draw')
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 import fetcher_v2 as F
 import predict_all as PA
 import sportybet as S
@@ -120,7 +120,7 @@ def log_booking(code, url, label, legs):
         out.append(f"- {datetime.fromtimestamp(ts, tz=WAT):%a %H:%M}  {match}  -  {lab} @{odds:.2f}")
         if len(lg) > 4 and lg[4]:                                  # the full per-pick stat block
             out += [f"    {line}" for line in lg[4]]
-    open('/Users/apple/Downloads/draw/bookings.md', 'a', encoding='utf-8').write("\n".join(out) + "\n")
+    open(os.environ.get('BOOKINGS_PATH') or os.path.join(os.path.dirname(os.path.abspath(__file__)), 'bookings.md'), 'a', encoding='utf-8').write("\n".join(out) + "\n")
 
 def fetch_events_full():
     """Full bettable market menu per event (1X2, DC, O/U ladder, GG/NG) in one paged walk."""
@@ -528,7 +528,7 @@ def main():
 
     txt = "\n".join(out)
     print("\n" + txt)
-    open('/Users/apple/Downloads/draw/acca_out.txt', 'w').write(txt)
+    open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'acca_out.txt'), 'w').write(txt)
 
 if __name__ == '__main__':
     main()

@@ -12,12 +12,15 @@ import io, json, threading, subprocess, sys, contextlib, datetime as dt
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse, parse_qs
 
-sys.path.insert(0, '/Users/apple/Downloads/draw')
+import os
+ROOT = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, ROOT)
 import acca as A
 import book_dynamic as BD
 import dynamic_v4 as D
 
-PORT = 8017
+PORT = int(os.environ.get('PORT', 8017))
+HOST = '0.0.0.0' if os.environ.get('PORT') else '127.0.0.1'
 
 JOB = {'state': 'idle', 'log': [], 'result': None, 'params': None,
        'started': None}
@@ -95,7 +98,7 @@ def _page():
     """The front-end lives in ui_page.html and is re-read per request, so
     design changes land on refresh without restarting the server."""
     try:
-        with open('/Users/apple/Downloads/draw/public/index.html', encoding='utf-8') as f:
+        with open(os.path.join(ROOT, 'public', 'index.html'), encoding='utf-8') as f:
             return f.read()
     except OSError:
         return '<h1>public/index.html missing</h1>'
@@ -141,7 +144,7 @@ class Handler(BaseHTTPRequestHandler):
             try:
                 p = subprocess.run([sys.executable, 'grade_code.py'] + codes[:8],
                                    capture_output=True, text=True, timeout=600,
-                                   cwd='/Users/apple/Downloads/draw')
+                                   cwd=ROOT)
                 self._send(p.stdout + p.stderr, 'text/plain; charset=utf-8')
             except subprocess.TimeoutExpired:
                 self._send('grade timed out', 'text/plain')
@@ -173,4 +176,4 @@ class Handler(BaseHTTPRequestHandler):
 
 if __name__ == '__main__':
     print(f"dynamic booker UI  ->  http://localhost:{PORT}")
-    ThreadingHTTPServer(('127.0.0.1', PORT), Handler).serve_forever()
+    ThreadingHTTPServer((HOST, PORT), Handler).serve_forever()

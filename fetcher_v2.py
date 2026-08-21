@@ -173,7 +173,7 @@ def main():
         lines.append("")
     report = "\n".join(lines)
     print(report)
-    fn = f"/Users/apple/Downloads/draw/all_sporty_with_data_offset{offset}.txt"
+    fn = os.path.join(os.path.dirname(os.path.abspath(__file__)), f"all_sporty_with_data_offset{offset}.txt")
     with open(fn, "w") as f:
         f.write(report)
     print(f"saved: {fn}")

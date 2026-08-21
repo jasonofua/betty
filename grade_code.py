@@ -2,7 +2,7 @@
 """Grade a SportyBet booking code straight from the share API (legs + scores).
 Usage: python3 grade_code.py HFDETF Y5RUNJ"""
 import urllib.request, json, re, sys
-sys.path.append('/Users/apple/Downloads/draw')
+import os as _o; sys.path.append(_o.path.dirname(_o.path.abspath(__file__)))
 import acca as A
 HDRS = A.HDRS
 

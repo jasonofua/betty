@@ -14,7 +14,7 @@ rather than three shuffles of one list.
 """
 import sys, datetime as dt, collections
 
-sys.path.insert(0, '/Users/apple/Downloads/draw')
+import os as _o; sys.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
 import acca as A
 import book_v3 as B
 import fetcher_v2 as F2
