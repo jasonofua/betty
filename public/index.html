@@ -278,7 +278,7 @@ tbody tr{opacity:0;transform:translateY(6px);animation:rise 320ms var(--ease-out
   <div class="hint" id="cutoff"></div>
   <div class="engrow">
     <span class="dot" id="edot"></span>
-    <input id="eng" placeholder="engine \u00b7 blank = localhost:8017" spellcheck="false" autocomplete="off">
+    <input id="eng" placeholder="engine · blank = localhost:8017" spellcheck="false" autocomplete="off">
   </div>
   <div class="actions">
     <button id="go"><span class="lbl">Book slip</span></button>
@@ -364,19 +364,52 @@ function engineBase(){
   return (localStorage.getItem('eng')||'').replace(/\/+$/,'')
       || (location.port==='8017' ? location.origin : 'http://localhost:8017');
 }
-let engineUp=false;
+let engineUp=false, mode='local', cloudTimer=null;
 function pingEngine(){
   const ac=new AbortController(); setTimeout(()=>ac.abort(),2500);
   fetch(engineBase()+'/api/status',{signal:ac.signal}).then(r=>r.json()).then(j=>{
-    engineUp=true; $('edot').classList.add('live');
+    engineUp=true; mode='local'; $('edot').classList.add('live');
+    if(cloudTimer){clearInterval(cloudTimer);cloudTimer=null;}
     $('go').disabled=['building','selecting','booking'].includes(j.state);
-    $('runnote').textContent='engine at '+engineBase()+' \u00b7 board build takes 15\u201340 min';
+    $('runnote').textContent='local engine at '+engineBase();
     render(j);
   }).catch(()=>{
     engineUp=false; $('edot').classList.remove('live');
-    $('go').disabled=true;
-    $('runnote').textContent='engine offline \u2014 run  python3 ui.py  on the machine, or set its tunnel URL';
+    /* no local engine: fall back to the cloud engine (GitHub Actions) */
+    fetch('/api/book').then(r=>r.json()).then(j=>{
+      if(j.error) throw 0;
+      mode='cloud';
+      $('runnote').textContent='cloud engine \u2014 runs on GitHub Actions, no machine needed';
+      renderCloud(j);
+      if(!cloudTimer)cloudTimer=setInterval(()=>fetch('/api/book').then(r=>r.json()).then(renderCloud).catch(()=>{}),15000);
+    }).catch(()=>{
+      mode='off'; $('go').disabled=true;
+      $('runnote').textContent='no engine reachable';
+    });
   });
+}
+let cloudDispatched=0;
+function renderCloud(j){
+  const running=j.run&&j.run.status&&j.run.status!=='completed';
+  $('go').disabled=!!running;
+  $('dot').classList.toggle('live',!!running);
+  $('stattx').textContent=running?'cloud run in progress':'cloud idle';
+  if(running){
+    $('progress').style.display='block';
+    setStage($('s1'),'on');setStage($('s2'),'');setStage($('s3'),'');
+    const mins=Math.max(0,Math.floor((Date.now()-new Date(j.run.created_at))/60000));
+    $('elapsed').textContent=mins+'m';
+    $('log').innerHTML='<div>running on GitHub Actions \u2014 full log lands when the run completes</div>'
+      +'<div><a href="'+j.run.html_url+'" target="_blank" style="color:var(--acc)">watch the run \u2192</a></div>';
+    renderedResult=false;
+  } else if(j.latest&&j.latest.result){
+    $('progress').style.display='block';
+    setStage($('s1'),'done');setStage($('s2'),'done');setStage($('s3'),'done');
+    $('elapsed').textContent='';
+    const lg=$('log');
+    lg.innerHTML=(j.latest.log||[]).slice(-30).map(l=>'<div class="'+(l.includes('!')?'warn':'')+'">'+esc(l)+'</div>').join('');
+    if(!renderedResult){renderedResult=true;showResult(j.latest.result);}
+  }
 }
 $('eng').value=localStorage.getItem('eng')||'';
 $('eng').addEventListener('change',()=>{localStorage.setItem('eng',$('eng').value.trim());pingEngine();});
@@ -385,12 +418,18 @@ setInterval(pingEngine,8000);
 /* run */
 let timer=null, renderedResult=false, startTs=null;
 $('go').addEventListener('click',()=>{
-  fetch(engineBase()+'/api/run',{method:'POST',headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({target:+$('target').value,until:+$('until').value,
-      days:+$('days').value,dry:$('dry').classList.contains('on')})})
+  const body=JSON.stringify({target:+$('target').value,until:+$('until').value,
+      days:+$('days').value,dry:$('dry').classList.contains('on')});
+  const url=(mode==='cloud')?'/api/book':engineBase()+'/api/run';
+  fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body})
   .then(r=>r.json()).then(j=>{
     if(j.error){alert(j.error);return;}
-    renderedResult=false; startTs=Date.now(); poll();
+    renderedResult=false; startTs=Date.now();
+    if(mode==='cloud'){
+      cloudDispatched=Date.now(); $('go').disabled=true;
+      $('stattx').textContent='cloud run queued\u2026';
+      $('progress').style.display='block'; $('log').textContent='dispatching to GitHub Actions\u2026';
+    } else poll();
   });
 });
 function poll(){

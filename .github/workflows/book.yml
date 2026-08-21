@@ -1,0 +1,49 @@
+name: book
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'Target payout (x)'
+        required: true
+        default: '50'
+      until:
+        description: 'Until hour (WAT)'
+        required: true
+        default: '23'
+      days:
+        description: 'Extra days'
+        required: false
+        default: '0'
+      dry:
+        description: 'Dry run (true/false)'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: book
+  cancel-in-progress: false
+
+jobs:
+  book:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: run the engine
+        run: |
+          python3 actions_book.py "${{ inputs.target }}" "${{ inputs.until }}" "${{ inputs.days }}" "${{ inputs.dry }}"
+      - name: commit result
+        run: |
+          git config user.name "betty-cloud"
+          git config user.email "cloud@betty"
+          git add runs/latest.json bookings.md
+          git commit -m "cloud booking: target ${{ inputs.target }}x until ${{ inputs.until }}:00" || echo "nothing to commit"
+          git pull --rebase origin main || true
+          git push
