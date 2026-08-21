@@ -33,6 +33,16 @@ TOP_N     = 3
 MIN_PROB = 0.70     # do not bet what the model itself thinks is a coin flip
 MIN_EDGE = 0.02     # and only when we disagree with the price in our favour
 
+# ... but never by MUCH. The calibration audit measured the +10-to-+20 edge
+# bucket at 54% actual over 287 leak-free games: when we beat the book's
+# number by more than ten points, the gap is almost always OUR error, not
+# value - the book is quietly pricing something the record cannot see (who
+# the opponent is, above all). Both win-both deaths wore exactly this badge:
+# Auda 88 vs 78, Erzurumspor 90 vs 78, and both "sure Nos" lost to class-gap
+# blowouts the book had priced and we had not. A huge edge is a warning, not
+# a prize.
+MAX_EDGE = 0.10
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # The record: per-game series, most recent first, own venue only.
@@ -855,6 +865,30 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
             # booked that day, Fluminense Over 6.5, won.
             if quantity == 'corners' and side in ('home', 'away') and d.startswith('over'):
                 continue
+            # CORNER UNDERS: the line must clear EVERY count either record
+            # holds - a single in-sample value at or above the line is a
+            # breach that has already happened once and only needs to happen
+            # again. MIN_HITS at 0.80 tolerated one breach in five; corners
+            # are too bursty for that. Aldosivi's own column read [2,2,0,1,1,1]
+            # against a 3.5 line, but Union's conceded column carried a 5 -
+            # the warning was in the record - and Aldosivi hit 4 first-half
+            # corners WHILE LEADING, losing by one. Same class as Klaksvik
+            # (an 8 in sample, line under it) and Macara. Both columns that
+            # settle the bet must be spotless.
+            if quantity == 'corners' and d.startswith('under'):
+                mm = re.search(r'([\d.]+)', d)
+                if mm:
+                    _ln = float(mm.group(1))
+                    if side == 'match':
+                        _vals = [f + a for f, a in home_rec.pairs(qkey)] + \
+                                [f + a for f, a in away_rec.pairs(qkey)]
+                    else:
+                        _own = home_rec if side == 'home' else away_rec
+                        _opp = away_rec if side == 'home' else home_rec
+                        _vals = [f for f, _ in _own.pairs(qkey)] + \
+                                [a for _, a in _opp.pairs(qkey)]
+                    if any(v >= _ln for v in _vals):
+                        continue
             # HOME-corner unders on a blank-prone home side, banned 21 Aug.
             # Measured on 159 unique corner-under legs: when the home team
             # scores, home-corner unders run 86%; when it blanks, 64% - and the
@@ -965,7 +999,8 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
             if mp is None:
                 continue
             implied = 1.0 / odds
-            if mp < MIN_PROB or (mp - implied) < MIN_EDGE:
+            if mp < MIN_PROB or (mp - implied) < MIN_EDGE \
+                    or (mp - implied) > MAX_EDGE:
                 continue
             rate = mp
             edge = mp - implied
