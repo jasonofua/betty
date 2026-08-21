@@ -650,6 +650,35 @@ def model_prob(home_rec, away_rec, quantity, side, test, grid=16):
     else:
         mu_f, mu_a = blend(hf, aa), blend(ha, af)
 
+    # UNDER-SHAPED bets on a HALF's goals: no half column may claim less than
+    # half the same team's FULL-TIME rate. Where goals land inside a game is
+    # noise; the whole-game rate is signal. Levadia scored 3.29/game at home
+    # (3.86 total) but their h2 column read 1.57 because the blowouts had been
+    # front-loaded in-sample - so 2H U2.5 modelled at 77% against a book
+    # saying 71%, and the regression landed 53' 67' 70'. Floored, the same
+    # leg prices at ~70% and dies on MIN_PROB and edge alike. The floor only
+    # bites when a half's in-sample share runs BELOW 50% of full time -
+    # genuinely quiet-game teams with balanced halves are untouched. Applied
+    # only to Under-shaped predicates: pessimism must never inflate an Over.
+    if quantity in ('h1', 'h2'):
+        try:
+            under_shaped = bool(test(0, 0)) and not bool(test(9, 9))
+        except Exception:
+            under_shaped = False
+        if under_shaped:
+            def _fl(col, rec, idx):
+                g = rec.pairs('goals')
+                m = sum(col) / len(col)
+                if len(g) >= MIN_GAMES:
+                    m = max(m, sum(p[idx] for p in g) / len(g) / 2)
+                return m
+            hf_m, ha_m = _fl(hf, home_rec, 0), _fl(ha, home_rec, 1)
+            af_m, aa_m = _fl(af, away_rec, 0), _fl(aa, away_rec, 1)
+            if side == 'away':
+                mu_f, mu_a = max(0.02, (af_m + ha_m) / 2), max(0.02, (aa_m + hf_m) / 2)
+            else:
+                mu_f, mu_a = max(0.02, (hf_m + aa_m) / 2), max(0.02, (ha_m + af_m) / 2)
+
     p = 0.0
     for f in range(grid):
         pf = _pois(f, mu_f)
