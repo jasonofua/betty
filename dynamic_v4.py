@@ -737,6 +737,20 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
             # booked that day, Fluminense Over 6.5, won.
             if quantity == 'corners' and side in ('home', 'away') and d.startswith('over'):
                 continue
+            # HOME-corner unders on a blank-prone home side, banned 21 Aug.
+            # Measured on 159 unique corner-under legs: when the home team
+            # scores, home-corner unders run 86%; when it blanks, 64% - and the
+            # effect does NOT mirror on the away side (93% when the away team
+            # blanks), because a home side that cannot score keeps attacking
+            # while an away side that cannot score sits in. Corners are the
+            # exhaust of failed home pressure. Klaksvik (home blanks 5/7, 0-0,
+            # 8 first-half corners) and Macara (blanks 4/7, 0-0, 8+ corners)
+            # each killed a ticket inside 24 hours with exactly this leg.
+            # Blank rate >= 40% of the home side's recent games trips the gate.
+            if quantity == 'corners' and side == 'home' and d.startswith('under'):
+                gh = [f for f, _ in home_rec.pairs('goals')]
+                if gh and sum(1 for g in gh if g == 0) / len(gh) >= 0.40:
+                    continue
             if quantity == 'fouls' and d.startswith('over'):
                 continue
             # NO PRICE BAND ON UNDERS. A 1.10-1.19 band was added 8 Aug off a

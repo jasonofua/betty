@@ -164,6 +164,15 @@ def pick_for_target(legs, target):
     import math
     scored = []
     for l in legs:
+        # Cheap corner legs are excluded from target slips (20 Aug, on request).
+        # Klaksvik 1H corners @1.13 killed a 52x slip while contributing 13% of
+        # its payout - and Kansas City corners @1.15 did the same to T2ZS81.
+        # A corners leg at that price buys almost nothing and still carries the
+        # fat-tail risk the Poisson model cannot see (series [8,0,1,1,0,1,3]
+        # read as 93%). The match's other markets stay eligible, so the slot
+        # falls through to a different option rather than vanishing.
+        if l['odds'] < 1.20 and 'corner' in l['label'].lower():
+            continue
         w = true_prob(l['odds'])
         cost = -math.log(w)
         if cost <= 0 or l['odds'] <= 1.0:
