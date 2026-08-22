@@ -736,6 +736,18 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
     out = []
     avail = set(home_rec.quantities()) | set(away_rec.quantities())
 
+    # The fixture's 1X2 favourite - the one number that knows who the
+    # opponent is. Drives the mismatch regime below.
+    fav = None
+    for _m in markets:
+        if str(_m.get('id')) == '1':
+            try:
+                fav = min(float(o['odds']) for o in (_m.get('outcomes') or [])
+                          if o.get('desc') in ('Home', 'Away') and o.get('isActive', 1))
+            except (ValueError, KeyError, TypeError):
+                pass
+            break
+
     # PRE-PASS: the highest Under line the book prints for each market+side,
     # counted across EVERY market including suspended ones. Each line is its own
     # market with its own status, and the main loop below drops suspended ones
@@ -852,7 +864,19 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
                 _t = parse_outcome(name, o.get('desc'), spec, avail, teams)
                 try:
                     if _t is not None and not _t(0, 0) and _t(9, 9):
-                        continue
+                        # MISMATCH REGIME (22 Aug): with a crushing favourite
+                        # the contained event flips. All 13 goal-market losses
+                        # this week were suppression bets in games where one
+                        # side had motive and ability to force late goals, and
+                        # 2H Over 0.5 won in 13 of those 13 fixtures (it is on
+                        # the calibration trust list; Levadia's own columns
+                        # backed it 14/14 while we bet the Under). So in a
+                        # fixture whose favourite is 1.40 or shorter, 2H Over
+                        # 0.5 alone escapes the goals-Over ban and runs the
+                        # normal gauntlet - tally, model, cap - like any leg.
+                        if not (qkey == 'h2' and side == 'match'
+                                and d == 'over 0.5' and fav and fav <= 1.40):
+                            continue
                 except Exception:
                     pass
             # Team-corner Overs blacklisted 11 Aug. Both booked that day lost:
@@ -924,6 +948,12 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
             # five is MIN_HITS thinking; a half-total Under lives one goal
             # from death and gets no such allowance.
             if qkey in ('h1', 'h2') and d.startswith('under'):
+                # ... and in the mismatch regime no half Under is bettable at
+                # all: a 1.40-or-shorter favourite's pressure lands after the
+                # break (Levadia 53'-70', Liverpool M 58'-83'), which is the
+                # one game state these bets cannot survive.
+                if fav and fav <= 1.40:
+                    continue
                 # ... and spotless means nothing on a shallow sample. King's
                 # Lynn 2H U2.5 was 4/4+7/7 - four clean home games is not
                 # evidence of a quiet team, it is absence of evidence - and
@@ -1050,9 +1080,17 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
             if mp is None:
                 continue
             implied = 1.0 / odds
+            # The flip leg cannot be held to MIN_EDGE: on production bets in
+            # mismatch games the book prices the class-gap goals we cannot
+            # see, so our number sits at or under theirs BY CONSTRUCTION -
+            # the same blindness that fakes edge on Unders fakes no-edge
+            # here. Rough agreement (within 5 points under) is the standard;
+            # the tally and MIN_PROB still apply.
+            _flip = (qkey == 'h2' and d == 'over 0.5' and fav and fav <= 1.40)
             if mp < MIN_PROB or (mp - implied) < MIN_EDGE \
                     or (mp - implied) > MAX_EDGE:
-                continue
+                if not (_flip and mp >= MIN_PROB and (mp - implied) >= -0.05):
+                    continue
             rate = mp
             edge = mp - implied
             out.append({
