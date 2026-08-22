@@ -889,20 +889,24 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
                                 [a for _, a in _opp.pairs(qkey)]
                     if any(v >= _ln for v in _vals):
                         continue
-            # THE STREAK IS ALREADY OVER: an Under-shaped half-total bet is
-            # refused when the MOST RECENT game in either column already went
-            # over the line. Liverpool Montevideo 2H U2.5 read 6/7 - but the
-            # blemish was their LATEST home game, a 3-goal second half, and
-            # they promptly produced a 4-goal one (0:0 at HT, four from 58').
-            # A 6/7 with the breach five games back is form; a 6/7 with the
-            # breach last week is a broken streak wearing an old tally.
+            # HALF-TOTAL UNDERS MUST BE SPOTLESS, like corners: any in-sample
+            # half at or above the line kills the bet, however old. A 6/7
+            # tally reads as form but hides a proven breach - Fulham Utd 2H
+            # U2.5 carried a 3-goal second half mid-sample plus a 2, nine of
+            # the fourteen games behind the leg had 2H goals, and the sample
+            # itself priced 11/14 = 79% against the book's 81% - no bet, yet
+            # the model said 88 and it died 2:3 on the first leg of a seven-
+            # rung ladder. Liverpool Montevideo the night before was the same
+            # shape with the breach one game old. Tolerating one breach in
+            # five is MIN_HITS thinking; a half-total Under lives one goal
+            # from death and gets no such allowance.
             if qkey in ('h1', 'h2') and d.startswith('under'):
                 mm = re.search(r'([\d.]+)', d)
                 if mm:
                     _ln = float(mm.group(1))
-                    _H, _A = home_rec.pairs(qkey), away_rec.pairs(qkey)
-                    if ((_H and _H[0][0] + _H[0][1] > _ln)
-                            or (_A and _A[0][0] + _A[0][1] > _ln)):
+                    _vals = [f + a for f, a in home_rec.pairs(qkey)] + \
+                            [f + a for f, a in away_rec.pairs(qkey)]
+                    if any(v > _ln for v in _vals):
                         continue
             # HOME-corner unders on a blank-prone home side, banned 21 Aug.
             # Measured on 159 unique corner-under legs: when the home team
