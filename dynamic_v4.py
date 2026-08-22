@@ -924,6 +924,15 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
             # five is MIN_HITS thinking; a half-total Under lives one goal
             # from death and gets no such allowance.
             if qkey in ('h1', 'h2') and d.startswith('under'):
+                # ... and spotless means nothing on a shallow sample. King's
+                # Lynn 2H U2.5 was 4/4+7/7 - four clean home games is not
+                # evidence of a quiet team, it is absence of evidence - and
+                # Marine put four past them after the break. A half-total
+                # Under lives one goal from death; it gets the deep-sample
+                # standard, not the post-World-Cup-break MIN_GAMES=3.
+                if (len(home_rec.pairs(qkey)) < 6
+                        or len(away_rec.pairs(qkey)) < 6):
+                    continue
                 mm = re.search(r'([\d.]+)', d)
                 if mm:
                     _ln = float(mm.group(1))
