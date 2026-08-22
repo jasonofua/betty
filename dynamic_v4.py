@@ -865,6 +865,29 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
             # booked that day, Fluminense Over 6.5, won.
             if quantity == 'corners' and side in ('home', 'away') and d.startswith('over'):
                 continue
+            # WIN-BOTH 'NO' AGAINST A REAL FAVOURITE, banned 22 Aug. All
+            # five settled losses in this family - Gama, Auda, Millwall,
+            # Southport, Erzurumspor-Galatasaray - were 'No' against the
+            # fixture's stronger side, and the model cannot see strength:
+            # Galatasaray's away sample (vs top clubs) read as mediocre, so
+            # the model said 90 where the book said 78 and the 1X2 said 1.60.
+            # When the subject side is the match favourite at 1.60 or
+            # shorter, the No is refused regardless of the model. Cutoff is
+            # provisional - the fav price is logged on every leg since 22
+            # Aug, so tune it from the data once a week has settled.
+            if qkey == 'win_both' and side in ('home', 'away') and d == 'no':
+                _px = None
+                for _m2 in markets:
+                    if str(_m2.get('id')) == '1':
+                        for _o2 in (_m2.get('outcomes') or []):
+                            if _o2.get('desc') == ('Home' if side == 'home' else 'Away'):
+                                try:
+                                    _px = float(_o2.get('odds'))
+                                except (TypeError, ValueError):
+                                    pass
+                        break
+                if _px and _px <= 1.60:
+                    continue
             # CORNER UNDERS: the line must clear EVERY count either record
             # holds - a single in-sample value at or above the line is a
             # breach that has already happened once and only needs to happen
