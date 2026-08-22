@@ -889,6 +889,21 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
                                 [a for _, a in _opp.pairs(qkey)]
                     if any(v >= _ln for v in _vals):
                         continue
+            # THE STREAK IS ALREADY OVER: an Under-shaped half-total bet is
+            # refused when the MOST RECENT game in either column already went
+            # over the line. Liverpool Montevideo 2H U2.5 read 6/7 - but the
+            # blemish was their LATEST home game, a 3-goal second half, and
+            # they promptly produced a 4-goal one (0:0 at HT, four from 58').
+            # A 6/7 with the breach five games back is form; a 6/7 with the
+            # breach last week is a broken streak wearing an old tally.
+            if qkey in ('h1', 'h2') and d.startswith('under'):
+                mm = re.search(r'([\d.]+)', d)
+                if mm:
+                    _ln = float(mm.group(1))
+                    _H, _A = home_rec.pairs(qkey), away_rec.pairs(qkey)
+                    if ((_H and _H[0][0] + _H[0][1] > _ln)
+                            or (_A and _A[0][0] + _A[0][1] > _ln)):
+                        continue
             # HOME-corner unders on a blank-prone home side, banned 21 Aug.
             # Measured on 159 unique corner-under legs: when the home team
             # scores, home-corner unders run 86%; when it blanks, 64% - and the

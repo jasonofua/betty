@@ -75,9 +75,23 @@ def build(until_h=10, floor=None, verbose=True, days=0):
             continue
         st['with picks'] += 1
         ts = dt.datetime.fromtimestamp(int(ev['estimateStartTime']) / 1000, tz=A.WAT)
+        # The fixture's 1X2 favourite price, logged with every leg: all five
+        # second-half blow-ups this week had a strong favourite grinding a
+        # 0:0 into a late avalanche, but the losers' prices are unrecoverable
+        # once settled - so record them at booking time and set any favourite
+        # gate from a measured week, not from a guess.
+        fav = None
+        for _m in (ev.get('markets') or []):
+            if str(_m.get('id')) == '1':
+                try:
+                    fav = min(float(o['odds']) for o in (_m.get('outcomes') or [])
+                              if o.get('desc') in ('Home', 'Away') and o.get('isActive', 1))
+                except (ValueError, KeyError, TypeError):
+                    pass
+                break
         board.append({
             'ts': ts, 'eid': ev['eventId'], 'fx': f, 'rec': h, 'rec_a': a,
-            'games': len(h.pairs('goals')), 'picks': picks,
+            'games': len(h.pairs('goals')), 'picks': picks, 'fav': fav,
         })
     board.sort(key=lambda x: x['ts'])
     if verbose:
@@ -109,7 +123,8 @@ def stat_lines(m, pick):
                                   set(m['rec'].quantities()) | set(m['rec_a'].quantities()))
     qk = q if per == 'ft' else (per if q == 'goals' else f'{q}_{per}')
     out.append(f"support {pick['rate']:.0%}  tally {pick['tally']}  "
-               f"reads '{qk}'  book implies {1 / pick['odds']:.0%}")
+               f"reads '{qk}'  book implies {1 / pick['odds']:.0%}"
+               + (f"  1X2 fav @{m['fav']:.2f}" if m.get('fav') else ""))
     out.append(f"DECIDED BY  {qk}:")
     for tag, rec in (('home', m['rec']), ('away', m['rec_a'])):
         pr = rec.pairs(qk)
