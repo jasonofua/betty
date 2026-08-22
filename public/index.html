@@ -359,10 +359,19 @@ function cutoffPreview(){
 ['until','days'].forEach(id=>$(id).addEventListener('input',cutoffPreview));
 cutoffPreview();
 
-/* engine base: booking talks to wherever ui.py runs */
+/* engine base: booking talks to wherever ui.py runs. The page may be served
+   BY the engine itself (localhost:8017 or the Railway deployment) - same-origin
+   /api/status answering makes blank mean THIS origin, not localhost. */
+let AUTO=(location.port==='8017')?location.origin:null;
+if(!AUTO){
+  fetch('/api/status').then(r=>r.ok?r.json():Promise.reject()).then(j=>{
+    if(j && typeof j.state==='string'){AUTO=location.origin; pingEngine();}
+  }).catch(()=>{});
+}
 function engineBase(){
   return (localStorage.getItem('eng')||'').replace(/\/+$/,'')
-      || (location.port==='8017' ? location.origin : 'http://localhost:8017');
+      || AUTO
+      || 'http://localhost:8017';
 }
 let engineUp=false, mode='local', cloudTimer=null;
 function pingEngine(){
