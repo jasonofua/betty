@@ -895,10 +895,14 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
             # fixture's stronger side, and the model cannot see strength:
             # Galatasaray's away sample (vs top clubs) read as mediocre, so
             # the model said 90 where the book said 78 and the 1X2 said 1.60.
-            # When the subject side is the match favourite at 1.60 or
-            # shorter, the No is refused regardless of the model. Cutoff is
-            # provisional - the fav price is logged on every leg since 22
-            # Aug, so tune it from the data once a week has settled.
+            # When the subject side is the match favourite at 2.20 or
+            # shorter, the No is refused regardless of the model. Widened
+            # from 1.60 on 23 Aug with logged prices: Antigua LOST at 1.64
+            # (the old gate missed by four cents), Lens/Millwall/Southport
+            # all died in the 1.6-2.2 band, while Loudoun WON at 2.25 and
+            # survives the widening. Jaiba (won, 1.77) is the acknowledged
+            # sacrifice - the band ran 0-for-5 on the week against scattered
+            # winners, and the family's economics never priced that risk.
             if qkey == 'win_both' and side in ('home', 'away') and d == 'no':
                 _px = None
                 for _m2 in markets:
@@ -910,7 +914,7 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
                                 except (TypeError, ValueError):
                                     pass
                         break
-                if _px and _px <= 1.60:
+                if _px and _px <= 2.20:
                     continue
             # CORNER UNDERS: the line must clear EVERY count either record
             # holds - a single in-sample value at or above the line is a
@@ -986,6 +990,24 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
                     continue
             if quantity == 'fouls' and d.startswith('over'):
                 continue
+            # HALF-PERIOD BOOKINGS OVERS, banned 23 Aug. Orlando 1H Over 0.5
+            # read 11/12 and died on the twelfth shape - a clean first half.
+            # A 45-minute window for a needs-an-event bet is the Leon lesson
+            # at a lower line; full-time Over 0.5 keeps the whole match to
+            # produce its one card (Fluminense 7/7+7/7 landed the same night).
+            if quantity == 'yellow' and period in ('h1', 'h2') and d.startswith('over'):
+                continue
+            # FT TEAM BOOKINGS UNDERS need a 4.5 line, banned below 23 Aug.
+            # The week's ledger: lines 4.5/5.5 ran 5-0 (Derby, West Ham,
+            # Cruzeiro, Cincinnati, Red Bulls); the 3.5 line ran 1-2 the same
+            # night - St. Louis and Vancouver both breached, Vancouver while
+            # WINNING 5:0. One line of cushion is the difference; same
+            # highest-line principle as everywhere else.
+            if (quantity == 'yellow' and side in ('home', 'away')
+                    and period == 'ft' and d.startswith('under')):
+                mm = re.search(r'([\d.]+)', d)
+                if mm and float(mm.group(1)) < 4.5:
+                    continue
             # NO PRICE BAND ON UNDERS. A 1.10-1.19 band was added 8 Aug off a
             # measurement that said those legs went 28W-1L, and REMOVED 11 Aug
             # because the measurement was a selection effect. Those legs had been
