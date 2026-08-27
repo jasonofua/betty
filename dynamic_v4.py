@@ -16,6 +16,42 @@ A market is evaluated because the match offers it, not because someone wrote
 code for it. Anything the record cannot answer is skipped rather than guessed.
 """
 import re
+import json as _json, os as _os, math as _math
+
+# League scoring rates from the Stage-B corpus (experiments/league_rates.json):
+# {league: [avg total goals, avg 2H goals]}. The composite evaluation (28 Aug)
+# showed empirical-Bayes shrinkage of half-column means toward the league rate
+# beats raw means out-of-time on 2H Unders (.1880->.1872, .2497->.2481) - the
+# thin-record fix, validated. book_dynamic sets the fixture's league here.
+try:
+    _LR = _json.load(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)),
+                                        'experiments', 'league_rates.json')))
+except Exception:
+    _LR = {'leagues': {}, 'global_total': 3.1, 'global_2h': 1.72}
+CURRENT_LEAGUE = None
+
+
+def set_league(name):
+    global CURRENT_LEAGUE
+    CURRENT_LEAGUE = name
+
+
+def _half_col_prior(period):
+    v = _LR.get('leagues', {}).get(CURRENT_LEAGUE)
+    tot = v[0] if v else _LR.get('global_total', 3.1)
+    h2 = v[1] if v else _LR.get('global_2h', 1.72)
+    half = h2 if period == 'h2' else max(0.2, tot - h2)
+    return half / 2      # one column (one side's goals) is ~half the half total
+
+
+def _ds_mean(vals, prior):
+    """Decay-weighted, league-shrunk column mean (xi=0.07, k=3)."""
+    if not vals:
+        return prior
+    w = [_math.exp(-0.07 * i) for i in range(len(vals))]
+    n = sum(w)
+    avg = sum(v * wi for v, wi in zip(vals, w)) / n
+    return (avg * n + 3.0 * prior) / (n + 3.0)
 
 # Both sides must clear this independently, over at least this many games.
 # Dropped from 4 to 3 on 4 Aug: after the World Cup break teams have played
@@ -652,7 +688,13 @@ def model_prob(home_rec, away_rec, quantity, side, test, grid=16):
         return (hits + 1) / (len(seq_h) + len(seq_a) + 2)
 
     def blend(own, opp):
-        m = (sum(own) / len(own) + sum(opp) / len(opp)) / 2 if own and opp else 0.0
+        # Half-goal columns get the composite treatment validated 28 Aug:
+        # recency decay plus shrinkage toward the league's half rate.
+        if quantity in ('h1', 'h2'):
+            pr = _half_col_prior(quantity)
+            m = (_ds_mean(own, pr) + _ds_mean(opp, pr)) / 2 if own and opp else pr
+        else:
+            m = (sum(own) / len(own) + sum(opp) / len(opp)) / 2 if own and opp else 0.0
         return max(m, 0.02)
 
     if side == 'away':

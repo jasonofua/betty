@@ -69,6 +69,7 @@ def build(until_h=10, floor=None, verbose=True, days=0):
         # team names, so markets written as "CD Real Tomayapo Over/Under" resolve
         # to that team instead of being read as a match total
         kw['teams'] = (ev.get('homeTeamName'), ev.get('awayTeamName'))
+        D.set_league(f.get('league'))
         picks = D.best_three(ev.get('markets') or [], h, a, **kw)
         if not picks:
             st['nothing supported'] += 1
