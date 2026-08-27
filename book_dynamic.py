@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Book from the dynamic evaluator.
 
-  python3 book_dynamic.py [--until HH] [--days N] [--target Nx] [--dry] [--floor X] [--legs N] [--rank 1,2,3]
+  python3 book_dynamic.py [--until HH] [--days N] [--target Nx] [--rollover] [--dry] [--floor X] [--legs N] [--rank 1,2,3]
 
 Slips are split into parts of at most MAX_LEGS (SportyBet's cap); --legs N
 makes them smaller, which is usually what you want - a 50-leg accumulator
@@ -238,6 +238,27 @@ def slip(board, rank):
     return legs
 
 
+def pick_rollover(pool, floor=0.30,
+                  targets=(10, 8, 6, 5, 4, 3, 2.5, 2, 1.75, 1.5, 1.3)):
+    """The rollover standard (26 Aug): floor the ticket by WINNING CHANCE,
+    not by multiplier. Walk the target ladder downward and book the biggest
+    slip whose estimated landing chance still clears the floor - 6x on a fat
+    Saturday, 1.5x on a thin Tuesday. The three rollover tickets that won
+    (NFSGA4, LSVNNJ, WJJMKK) were all 1.4-1.8x at 40%+; the one that died
+    was forced to 5.5x/10% by a multiplier floor. Size comes from chaining
+    days, not from any single ticket."""
+    best = (None, 0.0, 0.0)
+    for t in targets:
+        legs, combo, surv = pick_for_target(pool, t)
+        if not legs:
+            continue
+        if surv >= floor:
+            return legs, combo, surv
+        if surv > best[2]:
+            best = (legs, combo, surv)
+    return None, best[1], best[2]
+
+
 def main():
     dry = '--dry' in sys.argv
     until = int(sys.argv[sys.argv.index('--until') + 1]) if '--until' in sys.argv else 10
@@ -246,6 +267,42 @@ def main():
     board = build(until, floor, days=days)
     if not board:
         print("\n>> no supported options on this board")
+        return
+
+    if '--rollover' in sys.argv:
+        pool, seen_ev = [], set()
+        for rank in range(D.TOP_N):
+            for l in slip(board, rank):
+                k = (l['bs']['eventId'], l['bs']['marketId'], l['bs']['specifier'])
+                if k in seen_ev:
+                    continue
+                seen_ev.add(k)
+                pool.append(l)
+        legs, combo, surv = pick_rollover(pool)
+        if not legs:
+            print(f"\n>> no rollover today: even the smallest slip only lands "
+                  f"{surv:.0%} - the board does not clear the 30% floor")
+            return
+        legs.sort(key=lambda l: l['ts'])
+        print(f"\n=== ROLLOVER — {len(legs)} legs, combined ~{combo:,.2f}x, "
+              f"estimated {surv:.0%} chance of landing   (pool of {len(pool)})")
+        for l in legs:
+            print(f"   {l['ts']:%a %H:%M}  {l['match'][:38]:<38} {l['games']}g  "
+                  f"{true_prob(l['odds']):>4.0%}  {l['label']}  @{l['odds']}")
+        if dry:
+            return
+        bk = A.book([l['bs'] for l in legs])
+        if bk and bk.get('code'):
+            got = bk.get('verified') or bk['booked']
+            print(f"   >> CODE {bk['code']}   {bk['url']}")
+            if got != bk['req']:
+                print(f"   >> short: booked {got}/{bk['req']}")
+            A.log_booking(bk['code'], bk['url'],
+                          f"rollover {combo:.2f}x est {surv:.0%}",
+                          [(l['ts'].timestamp(), l['match'], l['label'],
+                            l['odds'], l['stats']) for l in legs])
+        else:
+            print(f"   >> booking failed: {bk.get('msg') if bk else 'no selections'}")
         return
 
     if '--target' in sys.argv:

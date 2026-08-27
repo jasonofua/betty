@@ -36,9 +36,10 @@ class _LogIO(io.TextIOBase):
         return len(s)
 
 
-def run_job(target, until, days, dry):
+def run_job(target, until, days, dry, rollover=False):
     JOB.update(state='building', log=[], result=None,
-               params=dict(target=target, until=until, days=days, dry=dry),
+               params=dict(target=target, until=until, days=days, dry=dry,
+                           rollover=rollover),
                started=dt.datetime.now(A.WAT).strftime('%H:%M'))
     try:
         with contextlib.redirect_stdout(_LogIO()):
@@ -55,12 +56,20 @@ def run_job(target, until, days, dry):
                         continue
                     seen.add(k)
                     pool.append(l)
-            legs, combo, surv = BD.pick_for_target(pool, target)
+            if rollover:
+                legs, combo, surv = BD.pick_rollover(pool)
+                if not legs:
+                    JOB.update(state='done', result={'error':
+                        f'no rollover today: even the smallest slip only lands '
+                        f'{surv:.0%} - the board does not clear the 30% floor'})
+                    return
+            else:
+                legs, combo, surv = BD.pick_for_target(pool, target)
             if not legs:
                 JOB.update(state='done', result={'error': 'no bookable legs on this board'})
                 return
             warn = None
-            if combo < target:
+            if not rollover and combo < target:
                 # Asked-for target not reachable: warn, then book the best the
                 # board offers instead of refusing (changed 21 Aug on request).
                 warn = (f'{target:g}x not reachable — booked the best available: '
@@ -89,8 +98,9 @@ def run_job(target, until, days, dry):
                     if got != bk['req']:
                         res['short'] = f"booked {got}/{bk['req']}"
                     A.log_booking(bk['code'], bk['url'],
-                                  f"dynamic_v4 target {target:g}x until {until}:00"
-                                  + (f" +{days}d" if days else ""),
+                                  (f"rollover {combo:.2f}x est {surv:.0%}" if rollover
+                                   else f"dynamic_v4 target {target:g}x until {until}:00"
+                                        + (f" +{days}d" if days else "")),
                                   [(l['ts'].timestamp(), l['match'], l['label'],
                                     l['odds'], l['stats']) for l in legs])
                 else:
@@ -167,6 +177,7 @@ class Handler(BaseHTTPRequestHandler):
             until = int(p.get('until', 23))
             days = int(p.get('days', 0))
             dry = bool(p.get('dry'))
+            rollover = bool(p.get('rollover'))
             assert 2 <= target <= 100000 and 0 <= until <= 23 and 0 <= days <= 4
         except Exception:
             self._send(json.dumps({'error': 'bad parameters'}), code=400); return
@@ -175,7 +186,7 @@ class Handler(BaseHTTPRequestHandler):
                 self._send(json.dumps({'error': 'a run is already in progress'}), code=409)
                 return
             JOB['state'] = 'building'
-        threading.Thread(target=run_job, args=(target, until, days, dry),
+        threading.Thread(target=run_job, args=(target, until, days, dry, rollover),
                          daemon=True).start()
         self._send(json.dumps({'ok': True}))
 
