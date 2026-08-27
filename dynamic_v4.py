@@ -44,11 +44,14 @@ def _half_col_prior(period):
     return half / 2      # one column (one side's goals) is ~half the half total
 
 
+DC_RHO = -0.025     # Dixon-Coles low-score correction, fitted on the corpus
+
+
 def _ds_mean(vals, prior):
-    """Decay-weighted, league-shrunk column mean (xi=0.07, k=3)."""
+    """Decay-weighted, league-shrunk column mean (xi fitted at 0.2, k=3)."""
     if not vals:
         return prior
-    w = [_math.exp(-0.07 * i) for i in range(len(vals))]
+    w = [_math.exp(-0.2 * i) for i in range(len(vals))]
     n = sum(w)
     avg = sum(v * wi for v, wi in zip(vals, w)) / n
     return (avg * n + 3.0 * prior) / (n + 3.0)
@@ -690,8 +693,10 @@ def model_prob(home_rec, away_rec, quantity, side, test, grid=16):
     def blend(own, opp):
         # Half-goal columns get the composite treatment validated 28 Aug:
         # recency decay plus shrinkage toward the league's half rate.
-        if quantity in ('h1', 'h2'):
-            pr = _half_col_prior(quantity)
+        if quantity in ('h1', 'h2', 'goals'):
+            pr = (_half_col_prior(quantity) if quantity in ('h1', 'h2')
+                  else _LR.get('leagues', {}).get(CURRENT_LEAGUE,
+                       [_LR.get('global_total', 3.1)])[0] / 2)
             m = (_ds_mean(own, pr) + _ds_mean(opp, pr)) / 2 if own and opp else pr
         else:
             m = (sum(own) / len(own) + sum(opp) / len(opp)) / 2 if own and opp else 0.0
@@ -731,7 +736,16 @@ def model_prob(home_rec, away_rec, quantity, side, test, grid=16):
             else:
                 mu_f, mu_a = max(0.02, (hf_m + aa_m) / 2), max(0.02, (ha_m + af_m) / 2)
 
-    p = 0.0
+    def _tau(f, a):
+        # fitted low-score correction; only FT match-goal grids use it
+        if quantity != 'goals':
+            return 1.0
+        if f == 0 and a == 0: return 1 - mu_f * mu_a * DC_RHO
+        if f == 0 and a == 1: return 1 + mu_f * DC_RHO
+        if f == 1 and a == 0: return 1 + mu_a * DC_RHO
+        if f == 1 and a == 1: return 1 - DC_RHO
+        return 1.0
+    p = tot = 0.0
     for f in range(grid):
         pf = _pois(f, mu_f)
         if pf < 1e-9:
@@ -740,11 +754,15 @@ def model_prob(home_rec, away_rec, quantity, side, test, grid=16):
             pa = _pois(a, mu_a)
             if pa < 1e-9:
                 continue
+            wgt = pf * pa * _tau(f, a)
+            tot += wgt
             try:
                 if test(f, a):
-                    p += pf * pa
+                    p += wgt
             except Exception:
                 return None
+    if tot > 0:
+        p /= tot
     return min(max(p, 0.0), 1.0)
 
 
@@ -882,8 +900,11 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
         # the count and there is no wider line to retreat to - the highest-line
         # rule is already taking the top of the ladder. SECOND-HALF totals are
         # left alone.
-        if quantity == 'goals' and side == 'match' and period in ('ft', 'h1'):
-            continue
+        # FT/1H match totals REOPENED 28 Aug behind the completed composite:
+        # it beat base and plain Poisson out-of-time on FT O2.5/U2.5/U3.5
+        # (.2453/.2445 -> .2419, .2329/.2264 -> .2236) - the first model here
+        # to read FT totals better than baseline. Reopened legs face the
+        # agreement gate below instead of MIN_EDGE, plus depth and spotless.
         for o in (m.get('outcomes') or []):
             if not o.get('isActive', 1):
                 continue
@@ -916,9 +937,8 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
                         # fixture whose favourite is 1.40 or shorter, 2H Over
                         # 0.5 alone escapes the goals-Over ban and runs the
                         # normal gauntlet - tally, model, cap - like any leg.
-                        if not (qkey == 'h2' and side == 'match'
-                                and d == 'over 0.5' and fav and fav <= 1.40):
-                            continue
+                        if side != 'match':
+                            continue      # team goal Overs stay banned
                 except Exception:
                     pass
             # Team-corner Overs blacklisted 11 Aug. Both booked that day lost:
@@ -993,7 +1013,7 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
             # shape with the breach one game old. Tolerating one breach in
             # five is MIN_HITS thinking; a half-total Under lives one goal
             # from death and gets no such allowance.
-            if qkey in ('h1', 'h2') and d.startswith('under'):
+            if qkey in ('h1', 'h2', 'goals') and side == 'match' and d.startswith('under'):
                 # ... and in the mismatch regime no half Under is bettable at
                 # all: a 1.40-or-shorter favourite's pressure lands after the
                 # break (Levadia 53'-70', Liverpool M 58'-83'), which is the
@@ -1151,9 +1171,16 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
             # here. Rough agreement (within 5 points under) is the standard;
             # the tally and MIN_PROB still apply.
             _flip = (qkey == 'h2' and d == 'over 0.5' and fav and fav <= 1.40)
+            # Reopened goal totals: the calibration says never ARGUE with the
+            # book on goals - so they book on agreement (model close to or
+            # above the price, capped), with a raised probability floor.
+            _reopen = (qkey in GOAL_FAMILY and side == 'match'
+                       and quantity == 'goals')
             if mp < MIN_PROB or (mp - implied) < MIN_EDGE \
                     or (mp - implied) > MAX_EDGE:
-                if not (_flip and mp >= MIN_PROB and (mp - implied) >= -0.05):
+                if not (_flip and mp >= MIN_PROB and (mp - implied) >= -0.05) \
+                        and not (_reopen and mp >= 0.75
+                                 and -0.03 <= (mp - implied) <= MAX_EDGE):
                     continue
             rate = mp
             edge = mp - implied
