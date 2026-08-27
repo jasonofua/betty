@@ -44,9 +44,26 @@ with open(DS,'a') as out:
             h1h,h1a,h2h,h2a=(int(x) for x in m[:4])
         except Exception: continue
         if h1h+h2h!=r['gh'] or h1a+h2a!=r['ga']: continue
+        # the full stat sheet: corners, cards, SoT, offsides, fouls, saves
+        st={}
+        try:
+            sraw=F.fetch(f"df_st_1_{r['id']}", ttl=999*3600)
+            NAMES={'Corner kicks':'corners','Yellow cards':'yellow','Shots on target':'sot',
+                   'Offsides':'offsides','Fouls':'fouls','Goalkeeper saves':'saves'}
+            acc={}
+            for row in sraw.split('~'):
+                g=re.search(r'SG÷([^¬]+)¬SH÷([\d.]+)¬SI÷([\d.]+)',row)
+                if g and g.group(1) in NAMES:
+                    acc.setdefault(NAMES[g.group(1)],[]).append((float(g.group(2)),float(g.group(3))))
+            for k,v in acc.items():
+                st[k]=[v[0][0],v[0][1]]
+                if len(v)>=3 and v[1][0]<=v[0][0] and v[1][1]<=v[0][1]:
+                    st[k+'_h1']=[v[1][0],v[1][1]]
+        except Exception:
+            pass
         out.write(json.dumps(dict(id=r['id'],ts=r['ts'],lg=r['lg'],
             hgf=[x['gf'] for x in hv],hga=[x['ga'] for x in hv],
             agf=[x['gf'] for x in av],aga=[x['ga'] for x in av],
-            h1=[h1h,h1a],h2=[h2h,h2a],ft=[r['gh'],r['ga']]))+'\n')
+            h1=[h1h,h1a],h2=[h2h,h2a],ft=[r['gh'],r['ga']],st=st))+'\n')
         kept+=1
 print(f'{kept} new training rows -> dataset.jsonl')
