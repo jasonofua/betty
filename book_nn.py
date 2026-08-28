@@ -24,27 +24,28 @@ import dynamic_v4 as D
 import book_dynamic as BD
 
 EXP = os.path.join(ROOT, 'experiments')
-NETS = {}
-for tgt, fn in (('h2_over05', 'model_nn_2h_over05.pkl'),
-                ('h2_under25', 'model_nn_2h_under25.pkl')):
-    try:
-        with open(os.path.join(EXP, fn), 'rb') as f:
-            NETS[tgt] = pickle.load(f)
-    except Exception as e:
-        print(f"!! could not load {fn}: {e}")
-if not NETS:
-    sys.exit("no nets available - run the overnight pipeline first")
-print(f"NN booker: {len(NETS)} nets loaded ({', '.join(NETS)})")
+try:
+    with open(os.path.join(EXP, 'nn_all_bundle.pkl'), 'rb') as f:
+        BUNDLE = pickle.load(f)
+except Exception as e:
+    sys.exit(f"nn_all_bundle.pkl not loadable ({e}) - run experiments/train_nn_all.py")
+NETS = BUNDLE['nets']            # 16 goal-market classifiers
+SCALERS = BUNDLE['scalers']
+BLEAGUES = BUNDLE.get('leagues', {})
+BGLOB = BUNDLE.get('glob', {})
+print(f"NN booker: {len(NETS)} nets loaded ({', '.join(sorted(NETS))})")
 
 # The nets were trained on league rates from the same corpus the engine reads.
 _LR = D._LR
 
 
 def _lg_goal_rates():
-    v = _LR.get('leagues', {}).get(D.CURRENT_LEAGUE)
-    tot = v[0] if v else _LR.get('global_total', 3.1)
-    # corpus features used per-side league means; split the total evenly
-    return tot / 2, tot / 2
+    """The two league features the nets were trained on: league FT total and
+    league 2H total, taken from the training bundle's own tables."""
+    v = BLEAGUES.get(D.CURRENT_LEAGUE)
+    if v:
+        return v.get('tot', BGLOB.get('tot', 3.1)), v.get('h2', BGLOB.get('h2', 1.72))
+    return BGLOB.get('tot', 3.1), BGLOB.get('h2', 1.72)
 
 
 def _features(home_rec, away_rec):
@@ -71,15 +72,31 @@ def _features(home_rec, away_rec):
 
 
 def _which_net(quantity, side, test):
-    """Only the two markets the nets were trained on, identified by predicate
-    probe rather than by label - same discipline as the engine's Over probe."""
-    if quantity != 'h2' or side != 'match':
-        return None
+    """Map a live market to one of the 16 trained nets by PROBING the
+    predicate - never by label, same discipline as the engine's Over probe.
+    A net is used only when its target is exactly this bet."""
     try:
-        if test(0, 0) and not test(9, 9):          # an Under
-            return 'h2_under25' if not test(2, 1) and test(1, 1) else None
-        if not test(0, 0) and test(9, 9):          # an Over
-            return 'h2_over05' if test(1, 0) else None
+        if quantity in ('h1', 'h2', 'goals') and side == 'match':
+            per = {'h1': '1h', 'h2': '2h', 'goals': 'ft'}[quantity]
+            under = test(0, 0) and not test(9, 9)
+            over = (not test(0, 0)) and test(9, 9)
+            if over:
+                # find the line: smallest k where a total of k+1 passes
+                for k, name in ((0, 'over05'), (1, 'over15'), (2, 'over25')):
+                    if not test(k, 0) and test(k + 1, 0):
+                        return f'{per}_{name}'
+                return None
+            if under:
+                for k, name in ((1, 'under15'), (2, 'under25'), (3, 'under35'),
+                                (4, 'under45')):
+                    if test(k, 0) and not test(k + 1, 0):
+                        return f'{per}_{name}'
+                return None
+        if quantity == 'win_both' and side in ('home', 'away'):
+            # nets predict YES; the engine usually bets No, handled by caller
+            return f'{side}_winboth'
+        if quantity == 'both_halves' and side in ('home', 'away'):
+            return f'{side}_both_halves'
     except Exception:
         return None
     return None
@@ -95,9 +112,18 @@ def model_prob(home_rec, away_rec, quantity, side, test, grid=16):
         X = _features(home_rec, away_rec)
         if X is not None:
             try:
-                bundle = NETS[key]
-                p = float(bundle['net'].predict_proba(bundle['scaler'].transform(X))[0, 1])
+                p = float(NETS[key].predict_proba(SCALERS[key].transform(X))[0, 1])
+                # win_both / both_halves nets predict YES; flip for the No side
+                if key.endswith(('winboth', 'both_halves')):
+                    try:
+                        is_yes = bool(test(1, 0)) and not bool(test(0, 0))
+                    except Exception:
+                        is_yes = True
+                    if not is_yes:
+                        p = 1.0 - p
                 _used['nn'] += 1
+                _used.setdefault('by_market', {})
+                _used['by_market'][key] = _used['by_market'].get(key, 0) + 1
                 return min(max(p, 0.0), 1.0)
             except Exception:
                 pass
@@ -110,3 +136,5 @@ D.model_prob = model_prob        # the swap - everything downstream unchanged
 if __name__ == '__main__':
     BD.main()
     print(f"\nprobability sources used: NN {_used['nn']}, composite {_used['composite']}")
+    for k, v in sorted(_used.get('by_market', {}).items(), key=lambda kv: -kv[1]):
+        print(f"   net {k:18} used {v}x")
