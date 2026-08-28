@@ -8,7 +8,7 @@ straight into the same build/pick_for_target/book path the CLI uses. This has
 to run locally: a board build takes 15-40 minutes of Flashscore fetching and
 Poisson work, which is why the old Vercel page could never use this engine.
 """
-import io, json, threading, subprocess, sys, contextlib, datetime as dt
+import io, json, re, threading, subprocess, sys, contextlib, datetime as dt
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse, parse_qs
 
@@ -33,16 +33,35 @@ LOCK = threading.Lock()
 CRAWL = {'state': 'idle', 'kept': 0, 'seen': 0, 'note': ''}
 
 
-def crawl_job(cap, floor_iso, skip_ids):
+def crawl_job(cap, floor_iso, mode='deep'):
+    """Run a crawler as a subprocess, streaming its progress into CRAWL so the
+    status endpoint shows real numbers instead of 'starting'."""
     import subprocess
-    CRAWL.update(state='running', kept=0, note='starting')
+    script = 'depth_crawl.py' if mode == 'depth' else 'deep_crawl.py'
+    args = ([sys.executable, os.path.join(ROOT, 'experiments', script)]
+            + ([str(cap), '6'] if mode == 'depth' else [str(cap), floor_iso]))
+    CRAWL.update(state='running', kept=0, seen=0, note=f'{mode} crawl starting')
     try:
-        p = subprocess.run([sys.executable,
-                            os.path.join(ROOT, 'experiments', 'deep_crawl.py'),
-                            str(cap), floor_iso],
-                           capture_output=True, text=True, timeout=20000, cwd=ROOT)
-        tail = (p.stdout or '')[-400:] + (p.stderr or '')[-200:]
-        CRAWL.update(state='done', note=tail.strip()[-300:])
+        p = subprocess.Popen(args, cwd=ROOT, stdout=subprocess.PIPE,
+                             stderr=subprocess.STDOUT, text=True, bufsize=1)
+        for line in p.stdout:
+            line = line.strip()
+            if not line:
+                continue
+            CRAWL['note'] = line[-200:]
+            m = re.search(r'kept (\d+)', line)
+            if m:
+                CRAWL['kept'] = int(m.group(1))
+            m = re.search(r'(\d+)/(\d+)', line)
+            if m:
+                CRAWL['seen'] = int(m.group(1))
+            try:
+                with open(os.path.join(ROOT, 'experiments', 'dataset.jsonl')) as f:
+                    CRAWL['corpus'] = sum(1 for _ in f)
+            except OSError:
+                pass
+        p.wait()
+        CRAWL['state'] = 'done'
     except Exception as e:
         CRAWL.update(state='done', note=f'{type(e).__name__}: {e}')
 
@@ -215,11 +234,12 @@ class Handler(BaseHTTPRequestHandler):
             try:
                 p = json.loads(self.rfile.read(n) or b'{}')
                 cap = int(p.get('cap', 6000)); floor = str(p.get('floor', '2026-06-01'))
+                mode = str(p.get('mode', 'deep'))
             except Exception:
                 self._send(json.dumps({'error': 'bad parameters'}), code=400); return
             if CRAWL['state'] == 'running':
                 self._send(json.dumps({'error': 'crawl already running'}), code=409); return
-            threading.Thread(target=crawl_job, args=(cap, floor, None),
+            threading.Thread(target=crawl_job, args=(cap, floor, mode),
                              daemon=True).start()
             self._send(json.dumps({'ok': True})); return
         if path != '/api/run':
