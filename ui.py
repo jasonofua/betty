@@ -26,6 +26,26 @@ JOB = {'state': 'idle', 'log': [], 'result': None, 'params': None,
        'started': None}
 LOCK = threading.Lock()
 
+# Corpus crawling on this machine's connection, in parallel with the local one.
+# Two IPs mine the Flashscore history frontier at once and neither is throttled
+# as hard as one machine doing both. /api/crawl starts it, /api/crawl_status
+# reports, /api/crawl_data streams the harvested rows back for merging.
+CRAWL = {'state': 'idle', 'kept': 0, 'seen': 0, 'note': ''}
+
+
+def crawl_job(cap, floor_iso, skip_ids):
+    import subprocess
+    CRAWL.update(state='running', kept=0, note='starting')
+    try:
+        p = subprocess.run([sys.executable,
+                            os.path.join(ROOT, 'experiments', 'deep_crawl.py'),
+                            str(cap), floor_iso],
+                           capture_output=True, text=True, timeout=20000, cwd=ROOT)
+        tail = (p.stdout or '')[-400:] + (p.stderr or '')[-200:]
+        CRAWL.update(state='done', note=tail.strip()[-300:])
+    except Exception as e:
+        CRAWL.update(state='done', note=f'{type(e).__name__}: {e}')
+
 
 class _LogIO(io.TextIOBase):
     """stdout shim: every line the engine prints lands in the job log."""
@@ -153,6 +173,27 @@ class Handler(BaseHTTPRequestHandler):
         elif u.path == '/api/status':
             self._send(json.dumps({'state': JOB['state'], 'log': JOB['log'][-40:],
                                    'result': JOB['result'], 'started': JOB['started']}))
+        elif u.path == '/api/crawl_status':
+            self._send(json.dumps(CRAWL))
+        elif u.path == '/api/crawl_data':
+            # stream back the harvested corpus for merging on the other side
+            try:
+                after = float(parse_qs(u.query).get('after', ['0'])[0])
+            except ValueError:
+                after = 0.0
+            out = []
+            try:
+                with open(os.path.join(ROOT, 'experiments', 'dataset.jsonl')) as f:
+                    for line in f:
+                        try:
+                            r = json.loads(line)
+                        except ValueError:
+                            continue
+                        if r.get('ts', 0) > after:
+                            out.append(line.rstrip())
+            except OSError:
+                pass
+            self._send('\n'.join(out[-20000:]), 'text/plain; charset=utf-8')
         elif u.path == '/api/grade':
             codes = parse_qs(u.query).get('codes', [''])[0].replace(',', ' ').split()
             if not codes:
@@ -168,7 +209,20 @@ class Handler(BaseHTTPRequestHandler):
             self._send('not found', 'text/plain', 404)
 
     def do_POST(self):
-        if urlparse(self.path).path != '/api/run':
+        path = urlparse(self.path).path
+        if path == '/api/crawl':
+            n = int(self.headers.get('Content-Length', 0))
+            try:
+                p = json.loads(self.rfile.read(n) or b'{}')
+                cap = int(p.get('cap', 6000)); floor = str(p.get('floor', '2026-06-01'))
+            except Exception:
+                self._send(json.dumps({'error': 'bad parameters'}), code=400); return
+            if CRAWL['state'] == 'running':
+                self._send(json.dumps({'error': 'crawl already running'}), code=409); return
+            threading.Thread(target=crawl_job, args=(cap, floor, None),
+                             daemon=True).start()
+            self._send(json.dumps({'ok': True})); return
+        if path != '/api/run':
             self._send('not found', 'text/plain', 404); return
         n = int(self.headers.get('Content-Length', 0))
         try:
