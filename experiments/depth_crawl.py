@@ -18,6 +18,25 @@ import fetcher_v3 as F
 EXP = os.path.dirname(os.path.abspath(__file__))
 ROUNDS = int(sys.argv[1]) if len(sys.argv) > 1 else 3
 PER_TEAM = int(sys.argv[2]) if len(sys.argv) > 2 else 6
+
+# The leagues our slips actually bet, measured from bookings.md (8,722 booked
+# legs). Depth crawling all 13k corpus teams is ~55k harvests - days of work
+# through a throttled connection - while these leagues cover most fixtures the
+# engine ever sees, at ~400-800 teams. Substring match, so tiers and stages of
+# the same competition are included.
+TARGET_LEAGUES = (
+    'ARGENTINA:', 'ENGLAND:', 'ROMANIA: Superliga', 'USA: MLS', 'USA: USL',
+    'CHINA: Super League', 'ICELAND:', 'BRAZIL: Serie', 'BOLIVIA:',
+    'RUSSIA: Premier', 'SCOTLAND:', 'PERU: Liga 1', 'CHILE:',
+    'CZECH REPUBLIC:', 'ECUADOR: Liga Pro', 'SOUTH KOREA: K League',
+    'URUGUAY:', 'PARAGUAY:', 'COLOMBIA:', 'MEXICO:', 'DENMARK:', 'NORWAY:',
+    'SWEDEN:', 'POLAND:', 'NETHERLANDS:', 'GERMANY: 2.', 'GERMANY: 3.',
+    'SPAIN: LaLiga', 'ITALY: Serie', 'FRANCE: Ligue', 'TURKEY:', 'GREECE:',
+)
+
+
+def in_target(lg):
+    return any(t.lower() in (lg or '').lower() for t in TARGET_LEAGUES)
 NAMES = {'Corner kicks': 'corners', 'Yellow cards': 'yellow', 'Shots on target': 'sot',
          'Offsides': 'offsides', 'Fouls': 'fouls', 'Goalkeeper saves': 'saves'}
 
@@ -83,17 +102,18 @@ for rnd in range(ROUNDS):
     depth = sheeted_per_team(rows)
     # teams that need more sheeted games, poorest first - those are the ones
     # blocking their matches from having usable stat features
-    targets = sorted({(r['lg'], r['h']) for r in rows if r.get('h')} |
-                     {(r['lg'], r['a']) for r in rows if r.get('a')},
+    targets = sorted({(r['lg'], r['h']) for r in rows if r.get('h') and in_target(r['lg'])} |
+                     {(r['lg'], r['a']) for r in rows if r.get('a') and in_target(r['lg'])},
                      key=lambda t: depth.get(t, 0))
     thin = [t for t in targets if depth.get(t, 0) < 5]
-    print(f'round {rnd+1}: {len(rows)} matches, {len(thin)} teams under 5 sheeted games', flush=True)
+    print(f'round {rnd+1}: {len(rows)} matches, {len(thin)} TARGET-LEAGUE teams '
+          f'under 5 sheeted games', flush=True)
     # find each thin team's own past matches through any match they appear in
     seeds = {}
     for r in rows:
         for side in ('h', 'a'):
             key = (r['lg'], r.get(side))
-            if key in set(thin[:1500]) and key not in seeds:
+            if key in set(thin) and key not in seeds:
                 seeds[key] = r['id']
     kept = 0
     out_m = open(f'{EXP}/matches.jsonl', 'a'); out_d = open(f'{EXP}/dataset.jsonl', 'a')
