@@ -47,7 +47,7 @@ for r in rows:
             hist[(r['lg'], team)].append(
                 (r['ts'], {k: (v[idx], v[1 - idx]) for k, v in r['st'].items() if k in STATS}))
 for k in hist:
-    hist[k].sort()
+    hist[k].sort(key=lambda x: x[0])
 
 def form(r, side, stat):
     team = r['h'] if side == 'home' else r['a']

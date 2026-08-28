@@ -42,7 +42,7 @@ for r in rows:
                                                          for k, v in r['st'].items()
                                                          if k in STATS}))
 for k in team_hist:
-    team_hist[k].sort()
+    team_hist[k].sort(key=lambda x: x[0])
 
 def stat_form(r, side, stat):
     """That team's average for/against for this stat, earlier games only."""
