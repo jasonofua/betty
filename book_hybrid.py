@@ -80,6 +80,21 @@ def _stat_features(h, a, stat):
                       abs((hgf.mean() - hga.mean()) - (agf.mean() - aga.mean()))]])
 
 
+# Minimum cushion between a stat Under's line and the model's own predicted
+# count, in standard deviations. Measured on 26,290 match records (28 Aug):
+# a line +0.38 sd above the mean wins 69% of the time, +0.88 sd wins 84%,
+# +1.38 sd wins 93% - and the relationship holds across SoT, corners and
+# cards alike, so it is a property of counting statistics, not of any one
+# market. The Horsens SoT Under 10.5 that lost tonight sat at +0.38 sd; the
+# shots Unders at 32.5 and 35.5 that held sat far beyond +3 sd.
+MIN_CUSHION_SD = 1.30
+
+
+def _nb_sd(mu, alpha):
+    """Negative-binomial standard deviation for a predicted count."""
+    return math.sqrt(max(mu * (1.0 + alpha * mu), 1e-9))
+
+
 def _nb_cdf(k, mu, alpha):
     if alpha < 1e-6:
         return sum(math.exp(-mu) * mu ** i / math.factorial(i) for i in range(k + 1))
@@ -147,7 +162,16 @@ def model_prob(home_rec, away_rec, quantity, side, test, grid=16):
                 line, is_under = found
                 try:
                     mu = float(max(0.05, STAT_MODELS[name].predict(X)[0]))
-                    p_under = _nb_cdf(int(math.floor(line)), mu, STAT_DISP.get(name, 0.0))
+                    alpha = STAT_DISP.get(name, 0.0)
+                    if is_under:
+                        # Refuse Unders whose line sits too close to the
+                        # predicted count - that is where counting markets
+                        # turn into coin flips whatever the model claims.
+                        cushion = (line - mu) / _nb_sd(mu, alpha)
+                        if cushion < MIN_CUSHION_SD:
+                            _used['thin_line'] = _used.get('thin_line', 0) + 1
+                            return 0.0
+                    p_under = _nb_cdf(int(math.floor(line)), mu, alpha)
                     _used['stat_xgb'] += 1
                     _used['by'][name] = _used['by'].get(name, 0) + 1
                     return p_under if is_under else 1.0 - p_under
@@ -162,6 +186,6 @@ D.model_prob = model_prob
 if __name__ == '__main__':
     BD.main()
     print(f"\nsources: goal-NN {_used['goal_nn']}, stat-XGB {_used['stat_xgb']}, "
-          f"composite {_used['composite']}")
+          f"composite {_used['composite']}, thin-line refusals {_used.get('thin_line', 0)}")
     for k, v in sorted(_used['by'].items(), key=lambda kv: -kv[1])[:12]:
         print(f'   {k:18} {v}x')
