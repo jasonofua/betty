@@ -163,14 +163,18 @@ def model_prob(home_rec, away_rec, quantity, side, test, grid=16):
                 try:
                     mu = float(max(0.05, STAT_MODELS[name].predict(X)[0]))
                     alpha = STAT_DISP.get(name, 0.0)
-                    if is_under:
-                        # Refuse Unders whose line sits too close to the
-                        # predicted count - that is where counting markets
-                        # turn into coin flips whatever the model claims.
-                        cushion = (line - mu) / _nb_sd(mu, alpha)
-                        if cushion < MIN_CUSHION_SD:
-                            _used['thin_line'] = _used.get('thin_line', 0) + 1
-                            return 0.0
+                    # Cushion applies to BOTH sides - measured symmetric on
+                    # 26,381 matches: SoT Over 4.5 sits +1.12 sd from the mean
+                    # and wins 89.9%, SoT Under 12.5 sits +0.88 sd and wins
+                    # 84.2%. Same distance, same safety, either direction.
+                    # This matters because SportyBet prints the SoT ladder
+                    # tightly around the mean (7.5-10.5 on 477 of 559 events,
+                    # nothing above 12.5), so the bettable side there is the
+                    # deep Over, not the Under.
+                    cushion = ((line - mu) if is_under else (mu - line)) / _nb_sd(mu, alpha)
+                    if cushion < MIN_CUSHION_SD:
+                        _used['thin_line'] = _used.get('thin_line', 0) + 1
+                        return 0.0
                     p_under = _nb_cdf(int(math.floor(line)), mu, alpha)
                     _used['stat_xgb'] += 1
                     _used['by'][name] = _used['by'].get(name, 0) + 1
