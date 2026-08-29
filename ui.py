@@ -37,9 +37,16 @@ def crawl_job(cap, floor_iso, mode='deep'):
     """Run a crawler as a subprocess, streaming its progress into CRAWL so the
     status endpoint shows real numbers instead of 'starting'."""
     import subprocess
-    script = 'depth_crawl.py' if mode == 'depth' else 'deep_crawl.py'
-    args = ([sys.executable, os.path.join(ROOT, 'experiments', script)]
-            + ([str(cap), '6'] if mode == 'depth' else [str(cap), floor_iso]))
+    # 'recent' sweeps the last two days of finished matches with full stat
+    # sheets - the daily accumulator, run here because Railway's connection
+    # holds up where the local machine's DNS keeps dropping.
+    script = ({'depth': 'depth_crawl.py', 'recent': 'accumulate.py'}
+              .get(mode, 'deep_crawl.py'))
+    args = [sys.executable, os.path.join(ROOT, 'experiments', script)]
+    if mode == 'depth':
+        args += [str(cap), '6']
+    elif mode != 'recent':
+        args += [str(cap), floor_iso]
     CRAWL.update(state='running', kept=0, seen=0, note=f'{mode} crawl starting')
     try:
         p = subprocess.Popen(args, cwd=ROOT, stdout=subprocess.PIPE,
