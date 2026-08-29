@@ -210,6 +210,12 @@ def pick_for_target(legs, target):
     for _, w, l in scored:
         if combo >= target:
             break
+        # SportyBet carries at most MAX_LEGS selections; past that the platform
+        # silently keeps the first 50 and drops the rest, so a 59-leg "1030x"
+        # is really an unknown 50-leg slip at unknown odds. Stop at the cap and
+        # let the caller warn, exactly as it does for an unreachable target.
+        if len(out) >= MAX_LEGS:
+            break
         ev = l['bs']['eventId']
         if per_match[ev] >= MAX_PER_MATCH:
             continue
