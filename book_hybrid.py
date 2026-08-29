@@ -87,7 +87,29 @@ def _stat_features(h, a, stat):
 # cards alike, so it is a property of counting statistics, not of any one
 # market. The Horsens SoT Under 10.5 that lost tonight sat at +0.38 sd; the
 # shots Unders at 32.5 and 35.5 that held sat far beyond +3 sd.
-MIN_CUSHION_SD = 1.30
+MIN_CUSHION_SD = 0.55     # floor only - below this the market is a coin flip
+                          # (0.55 sd ~ 73% empirical; dynamic_v4's MIN_PROB of
+                          # 0.70 and the overclaim check do the real filtering)
+
+# Empirical win rate by cushion, measured on 37,041 SoT / 37,054 corner /
+# 34,558 card match records. Used as a REALITY CHECK on the model, not as a
+# blanket ban: the model may not claim more than OVERCLAIM_CAP above what the
+# raw distribution delivers at that cushion. Horsens SoT Under 10.5 sat at
+# +0.35 sd where the distribution wins 69%, and the model claimed 81% - a
+# 12-point overclaim, refused. Thursday's SoT Overs sat at +0.8 sd where the
+# distribution wins ~84% and the model agreed, so they stay bettable.
+CUSHION_TABLE = ((0.4, 0.66), (0.6, 0.75), (0.8, 0.80), (1.0, 0.86),
+                 (1.2, 0.87), (1.4, 0.92), (2.0, 0.97), (3.0, 0.99))
+OVERCLAIM_CAP = 0.08
+
+
+def _base_rate_for(cushion):
+    prev = 0.50
+    for c, p in CUSHION_TABLE:
+        if cushion <= c:
+            return prev + (p - prev) * 0.5
+        prev = p
+    return 0.99
 
 
 def _nb_sd(mu, alpha):
@@ -176,6 +198,11 @@ def model_prob(home_rec, away_rec, quantity, side, test, grid=16):
                         _used['thin_line'] = _used.get('thin_line', 0) + 1
                         return 0.0
                     p_under = _nb_cdf(int(math.floor(line)), mu, alpha)
+                    p_side = p_under if is_under else 1.0 - p_under
+                    # overclaim check against the empirical distribution
+                    if p_side - _base_rate_for(cushion) > OVERCLAIM_CAP:
+                        _used['overclaim'] = _used.get('overclaim', 0) + 1
+                        return 0.0
                     _used['stat_xgb'] += 1
                     _used['by'][name] = _used['by'].get(name, 0) + 1
                     return p_under if is_under else 1.0 - p_under
@@ -190,6 +217,7 @@ D.model_prob = model_prob
 if __name__ == '__main__':
     BD.main()
     print(f"\nsources: goal-NN {_used['goal_nn']}, stat-XGB {_used['stat_xgb']}, "
-          f"composite {_used['composite']}, thin-line refusals {_used.get('thin_line', 0)}")
+          f"composite {_used['composite']}, thin-line {_used.get('thin_line', 0)}, "
+          f"overclaim {_used.get('overclaim', 0)}")
     for k, v in sorted(_used['by'].items(), key=lambda kv: -kv[1])[:12]:
         print(f'   {k:18} {v}x')
