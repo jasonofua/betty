@@ -1,1 +1,3 @@
-# stdlib only - file needed so Nixpacks detects Python
+numpy
+scikit-learn
+xgboost
