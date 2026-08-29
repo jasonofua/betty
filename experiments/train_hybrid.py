@@ -31,12 +31,12 @@ for r in rows[:cut]:
     L['tot'].append(r['ft'][0] + r['ft'][1])
     L['h2'].append(r['h2'][0] + r['h2'][1])
     for k, v in (r.get('st') or {}).items():
-        if k in STATS:
-            L[k].append(v[0] + v[1])
-GLOB = {k: float(np.mean([x for L in lg.values() for x in L[k]] or [1.0]))
-        for k in ('tot', 'h2') + STATS}
-LEAGUES = {n: {k: (float(np.mean(L[k])) if len(L[k]) >= 8 else GLOB[k]) for k in GLOB}
-           for n, L in lg.items()}
+        L[k].append(v[0] + v[1])
+_ALLK = set(['tot', 'h2']) | set(STATS) | set(s + '_h1' for s in STATS)
+GLOB = {k: float(np.mean([x for L in lg.values() for x in L.get(k, [])] or [1.0]))
+        for k in _ALLK}
+LEAGUES = {n: {k: (float(np.mean(L[k])) if len(L.get(k, [])) >= 8 else GLOB[k])
+               for k in GLOB} for n, L in lg.items()}
 def lrate(r, k): return LEAGUES.get(r['lg'], GLOB)[k]
 
 # ---------- per-team stat history (chronological, leak-free) ----------
@@ -44,8 +44,10 @@ hist = defaultdict(list)
 for r in rows:
     if r.get('st') and r.get('h'):
         for team, idx in ((r['h'], 0), (r['a'], 1)):
+            # keep EVERY stat key, including the _h1 half splits - filtering to
+            # STATS here is what starved the 1H targets of history
             hist[(r['lg'], team)].append(
-                (r['ts'], {k: (v[idx], v[1 - idx]) for k, v in r['st'].items() if k in STATS}))
+                (r['ts'], {k: (v[idx], v[1 - idx]) for k, v in r['st'].items()}))
 for k in hist:
     hist[k].sort(key=lambda x: x[0])
 
@@ -74,12 +76,32 @@ XG = np.array([goal_feats(r) for r in rows])
 h1t = np.array([r['h1'][0] + r['h1'][1] for r in rows])
 h2t = np.array([r['h2'][0] + r['h2'][1] for r in rows])
 ftt = np.array([r['ft'][0] + r['ft'][1] for r in rows])
-CLS = {'2h_over05': (h2t >= 1), '2h_under15': (h2t <= 1), '2h_under25': (h2t <= 2),
-       '2h_under35': (h2t <= 3), '1h_over05': (h1t >= 1), '1h_under15': (h1t <= 1),
-       '1h_under25': (h1t <= 2), 'ft_over15': (ftt > 1.5), 'ft_over25': (ftt > 2.5),
-       'ft_under25': (ftt < 2.5), 'ft_under35': (ftt < 3.5), 'ft_under45': (ftt < 4.5),
-       'home_both_halves': np.array([r['h1'][0] > 0 and r['h2'][0] > 0 for r in rows]),
-       'away_both_halves': np.array([r['h1'][1] > 0 and r['h2'][1] > 0 for r in rows])}
+hg = np.array([r['ft'][0] for r in rows]); ag = np.array([r['ft'][1] for r in rows])
+h1h = np.array([r['h1'][0] for r in rows]); h1a = np.array([r['h1'][1] for r in rows])
+h2h = np.array([r['h2'][0] for r in rows]); h2a = np.array([r['h2'][1] for r in rows])
+CLS = {
+    # match totals - every line the book prints
+    'ft_over05': (ftt > 0.5), 'ft_over15': (ftt > 1.5), 'ft_over25': (ftt > 2.5),
+    'ft_over35': (ftt > 3.5), 'ft_under25': (ftt < 2.5), 'ft_under35': (ftt < 3.5),
+    'ft_under45': (ftt < 4.5), 'ft_under55': (ftt < 5.5),
+    '1h_over05': (h1t >= 1), '1h_over15': (h1t > 1.5),
+    '1h_under15': (h1t <= 1), '1h_under25': (h1t <= 2), '1h_under35': (h1t <= 3),
+    '2h_over05': (h2t >= 1), '2h_over15': (h2t > 1.5),
+    '2h_under15': (h2t <= 1), '2h_under25': (h2t <= 2), '2h_under35': (h2t <= 3),
+    # team goal markets
+    'home_over05': (hg > 0.5), 'home_over15': (hg > 1.5),
+    'away_over05': (ag > 0.5), 'away_over15': (ag > 1.5),
+    'home_under15': (hg < 1.5), 'home_under25': (hg < 2.5),
+    'away_under15': (ag < 1.5), 'away_under25': (ag < 2.5),
+    # compound half markets
+    'home_both_halves': (h1h > 0) & (h2h > 0),
+    'away_both_halves': (h1a > 0) & (h2a > 0),
+    'home_winboth': (h1h > h1a) & (h2h > h2a),
+    'away_winboth': (h1a > h1h) & (h2a > h2h),
+    'gg': (hg > 0) & (ag > 0),
+    '1h_gg': (h1h > 0) & (h1a > 0),
+    '2h_gg': (h2h > 0) & (h2a > 0),
+}
 # win_both nets are EXCLUDED: they over-fit rare compound events and lost to
 # base on the 28 Aug retrain (home .1404 vs .1384, away .1300 vs .1008).
 
@@ -90,8 +112,13 @@ print(f'\n--- GOAL MARKETS: neural nets (Brier, out-of-time) ---')
 print(f'{"target":18} {"base":>8} {"NN":>8}  keep?')
 for name, yb in CLS.items():
     y = yb.astype(int)
+    rate = y[:cut].mean()
+    # rarer events need a wider net and stronger regularisation; the earlier
+    # win_both nets over-fit at ~10% base rate and lost to the base line.
+    arch = (32, 16) if rate < 0.2 or rate > 0.8 else (64, 32)
+    alpha_reg = 2.0 if rate < 0.2 or rate > 0.8 else 0.5
     sc = StandardScaler().fit(XG[:cut])
-    net = MLPClassifier(hidden_layer_sizes=(64, 32), alpha=0.5, max_iter=2000,
+    net = MLPClassifier(hidden_layer_sizes=arch, alpha=alpha_reg, max_iter=2000,
                         early_stopping=True, random_state=7).fit(sc.transform(XG[:cut]), y[:cut])
     p = net.predict_proba(sc.transform(XG[cut:]))[:, 1]
     bn = float(np.mean((p - y[cut:]) ** 2))
@@ -102,14 +129,15 @@ for name, yb in CLS.items():
     if keep:
         fsc = StandardScaler().fit(XG)
         bundle['goal_scalers'][name] = fsc
-        bundle['goal_nets'][name] = MLPClassifier(hidden_layer_sizes=(64, 32), alpha=0.5,
+        bundle['goal_nets'][name] = MLPClassifier(hidden_layer_sizes=arch, alpha=alpha_reg,
                                                   max_iter=2000, early_stopping=True,
                                                   random_state=7).fit(fsc.transform(XG), y)
 
 print(f'\n--- STAT MARKETS: XGBoost (RMSE, out-of-time) ---')
 print(f'{"target":18} {"n":>6} {"league":>8} {"XGB":>8}  keep?')
-for stat in STATS:
-    for side in ('home', 'away', 'match'):     # match kept for measurement only
+STAT_KEYS = list(STATS) + [s + '_h1' for s in STATS]
+for stat in STAT_KEYS:
+    for side in ('home', 'away', 'match'):
         X, y = [], []
         for r in rows:
             s = (r.get('st') or {}).get(stat)
@@ -124,7 +152,7 @@ for stat in STATS:
                       (hgf + hga).mean(), (agf + aga).mean(),
                       abs((hgf.mean() - hga.mean()) - (agf.mean() - aga.mean()))])
             y.append(s[0] + s[1] if side == 'match' else s[0 if side == 'home' else 1])
-        if len(y) < 400:
+        if len(y) < 500:
             print(f'{stat}_{side:12} {len(y):6d}  too thin'); continue
         X = np.array(X); y = np.array(y); c = int(len(y) * 0.7)
         base = np.array([X[i, 6] if side == 'match' else X[i, 6] / 2 for i in range(c, len(y))])

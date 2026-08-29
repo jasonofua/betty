@@ -17218,3 +17218,1243 @@
 {"id": "lUrAQ0mQ", "ts": 1768741200, "lg": "Women\u2019s FA Cup", "h": "Bournemouth W", "a": "Manchester City W", "gh": 0, "ga": 6}
 {"id": "E72LhQt0", "ts": 1736690400, "lg": "Women\u2019s FA Cup", "h": "Cheltenham W", "a": "Wolverhampton W", "gh": 0, "ga": 2}
 {"id": "dCoAvRoR", "ts": 1771768800, "lg": "Women\u2019s FA Cup", "h": "Oxford Utd W", "a": "Charlton W", "gh": 0, "ga": 1}
+{"id": "6uQ2oSHP", "ts": 1738504800, "lg": "Women's National League South", "h": "Plymouth W", "a": "Lewes W", "gh": 2, "ga": 1}
+{"id": "Qo0EcV6k", "ts": 1742738400, "lg": "Women's National League South", "h": "Ipswich W", "a": "Plymouth W", "gh": 3, "ga": 1}
+{"id": "0fF2tXWj", "ts": 1734271200, "lg": "Women's National League South", "h": "AFC Wimbledon W", "a": "Gwalia United W", "gh": 1, "ga": 0}
+{"id": "SpooU8iJ", "ts": 1777730400, "lg": "WSL 2", "h": "Crystal Palace W", "a": "Portsmouth W", "gh": 6, "ga": 1}
+{"id": "tUM3HV7D", "ts": 1777208400, "lg": "WSL 2", "h": "Portsmouth W", "a": "Nottingham W", "gh": 0, "ga": 1}
+{"id": "bq0kGRQi", "ts": 1774701000, "lg": "WSL 2", "h": "Sheffield Utd W", "a": "Portsmouth W", "gh": 2, "ga": 1}
+{"id": "ryI2hOYp", "ts": 1774188000, "lg": "WSL 2", "h": "Portsmouth W", "a": "Sunderland W", "gh": 0, "ga": 1}
+{"id": "48asmTd5", "ts": 1773583200, "lg": "WSL 2", "h": "Portsmouth W", "a": "Bristol City W", "gh": 2, "ga": 2}
+{"id": "42vYQruA", "ts": 1773255600, "lg": "WSL 2", "h": "Charlton W", "a": "Portsmouth W", "gh": 0, "ga": 2}
+{"id": "rF63ez5j", "ts": 1768744800, "lg": "Women\u2019s FA Cup", "h": "Charlton W", "a": "Swindon W", "gh": 10, "ga": 0}
+{"id": "neuuqWid", "ts": 1741532400, "lg": "Women's National League South", "h": "Hashtag W", "a": "Cheltenham W", "gh": 3, "ga": 1}
+{"id": "prPnPy9r", "ts": 1779044400, "lg": "Ligue 1", "h": "Brest", "a": "Angers", "gh": 1, "ga": 1}
+{"id": "WpCuOrLr", "ts": 1778439600, "lg": "Ligue 1", "h": "Angers", "a": "Strasbourg", "gh": 1, "ga": 1}
+{"id": "WAeWd6Mq", "ts": 1777821300, "lg": "Ligue 1", "h": "Auxerre", "a": "Angers", "gh": 3, "ga": 1}
+{"id": "MyU2ijT6", "ts": 1777136400, "lg": "Ligue 1", "h": "Angers", "a": "PSG", "gh": 0, "ga": 3}
+{"id": "EkkKtZEl", "ts": 1776531600, "lg": "Ligue 1", "h": "Angers", "a": "Le Havre", "gh": 1, "ga": 1}
+{"id": "YDpNZQ14", "ts": 1775934300, "lg": "Ligue 1", "h": "Rennes", "a": "Angers", "gh": 2, "ga": 1}
+{"id": "rkcdKWqR", "ts": 1771776900, "lg": "Ligue 1", "h": "Angers", "a": "Lille", "gh": 0, "ga": 1}
+{"id": "nBFFSr25", "ts": 1762100100, "lg": "Ligue 1", "h": "Lille", "a": "Angers", "gh": 1, "ga": 0}
+{"id": "UTYXJoHG", "ts": 1785596400, "lg": "Club Friendly", "h": "Leuven", "a": "Lille", "gh": 3, "ga": 6}
+{"id": "IXv8WJG8", "ts": 1779044400, "lg": "Ligue 1", "h": "Lille", "a": "Auxerre", "gh": 0, "ga": 2}
+{"id": "I1AmMMke", "ts": 1778439600, "lg": "Ligue 1", "h": "Monaco", "a": "Lille", "gh": 0, "ga": 1}
+{"id": "jizcr77j", "ts": 1777813200, "lg": "Ligue 1", "h": "Lille", "a": "Le Havre", "gh": 1, "ga": 1}
+{"id": "r1cGQTSk", "ts": 1779044400, "lg": "Ligue 1", "h": "Lorient", "a": "Le Havre", "gh": 0, "ga": 2}
+{"id": "Qq7RGRDF", "ts": 1778439600, "lg": "Ligue 1", "h": "Le Havre", "a": "Marseille", "gh": 0, "ga": 1}
+{"id": "U1XAkUcJ", "ts": 1777216500, "lg": "Ligue 1", "h": "Le Havre", "a": "Metz", "gh": 4, "ga": 4}
+{"id": "SCwWX4WG", "ts": 1776006900, "lg": "Ligue 1", "h": "Nice", "a": "Le Havre", "gh": 1, "ga": 1}
+{"id": "z3QU462U", "ts": 1775402100, "lg": "Ligue 1", "h": "Le Havre", "a": "Auxerre", "gh": 1, "ga": 1}
+{"id": "bw7OcXlm", "ts": 1774196100, "lg": "Ligue 1", "h": "Paris FC", "a": "Le Havre", "gh": 3, "ga": 2}
+{"id": "8fqoPIEd", "ts": 1769277600, "lg": "Ligue 1", "h": "Le Havre", "a": "Monaco", "gh": 0, "ga": 0}
+{"id": "jJkMU4CO", "ts": 1787849100, "lg": "Conference League", "h": "Monaco", "a": "Gornik Zabrze", "gh": 1, "ga": 4}
+{"id": "IRWjhfdl", "ts": 1786039200, "lg": "Club Friendly", "h": "Monaco", "a": "Getafe", "gh": 1, "ga": 0}
+{"id": "GMA5FciK", "ts": 1785004200, "lg": "Club Friendly", "h": "Sporting CP", "a": "Monaco", "gh": 2, "ga": 0}
+{"id": "44Vsqc0E", "ts": 1779044400, "lg": "Ligue 1", "h": "Strasbourg", "a": "Monaco", "gh": 5, "ga": 4}
+{"id": "MypRmTqT", "ts": 1777741200, "lg": "Ligue 1", "h": "Metz", "a": "Monaco", "gh": 1, "ga": 2}
+{"id": "vccwyDH6", "ts": 1785693600, "lg": "Club Friendly", "h": "Galatasaray", "a": "Rennes", "gh": 3, "ga": 3}
+{"id": "h2x2PZTh", "ts": 1784995200, "lg": "Club Friendly", "h": "Rennes", "a": "Club Brugge KV", "gh": 2, "ga": 1}
+{"id": "xbwdLg87", "ts": 1779044400, "lg": "Ligue 1", "h": "Marseille", "a": "Rennes", "gh": 3, "ga": 1}
+{"id": "vmX0VQS8", "ts": 1778439600, "lg": "Ligue 1", "h": "Rennes", "a": "Paris FC", "gh": 2, "ga": 1}
+{"id": "vDGi4lU9", "ts": 1777833900, "lg": "Ligue 1", "h": "Lyon", "a": "Rennes", "gh": 4, "ga": 2}
+{"id": "0MufgCbf", "ts": 1777216500, "lg": "Ligue 1", "h": "Rennes", "a": "Nantes", "gh": 2, "ga": 1}
+{"id": "EcXImY8k", "ts": 1771005600, "lg": "Ligue 1", "h": "Rennes", "a": "PSG", "gh": 3, "ga": 1}
+{"id": "h8ptFvjd", "ts": 1765051500, "lg": "Ligue 1", "h": "PSG", "a": "Rennes", "gh": 5, "ga": 0}
+{"id": "S23DJYFi", "ts": 1786905900, "lg": "Super Cup", "h": "Lens", "a": "PSG", "gh": 0, "ga": 1}
+{"id": "EJZRaQ15", "ts": 1780156800, "lg": "UEFA Champions League", "h": "PSG", "a": "Arsenal", "gh": 1, "ga": 1}
+{"id": "IeNfNFwe", "ts": 1779044400, "lg": "Ligue 1", "h": "Paris FC", "a": "PSG", "gh": 2, "ga": 1}
+{"id": "vXzxUeVr", "ts": 1778698800, "lg": "Ligue 1", "h": "Lens", "a": "PSG", "gh": 0, "ga": 2}
+{"id": "AoH8p0VG", "ts": 1785672000, "lg": "2. Bundesliga Women", "h": "B. Monchengladbach W", "a": "Jena W", "gh": 1, "ga": 2}
+{"id": "WIc2EBld", "ts": 1779019200, "lg": "2. Bundesliga Women", "h": "B. Monchengladbach W", "a": "Andernach W", "gh": 4, "ga": 5}
+{"id": "xUNvM2j5", "ts": 1778414400, "lg": "2. Bundesliga Women", "h": "Bochum W", "a": "B. Monchengladbach W", "gh": 1, "ga": 4}
+{"id": "rXsaRxBm", "ts": 1777809600, "lg": "2. Bundesliga Women", "h": "B. Monchengladbach W", "a": "Viktoria Berlin W", "gh": 1, "ga": 1}
+{"id": "z7djbvs1", "ts": 1777194000, "lg": "2. Bundesliga Women", "h": "Ingolstadt W", "a": "B. Monchengladbach W", "gh": 1, "ga": 2}
+{"id": "6DP0mNSr", "ts": 1775390400, "lg": "2. Bundesliga Women", "h": "B. Monchengladbach W", "a": "Mainz W", "gh": 1, "ga": 3}
+{"id": "Ay3oOxPj", "ts": 1760875200, "lg": "2. Bundesliga Women", "h": "B. Monchengladbach W", "a": "Sand W", "gh": 0, "ga": 4}
+{"id": "vZcdzgBF", "ts": 1779019200, "lg": "2. Bundesliga Women", "h": "Sand W", "a": "Stuttgart W", "gh": 2, "ga": 2}
+{"id": "z5RNPpit", "ts": 1778414400, "lg": "2. Bundesliga Women", "h": "Andernach W", "a": "Sand W", "gh": 1, "ga": 1}
+{"id": "dt9t9eeJ", "ts": 1777809600, "lg": "2. Bundesliga Women", "h": "Eintracht Frankfurt II W", "a": "Sand W", "gh": 3, "ga": 1}
+{"id": "Y1OGEaRs", "ts": 1777204800, "lg": "2. Bundesliga Women", "h": "Sand W", "a": "Bayern Munich II W", "gh": 2, "ga": 0}
+{"id": "nPCS5VrA", "ts": 1775304000, "lg": "2. Bundesliga Women", "h": "Meppen W", "a": "Sand W", "gh": 1, "ga": 1}
+{"id": "b5afGXJq", "ts": 1779019200, "lg": "2. Bundesliga Women", "h": "Meppen W", "a": "Bochum W", "gh": 2, "ga": 1}
+{"id": "zRKXAHQ6", "ts": 1777809600, "lg": "2. Bundesliga Women", "h": "Bochum W", "a": "Stuttgart W", "gh": 0, "ga": 2}
+{"id": "MNfbdIBD", "ts": 1777204800, "lg": "2. Bundesliga Women", "h": "Mainz W", "a": "Bochum W", "gh": 3, "ga": 0}
+{"id": "0G4uplMj", "ts": 1775390400, "lg": "2. Bundesliga Women", "h": "Bochum W", "a": "Ingolstadt W", "gh": 0, "ga": 1}
+{"id": "fFaRxXEN", "ts": 1774785600, "lg": "2. Bundesliga Women", "h": "Viktoria Berlin W", "a": "Bochum W", "gh": 0, "ga": 0}
+{"id": "pOpRDPue", "ts": 1773579600, "lg": "2. Bundesliga Women", "h": "Andernach W", "a": "Bochum W", "gh": 0, "ga": 1}
+{"id": "fyBGK3Ib", "ts": 1760270400, "lg": "2. Bundesliga Women", "h": "Eintracht Frankfurt II W", "a": "Bochum W", "gh": 1, "ga": 2}
+{"id": "WWxyTA3k", "ts": 1779019200, "lg": "2. Bundesliga Women", "h": "Wolfsburg II W", "a": "Eintracht Frankfurt II W", "gh": 1, "ga": 2}
+{"id": "AsMnKtLH", "ts": 1778414400, "lg": "2. Bundesliga Women", "h": "Eintracht Frankfurt II W", "a": "Potsdam W", "gh": 3, "ga": 0}
+{"id": "Ei8s00Cl", "ts": 1777204800, "lg": "2. Bundesliga Women", "h": "Viktoria Berlin W", "a": "Eintracht Frankfurt II W", "gh": 1, "ga": 0}
+{"id": "va9K7iEc", "ts": 1775390400, "lg": "2. Bundesliga Women", "h": "Eintracht Frankfurt II W", "a": "Andernach W", "gh": 2, "ga": 2}
+{"id": "EatbXAxo", "ts": 1774785600, "lg": "2. Bundesliga Women", "h": "Eintracht Frankfurt II W", "a": "Ingolstadt W", "gh": 4, "ga": 2}
+{"id": "WlW6Pycc", "ts": 1778403600, "lg": "2. Bundesliga Women", "h": "Bayern Munich II W", "a": "Meppen W", "gh": 1, "ga": 0}
+{"id": "On1SWbmQ", "ts": 1777798800, "lg": "2. Bundesliga Women", "h": "Meppen W", "a": "Ingolstadt W", "gh": 3, "ga": 2}
+{"id": "UTHPCwdf", "ts": 1777194000, "lg": "2. Bundesliga Women", "h": "Stuttgart W", "a": "Meppen W", "gh": 2, "ga": 0}
+{"id": "M11JvgpB", "ts": 1774785600, "lg": "2. Bundesliga Women", "h": "Andernach W", "a": "Meppen W", "gh": 0, "ga": 4}
+{"id": "ClZTTyWh", "ts": 1774184400, "lg": "2. Bundesliga Women", "h": "Meppen W", "a": "Potsdam W", "gh": 2, "ga": 1}
+{"id": "hllZB3A7", "ts": 1773568800, "lg": "2. Bundesliga Women", "h": "Viktoria Berlin W", "a": "Meppen W", "gh": 2, "ga": 0}
+{"id": "h4K3Vpkl", "ts": 1779019200, "lg": "Bundesliga Women", "h": "SGS Essen W", "a": "Freiburg W", "gh": 1, "ga": 1}
+{"id": "zmvXz7RQ", "ts": 1778257800, "lg": "Bundesliga Women", "h": "1.FC Nurnberg W", "a": "SGS Essen W", "gh": 3, "ga": 0}
+{"id": "h8UkO8QN", "ts": 1777809600, "lg": "Bundesliga Women", "h": "SGS Essen W", "a": "Bayer Leverkusen W", "gh": 0, "ga": 4}
+{"id": "OEc0DiC5", "ts": 1777111200, "lg": "Bundesliga Women", "h": "SGS Essen W", "a": "Jena W", "gh": 4, "ga": 3}
+{"id": "SbwJd1np", "ts": 1775482200, "lg": "DFB Pokal Women", "h": "Bayern Munich W", "a": "SGS Essen W", "gh": 4, "ga": 0}
+{"id": "W0EccuM7", "ts": 1774785600, "lg": "Bundesliga Women", "h": "Werder Bremen W", "a": "SGS Essen W", "gh": 2, "ga": 1}
+{"id": "vLINLgdM", "ts": 1779019200, "lg": "2. Bundesliga Women", "h": "Ingolstadt W", "a": "Bayern Munich II W", "gh": 3, "ga": 1}
+{"id": "vqggHbnm", "ts": 1773568800, "lg": "2. Bundesliga Women", "h": "Ingolstadt W", "a": "Stuttgart W", "gh": 2, "ga": 3}
+{"id": "CGcvNTI8", "ts": 1771765200, "lg": "2. Bundesliga Women", "h": "Sand W", "a": "Ingolstadt W", "gh": 3, "ga": 0}
+{"id": "U9RPBrgA", "ts": 1771149600, "lg": "2. Bundesliga Women", "h": "Ingolstadt W", "a": "Andernach W", "gh": 3, "ga": 2}
+{"id": "joTNeW2C", "ts": 1770555600, "lg": "2. Bundesliga Women", "h": "Ingolstadt W", "a": "Warbeyen W", "gh": 1, "ga": 2}
+{"id": "zoyghcdK", "ts": 1769950800, "lg": "2. Bundesliga Women", "h": "Viktoria Berlin W", "a": "Ingolstadt W", "gh": 0, "ga": 1}
+{"id": "YNuwpp4s", "ts": 1779019200, "lg": "Bundesliga Women", "h": "Jena W", "a": "Koln W", "gh": 0, "ga": 3}
+{"id": "0YFbi7fA", "ts": 1778414400, "lg": "Bundesliga Women", "h": "Werder Bremen W", "a": "Jena W", "gh": 7, "ga": 0}
+{"id": "j3dGvUA4", "ts": 1777816800, "lg": "Bundesliga Women", "h": "Jena W", "a": "Freiburg W", "gh": 1, "ga": 5}
+{"id": "WSim2NOM", "ts": 1775398500, "lg": "DFB Pokal Women", "h": "Jena W", "a": "Wolfsburg W", "gh": 0, "ga": 0}
+{"id": "OhMP0ESa", "ts": 1774632600, "lg": "Bundesliga Women", "h": "Jena W", "a": "RB Leipzig W", "gh": 1, "ga": 1}
+{"id": "2LMt1NMr", "ts": 1774200600, "lg": "Bundesliga Women", "h": "Bayer Leverkusen W", "a": "Jena W", "gh": 1, "ga": 0}
+{"id": "nRukxFt3", "ts": 1779019200, "lg": "2. Bundesliga Women", "h": "Potsdam W", "a": "Viktoria Berlin W", "gh": 0, "ga": 2}
+{"id": "rVUVNOLh", "ts": 1778414400, "lg": "2. Bundesliga Women", "h": "Viktoria Berlin W", "a": "Warbeyen W", "gh": 3, "ga": 0}
+{"id": "nsO27rKE", "ts": 1775390400, "lg": "2. Bundesliga Women", "h": "Bayern Munich II W", "a": "Viktoria Berlin W", "gh": 0, "ga": 3}
+{"id": "lfUhOXaU", "ts": 1774184400, "lg": "2. Bundesliga Women", "h": "Sand W", "a": "Viktoria Berlin W", "gh": 2, "ga": 1}
+{"id": "O8dIFoBr", "ts": 1771765200, "lg": "2. Bundesliga Women", "h": "Wolfsburg II W", "a": "Viktoria Berlin W", "gh": 1, "ga": 3}
+{"id": "tloVk1Wj", "ts": 1771162200, "lg": "2. Bundesliga Women", "h": "Viktoria Berlin W", "a": "Stuttgart W", "gh": 0, "ga": 0}
+{"id": "S8aOJxje", "ts": 1766322000, "lg": "2. Bundesliga Women", "h": "Andernach W", "a": "Viktoria Berlin W", "gh": 0, "ga": 2}
+{"id": "r9HB5MlR", "ts": 1777204800, "lg": "2. Bundesliga Women", "h": "Andernach W", "a": "Wolfsburg II W", "gh": 2, "ga": 0}
+{"id": "ELVD68YR", "ts": 1771765200, "lg": "2. Bundesliga Women", "h": "Mainz W", "a": "Andernach W", "gh": 5, "ga": 2}
+{"id": "fJZEchYa", "ts": 1770555600, "lg": "2. Bundesliga Women", "h": "Andernach W", "a": "Potsdam W", "gh": 2, "ga": 1}
+{"id": "2Lfz5ztQ", "ts": 1769943600, "lg": "2. Bundesliga Women", "h": "Stuttgart W", "a": "Andernach W", "gh": 3, "ga": 3}
+{"id": "EP51RTi4", "ts": 1765717200, "lg": "2. Bundesliga Women", "h": "Andernach W", "a": "B. Monchengladbach W", "gh": 5, "ga": 1}
+{"id": "2XLK0YMt", "ts": 1787853600, "lg": "Europa League", "h": "CSKA Sofia", "a": "OFI Crete", "gh": 2, "ga": 0}
+{"id": "tEBzQzP0", "ts": 1786554000, "lg": "Super Cup", "h": "AEK Athens", "a": "OFI Crete", "gh": 2, "ga": 2}
+{"id": "6qNBCoaL", "ts": 1785258000, "lg": "Club Friendly", "h": "NAC Breda", "a": "OFI Crete", "gh": 3, "ga": 2}
+{"id": "QP9kTOn1", "ts": 1779026400, "lg": "Super League", "h": "OFI Crete", "a": "Volos", "gh": 3, "ga": 1}
+{"id": "hCBsVpIl", "ts": 1778680800, "lg": "Super League", "h": "Levadiakos", "a": "OFI Crete", "gh": 3, "ga": 2}
+{"id": "d8KIEPX7", "ts": 1778421600, "lg": "Super League", "h": "Aris", "a": "OFI Crete", "gh": 3, "ga": 1}
+{"id": "tdA5Kf4T", "ts": 1775397600, "lg": "Super League", "h": "Volos", "a": "OFI Crete", "gh": 1, "ga": 1}
+{"id": "tSV496ln", "ts": 1772982000, "lg": "Super League", "h": "Volos", "a": "OFI Crete", "gh": 1, "ga": 1}
+{"id": "Qauq9TJM", "ts": 1764430200, "lg": "Super League", "h": "OFI Crete", "a": "Volos", "gh": 0, "ga": 1}
+{"id": "KxOFOpKd", "ts": 1785589200, "lg": "Club Friendly", "h": "Heerenveen", "a": "Volos", "gh": 3, "ga": 2}
+{"id": "MTKBz7fR", "ts": 1778680800, "lg": "Super League", "h": "Volos", "a": "Aris", "gh": 1, "ga": 2}
+{"id": "l274xTPE", "ts": 1778421600, "lg": "Super League", "h": "Volos", "a": "Levadiakos", "gh": 0, "ga": 3}
+{"id": "IRtfB1bD", "ts": 1787850000, "lg": "Conference League", "h": "Brann", "a": "PAOK", "gh": 2, "ga": 3}
+{"id": "jLURWwJG", "ts": 1786645800, "lg": "Europa League", "h": "Anderlecht", "a": "PAOK", "gh": 2, "ga": 3}
+{"id": "reRJYal4", "ts": 1786038300, "lg": "Europa League", "h": "PAOK", "a": "Anderlecht", "gh": 0, "ga": 1}
+{"id": "KIqaUGCs", "ts": 1785433500, "lg": "Europa League", "h": "PAOK", "a": "Dyn. Kyiv", "gh": 0, "ga": 2}
+{"id": "EJHRnPS8", "ts": 1784826000, "lg": "Europa League", "h": "Dyn. Kyiv", "a": "PAOK", "gh": 2, "ga": 3}
+{"id": "4IqmTJ9O", "ts": 1783778400, "lg": "Club Friendly", "h": "PAOK", "a": "Twente", "gh": 2, "ga": 3}
+{"id": "lSkMYMHc", "ts": 1773590400, "lg": "Super League", "h": "PAOK", "a": "Levadiakos", "gh": 3, "ga": 0}
+{"id": "YkDcR2HD", "ts": 1779026400, "lg": "Super League", "h": "Aris", "a": "Levadiakos", "gh": 3, "ga": 0}
+{"id": "tID2I7Yr", "ts": 1777816800, "lg": "Super League", "h": "Levadiakos", "a": "Volos", "gh": 5, "ga": 2}
+{"id": "AVjVzGlA", "ts": 1776524400, "lg": "Super League", "h": "OFI Crete", "a": "Levadiakos", "gh": 2, "ga": 0}
+{"id": "xSeyFYRj", "ts": 1775397600, "lg": "Super League", "h": "Levadiakos", "a": "Aris", "gh": 1, "ga": 1}
+{"id": "b1u6YDNE", "ts": 1774198800, "lg": "Super League", "h": "Levadiakos", "a": "Atromitos", "gh": 1, "ga": 0}
+{"id": "f55HNG4T", "ts": 1784221200, "lg": "Club Friendly", "h": "Omonia", "a": "Panetolikos", "gh": 2, "ga": 1}
+{"id": "xfpAVlmB", "ts": 1779379200, "lg": "Super League", "h": "Panetolikos", "a": "Asteras Tripolis", "gh": 1, "ga": 2}
+{"id": "tjgoFT2U", "ts": 1779019200, "lg": "Super League", "h": "Panserraikos", "a": "Panetolikos", "gh": 1, "ga": 1}
+{"id": "fFlNKXYh", "ts": 1778601600, "lg": "Super League", "h": "Panetolikos", "a": "AEL Larissa", "gh": 1, "ga": 1}
+{"id": "xd9k6YJa", "ts": 1778344200, "lg": "Super League", "h": "Atromitos", "a": "Panetolikos", "gh": 1, "ga": 2}
+{"id": "6gSPkDZI", "ts": 1777730400, "lg": "Super League", "h": "Panetolikos", "a": "Kifisia", "gh": 0, "ga": 1}
+{"id": "p26caQ6F", "ts": 1776877200, "lg": "Super League", "h": "Asteras Tripolis", "a": "Panetolikos", "gh": 2, "ga": 1}
+{"id": "UR87Za7F", "ts": 1771081200, "lg": "Super League", "h": "Panetolikos", "a": "Asteras Tripolis", "gh": 3, "ga": 1}
+{"id": "v9QRqDjB", "ts": 1763832600, "lg": "Super League", "h": "Asteras Tripolis", "a": "Panetolikos", "gh": 1, "ga": 1}
+{"id": "0CiVIB35", "ts": 1778947200, "lg": "Super League", "h": "Asteras Tripolis", "a": "Kifisia", "gh": 0, "ga": 0}
+{"id": "WxB52jJO", "ts": 1778601600, "lg": "Super League", "h": "Asteras Tripolis", "a": "Panserraikos", "gh": 1, "ga": 0}
+{"id": "4rBs8fkm", "ts": 1778335200, "lg": "Super League", "h": "AEL Larissa", "a": "Asteras Tripolis", "gh": 1, "ga": 1}
+{"id": "bkyYIiWp", "ts": 1785679200, "lg": "Besta deild karla", "h": "Akranes", "a": "Vikingur Reykjavik", "gh": 2, "ga": 2}
+{"id": "l0czAEgU", "ts": 1785093300, "lg": "Besta deild karla", "h": "Akranes", "a": "Stjarnan", "gh": 1, "ga": 5}
+{"id": "2qZhcyAO", "ts": 1784574900, "lg": "Besta deild karla", "h": "Keflavik", "a": "Akranes", "gh": 5, "ga": 2}
+{"id": "j5aPMuGL", "ts": 1783879200, "lg": "Besta deild karla", "h": "KA Akureyri", "a": "Akranes", "gh": 3, "ga": 2}
+{"id": "2NsflL9d", "ts": 1782760500, "lg": "Besta deild karla", "h": "Akranes", "a": "Fram", "gh": 0, "ga": 2}
+{"id": "WKSts42T", "ts": 1782155700, "lg": "Besta deild karla", "h": "KR Reykjavik", "a": "Akranes", "gh": 5, "ga": 3}
+{"id": "dnU1PvyR", "ts": 1780082100, "lg": "Besta deild karla", "h": "Hafnarfjordur", "a": "Akranes", "gh": 0, "ga": 1}
+{"id": "bPBqA41K", "ts": 1754939700, "lg": "Besta deild karla", "h": "Hafnarfjordur", "a": "Akranes", "gh": 3, "ga": 2}
+{"id": "h8KzwDNG", "ts": 1785957300, "lg": "Besta deild karla", "h": "Hafnarfjordur", "a": "KR Reykjavik", "gh": 1, "ga": 1}
+{"id": "zBdBDyw8", "ts": 1783886700, "lg": "Besta deild karla", "h": "Hafnarfjordur", "a": "Valur", "gh": 0, "ga": 2}
+{"id": "2qJU0bg2", "ts": 1783106100, "lg": "Besta deild karla", "h": "Hafnarfjordur", "a": "Stjarnan", "gh": 2, "ga": 2}
+{"id": "4Sa7cPnA", "ts": 1782666000, "lg": "Besta deild karla", "h": "Hafnarfjordur", "a": "Vestmannaeyjar", "gh": 1, "ga": 1}
+{"id": "KfMSvZh4", "ts": 1785952800, "lg": "Besta deild karla", "h": "Keflavik", "a": "KA Akureyri", "gh": 3, "ga": 0}
+{"id": "0vRhSe9b", "ts": 1785179700, "lg": "Besta deild karla", "h": "KA Akureyri", "a": "Thor Akureyri", "gh": 0, "ga": 0}
+{"id": "6HupacuC", "ts": 1784469600, "lg": "Besta deild karla", "h": "Vestmannaeyjar", "a": "KA Akureyri", "gh": 2, "ga": 2}
+{"id": "rJKtCO13", "ts": 1783019700, "lg": "Besta deild karla", "h": "Vikingur Reykjavik", "a": "KA Akureyri", "gh": 3, "ga": 2}
+{"id": "xtbFe3HM", "ts": 1782666000, "lg": "Besta deild karla", "h": "Stjarnan", "a": "KA Akureyri", "gh": 3, "ga": 1}
+{"id": "fFXHn8Yi", "ts": 1782064800, "lg": "Besta deild karla", "h": "Breidablik", "a": "KA Akureyri", "gh": 3, "ga": 1}
+{"id": "z17lGzbD", "ts": 1780246800, "lg": "Besta deild karla", "h": "KR Reykjavik", "a": "KA Akureyri", "gh": 5, "ga": 3}
+{"id": "zRb1vMc5", "ts": 1758471300, "lg": "Besta deild karla", "h": "KA Akureyri", "a": "KR Reykjavik", "gh": 4, "ga": 2}
+{"id": "Ie92Hvet", "ts": 1784476800, "lg": "Besta deild karla", "h": "KR Reykjavik", "a": "Stjarnan", "gh": 5, "ga": 0}
+{"id": "2cb3Fc8e", "ts": 1783879200, "lg": "Besta deild karla", "h": "KR Reykjavik", "a": "Vestmannaeyjar", "gh": 5, "ga": 2}
+{"id": "nBHc8t1S", "ts": 1783011600, "lg": "Besta deild karla", "h": "Thor Akureyri", "a": "KR Reykjavik", "gh": 3, "ga": 3}
+{"id": "Gh4DyrQj", "ts": 1782666000, "lg": "Besta deild karla", "h": "Keflavik", "a": "KR Reykjavik", "gh": 3, "ga": 2}
+{"id": "KK5JDdf5", "ts": 1784923200, "lg": "Besta deild karla", "h": "Vikingur Reykjavik", "a": "Keflavik", "gh": 5, "ga": 1}
+{"id": "UkBGO1o9", "ts": 1783365300, "lg": "Besta deild karla", "h": "Keflavik", "a": "Fram", "gh": 1, "ga": 1}
+{"id": "tzjVO4to", "ts": 1782064800, "lg": "Besta deild karla", "h": "Valur", "a": "Keflavik", "gh": 1, "ga": 1}
+{"id": "zFnNUZC6", "ts": 1781456400, "lg": "Besta deild karla", "h": "Keflavik", "a": "Hafnarfjordur", "gh": 1, "ga": 2}
+{"id": "2m9tIdT0", "ts": 1780246800, "lg": "Besta deild karla", "h": "Vestmannaeyjar", "a": "Keflavik", "gh": 6, "ga": 1}
+{"id": "Y7ZOjKU1", "ts": 1779472800, "lg": "Besta deild karla", "h": "Keflavik", "a": "Thor Akureyri", "gh": 1, "ga": 0}
+{"id": "jqOlA2WF", "ts": 1783180800, "lg": "Besta deild karla", "h": "Vestmannaeyjar", "a": "Valur", "gh": 1, "ga": 0}
+{"id": "SSVPpn34", "ts": 1782064800, "lg": "Besta deild karla", "h": "Vestmannaeyjar", "a": "Stjarnan", "gh": 2, "ga": 1}
+{"id": "WttWSDsJ", "ts": 1781454600, "lg": "Besta deild karla", "h": "Thor Akureyri", "a": "Vestmannaeyjar", "gh": 1, "ga": 4}
+{"id": "MexiBlGG", "ts": 1779386400, "lg": "Besta deild karla", "h": "Akranes", "a": "Vestmannaeyjar", "gh": 2, "ga": 2}
+{"id": "zuE9bBWA", "ts": 1779022800, "lg": "Besta deild karla", "h": "Vestmannaeyjar", "a": "Vikingur Reykjavik", "gh": 0, "ga": 2}
+{"id": "6aMh2gXo", "ts": 1778430600, "lg": "Besta deild karla", "h": "KA Akureyri", "a": "Vestmannaeyjar", "gh": 2, "ga": 0}
+{"id": "QeTJteOi", "ts": 1785784500, "lg": "Besta deild karla", "h": "Valur", "a": "Stjarnan", "gh": 2, "ga": 3}
+{"id": "hfnkmZqB", "ts": 1785427200, "lg": "Conference League", "h": "Ilves", "a": "Stjarnan", "gh": 0, "ga": 1}
+{"id": "KtlskeFb", "ts": 1784833200, "lg": "Conference League", "h": "Stjarnan", "a": "Ilves", "gh": 1, "ga": 0}
+{"id": "2anwiypm", "ts": 1784221200, "lg": "Conference League", "h": "Vikingur", "a": "Stjarnan", "gh": 2, "ga": 2}
+{"id": "WGe7dcMP", "ts": 1783623600, "lg": "Conference League", "h": "Stjarnan", "a": "Vikingur", "gh": 1, "ga": 3}
+{"id": "OzTHjHZP", "ts": 1781637300, "lg": "Besta deild karla", "h": "Stjarnan", "a": "Breidablik", "gh": 4, "ga": 4}
+{"id": "j9kyvvjK", "ts": 1780246800, "lg": "Besta deild karla", "h": "Thor Akureyri", "a": "Stjarnan", "gh": 1, "ga": 3}
+{"id": "bogT2utm", "ts": 1784390400, "lg": "Besta deild karla", "h": "Thor Akureyri", "a": "Vikingur Reykjavik", "gh": 2, "ga": 1}
+{"id": "806baoIc", "ts": 1782666000, "lg": "Besta deild karla", "h": "Thor Akureyri", "a": "Valur", "gh": 2, "ga": 4}
+{"id": "zyOcsDdC", "ts": 1782064800, "lg": "Besta deild karla", "h": "Hafnarfjordur", "a": "Thor Akureyri", "gh": 1, "ga": 1}
+{"id": "vDK00X1b", "ts": 1779033600, "lg": "Besta deild karla", "h": "Thor Akureyri", "a": "Akranes", "gh": 1, "ga": 2}
+{"id": "EsLC57Mt", "ts": 1778261400, "lg": "Besta deild karla", "h": "Vikingur Reykjavik", "a": "Thor Akureyri", "gh": 6, "ga": 0}
+{"id": "Olu7wZfd", "ts": 1787855400, "lg": "Conference League", "h": "Borac Banja Luka", "a": "Vikingur Reykjavik", "gh": 1, "ga": 3}
+{"id": "QeUJLL3K", "ts": 1786642200, "lg": "Europa League", "h": "Vikingur Reykjavik", "a": "Thun", "gh": 2, "ga": 3}
+{"id": "bkxYcIBD", "ts": 1786039200, "lg": "Europa League", "h": "Thun", "a": "Vikingur Reykjavik", "gh": 3, "ga": 0}
+{"id": "Qetovb9a", "ts": 1785346200, "lg": "UEFA Champions League", "h": "H. Beer Sheva", "a": "Vikingur Reykjavik", "gh": 0, "ga": 2}
+{"id": "hrrwtKvm", "ts": 1784660400, "lg": "UEFA Champions League", "h": "Vikingur Reykjavik", "a": "H. Beer Sheva", "gh": 2, "ga": 1}
+{"id": "KULGAh1d", "ts": 1784048400, "lg": "UEFA Champions League", "h": "Gyor", "a": "Vikingur Reykjavik", "gh": 2, "ga": 2}
+{"id": "6Zf6YHDs", "ts": 1780254900, "lg": "Besta deild karla", "h": "Valur", "a": "Vikingur Reykjavik", "gh": 1, "ga": 5}
+{"id": "KEiV7s84", "ts": 1785436200, "lg": "Conference League", "h": "Zrinjski", "a": "Valur", "gh": 2, "ga": 2}
+{"id": "CllN93wh", "ts": 1784834100, "lg": "Conference League", "h": "Valur", "a": "Zrinjski", "gh": 1, "ga": 0}
+{"id": "SlqFWerf", "ts": 1781637300, "lg": "Besta deild karla", "h": "Akranes", "a": "Valur", "gh": 1, "ga": 0}
+{"id": "zXugR06E", "ts": 1779822900, "lg": "Besta deild karla", "h": "KR Reykjavik", "a": "Valur", "gh": 3, "ga": 1}
+{"id": "QsWGht0k", "ts": 1779472800, "lg": "Besta deild karla", "h": "KA Akureyri", "a": "Valur", "gh": 0, "ga": 1}
+{"id": "GM5AJwqn", "ts": 1785352500, "lg": "Division 2", "h": "Kari", "a": "Kormakur/Hvot", "gh": 1, "ga": 1}
+{"id": "pOY1SYRG", "ts": 1784923200, "lg": "Division 2", "h": "Hviti", "a": "Kari", "gh": 1, "ga": 3}
+{"id": "4QQ8OPQr", "ts": 1784315700, "lg": "Division 2", "h": "KFG Gardabaer", "a": "Kari", "gh": 1, "ga": 5}
+{"id": "tvTDoW0L", "ts": 1783864800, "lg": "Division 2", "h": "Kari", "a": "KFA", "gh": 2, "ga": 2}
+{"id": "CWTYoKO6", "ts": 1782933300, "lg": "Division 2", "h": "Haukar", "a": "Kari", "gh": 4, "ga": 1}
+{"id": "KdXtpbgJ", "ts": 1782576000, "lg": "Division 2", "h": "Kari", "a": "Magni", "gh": 1, "ga": 1}
+{"id": "6ZrVhSyi", "ts": 1781550900, "lg": "Division 2", "h": "Fjolnir", "a": "Kari", "gh": 2, "ga": 2}
+{"id": "hlxAQCdT", "ts": 1784920500, "lg": "Division 2", "h": "Fjolnir", "a": "Haukar", "gh": 2, "ga": 1}
+{"id": "2a5SrfCc", "ts": 1784390400, "lg": "Division 2", "h": "Magni", "a": "Fjolnir", "gh": 5, "ga": 2}
+{"id": "nT8JtPnR", "ts": 1783872000, "lg": "Division 2", "h": "Dalvik/Reynir", "a": "Fjolnir", "gh": 1, "ga": 4}
+{"id": "KGFPk2Ps", "ts": 1783173600, "lg": "Division 2", "h": "Fjolnir", "a": "Kormakur/Hvot", "gh": 1, "ga": 1}
+{"id": "Cp970Jw0", "ts": 1782501300, "lg": "Division 2", "h": "Throttur Vogar", "a": "Fjolnir", "gh": 3, "ga": 2}
+{"id": "UVLWOsz8", "ts": 1785866400, "lg": "Fotbolti.net Cup", "h": "Kormakur/Hvot", "a": "KFA", "gh": 2, "ga": 1}
+{"id": "xrzaxSN7", "ts": 1785348000, "lg": "Division 2", "h": "Magni", "a": "KFA", "gh": 3, "ga": 0}
+{"id": "CMJqtAOr", "ts": 1784383200, "lg": "Division 2", "h": "KFA", "a": "Selfoss", "gh": 0, "ga": 1}
+{"id": "8QU5mhW8", "ts": 1783173600, "lg": "Division 2", "h": "KFA", "a": "Olafsvik", "gh": 3, "ga": 0}
+{"id": "tKxKPlv2", "ts": 1782568800, "lg": "Division 2", "h": "Dalvik/Reynir", "a": "KFA", "gh": 1, "ga": 0}
+{"id": "bXhtXWoS", "ts": 1781445600, "lg": "Division 2", "h": "Hviti", "a": "KFA", "gh": 4, "ga": 3}
+{"id": "tGB1azbU", "ts": 1785352500, "lg": "Division 2", "h": "Throttur Vogar", "a": "Hviti", "gh": 3, "ga": 1}
+{"id": "bRbysYtA", "ts": 1784318400, "lg": "Division 2", "h": "Hviti", "a": "Olafsvik", "gh": 0, "ga": 2}
+{"id": "CAhbZtu1", "ts": 1783785600, "lg": "Division 2", "h": "Selfoss", "a": "Hviti", "gh": 2, "ga": 2}
+{"id": "YPt7XK9D", "ts": 1783101600, "lg": "Division 2", "h": "Hviti", "a": "Dalvik/Reynir", "gh": 3, "ga": 3}
+{"id": "Wz1a2u9m", "ts": 1782568800, "lg": "Division 2", "h": "Kormakur/Hvot", "a": "Hviti", "gh": 4, "ga": 0}
+{"id": "bB2Cu3qp", "ts": 1781895600, "lg": "Division 2", "h": "Fjolnir", "a": "Hviti", "gh": 1, "ga": 1}
+{"id": "O8pgUfc4", "ts": 1784995200, "lg": "Division 2", "h": "Magni", "a": "KFG Gardabaer", "gh": 1, "ga": 1}
+{"id": "b7SOKsQ7", "ts": 1783872000, "lg": "Division 2", "h": "Magni", "a": "Haukar", "gh": 2, "ga": 5}
+{"id": "0WYheO1K", "ts": 1783180800, "lg": "Division 2", "h": "Magni", "a": "Throttur Vogar", "gh": 4, "ga": 3}
+{"id": "h4UtFIhg", "ts": 1781964000, "lg": "Division 2", "h": "Magni", "a": "Selfoss", "gh": 4, "ga": 1}
+{"id": "U7GNbIP9", "ts": 1781452800, "lg": "Division 2", "h": "Olafsvik", "a": "Magni", "gh": 3, "ga": 1}
+{"id": "IXlBkEnd", "ts": 1781118900, "lg": "Division 2", "h": "Magni", "a": "Dalvik/Reynir", "gh": 0, "ga": 2}
+{"id": "GrsoWGSi", "ts": 1784995200, "lg": "Division 2", "h": "Dalvik/Reynir", "a": "Olafsvik", "gh": 0, "ga": 1}
+{"id": "EFABroIE", "ts": 1783872000, "lg": "Division 2", "h": "Kormakur/Hvot", "a": "Olafsvik", "gh": 0, "ga": 0}
+{"id": "0hAT71oQ", "ts": 1782568800, "lg": "Division 2", "h": "Olafsvik", "a": "KFG Gardabaer", "gh": 1, "ga": 0}
+{"id": "WltYGvOt", "ts": 1781971200, "lg": "Division 2", "h": "Haukar", "a": "Olafsvik", "gh": 1, "ga": 0}
+{"id": "ARycDHv3", "ts": 1781118900, "lg": "Division 2", "h": "Throttur Vogar", "a": "Olafsvik", "gh": 1, "ga": 2}
+{"id": "UsXWPfO8", "ts": 1780759800, "lg": "Division 2", "h": "Olafsvik", "a": "Kari", "gh": 3, "ga": 3}
+{"id": "QuFHM3ee", "ts": 1784315700, "lg": "Division 2", "h": "Haukar", "a": "Throttur Vogar", "gh": 2, "ga": 1}
+{"id": "6Dkjy3Al", "ts": 1783872000, "lg": "Division 2", "h": "Throttur Vogar", "a": "KFG Gardabaer", "gh": 5, "ga": 1}
+{"id": "vLSlDdN5", "ts": 1781896500, "lg": "Division 2", "h": "Throttur Vogar", "a": "Kari", "gh": 1, "ga": 4}
+{"id": "OADF0vec", "ts": 1781550900, "lg": "Division 2", "h": "Selfoss", "a": "Throttur Vogar", "gh": 3, "ga": 1}
+{"id": "G2kp2iW1", "ts": 1780761600, "lg": "Division 2", "h": "Dalvik/Reynir", "a": "Throttur Vogar", "gh": 1, "ga": 0}
+{"id": "dIjExY7E", "ts": 1780243200, "lg": "Division 2", "h": "Throttur Vogar", "a": "Kormakur/Hvot", "gh": 1, "ga": 1}
+{"id": "zkKGSPzq", "ts": 1785866400, "lg": "Fotbolti.net Cup", "h": "Selfoss", "a": "Ymir", "gh": 4, "ga": 0}
+{"id": "tUjzEZCN", "ts": 1785348000, "lg": "Division 2", "h": "Selfoss", "a": "Dalvik/Reynir", "gh": 2, "ga": 1}
+{"id": "hUDXmtff", "ts": 1783106100, "lg": "Division 2", "h": "KFG Gardabaer", "a": "Selfoss", "gh": 2, "ga": 3}
+{"id": "pb7Fbc8C", "ts": 1782501300, "lg": "Division 2", "h": "Selfoss", "a": "Haukar", "gh": 2, "ga": 2}
+{"id": "Gv7cBe9F", "ts": 1781118900, "lg": "Division 2", "h": "Kari", "a": "Selfoss", "gh": 2, "ga": 2}
+{"id": "2eVvOYhL", "ts": 1780754400, "lg": "Division 2", "h": "Fjolnir", "a": "Selfoss", "gh": 2, "ga": 3}
+{"id": "MP8InoSE", "ts": 1785866400, "lg": "Fotbolti.net Cup", "h": "Haukar", "a": "Reynir", "gh": 3, "ga": 2}
+{"id": "p2cRFerB", "ts": 1785352500, "lg": "Division 2", "h": "Haukar", "a": "KFG Gardabaer", "gh": 2, "ga": 1}
+{"id": "jN4WddfM", "ts": 1781452800, "lg": "Division 2", "h": "Dalvik/Reynir", "a": "Haukar", "gh": 3, "ga": 0}
+{"id": "8xnx4D1k", "ts": 1781118900, "lg": "Division 2", "h": "Haukar", "a": "Kormakur/Hvot", "gh": 2, "ga": 2}
+{"id": "U5FJGjoe", "ts": 1780689600, "lg": "Division 2", "h": "Hviti", "a": "Haukar", "gh": 0, "ga": 2}
+{"id": "jmavDBfd", "ts": 1780236000, "lg": "Division 2", "h": "Haukar", "a": "KFA", "gh": 3, "ga": 2}
+{"id": "M5IOQ35e", "ts": 1785866400, "lg": "Fotbolti.net Cup", "h": "Dalvik/Reynir", "a": "Alftanes", "gh": 1, "ga": 5}
+{"id": "A5ItLjKj", "ts": 1784394000, "lg": "Division 2", "h": "Kormakur/Hvot", "a": "Dalvik/Reynir", "gh": 3, "ga": 1}
+{"id": "tQ0OdywP", "ts": 1781967600, "lg": "Division 2", "h": "KFG Gardabaer", "a": "Dalvik/Reynir", "gh": 0, "ga": 6}
+{"id": "hppNzCxR", "ts": 1780243200, "lg": "Division 2", "h": "Kari", "a": "Dalvik/Reynir", "gh": 6, "ga": 0}
+{"id": "xjs9R7aD", "ts": 1779548400, "lg": "Division 2", "h": "Dalvik/Reynir", "a": "Selfoss", "gh": 2, "ga": 2}
+{"id": "O6N3qtLb", "ts": 1778947200, "lg": "Division 2", "h": "Olafsvik", "a": "Dalvik/Reynir", "gh": 2, "ga": 1}
+{"id": "bTudgsgc", "ts": 1778265000, "lg": "Serie B", "h": "Frosinone", "a": "Mantova", "gh": 5, "ga": 0}
+{"id": "MLi904qQ", "ts": 1777640400, "lg": "Serie B", "h": "Juve Stabia", "a": "Frosinone", "gh": 0, "ga": 1}
+{"id": "zVxhylGE", "ts": 1777122000, "lg": "Serie B", "h": "Frosinone", "a": "Carrarese", "gh": 3, "ga": 0}
+{"id": "Kt1rLyQG", "ts": 1776517200, "lg": "Serie B", "h": "Modena", "a": "Frosinone", "gh": 1, "ga": 2}
+{"id": "bXXrqrDa", "ts": 1775845800, "lg": "Serie B", "h": "Frosinone", "a": "Palermo", "gh": 1, "ga": 1}
+{"id": "pnRSjZE8", "ts": 1775402100, "lg": "Serie B", "h": "Frosinone", "a": "Padova", "gh": 2, "ga": 0}
+{"id": "r5pmxkFU", "ts": 1785513600, "lg": "Club Friendly", "h": "Juventus", "a": "Nice", "gh": 2, "ga": 0}
+{"id": "zXOMtQan", "ts": 1785002400, "lg": "Club Friendly", "h": "St. Liege", "a": "Juventus", "gh": 0, "ga": 1}
+{"id": "I5gvikyA", "ts": 1784381400, "lg": "Club Friendly", "h": "Basel", "a": "Juventus", "gh": 0, "ga": 0}
+{"id": "Yw2qYnof", "ts": 1779648300, "lg": "Serie A", "h": "Torino", "a": "Juventus", "gh": 2, "ga": 2}
+{"id": "vs8dmPk5", "ts": 1778352300, "lg": "Serie A", "h": "Lecce", "a": "Juventus", "gh": 0, "ga": 1}
+{"id": "OlKlxvQ6", "ts": 1777824000, "lg": "Serie A", "h": "Juventus", "a": "Verona", "gh": 1, "ga": 1}
+{"id": "ML0hfLBG", "ts": 1785596400, "lg": "Club Friendly", "h": "St Etienne", "a": "Venezia", "gh": 4, "ga": 3}
+{"id": "CAJJzHl1", "ts": 1785175200, "lg": "Club Friendly", "h": "Galatasaray", "a": "Venezia", "gh": 0, "ga": 3}
+{"id": "WfJx6Kx3", "ts": 1778265000, "lg": "Serie B", "h": "Venezia", "a": "Palermo", "gh": 2, "ga": 0}
+{"id": "2wYOfZC4", "ts": 1777640400, "lg": "Serie B", "h": "Spezia", "a": "Venezia", "gh": 2, "ga": 2}
+{"id": "zk1ZmRaK", "ts": 1777130100, "lg": "Serie B", "h": "Venezia", "a": "Empoli", "gh": 2, "ga": 0}
+{"id": "ENMaAKBb", "ts": 1776517200, "lg": "Serie B", "h": "Bari", "a": "Venezia", "gh": 0, "ga": 3}
+{"id": "faE489oT", "ts": 1786994100, "lg": "Coppa Italia", "h": "Palermo", "a": "Lecce", "gh": 0, "ga": 2}
+{"id": "n3prB76j", "ts": 1784734200, "lg": "Club Friendly", "h": "Lecce", "a": "Politehnica Timisoara", "gh": 0, "ga": 1}
+{"id": "vHtAJmW0", "ts": 1779648300, "lg": "Serie A", "h": "Lecce", "a": "Genoa", "gh": 1, "ga": 0}
+{"id": "nmmS8WHr", "ts": 1779043500, "lg": "Serie A", "h": "Sassuolo", "a": "Lecce", "gh": 2, "ga": 3}
+{"id": "KGDczIfJ", "ts": 1777661100, "lg": "Serie A", "h": "Pisa", "a": "Lecce", "gh": 1, "ga": 2}
+{"id": "ljxJoic3", "ts": 1777142700, "lg": "Serie A", "h": "Verona", "a": "Lecce", "gh": 0, "ga": 0}
+{"id": "4ddOmtKb", "ts": 1787853600, "lg": "Conference League", "h": "Hapoel Tel Aviv", "a": "Atalanta", "gh": 1, "ga": 0}
+{"id": "n7B4o3KH", "ts": 1778438700, "lg": "Serie A", "h": "AC Milan", "a": "Atalanta", "gh": 2, "ga": 3}
+{"id": "zmA6xmKk", "ts": 1777747500, "lg": "Serie A", "h": "Atalanta", "a": "Genoa", "gh": 0, "ga": 0}
+{"id": "xIBAKEb4", "ts": 1777307400, "lg": "Serie A", "h": "Cagliari", "a": "Atalanta", "gh": 3, "ga": 2}
+{"id": "UTn2mTd2", "ts": 1776884400, "lg": "Coppa Italia", "h": "Atalanta", "a": "Lazio", "gh": 1, "ga": 1}
+{"id": "Qecq8p9s", "ts": 1776537900, "lg": "Serie A", "h": "AS Roma", "a": "Atalanta", "gh": 1, "ga": 1}
+{"id": "IZogTE6e", "ts": 1772373600, "lg": "Serie A", "h": "Sassuolo", "a": "Atalanta", "gh": 2, "ga": 1}
+{"id": "nN3yz9Gs", "ts": 1779627600, "lg": "Serie A", "h": "Parma", "a": "Sassuolo", "gh": 1, "ga": 0}
+{"id": "vemV1O4b", "ts": 1778265900, "lg": "Serie A", "h": "Torino", "a": "Sassuolo", "gh": 2, "ga": 1}
+{"id": "URtGhaAm", "ts": 1777813200, "lg": "Serie A", "h": "Sassuolo", "a": "AC Milan", "gh": 2, "ga": 0}
+{"id": "YL0i6Owf", "ts": 1776443400, "lg": "Serie A", "h": "Sassuolo", "a": "Como", "gh": 2, "ga": 1}
+{"id": "SQE9QnQ1", "ts": 1775989800, "lg": "Serie A", "h": "Genoa", "a": "Sassuolo", "gh": 2, "ga": 1}
+{"id": "rsrKKFbl", "ts": 1785943800, "lg": "Club Friendly", "h": "Torino", "a": "Vado", "gh": 3, "ga": 1}
+{"id": "YH84GNJi", "ts": 1779043500, "lg": "Serie A", "h": "Cagliari", "a": "Torino", "gh": 2, "ga": 1}
+{"id": "xhpOjwu0", "ts": 1777726800, "lg": "Serie A", "h": "Udinese", "a": "Torino", "gh": 2, "ga": 0}
+{"id": "MqpXNm5d", "ts": 1777219200, "lg": "Serie A", "h": "Torino", "a": "Inter", "gh": 2, "ga": 2}
+{"id": "8tGw1T1E", "ts": 1776594600, "lg": "Serie A", "h": "Cremonese", "a": "Torino", "gh": 0, "ga": 0}
+{"id": "Mmzqunue", "ts": 1775912400, "lg": "Serie A", "h": "Torino", "a": "Verona", "gh": 2, "ga": 1}
+{"id": "bRlhWduQ", "ts": 1774112400, "lg": "Serie A", "h": "AC Milan", "a": "Torino", "gh": 3, "ga": 2}
+{"id": "pbVs92kT", "ts": 1765223100, "lg": "Serie A", "h": "Torino", "a": "AC Milan", "gh": 2, "ga": 3}
+{"id": "IF0ZsMrp", "ts": 1785927600, "lg": "Club Friendly", "h": "AC Milan", "a": "Inter", "gh": 1, "ga": 1}
+{"id": "U7czxCGt", "ts": 1784988000, "lg": "Club Friendly", "h": "Celtic", "a": "AC Milan", "gh": 2, "ga": 2}
+{"id": "zqzJHR0D", "ts": 1779648300, "lg": "Serie A", "h": "AC Milan", "a": "Cagliari", "gh": 1, "ga": 2}
+{"id": "2c0LCuJG", "ts": 1779012000, "lg": "Serie A", "h": "Genoa", "a": "AC Milan", "gh": 1, "ga": 2}
+{"id": "CKIHchXA", "ts": 1786982400, "lg": "Coppa Italia", "h": "Pisa", "a": "Empoli", "gh": 1, "ga": 1}
+{"id": "fk8mGEP8", "ts": 1779012000, "lg": "Serie A", "h": "Pisa", "a": "Napoli", "gh": 0, "ga": 3}
+{"id": "6XyumevP", "ts": 1778418000, "lg": "Serie A", "h": "Cremonese", "a": "Pisa", "gh": 3, "ga": 0}
+{"id": "0UeOP9zp", "ts": 1777122000, "lg": "Serie A", "h": "Parma", "a": "Pisa", "gh": 1, "ga": 0}
+{"id": "tOLCD6oK", "ts": 1776614400, "lg": "Serie A", "h": "Pisa", "a": "Genoa", "gh": 1, "ga": 2}
+{"id": "QLtzs8Ar", "ts": 1775846700, "lg": "Serie A", "h": "AS Roma", "a": "Pisa", "gh": 3, "ga": 0}
+{"id": "thBBoVZj", "ts": 1778265000, "lg": "Serie B", "h": "Cesena", "a": "Padova", "gh": 3, "ga": 4}
+{"id": "Mqzdi06C", "ts": 1777640400, "lg": "Serie B", "h": "Padova", "a": "Pescara", "gh": 1, "ga": 0}
+{"id": "KMx6r5Ns", "ts": 1777122000, "lg": "Serie B", "h": "Entella", "a": "Padova", "gh": 1, "ga": 0}
+{"id": "4AfAa3ct", "ts": 1775998800, "lg": "Serie B", "h": "Padova", "a": "Empoli", "gh": 1, "ga": 0}
+{"id": "OfqNwSJM", "ts": 1774101600, "lg": "Serie B", "h": "Padova", "a": "Palermo", "gh": 0, "ga": 1}
+{"id": "zadWUWzh", "ts": 1773774000, "lg": "Serie B", "h": "Venezia", "a": "Padova", "gh": 3, "ga": 1}
+{"id": "KKhv16M5", "ts": 1786905900, "lg": "Coppa Italia", "h": "Verona", "a": "Entella", "gh": 2, "ga": 2}
+{"id": "6TRhfX2k", "ts": 1779022800, "lg": "Serie A", "h": "Inter", "a": "Verona", "gh": 1, "ga": 1}
+{"id": "nLjw02ZA", "ts": 1778409000, "lg": "Serie A", "h": "Verona", "a": "Como", "gh": 0, "ga": 1}
+{"id": "EFbK9cpn", "ts": 1776603600, "lg": "Serie A", "h": "Verona", "a": "AC Milan", "gh": 0, "ga": 1}
+{"id": "xGrllV0B", "ts": 1775318400, "lg": "Serie A", "h": "Verona", "a": "Fiorentina", "gh": 0, "ga": 1}
+{"id": "lxuGcxZ0", "ts": 1774188000, "lg": "Serie A", "h": "Atalanta", "a": "Verona", "gh": 1, "ga": 0}
+{"id": "tIBuu3Zh", "ts": 1780848000, "lg": "Serie C - Promotion - Play Offs", "h": "Ascoli", "a": "Brescia", "gh": 0, "ga": 3}
+{"id": "84DXtP4t", "ts": 1780506000, "lg": "Serie C - Promotion - Play Offs", "h": "Brescia", "a": "Ascoli", "gh": 1, "ga": 1}
+{"id": "xjp8y4DE", "ts": 1779908400, "lg": "Serie C - Promotion - Play Offs", "h": "Catania", "a": "Ascoli", "gh": 1, "ga": 2}
+{"id": "pdcMD0L7", "ts": 1779645600, "lg": "Serie C - Promotion - Play Offs", "h": "Ascoli", "a": "Catania", "gh": 4, "ga": 0}
+{"id": "KKGxCK5S", "ts": 1779300000, "lg": "Serie C - Promotion - Play Offs", "h": "Ascoli", "a": "Potenza", "gh": 0, "ga": 1}
+{"id": "E3NzhaEd", "ts": 1779040800, "lg": "Serie C - Promotion - Play Offs", "h": "Potenza", "a": "Ascoli", "gh": 0, "ga": 0}
+{"id": "OEZMvNM6", "ts": 1777640400, "lg": "Serie B", "h": "Carrarese", "a": "Cesena", "gh": 0, "ga": 0}
+{"id": "fZa5DpO7", "ts": 1777138200, "lg": "Serie B", "h": "Cesena", "a": "Sampdoria", "gh": 0, "ga": 0}
+{"id": "neHO07v2", "ts": 1776525300, "lg": "Serie B", "h": "Palermo", "a": "Cesena", "gh": 2, "ga": 0}
+{"id": "hWQisMsC", "ts": 1775912400, "lg": "Serie B", "h": "Juve Stabia", "a": "Cesena", "gh": 2, "ga": 0}
+{"id": "2N1rqNe2", "ts": 1775471400, "lg": "Serie B", "h": "Cesena", "a": "Sudtirol", "gh": 1, "ga": 1}
+{"id": "lxVvRlzH", "ts": 1774101600, "lg": "Serie B", "h": "Cesena", "a": "Catanzaro", "gh": 3, "ga": 1}
+{"id": "t0ylRPWN", "ts": 1757784600, "lg": "Serie B", "h": "Sampdoria", "a": "Cesena", "gh": 1, "ga": 2}
+{"id": "6BvGderh", "ts": 1777640400, "lg": "Serie B", "h": "Sampdoria", "a": "Sudtirol", "gh": 1, "ga": 0}
+{"id": "E19AOAW8", "ts": 1776450600, "lg": "Serie B", "h": "Sampdoria", "a": "Monza", "gh": 0, "ga": 3}
+{"id": "CzbIcsSh", "ts": 1775912400, "lg": "Serie B", "h": "Pescara", "a": "Sampdoria", "gh": 1, "ga": 2}
+{"id": "vT0ISMSI", "ts": 1775488500, "lg": "Serie B", "h": "Sampdoria", "a": "Empoli", "gh": 1, "ga": 0}
+{"id": "fwzgY5sp", "ts": 1774196100, "lg": "Serie B", "h": "Sampdoria", "a": "Avellino", "gh": 2, "ga": 1}
+{"id": "rVVE1lzA", "ts": 1786100400, "lg": "Club Friendly", "h": "Melbourne City", "a": "Palermo", "gh": 0, "ga": 2}
+{"id": "pxFglhAm", "ts": 1779300000, "lg": "Serie B", "h": "Palermo", "a": "Catanzaro", "gh": 2, "ga": 0}
+{"id": "l6TNgEnQ", "ts": 1779040800, "lg": "Serie B", "h": "Catanzaro", "a": "Palermo", "gh": 0, "ga": 3}
+{"id": "EHiUYijo", "ts": 1777640400, "lg": "Serie B", "h": "Palermo", "a": "Catanzaro", "gh": 3, "ga": 2}
+{"id": "nDn9W4Tg", "ts": 1775410200, "lg": "Serie B", "h": "Palermo", "a": "Avellino", "gh": 2, "ga": 0}
+{"id": "fuycGXLb", "ts": 1773770400, "lg": "Serie B", "h": "Palermo", "a": "Juve Stabia", "gh": 2, "ga": 2}
+{"id": "bDa1zbpI", "ts": 1762618500, "lg": "Serie B", "h": "Juve Stabia", "a": "Palermo", "gh": 1, "ga": 0}
+{"id": "baL9pA9C", "ts": 1779213600, "lg": "Serie B", "h": "Monza", "a": "Juve Stabia", "gh": 2, "ga": 1}
+{"id": "h2I1nWv0", "ts": 1778954400, "lg": "Serie B", "h": "Juve Stabia", "a": "Monza", "gh": 2, "ga": 2}
+{"id": "b9SBBFpo", "ts": 1778604300, "lg": "Serie B", "h": "Modena", "a": "Juve Stabia", "gh": 0, "ga": 1}
+{"id": "4lRjrHpd", "ts": 1778265000, "lg": "Serie B", "h": "Sudtirol", "a": "Juve Stabia", "gh": 1, "ga": 1}
+{"id": "tWHWT58l", "ts": 1777122000, "lg": "Serie B", "h": "Pescara", "a": "Juve Stabia", "gh": 1, "ga": 1}
+{"id": "WbzX227C", "ts": 1786734000, "lg": "Coppa Italia Serie C", "h": "Pro Vercelli", "a": "Pergolettese", "gh": 1, "ga": 1}
+{"id": "Q7Zwm07k", "ts": 1777141800, "lg": "Serie C - Group A", "h": "Arzignano", "a": "Pro Vercelli", "gh": 3, "ga": 0}
+{"id": "Qq9jRqoT", "ts": 1776601800, "lg": "Serie C - Group A", "h": "Pro Vercelli", "a": "Ospitaletto", "gh": 1, "ga": 0}
+{"id": "29WZU6U6", "ts": 1776105000, "lg": "Serie C - Group A", "h": "Renate", "a": "Pro Vercelli", "gh": 2, "ga": 1}
+{"id": "GIiqiin2", "ts": 1775305800, "lg": "Serie C - Group A", "h": "Pro Vercelli", "a": "Inter U23", "gh": 0, "ga": 2}
+{"id": "C47LbrlB", "ts": 1774715400, "lg": "Serie C - Group A", "h": "Alcione Milano", "a": "Pro Vercelli", "gh": 1, "ga": 1}
+{"id": "ELW0Jr9j", "ts": 1786906800, "lg": "Coppa Italia Serie C", "h": "Lecco", "a": "Desenzano", "gh": 0, "ga": 0}
+{"id": "b5RspyCa", "ts": 1776603600, "lg": "Serie D - Group D", "h": "Imolese", "a": "Desenzano", "gh": 0, "ga": 1}
+{"id": "23dMapTa", "ts": 1784473200, "lg": "Club Friendly", "h": "Genoa", "a": "Trento", "gh": 2, "ga": 1}
+{"id": "dfFfjEeS", "ts": 1777831200, "lg": "Serie C - Promotion - Play Offs", "h": "Trento", "a": "Giana Erminio", "gh": 1, "ga": 2}
+{"id": "xOx9qR0c", "ts": 1776601800, "lg": "Serie C - Group A", "h": "Trento", "a": "Renate", "gh": 3, "ga": 3}
+{"id": "lQUsTpaJ", "ts": 1776007800, "lg": "Serie C - Group A", "h": "Cittadella", "a": "Trento", "gh": 1, "ga": 3}
+{"id": "8W0UdMIN", "ts": 1775653200, "lg": "Serie C - Group A", "h": "Inter U23", "a": "Trento", "gh": 2, "ga": 1}
+{"id": "hxrfDs34", "ts": 1775316600, "lg": "Serie C - Group A", "h": "Trento", "a": "Alcione Milano", "gh": 1, "ga": 0}
+{"id": "K6pIIzdR", "ts": 1766323800, "lg": "Serie D - Group C", "h": "Treviso", "a": "Mestre", "gh": 1, "ga": 0}
+{"id": "UVDkfbFE", "ts": 1778698800, "lg": "Serie C - Promotion - Play Offs", "h": "Potenza", "a": "Campobasso", "gh": 1, "ga": 3}
+{"id": "4hM3WfN7", "ts": 1778436000, "lg": "Serie C - Promotion - Play Offs", "h": "Campobasso", "a": "Potenza", "gh": 0, "ga": 3}
+{"id": "dSYcPIq2", "ts": 1778090400, "lg": "Serie C - Promotion - Play Offs", "h": "Campobasso", "a": "Pineto", "gh": 1, "ga": 1}
+{"id": "S2dZDWw9", "ts": 1777206600, "lg": "Serie C - Group B", "h": "Campobasso", "a": "Ascoli", "gh": 1, "ga": 0}
+{"id": "GUVQnfuA", "ts": 1776537000, "lg": "Serie C - Group B", "h": "Perugia", "a": "Campobasso", "gh": 0, "ga": 1}
+{"id": "KztTunSP", "ts": 1775910600, "lg": "Serie C - Group B", "h": "Campobasso", "a": "Bra", "gh": 0, "ga": 0}
+{"id": "CzMBGVbE", "ts": 1775305800, "lg": "Serie C - Group B", "h": "Pianese", "a": "Campobasso", "gh": 0, "ga": 2}
+{"id": "UiUSoer3", "ts": 1764520200, "lg": "Serie C - Group B", "h": "Campobasso", "a": "Pianese", "gh": 1, "ga": 1}
+{"id": "xdc01FMs", "ts": 1778695200, "lg": "Serie C - Promotion - Play Offs", "h": "Lecco", "a": "Pianese", "gh": 1, "ga": 1}
+{"id": "6D6U6yaK", "ts": 1778436000, "lg": "Serie C - Promotion - Play Offs", "h": "Pianese", "a": "Lecco", "gh": 1, "ga": 1}
+{"id": "OEzjRvFk", "ts": 1778090400, "lg": "Serie C - Promotion - Play Offs", "h": "Juventus U23", "a": "Pianese", "gh": 0, "ga": 2}
+{"id": "K4ER4DAL", "ts": 1777831200, "lg": "Serie C - Promotion - Play Offs", "h": "Pianese", "a": "Ternana", "gh": 1, "ga": 1}
+{"id": "jLYG6p8m", "ts": 1786906800, "lg": "Coppa Italia Serie C", "h": "Latina", "a": "Ostiamare", "gh": 1, "ga": 1}
+{"id": "t4cjak6r", "ts": 1776623400, "lg": "Serie C - Group C", "h": "Latina", "a": "Casertana", "gh": 2, "ga": 0}
+{"id": "dWiyIO0n", "ts": 1775997000, "lg": "Serie C - Group C", "h": "Latina", "a": "Casarano", "gh": 1, "ga": 2}
+{"id": "6oyiorWO", "ts": 1775478600, "lg": "Serie C - Group C", "h": "Audace Cerignola", "a": "Latina", "gh": 1, "ga": 1}
+{"id": "UF57egkK", "ts": 1775068200, "lg": "Coppa Italia Serie C", "h": "Latina", "a": "Potenza", "gh": 0, "ga": 1}
+{"id": "OAHjMzcd", "ts": 1774704600, "lg": "Serie C - Group C", "h": "Latina", "a": "Catania", "gh": 0, "ga": 1}
+{"id": "0j4YrWm2", "ts": 1777831200, "lg": "Serie C - Promotion - Play Offs", "h": "Pineto", "a": "Gubbio", "gh": 2, "ga": 1}
+{"id": "zmOOOmhR", "ts": 1777206600, "lg": "Serie C - Group B", "h": "Gubbio", "a": "Pineto", "gh": 2, "ga": 0}
+{"id": "K2xIlGAc", "ts": 1776537000, "lg": "Serie C - Group B", "h": "Pineto", "a": "Arezzo", "gh": 1, "ga": 4}
+{"id": "6cc755jD", "ts": 1775316600, "lg": "Serie C - Group B", "h": "Ravenna", "a": "Pineto", "gh": 1, "ga": 0}
+{"id": "xbs9dA7r", "ts": 1774809000, "lg": "Serie C - Group B", "h": "Pineto", "a": "Sambenedettese", "gh": 0, "ga": 0}
+{"id": "j5iekYrI", "ts": 1774110600, "lg": "Serie C - Group B", "h": "Carpi", "a": "Pineto", "gh": 1, "ga": 2}
+{"id": "S8XCkahM", "ts": 1778265000, "lg": "Serie B", "h": "Pescara", "a": "Spezia", "gh": 1, "ga": 1}
+{"id": "n9dcF6ge", "ts": 1777113000, "lg": "Serie B", "h": "Catanzaro", "a": "Spezia", "gh": 4, "ga": 2}
+{"id": "fBHIMl1L", "ts": 1776517200, "lg": "Serie B", "h": "Spezia", "a": "Sudtirol", "gh": 6, "ga": 1}
+{"id": "6HaYgaRH", "ts": 1776006900, "lg": "Serie B", "h": "Spezia", "a": "Mantova", "gh": 0, "ga": 2}
+{"id": "jV24j53S", "ts": 1775496600, "lg": "Serie B", "h": "Carrarese", "a": "Spezia", "gh": 3, "ga": 1}
+{"id": "tzAJJ6Sj", "ts": 1774101600, "lg": "Serie B", "h": "Juve Stabia", "a": "Spezia", "gh": 3, "ga": 1}
+{"id": "MPXU26V7", "ts": 1777206600, "lg": "Serie C - Group B", "h": "Forli", "a": "Perugia", "gh": 1, "ga": 1}
+{"id": "IBsZlP4t", "ts": 1775989800, "lg": "Serie C - Group B", "h": "Ternana", "a": "Perugia", "gh": 2, "ga": 2}
+{"id": "00fa7RL0", "ts": 1775316600, "lg": "Serie C - Group B", "h": "Perugia", "a": "Juventus U23", "gh": 2, "ga": 2}
+{"id": "8Qsq9SZj", "ts": 1774798200, "lg": "Serie C - Group B", "h": "Vis Pesaro", "a": "Perugia", "gh": 0, "ga": 1}
+{"id": "UeCU3XcB", "ts": 1774035000, "lg": "Serie C - Group B", "h": "Perugia", "a": "Torres", "gh": 1, "ga": 1}
+{"id": "tf4PboGE", "ts": 1773581400, "lg": "Serie C - Group B", "h": "Arezzo", "a": "Perugia", "gh": 1, "ga": 1}
+{"id": "Sp33H5p1", "ts": 1777206600, "lg": "Serie C - Group B", "h": "Vis Pesaro", "a": "Sambenedettese", "gh": 2, "ga": 3}
+{"id": "ld97aXOF", "ts": 1776537000, "lg": "Serie C - Group B", "h": "Sambenedettese", "a": "Pontedera", "gh": 2, "ga": 1}
+{"id": "6wZPhS67", "ts": 1775305800, "lg": "Serie C - Group B", "h": "Sambenedettese", "a": "Arezzo", "gh": 0, "ga": 0}
+{"id": "8tOL5gTb", "ts": 1774035000, "lg": "Serie C - Group B", "h": "Ternana", "a": "Sambenedettese", "gh": 1, "ga": 1}
+{"id": "x0Mcpn1L", "ts": 1773516600, "lg": "Serie C - Group B", "h": "Sambenedettese", "a": "Campobasso", "gh": 0, "ga": 1}
+{"id": "tKmGX8HF", "ts": 1772987400, "lg": "Serie C - Group B", "h": "Guidonia", "a": "Sambenedettese", "gh": 0, "ga": 1}
+{"id": "ri6ZIERr", "ts": 1768735800, "lg": "Serie C - Group B", "h": "Forli", "a": "Sambenedettese", "gh": 0, "ga": 2}
+{"id": "SxyawjiA", "ts": 1757269800, "lg": "Serie C - Group B", "h": "Sambenedettese", "a": "Forli", "gh": 1, "ga": 2}
+{"id": "O8qFSnn4", "ts": 1786896000, "lg": "Coppa Italia Serie C", "h": "Juventus U23", "a": "Forli", "gh": 1, "ga": 1}
+{"id": "8xlYpY9M", "ts": 1776537000, "lg": "Serie C - Group B", "h": "Carpi", "a": "Forli", "gh": 0, "ga": 1}
+{"id": "hUmsIrzJ", "ts": 1775921400, "lg": "Serie C - Group B", "h": "Forli", "a": "Ascoli", "gh": 0, "ga": 3}
+{"id": "82FKE9TQ", "ts": 1775316600, "lg": "Serie C - Group B", "h": "Bra", "a": "Forli", "gh": 2, "ga": 1}
+{"id": "4KC4fp9m", "ts": 1786723200, "lg": "Coppa Italia", "h": "Parma", "a": "Catania", "gh": 0, "ga": 2}
+{"id": "4UoO4lNt", "ts": 1786212000, "lg": "Coppa Italia", "h": "L.R. Vicenza", "a": "Catania", "gh": 1, "ga": 1}
+{"id": "xtLk13iA", "ts": 1779301800, "lg": "Serie C - Promotion - Play Offs", "h": "Catania", "a": "Lecco", "gh": 3, "ga": 3}
+{"id": "UFHs3PMc", "ts": 1779043500, "lg": "Serie C - Promotion - Play Offs", "h": "Lecco", "a": "Catania", "gh": 0, "ga": 0}
+{"id": "hxObQR4s", "ts": 1777219200, "lg": "Serie C - Group C", "h": "Atalanta U23", "a": "Catania", "gh": 1, "ga": 1}
+{"id": "dhcfHlSQ", "ts": 1776623400, "lg": "Serie C - Group C", "h": "Catania", "a": "Potenza", "gh": 1, "ga": 1}
+{"id": "EwWJDJLU", "ts": 1786734000, "lg": "Coppa Italia Serie C", "h": "Vado", "a": "Inter U23", "gh": 1, "ga": 1}
+{"id": "6yYu7LbL", "ts": 1777141800, "lg": "Serie C - Group A", "h": "Inter U23", "a": "Brescia", "gh": 0, "ga": 1}
+{"id": "nJurVRo4", "ts": 1776601800, "lg": "Serie C - Group A", "h": "Giana Erminio", "a": "Inter U23", "gh": 2, "ga": 0}
+{"id": "YFapKkGl", "ts": 1776018600, "lg": "Serie C - Group A", "h": "Inter U23", "a": "Arzignano", "gh": 0, "ga": 1}
+{"id": "46xC8bGq", "ts": 1773689400, "lg": "Serie C - Group A", "h": "L.R. Vicenza", "a": "Inter U23", "gh": 2, "ga": 1}
+{"id": "0MZ18wan", "ts": 1772890200, "lg": "Serie C - Group A", "h": "Inter U23", "a": "AlbinoLeffe", "gh": 0, "ga": 1}
+{"id": "W8n0CKUN", "ts": 1776105000, "lg": "Serie C - Group C", "h": "Picerno", "a": "Cosenza", "gh": 3, "ga": 1}
+{"id": "pI79Y4nJ", "ts": 1775478600, "lg": "Serie C - Group C", "h": "Catania", "a": "Picerno", "gh": 1, "ga": 2}
+{"id": "lSJHzzCk", "ts": 1774809000, "lg": "Serie C - Group C", "h": "Picerno", "a": "Monopoli", "gh": 0, "ga": 0}
+{"id": "jZhe2t6N", "ts": 1774186200, "lg": "Serie C - Group C", "h": "Siracusa", "a": "Picerno", "gh": 2, "ga": 1}
+{"id": "f7an42yB", "ts": 1773581400, "lg": "Serie C - Group C", "h": "Picerno", "a": "Trapani", "gh": 1, "ga": 1}
+{"id": "jaMNvRj2", "ts": 1772998200, "lg": "Serie C - Group C", "h": "Cavese", "a": "Picerno", "gh": 2, "ga": 0}
+{"id": "YwjlFQne", "ts": 1746972000, "lg": "Serie D - Group G", "h": "Gelbison", "a": "Savoia", "gh": 3, "ga": 1}
+{"id": "EBt7BnjL", "ts": 1779033600, "lg": "Serie A Women", "h": "Fiorentina W", "a": "Lazio W", "gh": 2, "ga": 1}
+{"id": "SMvccdVA", "ts": 1778331600, "lg": "Serie A Women", "h": "Genoa W", "a": "Fiorentina W", "gh": 2, "ga": 3}
+{"id": "2iu92Wkg", "ts": 1777813200, "lg": "Serie A Women", "h": "Fiorentina W", "a": "Como W", "gh": 1, "ga": 0}
+{"id": "AuLeeFrQ", "ts": 1777219200, "lg": "Serie A Women", "h": "Ternana W", "a": "Fiorentina W", "gh": 2, "ga": 2}
+{"id": "fiLiwGMs", "ts": 1775298600, "lg": "Serie A Women", "h": "Fiorentina W", "a": "Juventus W", "gh": 1, "ga": 2}
+{"id": "xS1u7ueA", "ts": 1774800000, "lg": "Coppa Italia Women", "h": "Juventus W", "a": "Fiorentina W", "gh": 2, "ga": 1}
+{"id": "z9TSH8f4", "ts": 1771779600, "lg": "Serie A Women", "h": "Fiorentina W", "a": "Sassuolo W", "gh": 3, "ga": 2}
+{"id": "ARqZncxn", "ts": 1762102800, "lg": "Serie A Women", "h": "Sassuolo W", "a": "Fiorentina W", "gh": 0, "ga": 1}
+{"id": "4tLo44re", "ts": 1779022800, "lg": "Serie A Women", "h": "Napoli W", "a": "Sassuolo W", "gh": 1, "ga": 1}
+{"id": "GttYb96F", "ts": 1778418000, "lg": "Serie A Women", "h": "Sassuolo W", "a": "AS Roma W", "gh": 0, "ga": 3}
+{"id": "AHrH0AK5", "ts": 1777726800, "lg": "Serie A Women", "h": "Sassuolo W", "a": "Genoa W", "gh": 0, "ga": 0}
+{"id": "6Po04hLt", "ts": 1777113000, "lg": "Serie A Women", "h": "Lazio W", "a": "Sassuolo W", "gh": 0, "ga": 3}
+{"id": "lfvtcmyS", "ts": 1778428800, "lg": "Serie A Women", "h": "Lazio W", "a": "Ternana W", "gh": 2, "ga": 0}
+{"id": "ImVXdSJU", "ts": 1777804200, "lg": "Serie A Women", "h": "Parma W", "a": "Lazio W", "gh": 1, "ga": 3}
+{"id": "2HOayfif", "ts": 1775307600, "lg": "Serie A Women", "h": "Inter W", "a": "Lazio W", "gh": 5, "ga": 2}
+{"id": "G00IOG7l", "ts": 1774112400, "lg": "Serie A Women", "h": "Lazio W", "a": "AS Roma W", "gh": 1, "ga": 2}
+{"id": "EFGfW79c", "ts": 1773496800, "lg": "Serie A Women", "h": "Napoli W", "a": "Lazio W", "gh": 0, "ga": 1}
+{"id": "G4d21mAN", "ts": 1771682400, "lg": "Serie A Women", "h": "Lazio W", "a": "AC Milan W", "gh": 2, "ga": 2}
+{"id": "p8GUyXTp", "ts": 1762696800, "lg": "Serie A Women", "h": "Lazio W", "a": "Napoli W", "gh": 1, "ga": 0}
+{"id": "pKjC4xt9", "ts": 1755973800, "lg": "Serie A Cup Women", "h": "Lazio W", "a": "Napoli W", "gh": 2, "ga": 1}
+{"id": "4vbaRzMc", "ts": 1744997400, "lg": "Serie A Women", "h": "Lazio W", "a": "Napoli W", "gh": 2, "ga": 1}
+{"id": "Wjqr2Khn", "ts": 1741442400, "lg": "Serie A Women", "h": "Napoli W", "a": "Lazio W", "gh": 0, "ga": 4}
+{"id": "h8fwwSqd", "ts": 1778322600, "lg": "Serie A Women", "h": "Como W", "a": "Napoli W", "gh": 0, "ga": 0}
+{"id": "WWWPblkI", "ts": 1777717800, "lg": "Serie A Women", "h": "Napoli W", "a": "Juventus W", "gh": 2, "ga": 3}
+{"id": "CQLr7PV1", "ts": 1785983400, "lg": "Leagues Cup", "h": "Los Angeles FC", "a": "Guadalajara Chivas", "gh": 1, "ga": 1}
+{"id": "GKuRDoqK", "ts": 1785546000, "lg": "Liga MX", "h": "Puebla", "a": "Guadalajara Chivas", "gh": 1, "ga": 1}
+{"id": "vLeganUQ", "ts": 1785020820, "lg": "Liga MX", "h": "Guadalajara Chivas", "a": "Juarez", "gh": 1, "ga": 0}
+{"id": "t2DlaRCT", "ts": 1784423220, "lg": "Liga MX", "h": "Guadalajara Chivas", "a": "Toluca", "gh": 0, "ga": 2}
+{"id": "rD0tI0IF", "ts": 1778980020, "lg": "Liga MX", "h": "Guadalajara Chivas", "a": "Cruz Azul", "gh": 1, "ga": 2}
+{"id": "zmcYJMm3", "ts": 1778724000, "lg": "Liga MX", "h": "Cruz Azul", "a": "Guadalajara Chivas", "gh": 2, "ga": 2}
+{"id": "4GuZlnSq", "ts": 1777165620, "lg": "Liga MX", "h": "Guadalajara Chivas", "a": "Club Tijuana", "gh": 0, "ga": 0}
+{"id": "t0MkNyMa", "ts": 1786064400, "lg": "Leagues Cup", "h": "Austin FC", "a": "Club Tijuana", "gh": 2, "ga": 0}
+{"id": "Wfho18aE", "ts": 1784948400, "lg": "Liga MX", "h": "Club Tijuana", "a": "Club Leon", "gh": 1, "ga": 0}
+{"id": "WzG9nlTN", "ts": 1784257800, "lg": "Liga MX", "h": "Club Tijuana", "a": "Tigres UANL", "gh": 3, "ga": 1}
+{"id": "OdKazmDj", "ts": 1776913560, "lg": "Liga MX", "h": "Club Tijuana", "a": "Pachuca", "gh": 3, "ga": 1}
+{"id": "pA5NxqwK", "ts": 1776553200, "lg": "Liga MX", "h": "Cruz Azul", "a": "Club Tijuana", "gh": 1, "ga": 1}
+{"id": "YZIsPcim", "ts": 1786069800, "lg": "Leagues Cup", "h": "Portland Timbers", "a": "Puebla", "gh": 5, "ga": 2}
+{"id": "EXtCaeO9", "ts": 1784682000, "lg": "Liga MX", "h": "Cruz Azul", "a": "Puebla", "gh": 2, "ga": 1}
+{"id": "tUiZ29D4", "ts": 1784343600, "lg": "Liga MX", "h": "Juarez", "a": "Puebla", "gh": 0, "ga": 1}
+{"id": "Gj7obj5c", "ts": 1777086000, "lg": "Liga MX", "h": "Puebla", "a": "Queretaro", "gh": 1, "ga": 2}
+{"id": "jivPN9Tp", "ts": 1776827100, "lg": "Liga MX", "h": "Monterrey", "a": "Puebla", "gh": 2, "ga": 1}
+{"id": "fqigXM0s", "ts": 1776560820, "lg": "Liga MX", "h": "Guadalajara Chivas", "a": "Puebla", "gh": 5, "ga": 0}
+{"id": "6qEG0U85", "ts": 1774220400, "lg": "Liga MX", "h": "Santos Laguna", "a": "Puebla", "gh": 2, "ga": 1}
+{"id": "EDKcLFjC", "ts": 1786059000, "lg": "Leagues Cup", "h": "New York City", "a": "Santos Laguna", "gh": 2, "ga": 0}
+{"id": "fVMqJtLa", "ts": 1785711600, "lg": "Liga MX", "h": "Club America", "a": "Santos Laguna", "gh": 3, "ga": 0}
+{"id": "8znPgQil", "ts": 1785034800, "lg": "Liga MX", "h": "Santos Laguna", "a": "Atlas", "gh": 0, "ga": 1}
+{"id": "xYbKg5zi", "ts": 1784423100, "lg": "Liga MX", "h": "Monterrey", "a": "Santos Laguna", "gh": 3, "ga": 2}
+{"id": "MVSq7olS", "ts": 1777244400, "lg": "Liga MX", "h": "Santos Laguna", "a": "Monterrey", "gh": 3, "ga": 0}
+{"id": "2iSBUJTP", "ts": 1786060800, "lg": "Leagues Cup", "h": "Cruz Azul", "a": "Philadelphia Union", "gh": 1, "ga": 0}
+{"id": "MHOyL2jm", "ts": 1785639900, "lg": "Liga MX", "h": "Cruz Azul", "a": "Atlante", "gh": 2, "ga": 3}
+{"id": "tMyZRAac", "ts": 1785025800, "lg": "Campe\u00f3n de Campeones", "h": "Toluca", "a": "Cruz Azul", "gh": 1, "ga": 3}
+{"id": "rqesMI6K", "ts": 1779415200, "lg": "Liga MX", "h": "Cruz Azul", "a": "UNAM Pumas", "gh": 0, "ga": 0}
+{"id": "Q19O3AJi", "ts": 1778382900, "lg": "Liga MX", "h": "Cruz Azul", "a": "Atlas", "gh": 1, "ga": 0}
+{"id": "beHxt7Rp", "ts": 1777778100, "lg": "Liga MX", "h": "Atlas", "a": "Cruz Azul", "gh": 3, "ga": 2}
+{"id": "MkPlqA9j", "ts": 1768431600, "lg": "Liga MX", "h": "Cruz Azul", "a": "Atlas", "gh": 2, "ga": 0}
+{"id": "IsFUZE55", "ts": 1786145400, "lg": "Leagues Cup", "h": "Charlotte", "a": "Atlas", "gh": 2, "ga": 0}
+{"id": "8xLed8Hq", "ts": 1785887100, "lg": "Leagues Cup", "h": "Columbus Crew", "a": "Atlas", "gh": 3, "ga": 1}
+{"id": "h2Y5QOSP", "ts": 1785632700, "lg": "Liga MX", "h": "Atlas", "a": "Monterrey", "gh": 0, "ga": 2}
+{"id": "8GgR4Vrh", "ts": 1784336400, "lg": "Liga MX", "h": "Club Leon", "a": "Atlas", "gh": 2, "ga": 3}
+{"id": "hjyTATl3", "ts": 1777173000, "lg": "Liga MX", "h": "Club America", "a": "Atlas", "gh": 0, "ga": 1}
+{"id": "foo6KiIO", "ts": 1785553200, "lg": "Liga de Expansion MX", "h": "Atletico La Paz", "a": "Alacranes de Durango", "gh": 0, "ga": 1}
+{"id": "Q9VyAqbk", "ts": 1784941200, "lg": "Liga de Expansion MX", "h": "Tepatitlan de Morelos", "a": "Alacranes de Durango", "gh": 0, "ga": 1}
+{"id": "zs4eiYnn", "ts": 1786064400, "lg": "Liga de Expansion MX", "h": "Leones Negros", "a": "Correcaminos", "gh": 1, "ga": 3}
+{"id": "C4QwZjXH", "ts": 1785632400, "lg": "Liga de Expansion MX", "h": "Cancun", "a": "Leones Negros", "gh": 0, "ga": 2}
+{"id": "QTLVVQK8", "ts": 1785016800, "lg": "Liga de Expansion MX", "h": "Tlaxcala", "a": "Leones Negros", "gh": 2, "ga": 4}
+{"id": "juh9hLWG", "ts": 1776621600, "lg": "Liga de Expansion MX", "h": "Leones Negros", "a": "Cancun", "gh": 1, "ga": 2}
+{"id": "IRB0PM2U", "ts": 1775955600, "lg": "Liga de Expansion MX", "h": "Venados", "a": "Leones Negros", "gh": 2, "ga": 1}
+{"id": "UVO9GRJa", "ts": 1775350800, "lg": "Liga de Expansion MX", "h": "Leones Negros", "a": "Atl. Morelia", "gh": 2, "ga": 0}
+{"id": "MNmdtA6U", "ts": 1780189200, "lg": "Liga de Expansion MX", "h": "Jaiba Brava", "a": "Tepatitlan de Morelos", "gh": 2, "ga": 0}
+{"id": "ldzkrWyI", "ts": 1779584400, "lg": "Liga de Expansion MX", "h": "Tepatitlan de Morelos", "a": "Jaiba Brava", "gh": 1, "ga": 3}
+{"id": "YcshFgwh", "ts": 1778979600, "lg": "Liga de Expansion MX", "h": "Tepatitlan de Morelos", "a": "Jaiba Brava", "gh": 1, "ga": 0}
+{"id": "8Kk6ijoo", "ts": 1778374800, "lg": "Liga de Expansion MX", "h": "Jaiba Brava", "a": "Tepatitlan de Morelos", "gh": 0, "ga": 0}
+{"id": "4CAO8d1l", "ts": 1777849200, "lg": "Liga de Expansion MX", "h": "Cancun", "a": "Jaiba Brava", "gh": 1, "ga": 1}
+{"id": "8S9gEIwR", "ts": 1777604700, "lg": "Liga de Expansion MX", "h": "Jaiba Brava", "a": "Cancun", "gh": 1, "ga": 2}
+{"id": "8xCyVQYh", "ts": 1775869200, "lg": "Liga de Expansion MX", "h": "Alebrijes Oaxaca", "a": "Jaiba Brava", "gh": 1, "ga": 2}
+{"id": "baIekvbd", "ts": 1762045200, "lg": "Liga de Expansion MX", "h": "Jaiba Brava", "a": "Alebrijes Oaxaca", "gh": 3, "ga": 1}
+{"id": "pIOoXU1U", "ts": 1786053600, "lg": "Liga de Expansion MX", "h": "Tlaxcala", "a": "Alebrijes Oaxaca", "gh": 0, "ga": 2}
+{"id": "8AtrQelm", "ts": 1785459600, "lg": "Liga de Expansion MX", "h": "Alebrijes Oaxaca", "a": "Dorados de Sinaloa", "gh": 0, "ga": 2}
+{"id": "YgPwU4kL", "ts": 1785020400, "lg": "Liga de Expansion MX", "h": "Venados", "a": "Alebrijes Oaxaca", "gh": 3, "ga": 0}
+{"id": "UP30fs24", "ts": 1776474000, "lg": "Liga de Expansion MX", "h": "Correcaminos", "a": "Alebrijes Oaxaca", "gh": 1, "ga": 3}
+{"id": "tEyMDFuK", "ts": 1785508200, "lg": "Liga MX U21", "h": "Juarez U21", "a": "UNAM Pumas U21", "gh": 1, "ga": 0}
+{"id": "hjE34jo9", "ts": 1784646000, "lg": "Liga MX U21", "h": "Toluca U21", "a": "UNAM Pumas U21", "gh": 1, "ga": 1}
+{"id": "4h0kj0Qb", "ts": 1784386800, "lg": "Liga MX U21", "h": "UNAM Pumas U21", "a": "Pachuca U21", "gh": 1, "ga": 1}
+{"id": "W6NgwuDM", "ts": 1765040400, "lg": "Liga MX U21", "h": "Santos Laguna U21", "a": "UNAM Pumas U21", "gh": 1, "ga": 1}
+{"id": "bXWaBJFj", "ts": 1786978800, "lg": "Liga MX U21", "h": "Necaxa U21", "a": "Club Leon U21", "gh": 2, "ga": 2}
+{"id": "2T5XKWnm", "ts": 1785682800, "lg": "Liga MX U21", "h": "Toluca U21", "a": "Necaxa U21", "gh": 2, "ga": 0}
+{"id": "hGskaGQQ", "ts": 1785078000, "lg": "Liga MX U21", "h": "Necaxa U21", "a": "Monterrey U21", "gh": 0, "ga": 3}
+{"id": "U3mjERCd", "ts": 1777767300, "lg": "Liga MX Women", "h": "Monterrey W", "a": "Cruz Azul W", "gh": 4, "ga": 0}
+{"id": "djkrGmrp", "ts": 1777510800, "lg": "Liga MX Women", "h": "Cruz Azul W", "a": "Monterrey W", "gh": 1, "ga": 1}
+{"id": "GE7OJd0d", "ts": 1777153500, "lg": "Liga MX Women", "h": "Cruz Azul W", "a": "UNAM Pumas W", "gh": 1, "ga": 1}
+{"id": "l6Ci0B36", "ts": 1775343600, "lg": "Liga MX Women", "h": "Toluca W", "a": "Cruz Azul W", "gh": 0, "ga": 4}
+{"id": "6JIUfGRQ", "ts": 1775091600, "lg": "Liga MX Women", "h": "Atl. San Luis W", "a": "Cruz Azul W", "gh": 3, "ga": 2}
+{"id": "CMxk0jn9", "ts": 1774734300, "lg": "Liga MX Women", "h": "Cruz Azul W", "a": "Puebla W", "gh": 4, "ga": 0}
+{"id": "pz1OJSPF", "ts": 1770346800, "lg": "Liga MX Women", "h": "Tigres UANL W", "a": "Cruz Azul W", "gh": 4, "ga": 2}
+{"id": "jXZG6sZ2", "ts": 1763334000, "lg": "Liga MX Women", "h": "Tigres UANL W", "a": "Cruz Azul W", "gh": 2, "ga": 1}
+{"id": "Ye5WbVFd", "ts": 1763078400, "lg": "Liga MX Women", "h": "Cruz Azul W", "a": "Tigres UANL W", "gh": 1, "ga": 1}
+{"id": "YLtozE8d", "ts": 1762033500, "lg": "Liga MX Women", "h": "Cruz Azul W", "a": "Tigres UANL W", "gh": 2, "ga": 2}
+{"id": "0fWAc6lR", "ts": 1785632760, "lg": "Liga MX Women", "h": "Tigres UANL W", "a": "Puebla W", "gh": 8, "ga": 0}
+{"id": "r7oHLUyK", "ts": 1777856400, "lg": "Liga MX Women", "h": "Tigres UANL W", "a": "Toluca W", "gh": 1, "ga": 2}
+{"id": "tK8PFvl1", "ts": 1777758900, "lg": "Liga MX Women", "h": "Club America W", "a": "Juarez W", "gh": 3, "ga": 2}
+{"id": "Yg5HH0Jl", "ts": 1777518000, "lg": "Liga MX Women", "h": "Juarez W", "a": "Club America W", "gh": 1, "ga": 1}
+{"id": "zNzZClmC", "ts": 1775430000, "lg": "Liga MX Women", "h": "Juarez W", "a": "Monterrey W", "gh": 1, "ga": 1}
+{"id": "27qMh8vq", "ts": 1774825200, "lg": "Liga MX Women", "h": "Queretaro W", "a": "Juarez W", "gh": 2, "ga": 1}
+{"id": "bwZETIBU", "ts": 1774134000, "lg": "Liga MX Women", "h": "Juarez W", "a": "Santos Laguna W", "gh": 2, "ga": 0}
+{"id": "GYul6OD6", "ts": 1773601800, "lg": "Liga MX Women", "h": "Puebla W", "a": "Juarez W", "gh": 0, "ga": 2}
+{"id": "C8ibkjD7", "ts": 1759795200, "lg": "Liga MX Women", "h": "Santos Laguna W", "a": "Juarez W", "gh": 0, "ga": 0}
+{"id": "88fAs0h3", "ts": 1777158000, "lg": "Liga MX Women", "h": "Santos Laguna W", "a": "Queretaro W", "gh": 3, "ga": 0}
+{"id": "KQKz4g4s", "ts": 1775178000, "lg": "Liga MX Women", "h": "Santos Laguna W", "a": "Pachuca W", "gh": 1, "ga": 2}
+{"id": "WOhjbUGL", "ts": 1774738800, "lg": "Liga MX Women", "h": "Santos Laguna W", "a": "Atl. San Luis W", "gh": 1, "ga": 2}
+{"id": "OKKWGuSO", "ts": 1773795600, "lg": "Liga MX Women", "h": "Santos Laguna W", "a": "Cruz Azul W", "gh": 0, "ga": 2}
+{"id": "fmR56X7k", "ts": 1773367200, "lg": "Liga MX Women", "h": "Tigres UANL W", "a": "Santos Laguna W", "gh": 4, "ga": 1}
+{"id": "zahnMhQP", "ts": 1775412000, "lg": "Liga MX Women", "h": "UNAM Pumas W", "a": "Puebla W", "gh": 2, "ga": 2}
+{"id": "Y5KMdxcE", "ts": 1775079900, "lg": "Liga MX Women", "h": "Puebla W", "a": "Queretaro W", "gh": 0, "ga": 0}
+{"id": "rqGvpvdB", "ts": 1774202400, "lg": "Liga MX Women", "h": "Puebla W", "a": "Club America W", "gh": 0, "ga": 3}
+{"id": "KUCNgfOq", "ts": 1773277200, "lg": "Liga MX Women", "h": "Atl. San Luis W", "a": "Puebla W", "gh": 2, "ga": 0}
+{"id": "fDAdue9j", "ts": 1771783200, "lg": "Liga MX Women", "h": "Puebla W", "a": "Mazatlan FC W", "gh": 1, "ga": 2}
+{"id": "lC5rYw2N", "ts": 1771282800, "lg": "Liga MX Women", "h": "Club Leon W", "a": "Puebla W", "gh": 6, "ga": 0}
+{"id": "Qy7m5Plm", "ts": 1756663200, "lg": "Liga MX Women", "h": "Puebla W", "a": "Atl. San Luis W", "gh": 0, "ga": 6}
+{"id": "ldZx7ZBN", "ts": 1744930800, "lg": "Liga MX Women", "h": "Atl. San Luis W", "a": "Puebla W", "gh": 1, "ga": 0}
+{"id": "j7Jdl2BD", "ts": 1785772800, "lg": "Liga MX Women", "h": "Atl. San Luis W", "a": "Toluca W", "gh": 1, "ga": 4}
+{"id": "zeE1E1OG", "ts": 1777071600, "lg": "Liga MX Women", "h": "Club Leon W", "a": "Atl. San Luis W", "gh": 1, "ga": 2}
+{"id": "SUAgGNg4", "ts": 1775445000, "lg": "Liga MX Women", "h": "Mazatlan FC W", "a": "Atl. San Luis W", "gh": 0, "ga": 1}
+{"id": "vB9mrIQN", "ts": 1774220400, "lg": "Liga MX Women", "h": "Atl. San Luis W", "a": "Tigres UANL W", "gh": 0, "ga": 2}
+{"id": "hfunKQl5", "ts": 1779021000, "lg": "Eredivisie", "h": "Nijmegen", "a": "G.A. Eagles", "gh": 2, "ga": 1}
+{"id": "b3G3KiTs", "ts": 1778424300, "lg": "Eredivisie", "h": "G.A. Eagles", "a": "PSV", "gh": 1, "ga": 4}
+{"id": "6DZEDqGc", "ts": 1777819500, "lg": "Eredivisie", "h": "Sparta Rotterdam", "a": "G.A. Eagles", "gh": 2, "ga": 2}
+{"id": "vqsdYG9F", "ts": 1776962700, "lg": "Eredivisie", "h": "G.A. Eagles", "a": "AZ Alkmaar", "gh": 0, "ga": 0}
+{"id": "b7CmcOVG", "ts": 1775930400, "lg": "Eredivisie", "h": "Groningen", "a": "G.A. Eagles", "gh": 0, "ga": 0}
+{"id": "Of1Fyj3t", "ts": 1775384100, "lg": "Eredivisie", "h": "G.A. Eagles", "a": "Zwolle", "gh": 5, "ga": 0}
+{"id": "CxqIgr3b", "ts": 1777053600, "lg": "Eerste Divisie", "h": "Den Bosch", "a": "Den Haag", "gh": 1, "ga": 3}
+{"id": "2RayuOW7", "ts": 1776448800, "lg": "Eerste Divisie", "h": "Den Haag", "a": "Waalwijk", "gh": 5, "ga": 1}
+{"id": "2T0uNkBM", "ts": 1775988900, "lg": "Eerste Divisie", "h": "Dordrecht", "a": "Den Haag", "gh": 1, "ga": 0}
+{"id": "bD9uRt6t", "ts": 1775486700, "lg": "Eerste Divisie", "h": "Den Haag", "a": "Eindhoven FC", "gh": 4, "ga": 0}
+{"id": "bwgWa47s", "ts": 1775239200, "lg": "Eerste Divisie", "h": "Den Haag", "a": "Jong Ajax", "gh": 4, "ga": 2}
+{"id": "Sh1Rj6DT", "ts": 1774178100, "lg": "Eerste Divisie", "h": "De Graafschap", "a": "Den Haag", "gh": 1, "ga": 2}
+{"id": "z1be3eh3", "ts": 1785686400, "lg": "Johan Cruyff Shield", "h": "PSV", "a": "AZ Alkmaar", "gh": 0, "ga": 4}
+{"id": "S0OUdbfm", "ts": 1785261600, "lg": "Club Friendly", "h": "PSV", "a": "Eindhoven FC", "gh": 3, "ga": 0}
+{"id": "Opqcrauf", "ts": 1784995200, "lg": "Club Friendly", "h": "PSV", "a": "Villarreal", "gh": 1, "ga": 3}
+{"id": "IySZ5aSG", "ts": 1784370600, "lg": "Club Friendly", "h": "PSV", "a": "Royale Union SG", "gh": 7, "ga": 3}
+{"id": "OEmVN8kt", "ts": 1779021000, "lg": "Eredivisie", "h": "PSV", "a": "Twente", "gh": 5, "ga": 1}
+{"id": "UD7o4Wr1", "ts": 1777744800, "lg": "Eredivisie", "h": "Ajax", "a": "PSV", "gh": 2, "ga": 2}
+{"id": "zapO9Ret", "ts": 1770565500, "lg": "Eredivisie", "h": "Groningen", "a": "PSV", "gh": 1, "ga": 2}
+{"id": "rFBtH1CF", "ts": 1785600000, "lg": "Club Friendly", "h": "Groningen", "a": "Valladolid", "gh": 1, "ga": 0}
+{"id": "Mk8hd12b", "ts": 1784894400, "lg": "Club Friendly", "h": "Groningen", "a": "FC Volendam", "gh": 0, "ga": 4}
+{"id": "AcuhRUx2", "ts": 1779381900, "lg": "Eredivisie", "h": "Ajax", "a": "Groningen", "gh": 2, "ga": 0}
+{"id": "EylFxikQ", "ts": 1778424300, "lg": "Eredivisie", "h": "Groningen", "a": "Nijmegen", "gh": 2, "ga": 1}
+{"id": "Snn5O0UF", "ts": 1777740300, "lg": "Eredivisie", "h": "Groningen", "a": "Excelsior", "gh": 2, "ga": 3}
+{"id": "Ie4ezqkL", "ts": 1786125600, "lg": "Eredivisie", "h": "Cambuur", "a": "Excelsior", "gh": 0, "ga": 4}
+{"id": "GUPAgNo1", "ts": 1777053600, "lg": "Eerste Divisie", "h": "Cambuur", "a": "Vitesse", "gh": 2, "ga": 1}
+{"id": "j7E1Spm2", "ts": 1776448800, "lg": "Eerste Divisie", "h": "De Graafschap", "a": "Cambuur", "gh": 3, "ga": 1}
+{"id": "fcEOQXBc", "ts": 1775844000, "lg": "Eerste Divisie", "h": "Den Bosch", "a": "Cambuur", "gh": 1, "ga": 1}
+{"id": "88CECsim", "ts": 1775486700, "lg": "Eerste Divisie", "h": "Cambuur", "a": "Dordrecht", "gh": 1, "ga": 1}
+{"id": "vFcOW5we", "ts": 1775239200, "lg": "Eerste Divisie", "h": "Venlo", "a": "Cambuur", "gh": 3, "ga": 0}
+{"id": "KKxQ7fv8", "ts": 1784287800, "lg": "Club Friendly", "h": "Feyenoord", "a": "Charleroi", "gh": 3, "ga": 1}
+{"id": "n7vI9G9e", "ts": 1783764000, "lg": "Club Friendly", "h": "Feyenoord", "a": "Club Brugge KV", "gh": 3, "ga": 1}
+{"id": "0Ix2GC8K", "ts": 1783168200, "lg": "Club Friendly", "h": "Dordrecht", "a": "Feyenoord", "gh": 0, "ga": 6}
+{"id": "dSowMnKh", "ts": 1779021000, "lg": "Eredivisie", "h": "Zwolle", "a": "Feyenoord", "gh": 0, "ga": 2}
+{"id": "Sr8KG9S6", "ts": 1778424300, "lg": "Eredivisie", "h": "Feyenoord", "a": "AZ Alkmaar", "gh": 1, "ga": 1}
+{"id": "pSC14uwp", "ts": 1777811400, "lg": "Eredivisie", "h": "Sittard", "a": "Feyenoord", "gh": 1, "ga": 2}
+{"id": "4I5SMJQ0", "ts": 1784998800, "lg": "Club Friendly", "h": "Venlo", "a": "Fortuna Koln", "gh": 0, "ga": 1}
+{"id": "84M2eqHl", "ts": 1777053600, "lg": "Eerste Divisie", "h": "Venlo", "a": "Almere City", "gh": 3, "ga": 1}
+{"id": "Yo8Kr6Xr", "ts": 1776448800, "lg": "Eerste Divisie", "h": "Helmond", "a": "Venlo", "gh": 2, "ga": 0}
+{"id": "GC2XOBtA", "ts": 1775917800, "lg": "Eerste Divisie", "h": "Venlo", "a": "De Graafschap", "gh": 3, "ga": 3}
+{"id": "O04AflE4", "ts": 1774033200, "lg": "Eerste Divisie", "h": "FC Emmen", "a": "Venlo", "gh": 2, "ga": 2}
+{"id": "zcHoVXpg", "ts": 1773774000, "lg": "Eerste Divisie", "h": "Venlo", "a": "Jong Ajax", "gh": 0, "ga": 1}
+{"id": "4E5qw16b", "ts": 1783864800, "lg": "Club Friendly", "h": "De Graafschap", "a": "AEK Athens", "gh": 1, "ga": 2}
+{"id": "jDzQD0yK", "ts": 1778349600, "lg": "Eerste Divisie", "h": "De Graafschap", "a": "Almere City", "gh": 2, "ga": 2}
+{"id": "dj1t6lID", "ts": 1778085900, "lg": "Eerste Divisie", "h": "Almere City", "a": "De Graafschap", "gh": 3, "ga": 1}
+{"id": "hYPggEiI", "ts": 1777053600, "lg": "Eerste Divisie", "h": "FC Emmen", "a": "De Graafschap", "gh": 1, "ga": 0}
+{"id": "nZuN8ajC", "ts": 1775486700, "lg": "Eerste Divisie", "h": "De Graafschap", "a": "Jong AZ", "gh": 5, "ga": 0}
+{"id": "vTxco5hl", "ts": 1775239200, "lg": "Eerste Divisie", "h": "Eindhoven FC", "a": "De Graafschap", "gh": 2, "ga": 2}
+{"id": "IwCqpjzS", "ts": 1779543000, "lg": "Tweede Divisie", "h": "De Treffers", "a": "Hoek", "gh": 2, "ga": 2}
+{"id": "tbEDv9th", "ts": 1778938200, "lg": "Tweede Divisie", "h": "Jong Sparta Rotterdam", "a": "De Treffers", "gh": 1, "ga": 4}
+{"id": "nygvQ9Rb", "ts": 1778342400, "lg": "Tweede Divisie", "h": "De Treffers", "a": "Spakenburg", "gh": 0, "ga": 0}
+{"id": "Cp1TBJ6l", "ts": 1777120200, "lg": "Tweede Divisie", "h": "HFC", "a": "De Treffers", "gh": 0, "ga": 1}
+{"id": "pd2Dps8k", "ts": 1776528000, "lg": "Tweede Divisie", "h": "De Treffers", "a": "Katwijk", "gh": 4, "ga": 1}
+{"id": "YcxvzifU", "ts": 1775923200, "lg": "Tweede Divisie", "h": "De Treffers", "a": "ACV Assen", "gh": 6, "ga": 2}
+{"id": "W87Eku0s", "ts": 1780749000, "lg": "Tweede Divisie", "h": "Excelsior Maassluis", "a": "Rijnvogels", "gh": 1, "ga": 2}
+{"id": "zwMre1xK", "ts": 1780509600, "lg": "Tweede Divisie", "h": "Rijnvogels", "a": "Excelsior Maassluis", "gh": 2, "ga": 1}
+{"id": "SSEfA2JM", "ts": 1780146000, "lg": "Tweede Divisie", "h": "DVS '33 Ermelo", "a": "Rijnvogels", "gh": 2, "ga": 2}
+{"id": "MVBnCOlA", "ts": 1779904800, "lg": "Tweede Divisie", "h": "Rijnvogels", "a": "DVS '33 Ermelo", "gh": 1, "ga": 0}
+{"id": "04ddRzAs", "ts": 1761673500, "lg": "KNVB Beker", "h": "Gemert", "a": "Sittard", "gh": 0, "ga": 1}
+{"id": "2P6QGEZA", "ts": 1779472800, "lg": "Eredivisie Women", "h": "Den Haag W", "a": "PEC Zwolle W", "gh": 3, "ga": 0}
+{"id": "UB8IIz5b", "ts": 1778263200, "lg": "Eredivisie Women", "h": "PSV W", "a": "Den Haag W", "gh": 2, "ga": 0}
+{"id": "SApVRJQE", "ts": 1777819500, "lg": "Eredivisie Women", "h": "Den Haag W", "a": "NAC Breda W", "gh": 4, "ga": 2}
+{"id": "EPBlFts9", "ts": 1777214700, "lg": "Eredivisie Women", "h": "AZ Alkmaar W", "a": "Den Haag W", "gh": 1, "ga": 1}
+{"id": "C05Kv05d", "ts": 1775400300, "lg": "Eredivisie Women", "h": "Twente W", "a": "Den Haag W", "gh": 0, "ga": 1}
+{"id": "hz7WkQDc", "ts": 1774795500, "lg": "Eredivisie Women", "h": "Den Haag W", "a": "Excelsior W", "gh": 3, "ga": 2}
+{"id": "Cp5Wf3xB", "ts": 1762098300, "lg": "Eredivisie Women", "h": "Den Haag W", "a": "Twente W", "gh": 0, "ga": 5}
+{"id": "jeHtFAd2", "ts": 1785517200, "lg": "Super Cup Women", "h": "PSV W", "a": "Twente W", "gh": 3, "ga": 0}
+{"id": "29iSGhMa", "ts": 1779710400, "lg": "Eredivisie Cup Women", "h": "PSV W", "a": "Twente W", "gh": 2, "ga": 0}
+{"id": "UZj59WRp", "ts": 1779472800, "lg": "Eredivisie Women", "h": "Twente W", "a": "PSV W", "gh": 1, "ga": 2}
+{"id": "za7F4lGq", "ts": 1778941800, "lg": "KNVB Beker Women", "h": "PSV W", "a": "Twente W", "gh": 2, "ga": 2}
+{"id": "bwL00gkU", "ts": 1778263200, "lg": "Eredivisie Women", "h": "NAC Breda W", "a": "Twente W", "gh": 0, "ga": 3}
+{"id": "jJnBt7Ik", "ts": 1778763600, "lg": "Division 3 - Group 5", "h": "Floya", "a": "Kongsvinger 2", "gh": 3, "ga": 1}
+{"id": "l2fjNhsg", "ts": 1758366000, "lg": "Division 3 - Group 1", "h": "Frigg", "a": "Floya", "gh": 3, "ga": 2}
+{"id": "SE2RcxEs", "ts": 1757163600, "lg": "Division 3 - Group 1", "h": "Floya", "a": "Baerum Sportsklubb", "gh": 1, "ga": 2}
+{"id": "vyBLOyrH", "ts": 1749384000, "lg": "Division 3 - Group 1", "h": "Baerum Sportsklubb", "a": "Floya", "gh": 3, "ga": 0}
+{"id": "AVmoTas4", "ts": 1785679200, "lg": "Division 2 - Group 2", "h": "Eidsvold TF", "a": "Junkeren", "gh": 4, "ga": 1}
+{"id": "lxgnGhnI", "ts": 1784984400, "lg": "Division 2 - Group 2", "h": "Junkeren", "a": "Lorenskog", "gh": 1, "ga": 0}
+{"id": "27F53F2C", "ts": 1782651600, "lg": "Division 2 - Group 2", "h": "Stjordals Blink", "a": "Junkeren", "gh": 1, "ga": 1}
+{"id": "KOcFhblf", "ts": 1782054000, "lg": "Division 2 - Group 2", "h": "Grorud", "a": "Junkeren", "gh": 3, "ga": 0}
+{"id": "t0aDxnbd", "ts": 1781445600, "lg": "Division 2 - Group 2", "h": "Junkeren", "a": "Honefoss", "gh": 4, "ga": 3}
+{"id": "Iq7lDVUp", "ts": 1780236000, "lg": "Division 2 - Group 2", "h": "Levanger", "a": "Junkeren", "gh": 3, "ga": 0}
+{"id": "48lx5fkg", "ts": 1787842800, "lg": "ANGOLA: Girabola", "h": "Caala", "a": "Wiliete", "gh": 1, "ga": 2}
+{"id": "0fj6xaC5", "ts": 1787832000, "lg": "ARMENIA: Armenian Cup", "h": "Sardarapat", "a": "Syunik", "gh": 1, "ga": 2}
+{"id": "l4YVLdED", "ts": 1787846400, "lg": "BAHRAIN: Premier League", "h": "Al-Najma", "a": "Al Khalidiyah", "gh": 2, "ga": 7}
+{"id": "6ND3zdT6", "ts": 1787846400, "lg": "BAHRAIN: Premier League", "h": "Sitra", "a": "Malkia", "gh": 3, "ga": 0}
+{"id": "23lMemOk", "ts": 1787869800, "lg": "BOLIVIA: Division Profesional", "h": "Independiente", "a": "Guabira", "gh": 3, "ga": 1}
+{"id": "d63Y2mTq", "ts": 1787857200, "lg": "BOLIVIA: Copa Simon Bolivar", "h": "Wils. Cooperativas", "a": "Atletico Juniors", "gh": 5, "ga": 4}
+{"id": "GWPtjWe3", "ts": 1787868000, "lg": "BRAZIL: Gaucho 2", "h": "Brasil de Pelotas", "a": "Brasil de Farroupilha", "gh": 2, "ga": 2}
+{"id": "nw9aUY85", "ts": 1787871600, "lg": "BRAZIL: Copa Betano do Brasil", "h": "Internacional", "a": "Gremio", "gh": 0, "ga": 0}
+{"id": "rRTUVwUh", "ts": 1787871600, "lg": "BRAZIL: Brasileiro U17", "h": "Fluminense U17", "a": "Palmeiras U17", "gh": 2, "ga": 3}
+{"id": "lKtxoHGN", "ts": 1787853600, "lg": "BRAZIL: Sul-Matogrossense U20", "h": "Pantanal U20", "a": "Gremio Santo Antonio U20", "gh": 6, "ga": 0}
+{"id": "K2X7uevo", "ts": 1787862600, "lg": "BRAZIL: Sul-Matogrossense U20", "h": "Campo Grande U20", "a": "Uniao ABC U20", "gh": 1, "ga": 1}
+{"id": "n9Pg3bWi", "ts": 1787871600, "lg": "BRAZIL: Sul-Matogrossense U20", "h": "Taveiropolis U20", "a": "Real FC/CAMS U20", "gh": 0, "ga": 6}
+{"id": "CfZTZzpT", "ts": 1787872200, "lg": "COLOMBIA: Primera A - Clausura", "h": "Llaneros", "a": "Millonarios", "gh": 0, "ga": 2}
+{"id": "dI3jjvlR", "ts": 1787864400, "lg": "COLOMBIA: Liga Women - Promotion Group", "h": "Atl. Nacional W", "a": "Millonarios W", "gh": 0, "ga": 1}
+{"id": "S0fMpIBl", "ts": 1787868000, "lg": "COLOMBIA: Liga Women - Promotion Group", "h": "Inter Bogot\u00e1 W", "a": "Inter Palmira W", "gh": 3, "ga": 0}
+{"id": "4rT9foSH", "ts": 1787837400, "lg": "EGYPT: Division 2 A", "h": "Mega Sport", "a": "El-Entag El-Harby", "gh": 1, "ga": 1}
+{"id": "O4RgbTSh", "ts": 1787837400, "lg": "EGYPT: Division 2 A", "h": "Team FC", "a": "Al-Sekka", "gh": 1, "ga": 2}
+{"id": "rHname6U", "ts": 1787846400, "lg": "EUROPE: Europa League - Qualification", "h": "Ararat-Armenia (Arm)", "a": "Univ. Craiova (Rou)", "gh": 1, "ga": 0}
+{"id": "EgKoyUGq", "ts": 1787846400, "lg": "EUROPE: Europa League - Qualification", "h": "Iberia 1999 (Geo)", "a": "Jagiellonia (Pol)", "gh": 1, "ga": 2}
+{"id": "2woqiw75", "ts": 1787850000, "lg": "EUROPE: Europa League - Qualification", "h": "Kauno Zalgiris (Ltu)", "a": "Besiktas (Tur)", "gh": 1, "ga": 0}
+{"id": "d63zb6tm", "ts": 1787850000, "lg": "EUROPE: Europa League - Qualification", "h": "Lillestrom (Nor)", "a": "Egnatia (Alb)", "gh": 2, "ga": 1}
+{"id": "Kz3TWEKc", "ts": 1787850000, "lg": "EUROPE: Europa League - Qualification", "h": "Omonia (Cyp)", "a": "St. Truiden (Bel)", "gh": 4, "ga": 2}
+{"id": "hWwrY5YQ", "ts": 1787850000, "lg": "EUROPE: Europa League - Qualification", "h": "Plzen (Cze)", "a": "Crvena zvezda (Srb)", "gh": 5, "ga": 1}
+{"id": "nosW1fLN", "ts": 1787850000, "lg": "EUROPE: Europa League - Qualification", "h": "Salzburg (Aut)", "a": "Mjallby (Swe)", "gh": 3, "ga": 0}
+{"id": "EDAucBw3", "ts": 1787855400, "lg": "EUROPE: Europa League - Qualification", "h": "Anderlecht (Bel)", "a": "Kairat Almaty (Kaz)", "gh": 3, "ga": 0}
+{"id": "dbPBEX4T", "ts": 1787855400, "lg": "EUROPE: Europa League - Qualification", "h": "Ferencvaros (Hun)", "a": "Trabzonspor (Tur)", "gh": 4, "ga": 0}
+{"id": "Q3zDcxV6", "ts": 1787842800, "lg": "EUROPE: Conference League - Qualification", "h": "KuPS (Fin)", "a": "Shamrock Rovers (Irl)", "gh": 1, "ga": 0}
+{"id": "tIZATrEs", "ts": 1787846400, "lg": "EUROPE: Conference League - Qualification", "h": "Jablonec (Cze)", "a": "Rangers (Sco)", "gh": 2, "ga": 0}
+{"id": "ANKmKyyh", "ts": 1787846400, "lg": "EUROPE: Conference League - Qualification", "h": "Qarabag (Aze)", "a": "Twente (Ned)", "gh": 1, "ga": 4}
+{"id": "lQebcKXo", "ts": 1787849100, "lg": "EUROPE: Conference League - Qualification", "h": "Freiburg (Ger)", "a": "Motherwell (Sco)", "gh": 4, "ga": 1}
+{"id": "pvv7YnDa", "ts": 1787850000, "lg": "EUROPE: Conference League - Qualification", "h": "Hradec Kralove (Cze)", "a": "Panathinaikos (Gre)", "gh": 1, "ga": 2}
+{"id": "xla9lS0D", "ts": 1787850000, "lg": "EUROPE: Conference League - Qualification", "h": "Inter Escaldes (And)", "a": "Drita (Kos)", "gh": 1, "ga": 0}
+{"id": "jRs3L0vB", "ts": 1787850000, "lg": "EUROPE: Conference League - Qualification", "h": "Pafos (Cyp)", "a": "Dinamo City (Alb)", "gh": 4, "ga": 2}
+{"id": "ngZChjmA", "ts": 1787850000, "lg": "EUROPE: Conference League - Qualification", "h": "Rakow (Pol)", "a": "Hajduk Split (Cro)", "gh": 2, "ga": 3}
+{"id": "hIGChqac", "ts": 1787850000, "lg": "EUROPE: Conference League - Qualification", "h": "Riga FC (Lat)", "a": "Klaksvik (Fai)", "gh": 2, "ga": 1}
+{"id": "MeyRP0D6", "ts": 1787853600, "lg": "EUROPE: Conference League - Qualification", "h": "Ajax (Ned)", "a": "Sion (Sui)", "gh": 5, "ga": 3}
+{"id": "AHHQm70k", "ts": 1787857200, "lg": "EUROPE: Conference League - Qualification", "h": "Hibernian (Sco)", "a": "Gent (Bel)", "gh": 2, "ga": 3}
+{"id": "6VqTuVKP", "ts": 1787857200, "lg": "EUROPE: Conference League - Qualification", "h": "Larne (Nir)", "a": "Lincoln Red Imps (Gib)", "gh": 0, "ga": 3}
+{"id": "WEI0QlgJ", "ts": 1787857200, "lg": "EUROPE: Conference League - Qualification", "h": "Partizan (Srb)", "a": "Getafe (Esp)", "gh": 2, "ga": 1}
+{"id": "ljTpPc1S", "ts": 1787853600, "lg": "GERMANY: Oberliga Niederrhein", "h": "Holzheim", "a": "Juchen-Garzweiler", "gh": 2, "ga": 4}
+{"id": "6isINvaJ", "ts": 1787853600, "lg": "KUWAIT: Premier League", "h": "Al Tadamon", "a": "Kazma SC", "gh": 1, "ga": 3}
+{"id": "lWWVozRq", "ts": 1787790600, "lg": "NORTH & CENTRAL AMERICA: CONCACAF Central American Cup", "h": "Marathon (Hon)", "a": "Esteli (Nic)", "gh": 3, "ga": 0}
+{"id": "hEdRjzZF", "ts": 1787839200, "lg": "NORWAY: Nasjonal U19 CL - Play Offs", "h": "Asane U19", "a": "Fredrikstad U19", "gh": 3, "ga": 1}
+{"id": "j5t4mMqL", "ts": 1787842800, "lg": "NORWAY: Nasjonal U19 CL - Play Offs", "h": "Ham-Kam U19", "a": "Rosenborg U19", "gh": 0, "ga": 3}
+{"id": "0KwiDXqH", "ts": 1787826600, "lg": "RUSSIA: Russian Cup - Regions Path", "h": "Dynamo Barnaul", "a": "Omsk", "gh": 5, "ga": 0}
+{"id": "OWi7u39l", "ts": 1787848200, "lg": "RUSSIA: Russian Cup - Regions Path", "h": "2Drots", "a": "Murom", "gh": 0, "ga": 3}
+{"id": "0AxObU8E", "ts": 1787848200, "lg": "RUSSIA: Russian Cup - Regions Path", "h": "Dynamo SPB", "a": "Dynamo Vologda", "gh": 2, "ga": 1}
+{"id": "KYy4dege", "ts": 1787835600, "lg": "RWANDA: Super Cup", "h": "Kiyovu", "a": "Mukura Victory Sports", "gh": 1, "ga": 0}
+{"id": "nLwdbHOr", "ts": 1787848200, "lg": "RWANDA: Super Cup", "h": "Rayon Sport", "a": "Police", "gh": 0, "ga": 1}
+{"id": "AsDZnsbD", "ts": 1787850000, "lg": "SWEDEN: Division 2 - Norrland - Promotion Group", "h": "Kubikenborgs", "a": "Gottne", "gh": 1, "ga": 0}
+{"id": "rHCxuYbf", "ts": 1787848200, "lg": "SWEDEN: Svenska Cupen - Qualification", "h": "Football Primetime", "a": "Helsingborg", "gh": 3, "ga": 6}
+{"id": "xEr7CMWh", "ts": 1787832000, "lg": "TAJIKISTAN: Vysshaya Liga", "h": "Eskhata", "a": "Ravshan", "gh": 1, "ga": 1}
+{"id": "xzIsZD13", "ts": 1787817600, "lg": "WORLD: Club Friendly", "h": "Union Adarve (Esp)", "a": "Getafe B (Esp)", "gh": 2, "ga": 2}
+{"id": "xdR9bigB", "ts": 1787819400, "lg": "WORLD: Club Friendly", "h": "Dewa United (Ina)", "a": "Brisbane Roar (Aus)", "gh": 4, "ga": 0}
+{"id": "AaEp3IGq", "ts": 1787850000, "lg": "WORLD: Club Friendly", "h": "Aviles Stadium (Esp)", "a": "Gijon Industrial (Esp)", "gh": 0, "ga": 0}
+{"id": "ILH2uk35", "ts": 1787750100, "lg": "WORLD: Friendly International", "h": "Italy U17", "a": "Turkey U17", "gh": 3, "ga": 3}
+{"id": "xjh1fcMU", "ts": 1787932800, "lg": "ARMENIA: Premier League", "h": "Urartu", "a": "Alashkert", "gh": 1, "ga": 1}
+{"id": "MBbFxnxA", "ts": 1787911200, "lg": "AUSTRALIA: NSW League One", "h": "Prospect United", "a": "Hurstville Zagreb", "gh": 3, "ga": 0}
+{"id": "EXYriaZ9", "ts": 1787908500, "lg": "AUSTRALIA: NPL Queensland U23 - Play Offs", "h": "Rochedale U23", "a": "Moreton City Excelsior U23", "gh": 3, "ga": 1}
+{"id": "tEZloOU1", "ts": 1787938200, "lg": "AUSTRIA: Bundesliga", "h": "A. Lustenau", "a": "Tirol", "gh": 0, "ga": 4}
+{"id": "tz5ZsX4T", "ts": 1787934600, "lg": "AUSTRIA: 2. Liga", "h": "ASK Voitsberg", "a": "Liefering", "gh": 2, "ga": 3}
+{"id": "x6j5xBSj", "ts": 1787934600, "lg": "AUSTRIA: 2. Liga", "h": "First Vienna", "a": "Amstetten", "gh": 1, "ga": 0}
+{"id": "Uu7vvO3e", "ts": 1787934600, "lg": "AUSTRIA: 2. Liga", "h": "Kapfenberg", "a": "BW Linz", "gh": 2, "ga": 1}
+{"id": "MF3WupZr", "ts": 1787934600, "lg": "AUSTRIA: 2. Liga", "h": "St. Polten", "a": "A. Salzburg", "gh": 1, "ga": 0}
+{"id": "r3wi0EKc", "ts": 1787941800, "lg": "AUSTRIA: 2. Liga", "h": "Hertha Wels", "a": "Admira", "gh": 1, "ga": 3}
+{"id": "dlW1lW63", "ts": 1787936400, "lg": "AUSTRIA: Regionalliga East", "h": "Parndorf", "a": "Marchfeld", "gh": 1, "ga": 4}
+{"id": "WAvGQSEd", "ts": 1787938200, "lg": "AUSTRIA: Regionalliga East", "h": "Kremser", "a": "Horn", "gh": 0, "ga": 1}
+{"id": "z1lOKubs", "ts": 1787938200, "lg": "AUSTRIA: Regionalliga East", "h": "SV Donau", "a": "Traiskirchen", "gh": 1, "ga": 1}
+{"id": "dC0V8R8M", "ts": 1787936400, "lg": "AUSTRIA: Regionalliga South", "h": "Gleisdorf", "a": "Lafnitz", "gh": 1, "ga": 3}
+{"id": "44rOAmvA", "ts": 1787936400, "lg": "AUSTRIA: Regionalliga South", "h": "Kalsdorf", "a": "SC Weiz", "gh": 1, "ga": 1}
+{"id": "08k91q1d", "ts": 1787936400, "lg": "AUSTRIA: Regionalliga South", "h": "Tillmitsch", "a": "Deutschlandsberger", "gh": 2, "ga": 2}
+{"id": "byeJmxfB", "ts": 1787936400, "lg": "AUSTRIA: Regionalliga South", "h": "Treibach", "a": "ATSV Wolfsberger", "gh": 4, "ga": 0}
+{"id": "WhLeIHZr", "ts": 1787936400, "lg": "AUSTRIA: Regionalliga North", "h": "Seekirchen", "a": "Wallern/St Marienkirchen", "gh": 3, "ga": 0}
+{"id": "jNHBEZY7", "ts": 1787937300, "lg": "AUSTRIA: Regionalliga North", "h": "UFC Hallein", "a": "Vorwarts Steyr", "gh": 0, "ga": 0}
+{"id": "8SmCJIMa", "ts": 1787932800, "lg": "AUSTRIA: Karnten", "h": "KAC 1909", "a": "Dellach/Gail", "gh": 4, "ga": 0}
+{"id": "EPraPmgL", "ts": 1787934600, "lg": "AUSTRIA: Karnten", "h": "SAK Klagenfurt", "a": "Nussdorf", "gh": 3, "ga": 0}
+{"id": "tCpiR9O8", "ts": 1787936400, "lg": "AUSTRIA: Karnten", "h": "Lendorf", "a": "Saint Michael Lavanttal", "gh": 0, "ga": 2}
+{"id": "ObUUJRGr", "ts": 1787936400, "lg": "AUSTRIA: Karnten", "h": "SC St. Veit", "a": "Kottmannsdorf", "gh": 4, "ga": 0}
+{"id": "Yed5hpYq", "ts": 1787930100, "lg": "AUSTRIA: Oberosterreich", "h": "Union Unis Gschwandt", "a": "Vocklamarkt", "gh": 4, "ga": 1}
+{"id": "Ua7RaSuA", "ts": 1787934600, "lg": "AUSTRIA: Oberosterreich", "h": "Friedburg", "a": "Pregarten", "gh": 5, "ga": 1}
+{"id": "tMaDjO2d", "ts": 1787936400, "lg": "AUSTRIA: Oberosterreich", "h": "Perg", "a": "Weisskirchen", "gh": 0, "ga": 0}
+{"id": "jwImxQre", "ts": 1787934600, "lg": "AUSTRIA: Steiermark", "h": "Leoben", "a": "Furstenfeld", "gh": 1, "ga": 2}
+{"id": "YJxGNQT1", "ts": 1787936400, "lg": "AUSTRIA: Steiermark", "h": "Koflach", "a": "Kindberg Murzhofen", "gh": 3, "ga": 0}
+{"id": "4MJuvnEr", "ts": 1787936400, "lg": "AUSTRIA: Steiermark", "h": "Stadtwerke Bruck/Mur", "a": "Ilzer SV", "gh": 2, "ga": 5}
+{"id": "b3Lez4D7", "ts": 1787936400, "lg": "AUSTRIA: Steiermark", "h": "SV Wildon", "a": "Hohenhaus Schladming", "gh": 0, "ga": 1}
+{"id": "0QU1oUL8", "ts": 1787936400, "lg": "AUSTRIA: Steiermark", "h": "TUS Bad Waltersdorf", "a": "Pachern", "gh": 1, "ga": 0}
+{"id": "GAQHq06K", "ts": 1787932800, "lg": "BAHRAIN: Premier League", "h": "Al-Muharraq", "a": "Al-Ahli Manama", "gh": 1, "ga": 1}
+{"id": "ngHmvvUs", "ts": 1787932800, "lg": "BAHRAIN: Premier League", "h": "East Riffa", "a": "Al-Hidd", "gh": 0, "ga": 2}
+{"id": "OpVfH5yQ", "ts": 1787929200, "lg": "BELARUS: Vysshaya Liga", "h": "Vitebsk", "a": "Naftan", "gh": 2, "ga": 0}
+{"id": "StKY9NTa", "ts": 1787936400, "lg": "BELARUS: Vysshaya Liga", "h": "FC Gomel", "a": "Belshina", "gh": 1, "ga": 0}
+{"id": "YP1fRf5s", "ts": 1787925600, "lg": "BELARUS: Pershaya Liga", "h": "SKA-1938", "a": "Minsk 2", "gh": 2, "ga": 1}
+{"id": "Sv5kO7K8", "ts": 1787913000, "lg": "BELARUS: Vysshaya Liga Women", "h": "Smorgon W", "a": "Naftan W", "gh": 0, "ga": 1}
+{"id": "z58cMokL", "ts": 1787914800, "lg": "BELARUS: Vysshaya Liga Women", "h": "Vitebsk W", "a": "Belarus U19 W", "gh": 2, "ga": 1}
+{"id": "zmDOxom4", "ts": 1787942700, "lg": "BELGIUM: Jupiler Pro League", "h": "Genk", "a": "Beveren", "gh": 4, "ga": 0}
+{"id": "Mmm4mR4F", "ts": 1787940000, "lg": "BELGIUM: Challenger Pro League", "h": "Hasselt", "a": "Gent U23", "gh": 0, "ga": 2}
+{"id": "ENqdkmz3", "ts": 1787940000, "lg": "BELGIUM: Challenger Pro League", "h": "Sporting Lokeren", "a": "Genk U23", "gh": 2, "ga": 4}
+{"id": "voLvl0wR", "ts": 1787941800, "lg": "BELGIUM: National Division 1 - VV", "h": "Hoogstraten", "a": "Merelbeke", "gh": 2, "ga": 3}
+{"id": "AoXoXnGE", "ts": 1787940000, "lg": "BELGIUM: Pro League U21", "h": "Beerschot VA U21", "a": "Daring Brussels U21", "gh": 0, "ga": 1}
+{"id": "bPzPP48l", "ts": 1787940000, "lg": "BELGIUM: Pro League U21", "h": "RFC Liege U21", "a": "Seraing U21", "gh": 1, "ga": 2}
+{"id": "EFsuMM7D", "ts": 1787941800, "lg": "BELGIUM: Pro League U21", "h": "RAAL La Louviere U21", "a": "Beveren U21", "gh": 3, "ga": 2}
+{"id": "YVIPwzYq", "ts": 1787940000, "lg": "BOSNIA AND HERZEGOVINA: WWIN Liga BiH", "h": "Celik Zenica", "a": "Velez Mostar", "gh": 3, "ga": 0}
+{"id": "8h9OJsS0", "ts": 1787936400, "lg": "BOTSWANA: Premier League", "h": "Gaborone Utd", "a": "Prisons XI Gaborone", "gh": 2, "ga": 1}
+{"id": "lIR3yeHq", "ts": 1787922000, "lg": "BRAZIL: Mineiro U20 - Winners stage", "h": "Itabirito U20", "a": "Coimbra U20", "gh": 0, "ga": 1}
+{"id": "dSKWCjiI", "ts": 1787940000, "lg": "BRAZIL: Paulista U20", "h": "Sfera U20", "a": "Gremio Prudente U20", "gh": 1, "ga": 1}
+{"id": "0nvmtxr1", "ts": 1787932800, "lg": "BULGARIA: efbet League", "h": "Slavia Sofia", "a": "Septemvri Sofia", "gh": 1, "ga": 1}
+{"id": "OnfFRxT7", "ts": 1787940900, "lg": "BULGARIA: efbet League", "h": "CSKA 1948 Sofia", "a": "Lok. Plovdiv", "gh": 2, "ga": 0}
+{"id": "jcWqgS3M", "ts": 1787924700, "lg": "BURUNDI: Primus League", "h": "Bumamuru", "a": "Musongati", "gh": 2, "ga": 0}
+{"id": "EPzv8YAB", "ts": 1787929200, "lg": "CHILE: Primera Division Women", "h": "Deportes Temuco W", "a": "Deportes Iquique W", "gh": 1, "ga": 2}
+{"id": "WrGBMXP4", "ts": 1787929200, "lg": "CHILE: Primera Division Women", "h": "Palestino W", "a": "Coquimbo W", "gh": 2, "ga": 0}
+{"id": "Mkvn6CuO", "ts": 1787929200, "lg": "CHILE: Primera Division Women", "h": "U. De Concepcion W", "a": "U. Espanola W", "gh": 1, "ga": 4}
+{"id": "8WJPrmXp", "ts": 1787916900, "lg": "CHINA: Super League", "h": "Dalian Yingbo", "a": "Beijing Guoan", "gh": 1, "ga": 1}
+{"id": "lUBZ0ngT", "ts": 1787916900, "lg": "CHINA: Super League", "h": "Shanghai Shenhua", "a": "Shandong Taishan", "gh": 2, "ga": 3}
+{"id": "0Q6B6jPi", "ts": 1787918400, "lg": "CHINA: Super League", "h": "Shenzhen Xinpengcheng", "a": "Shanghai Port", "gh": 0, "ga": 1}
+{"id": "lAe3zQMa", "ts": 1787929200, "lg": "CROATIA: Prva NL", "h": "Sesvete", "a": "Dugopolje", "gh": 1, "ga": 2}
+{"id": "WjGVLQ76", "ts": 1787931000, "lg": "CROATIA: Prva NL", "h": "Bijelo Brdo", "a": "Cibalia", "gh": 1, "ga": 1}
+{"id": "OQCNNnwf", "ts": 1787931000, "lg": "CROATIA: Prva NL", "h": "Dubrava", "a": "Croatia Zmijavci", "gh": 1, "ga": 2}
+{"id": "WA6Ps8UP", "ts": 1787931000, "lg": "CROATIA: Prva NL", "h": "Vukovar 1991", "a": "Segesta", "gh": 2, "ga": 0}
+{"id": "CYcmVwe3", "ts": 1787931000, "lg": "CROATIA: Druga NL", "h": "Bjelovar", "a": "Trnje", "gh": 0, "ga": 2}
+{"id": "hUpjOVog", "ts": 1787932800, "lg": "CYPRUS: Cyprus League", "h": "Krasava", "a": "Omonia 29th May", "gh": 0, "ga": 3}
+{"id": "8Ki6KmoI", "ts": 1787936400, "lg": "CYPRUS: Cyprus League", "h": "Ol. Nicosia", "a": "Nea Salamis", "gh": 3, "ga": 3}
+{"id": "U9HmWMW9", "ts": 1776513600, "lg": "OBOS-ligaen", "h": "Stromsgodset", "a": "Sogndal", "gh": 3, "ga": 0}
+{"id": "EFdVHWBa", "ts": 1775908800, "lg": "OBOS-ligaen", "h": "Haugesund", "a": "Stromsgodset", "gh": 4, "ga": 2}
+{"id": "YRsX4PGD", "ts": 1775397600, "lg": "OBOS-ligaen", "h": "Stromsgodset", "a": "Stabaek", "gh": 2, "ga": 1}
+{"id": "W4UQdIFd", "ts": 1771423200, "lg": "Club Friendly", "h": "Odd", "a": "Stromsgodset", "gh": 2, "ga": 0}
+{"id": "Ymw7oUZ2", "ts": 1764518400, "lg": "Eliteserien", "h": "Rosenborg", "a": "Stromsgodset", "gh": 6, "ga": 0}
+{"id": "pO88W09T", "ts": 1763830800, "lg": "Eliteserien", "h": "Stromsgodset", "a": "Sandefjord", "gh": 2, "ga": 6}
+{"id": "44cZ6xnR", "ts": 1757160000, "lg": "Division 3 - Group 6", "h": "Kvik Halden", "a": "Orn", "gh": 3, "ga": 0}
+{"id": "Wjf10N0C", "ts": 1786467600, "lg": "Conference League", "h": "Apollon", "a": "Brann", "gh": 2, "ga": 1}
+{"id": "bwdg2qWa", "ts": 1785949200, "lg": "Conference League", "h": "Brann", "a": "Apollon", "gh": 0, "ga": 1}
+{"id": "QXKmBx2D", "ts": 1785690900, "lg": "Eliteserien", "h": "Brann", "a": "Rosenborg", "gh": 3, "ga": 2}
+{"id": "jq1Jkpe3", "ts": 1785430800, "lg": "Conference League", "h": "Brann", "a": "U. Cluj", "gh": 1, "ga": 3}
+{"id": "pvgI9PQ8", "ts": 1785069000, "lg": "Eliteserien", "h": "Brann", "a": "Valerenga", "gh": 2, "ga": 3}
+{"id": "Ox9XRt3d", "ts": 1784826000, "lg": "Conference League", "h": "U. Cluj", "a": "Brann", "gh": 2, "ga": 2}
+{"id": "6seSG9Vi", "ts": 1774785600, "lg": "Division 1 Women", "h": "Odd W", "a": "Tromso W", "gh": 0, "ga": 1}
+{"id": "YymzRV0t", "ts": 1760785200, "lg": "Division 1 Women", "h": "Tromso W", "a": "Kil/Hemne W", "gh": 3, "ga": 0}
+{"id": "M3MRag2s", "ts": 1760270400, "lg": "Division 1 Women", "h": "Ham-Kam W", "a": "Tromso W", "gh": 1, "ga": 4}
+{"id": "vsObdKek", "ts": 1759662000, "lg": "Division 1 Women", "h": "Tromso W", "a": "Aalesund W", "gh": 0, "ga": 2}
+{"id": "bPs5fw94", "ts": 1759057200, "lg": "Division 1 Women", "h": "Viking W", "a": "Tromso W", "gh": 1, "ga": 2}
+{"id": "C8JNs0Pb", "ts": 1757242800, "lg": "Division 1 Women", "h": "Tromso W", "a": "Fyllingsdalen W", "gh": 2, "ga": 4}
+{"id": "xYiMgi03", "ts": 1749983400, "lg": "Division 1 Women", "h": "Fyllingsdalen W", "a": "Tromso W", "gh": 2, "ga": 0}
+{"id": "McJH8loC", "ts": 1760785200, "lg": "Division 1 Women", "h": "Fyllingsdalen W", "a": "Odd W", "gh": 1, "ga": 2}
+{"id": "baExIhOP", "ts": 1760274000, "lg": "Division 1 Women", "h": "Start W", "a": "Fyllingsdalen W", "gh": 1, "ga": 1}
+{"id": "OtpW8xOc", "ts": 1758369600, "lg": "Division 1 Women", "h": "Haugesund W", "a": "Fyllingsdalen W", "gh": 4, "ga": 1}
+{"id": "A31AYeno", "ts": 1757851200, "lg": "Division 1 Women", "h": "Fyllingsdalen W", "a": "Molde W", "gh": 1, "ga": 1}
+{"id": "M1g5T94l", "ts": 1756647000, "lg": "Division 1 Women", "h": "Fyllingsdalen W", "a": "Ham-Kam W", "gh": 3, "ga": 2}
+{"id": "4SPDLDZ9", "ts": 1781442000, "lg": "Division 1 Women", "h": "Klepp W", "a": "Arna-Bjornar W", "gh": 1, "ga": 9}
+{"id": "U7xT1tYR", "ts": 1759575600, "lg": "Division 1 Women", "h": "Haugesund W", "a": "Odd W", "gh": 4, "ga": 0}
+{"id": "hMym5fNM", "ts": 1758452400, "lg": "Division 1 Women", "h": "Molde W", "a": "Odd W", "gh": 3, "ga": 1}
+{"id": "javcdavh", "ts": 1757854800, "lg": "Division 1 Women", "h": "Odd W", "a": "Start W", "gh": 0, "ga": 2}
+{"id": "jXs8mVeK", "ts": 1756634400, "lg": "Division 1 Women", "h": "Odd W", "a": "Tromso W", "gh": 1, "ga": 1}
+{"id": "vNanDlK7", "ts": 1756033200, "lg": "Division 1 Women", "h": "Aalesund W", "a": "Odd W", "gh": 2, "ga": 1}
+{"id": "dvrd2X5k", "ts": 1755349200, "lg": "Division 1 Women", "h": "Odd W", "a": "Ham-Kam W", "gh": 2, "ga": 0}
+{"id": "EXF9AAGa", "ts": 1760785200, "lg": "Division 1 Women", "h": "Arna-Bjornar W", "a": "Molde W", "gh": 3, "ga": 2}
+{"id": "0SpC5OY2", "ts": 1759669200, "lg": "Division 1 Women", "h": "Arna-Bjornar W", "a": "Start W", "gh": 1, "ga": 1}
+{"id": "dzhpoZVj", "ts": 1758373200, "lg": "Division 1 Women", "h": "Ham-Kam W", "a": "Arna-Bjornar W", "gh": 0, "ga": 4}
+{"id": "tlBvvION", "ts": 1757851200, "lg": "Division 1 Women", "h": "Arna-Bjornar W", "a": "Haugesund W", "gh": 3, "ga": 3}
+{"id": "pMHVuvfB", "ts": 1757253600, "lg": "Division 1 Women", "h": "Aalesund W", "a": "Arna-Bjornar W", "gh": 3, "ga": 1}
+{"id": "WGnYzhCE", "ts": 1755950400, "lg": "Division 1 Women", "h": "Asane W", "a": "Arna-Bjornar W", "gh": 2, "ga": 2}
+{"id": "dlIwjfmJ", "ts": 1779314400, "lg": "Copa Sudamericana", "h": "Olimpia Asuncion", "a": "Vasco", "gh": 3, "ga": 1}
+{"id": "0GfDKure", "ts": 1778848200, "lg": "Copa de Primera", "h": "Olimpia Asuncion", "a": "Recoleta", "gh": 3, "ga": 2}
+{"id": "nBPFFg0b", "ts": 1777811400, "lg": "Copa de Primera", "h": "Olimpia Asuncion", "a": "Ameliano", "gh": 1, "ga": 1}
+{"id": "GhZ2PZxn", "ts": 1777586400, "lg": "Copa Sudamericana", "h": "Vasco", "a": "Olimpia Asuncion", "gh": 3, "ga": 0}
+{"id": "8dAFScOt", "ts": 1777158000, "lg": "Copa de Primera", "h": "Libertad Asuncion", "a": "Olimpia Asuncion", "gh": 3, "ga": 2}
+{"id": "lSlJCyxq", "ts": 1776297600, "lg": "Copa Sudamericana", "h": "Olimpia Asuncion", "a": "Barracas Central", "gh": 0, "ga": 0}
+{"id": "EqpnWNBk", "ts": 1771709400, "lg": "Copa de Primera", "h": "Cerro Porteno", "a": "Olimpia Asuncion", "gh": 0, "ga": 1}
+{"id": "tt4DcBVo", "ts": 1780005600, "lg": "Copa Libertadores", "h": "Cerro Porteno", "a": "Sporting Cristal", "gh": 2, "ga": 0}
+{"id": "G6qUoItf", "ts": 1779652800, "lg": "Copa de Primera", "h": "Cerro Porteno", "a": "Rubio Nu", "gh": 2, "ga": 0}
+{"id": "Q9BPjL2e", "ts": 1779323400, "lg": "Copa Libertadores", "h": "Palmeiras", "a": "Cerro Porteno", "gh": 0, "ga": 1}
+{"id": "zFCvuAT9", "ts": 1778540400, "lg": "Copa de Primera", "h": "Cerro Porteno", "a": "Guarani", "gh": 0, "ga": 0}
+{"id": "2ZtRYnsA", "ts": 1778205600, "lg": "Copa Libertadores", "h": "Junior", "a": "Cerro Porteno", "gh": 0, "ga": 1}
+{"id": "pQ8UzagM", "ts": 1785528000, "lg": "Division Intermedia", "h": "General Caballero JLM", "a": "Benjamin Aceval", "gh": 2, "ga": 0}
+{"id": "YqvivDrH", "ts": 1785175200, "lg": "Division Intermedia", "h": "Benjamin Aceval", "a": "Guairena", "gh": 1, "ga": 1}
+{"id": "AVIoSB7r", "ts": 1784397600, "lg": "Division Intermedia", "h": "Benjamin Aceval", "a": "Resistencia", "gh": 2, "ga": 0}
+{"id": "6uVo7CE6", "ts": 1783375200, "lg": "Division Intermedia", "h": "Benjamin Aceval", "a": "Dep. Capiata", "gh": 1, "ga": 1}
+{"id": "tYqhP2Xr", "ts": 1782853200, "lg": "Division Intermedia", "h": "Independiente FBC", "a": "Benjamin Aceval", "gh": 1, "ga": 2}
+{"id": "hntr82Sq", "ts": 1780750800, "lg": "Division Intermedia", "h": "Benjamin Aceval", "a": "Tacuary", "gh": 3, "ga": 2}
+{"id": "AV2S8sm2", "ts": 1782910800, "lg": "Division Intermedia", "h": "Guairena", "a": "Deportivo Santani", "gh": 0, "ga": 2}
+{"id": "d2uDDO4M", "ts": 1780608600, "lg": "Division Intermedia", "h": "Deportivo Santani", "a": "Resistencia", "gh": 3, "ga": 0}
+{"id": "UVHann6N", "ts": 1780084800, "lg": "Division Intermedia", "h": "Sol de America", "a": "Deportivo Santani", "gh": 0, "ga": 0}
+{"id": "MovOgGle", "ts": 1779541200, "lg": "Division Intermedia", "h": "Deportivo Santani", "a": "Dep. Capiata", "gh": 1, "ga": 0}
+{"id": "Y7G317j4", "ts": 1779220800, "lg": "Division Intermedia", "h": "Independiente FBC", "a": "Deportivo Santani", "gh": 0, "ga": 2}
+{"id": "d8WVn8yB", "ts": 1778875200, "lg": "Division Intermedia", "h": "Deportivo Santani", "a": "Tacuary", "gh": 0, "ga": 0}
+{"id": "hjhurG0k", "ts": 1785787200, "lg": "Division Intermedia", "h": "3 de Noviembre", "a": "Sp. Carapegua", "gh": 0, "ga": 1}
+{"id": "v3xyreqh", "ts": 1785070800, "lg": "Division Intermedia", "h": "Sp. Carapegua", "a": "General Caballero JLM", "gh": 1, "ga": 2}
+{"id": "vmSFXXqL", "ts": 1784397600, "lg": "Division Intermedia", "h": "Sp. Carapegua", "a": "Guairena", "gh": 2, "ga": 1}
+{"id": "QPaQtgof", "ts": 1783708200, "lg": "Division Intermedia", "h": "Resistencia", "a": "Sp. Carapegua", "gh": 1, "ga": 1}
+{"id": "KIFtIoQF", "ts": 1782585000, "lg": "Division Intermedia", "h": "Dep. Capiata", "a": "Sp. Carapegua", "gh": 5, "ga": 2}
+{"id": "0Cqj6tcd", "ts": 1780750800, "lg": "Division Intermedia", "h": "Sp. Carapegua", "a": "Independiente FBC", "gh": 0, "ga": 2}
+{"id": "2wwOQPCi", "ts": 1787932800, "lg": "CZECH REPUBLIC: ChNL", "h": "Dukla Prague", "a": "Jihlava", "gh": 3, "ga": 1}
+{"id": "OKaidJ4U", "ts": 1787931000, "lg": "CZECH REPUBLIC: 3. MSFL", "h": "FK Frydek-Mistek", "a": "Sigma Olomouc B", "gh": 1, "ga": 0}
+{"id": "8W3Fqk7t", "ts": 1787929200, "lg": "CZECH REPUBLIC: 4. liga - Group D", "h": "Bohunice", "a": "Velke Mezirici", "gh": 3, "ga": 3}
+{"id": "I7O5PoMO", "ts": 1787929200, "lg": "CZECH REPUBLIC: 4. liga - Group D", "h": "Chotebor", "a": "FS Trebic", "gh": 0, "ga": 2}
+{"id": "rqRxLf6C", "ts": 1787931000, "lg": "CZECH REPUBLIC: 4. liga - Group E", "h": "Strani", "a": "Nove Sady", "gh": 9, "ga": 0}
+{"id": "GnrGHnvB", "ts": 1787931000, "lg": "CZECH REPUBLIC: Jihomoravsky KP", "h": "Rosice", "a": "Ivancice", "gh": 4, "ga": 0}
+{"id": "4QogA4Wp", "ts": 1787931000, "lg": "CZECH REPUBLIC: Jihomoravsky KP", "h": "Tisnov", "a": "Cezava", "gh": 2, "ga": 2}
+{"id": "vaSLOPWj", "ts": 1787936400, "lg": "DENMARK: Superliga", "h": "Horsens", "a": "Viborg", "gh": 2, "ga": 3}
+{"id": "E1lDzvSN", "ts": 1787936400, "lg": "DENMARK: 2nd Division", "h": "F. Amager", "a": "Thisted FC", "gh": 2, "ga": 2}
+{"id": "ppuqVHko", "ts": 1787936400, "lg": "DENMARK: 2nd Division", "h": "Nykobing", "a": "Roskilde", "gh": 2, "ga": 2}
+{"id": "OjdM2DYj", "ts": 1787936400, "lg": "DENMARK: 3rd Division", "h": "ASA Aarhus", "a": "Holstebro", "gh": 4, "ga": 0}
+{"id": "h85j8ZAT", "ts": 1787936400, "lg": "DENMARK: 3rd Division", "h": "Helsingor", "a": "Ishoj", "gh": 1, "ga": 0}
+{"id": "Y1yOX9Os", "ts": 1787925600, "lg": "EGYPT: Premier League", "h": "Al Qanah", "a": "El Gouna", "gh": 1, "ga": 1}
+{"id": "6FZVVmgf", "ts": 1787925600, "lg": "EGYPT: Premier League", "h": "Enppi", "a": "Wadi Degla", "gh": 1, "ga": 3}
+{"id": "n7joS5hJ", "ts": 1787936400, "lg": "EGYPT: Premier League", "h": "Al Ittihad", "a": "Ceramica Cleopatra", "gh": 1, "ga": 3}
+{"id": "vsmwURN6", "ts": 1787936400, "lg": "EGYPT: Premier League", "h": "ZED", "a": "Al Ahly", "gh": 0, "ga": 2}
+{"id": "AuWHhPdU", "ts": 1787923800, "lg": "EGYPT: Division 2 A", "h": "Al Nasr", "a": "Haras El Hodood", "gh": 0, "ga": 0}
+{"id": "Qi6RCSsn", "ts": 1787923800, "lg": "EGYPT: Division 2 A", "h": "Baladiyat El Mahalla", "a": "El Daklyeh", "gh": 0, "ga": 0}
+{"id": "YH9ZA6Cb", "ts": 1787923800, "lg": "EGYPT: Division 2 A", "h": "Masar", "a": "Dayrout", "gh": 4, "ga": 0}
+{"id": "EeBk7OBN", "ts": 1787923800, "lg": "EGYPT: Division 2 A", "h": "Pharco", "a": "El Mansoura", "gh": 2, "ga": 0}
+{"id": "trDs9psB", "ts": 1787923800, "lg": "EGYPT: Division 2 A", "h": "WE SC", "a": "El Ismaily", "gh": 2, "ga": 1}
+{"id": "C0b6Sk9l", "ts": 1787943600, "lg": "ENGLAND: Premier League", "h": "Crystal Palace", "a": "Manchester City", "gh": 1, "ga": 4}
+{"id": "46Z3f1sB", "ts": 1787943600, "lg": "ENGLAND: Championship", "h": "Wrexham", "a": "Birmingham", "gh": 1, "ga": 2}
+{"id": "vX1b3bv0", "ts": 1787942700, "lg": "ENGLAND: National League", "h": "AFC Fylde", "a": "Forest Green", "gh": 2, "ga": 0}
+{"id": "nc561x9C", "ts": 1787942700, "lg": "ENGLAND: National League", "h": "Aldershot", "a": "Harrogate", "gh": 3, "ga": 1}
+{"id": "hdXwqUho", "ts": 1787942700, "lg": "ENGLAND: National League", "h": "Altrincham", "a": "FC Halifax", "gh": 2, "ga": 1}
+{"id": "nJ6NjtCi", "ts": 1787942700, "lg": "ENGLAND: National League", "h": "Barrow", "a": "Yeovil", "gh": 1, "ga": 2}
+{"id": "t08wmbBG", "ts": 1787942700, "lg": "ENGLAND: National League", "h": "Gateshead", "a": "Sutton", "gh": 0, "ga": 1}
+{"id": "ED6ooxtT", "ts": 1787942700, "lg": "ENGLAND: National League", "h": "Hartlepool", "a": "Eastleigh", "gh": 0, "ga": 1}
+{"id": "pdcHuG3j", "ts": 1787942700, "lg": "ENGLAND: National League", "h": "Hornchurch", "a": "Woking", "gh": 1, "ga": 0}
+{"id": "AZl33Jec", "ts": 1787942700, "lg": "ENGLAND: National League", "h": "Scunthorpe", "a": "Solihull Moors", "gh": 3, "ga": 1}
+{"id": "rmmB1cQ9", "ts": 1787942700, "lg": "ENGLAND: National League", "h": "Southend", "a": "Kidderminster", "gh": 1, "ga": 3}
+{"id": "jDjJayeM", "ts": 1787942700, "lg": "ENGLAND: National League", "h": "Tamworth", "a": "Worthing", "gh": 3, "ga": 2}
+{"id": "MeskfFIq", "ts": 1787942700, "lg": "ENGLAND: National League", "h": "Wealdstone", "a": "Carlisle", "gh": 1, "ga": 1}
+{"id": "IiCL46Qk", "ts": 1787942700, "lg": "ENGLAND: National League North", "h": "Hednesford", "a": "Harborough", "gh": 2, "ga": 1}
+{"id": "S4hL8zqL", "ts": 1787942700, "lg": "ENGLAND: National League North", "h": "Morecambe", "a": "AFC Telford", "gh": 2, "ga": 1}
+{"id": "xvvi3E6r", "ts": 1787942700, "lg": "ENGLAND: National League North", "h": "Oxford City", "a": "Buxton", "gh": 2, "ga": 3}
+{"id": "thImpCc5", "ts": 1787942700, "lg": "ENGLAND: NPL Premier Division", "h": "Ashton Utd", "a": "Gainsborough", "gh": 1, "ga": 2}
+{"id": "KOYMoPY9", "ts": 1787942700, "lg": "ENGLAND: NPL Premier Division", "h": "Cleethorpes", "a": "Curzon Ashton", "gh": 1, "ga": 3}
+{"id": "6uXUq33M", "ts": 1787942700, "lg": "ENGLAND: NPL Premier Division", "h": "Guiseley", "a": "Lancaster", "gh": 1, "ga": 2}
+{"id": "EukOxcme", "ts": 1787942700, "lg": "ENGLAND: Southern League Premier Central", "h": "Peterborough Sports", "a": "Anstey Nomads", "gh": 2, "ga": 1}
+{"id": "buNkLq4K", "ts": 1787942700, "lg": "ENGLAND: Isthmian League Premier Division", "h": "Burgess Hill", "a": "Dartford", "gh": 2, "ga": 1}
+{"id": "SjgystVi", "ts": 1787940000, "lg": "ENGLAND: Premier League 2", "h": "Aston Villa U21", "a": "Crystal Palace U21", "gh": 0, "ga": 2}
+{"id": "04iquKa4", "ts": 1787940000, "lg": "ENGLAND: Premier League 2", "h": "Burnley U21", "a": "Reading U21", "gh": 1, "ga": 3}
+{"id": "nLkiwbUG", "ts": 1787940000, "lg": "ENGLAND: Premier League 2", "h": "Everton U21", "a": "Southampton U21", "gh": 1, "ga": 2}
+{"id": "INWGgJEc", "ts": 1787940000, "lg": "ENGLAND: Premier League 2", "h": "Ipswich U21", "a": "Blackburn U21", "gh": 4, "ga": 1}
+{"id": "jHvVVFMj", "ts": 1787940000, "lg": "ENGLAND: Premier League 2", "h": "Nottingham U21", "a": "Manchester City U21", "gh": 2, "ga": 1}
+{"id": "fogayxaT", "ts": 1787941800, "lg": "ENGLAND: Premier League 2", "h": "Norwich U21", "a": "Stoke City U21", "gh": 0, "ga": 0}
+{"id": "jmQupfcd", "ts": 1787938200, "lg": "FAROE ISLANDS: Premier League", "h": "Vikingur", "a": "HB Torshavn", "gh": 1, "ga": 3}
+{"id": "fiHBtMM8", "ts": 1787931000, "lg": "FINLAND: Ykkosliiga", "h": "JaPS", "a": "KaPa", "gh": 0, "ga": 0}
+{"id": "vqZOIIU1", "ts": 1787931000, "lg": "FINLAND: Ykkosliiga", "h": "KTP", "a": "Haka", "gh": 2, "ga": 1}
+{"id": "S0OTCts2", "ts": 1787931000, "lg": "FINLAND: Kakkonen Group A - Winners stage", "h": "Atlantis", "a": "HIFK", "gh": 1, "ga": 2}
+{"id": "je33jmVN", "ts": 1787927400, "lg": "FINLAND: Kakkonen Group B - Winners stage", "h": "Honka", "a": "P-Iirot Rauma", "gh": 1, "ga": 1}
+{"id": "4viwonAr", "ts": 1787929200, "lg": "FINLAND: Kakkonen Group B - Winners stage", "h": "EPS", "a": "HJS", "gh": 4, "ga": 1}
+{"id": "0Ad6Wnek", "ts": 1787931000, "lg": "FINLAND: Kakkonen Group B - Winners stage", "h": "Abo", "a": "Ilves 2", "gh": 1, "ga": 0}
+{"id": "OMbJv5l2", "ts": 1787931000, "lg": "FINLAND: Kakkonen Group C - Winners stage", "h": "GBK Kokkola", "a": "Jaro 2", "gh": 2, "ga": 2}
+{"id": "ttvig43e", "ts": 1787931000, "lg": "FINLAND: Kakkonen Group C - Winners stage", "h": "JBK", "a": "Narpes Kraft", "gh": 5, "ga": 0}
+{"id": "4Sv1xtml", "ts": 1787940000, "lg": "FRANCE: Ligue 2", "h": "Clermont", "a": "Sochaux", "gh": 0, "ga": 0}
+{"id": "AocSuFgt", "ts": 1787940000, "lg": "FRANCE: Ligue 2", "h": "Laval", "a": "Grenoble", "gh": 0, "ga": 3}
+{"id": "rDAZwgOh", "ts": 1787940000, "lg": "FRANCE: Ligue 2", "h": "Montpellier", "a": "Boulogne", "gh": 0, "ga": 0}
+{"id": "jwEsxXh5", "ts": 1787940000, "lg": "FRANCE: Ligue 2", "h": "Nancy", "a": "Dunkerque", "gh": 2, "ga": 0}
+{"id": "WGFcYlhU", "ts": 1787940000, "lg": "FRANCE: Ligue 2", "h": "Rodez", "a": "Pau FC", "gh": 2, "ga": 2}
+{"id": "C4WfMEZi", "ts": 1787936400, "lg": "FRANCE: National 1 - Group B", "h": "Avranches", "a": "Angouleme CFC", "gh": 1, "ga": 1}
+{"id": "fBMlBlRj", "ts": 1787936400, "lg": "FRANCE: National 1 - Group B", "h": "Stade Briochin", "a": "St. Colomban Locmine", "gh": 0, "ga": 0}
+{"id": "ldYXFHY1", "ts": 1787938200, "lg": "FRANCE: National 1 - Group C", "h": "Chateauroux", "a": "Hyeres", "gh": 0, "ga": 1}
+{"id": "hGP0yUwC", "ts": 1777726800, "lg": "Division Intermedia", "h": "Encarnacion FC", "a": "Sp. Carapegua", "gh": 2, "ga": 2}
+{"id": "QJzqtZD4", "ts": 1785070800, "lg": "Division Intermedia", "h": "Encarnacion FC", "a": "Fernando de la Mora", "gh": 0, "ga": 0}
+{"id": "j9K1OT67", "ts": 1784466000, "lg": "Division Intermedia", "h": "Encarnacion FC", "a": "3 de Noviembre", "gh": 2, "ga": 1}
+{"id": "Ii8R0ExQ", "ts": 1783792800, "lg": "Division Intermedia", "h": "General Caballero JLM", "a": "Encarnacion FC", "gh": 1, "ga": 0}
+{"id": "bFRw9Yqf", "ts": 1783366200, "lg": "Division Intermedia", "h": "Encarnacion FC", "a": "Guairena", "gh": 1, "ga": 2}
+{"id": "AkgMUO9L", "ts": 1782844200, "lg": "Division Intermedia", "h": "Resistencia", "a": "Encarnacion FC", "gh": 1, "ga": 0}
+{"id": "tUagiKw3", "ts": 1785589200, "lg": "Division Intermedia", "h": "Resistencia", "a": "Tacuary", "gh": 3, "ga": 1}
+{"id": "d67mnXbE", "ts": 1784577600, "lg": "Division Intermedia", "h": "Tacuary", "a": "Dep. Capiata", "gh": 0, "ga": 0}
+{"id": "84eDiAaC", "ts": 1783972800, "lg": "Division Intermedia", "h": "Independiente FBC", "a": "Tacuary", "gh": 2, "ga": 2}
+{"id": "ChCYJ7e3", "ts": 1782565200, "lg": "Division Intermedia", "h": "Tacuary", "a": "Atl. Tembetary", "gh": 4, "ga": 2}
+{"id": "hn0uaPkT", "ts": 1780232400, "lg": "Division Intermedia", "h": "Tacuary", "a": "Sp. Carapegua", "gh": 2, "ga": 2}
+{"id": "M5UHFcBE", "ts": 1779573600, "lg": "Division Intermedia", "h": "12 de Junio", "a": "Tacuary", "gh": 2, "ga": 2}
+{"id": "G8i6fZU0", "ts": 1783108800, "lg": "Division Intermedia", "h": "Fernando de la Mora", "a": "3 de Noviembre", "gh": 2, "ga": 2}
+{"id": "2aONKuCk", "ts": 1780957800, "lg": "Division Intermedia", "h": "3 de Noviembre", "a": "General Caballero JLM", "gh": 2, "ga": 3}
+{"id": "GOwcH65c", "ts": 1780340400, "lg": "Division Intermedia", "h": "Guairena", "a": "3 de Noviembre", "gh": 2, "ga": 1}
+{"id": "UVXPDytR", "ts": 1779627600, "lg": "Division Intermedia", "h": "3 de Noviembre", "a": "Resistencia", "gh": 1, "ga": 1}
+{"id": "YmQ9uQTp", "ts": 1778788800, "lg": "Division Intermedia", "h": "3 de Noviembre", "a": "Dep. Capiata", "gh": 0, "ga": 0}
+{"id": "Mg0nAcPs", "ts": 1785694500, "lg": "Liga 1", "h": "AD Tarma", "a": "Deportivo Garcilaso", "gh": 0, "ga": 1}
+{"id": "Qk9Ngxu1", "ts": 1785110400, "lg": "Liga 1", "h": "Deportivo Garcilaso", "a": "FC Cajamarca", "gh": 2, "ga": 1}
+{"id": "Sb3Nljc4", "ts": 1784319300, "lg": "Liga 1", "h": "Sporting Cristal", "a": "Deportivo Garcilaso", "gh": 1, "ga": 0}
+{"id": "jLAEetno", "ts": 1783879200, "lg": "Copa de la Liga", "h": "Moquegua", "a": "Deportivo Garcilaso", "gh": 0, "ga": 0}
+{"id": "ve8Vc4cJ", "ts": 1782764100, "lg": "Copa de la Liga", "h": "Deportivo Garcilaso", "a": "Binacional", "gh": 4, "ga": 1}
+{"id": "0Q0Fd0Gc", "ts": 1782082800, "lg": "Copa de la Liga", "h": "Cienciano", "a": "Deportivo Garcilaso", "gh": 2, "ga": 1}
+{"id": "UPrVGO25", "ts": 1781478000, "lg": "Copa de la Liga", "h": "Deportivo Garcilaso", "a": "Cusco", "gh": 0, "ga": 0}
+{"id": "Shy1lCRQ", "ts": 1772928000, "lg": "Liga 1", "h": "Cusco", "a": "Deportivo Garcilaso", "gh": 1, "ga": 0}
+{"id": "MXrvLZfc", "ts": 1786133700, "lg": "Liga 1", "h": "Comerciantes Unidos", "a": "Cusco", "gh": 3, "ga": 1}
+{"id": "YFCViG9D", "ts": 1785625200, "lg": "Liga 1", "h": "Cusco", "a": "Cajamarca", "gh": 4, "ga": 1}
+{"id": "K6LUnURG", "ts": 1784417400, "lg": "Liga 1", "h": "Cusco", "a": "Alianza Atl.", "gh": 4, "ga": 1}
+{"id": "8UnF5GGP", "ts": 1782687600, "lg": "Copa de la Liga", "h": "Cusco", "a": "Cienciano", "gh": 1, "ga": 2}
+{"id": "I1NOhzXO", "ts": 1787774400, "lg": "Copa de la Liga", "h": "Grau", "a": "Sport Boys", "gh": 2, "ga": 2}
+{"id": "2X126FO6", "ts": 1785616200, "lg": "Liga 1", "h": "Grau", "a": "Sport Boys", "gh": 0, "ga": 1}
+{"id": "OM021TtA", "ts": 1784993400, "lg": "Liga 1", "h": "Sport Boys", "a": "AD Tarma", "gh": 2, "ga": 0}
+{"id": "nPLz3OgB", "ts": 1783731600, "lg": "Copa de la Liga", "h": "Sport Boys", "a": "Comerciantes", "gh": 1, "ga": 0}
+{"id": "bsz1dCwC", "ts": 1782606600, "lg": "Copa de la Liga", "h": "Sport Boys", "a": "AD Cantolao", "gh": 3, "ga": 0}
+{"id": "vJKfXqmn", "ts": 1781366400, "lg": "Copa de la Liga", "h": "U. San Martin", "a": "Sport Boys", "gh": 2, "ga": 2}
+{"id": "Qa1mDqZo", "ts": 1773095400, "lg": "Liga 1", "h": "Cienciano", "a": "Sport Boys", "gh": 3, "ga": 1}
+{"id": "djR7ZDhg", "ts": 1786046400, "lg": "Liga 1", "h": "Alianza Atl.", "a": "Cienciano", "gh": 1, "ga": 0}
+{"id": "MgKq1KnR", "ts": 1785010500, "lg": "Liga 1", "h": "Juan Pablo II", "a": "Cienciano", "gh": 2, "ga": 0}
+{"id": "KYaFjCSi", "ts": 1784336400, "lg": "Liga 1", "h": "Cienciano", "a": "FBC Melgar", "gh": 1, "ga": 3}
+{"id": "KxKr12ON", "ts": 1783706400, "lg": "Copa de la Liga", "h": "Cienciano", "a": "AD Tarma", "gh": 2, "ga": 3}
+{"id": "MauNIpYh", "ts": 1781393400, "lg": "Copa de la Liga", "h": "Binacional", "a": "Cienciano", "gh": 0, "ga": 2}
+{"id": "vXozLEw0", "ts": 1785702600, "lg": "Liga 1", "h": "Moquegua", "a": "FBC Melgar", "gh": 0, "ga": 0}
+{"id": "ljPkuwQ7", "ts": 1785027600, "lg": "Liga 1", "h": "FBC Melgar", "a": "Sporting Cristal", "gh": 2, "ga": 1}
+{"id": "jHWhbY8a", "ts": 1782756000, "lg": "Copa de la Liga", "h": "FBC Melgar", "a": "Moquegua", "gh": 0, "ga": 0}
+{"id": "A3poDt2U", "ts": 1781295300, "lg": "Copa de la Liga", "h": "Tacna Heroica", "a": "FBC Melgar", "gh": 3, "ga": 2}
+{"id": "CdyEbpKh", "ts": 1780243200, "lg": "Liga 1", "h": "FBC Melgar", "a": "Alianza Atl.", "gh": 3, "ga": 1}
+{"id": "UmSFDyEL", "ts": 1779480000, "lg": "Liga 1", "h": "Juan Pablo II", "a": "FBC Melgar", "gh": 1, "ga": 1}
+{"id": "zyMwgtlU", "ts": 1773106200, "lg": "Liga 1", "h": "Alianza Lima", "a": "FBC Melgar", "gh": 3, "ga": 1}
+{"id": "EVUklCA6", "ts": 1761958800, "lg": "Liga 1", "h": "Alianza Lima", "a": "FBC Melgar", "gh": 2, "ga": 2}
+{"id": "Ac5A4ggJ", "ts": 1785634200, "lg": "Liga 1", "h": "Alianza Lima", "a": "Alianza Atl.", "gh": 3, "ga": 1}
+{"id": "IP5FebAl", "ts": 1785097800, "lg": "Liga 1", "h": "Comerciantes Unidos", "a": "Alianza Lima", "gh": 2, "ga": 2}
+{"id": "xSPsxDDb", "ts": 1784505600, "lg": "Liga 1", "h": "Alianza Lima", "a": "Sport Huancayo", "gh": 2, "ga": 1}
+{"id": "z77rmmq1", "ts": 1782669600, "lg": "Copa de la Liga", "h": "Alianza Lima", "a": "Alianza Atl.", "gh": 1, "ga": 2}
+{"id": "tW2fuUUP", "ts": 1785694500, "lg": "Ekstraklasa", "h": "GKS Katowice", "a": "Radomiak Radom", "gh": 3, "ga": 1}
+{"id": "ARE8CveM", "ts": 1784908800, "lg": "Ekstraklasa", "h": "Radomiak Radom", "a": "Wieczysta Krakow", "gh": 2, "ga": 1}
+{"id": "tMgscllD", "ts": 1784023200, "lg": "Club Friendly", "h": "Legia", "a": "Radomiak Radom", "gh": 3, "ga": 1}
+{"id": "fHV2cN4c", "ts": 1783679400, "lg": "Club Friendly", "h": "Radomiak Radom", "a": "Dyn. Kyiv", "gh": 2, "ga": 4}
+{"id": "fgg2N6tK", "ts": 1783162800, "lg": "Club Friendly", "h": "Radomiak Radom", "a": "LKS Lodz", "gh": 2, "ga": 1}
+{"id": "YZI9udSO", "ts": 1782901800, "lg": "Club Friendly", "h": "Radomiak Radom", "a": "H. Beer Sheva", "gh": 2, "ga": 3}
+{"id": "QyFVuCC6", "ts": 1775921400, "lg": "Ekstraklasa", "h": "Zaglebie", "a": "Radomiak Radom", "gh": 1, "ga": 0}
+{"id": "lxG8HQxJ", "ts": 1785674700, "lg": "Ekstraklasa", "h": "Legia", "a": "Zaglebie", "gh": 3, "ga": 1}
+{"id": "juZK69O0", "ts": 1785171600, "lg": "Ekstraklasa", "h": "Zaglebie", "a": "Piast Gliwice", "gh": 2, "ga": 0}
+{"id": "lGS1abqC", "ts": 1782495000, "lg": "Club Friendly", "h": "Zaglebie", "a": "Legnica", "gh": 3, "ga": 0}
+{"id": "vwIF9dkf", "ts": 1779550200, "lg": "Ekstraklasa", "h": "Jagiellonia", "a": "Zaglebie", "gh": 1, "ga": 0}
+{"id": "jyAA4A7c", "ts": 1778860800, "lg": "Ekstraklasa", "h": "Zaglebie", "a": "Pogon Szczecin", "gh": 0, "ga": 1}
+{"id": "ryyQCIRp", "ts": 1786550400, "lg": "Conference League", "h": "GKS Katowice", "a": "Hapoel Tel Aviv", "gh": 1, "ga": 2}
+{"id": "ELpfIv4N", "ts": 1786039200, "lg": "Conference League", "h": "Hapoel Tel Aviv", "a": "GKS Katowice", "gh": 2, "ga": 0}
+{"id": "jPAPT2Yq", "ts": 1785436200, "lg": "Conference League", "h": "GKS Katowice", "a": "Zilina", "gh": 1, "ga": 3}
+{"id": "21B0E0Q9", "ts": 1785089700, "lg": "Ekstraklasa", "h": "Wisla", "a": "GKS Katowice", "gh": 2, "ga": 1}
+{"id": "KtKgZOAM", "ts": 1784831400, "lg": "Conference League", "h": "Zilina", "a": "GKS Katowice", "gh": 2, "ga": 1}
+{"id": "GMN3kJyP", "ts": 1787929200, "lg": "GEORGIA: Crystalbet Erovnuli Liga 2", "h": "Samtredia", "a": "Odishi 1919", "gh": 3, "ga": 0}
+{"id": "CSkFw7Fs", "ts": 1787929200, "lg": "GEORGIA: Liga 3", "h": "Gonio", "a": "Iberia 1999 2", "gh": 2, "ga": 2}
+{"id": "xrtCcyAe", "ts": 1787941800, "lg": "GERMANY: Bundesliga", "h": "Bayern Munich", "a": "Stuttgart", "gh": 5, "ga": 1}
+{"id": "CfJOXpQP", "ts": 1787934600, "lg": "GERMANY: 2. Bundesliga", "h": "Bochum", "a": "VfL Osnabruck", "gh": 0, "ga": 1}
+{"id": "8bQ9OtmC", "ts": 1787934600, "lg": "GERMANY: 2. Bundesliga", "h": "Braunschweig", "a": "Hertha Berlin", "gh": 3, "ga": 5}
+{"id": "xOwqJgOr", "ts": 1787936400, "lg": "GERMANY: 3. Liga", "h": "Dusseldorf", "a": "Stuttgart II", "gh": 1, "ga": 0}
+{"id": "0Kc7WQKt", "ts": 1787936400, "lg": "GERMANY: Regionalliga Nordost", "h": "Altglienicke", "a": "Chemie Leipzig", "gh": 1, "ga": 1}
+{"id": "AeIcCNZO", "ts": 1787936400, "lg": "GERMANY: Regionalliga Nordost", "h": "Chemnitzer", "a": "Jena", "gh": 1, "ga": 1}
+{"id": "fHoqmS1b", "ts": 1787938200, "lg": "GERMANY: Regionalliga West", "h": "Bonner", "a": "Bochum II", "gh": 3, "ga": 3}
+{"id": "WIpvdNpT", "ts": 1787938200, "lg": "GERMANY: Regionalliga West", "h": "Rodinghausen", "a": "Siegen", "gh": 1, "ga": 2}
+{"id": "jLhUwOOp", "ts": 1787938200, "lg": "GERMANY: Regionalliga West", "h": "Westfalia Rhynern", "a": "FC Gutersloh", "gh": 1, "ga": 1}
+{"id": "29uLYDcm", "ts": 1787936400, "lg": "GERMANY: Regionalliga Sudwest", "h": "Fulda-Lehnerz", "a": "FSV Frankfurt", "gh": 2, "ga": 2}
+{"id": "v9PhmDCt", "ts": 1787936400, "lg": "GERMANY: Regionalliga Sudwest", "h": "Offenbach", "a": "Kaiserslautern II", "gh": 4, "ga": 0}
+{"id": "hAYe4nFb", "ts": 1787932800, "lg": "GERMANY: Regionalliga Bayern", "h": "Ansbach", "a": "Schwaben Augsburg", "gh": 1, "ga": 2}
+{"id": "U9ITIoUi", "ts": 1787936400, "lg": "GERMANY: Regionalliga Bayern", "h": "Schweinfurt", "a": "Furth II", "gh": 5, "ga": 2}
+{"id": "IJEEv4i3", "ts": 1787936400, "lg": "GERMANY: Oberliga NOFV-Nord", "h": "Rathenow", "a": "Neustrelitz", "gh": 2, "ga": 1}
+{"id": "jDMSG0ad", "ts": 1787940000, "lg": "GERMANY: Oberliga NOFV-Nord", "h": "Schwerin", "a": "TB Berlin", "gh": 2, "ga": 1}
+{"id": "2VnLPNDN", "ts": 1787936400, "lg": "GERMANY: Oberliga NOFV- Sud", "h": "Bautzen", "a": "Auerbach", "gh": 0, "ga": 3}
+{"id": "E1EkwQ3L", "ts": 1787934600, "lg": "GERMANY: Oberliga Hamburg", "h": "HEBC Hamburg", "a": "Vorwarts-Wacker", "gh": 0, "ga": 1}
+{"id": "jV7j5pPP", "ts": 1787936400, "lg": "GERMANY: Oberliga Hamburg", "h": "Wandsbeker Concordia", "a": "Altona", "gh": 3, "ga": 4}
+{"id": "0OaxdtnC", "ts": 1787938200, "lg": "GERMANY: Oberliga Hamburg", "h": "ETSV Hamburg", "a": "TSV Buchholz 08", "gh": 1, "ga": 4}
+{"id": "hbdUc2Ha", "ts": 1787938200, "lg": "GERMANY: Oberliga Hamburg", "h": "SC Victoria Hamburg", "a": "HT 16", "gh": 1, "ga": 0}
+{"id": "KpbMaOnm", "ts": 1787938200, "lg": "GERMANY: Oberliga Hamburg", "h": "Suderelbe", "a": "Paloma", "gh": 2, "ga": 5}
+{"id": "be1EHgqS", "ts": 1787936400, "lg": "GERMANY: Oberliga Bremen", "h": "OSC Bremerhaven", "a": "Leher", "gh": 3, "ga": 0}
+{"id": "EslHVE6r", "ts": 1787938200, "lg": "GERMANY: Oberliga Niedersachsen", "h": "Hildesheim", "a": "Verden", "gh": 3, "ga": 1}
+{"id": "M7iPThye", "ts": 1787940000, "lg": "GERMANY: Oberliga Niedersachsen", "h": "Wilhelmshaven", "a": "Spelle-Venhaus", "gh": 0, "ga": 1}
+{"id": "SANQrlmI", "ts": 1787932800, "lg": "GERMANY: Oberliga Hessen", "h": "Fernwald", "a": "Hanauer SC", "gh": 3, "ga": 3}
+{"id": "v7I2lhJt", "ts": 1787938200, "lg": "GERMANY: Oberliga Hessen", "h": "Darmstadt U21", "a": "Unter-Flockenbach", "gh": 2, "ga": 2}
+{"id": "YTFHXuzQ", "ts": 1787938200, "lg": "GERMANY: Oberliga Rheinland-Pfalz/Saar", "h": "Cosmos Koblenz", "a": "Emmelshausen-Karbach", "gh": 4, "ga": 0}
+{"id": "z5GtiB5T", "ts": 1787932800, "lg": "GERMANY: Oberliga Bayern Nord", "h": "Fortuna Regensburg", "a": "Bayern Hof", "gh": 3, "ga": 3}
+{"id": "U7DYhXzH", "ts": 1787932800, "lg": "GERMANY: Oberliga Bayern Nord", "h": "Stadeln", "a": "Kornburg", "gh": 1, "ga": 1}
+{"id": "67c67WkA", "ts": 1787936400, "lg": "GERMANY: Oberliga Bayern Nord", "h": "Aschaffenburg", "a": "DJK Bamberg", "gh": 3, "ga": 0}
+{"id": "Wz2CokTj", "ts": 1787936400, "lg": "GERMANY: Oberliga Bayern Nord", "h": "Gebenbach", "a": "Neumarkt", "gh": 3, "ga": 0}
+{"id": "x20HL6VA", "ts": 1787932800, "lg": "GERMANY: Oberliga Bayern S\u00fcd", "h": "Landshut", "a": "Heimstetten", "gh": 3, "ga": 3}
+{"id": "4l29NS0b", "ts": 1787932800, "lg": "GERMANY: Oberliga Bayern S\u00fcd", "h": "Schalding", "a": "FC Schwaig", "gh": 0, "ga": 4}
+{"id": "IeSVQtjg", "ts": 1787934600, "lg": "GERMANY: Oberliga Bayern S\u00fcd", "h": "Hankofen-Hailing", "a": "Geretsried", "gh": 1, "ga": 0}
+{"id": "WIYoNbkI", "ts": 1787936400, "lg": "GERMANY: Oberliga Bayern S\u00fcd", "h": "TSV 1880 Wasserburg", "a": "Munich 1860 II", "gh": 4, "ga": 0}
+{"id": "QLVwPKK5", "ts": 1787938200, "lg": "GERMANY: Oberliga Bayern S\u00fcd", "h": "Erlbach", "a": "Ismaning", "gh": 2, "ga": 0}
+{"id": "GEfxcb8e", "ts": 1787938200, "lg": "GERMANY: Oberliga Mittelrhein", "h": "VfL Vichttal", "a": "Duren", "gh": 6, "ga": 2}
+{"id": "bPEGJyPk", "ts": 1787938200, "lg": "GERMANY: Oberliga Niederrhein", "h": "SSVg Velbert", "a": "Schonnebeck", "gh": 3, "ga": 5}
+{"id": "pSNtfAiB", "ts": 1787934600, "lg": "GERMANY: Bundesliga Women", "h": "Koln W", "a": "Hoffenheim W", "gh": 1, "ga": 0}
+{"id": "n34fzElS", "ts": 1787918400, "lg": "HONG KONG: Premier League", "h": "Lee Man Warriors", "a": "Shatin", "gh": 3, "ga": 0}
+{"id": "z5OXb2XA", "ts": 1787940000, "lg": "HUNGARY: NB I.", "h": "Debrecen", "a": "MTK Budapest", "gh": 2, "ga": 2}
+{"id": "td1veEAj", "ts": 1787944500, "lg": "ICELAND: Division 1", "h": "Throttur", "a": "Aegir", "gh": 7, "ga": 2}
+{"id": "lxHtoPLM", "ts": 1787944500, "lg": "ICELAND: Division 2", "h": "Kari", "a": "Throttur Vogar", "gh": 1, "ga": 0}
+{"id": "2FUIInh3", "ts": 1787909400, "lg": "INDIA: Calcutta Premier Division", "h": "Aryan", "a": "United SC", "gh": 2, "ga": 1}
+{"id": "zTSQGQMF", "ts": 1787909400, "lg": "INDIA: Calcutta Premier Division", "h": "Coal India", "a": "Mohammedan", "gh": 2, "ga": 0}
+{"id": "z9xXfq0d", "ts": 1787909400, "lg": "INDIA: Calcutta Premier Division", "h": "Kalighat SL", "a": "Measures Club", "gh": 1, "ga": 1}
+{"id": "Cj1RCsBL", "ts": 1787931000, "lg": "IRAN: Persian Gulf Pro League", "h": "Chadormalu", "a": "Tractor", "gh": 0, "ga": 2}
+{"id": "4QcJE3t9", "ts": 1787931000, "lg": "IRAN: Persian Gulf Pro League", "h": "Paykan", "a": "Esteghlal Khuzestan", "gh": 0, "ga": 0}
+{"id": "Gnj55a3e", "ts": 1787931900, "lg": "IRAN: Persian Gulf Pro League", "h": "Aluminium Arak", "a": "Kheybar Khorramabad", "gh": 2, "ga": 2}
+{"id": "rZic7LYr", "ts": 1787931900, "lg": "IRAN: Persian Gulf Pro League", "h": "Nassaji Mazandaran", "a": "Shams Azar Qazvin", "gh": 0, "ga": 2}
+{"id": "lE3C3wY7", "ts": 1787932800, "lg": "IRAN: Persian Gulf Pro League", "h": "Sepahan", "a": "Gol Gohar", "gh": 2, "ga": 0}
+{"id": "GKebRtQE", "ts": 1787938200, "lg": "IRAN: Persian Gulf Pro League", "h": "Foolad", "a": "Esteghlal F.C.", "gh": 0, "ga": 0}
+{"id": "f1UoDTT0", "ts": 1787942700, "lg": "IRELAND: Premier Division", "h": "Bohemians", "a": "Sligo Rovers", "gh": 3, "ga": 0}
+{"id": "dQAtZAjK", "ts": 1787942700, "lg": "IRELAND: Premier Division", "h": "Galway", "a": "Shelbourne", "gh": 1, "ga": 1}
+{"id": "hddCTlEs", "ts": 1787942700, "lg": "IRELAND: Premier Division", "h": "St. Patricks", "a": "Waterford", "gh": 0, "ga": 2}
+{"id": "tISgB7bD", "ts": 1787943600, "lg": "IRELAND: Premier Division", "h": "Drogheda", "a": "Dundalk", "gh": 2, "ga": 3}
+{"id": "AeRHUHbd", "ts": 1787942700, "lg": "IRELAND: Division 1", "h": "Athlone", "a": "Bray", "gh": 2, "ga": 1}
+{"id": "2kE3hLj3", "ts": 1787942700, "lg": "IRELAND: Division 1", "h": "Cobh Ramblers", "a": "Longford", "gh": 2, "ga": 2}
+{"id": "bH7CjaLF", "ts": 1787942700, "lg": "IRELAND: Division 1", "h": "Cork City", "a": "Wexford", "gh": 2, "ga": 0}
+{"id": "6sBKlwjS", "ts": 1787942700, "lg": "IRELAND: Division 1", "h": "Kerry", "a": "Treaty United", "gh": 3, "ga": 1}
+{"id": "jFniqHDk", "ts": 1787942700, "lg": "IRELAND: Division 1", "h": "UC Dublin", "a": "Finn Harps", "gh": 5, "ga": 4}
+{"id": "QVLv8qEk", "ts": 1779550200, "lg": "Ekstraklasa", "h": "Pogon Szczecin", "a": "GKS Katowice", "gh": 1, "ga": 1}
+{"id": "IimtVfbl", "ts": 1775297700, "lg": "Ekstraklasa", "h": "GKS Katowice", "a": "Wisla Plock", "gh": 1, "ga": 0}
+{"id": "lEwbl77t", "ts": 1786127400, "lg": "Ekstraklasa", "h": "Wisla", "a": "Wisla Plock", "gh": 2, "ga": 1}
+{"id": "jPftWPiC", "ts": 1785513600, "lg": "Ekstraklasa", "h": "Wisla Plock", "a": "Widzew Lodz", "gh": 0, "ga": 0}
+{"id": "hEbn5dmd", "ts": 1785069900, "lg": "Ekstraklasa", "h": "Rakow", "a": "Wisla Plock", "gh": 1, "ga": 2}
+{"id": "Ei2ZTQz9", "ts": 1779550200, "lg": "Ekstraklasa", "h": "Lech Poznan", "a": "Wisla Plock", "gh": 2, "ga": 2}
+{"id": "KfQjlkNG", "ts": 1778945400, "lg": "Ekstraklasa", "h": "Wisla Plock", "a": "Gornik Zabrze", "gh": 0, "ga": 1}
+{"id": "tCC0Jn86", "ts": 1785776400, "lg": "Ekstraklasa", "h": "Cracovia", "a": "Pogon Szczecin", "gh": 0, "ga": 2}
+{"id": "6c0v7IIq", "ts": 1784917800, "lg": "Ekstraklasa", "h": "Pogon Szczecin", "a": "Legia", "gh": 0, "ga": 1}
+{"id": "AFU3bWDj", "ts": 1783791000, "lg": "Club Friendly", "h": "Fenerbahce", "a": "Pogon Szczecin", "gh": 4, "ga": 0}
+{"id": "WISFt9nR", "ts": 1783503000, "lg": "Club Friendly", "h": "Pogon Szczecin", "a": "Chrobry Glogow", "gh": 2, "ga": 1}
+{"id": "vy5HZk8N", "ts": 1778340600, "lg": "Ekstraklasa", "h": "Jagiellonia", "a": "Pogon Szczecin", "gh": 3, "ga": 2}
+{"id": "rXyiNLI0", "ts": 1777822200, "lg": "Ekstraklasa", "h": "Pogon Szczecin", "a": "Wisla Plock", "gh": 3, "ga": 0}
+{"id": "IBdYXoNa", "ts": 1785588300, "lg": "Ekstraklasa", "h": "Piast Gliwice", "a": "Wisla", "gh": 4, "ga": 3}
+{"id": "fTFK5Tvh", "ts": 1782547200, "lg": "Club Friendly", "h": "Wisla", "a": "Termalica B-B.", "gh": 3, "ga": 4}
+{"id": "tOB9bY44", "ts": 1779633000, "lg": "Division 1", "h": "Wisla", "a": "Pogon Siedlce", "gh": 2, "ga": 0}
+{"id": "zqpKiQiK", "ts": 1778869800, "lg": "Division 1", "h": "Polonia Warszawa", "a": "Wisla", "gh": 0, "ga": 1}
+{"id": "QgzrJ5oe", "ts": 1778266800, "lg": "Division 1", "h": "Wisla", "a": "Chrobry Glogow", "gh": 2, "ga": 0}
+{"id": "6BQJSIIi", "ts": 1777832100, "lg": "Division 1", "h": "S. Rzeszow", "a": "Wisla", "gh": 1, "ga": 2}
+{"id": "ngPzS5Nb", "ts": 1785171600, "lg": "Division 1", "h": "Legnica", "a": "Podbeskidzie", "gh": 1, "ga": 1}
+{"id": "6oaXbsam", "ts": 1779633000, "lg": "Division 1", "h": "Legnica", "a": "Puszcza", "gh": 2, "ga": 1}
+{"id": "6iKtLRGr", "ts": 1778347800, "lg": "Division 1", "h": "Wieczysta Krakow", "a": "Legnica", "gh": 0, "ga": 1}
+{"id": "GMByGuZo", "ts": 1777743000, "lg": "Division 1", "h": "Legnica", "a": "Stal Mielec", "gh": 1, "ga": 0}
+{"id": "OpCnIpkQ", "ts": 1777138200, "lg": "Division 1", "h": "Pogon Siedlce", "a": "Legnica", "gh": 2, "ga": 0}
+{"id": "8jiU3fUF", "ts": 1776700800, "lg": "Division 1", "h": "Legnica", "a": "Leczna", "gh": 0, "ga": 2}
+{"id": "OGoJ9O7U", "ts": 1784919600, "lg": "Division 1", "h": "Odra Opole", "a": "Arka Gdynia", "gh": 0, "ga": 1}
+{"id": "INT6BIKs", "ts": 1779550200, "lg": "Ekstraklasa", "h": "Rakow", "a": "Arka Gdynia", "gh": 3, "ga": 0}
+{"id": "nsSrjBh4", "ts": 1779123600, "lg": "Ekstraklasa", "h": "Arka Gdynia", "a": "Termalica B-B.", "gh": 2, "ga": 3}
+{"id": "rZlKQZ7e", "ts": 1778688000, "lg": "Ekstraklasa", "h": "Arka Gdynia", "a": "Gornik Zabrze", "gh": 0, "ga": 0}
+{"id": "j1g1wY8b", "ts": 1778265000, "lg": "Ekstraklasa", "h": "Lech Poznan", "a": "Arka Gdynia", "gh": 1, "ga": 1}
+{"id": "GO4uYHFL", "ts": 1777309200, "lg": "Ekstraklasa", "h": "Piast Gliwice", "a": "Arka Gdynia", "gh": 4, "ga": 1}
+{"id": "Q3QjONMN", "ts": 1785691800, "lg": "Division 1", "h": "Grodzisk M.", "a": "Puszcza", "gh": 1, "ga": 0}
+{"id": "UZq3D685", "ts": 1785087000, "lg": "Division 1", "h": "Puszcza", "a": "Polonia Warszawa", "gh": 0, "ga": 1}
+{"id": "KGLjn4Fs", "ts": 1779120000, "lg": "Division 1", "h": "Puszcza", "a": "LKS Lodz", "gh": 1, "ga": 0}
+{"id": "Egu2S9O8", "ts": 1778347800, "lg": "Division 1", "h": "Stal Mielec", "a": "Puszcza", "gh": 1, "ga": 1}
+{"id": "tUd1Ay3N", "ts": 1777651200, "lg": "Division 1", "h": "Puszcza", "a": "Pruszkow", "gh": 1, "ga": 0}
+{"id": "U5mf32kt", "ts": 1777055400, "lg": "Division 1", "h": "Wisla", "a": "Puszcza", "gh": 2, "ga": 2}
+{"id": "8ffvE0Q8", "ts": 1785951900, "lg": "Polish Cup", "h": "Skierniewice", "a": "Kleczew", "gh": 1, "ga": 1}
+{"id": "YT91VvUj", "ts": 1785591000, "lg": "Division 1", "h": "Polonia Warszawa", "a": "Skierniewice", "gh": 3, "ga": 1}
+{"id": "vTLSTRhn", "ts": 1785078000, "lg": "Division 1", "h": "Skierniewice", "a": "Stal Mielec", "gh": 1, "ga": 2}
+{"id": "6oD9sLXG", "ts": 1780144200, "lg": "Division 2", "h": "KKS Kalisz", "a": "Skierniewice", "gh": 2, "ga": 1}
+{"id": "GhSPsURa", "ts": 1779472800, "lg": "Division 2", "h": "Skierniewice", "a": "Chojniczanka", "gh": 2, "ga": 3}
+{"id": "GfTTPe6E", "ts": 1778857200, "lg": "Division 2", "h": "LKS Lodz II", "a": "Skierniewice", "gh": 1, "ga": 3}
+{"id": "d67Gvq74", "ts": 1785513600, "lg": "Division 1", "h": "LKS Lodz", "a": "Polonia Bytom", "gh": 2, "ga": 1}
+{"id": "OGRyAX1D", "ts": 1784986200, "lg": "Division 1", "h": "Pogon Siedlce", "a": "LKS Lodz", "gh": 1, "ga": 1}
+{"id": "r3utxE0U", "ts": 1779982200, "lg": "Division 1", "h": "Chrobry Glogow", "a": "LKS Lodz", "gh": 1, "ga": 1}
+{"id": "xW8143yQ", "ts": 1779633000, "lg": "Division 1", "h": "LKS Lodz", "a": "Leczna", "gh": 3, "ga": 1}
+{"id": "ALYAQmgL", "ts": 1778517000, "lg": "Division 1", "h": "Slask Wroclaw", "a": "LKS Lodz", "gh": 2, "ga": 2}
+{"id": "2JXCvv14", "ts": 1778169600, "lg": "Division 1", "h": "LKS Lodz", "a": "Grodzisk M.", "gh": 3, "ga": 2}
+{"id": "xv9pxWMF", "ts": 1771866000, "lg": "Division 1", "h": "Stal Mielec", "a": "LKS Lodz", "gh": 1, "ga": 2}
+{"id": "0z2mgrMc", "ts": 1785682800, "lg": "Division 1", "h": "Stal Mielec", "a": "Podbeskidzie", "gh": 3, "ga": 3}
+{"id": "zRjleabC", "ts": 1779633000, "lg": "Division 1", "h": "Stal Mielec", "a": "Polonia Bytom", "gh": 4, "ga": 1}
+{"id": "CAbPVrV0", "ts": 1778860800, "lg": "Division 1", "h": "Pogon Siedlce", "a": "Stal Mielec", "gh": 1, "ga": 3}
+{"id": "CApz9tCC", "ts": 1777138200, "lg": "Division 1", "h": "Stal Mielec", "a": "Slask Wroclaw", "gh": 2, "ga": 3}
+{"id": "0zizrD7d", "ts": 1776441600, "lg": "Division 1", "h": "Chrobry Glogow", "a": "Stal Mielec", "gh": 2, "ga": 1}
+{"id": "WGFLzEpd", "ts": 1785513600, "lg": "Division 2", "h": "Pruszkow", "a": "Legia II", "gh": 2, "ga": 1}
+{"id": "UNcdmWC4", "ts": 1784977200, "lg": "Division 2", "h": "Legia II", "a": "S. Wola", "gh": 0, "ga": 2}
+{"id": "j3G7MV75", "ts": 1776261600, "lg": "III Liga - Group I", "h": "Legia II", "a": "Plock II", "gh": 3, "ga": 0}
+{"id": "8jURovgc", "ts": 1784998800, "lg": "Division 2", "h": "Zawisza", "a": "Kleczew", "gh": 1, "ga": 1}
+{"id": "zV9rcul1", "ts": 1781019000, "lg": "Division 2", "h": "Kleczew", "a": "Polkowice", "gh": 2, "ga": 1}
+{"id": "rNiya1Jl", "ts": 1780758000, "lg": "Division 2", "h": "Polkowice", "a": "Kleczew", "gh": 0, "ga": 1}
+{"id": "CrGHua2T", "ts": 1780144200, "lg": "Division 2", "h": "LKS Lodz II", "a": "Kleczew", "gh": 1, "ga": 2}
+{"id": "dleaR8sJ", "ts": 1779541200, "lg": "Division 2", "h": "Kleczew", "a": "Sandecja Nowy S.", "gh": 2, "ga": 5}
+{"id": "xAHxOZzR", "ts": 1778947200, "lg": "Division 2", "h": "Podbeskidzie", "a": "Kleczew", "gh": 3, "ga": 0}
+{"id": "b3HDxzGq", "ts": 1785607200, "lg": "Division 2", "h": "Zielona Gora", "a": "Ol. Grudziadz", "gh": 2, "ga": 2}
+{"id": "bLGWWASN", "ts": 1785002400, "lg": "Division 2", "h": "Zielona Gora", "a": "Bielsko-Biala", "gh": 1, "ga": 1}
+{"id": "xhDEcutS", "ts": 1785938400, "lg": "Polish Cup", "h": "Podbeskidzie", "a": "Hutnik Krakow", "gh": 2, "ga": 0}
+{"id": "x8g2z5jD", "ts": 1785596400, "lg": "Division 2", "h": "Hutnik Krakow", "a": "Swit Szczecin", "gh": 3, "ga": 0}
+{"id": "Mcflkhrh", "ts": 1784999400, "lg": "Division 2", "h": "Sandecja Nowy S.", "a": "Hutnik Krakow", "gh": 0, "ga": 0}
+{"id": "AJJ0qs34", "ts": 1780144200, "lg": "Division 2", "h": "Hutnik Krakow", "a": "S. Wola", "gh": 0, "ga": 1}
+{"id": "GG44xZkK", "ts": 1779643800, "lg": "Division 2", "h": "Ol. Grudziadz", "a": "Hutnik Krakow", "gh": 2, "ga": 2}
+{"id": "fkrZ3Eqe", "ts": 1779030000, "lg": "Division 2", "h": "Hutnik Krakow", "a": "Podhale Nowy Targ", "gh": 1, "ga": 0}
+{"id": "G07hjcY1", "ts": 1785945600, "lg": "Polish Cup", "h": "Sandecja Nowy S.", "a": "Bielsko-Biala", "gh": 3, "ga": 0}
+{"id": "SKQsrdhM", "ts": 1785673800, "lg": "Division 2", "h": "Bielsko-Biala", "a": "Zawisza", "gh": 3, "ga": 0}
+{"id": "Mcw6Nato", "ts": 1780144200, "lg": "Division 2", "h": "Chojniczanka", "a": "Bielsko-Biala", "gh": 2, "ga": 0}
+{"id": "8EqqVjrf", "ts": 1779548400, "lg": "Division 2", "h": "Bielsko-Biala", "a": "Swit Szczecin", "gh": 1, "ga": 0}
+{"id": "8CWpep1N", "ts": 1778342400, "lg": "Division 2", "h": "Ol. Grudziadz", "a": "Bielsko-Biala", "gh": 2, "ga": 0}
+{"id": "6kmc2tig", "ts": 1777723200, "lg": "Division 2", "h": "Bielsko-Biala", "a": "LKS Lodz II", "gh": 1, "ga": 0}
+{"id": "IJPmKmtT", "ts": 1761395400, "lg": "Division 2", "h": "Bielsko-Biala", "a": "Ol. Grudziadz", "gh": 2, "ga": 2}
+{"id": "tM9fEKYH", "ts": 1786874400, "lg": "Division 2", "h": "Pruszkow", "a": "Ol. Grudziadz", "gh": 1, "ga": 0}
+{"id": "WzKCwKld", "ts": 1785942000, "lg": "Polish Cup", "h": "Ol. Grudziadz", "a": "Swit Szczecin", "gh": 3, "ga": 3}
+{"id": "zL04oAsH", "ts": 1785074400, "lg": "Division 2", "h": "Avia Swidnik", "a": "Ol. Grudziadz", "gh": 4, "ga": 1}
+{"id": "biJS1pvp", "ts": 1780408800, "lg": "Division 2", "h": "Ol. Grudziadz", "a": "Sandecja Nowy S.", "gh": 1, "ga": 2}
+{"id": "KlwqdKnA", "ts": 1780144200, "lg": "Division 2", "h": "Swit Szczecin", "a": "Ol. Grudziadz", "gh": 0, "ga": 1}
+{"id": "bNL4utKq", "ts": 1785949200, "lg": "Polish Cup", "h": "Tychy", "a": "Zaglebie Sosnowiec", "gh": 1, "ga": 0}
+{"id": "bN77bHx3", "ts": 1785522600, "lg": "Division 2", "h": "S. Wola", "a": "Tychy", "gh": 1, "ga": 2}
+{"id": "Qg3PYWcB", "ts": 1785087000, "lg": "Division 2", "h": "Chojniczanka", "a": "Tychy", "gh": 0, "ga": 1}
+{"id": "vc0HX40l", "ts": 1779030000, "lg": "Division 1", "h": "Grodzisk M.", "a": "Tychy", "gh": 0, "ga": 0}
+{"id": "vPORQdm4", "ts": 1778416200, "lg": "Division 1", "h": "Tychy", "a": "Ruch Chorzow", "gh": 0, "ga": 4}
+{"id": "bouBaKl5", "ts": 1777820400, "lg": "Division 1", "h": "Chrobry Glogow", "a": "Tychy", "gh": 3, "ga": 2}
+{"id": "4vF6a1BF", "ts": 1785938400, "lg": "Polish Cup", "h": "Slask Wroclaw II", "a": "S. Wola", "gh": 3, "ga": 2}
+{"id": "MHnnvmil", "ts": 1785600000, "lg": "Division 2", "h": "R. Rzeszow", "a": "Slask Wroclaw II", "gh": 1, "ga": 5}
+{"id": "U372Rljo", "ts": 1784970900, "lg": "Division 2", "h": "Podhale Nowy Targ", "a": "Slask Wroclaw II", "gh": 3, "ga": 1}
+{"id": "S8Sd76GM", "ts": 1780398000, "lg": "Division 2", "h": "Podbeskidzie", "a": "Slask Wroclaw II", "gh": 2, "ga": 1}
+{"id": "8SOHqjcm", "ts": 1779548400, "lg": "Division 2", "h": "Slask Wroclaw II", "a": "LKS Lodz II", "gh": 4, "ga": 1}
+{"id": "xYaPEVcD", "ts": 1779030900, "lg": "Division 2", "h": "Swit Szczecin", "a": "Slask Wroclaw II", "gh": 4, "ga": 3}
+{"id": "lQYhFhqK", "ts": 1728738000, "lg": "III Liga - Group I", "h": "Stomil Olsztyn", "a": "Pelikan", "gh": 1, "ga": 2}
+{"id": "z36SQ9Pr", "ts": 1727013600, "lg": "III Liga - Group I", "h": "Pelikan", "a": "Sokol Aleksandrow L.", "gh": 1, "ga": 0}
+{"id": "x4QLSiCl", "ts": 1772287200, "lg": "III Liga - Group I", "h": "GKS Belchatow", "a": "Troszyn", "gh": 0, "ga": 3}
+{"id": "dAd8dTVh", "ts": 1763208000, "lg": "III Liga - Group I", "h": "Troszyn", "a": "Wikielec", "gh": 4, "ga": 1}
+{"id": "n9dUWZXH", "ts": 1757163600, "lg": "III Liga - Group I", "h": "Troszyn", "a": "Widzew Lodz II", "gh": 6, "ga": 0}
+{"id": "UBWe7EKi", "ts": 1776592800, "lg": "III Liga - Group I", "h": "Widzew Lodz II", "a": "Wasilkow", "gh": 4, "ga": 1}
+{"id": "4x1KxZvK", "ts": 1762534800, "lg": "III Liga - Group I", "h": "T. Mazowiecki", "a": "Mlawa", "gh": 1, "ga": 3}
+{"id": "jBWcvaXg", "ts": 1759248000, "lg": "Polish Cup", "h": "T. Mazowiecki", "a": "Slask Wroclaw", "gh": 1, "ga": 2}
+{"id": "rL8EOxDO", "ts": 1785938400, "lg": "Polish Cup", "h": "Pruszkow", "a": "LKS Lodz II", "gh": 3, "ga": 1}
+{"id": "0nTxc6WA", "ts": 1778252400, "lg": "Division 2", "h": "LKS Lodz II", "a": "Swit Szczecin", "gh": 1, "ga": 1}
+{"id": "4M4dXLiJ", "ts": 1777042800, "lg": "Division 2", "h": "R. Rzeszow", "a": "LKS Lodz II", "gh": 3, "ga": 0}
+{"id": "WzVbSZ9M", "ts": 1776592800, "lg": "Division 2", "h": "LKS Lodz II", "a": "Podhale Nowy Targ", "gh": 1, "ga": 1}
+{"id": "dbjd8EIj", "ts": 1775923200, "lg": "Division 2", "h": "Zaglebie Sosnowiec", "a": "LKS Lodz II", "gh": 0, "ga": 2}
+{"id": "G6gXn7jD", "ts": 1775138400, "lg": "Division 2", "h": "LKS Lodz II", "a": "S. Wola", "gh": 0, "ga": 2}
+{"id": "A52kGPr3", "ts": 1698490800, "lg": "III Liga - Group I", "h": "Legionowo", "a": "Zambrow", "gh": 0, "ga": 0}
+{"id": "Cf0VDE0q", "ts": 1694268000, "lg": "III Liga - Group I", "h": "Zambrow", "a": "Pilica Bialobrzegi", "gh": 4, "ga": 0}
+{"id": "tKPjYDlR", "ts": 1774450800, "lg": "III Liga - Group I", "h": "Biala Piska", "a": "Plock II", "gh": 1, "ga": 2}
+{"id": "4WPSZosT", "ts": 1772881200, "lg": "III Liga - Group I", "h": "Plock II", "a": "Mlawa", "gh": 2, "ga": 1}
+{"id": "E3l9qBSp", "ts": 1776517200, "lg": "III Liga - Group I", "h": "Swit Mazowiecki", "a": "Zabki", "gh": 3, "ga": 3}
+{"id": "b9wZxihn", "ts": 1774778400, "lg": "III Liga - Group I", "h": "Warta Sieradz", "a": "Swit Mazowiecki", "gh": 3, "ga": 1}
+{"id": "69NhaoWq", "ts": 1779012000, "lg": "III Liga - Group II", "h": "Lech Poznan II", "a": "Zawisza", "gh": 2, "ga": 4}
+{"id": "AaRpCoMP", "ts": 1760794200, "lg": "III Liga - Group II", "h": "Rewal", "a": "Blekitni Stargard", "gh": 0, "ga": 2}
+{"id": "AJoVygNb", "ts": 1759507200, "lg": "III Liga - Group II", "h": "Zawisza", "a": "Blekitni Stargard", "gh": 2, "ga": 0}
+{"id": "lbqDlgGt", "ts": 1780507740, "lg": "Division 2", "h": "Ostrowiec Swietokrzyski", "a": "Luzino", "gh": 2, "ga": 1}
+{"id": "KdmvUmIi", "ts": 1774717200, "lg": "III Liga - Group II", "h": "Zawisza", "a": "Unia Swarzedz", "gh": 1, "ga": 0}
+{"id": "4KTDsM4s", "ts": 1778328000, "lg": "III Liga - Group II", "h": "Pogon Szczecin II", "a": "Kluczevia Stargard", "gh": 2, "ga": 1}
+{"id": "SvVYp2dM", "ts": 1785945600, "lg": "Polish Cup", "h": "Leczna", "a": "KKS Kalisz", "gh": 2, "ga": 0}
+{"id": "x8GYu8dC", "ts": 1779465600, "lg": "Division 2", "h": "Zaglebie Sosnowiec", "a": "KKS Kalisz", "gh": 3, "ga": 0}
+{"id": "jHyr2hE7", "ts": 1779039000, "lg": "Division 2", "h": "KKS Kalisz", "a": "Warta Poznan", "gh": 0, "ga": 2}
+{"id": "n3iK9qGG", "ts": 1778324400, "lg": "Division 2", "h": "Slask Wroclaw II", "a": "KKS Kalisz", "gh": 3, "ga": 2}
+{"id": "bc540KL5", "ts": 1777651200, "lg": "Division 2", "h": "R. Rzeszow", "a": "KKS Kalisz", "gh": 0, "ga": 1}
+{"id": "dIEwLi2d", "ts": 1776441600, "lg": "Division 2", "h": "Sandecja Nowy S.", "a": "KKS Kalisz", "gh": 1, "ga": 1}
+{"id": "QFmnlVyH", "ts": 1746889200, "lg": "III Liga - Group III", "h": "Brzeg", "a": "Podlesianka Katowice", "gh": 2, "ga": 2}
+{"id": "dOnLnXpg", "ts": 1780507560, "lg": "Division 2", "h": "LKS Lomza", "a": "Polkowice", "gh": 2, "ga": 3}
+{"id": "GYgXiW3m", "ts": 1775836800, "lg": "III Liga - Group III", "h": "Jelenia Gora", "a": "Pawlowice", "gh": 1, "ga": 1}
+{"id": "4jSlLZHl", "ts": 1756306800, "lg": "III Liga - Group III", "h": "Skra", "a": "Jelenia Gora", "gh": 2, "ga": 0}
+{"id": "nJk3ukzR", "ts": 1776430800, "lg": "III Liga - Group IV", "h": "Korona Kielce II", "a": "Naprzod Jedrzejow", "gh": 3, "ga": 2}
+{"id": "hQkifipd", "ts": 1775296800, "lg": "III Liga - Group IV", "h": "Wisla II", "a": "Naprzod Jedrzejow", "gh": 1, "ga": 2}
+{"id": "lKoOuCKt", "ts": 1760792400, "lg": "III Liga - Group IV", "h": "Kolbuszowa Dolna", "a": "Naprzod Jedrzejow", "gh": 0, "ga": 1}
+{"id": "boq8fW3b", "ts": 1772283600, "lg": "III Liga - Group IV", "h": "Kolbuszowa Dolna", "a": "Siarka Tarnobrzeg", "gh": 4, "ga": 1}
+{"id": "jRWjmhje", "ts": 1779616800, "lg": "III Liga - Group IV", "h": "Sparta Kazimierza Wielka", "a": "Siarka Tarnobrzeg", "gh": 3, "ga": 1}
+{"id": "vHUsY6S0", "ts": 1776524400, "lg": "III Liga - Group IV", "h": "Siarka Tarnobrzeg", "a": "Czarni Polaniec", "gh": 1, "ga": 1}
+{"id": "K2bjh1R0", "ts": 1761908400, "lg": "III Liga - Group IV", "h": "Wisla II", "a": "Siarka Tarnobrzeg", "gh": 2, "ga": 2}
+{"id": "AgGDL8ZO", "ts": 1760792400, "lg": "III Liga - Group IV", "h": "Siarka Tarnobrzeg", "a": "Avia Swidnik", "gh": 2, "ga": 2}
+{"id": "ziBanqit", "ts": 1781024400, "lg": "Division 2", "h": "R. Rzeszow", "a": "Ostrowiec Swietokrzyski", "gh": 3, "ga": 0}
+{"id": "8r8jeJID", "ts": 1780758000, "lg": "Division 2", "h": "Ostrowiec Swietokrzyski", "a": "R. Rzeszow", "gh": 1, "ga": 0}
+{"id": "Q1v5ddT8", "ts": 1779530400, "lg": "III Liga - Group IV", "h": "Cracovia II", "a": "Ostrowiec Swietokrzyski", "gh": 1, "ga": 2}
+{"id": "zLgBc5Zj", "ts": 1775237340, "lg": "III Liga - Group IV", "h": "Ostrowiec Swietokrzyski", "a": "Biala Podlaska", "gh": 2, "ga": 1}
+{"id": "djtRRP6K", "ts": 1778331600, "lg": "III Liga - Group IV", "h": "Korona Kielce II", "a": "Lubaczow", "gh": 3, "ga": 1}
+{"id": "4njadhZo", "ts": 1772368200, "lg": "III Liga - Group IV", "h": "Lubaczow", "a": "Cracovia II", "gh": 3, "ga": 2}
+{"id": "QaY2rfHl", "ts": 1787149800, "lg": "Romanian Cup", "h": "CSM Slatina", "a": "Sepsi Sf. Gheorghe", "gh": 0, "ga": 0}
+{"id": "6kY7bmbs", "ts": 1785684600, "lg": "Superliga", "h": "Corvinul", "a": "Sepsi Sf. Gheorghe", "gh": 1, "ga": 1}
+{"id": "vHaX3lJM", "ts": 1785076200, "lg": "Superliga", "h": "Sepsi Sf. Gheorghe", "a": "U. Cluj", "gh": 1, "ga": 0}
+{"id": "vaIdrGjn", "ts": 1784572200, "lg": "Superliga", "h": "FC Rapid Bucuresti", "a": "Sepsi Sf. Gheorghe", "gh": 1, "ga": 0}
+{"id": "xAjR6l7M", "ts": 1778918400, "lg": "Liga 2", "h": "Sepsi Sf. Gheorghe", "a": "Chindia Targoviste", "gh": 1, "ga": 1}
+{"id": "dWlBAW7c", "ts": 1778605200, "lg": "Liga 2", "h": "FC Voluntari", "a": "Sepsi Sf. Gheorghe", "gh": 2, "ga": 0}
+{"id": "EFyGdRSg", "ts": 1785781800, "lg": "Superliga", "h": "FCSB", "a": "Farul Constanta", "gh": 2, "ga": 2}
+{"id": "Aaj3bStp", "ts": 1784989800, "lg": "Superliga", "h": "Farul Constanta", "a": "Corvinul", "gh": 2, "ga": 0}
+{"id": "nPL4tfLb", "ts": 1784469600, "lg": "Superliga", "h": "U. Cluj", "a": "Farul Constanta", "gh": 2, "ga": 1}
+{"id": "bctu1K6b", "ts": 1780248600, "lg": "Superliga", "h": "Farul Constanta", "a": "Chindia Targoviste", "gh": 1, "ga": 1}
+{"id": "jXxX2txn", "ts": 1779546600, "lg": "Superliga", "h": "Chindia Targoviste", "a": "Farul Constanta", "gh": 3, "ga": 3}
+{"id": "b9OeOD2B", "ts": 1779125400, "lg": "Superliga", "h": "Farul Constanta", "a": "Metaloglobus Bucharest", "gh": 0, "ga": 1}
+{"id": "rHname6U", "ts": 1787846400, "lg": "Europa League", "h": "Ararat-Armenia", "a": "Univ. Craiova", "gh": 0, "ga": 1}
+{"id": "h6luiAbT", "ts": 1786640400, "lg": "Europa League", "h": "Univ. Craiova", "a": "KuPS", "gh": 1, "ga": 2}
+{"id": "KvyYhWTG", "ts": 1786028400, "lg": "Europa League", "h": "KuPS", "a": "Univ. Craiova", "gh": 1, "ga": 1}
+{"id": "2Z6x0uIl", "ts": 1785609000, "lg": "Superliga", "h": "Univ. Craiova", "a": "Petrolul", "gh": 4, "ga": 0}
+{"id": "htmdduCs", "ts": 1785346200, "lg": "UEFA Champions League", "h": "Univ. Craiova", "a": "Levski Sofia", "gh": 2, "ga": 2}
+{"id": "AJtcK933", "ts": 1785000600, "lg": "Superliga", "h": "Dinamo Bucuresti", "a": "Univ. Craiova", "gh": 5, "ga": 1}
+{"id": "MuuOf5c6", "ts": 1785598200, "lg": "Superliga", "h": "FC Voluntari", "a": "UTA Arad", "gh": 1, "ga": 0}
+{"id": "631P5AlA", "ts": 1785166200, "lg": "Superliga", "h": "CFR Cluj", "a": "FC Voluntari", "gh": 5, "ga": 0}
+{"id": "zL2NrwiU", "ts": 1780335000, "lg": "Superliga", "h": "FC Voluntari", "a": "FC Hermannstadt", "gh": 0, "ga": 3}
+{"id": "UNaFpaMH", "ts": 1779633000, "lg": "Superliga", "h": "FC Hermannstadt", "a": "FC Voluntari", "gh": 3, "ga": 2}
+{"id": "UqmJ8AxA", "ts": 1778918400, "lg": "Liga 2", "h": "Steaua Bucuresti", "a": "FC Voluntari", "gh": 2, "ga": 4}
+{"id": "h2fvdXh4", "ts": 1778081400, "lg": "Liga 2", "h": "Corvinul", "a": "FC Voluntari", "gh": 2, "ga": 0}
+{"id": "6esnK0ZA", "ts": 1786640400, "lg": "Conference League", "h": "Tromso", "a": "CFR Cluj", "gh": 1, "ga": 2}
+{"id": "YsqvMM4b", "ts": 1786033800, "lg": "Conference League", "h": "CFR Cluj", "a": "Tromso", "gh": 0, "ga": 5}
+{"id": "rD8hdcHD", "ts": 1785695400, "lg": "Superliga", "h": "FC Rapid Bucuresti", "a": "CFR Cluj", "gh": 3, "ga": 1}
+{"id": "vij2DnmI", "ts": 1785436200, "lg": "Conference League", "h": "CFR Cluj", "a": "Alashkert", "gh": 0, "ga": 3}
+{"id": "hzhfF8I5", "ts": 1784818800, "lg": "Conference League", "h": "Alashkert", "a": "CFR Cluj", "gh": 1, "ga": 1}
+{"id": "GKmiLvmR", "ts": 1783611000, "lg": "Club Friendly", "h": "CFR Cluj", "a": "Karpaty Lviv", "gh": 1, "ga": 0}
+{"id": "Sl1WW1K0", "ts": 1769364000, "lg": "Superliga", "h": "FCSB", "a": "CFR Cluj", "gh": 1, "ga": 4}
+{"id": "AHPv11LG", "ts": 1785427200, "lg": "Conference League", "h": "Auda", "a": "FCSB", "gh": 1, "ga": 4}
+{"id": "x4RW2Nj4", "ts": 1784828700, "lg": "Conference League", "h": "FCSB", "a": "Auda", "gh": 2, "ga": 3}
+{"id": "nRIhonEO", "ts": 1780075800, "lg": "Superliga", "h": "Dinamo Bucuresti", "a": "FCSB", "gh": 1, "ga": 1}
+{"id": "xxeRMLr4", "ts": 1779125400, "lg": "Superliga", "h": "FC Hermannstadt", "a": "FCSB", "gh": 2, "ga": 0}
+{"id": "fuUO9EmI", "ts": 1778522400, "lg": "Superliga", "h": "FCSB", "a": "Unirea Slobozia", "gh": 0, "ga": 0}
+{"id": "fL2K0wAt", "ts": 1759053600, "lg": "Superliga Women", "h": "Csikszereda M. Ciuc W", "a": "Ol. Cluj W", "gh": 4, "ga": 0}
+{"id": "j71NpL6C", "ts": 1785849300, "lg": "Russian Cup", "h": "Akron Togliatti", "a": "FK Rostov", "gh": 0, "ga": 4}
+{"id": "42ZzqTOH", "ts": 1784985300, "lg": "Premier League", "h": "Akron Togliatti", "a": "Zenit", "gh": 0, "ga": 5}
+{"id": "raqsVncJ", "ts": 1779550200, "lg": "Premier League", "h": "Akron Togliatti", "a": "R. Volgograd", "gh": 0, "ga": 1}
+{"id": "AooZW8S6", "ts": 1779294600, "lg": "Premier League", "h": "R. Volgograd", "a": "Akron Togliatti", "gh": 2, "ga": 0}
+{"id": "bN0KNEOE", "ts": 1779030000, "lg": "Premier League", "h": "Krylya Sovetov", "a": "Akron Togliatti", "gh": 4, "ga": 1}
+{"id": "4lkP3gXr", "ts": 1778493600, "lg": "Premier League", "h": "Akron Togliatti", "a": "FK Rostov", "gh": 1, "ga": 3}
+{"id": "M3g9zIWi", "ts": 1787145300, "lg": "Russian Cup", "h": "Krylya Sovetov", "a": "Zenit", "gh": 0, "ga": 0}
+{"id": "EqsBIqB6", "ts": 1785857400, "lg": "Russian Cup", "h": "Dynamo Makhachkala", "a": "Krylya Sovetov", "gh": 1, "ga": 2}
+{"id": "x6AXDmOi", "ts": 1785590100, "lg": "Premier League", "h": "CSKA Moscow", "a": "Krylya Sovetov", "gh": 1, "ga": 1}
+{"id": "C8Coobll", "ts": 1784977200, "lg": "Premier League", "h": "Dynamo Moscow", "a": "Krylya Sovetov", "gh": 0, "ga": 0}
+{"id": "tQBHNkuI", "ts": 1782651600, "lg": "Club Friendly", "h": "Krylya Sovetov", "a": "Neftekhimik", "gh": 1, "ga": 1}
+{"id": "CjApByu9", "ts": 1778405400, "lg": "Premier League", "h": "Orenburg", "a": "Krylya Sovetov", "gh": 1, "ga": 0}
+{"id": "6Jw3K5tf", "ts": 1785943800, "lg": "Russian Cup", "h": "Fakel Voronezh", "a": "Dynamo Moscow", "gh": 0, "ga": 1}
+{"id": "tp0eUBOk", "ts": 1784390400, "lg": "Club Friendly", "h": "Dynamo Moscow", "a": "CSKA Moscow", "gh": 5, "ga": 2}
+{"id": "4O5YUVVs", "ts": 1778518800, "lg": "Premier League", "h": "Dynamo Moscow", "a": "Krasnodar", "gh": 2, "ga": 1}
+{"id": "0OHaLIv2", "ts": 1778175000, "lg": "Russian Cup", "h": "Krasnodar", "a": "Dynamo Moscow", "gh": 0, "ga": 0}
+{"id": "0UeJb7kn", "ts": 1777653000, "lg": "Premier League", "h": "Lokomotiv Moscow", "a": "Dynamo Moscow", "gh": 1, "ga": 1}
+{"id": "Q1QZRQKO", "ts": 1777212000, "lg": "Premier League", "h": "Dynamo Moscow", "a": "Sochi", "gh": 2, "ga": 0}
+{"id": "AJ8uCRh4", "ts": 1785517200, "lg": "Premier League", "h": "Rodina Moscow", "a": "FK Rostov", "gh": 2, "ga": 4}
+{"id": "KYFgqxJ0", "ts": 1785001500, "lg": "Premier League", "h": "Spartak Moscow", "a": "Rodina Moscow", "gh": 3, "ga": 0}
+{"id": "Ec8ZVGGc", "ts": 1778925600, "lg": "FNL", "h": "Arsenal Tula", "a": "Rodina Moscow", "gh": 1, "ga": 4}
+{"id": "YVSlCRdC", "ts": 1778261400, "lg": "FNL", "h": "Rodina Moscow", "a": "Chelyabinsk", "gh": 2, "ga": 0}
+{"id": "lStpprxo", "ts": 1777726800, "lg": "FNL", "h": "Chernomorets Novorossijsk", "a": "Rodina Moscow", "gh": 1, "ga": 3}
+{"id": "QgwCCL9T", "ts": 1777219200, "lg": "FNL", "h": "Rodina Moscow", "a": "Ufa", "gh": 1, "ga": 0}
+{"id": "SvDh1Avn", "ts": 1785598200, "lg": "Premier League", "h": "Dynamo Makhachkala", "a": "Lokomotiv Moscow", "gh": 2, "ga": 1}
+{"id": "CSxqs7gU", "ts": 1784993400, "lg": "Premier League", "h": "Fakel Voronezh", "a": "Dynamo Makhachkala", "gh": 1, "ga": 2}
