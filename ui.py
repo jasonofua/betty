@@ -75,13 +75,23 @@ class _LogIO(io.TextIOBase):
         return len(s)
 
 
-def run_job(target, until, days, dry, rollover=False):
+def run_job(target, until, days, dry, rollover=False, engine='composite'):
     JOB.update(state='building', log=[], result=None,
                params=dict(target=target, until=until, days=days, dry=dry,
-                           rollover=rollover),
+                           rollover=rollover, engine=engine),
                started=dt.datetime.now(A.WAT).strftime('%H:%M'))
     try:
         with contextlib.redirect_stdout(_LogIO()):
+            if engine == 'hybrid':
+                # book_hybrid swaps D.model_prob for the trained bundle on
+                # import; everything downstream (rulebook, gates, selection)
+                # is the same code the composite runs.
+                try:
+                    import book_hybrid  # noqa: F401
+                except Exception as e:
+                    JOB.update(state='done',
+                               result={'error': f'hybrid models unavailable: {e}'})
+                    return
             board = BD.build(until_h=until, days=days)
             if not board:
                 JOB.update(state='done', result={'error': 'no supported options on this board'})
@@ -137,8 +147,8 @@ def run_job(target, until, days, dry, rollover=False):
                     if got != bk['req']:
                         res['short'] = f"booked {got}/{bk['req']}"
                     A.log_booking(bk['code'], bk['url'],
-                                  (f"rollover {combo:.2f}x est {surv:.0%}" if rollover
-                                   else f"dynamic_v4 target {target:g}x until {until}:00"
+                                  (f"{engine} rollover {combo:.2f}x est {surv:.0%}" if rollover
+                                   else f"{engine} target {target:g}x until {until}:00"
                                         + (f" +{days}d" if days else "")),
                                   [(l['ts'].timestamp(), l['match'], l['label'],
                                     l['odds'], l['stats']) for l in legs])
@@ -252,6 +262,7 @@ class Handler(BaseHTTPRequestHandler):
             days = int(p.get('days', 0))
             dry = bool(p.get('dry'))
             rollover = bool(p.get('rollover'))
+            engine = 'hybrid' if str(p.get('engine')) == 'hybrid' else 'composite'
             assert 2 <= target <= 100000 and 0 <= until <= 23 and 0 <= days <= 4
         except Exception:
             self._send(json.dumps({'error': 'bad parameters'}), code=400); return
@@ -260,7 +271,8 @@ class Handler(BaseHTTPRequestHandler):
                 self._send(json.dumps({'error': 'a run is already in progress'}), code=409)
                 return
             JOB['state'] = 'building'
-        threading.Thread(target=run_job, args=(target, until, days, dry, rollover),
+        threading.Thread(target=run_job,
+                         args=(target, until, days, dry, rollover, engine),
                          daemon=True).start()
         self._send(json.dumps({'ok': True}))
 

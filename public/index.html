@@ -71,6 +71,8 @@ main{max-width:880px;margin:0 auto;padding:28px 20px 0}
 .chip:active{transform:scale(.95)}
 .chip.on{color:var(--acc);border-color:rgba(56,189,248,.45);background:var(--acc-dim)}
 .chip.roll{color:#4ade80;border-color:rgba(74,222,128,.4);font-weight:600}
+.chip.ai{color:#c084fc;border-color:rgba(192,132,252,.4);font-weight:600}
+.chip.ai.on{color:#c084fc;background:rgba(192,132,252,.10);border-color:rgba(192,132,252,.6)}
 .chip.roll.on{color:#4ade80;background:rgba(74,222,128,.10);border-color:rgba(74,222,128,.6)}
 @media (hover:hover) and (pointer:fine){ .chip:hover{color:var(--tx);border-color:rgba(255,255,255,.18)} }
 
@@ -239,6 +241,7 @@ tbody tr{opacity:0;transform:translateY(6px);animation:rise 320ms var(--ease-out
   <h2>New slip</h2>
   <div class="chips" id="chips">
     <button class="chip roll" id="rollover" data-t="6">Rollover</button>
+    <button class="chip ai" id="hybridrun" data-t="6">Rollover · AI</button>
     <button class="chip" data-t="25">25×</button>
     <button class="chip on" data-t="50">50×</button>
     <button class="chip" data-t="100">100×</button>
@@ -334,11 +337,12 @@ document.querySelectorAll('.step button').forEach(b=>{
 /* chips - the Rollover chip is one-click: today until 23:00, and the
    engine floors the ticket by WINNING CHANCE (30%+), not by multiplier -
    it books the biggest slip that still lands a third of the time. */
-let rolloverMode=false;
+let rolloverMode=false, engineMode='composite';
 $('chips').addEventListener('click',e=>{
   const c=e.target.closest('.chip'); if(!c)return;
   $('target').value=c.dataset.t; $('target').dispatchEvent(new Event('input'));
-  if(c.id==='rollover'){
+  engineMode = (c.id==='hybridrun') ? 'hybrid' : 'composite';
+  if(c.id==='rollover'||c.id==='hybridrun'){
     $('until').value=23; $('days').value=0;
     $('until').dispatchEvent(new Event('input'));
     rolloverMode=true;
@@ -441,7 +445,7 @@ let timer=null, renderedResult=false, startTs=null;
 $('go').addEventListener('click',()=>{
   const body=JSON.stringify({target:+$('target').value,until:+$('until').value,
       days:+$('days').value,dry:$('dry').classList.contains('on'),
-      rollover:rolloverMode});
+      rollover:rolloverMode, engine:engineMode});
   rolloverMode=false;
   const url=(mode==='cloud')?'/api/book':engineBase()+'/api/run';
   fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body})
