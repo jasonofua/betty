@@ -19,6 +19,17 @@ import acca as A
 import book_dynamic as BD
 import dynamic_v4 as D
 
+# Build stamp: written by deploy.sh before `railway up` and reported in
+# /api/status, so a deploy can be VERIFIED rather than assumed. During a
+# rolling deploy the old container keeps answering requests, which is how a
+# rule that was already committed silently failed to apply on 30 Aug.
+try:
+    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                           'BUILD_STAMP')) as _f:
+        BUILD = _f.read().strip()
+except OSError:
+    BUILD = 'unknown'
+
 PORT = int(os.environ.get('PORT', 8017))
 HOST = '0.0.0.0' if os.environ.get('PORT') else '127.0.0.1'
 
@@ -212,7 +223,8 @@ class Handler(BaseHTTPRequestHandler):
             self._send(_page(), 'text/html; charset=utf-8')
         elif u.path == '/api/status':
             self._send(json.dumps({'state': JOB['state'], 'log': JOB['log'][-40:],
-                                   'result': JOB['result'], 'started': JOB['started']}))
+                                   'result': JOB['result'], 'started': JOB['started'],
+                                   'build': BUILD}))
         elif u.path == '/api/crawl_status':
             self._send(json.dumps(CRAWL))
         elif u.path == '/api/crawl_data':
