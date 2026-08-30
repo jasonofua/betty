@@ -194,6 +194,17 @@ def pick_for_target(legs, target):
         # falls through to a different option rather than vanishing.
         if l['odds'] < 1.20 and 'corner' in l['label'].lower():
             continue
+        # CHEAP GOAL-DEPENDENT LEGS, banned 30 Aug - the corner rule applied to
+        # its twin. FT Over 0.5 legs ran 95W-7L across the weekend's codes, and
+        # all seven losses were 0-0 draws: Uruguay Montevideo, Pineto, Gamba
+        # Osaka, Correcaminos, Yenisey, Gangwon, Odra Opole. At 1.03-1.10 each
+        # one multiplies the slip by 3-10% while carrying a ~6% chance of
+        # killing it outright - the same bad trade the Klaksvik corner leg made.
+        # They were on nearly every slip in bulk, so they were the single
+        # biggest source of dead tickets by volume. The match's other markets
+        # stay eligible; only this price/market combination is refused.
+        if l['odds'] < 1.15 and _is_cheap_goal_leg(l['label']):
+            continue
         w = true_prob(l['odds'])
         cost = -math.log(w)
         if cost <= 0 or l['odds'] <= 1.0:
@@ -224,6 +235,14 @@ def pick_for_target(legs, target):
     return out, combo, surv
 
 
+def _is_cheap_goal_leg(label):
+    """A goal-dependent Over that needs an event to HAPPEN - the fragile class."""
+    l = label.lower()
+    if any(w in l for w in ('corner', 'booking', 'card', 'offside', 'shot', 'foul', 'save')):
+        return False
+    return 'over' in l
+
+
 def pick_max_odds(legs, cap=None):
     """The biggest multiplier the board can produce inside SportyBet's cap.
 
@@ -240,6 +259,8 @@ def pick_max_odds(legs, cap=None):
         if len(out) >= cap:
             break
         if l['odds'] < 1.20 and 'corner' in l['label'].lower():
+            continue
+        if l['odds'] < 1.15 and _is_cheap_goal_leg(l['label']):
             continue
         ev = l['bs']['eventId']
         if per_match[ev] >= MAX_PER_MATCH:
