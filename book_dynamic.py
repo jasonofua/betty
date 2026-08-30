@@ -240,7 +240,10 @@ def _is_cheap_goal_leg(label):
     l = label.lower()
     if any(w in l for w in ('corner', 'booking', 'card', 'offside', 'shot', 'foul', 'save')):
         return False
-    return 'over' in l
+    # 'Over/Under / Under 5.5' contains the word 'over' in the MARKET name, so
+    # match on the outcome side only - the bit after the final slash.
+    outcome = l.rsplit('/', 1)[-1].strip()
+    return outcome.startswith('over')
 
 
 def pick_max_odds(legs, cap=None):
