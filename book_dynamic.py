@@ -240,9 +240,12 @@ def _is_cheap_goal_leg(label):
     l = label.lower()
     if any(w in l for w in ('corner', 'booking', 'card', 'offside', 'shot', 'foul', 'save')):
         return False
-    # 'Over/Under / Under 5.5' contains the word 'over' in the MARKET name, so
-    # match on the outcome side only - the bit after the final slash.
-    outcome = l.rsplit('/', 1)[-1].strip()
+    # Two traps here. 'Over/Under / Under 5.5' has the word 'over' in the
+    # MARKET name, so only the outcome side counts - and the label carries a
+    # tally suffix like '[6/6+4/4]' whose slashes hijack a naive rsplit, which
+    # is exactly how this check silently passed everything on 30 Aug.
+    core = l.split('[', 1)[0].strip()
+    outcome = core.rsplit('/', 1)[-1].strip()
     return outcome.startswith('over')
 
 
