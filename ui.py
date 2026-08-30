@@ -82,7 +82,8 @@ class _LogIO(io.TextIOBase):
         return len(s)
 
 
-def run_job(target, until, days, dry, rollover=False, engine='composite'):
+def run_job(target, until, days, dry, rollover=False, engine='composite',
+            maxodds=False):
     JOB.update(state='building', log=[], result=None,
                params=dict(target=target, until=until, days=days, dry=dry,
                            rollover=rollover, engine=engine),
@@ -112,7 +113,9 @@ def run_job(target, until, days, dry, rollover=False, engine='composite'):
                         continue
                     seen.add(k)
                     pool.append(l)
-            if rollover:
+            if maxodds:
+                legs, combo, surv = BD.pick_max_odds(pool)
+            elif rollover:
                 legs, combo, surv = BD.pick_rollover(pool)
                 if not legs:
                     JOB.update(state='done', result={'error':
@@ -125,7 +128,7 @@ def run_job(target, until, days, dry, rollover=False, engine='composite'):
                 JOB.update(state='done', result={'error': 'no bookable legs on this board'})
                 return
             warn = None
-            if not rollover and combo < target:
+            if not rollover and not maxodds and combo < target:
                 # Asked-for target not reachable: warn, then book the best the
                 # board offers instead of refusing (changed 21 Aug on request).
                 warn = (f'{target:g}x not reachable — booked the best available: '
@@ -154,7 +157,8 @@ def run_job(target, until, days, dry, rollover=False, engine='composite'):
                     if got != bk['req']:
                         res['short'] = f"booked {got}/{bk['req']}"
                     A.log_booking(bk['code'], bk['url'],
-                                  (f"{engine} rollover {combo:.2f}x est {surv:.0%}" if rollover
+                                  (f"{engine} max-odds {combo:,.1f}x" if maxodds
+                                   else f"{engine} rollover {combo:.2f}x est {surv:.0%}" if rollover
                                    else f"{engine} target {target:g}x until {until}:00"
                                         + (f" +{days}d" if days else "")),
                                   [(l['ts'].timestamp(), l['match'], l['label'],
@@ -269,6 +273,7 @@ class Handler(BaseHTTPRequestHandler):
             days = int(p.get('days', 0))
             dry = bool(p.get('dry'))
             rollover = bool(p.get('rollover'))
+            maxodds = bool(p.get('maxodds'))
             engine = 'hybrid' if str(p.get('engine')) == 'hybrid' else 'composite'
             assert 2 <= target <= 100000 and 0 <= until <= 23 and 0 <= days <= 4
         except Exception:
@@ -279,7 +284,7 @@ class Handler(BaseHTTPRequestHandler):
                 return
             JOB['state'] = 'building'
         threading.Thread(target=run_job,
-                         args=(target, until, days, dry, rollover, engine),
+                         args=(target, until, days, dry, rollover, engine, maxodds),
                          daemon=True).start()
         self._send(json.dumps({'ok': True}))
 

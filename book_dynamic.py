@@ -224,6 +224,31 @@ def pick_for_target(legs, target):
     return out, combo, surv
 
 
+def pick_max_odds(legs, cap=None):
+    """The biggest multiplier the board can produce inside SportyBet's cap.
+
+    pick_for_target stops as soon as it clears the number, which is right when
+    you want a specific payout at the best odds of landing. This is the other
+    request: 'the highest odds you can get under 50 games'. The pool is already
+    quality-gated by the rulebook, so this simply takes the longest prices in
+    it, one per fixture, up to the cap."""
+    cap = cap or MAX_LEGS
+    ranked = sorted(legs, key=lambda l: -l['odds'])
+    out, combo, surv = [], 1.0, 1.0
+    per_match = collections.Counter()
+    for l in ranked:
+        if len(out) >= cap:
+            break
+        if l['odds'] < 1.20 and 'corner' in l['label'].lower():
+            continue
+        ev = l['bs']['eventId']
+        if per_match[ev] >= MAX_PER_MATCH:
+            continue
+        per_match[ev] += 1
+        out.append(l); combo *= l['odds']; surv *= true_prob(l['odds'])
+    return out, combo, surv
+
+
 def slip(board, rank):
     """Every match's option at this rank, as bookable selections."""
     legs, seen_ev = [], set()
@@ -274,6 +299,40 @@ def main():
     board = build(until, floor, days=days)
     if not board:
         print("\n>> no supported options on this board")
+        return
+
+    if '--maxodds' in sys.argv:
+        pool, seen_ev = [], set()
+        for rank in range(D.TOP_N):
+            for l in slip(board, rank):
+                k = (l['bs']['eventId'], l['bs']['marketId'], l['bs']['specifier'])
+                if k in seen_ev:
+                    continue
+                seen_ev.add(k)
+                pool.append(l)
+        legs, combo, surv = pick_max_odds(pool)
+        if not legs:
+            print("\n>> no bookable legs on this board")
+            return
+        legs.sort(key=lambda l: l['ts'])
+        print(f"\n=== MAX ODDS — {len(legs)} legs, combined ~{combo:,.1f}x, "
+              f"estimated {surv:.2%} chance of landing   (pool of {len(pool)})")
+        for l in legs:
+            print(f"   {l['ts']:%a %H:%M}  {l['match'][:38]:<38} {l['games']}g  "
+                  f"{true_prob(l['odds']):>4.0%}  {l['label']}  @{l['odds']}")
+        if dry:
+            return
+        bk = A.book([l['bs'] for l in legs])
+        if bk and bk.get('code'):
+            got = bk.get('verified') or bk['booked']
+            print(f"   >> CODE {bk['code']}   {bk['url']}")
+            if got != bk['req']:
+                print(f"   >> short: booked {got}/{bk['req']}")
+            A.log_booking(bk['code'], bk['url'], f"max odds {combo:,.1f}x",
+                          [(l['ts'].timestamp(), l['match'], l['label'],
+                            l['odds'], l['stats']) for l in legs])
+        else:
+            print(f"   >> booking failed: {bk.get('msg') if bk else 'no selections'}")
         return
 
     if '--rollover' in sys.argv:
