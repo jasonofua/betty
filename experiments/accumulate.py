@@ -45,20 +45,20 @@ with open(DS,'a') as out:
         except Exception: continue
         if h1h+h2h!=r['gh'] or h1a+h2a!=r['ga']: continue
         # the full stat sheet: corners, cards, SoT, offsides, fouls, saves
-        st={}
+        st = {}
+        # Use the section-aware parser: the raw feed repeats every value
+        # twice and orders rows [FT, FT, 1H, 1H, 2H, 2H], so taking row
+        # index 1 as the first half silently stored a duplicate of the
+        # full match - which is what every _h1 stat in the corpus was.
         try:
-            sraw=F.fetch(f"df_st_1_{r['id']}", ttl=999*3600)
-            NAMES={'Corner kicks':'corners','Yellow cards':'yellow','Shots on target':'sot',
-                   'Offsides':'offsides','Fouls':'fouls','Goalkeeper saves':'saves'}
-            acc={}
-            for row in sraw.split('~'):
-                g=re.search(r'SG÷([^¬]+)¬SH÷([\d.]+)¬SI÷([\d.]+)',row)
-                if g and g.group(1) in NAMES:
-                    acc.setdefault(NAMES[g.group(1)],[]).append((float(g.group(2)),float(g.group(3))))
-            for k,v in acc.items():
-                st[k]=[v[0][0],v[0][1]]
-                if len(v)>=3 and v[1][0]<=v[0][0] and v[1][1]<=v[0][1]:
-                    st[k+'_h1']=[v[1][0],v[1][1]]
+            _ps = F.parse_match_stats(mid if 'mid' in dir() else r['id'])
+            if _ps:
+                for _k, _v in (_ps.get('match') or {}).items():
+                    if _k in NAMES.values(): st[_k] = [_v[0], _v[1]]
+                for _k, _v in (_ps.get('1h') or {}).items():
+                    if _k in NAMES.values(): st[_k + '_h1'] = [_v[0], _v[1]]
+                for _k, _v in (_ps.get('2h') or {}).items():
+                    if _k in NAMES.values(): st[_k + '_h2'] = [_v[0], _v[1]]
         except Exception:
             pass
         out.write(json.dumps(dict(id=r['id'],ts=r['ts'],lg=r['lg'],
