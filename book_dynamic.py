@@ -203,7 +203,8 @@ def pick_for_target(legs, target):
         # They were on nearly every slip in bulk, so they were the single
         # biggest source of dead tickets by volume. The match's other markets
         # stay eligible; only this price/market combination is refused.
-        if _goal_over_underpriced(l['label'], l['odds']):
+        if _goal_over_underpriced(l['label'], l['odds']) or \
+                _h1_stat_over_underpriced(l['label'], l['odds']):
             continue
         w = true_prob(l['odds'])
         cost = -math.log(w)
@@ -260,6 +261,39 @@ GOAL_OVER_FLOOR = {('ft', 0.5): 1.08, ('ft', 1.5): 1.21,
                    ('h2', 0.5): 1.17, ('h2', 1.5): 1.95}
 
 
+# First-half STAT Overs, measured 31 Aug on the matches with real cached 1H
+# data (the corpus's own _h1 fields were a harvesting artefact and have been
+# stripped - see experiments/repair_halves.py). 1H shots on target averages
+# 4.46 with sd 2.84 across 72 matches, so Over 2.5 lands 72.2% and is worth
+# 1.385; SportyBet sells it at 1.25-1.35, five points short. Same shape as
+# 1H Over 0.5 goals: a needs-an-event bet on a 45-minute window, where the
+# short window makes the event rarer while the price barely moves. The Aston
+# Villa v Arsenal leg that killed RNSTZH was exactly this at 1.29.
+# SMALL SAMPLE - 72 matches, so the true rate is 72% give or take ten points.
+# Revisit once the fixed harvesters have rebuilt real 1H stat history.
+H1_STAT_OVER_FLOOR = {('sot', 2.5): 1.39, ('sot', 1.5): 1.22,
+                      ('sot', 3.5): 1.85}
+
+
+def _h1_stat_over_underpriced(label, odds):
+    l = label.lower()
+    if '1st half' not in l:
+        return False
+    core = l.split('[', 1)[0].strip()
+    outcome = core.rsplit('/', 1)[-1].strip()
+    if not outcome.startswith('over'):
+        return False
+    stat = 'sot' if 'shots on target' in l else None
+    if stat is None:
+        return False
+    try:
+        line = float(outcome.split()[-1])
+    except (ValueError, IndexError):
+        return False
+    floor = H1_STAT_OVER_FLOOR.get((stat, line))
+    return floor is not None and odds < floor
+
+
 def _goal_over_underpriced(label, odds):
     """True when this is a goal-Over selling below its measured fair value."""
     l = label.lower()
@@ -310,7 +344,8 @@ def pick_max_odds(legs, cap=None):
             break
         if l['odds'] < 1.20 and 'corner' in l['label'].lower():
             continue
-        if _goal_over_underpriced(l['label'], l['odds']):
+        if _goal_over_underpriced(l['label'], l['odds']) or \
+                _h1_stat_over_underpriced(l['label'], l['odds']):
             continue
         ev = l['bs']['eventId']
         if per_match[ev] >= MAX_PER_MATCH:
