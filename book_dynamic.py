@@ -203,7 +203,7 @@ def pick_for_target(legs, target):
         # They were on nearly every slip in bulk, so they were the single
         # biggest source of dead tickets by volume. The match's other markets
         # stay eligible; only this price/market combination is refused.
-        if l['odds'] < 1.15 and _is_cheap_goal_leg(l['label']):
+        if _goal_over_underpriced(l['label'], l['odds']):
             continue
         w = true_prob(l['odds'])
         cost = -math.log(w)
@@ -233,6 +233,38 @@ def pick_for_target(legs, target):
         per_match[ev] += 1
         out.append(l); combo *= l['odds']; surv *= w
     return out, combo, surv
+
+
+# Fair odds for the "a goal will happen" markets, measured on the 50,139-match
+# corpus (31 Aug). A leg priced below its fair value is a loser however often
+# it lands, and these were the biggest leak on the weekend's slips:
+#   FT Over 0.5  92.9% -> 1.076 fair; book sells 1.03-1.10  (about fair)
+#   FT Over 1.5  76.0% -> 1.32  fair; book sells 1.20-1.35  (about fair)
+#   2H Over 0.5  79.1% -> 1.26  fair; book sells 1.14       (9 pts overpriced)
+#   1H Over 0.5  71.4% -> 1.40  fair; book sells 1.15-1.30  (16 pts overpriced)
+# A small margin is added so a leg has to beat fair value, not merely match it.
+GOAL_OVER_FLOOR = {('ft', 0.5): 1.09, ('ft', 1.5): 1.34,
+                   ('h1', 0.5): 1.42, ('h1', 1.5): 2.05,
+                   ('h2', 0.5): 1.28, ('h2', 1.5): 1.95}
+
+
+def _goal_over_underpriced(label, odds):
+    """True when this is a goal-Over selling below its measured fair value."""
+    l = label.lower()
+    if any(w in l for w in ('corner', 'booking', 'card', 'offside',
+                            'shot', 'foul', 'save')):
+        return False
+    core = l.split('[', 1)[0].strip()
+    outcome = core.rsplit('/', 1)[-1].strip()
+    if not outcome.startswith('over'):
+        return False
+    try:
+        line = float(outcome.split()[-1])
+    except (ValueError, IndexError):
+        return False
+    period = 'h1' if '1st half' in l else ('h2' if '2nd half' in l else 'ft')
+    floor = GOAL_OVER_FLOOR.get((period, line))
+    return floor is not None and odds < floor
 
 
 def _is_cheap_goal_leg(label):
@@ -266,7 +298,7 @@ def pick_max_odds(legs, cap=None):
             break
         if l['odds'] < 1.20 and 'corner' in l['label'].lower():
             continue
-        if l['odds'] < 1.15 and _is_cheap_goal_leg(l['label']):
+        if _goal_over_underpriced(l['label'], l['odds']):
             continue
         ev = l['bs']['eventId']
         if per_match[ev] >= MAX_PER_MATCH:
