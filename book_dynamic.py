@@ -243,9 +243,21 @@ def pick_for_target(legs, target):
 #   2H Over 0.5  79.1% -> 1.26  fair; book sells 1.14       (9 pts overpriced)
 #   1H Over 0.5  71.4% -> 1.40  fair; book sells 1.15-1.30  (16 pts overpriced)
 # A small margin is added so a leg has to beat fair value, not merely match it.
-GOAL_OVER_FLOOR = {('ft', 0.5): 1.09, ('ft', 1.5): 1.34,
+# CORRECTED 31 Aug: the first version of this table priced every market off
+# the BLIND base rate, which ignores that the engine only bets when the record
+# supports it. Measured against 200+ graded legs, selection adds nothing on FT
+# Over 0.5 (+1.1 pts) and is negative on 1H Over 0.5 (-4.7), but adds 13-21
+# points on FT Over 1.5 and 2H Over 0.5 - so blind pricing was banning the two
+# markets where the engine demonstrably reads the game. Rates below are the
+# observed rate shrunk toward blind by 25 legs of prior, then priced with a
+# small margin.
+#   FT Over 0.5  93.8% -> 1.066 fair   (selection adds ~nothing)
+#   FT Over 1.5  84.1% -> 1.189 fair   (selection adds 13.5 pts)
+#   2H Over 0.5  86.9% -> 1.150 fair   (selection adds 20.9 pts)
+#   1H Over 0.5  70.1% -> 1.426 fair   (selection NEGATIVE; effectively banned)
+GOAL_OVER_FLOOR = {('ft', 0.5): 1.08, ('ft', 1.5): 1.21,
                    ('h1', 0.5): 1.42, ('h1', 1.5): 2.05,
-                   ('h2', 0.5): 1.28, ('h2', 1.5): 1.95}
+                   ('h2', 0.5): 1.17, ('h2', 1.5): 1.95}
 
 
 def _goal_over_underpriced(label, odds):
