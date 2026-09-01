@@ -94,7 +94,7 @@ class _LogIO(io.TextIOBase):
 
 
 def run_job(target, until, days, dry, rollover=False, engine='composite',
-            maxodds=False):
+            maxodds=False, goalsonly=False):
     JOB.update(state='building', log=[], result=None,
                params=dict(target=target, until=until, days=days, dry=dry,
                            rollover=rollover, engine=engine),
@@ -124,6 +124,9 @@ def run_job(target, until, days, dry, rollover=False, engine='composite',
                         continue
                     seen.add(k)
                     pool.append(l)
+            if goalsonly:
+                pool = BD.goals_only(pool)
+                JOB['log'].append(f'goals-only: {len(pool)} legs after dropping stat markets')
             if maxodds:
                 legs, combo, surv = BD.pick_max_odds(pool)
             elif rollover:
@@ -286,6 +289,7 @@ class Handler(BaseHTTPRequestHandler):
             dry = bool(p.get('dry'))
             rollover = bool(p.get('rollover'))
             maxodds = bool(p.get('maxodds'))
+            goalsonly = bool(p.get('goalsonly'))
             engine = 'hybrid' if str(p.get('engine')) == 'hybrid' else 'composite'
             assert 2 <= target <= 100000 and 0 <= until <= 23 and 0 <= days <= 4
         except Exception:
@@ -296,7 +300,8 @@ class Handler(BaseHTTPRequestHandler):
                 return
             JOB['state'] = 'building'
         threading.Thread(target=run_job,
-                         args=(target, until, days, dry, rollover, engine, maxodds),
+                         args=(target, until, days, dry, rollover, engine, maxodds,
+                               goalsonly),
                          daemon=True).start()
         self._send(json.dumps({'ok': True}))
 

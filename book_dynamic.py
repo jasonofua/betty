@@ -327,6 +327,20 @@ def _is_cheap_goal_leg(label):
     return outcome.startswith('over')
 
 
+STAT_WORDS = ('corner', 'booking', 'card', 'offside', 'shot', 'foul', 'save')
+
+
+def goals_only(legs):
+    """Keep only goal-family legs - totals, team goals, halves, win-both, GG.
+
+    Requested 1 Sep after RNSTZH went 21-for-21 on its goal legs while all
+    three losses were stat markets (Villa 1H SoT Over, Atalanta bookings Over,
+    Braga offsides Under). One night is a small sample and the stat families
+    have their own long-run records, so this is a mode rather than a ban."""
+    return [l for l in legs
+            if not any(w in l['label'].lower() for w in STAT_WORDS)]
+
+
 def pick_max_odds(legs, cap=None):
     """The biggest multiplier the board can produce inside SportyBet's cap.
 
@@ -407,6 +421,7 @@ def main():
         print("\n>> no supported options on this board")
         return
 
+    goals = '--goals' in sys.argv
     if '--maxodds' in sys.argv:
         pool, seen_ev = [], set()
         for rank in range(D.TOP_N):
@@ -416,6 +431,8 @@ def main():
                     continue
                 seen_ev.add(k)
                 pool.append(l)
+        if goals:
+            pool = goals_only(pool)
         legs, combo, surv = pick_max_odds(pool)
         if not legs:
             print("\n>> no bookable legs on this board")
