@@ -82,6 +82,16 @@ MIN_EDGE = 0.02     # and only when we disagree with the price in our favour
 # a prize.
 MAX_EDGE = 0.10
 
+# The reopened FT/1H goal totals book on AGREEMENT rather than on MIN_EDGE,
+# because the calibration audit showed the model cannot out-predict the book on
+# goals and demanding a large edge just selects for our own errors. That band
+# originally ran from -0.03, which accepted legs priced worse than the model's
+# own estimate - Sloga Doboj v Celik Zenica went 0-0 on an Over 0.5 booked at
+# +0.5 points of edge (model 92.2%, price 91.7%) in a fixture where the home
+# side averaged 1.33 goals. Agreement should still mean the price is not
+# against us: the band now starts just above break-even.
+REOPEN_MIN_EDGE = 0.01
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # The record: per-game series, most recent first, own venue only.
@@ -1180,7 +1190,7 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
                     or (mp - implied) > MAX_EDGE:
                 if not (_flip and mp >= MIN_PROB and (mp - implied) >= -0.05) \
                         and not (_reopen and mp >= 0.75
-                                 and -0.03 <= (mp - implied) <= MAX_EDGE):
+                                 and REOPEN_MIN_EDGE <= (mp - implied) <= MAX_EDGE):
                     continue
             rate = mp
             edge = mp - implied
