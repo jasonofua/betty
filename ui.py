@@ -306,6 +306,37 @@ class Handler(BaseHTTPRequestHandler):
         self._send(json.dumps({'ok': True}))
 
 
+def _tg_grade(codes):
+    """Grade codes for the bot, returning the text rather than printing it."""
+    try:
+        p = subprocess.run([sys.executable, 'grade_code.py'] + list(codes),
+                           capture_output=True, text=True, timeout=900, cwd=ROOT)
+        out = (p.stdout or '') + (p.stderr or '')
+        keep = [l for l in out.splitlines()
+                if l.startswith('====') or 'per-leg' in l or ' LOSE ' in l]
+        return '\n'.join(keep or out.splitlines()[-30:])
+    except Exception as e:
+        return f'grade failed: {type(e).__name__}: {e}'
+
+
+def _tg_sweep():
+    """Bank the last two days of finished matches, for the bot."""
+    try:
+        p = subprocess.run([sys.executable,
+                            os.path.join(ROOT, 'experiments', 'accumulate.py')],
+                           capture_output=True, text=True, timeout=3600, cwd=ROOT)
+        return ((p.stdout or '') + (p.stderr or '')).strip()[-1200:]
+    except Exception as e:
+        return f'sweep failed: {type(e).__name__}: {e}'
+
+
+try:
+    import telegram_bot
+    telegram_bot.start(JOB, LOCK, run_job, _tg_grade, _tg_sweep)
+except Exception as _e:
+    print(f'telegram: not started ({_e})')
+
+
 if __name__ == '__main__':
     print(f"dynamic booker UI  ->  http://localhost:{PORT}")
     ThreadingHTTPServer((HOST, PORT), Handler).serve_forever()
