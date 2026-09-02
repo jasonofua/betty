@@ -243,7 +243,7 @@ class Handler(BaseHTTPRequestHandler):
             try:
                 with open(path, encoding='utf-8') as f:
                     txt = f.read()
-                for m in _re.finditer(r'^## (\S+ \S+) WAT \| (.+?) \| code (\w+)$',
+                for m in _re.finditer(r'^## (\S+ \S+) WAT\s+\|\s+(.+?)\s+\|\s+code (\w+)$',
                                       txt, _re.M):
                     out.append({'when': m.group(1), 'label': m.group(2),
                                 'code': m.group(3)})

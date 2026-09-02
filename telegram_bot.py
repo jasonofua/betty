@@ -166,7 +166,7 @@ def _handle(cmd, args, chat, job, lock, run_job, grade_fn, crawl_fn):
             import os as _os, re as _re
             path = _os.environ.get('BOOKINGS_PATH') or 'bookings.md'
             txt = open(path, encoding='utf-8').read()
-            rows = _re.findall(r'^## (\S+ \S+) WAT \| (.+?) \| code (\w+)$', txt, _re.M)
+            rows = _re.findall(r'^## (\S+ \S+) WAT\s+\|\s+(.+?)\s+\|\s+code (\w+)$', txt, _re.M)
             k = 10
             try:
                 k = int(args[0])
