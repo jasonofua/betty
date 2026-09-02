@@ -228,6 +228,29 @@ class Handler(BaseHTTPRequestHandler):
             self._send(json.dumps({'state': JOB['state'], 'log': JOB['log'][-40:],
                                    'result': JOB['result'], 'started': JOB['started'],
                                    'build': BUILD}))
+        elif u.path == '/api/slips':
+            # Every booking is appended to BOOKINGS_PATH (a Railway volume, so
+            # it survives restarts and redeploys). Telegram cannot hand back
+            # messages the bot already sent, so this is the durable record.
+            import re as _re
+            n = 12
+            try:
+                n = int(parse_qs(u.query).get('n', ['12'])[0])
+            except ValueError:
+                pass
+            path = os.environ.get('BOOKINGS_PATH') or os.path.join(ROOT, 'bookings.md')
+            out = []
+            try:
+                with open(path, encoding='utf-8') as f:
+                    txt = f.read()
+                for m in _re.finditer(r'^## (\S+ \S+) WAT \| (.+?) \| code (\w+)$',
+                                      txt, _re.M):
+                    out.append({'when': m.group(1), 'label': m.group(2),
+                                'code': m.group(3)})
+            except OSError as e:
+                self._send(json.dumps({'error': str(e)}), code=500); return
+            self._send(json.dumps({'path': path, 'total': len(out),
+                                   'slips': out[-n:]}))
         elif u.path == '/api/crawl_status':
             self._send(json.dumps(CRAWL))
         elif u.path == '/api/crawl_data':

@@ -38,6 +38,7 @@ HELP = (
     "/aigoals [until]\n\n"
     "/grade CODE ...        grade share codes\n"
     "/sweep                 bank yesterday's results\n"
+    "/slips [n]             recent booked codes\n"
     "/status                what the engine is doing\n"
     "/whoami                your chat id"
 )
@@ -159,6 +160,25 @@ def _handle(cmd, args, chat, job, lock, run_job, grade_fn, crawl_fn):
 
     if cmd in ('/start', '/help'):
         send(chat, HELP)
+
+    elif cmd == '/slips':
+        try:
+            import os as _os, re as _re
+            path = _os.environ.get('BOOKINGS_PATH') or 'bookings.md'
+            txt = open(path, encoding='utf-8').read()
+            rows = _re.findall(r'^## (\S+ \S+) WAT \| (.+?) \| code (\w+)$', txt, _re.M)
+            k = 10
+            try:
+                k = int(args[0])
+            except (IndexError, ValueError):
+                pass
+            if not rows:
+                send(chat, 'no slips recorded yet')
+            else:
+                send(chat, 'recent slips:\n' + '\n'.join(
+                    f'{w}  {c}  {l[:40]}' for w, l, c in rows[-k:]))
+        except Exception as e:
+            send(chat, f'could not read slips: {e}')
 
     elif cmd == '/whoami':
         send(chat, f'chat id: {chat}')
