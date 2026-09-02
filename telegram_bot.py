@@ -25,14 +25,21 @@ import json, os, threading, time, urllib.parse, urllib.request
 
 API = 'https://api.telegram.org/bot'
 HELP = (
-    "/rollover [until]   today's rollover ticket\n"
-    "/book TARGET [until] [days]   e.g. /book 100 23\n"
-    "/max [until]        highest odds inside the 50-leg cap\n"
-    "/goals [until]      same, goal markets only\n"
-    "/grade CODE ...     grade share codes\n"
-    "/sweep              bank yesterday's results\n"
-    "/status             what the engine is doing\n"
-    "/whoami             your chat id"
+    "Two engines. Plain commands run the COMPOSITE (the shipped Poisson\n"
+    "engine); the ai- prefix runs the HYBRID (28 nets on goals, 12 XGBoost\n"
+    "models on stats). Same rulebook and selection either way.\n\n"
+    "/rollover [until]      daily ticket, biggest slip landing 30%+\n"
+    "/airollover [until]    same, hybrid engine\n"
+    "/book TARGET [until] [days]    e.g. /book 100 23\n"
+    "/aibook TARGET [until] [days]\n"
+    "/max [until]           highest odds inside the 50-leg cap\n"
+    "/aimax [until]\n"
+    "/goals [until]         highest odds, goal markets only\n"
+    "/aigoals [until]\n\n"
+    "/grade CODE ...        grade share codes\n"
+    "/sweep                 bank yesterday's results\n"
+    "/status                what the engine is doing\n"
+    "/whoami                your chat id"
 )
 TOKEN = os.environ.get('TELEGRAM_TOKEN', '').strip()
 ONLY_CHAT = os.environ.get('TELEGRAM_CHAT', '').strip()
@@ -163,26 +170,30 @@ def _handle(cmd, args, chat, job, lock, run_job, grade_fn, crawl_fn):
         if s == 'done' and job.get('result'):
             send(chat, fmt_result(job['result'], '<b>last result</b>'))
 
-    elif cmd == '/rollover':
-        _dispatch_run(chat, job, lock, run_job, 'rollover',
+    elif cmd in ('/rollover', '/airollover'):
+        eng = 'hybrid' if cmd.startswith('/ai') else 'composite'
+        _dispatch_run(chat, job, lock, run_job, f'{eng} rollover',
                       target=6, until=num(0, 23), days=0, dry=False,
-                      engine='hybrid', rollover=True)
+                      engine=eng, rollover=True)
 
-    elif cmd == '/book':
+    elif cmd in ('/book', '/aibook'):
+        eng = 'hybrid' if cmd.startswith('/ai') else 'composite'
         t = num(0, 100.0)
-        _dispatch_run(chat, job, lock, run_job, f'target {t:g}x',
+        _dispatch_run(chat, job, lock, run_job, f'{eng} target {t:g}x',
                       target=t, until=num(1, 23), days=num(2, 0), dry=False,
-                      engine='hybrid')
+                      engine=eng)
 
-    elif cmd == '/max':
-        _dispatch_run(chat, job, lock, run_job, 'max odds',
+    elif cmd in ('/max', '/aimax'):
+        eng = 'hybrid' if cmd.startswith('/ai') else 'composite'
+        _dispatch_run(chat, job, lock, run_job, f'{eng} max odds',
                       target=6, until=num(0, 23), days=0, dry=False,
-                      engine='hybrid', maxodds=True)
+                      engine=eng, maxodds=True)
 
-    elif cmd == '/goals':
-        _dispatch_run(chat, job, lock, run_job, 'goals only',
+    elif cmd in ('/goals', '/aigoals'):
+        eng = 'hybrid' if cmd.startswith('/ai') else 'composite'
+        _dispatch_run(chat, job, lock, run_job, f'{eng} goals only',
                       target=6, until=num(0, 23), days=0, dry=False,
-                      engine='hybrid', maxodds=True, goalsonly=True)
+                      engine=eng, maxodds=True, goalsonly=True)
 
     elif cmd == '/grade':
         if not args:
