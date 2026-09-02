@@ -24,6 +24,16 @@ Commands:
 import json, os, threading, time, urllib.parse, urllib.request
 
 API = 'https://api.telegram.org/bot'
+HELP = (
+    "/rollover [until]   today's rollover ticket\n"
+    "/book TARGET [until] [days]   e.g. /book 100 23\n"
+    "/max [until]        highest odds inside the 50-leg cap\n"
+    "/goals [until]      same, goal markets only\n"
+    "/grade CODE ...     grade share codes\n"
+    "/sweep              bank yesterday's results\n"
+    "/status             what the engine is doing\n"
+    "/whoami             your chat id"
+)
 TOKEN = os.environ.get('TELEGRAM_TOKEN', '').strip()
 ONLY_CHAT = os.environ.get('TELEGRAM_CHAT', '').strip()
 
@@ -43,11 +53,20 @@ def _call(method, **params):
 
 
 def send(chat, text):
-    """Telegram caps a message at 4096 chars; split on line boundaries."""
+    """Send, splitting at Telegram's 4096-char cap.
+
+    Falls back to plain text when HTML parsing fails - the help text contains
+    <target>, which Telegram reads as a malformed tag and rejects, silently
+    swallowing the whole reply. Any dynamic content (team names, market labels)
+    can do the same, so never let formatting cost a message."""
     for i in range(0, len(text), 3500):
         chunk = text[i:i + 3500]
-        _call('sendMessage', chat_id=chat, text=chunk,
-              parse_mode='HTML', disable_web_page_preview='true')
+        r = _call('sendMessage', chat_id=chat, text=chunk,
+                  parse_mode='HTML', disable_web_page_preview='true')
+        if not (r and r.get('ok')):
+            plain = chunk.replace('<b>', '').replace('</b>', '')
+            _call('sendMessage', chat_id=chat, text=plain,
+                  disable_web_page_preview='true')
 
 
 def fmt_result(res, header=''):
@@ -116,9 +135,11 @@ def _loop(job, lock, run_job, grade_fn, crawl_fn):
             parts = text.split()
             cmd = parts[0].lower().split('@')[0]
             args = parts[1:]
+            print(f'telegram: {chat} -> {text[:60]}', flush=True)
             try:
                 _handle(cmd, args, chat, job, lock, run_job, grade_fn, crawl_fn)
             except Exception as e:
+                print(f'telegram: handler error {type(e).__name__}: {e}', flush=True)
                 send(chat, f'{type(e).__name__}: {e}')
 
 
@@ -130,7 +151,10 @@ def _handle(cmd, args, chat, job, lock, run_job, grade_fn, crawl_fn):
             return default
 
     if cmd in ('/start', '/help'):
-        send(chat, __doc__.split('Commands:')[1].strip())
+        send(chat, HELP)
+
+    elif cmd == '/whoami':
+        send(chat, f'chat id: {chat}')
 
     elif cmd == '/status':
         s = job.get('state', 'idle')
