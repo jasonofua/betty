@@ -204,7 +204,8 @@ def pick_for_target(legs, target):
         # biggest source of dead tickets by volume. The match's other markets
         # stay eligible; only this price/market combination is refused.
         if _goal_over_underpriced(l['label'], l['odds']) or \
-                _h1_stat_over_underpriced(l['label'], l['odds']):
+                _h1_stat_over_underpriced(l['label'], l['odds']) or \
+                _sot_over_underpriced(l['label'], l['odds']):
             continue
         w = true_prob(l['odds'])
         cost = -math.log(w)
@@ -273,6 +274,34 @@ GOAL_OVER_FLOOR = {('ft', 0.5): 1.08, ('ft', 1.5): 1.21,
 # Revisit once the fixed harvesters have rebuilt real 1H stat history.
 H1_STAT_OVER_FLOOR = {('sot', 2.5): 1.39, ('sot', 1.5): 1.22,
                       ('sot', 3.5): 1.85}
+
+# FULL-MATCH shots-on-target Overs, measured on 39,692 matches (3 Sep):
+# mean 8.99, sd 4.00, and EVERY line the book prints sells below fair value -
+# Over 4.5 lands 89.9% and is worth 1.112 against a 1.06 price, Over 6.5 lands
+# 73.7% and is worth 1.357 against 1.23. Four legs lost across three nights,
+# all sitting in this table: Dundee Over 6.5 (-8 pts), Lincoln Over 5.5 (-6),
+# Kilmarnock and West Brom Over 4.5 (-4 each). Floors are fair value plus a
+# small margin, so the market stays open only when the price is genuinely there.
+SOT_OVER_FLOOR = {4.5: 1.13, 5.5: 1.23, 6.5: 1.38, 7.5: 1.61, 8.5: 1.95,
+                  3.5: 1.06, 9.5: 2.35}
+
+
+def _sot_over_underpriced(label, odds):
+    l = label.lower()
+    if 'shots on target' not in l or '1st half' in l or '2nd half' in l:
+        return False
+    if 'team' in l:            # team SoT is banned elsewhere
+        return False
+    core = l.split('[', 1)[0].strip()
+    outcome = core.rsplit('/', 1)[-1].strip()
+    if not outcome.startswith('over'):
+        return False
+    try:
+        line = float(outcome.split()[-1])
+    except (ValueError, IndexError):
+        return False
+    floor = SOT_OVER_FLOOR.get(line)
+    return floor is not None and odds < floor
 
 
 def _h1_stat_over_underpriced(label, odds):
@@ -359,7 +388,8 @@ def pick_max_odds(legs, cap=None):
         if l['odds'] < 1.20 and 'corner' in l['label'].lower():
             continue
         if _goal_over_underpriced(l['label'], l['odds']) or \
-                _h1_stat_over_underpriced(l['label'], l['odds']):
+                _h1_stat_over_underpriced(l['label'], l['odds']) or \
+                _sot_over_underpriced(l['label'], l['odds']):
             continue
         ev = l['bs']['eventId']
         if per_match[ev] >= MAX_PER_MATCH:
