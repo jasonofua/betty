@@ -12,6 +12,8 @@ history feed names more matches.
 import json, re, sys, os, time
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import fetcher_v3 as F
+
+WANT_STATS = ('corners', 'yellow', 'sot', 'offsides', 'fouls', 'saves', 'shots')
 import datetime as dt
 
 EXP = os.path.dirname(os.path.abspath(__file__))
@@ -81,11 +83,11 @@ for i, (mid, (kc, h, a, hg, ag, comp)) in enumerate(sorted(cand.items(), key=lam
         _ps = F.parse_match_stats(mid if 'mid' in dir() else r['id'])
         if _ps:
             for _k, _v in (_ps.get('match') or {}).items():
-                if _k in NAMES.values(): st[_k] = [_v[0], _v[1]]
+                if _k in WANT_STATS: st[_k] = [_v[0], _v[1]]
             for _k, _v in (_ps.get('1h') or {}).items():
-                if _k in NAMES.values(): st[_k + '_h1'] = [_v[0], _v[1]]
+                if _k in WANT_STATS: st[_k + '_h1'] = [_v[0], _v[1]]
             for _k, _v in (_ps.get('2h') or {}).items():
-                if _k in NAMES.values(): st[_k + '_h2'] = [_v[0], _v[1]]
+                if _k in WANT_STATS: st[_k + '_h2'] = [_v[0], _v[1]]
     except Exception:
         pass
     mout.write(json.dumps(dict(id=mid, ts=kc, lg=comp, h=h, a=a, gh=hg, ga=ag)) + '\n')

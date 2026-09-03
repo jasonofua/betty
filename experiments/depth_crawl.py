@@ -15,6 +15,8 @@ from collections import defaultdict
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import fetcher_v3 as F
 
+WANT_STATS = ('corners', 'yellow', 'sot', 'offsides', 'fouls', 'saves', 'shots')
+
 EXP = os.path.dirname(os.path.abspath(__file__))
 ROUNDS = int(sys.argv[1]) if len(sys.argv) > 1 else 3
 PER_TEAM = int(sys.argv[2]) if len(sys.argv) > 2 else 6
@@ -82,11 +84,11 @@ def harvest(mid, kc, h, a, comp, out_m, out_d):
         _ps = F.parse_match_stats(mid if 'mid' in dir() else r['id'])
         if _ps:
             for _k, _v in (_ps.get('match') or {}).items():
-                if _k in NAMES.values(): st[_k] = [_v[0], _v[1]]
+                if _k in WANT_STATS: st[_k] = [_v[0], _v[1]]
             for _k, _v in (_ps.get('1h') or {}).items():
-                if _k in NAMES.values(): st[_k + '_h1'] = [_v[0], _v[1]]
+                if _k in WANT_STATS: st[_k + '_h1'] = [_v[0], _v[1]]
             for _k, _v in (_ps.get('2h') or {}).items():
-                if _k in NAMES.values(): st[_k + '_h2'] = [_v[0], _v[1]]
+                if _k in WANT_STATS: st[_k + '_h2'] = [_v[0], _v[1]]
     except Exception:
         pass
     if not st:

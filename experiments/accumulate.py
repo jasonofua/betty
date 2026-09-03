@@ -9,6 +9,8 @@ HERE=os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
 import fetcher_v3 as F
 
+WANT_STATS = ('corners', 'yellow', 'sot', 'offsides', 'fouls', 'saves', 'shots')
+
 M=os.path.join(HERE,'matches.jsonl'); DS=os.path.join(HERE,'dataset.jsonl')
 seen={json.loads(l)['id'] for l in open(M)} if os.path.exists(M) else set()
 new=[]
@@ -54,11 +56,11 @@ with open(DS,'a') as out:
             _ps = F.parse_match_stats(mid if 'mid' in dir() else r['id'])
             if _ps:
                 for _k, _v in (_ps.get('match') or {}).items():
-                    if _k in NAMES.values(): st[_k] = [_v[0], _v[1]]
+                    if _k in WANT_STATS: st[_k] = [_v[0], _v[1]]
                 for _k, _v in (_ps.get('1h') or {}).items():
-                    if _k in NAMES.values(): st[_k + '_h1'] = [_v[0], _v[1]]
+                    if _k in WANT_STATS: st[_k + '_h1'] = [_v[0], _v[1]]
                 for _k, _v in (_ps.get('2h') or {}).items():
-                    if _k in NAMES.values(): st[_k + '_h2'] = [_v[0], _v[1]]
+                    if _k in WANT_STATS: st[_k + '_h2'] = [_v[0], _v[1]]
         except Exception:
             pass
         out.write(json.dumps(dict(id=r['id'],ts=r['ts'],lg=r['lg'],
