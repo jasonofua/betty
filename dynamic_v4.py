@@ -1012,6 +1012,25 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
                                 [a for _, a in _opp.pairs(qkey)]
                     if any(v >= _ln for v in _vals):
                         continue
+                    # SPOTLESS IS NOT ENOUGH - the line also needs ROOM.
+                    # Measured on 53,252 spotless corner-under samples
+                    # (5 Sep): when the line sits on top of the sample's own
+                    # maximum it wins 84.2%; 1.5 above wins 88.2%, 2.5 wins
+                    # 91.8%, 3.5+ wins 94.7%. The old test asked only "has
+                    # this been breached?" and treated an 84% bet exactly like
+                    # a 95% one. Caernarfon's home column read [7,0,5,2,3,4,0]
+                    # and Flint's conceded column carried two more 7s against
+                    # a 7.5 line - four observations one corner short - and
+                    # Caernarfon won 2-0 at home and cleared it.
+                    # The cushion sets the true rate; refuse when the price
+                    # demands more than that rate delivers.
+                    if _vals:
+                        _cush = _ln - max(_vals)
+                        _true = (0.842 if _cush <= 0.5 else
+                                 0.882 if _cush <= 1.5 else
+                                 0.918 if _cush <= 2.5 else 0.947)
+                        if (1.0 / odds) > _true - 0.01:
+                            continue
             # HALF-TOTAL UNDERS MUST BE SPOTLESS, like corners: any in-sample
             # half at or above the line kills the bet, however old. A 6/7
             # tally reads as form but hides a proven breach - Fulham Utd 2H
