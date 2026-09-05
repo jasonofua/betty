@@ -35,7 +35,9 @@ HELP = (
     "/max [until]           highest odds inside the 50-leg cap\n"
     "/aimax [until]\n"
     "/goals [until]         highest odds, goal markets only\n"
-    "/aigoals [until]\n\n"
+    "/aigoals [until]\n"
+    "/under [until]         highest odds, Under selections only\n"
+    "/aiunder [until]\n\n"
     "/grade CODE ...        grade share codes\n"
     "/sweep                 bank yesterday's results\n"
     "/slips [n]             recent booked codes\n"
@@ -214,6 +216,12 @@ def _handle(cmd, args, chat, job, lock, run_job, grade_fn, crawl_fn):
         _dispatch_run(chat, job, lock, run_job, f'{eng} goals only',
                       target=6, until=num(0, 23), days=0, dry=False,
                       engine=eng, maxodds=True, goalsonly=True)
+
+    elif cmd in ('/under', '/aiunder', '/unders', '/aiunders'):
+        eng = 'hybrid' if cmd.startswith('/ai') else 'composite'
+        _dispatch_run(chat, job, lock, run_job, f'{eng} unders only',
+                      target=6, until=num(0, 23), days=0, dry=False,
+                      engine=eng, maxodds=True, undersonly=True)
 
     elif cmd == '/grade':
         if not args:

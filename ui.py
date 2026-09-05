@@ -94,7 +94,7 @@ class _LogIO(io.TextIOBase):
 
 
 def run_job(target, until, days, dry, rollover=False, engine='composite',
-            maxodds=False, goalsonly=False):
+            maxodds=False, goalsonly=False, undersonly=False):
     JOB.update(state='building', log=[], result=None,
                params=dict(target=target, until=until, days=days, dry=dry,
                            rollover=rollover, engine=engine),
@@ -127,6 +127,9 @@ def run_job(target, until, days, dry, rollover=False, engine='composite',
             if goalsonly:
                 pool = BD.goals_only(pool)
                 JOB['log'].append(f'goals-only: {len(pool)} legs after dropping stat markets')
+            if undersonly:
+                pool = BD.unders_only(pool)
+                JOB['log'].append(f'unders-only: {len(pool)} legs after dropping every Over')
             if maxodds:
                 legs, combo, surv = BD.pick_max_odds(pool)
             elif rollover:
@@ -172,7 +175,8 @@ def run_job(target, until, days, dry, rollover=False, engine='composite',
                     if got != bk['req']:
                         res['short'] = f"booked {got}/{bk['req']}"
                     A.log_booking(bk['code'], bk['url'],
-                                  (f"{engine} max-odds {combo:,.1f}x" if maxodds
+                                  (f"{engine} unders-only {combo:,.1f}x" if undersonly and maxodds
+                                   else f"{engine} max-odds {combo:,.1f}x" if maxodds
                                    else f"{engine} rollover {combo:.2f}x est {surv:.0%}" if rollover
                                    else f"{engine} target {target:g}x until {until}:00"
                                         + (f" +{days}d" if days else "")),
@@ -314,6 +318,7 @@ class Handler(BaseHTTPRequestHandler):
             rollover = bool(p.get('rollover'))
             maxodds = bool(p.get('maxodds'))
             goalsonly = bool(p.get('goalsonly'))
+            undersonly = bool(p.get('undersonly'))
             engine = 'hybrid' if str(p.get('engine')) == 'hybrid' else 'composite'
             assert 2 <= target <= 100000 and 0 <= until <= 23 and 0 <= days <= 4
         except Exception:
@@ -325,7 +330,7 @@ class Handler(BaseHTTPRequestHandler):
             JOB['state'] = 'building'
         threading.Thread(target=run_job,
                          args=(target, until, days, dry, rollover, engine, maxodds,
-                               goalsonly),
+                               goalsonly, undersonly),
                          daemon=True).start()
         self._send(json.dumps({'ok': True}))
 

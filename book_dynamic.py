@@ -2,6 +2,7 @@
 """Book from the dynamic evaluator.
 
   python3 book_dynamic.py [--until HH] [--days N] [--target Nx] [--rollover] [--dry] [--floor X] [--legs N] [--rank 1,2,3]
+  --maxodds [--goals|--unders]   highest odds; --unders keeps only Under selections
 
 Slips are split into parts of at most MAX_LEGS (SportyBet's cap); --legs N
 makes them smaller, which is usually what you want - a 50-leg accumulator
@@ -404,6 +405,21 @@ def goals_only(legs):
             if not any(w in l['label'].lower() for w in STAT_WORDS)]
 
 
+def unders_only(legs):
+    """Keep only Under selections - no Overs of any kind.
+
+    Standing request 5 Sep. Both of that morning's losses were over-side bets
+    on the quietest games on the board: Fujieda v Vanraure 0-0 (FT Over 0.5,
+    where the away side had scored in 2 of its last 7) and Gifu v Kanazawa
+    0-1 with the goal before the break (2H Over 0.5). Every suppression market
+    on those two fixtures settled - FT Under 2.5, 1H Under 2.5, SoT Under 9.5,
+    corners, bookings and offsides Unders all won on both.
+
+    Strictly Under outcomes. 'No' selections (Win Both Halves / No) and
+    Multigoals bands are suppression bets too, but they are not Unders and the
+    request was explicit, so they are dropped here as well."""
+    return [l for l in legs if '/ under' in l['label'].lower()]
+
 # ── measured family policy (5 Sep) ───────────────────────────────────────────
 # 1,141 settled legs from our OWN booked codes, graded by SportyBet's own
 # settlement flags (isWinning / market status 3), so stat markets count too -
@@ -535,6 +551,7 @@ def main():
         return
 
     goals = '--goals' in sys.argv
+    unders = '--unders' in sys.argv
     if '--maxodds' in sys.argv:
         pool, seen_ev = [], set()
         for rank in range(D.TOP_N):
@@ -546,6 +563,8 @@ def main():
                 pool.append(l)
         if goals:
             pool = goals_only(pool)
+        if unders:
+            pool = unders_only(pool)
         legs, combo, surv = pick_max_odds(pool)
         if not legs:
             print("\n>> no bookable legs on this board")
