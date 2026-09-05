@@ -998,6 +998,36 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
             # corners WHILE LEADING, losing by one. Same class as Klaksvik
             # (an 8 in sample, line under it) and Macara. Both columns that
             # settle the bet must be spotless.
+            # OFFSIDES UNDERS, measured 5 Sep on 23,699 matches. Unlike
+            # corners the market is not uniformly bad - team Under 2.5 (76.4%,
+            # worth 1.31, sells 1.55) and Under 3.5 (89.2%, worth 1.12, sells
+            # 1.20) genuinely pay. Two lines do not: team Under 1.5 lands just
+            # 53.8% and is worth 1.86 while selling at 1.30, and the match
+            # Unders all sell below fair value. Cushion matters as it does for
+            # corners: spotless samples win 86.7% when the line sits on the
+            # sample max, 92.8% at 1.5 clear, 96.3% at 2.5+.
+            if quantity == 'offsides' and d.startswith('under'):
+                mm = re.search(r'([\d.]+)', d)
+                if mm:
+                    _ln = float(mm.group(1))
+                    _fair = ({1.5: 1.86, 2.5: 1.31, 3.5: 1.12, 4.5: 1.05}
+                             if side in ('home', 'away')
+                             else {3.5: 1.74, 4.5: 1.37, 5.5: 1.18, 6.5: 1.09})
+                    _f = _fair.get(_ln)
+                    if _f is not None and odds < _f * 1.01:
+                        continue
+                    if side in ('home', 'away'):
+                        _own = home_rec if side == 'home' else away_rec
+                        _opp = away_rec if side == 'home' else home_rec
+                        _vals = [f for f, _ in _own.pairs(qkey)] + \
+                                [a for _, a in _opp.pairs(qkey)]
+                        if _vals:
+                            _c = _ln - max(_vals)
+                            _t = (0.867 if _c <= 0.5 else
+                                  0.928 if _c <= 1.5 else 0.963)
+                            if (1.0 / odds) > _t - 0.01:
+                                continue
+
             if quantity == 'corners' and d.startswith('under'):
                 mm = re.search(r'([\d.]+)', d)
                 if mm:
