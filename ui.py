@@ -137,7 +137,8 @@ def run_job(target, until, days, dry, rollover=False, engine='composite',
                         f'{surv:.0%} - the board does not clear the 30% floor'})
                     return
             else:
-                legs, combo, surv = BD.pick_for_target(pool, target)
+                legs, combo, surv = BD.pick_for_target(pool, target,
+                                                       floor_sweep=True)
             if not legs:
                 JOB.update(state='done', result={'error': 'no bookable legs on this board'})
                 return

@@ -169,7 +169,7 @@ def true_prob(odds):
     return CALIB[-1][1]
 
 
-def pick_for_target(legs, target):
+def _target_greedy(legs, target, min_odds=1.0):
     """Shortest slip whose combined odds reach `target`, chosen to maximise the
     chance it lands.
 
@@ -185,6 +185,8 @@ def pick_for_target(legs, target):
     import math
     scored = []
     for l in legs:
+        if l['odds'] < min_odds:
+            continue
         # Cheap corner legs are excluded from target slips (20 Aug, on request).
         # Klaksvik 1H corners @1.13 killed a 52x slip while contributing 13% of
         # its payout - and Kansas City corners @1.15 did the same to T2ZS81.
@@ -193,6 +195,8 @@ def pick_for_target(legs, target):
         # read as 93%). The match's other markets stay eligible, so the slot
         # falls through to a different option rather than vanishing.
         if l['odds'] < 1.20 and 'corner' in l['label'].lower():
+            continue
+        if family_banned(l['label']):
             continue
         # CHEAP GOAL-DEPENDENT LEGS, banned 30 Aug - the corner rule applied to
         # its twin. FT Over 0.5 legs ran 95W-7L across the weekend's codes, and
@@ -235,6 +239,36 @@ def pick_for_target(legs, target):
         per_match[ev] += 1
         out.append(l); combo *= l['odds']; surv *= w
     return out, combo, surv
+
+
+def pick_for_target(legs, target, floor_sweep=False):
+    """Target-payout selection, with a fallback for big targets.
+
+    The greedy above ranks by payout-per-survival, which is correct while slots
+    are free: it buys the cheapest survival first. But SportyBet caps a slip at
+    MAX_LEGS, and on a fat board the greedy fills all 50 slots with 1.05-1.15
+    legs and still lands short - 5 Sep asked for 2000x and got 402.2x with the
+    cap already spent. Once the cap binds, a cheap leg is no longer free: it
+    occupies a slot that a longer price needed.
+
+    So when the greedy runs out of slots below the target, sweep a minimum
+    price upward and re-run. Each floor throws out the cheapest legs and lets
+    longer ones into the freed slots. Of the floors that actually reach the
+    target, keep the one with the best survival - that is the best slip the
+    board can make at that payout."""
+    out, combo, surv = _target_greedy(legs, target)
+    if not floor_sweep or combo >= target or len(out) < MAX_LEGS:
+        return out, combo, surv
+    best = None
+    fallback = (out, combo, surv)
+    for mo in (1.10, 1.15, 1.20, 1.25, 1.30, 1.40, 1.50, 1.60, 1.75, 2.0, 2.5, 3.0, 4.0):
+        o2, c2, s2 = _target_greedy(legs, target, min_odds=mo)
+        if c2 >= target:
+            if best is None or s2 > best[2]:
+                best = (o2, c2, s2)
+        elif c2 > fallback[1]:
+            fallback = (o2, c2, s2)
+    return best or fallback
 
 
 # Fair odds for the "a goal will happen" markets, measured on the 50,139-match
@@ -370,6 +404,53 @@ def goals_only(legs):
             if not any(w in l['label'].lower() for w in STAT_WORDS)]
 
 
+# ── measured family policy (5 Sep) ───────────────────────────────────────────
+# 1,141 settled legs from our OWN booked codes, graded by SportyBet's own
+# settlement flags (isWinning / market status 3), so stat markets count too -
+# the score-based grader can only settle goals. Overall 90.4% per leg. Grouped
+# and ranked by Wilson 95% lower bound:
+#
+#   KEEP   Bookings Under    71 100% (lb 95%)   Win both halves/No  38 100% (91%)
+#          1H Under          38 100% (91%)      FT Over            602  93% (91%)
+#          FT Under          90  97% (91%)      2H Over             74  93% (85%)
+#   WATCH  SoT Under         23  91% (73%)      Offsides Under      29  86% (69%)
+#          Corners Under     43  77% (62%)
+#   DROP   2H Under          18  83% (61%)      1H Over             24  79% (60%)
+#          SoT Over          29  69% (51%)      Shots Under         49  53% (39%)
+#
+# Shots Under is the single biggest leak by volume: 49 legs at 53%, with
+# Under 34.5 at 22% (2/9) and Home Team Shots Under 13.5 at 0% (0/8). The
+# training corpus disagrees - it rates Shots Under 34.5 at 94% - but that comes
+# from 990 rows whose values are miscoded (matches recorded with 4+5 total
+# shots), so the model has been trusting bad data and selling the line cheap.
+# Only families with n >= 15 and a lower bound under 62% are dropped here.
+FAMILY_DROP = {'SHOTS Under', 'SoT Over', '1H GOALS Over', '2H GOALS Under'}
+
+
+def family_of(label):
+    """Group a leg label the same way the settled-leg audit grouped it.
+
+    Live labels and the share API disagree on wording ('2nd Half - Total /
+    Over 0.5' vs '2nd Half - Over/Under / Over 0.5'), so match on the period
+    and the quantity, never on the exact market name."""
+    low = label.split('[')[0].lower()
+    if 'shots on target' in low:   base = 'SoT'
+    elif 'shots' in low:           base = 'SHOTS'
+    elif 'corner' in low:          base = 'CORNERS'
+    elif 'booking' in low or 'card' in low: base = 'BOOKINGS'
+    elif 'offside' in low:         base = 'OFFSIDES'
+    elif 'both halves' in low:     base = 'WINBOTHHALVES'
+    elif '1st half' in low or low.startswith('1h'): base = '1H GOALS'
+    elif '2nd half' in low or low.startswith('2h'): base = '2H GOALS'
+    else:                          base = 'FT GOALS'
+    side = 'Under' if '/ under' in low else 'Over' if '/ over' in low else None
+    return f"{base} {side}" if side else base
+
+
+def family_banned(label):
+    return family_of(label) in FAMILY_DROP
+
+
 def pick_max_odds(legs, cap=None):
     """The biggest multiplier the board can produce inside SportyBet's cap.
 
@@ -386,6 +467,8 @@ def pick_max_odds(legs, cap=None):
         if len(out) >= cap:
             break
         if l['odds'] < 1.20 and 'corner' in l['label'].lower():
+            continue
+        if family_banned(l['label']):
             continue
         if _goal_over_underpriced(l['label'], l['odds']) or \
                 _h1_stat_over_underpriced(l['label'], l['odds']) or \
@@ -534,7 +617,7 @@ def main():
                     continue
                 seen_ev.add(k)
                 pool.append(l)
-        legs, combo, surv = pick_for_target(pool, target)
+        legs, combo, surv = pick_for_target(pool, target, floor_sweep=True)
         if not legs:
             print(f"\n>> nothing on the board can reach {target}x")
             return
