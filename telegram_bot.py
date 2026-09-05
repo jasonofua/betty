@@ -37,7 +37,8 @@ HELP = (
     "/goals [until]         highest odds, goal markets only\n"
     "/aigoals [until]\n"
     "/under [until]         highest odds, Under selections only\n"
-    "/aiunder [until]\n\n"
+    "/aiunder [until]\n"
+    "/draw [until]          draws only, measured gate + price floor\n\n"
     "/grade CODE ...        grade share codes\n"
     "/sweep                 bank yesterday's results\n"
     "/slips [n]             recent booked codes\n"
@@ -222,6 +223,13 @@ def _handle(cmd, args, chat, job, lock, run_job, grade_fn, crawl_fn):
         _dispatch_run(chat, job, lock, run_job, f'{eng} unders only',
                       target=6, until=num(0, 23), days=0, dry=False,
                       engine=eng, maxodds=True, undersonly=True)
+
+    elif cmd in ('/draw', '/draws'):
+        # draw mode lives in book_draw, driven by ui.draw_job - imported late
+        # because ui imports this module at startup.
+        import ui as _ui
+        _dispatch_run(chat, job, lock, _ui.draw_job, 'draw mode',
+                      until=num(0, 23), days=0, dry=False)
 
     elif cmd == '/grade':
         if not args:

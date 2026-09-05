@@ -93,6 +93,43 @@ class _LogIO(io.TextIOBase):
         return len(s)
 
 
+def draw_job(until, days, dry):
+    """Draw mode - the measured gate in book_draw, not the dynamic_v4 rulebook."""
+    JOB.update(state='building', log=[], result=None,
+               params=dict(mode='draws', until=until, days=days, dry=dry),
+               started=dt.datetime.now(A.WAT).strftime('%H:%M'))
+    try:
+        import book_draw as DRW
+        with contextlib.redirect_stdout(_LogIO()):
+            legs = DRW.build(until_h=until, days=days)
+            if not legs:
+                JOB.update(state='done', result={'error':
+                    'no fixture clears the draw gate and the price floor'})
+                return
+            combo = 1.0
+            for l in legs:
+                combo *= l['odds']
+            res = {'combo': round(combo, 1), 'pool': len(legs),
+                   'est': round(DRW.MEASURED ** len(legs) * 100, 2),
+                   'legs': [dict(when=l['ts'].strftime('%a %H:%M'), match=l['match'],
+                                 label=l['label'], odds=l['odds'],
+                                 prob=round(DRW.MEASURED * 100)) for l in legs]}
+            if dry:
+                res['dry'] = True
+            else:
+                JOB['state'] = 'booking'
+                bk = A.book([l['bs'] for l in legs])
+                if bk and bk.get('code'):
+                    res['code'] = bk['code']; res['url'] = bk['url']
+                    A.log_booking(bk['code'], bk['url'],
+                                  f"draw mode {combo:,.1f}x until {until}:00",
+                                  [(l['ts'].timestamp(), l['match'], l['label'],
+                                    l['odds'], l['stats']) for l in legs])
+        JOB.update(state='done', result=res)
+    except Exception as e:
+        JOB.update(state='done', result={'error': f'{type(e).__name__}: {e}'})
+
+
 def run_job(target, until, days, dry, rollover=False, engine='composite',
             maxodds=False, goalsonly=False, undersonly=False):
     JOB.update(state='building', log=[], result=None,
@@ -305,6 +342,22 @@ class Handler(BaseHTTPRequestHandler):
                 self._send(json.dumps({'error': 'crawl already running'}), code=409); return
             threading.Thread(target=crawl_job, args=(cap, floor, mode),
                              daemon=True).start()
+            self._send(json.dumps({'ok': True})); return
+        if path == '/api/draws':
+            n = int(self.headers.get('Content-Length', 0))
+            try:
+                p2 = json.loads(self.rfile.read(n) or b'{}')
+                until = int(p2.get('until', 23)); days = int(p2.get('days', 0))
+                dry = bool(p2.get('dry'))
+                assert 0 <= until <= 23 and 0 <= days <= 4
+            except Exception:
+                self._send(json.dumps({'error': 'bad parameters'}), code=400); return
+            with LOCK:
+                if JOB['state'] not in ('idle', 'done'):
+                    self._send(json.dumps({'error': 'a run is already in progress'}), code=409)
+                    return
+                JOB['state'] = 'building'
+            threading.Thread(target=draw_job, args=(until, days, dry), daemon=True).start()
             self._send(json.dumps({'ok': True})); return
         if path != '/api/run':
             self._send('not found', 'text/plain', 404); return
