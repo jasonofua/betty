@@ -38,7 +38,9 @@ HELP = (
     "/aigoals [until]\n"
     "/under [until]         highest odds, Under selections only\n"
     "/aiunder [until]\n"
-    "/draw [until]          draws only, measured gate + price floor\n\n"
+    "/strict [until]        highest odds, opponent's record must confirm every team leg\n"
+    "/aistrict [until]\n"
+    "/draw [until]          draws only, goals+stats gate, one slip\n\n"
     "/grade CODE ...        grade share codes\n"
     "/sweep                 bank yesterday's results\n"
     "/slips [n]             recent booked codes\n"
@@ -223,6 +225,12 @@ def _handle(cmd, args, chat, job, lock, run_job, grade_fn, crawl_fn):
         _dispatch_run(chat, job, lock, run_job, f'{eng} unders only',
                       target=6, until=num(0, 23), days=0, dry=False,
                       engine=eng, maxodds=True, undersonly=True)
+
+    elif cmd in ('/strict', '/aistrict'):
+        eng = 'hybrid' if cmd.startswith('/ai') else 'composite'
+        _dispatch_run(chat, job, lock, run_job, f'{eng} strict max odds',
+                      target=6, until=num(0, 23), days=0, dry=False,
+                      engine=eng, maxodds=True, strict=True)
 
     elif cmd in ('/draw', '/draws'):
         # draw mode lives in book_draw, driven by ui.draw_job - imported late

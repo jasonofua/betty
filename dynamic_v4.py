@@ -31,6 +31,34 @@ except Exception:
 CURRENT_LEAGUE = None
 
 
+# STRICT MODE (6 Sep): on a TEAM market, make the opponent's concession column
+# clear the bar too. count_outcome always computes it - for "Parma home offsides
+# Over 0.5" the second column is what Monza's opponents recorded against them -
+# but the gate only ever required the primary side. Parma read 4/4 on its own
+# column, Monza-allows read 1/4, the leg was booked, Parma finished with zero
+# offsides. Off by default so every existing mode is unchanged.
+STRICT_BOTH = False
+
+
+def set_strict(flag):
+    global STRICT_BOTH
+    STRICT_BOTH = bool(flag)
+
+
+def clears_bar(hh, nh, ha, na, primary):
+    """Does this tally clear MIN_HITS? Match totals: both columns, always.
+    Team markets: the primary column, plus the opponent's column in strict mode."""
+    if primary is None:
+        return hh / nh >= MIN_HITS and ha / na >= MIN_HITS
+    ph, pn = (hh, nh) if primary == 0 else (ha, na)
+    oh, on = (ha, na) if primary == 0 else (hh, nh)
+    if ph / pn < MIN_HITS:
+        return False
+    if STRICT_BOTH and oh / on < MIN_HITS:
+        return False
+    return True
+
+
 def set_league(name):
     global CURRENT_LEAGUE
     CURRENT_LEAGUE = name
@@ -1239,16 +1267,10 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
                 # SoT totals stable. User's own 22 SoT match-total unders went
                 # 19W-3L (86%, +18.8% ROI), all of which this rule had blocked.
                 continue
-            if primary is None:
-                # Stat match total (SoT, corners, shots, offsides): no side is
-                # primary, so BOTH teams' records still have to clear the bar.
-                if hh / nh < MIN_HITS or ha / na < MIN_HITS:
-                    continue
-            else:
-                # team market - only the team the bet settles on must clear it
-                ph, pn = (hh, nh) if primary == 0 else (ha, na)
-                if ph / pn < MIN_HITS:
-                    continue
+            # Match totals: both columns. Team markets: the primary column, and
+            # in STRICT mode the opponent's concession column as well.
+            if not clears_bar(hh, nh, ha, na, primary):
+                continue
             # A bet that dies when nobody scores needs a perfect side behind it.
             # Probing the predicate at 0-0 separates the two classes without any
             # market list. Measured over 260 settled legs:

@@ -134,7 +134,7 @@ def draw_job(until, days, dry):
 
 
 def run_job(target, until, days, dry, rollover=False, engine='composite',
-            maxodds=False, goalsonly=False, undersonly=False):
+            maxodds=False, goalsonly=False, undersonly=False, strict=False):
     JOB.update(state='building', log=[], result=None,
                params=dict(target=target, until=until, days=days, dry=dry,
                            rollover=rollover, engine=engine),
@@ -151,7 +151,11 @@ def run_job(target, until, days, dry, rollover=False, engine='composite',
                     JOB.update(state='done',
                                result={'error': f'hybrid models unavailable: {e}'})
                     return
-            board = BD.build(until_h=until, days=days)
+            D.set_strict(strict)          # module flag - reset in finally below
+            try:
+                board = BD.build(until_h=until, days=days)
+            finally:
+                D.set_strict(False)
             if not board:
                 JOB.update(state='done', result={'error': 'no supported options on this board'})
                 return
@@ -215,7 +219,8 @@ def run_job(target, until, days, dry, rollover=False, engine='composite',
                     if got != bk['req']:
                         res['short'] = f"booked {got}/{bk['req']}"
                     A.log_booking(bk['code'], bk['url'],
-                                  (f"{engine} unders-only {combo:,.1f}x" if undersonly and maxodds
+                                  (f"{engine} strict max-odds {combo:,.1f}x" if strict and maxodds
+                                   else f"{engine} unders-only {combo:,.1f}x" if undersonly and maxodds
                                    else f"{engine} max-odds {combo:,.1f}x" if maxodds
                                    else f"{engine} rollover {combo:.2f}x est {surv:.0%}" if rollover
                                    else f"{engine} target {target:g}x until {until}:00"
@@ -375,6 +380,7 @@ class Handler(BaseHTTPRequestHandler):
             maxodds = bool(p.get('maxodds'))
             goalsonly = bool(p.get('goalsonly'))
             undersonly = bool(p.get('undersonly'))
+            strict = bool(p.get('strict'))
             engine = 'hybrid' if str(p.get('engine')) == 'hybrid' else 'composite'
             assert 2 <= target <= 100000 and 0 <= until <= 23 and 0 <= days <= 4
         except Exception:
@@ -386,7 +392,7 @@ class Handler(BaseHTTPRequestHandler):
             JOB['state'] = 'building'
         threading.Thread(target=run_job,
                          args=(target, until, days, dry, rollover, engine, maxodds,
-                               goalsonly, undersonly),
+                               goalsonly, undersonly, strict),
                          daemon=True).start()
         self._send(json.dumps({'ok': True}))
 

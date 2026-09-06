@@ -3,6 +3,7 @@
 
   python3 book_dynamic.py [--until HH] [--days N] [--target Nx] [--rollover] [--dry] [--floor X] [--legs N] [--rank 1,2,3]
   --maxodds [--goals|--unders]   highest odds; --unders keeps only Under selections
+  --strict                       team markets need the OPPONENT's concession column to clear the bar as well
 
 Slips are split into parts of at most MAX_LEGS (SportyBet's cap); --legs N
 makes them smaller, which is usually what you want - a 50-leg accumulator
@@ -552,6 +553,8 @@ def main():
 
     goals = '--goals' in sys.argv
     unders = '--unders' in sys.argv
+    if '--strict' in sys.argv:
+        D.set_strict(True)           # opponent's column must clear the bar too
     if '--maxodds' in sys.argv:
         pool, seen_ev = [], set()
         for rank in range(D.TOP_N):
