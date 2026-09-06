@@ -50,10 +50,11 @@ def main():
         past = hist[team][-WIN:]
         out = {}
         if not past:
-            return {f'{pre}_{k}': None for k in
-                    list(STATS) + ['htdraw', 'htgoals', 'shgoals', 'btts', 'cs2']} | {f'{pre}_n': 0}
+            keys = list(STATS) + [k + '_ag' for k in STATS] + ['htdraw', 'htgoals', 'shgoals', 'btts', 'cs2']
+            return {f'{pre}_{k}': None for k in keys} | {f'{pre}_n': 0}
         for k in STATS:
-            out[f'{pre}_{k}'] = mean([p.get(k) for p in past])
+            out[f'{pre}_{k}'] = mean([p.get(k) for p in past])          # produced
+            out[f'{pre}_{k}_ag'] = mean([p.get(k + '_ag') for p in past])  # allowed
         out[f'{pre}_htdraw'] = mean([1.0 if p['ht_f'] == p['ht_a'] else 0.0 for p in past])
         out[f'{pre}_htgoals'] = mean([p['ht_f'] + p['ht_a'] for p in past])
         out[f'{pre}_shgoals'] = mean([p['sh_f'] + p['sh_a'] for p in past])
@@ -97,6 +98,22 @@ def main():
             rec['cs'] = rec['h_cs'] + rec['a_cs']
             rec.update(trail(h, 'h'))
             rec.update(trail(a, 'a'))
+            # STRENGTH AND EVENNESS FROM THE STATS (6 Sep). Goals are a noisy
+            # outcome; shots on target and corners measure what a side creates
+            # and what it allows. For each: expected pressure in the game
+            # (attack vs the other defence, like xg but in SoT/corners), the
+            # differential gap (how evenly matched the two sides are on that
+            # stat), and how alike the two attacks / two defences are.
+            for k, pre in (('sot', 's'), ('corners', 'c')):
+                ha, hd = rec.get(f'h_{k}'), rec.get(f'h_{k}_ag')
+                aa, ad = rec.get(f'a_{k}'), rec.get(f'a_{k}_ag')
+                if None in (ha, hd, aa, ad):
+                    rec[f'{pre}xg'] = rec[f'{pre}mis'] = rec[f'{pre}_att_gap'] = rec[f'{pre}_def_gap'] = None
+                else:
+                    rec[f'{pre}xg'] = (ha + ad) / 2 + (aa + hd) / 2
+                    rec[f'{pre}mis'] = abs((ha - hd) - (aa - ad))
+                    rec[f'{pre}_att_gap'] = abs(ha - aa)
+                    rec[f'{pre}_def_gap'] = abs(hd - ad)
             # paired terms: draws want two SIMILAR, quiet sides
             for k in ('sot', 'corners', 'yellow', 'offsides', 'fouls', 'saves',
                       'htdraw', 'htgoals', 'shgoals', 'btts'):
@@ -113,6 +130,7 @@ def main():
                 return v[i] if v and len(v) == 2 and v[i] is not None else None
             for team, i in ((h, 0), (a, 1)):
                 d = {k: val(k, i) for k in STATS}
+                d.update({k + '_ag': val(k, 1 - i) for k in STATS})   # what this side ALLOWED
                 d.update(gf=ft[i], ga=ft[1 - i],
                          ht_f=h1[i], ht_a=h1[1 - i],
                          sh_f=h2[i], sh_a=h2[1 - i])
@@ -125,8 +143,9 @@ def main():
     print(f"wrote {out} rows -> {OUT}")
     rs = [json.loads(l) for l in open(OUT, encoding='utf-8')]
     print(f"\n{'feature':<16}{'coverage':>10}")
-    for k in ('xg', 'lg_draw', 'h_sot', 'h_corners', 'h_yellow', 'h_offsides',
-              'h_fouls', 'h_saves', 'h_htdraw', 'h_btts', 'sum_offsides'):
+    for k in ('xg', 'lg_draw', 'h_sot', 'h_sot_ag', 'h_corners', 'h_corners_ag',
+              'h_yellow', 'h_offsides', 'h_fouls', 'h_saves', 'h_htdraw', 'h_btts',
+              'sxg', 'smis', 'cxg', 'cmis'):
         c = sum(1 for r in rs if r.get(k) is not None)
         print(f"{k:<16}{c/len(rs):>10.1%}")
 

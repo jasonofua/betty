@@ -19,9 +19,13 @@ BASE = ['h_att','h_def','a_att','a_def','xg','mismatch','h_gd','a_gd',
         'blank','h_cs','a_cs','cs','lg_draw']
 STATK = ['sot','corners','yellow','offsides','fouls','saves',
          'htdraw','htgoals','shgoals','btts']
+STATAG = ['sot','corners','yellow','offsides','fouls','saves']
+STRENGTH = ['sxg','smis','s_att_gap','s_def_gap','cxg','cmis','c_att_gap','c_def_gap']
 FEATS = (BASE
          + [f'{s}_{k}' for k in STATK for s in ('h','a')]
+         + [f'{s}_{k}_ag' for k in STATAG for s in ('h','a')]     # what each side ALLOWS
          + [f'{p}_{k}' for k in STATK for p in ('sum','gap')]
+         + STRENGTH                                                 # strength + evenness on stats
          + ['h_cs2','a_cs2'])
 
 

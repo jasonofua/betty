@@ -83,11 +83,12 @@ def features(rich, league, home_rec, away_rec):
         h2, h2a = rich.get(f'{s}_2h_gf_series') or [], rich.get(f'{s}_2h_ga_series') or []
         st = rich.get(f'{s}_stats') or {}
         def own(k):
-            v = (st.get(k) or {}).get('series_for') or []
-            return _mean(v)
-        f[f'{p}_sot'], f[f'{p}_corners'] = own('sot'), own('corners')
-        f[f'{p}_yellow'], f[f'{p}_offsides'] = own('yellow'), own('offsides')
-        f[f'{p}_fouls'], f[f'{p}_saves'] = own('fouls'), own('saves')
+            return _mean((st.get(k) or {}).get('series_for') or [])
+        def allowed(k):
+            return _mean((st.get(k) or {}).get('series_against') or [])
+        for k in ('sot', 'corners', 'yellow', 'offsides', 'fouls', 'saves'):
+            f[f'{p}_{k}'] = own(k)             # what this side produces
+            f[f'{p}_{k}_ag'] = allowed(k)      # what this side allows
         f[f'{p}_htdraw'] = _mean([1.0 if x == y else 0.0 for x, y in zip(ht, hta)])
         f[f'{p}_htgoals'] = _mean([x + y for x, y in zip(ht, hta)])
         f[f'{p}_shgoals'] = _mean([x + y for x, y in zip(h2, h2a)])
@@ -104,6 +105,15 @@ def features(rich, league, home_rec, away_rec):
     f['cs'] = f['h_cs'] + f['a_cs']
     # the corpus carries both 'Gaucho 2' and 'BRAZIL: Gaucho 2'; the table is
     # keyed on the bare name, so strip the country prefix before looking up
+    for k, pre in (('sot', 's'), ('corners', 'c')):
+        ha, hd, aa, ad = f.get(f'h_{k}'), f.get(f'h_{k}_ag'), f.get(f'a_{k}'), f.get(f'a_{k}_ag')
+        if None in (ha, hd, aa, ad):
+            f[f'{pre}xg'] = f[f'{pre}mis'] = f[f'{pre}_att_gap'] = f[f'{pre}_def_gap'] = None
+        else:
+            f[f'{pre}xg'] = (ha + ad) / 2 + (aa + hd) / 2
+            f[f'{pre}mis'] = abs((ha - hd) - (aa - ad))
+            f[f'{pre}_att_gap'] = abs(ha - aa)
+            f[f'{pre}_def_gap'] = abs(hd - ad)
     _lg = re.sub(r'^[A-Z][A-Z \-&.]+:\s*', '', league or '').strip()
     f['lg_draw'] = (LG_DRAW.get(_lg) or LG_DRAW.get(league or '') or {}).get('draw')
     for k in ('sot', 'corners', 'yellow', 'offsides', 'fouls', 'saves',
@@ -115,8 +125,13 @@ def features(rich, league, home_rec, away_rec):
 
 
 def in_pocket(f):
-    return (f['xg'] < POCKET['xg_max'] and f['cd'] >= POCKET['cd_min']
-            and f['mismatch'] <= POCKET['mm_max'])
+    if POCKET.get('mode', 'goals') == 'goals':
+        return (f['xg'] < POCKET['xg_max'] and f['cd'] >= POCKET['cd_min']
+                and f['mismatch'] <= POCKET['mm_max'])
+    if f.get('smis') is None or f.get('sxg') is None:
+        return False
+    return (f['smis'] <= POCKET['smis_max'] and f['sxg'] <= POCKET['sxg_max']
+            and f['cd'] >= POCKET['cd_min'])
 
 
 def prob(f):
