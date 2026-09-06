@@ -94,7 +94,10 @@ class _LogIO(io.TextIOBase):
 
 
 def draw_job(until, days, dry):
-    """Draw mode - the measured gate in book_draw, not the dynamic_v4 rulebook."""
+    """Draw mode - the trained model in book_draw, booked as SINGLES.
+
+    A slice that hits ~37% is a singles instrument; nine of them on one slip
+    (HVGEU3, 6 Sep) needs all nine. One code per fixture, all reported."""
     JOB.update(state='building', log=[], result=None,
                params=dict(mode='draws', until=until, days=days, dry=dry),
                started=dt.datetime.now(A.WAT).strftime('%H:%M'))
@@ -104,27 +107,30 @@ def draw_job(until, days, dry):
             legs = DRW.build(until_h=until, days=days)
             if not legs:
                 JOB.update(state='done', result={'error':
-                    'no fixture clears the draw gate and the price floor'})
+                    'no fixture clears the model cut and the price floor'})
                 return
-            combo = 1.0
-            for l in legs:
-                combo *= l['odds']
-            res = {'combo': round(combo, 1), 'pool': len(legs),
-                   'est': round(DRW.MEASURED ** len(legs) * 100, 2),
+            res = {'combo': round(max(l['odds'] for l in legs), 2), 'pool': len(legs),
+                   'est': round(DRW.MEASURED * 100, 1), 'singles': True,
                    'legs': [dict(when=l['ts'].strftime('%a %H:%M'), match=l['match'],
                                  label=l['label'], odds=l['odds'],
-                                 prob=round(DRW.MEASURED * 100)) for l in legs]}
+                                 prob=round(l['p'] * 100)) for l in legs]}
             if dry:
                 res['dry'] = True
             else:
                 JOB['state'] = 'booking'
-                bk = A.book([l['bs'] for l in legs])
-                if bk and bk.get('code'):
-                    res['code'] = bk['code']; res['url'] = bk['url']
-                    A.log_booking(bk['code'], bk['url'],
-                                  f"draw mode {combo:,.1f}x until {until}:00",
-                                  [(l['ts'].timestamp(), l['match'], l['label'],
-                                    l['odds'], l['stats']) for l in legs])
+                codes = []
+                for l, lg in zip(legs, res['legs']):
+                    bk = A.book([l['bs']])
+                    if bk and bk.get('code'):
+                        lg['code'] = bk['code']; codes.append(bk['code'])
+                        A.log_booking(bk['code'], bk['url'],
+                                      f"draw model single @{l['odds']} until {until}:00",
+                                      [(l['ts'].timestamp(), l['match'], l['label'],
+                                        l['odds'], l['stats'])])
+                if codes:
+                    res['code'] = codes[0]
+                    res['codes'] = codes
+                    res['url'] = f"http://www.sportybet.com/ng/?shareCode={codes[0]}"
         JOB.update(state='done', result=res)
     except Exception as e:
         JOB.update(state='done', result={'error': f'{type(e).__name__}: {e}'})

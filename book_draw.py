@@ -1,38 +1,44 @@
 #!/usr/bin/env python3
-"""Draw mode - book the draw, only where the measured pattern fires.
+"""Draw mode - the TRAINED model picks, the price floor decides.
 
-Trained on experiments/draw_dataset.jsonl (51,368 corpus matches, every feature
-strictly pre-match). Time-ordered 80/20 split; the gate below was selected on
-the train half and held on the test half:
+The model is experiments/draw_model.pkl, a logistic regression trained on
+experiments/draw_dataset.jsonl (51,368 corpus matches, every feature strictly
+pre-match: goal form, half-time and second-half history, and trailing shots on
+target, corners, cards, offsides, fouls and saves for both sides, plus paired
+sum/gap terms and the league's draw rate).
 
-    xg < 2.1  and  cd >= 4  and  mismatch <= 0.6  and  btts <= 0.55
-        train  1,528 matches  32.3%
-        test     215 matches  34.4%
-        base draw rate 22.2%   ->  +12 points, fair price 2.91
+A classifier fitted to the whole corpus lost to a hand-picked rule three times
+(draws are close to random across all football, AUC ~0.56). Fitted INSIDE the
+draw-prone region instead - the wide pocket xg < 2.4, combined draws >= 3,
+mismatch <= 1.0 (7,479 matches, 29.2% draws) - its top decile on held-out rows
+hits 36.9% (n=149) where the old four-term rule hit 32.8% (n=305) on the same
+rows. That decile is what this module bets: pocket -> model probability at or
+above the saved cut -> price at or above fair.
 
-A logistic model over the full feature set (including trailing sot/corners/
-cards/offsides/fouls/saves and half-time history) reached AUC 0.568 and did NOT
-beat this gate; xgboost overfit outright (AUC 0.551, top-1% precision 21.6%,
-below base). So the gate is the model - four terms, each monotonic on its own.
-
-The features here are built from OVERALL last-7 form, matching how the corpus
-rows were built. dynamic_v4's records are venue-filtered, which is a different
-distribution, so this module parses its own history rather than reusing them.
+Live features are rebuilt from fetcher_v3's deep history to the same
+definitions the corpus builder used. Where a stat is missing live, the
+pipeline's median imputer fills it, exactly as in training.
 
     python3 book_draw.py --until 23 [--days N] [--dry] [--margin 0.05]
 """
-import sys, datetime as dt, collections
+import sys, os, re, json, pickle, datetime as dt, collections
+import numpy as np
 import acca as A
 import book_v3 as B
 import dynamic_v4 as D
 import fetcher_v2 as F2
+import fetcher_v3 as F3
 
-# gate, measured - see docstring
-XG_MAX, CD_MIN, MM_MAX, BTTS_MAX = 2.1, 4, 0.6, 0.55
-MEASURED = 0.333            # combined train+test precision of the gate
-FAIR = 1.0 / MEASURED       # 3.00
-MARGIN = 0.05               # require the book to beat fair by this much
-WINDOW = 7
+ROOT = os.path.dirname(os.path.abspath(__file__))
+_B = pickle.load(open(os.path.join(ROOT, 'experiments', 'draw_model.pkl'), 'rb'))
+MODEL, FEATS, POCKET, P_CUT = _B['model'], _B['feats'], _B['pocket'], _B['p_cut']
+MEASURED = _B['test_precision']          # held-out precision of the bet slice
+FAIR = 1.0 / MEASURED
+MARGIN = 0.05
+try:
+    LG_DRAW = json.load(open(os.path.join(ROOT, 'experiments', 'league_draw_rates.json')))
+except OSError:
+    LG_DRAW = {}
 
 
 def _mean(xs):
@@ -40,41 +46,89 @@ def _mean(xs):
     return sum(xs) / len(xs) if xs else None
 
 
-def form(fixture_id):
-    """(home rows, away rows) as [(gf, ga), ...] overall, most recent first."""
-    raw = F2.fetch(f"df_hh_1_{fixture_id}")
-    if not raw:
-        return [], []
-    h, a = F2.parse_history(raw)
-    return ([(r['gf'], r['ga']) for r in h][:WINDOW],
-            [(r['gf'], r['ga']) for r in a][:WINDOW])
+def _rich(fixture_id):
+    out = F3.fetch_rich_history(fixture_id)
+    for x in (out if isinstance(out, tuple) else (out,)):
+        if isinstance(x, dict) and any(k.endswith('_ft_gf_series') for k in x):
+            return x
+    return None
 
 
-def features(hrows, arows):
-    if len(hrows) < 5 or len(arows) < 5:
+def features(rich, league, home_rec, away_rec):
+    """Every model feature, built the way experiments/build_draw_dataset.py built it.
+
+    GOAL FORM IS VENUE-SPLIT, because the corpus is: accumulate.py builds hgf/hga
+    from the home side's HOME games and agf/aga from the away side's AWAY games,
+    last 7, cut at kickoff. dynamic_v4.records_for returns exactly those two
+    records. The first cut of this file fed the model the deep list's venue-
+    MIXED series instead - trained on one distribution, scored on another.
+    The trailing stat / half-time block is per-team over all games in both the
+    corpus and the deep history, so that part stays on `rich`."""
+    f = {}
+    side_ok = True
+    for s in ('home', 'away'):
+        rec = home_rec if s == 'home' else away_rec
+        pairs = rec.pairs('goals')[:7] if rec else []
+        gf, ga = [x for x, _ in pairs], [y for _, y in pairs]
+        if len(pairs) < 5:
+            side_ok = False
+        p = 'h' if s == 'home' else 'a'
+        f[f'{p}_att'], f[f'{p}_def'] = _mean(gf), _mean(ga)
+        f[f'{p}_draws'] = sum(1 for x, y in zip(gf, ga) if x == y)
+        f[f'{p}_low'] = sum(1 for x, y in zip(gf, ga) if x + y <= 2)
+        f[f'{p}_blank'] = sum(1 for x in gf if x == 0)
+        f[f'{p}_cs'] = sum(1 for x in ga if x == 0)
+        # trailing history block (corpus WIN=10; the deep list carries ~7)
+        ht, hta = rich.get(f'{s}_ht_gf_series') or [], rich.get(f'{s}_ht_ga_series') or []
+        h2, h2a = rich.get(f'{s}_2h_gf_series') or [], rich.get(f'{s}_2h_ga_series') or []
+        st = rich.get(f'{s}_stats') or {}
+        def own(k):
+            v = (st.get(k) or {}).get('series_for') or []
+            return _mean(v)
+        f[f'{p}_sot'], f[f'{p}_corners'] = own('sot'), own('corners')
+        f[f'{p}_yellow'], f[f'{p}_offsides'] = own('yellow'), own('offsides')
+        f[f'{p}_fouls'], f[f'{p}_saves'] = own('fouls'), own('saves')
+        f[f'{p}_htdraw'] = _mean([1.0 if x == y else 0.0 for x, y in zip(ht, hta)])
+        f[f'{p}_htgoals'] = _mean([x + y for x, y in zip(ht, hta)])
+        f[f'{p}_shgoals'] = _mean([x + y for x, y in zip(h2, h2a)])
+        f[f'{p}_btts'] = _mean([1.0 if x > 0 and y > 0 else 0.0 for x, y in zip(gf, ga)])
+        f[f'{p}_cs2'] = _mean([1.0 if y == 0 else 0.0 for y in ga])
+    if not side_ok or None in (f['h_att'], f['h_def'], f['a_att'], f['a_def']):
         return None
-    h_att, h_def = _mean([g for g, _ in hrows]), _mean([a for _, a in hrows])
-    a_att, a_def = _mean([g for g, _ in arows]), _mean([a for _, a in arows])
-    if None in (h_att, h_def, a_att, a_def):
-        return None
-    btts_h = _mean([1.0 if g > 0 and a > 0 else 0.0 for g, a in hrows])
-    btts_a = _mean([1.0 if g > 0 and a > 0 else 0.0 for g, a in arows])
-    return dict(
-        xg=(h_att + a_def) / 2 + (a_att + h_def) / 2,
-        mismatch=abs((h_att - h_def) - (a_att - a_def)),
-        cd=sum(1 for g, a in hrows if g == a) + sum(1 for g, a in arows if g == a),
-        btts=(btts_h + btts_a) / 2,
-        h_att=h_att, h_def=h_def, a_att=a_att, a_def=a_def,
-    )
+    f['xg'] = (f['h_att'] + f['a_def']) / 2 + (f['a_att'] + f['h_def']) / 2
+    f['h_gd'], f['a_gd'] = f['h_att'] - f['h_def'], f['a_att'] - f['a_def']
+    f['mismatch'] = abs(f['h_gd'] - f['a_gd'])
+    f['cd'] = f['h_draws'] + f['a_draws']
+    f['low'] = f['h_low'] + f['a_low']
+    f['blank'] = f['h_blank'] + f['a_blank']
+    f['cs'] = f['h_cs'] + f['a_cs']
+    # the corpus carries both 'Gaucho 2' and 'BRAZIL: Gaucho 2'; the table is
+    # keyed on the bare name, so strip the country prefix before looking up
+    _lg = re.sub(r'^[A-Z][A-Z \-&.]+:\s*', '', league or '').strip()
+    f['lg_draw'] = (LG_DRAW.get(_lg) or LG_DRAW.get(league or '') or {}).get('draw')
+    for k in ('sot', 'corners', 'yellow', 'offsides', 'fouls', 'saves',
+              'htdraw', 'htgoals', 'shgoals', 'btts'):
+        x, y = f.get(f'h_{k}'), f.get(f'a_{k}')
+        f[f'sum_{k}'] = (x + y) if x is not None and y is not None else None
+        f[f'gap_{k}'] = abs(x - y) if x is not None and y is not None else None
+    return f
 
 
-def fires(f):
-    return (f['xg'] < XG_MAX and f['cd'] >= CD_MIN
-            and f['mismatch'] <= MM_MAX and f['btts'] <= BTTS_MAX)
+def in_pocket(f):
+    return (f['xg'] < POCKET['xg_max'] and f['cd'] >= POCKET['cd_min']
+            and f['mismatch'] <= POCKET['mm_max'])
+
+
+def prob(f):
+    X = np.full((1, len(FEATS)), np.nan)
+    for j, k in enumerate(FEATS):
+        v = f.get(k)
+        if v is not None:
+            X[0, j] = v
+    return float(MODEL.predict_proba(X)[0, 1])
 
 
 def draw_price(ev):
-    """(odds, outcomeId) for the 1X2 Draw, or (None, None)."""
     for m in (ev.get('markets') or []):
         if str(m.get('id')) != '1':
             continue
@@ -96,7 +150,6 @@ def build(until_h=23, days=0, margin=MARGIN, verbose=True):
     cutoff += dt.timedelta(days=days)
     if verbose:
         print(f"window {start:%a %H:%M} -> {cutoff:%a %d %H:%M} WAT", flush=True)
-
     evs = [e for e in B.fetch_events_rich()
            if start < dt.datetime.fromtimestamp(int(e.get('estimateStartTime', 0)) / 1000,
                                                 tz=A.WAT) <= cutoff]
@@ -105,43 +158,44 @@ def build(until_h=23, days=0, margin=MARGIN, verbose=True):
     for off in range(span + 1):
         for f in F2.get_fixtures(off):
             if f['id'] not in seen:
-                seen.add(f['id'])
-                fx.append(f)
+                seen.add(f['id']); fx.append(f)
     pairs = D.join(evs, fx,
                    lambda e: dt.datetime.fromtimestamp(int(e['estimateStartTime']) / 1000, tz=A.WAT),
                    lambda f: dt.datetime.fromtimestamp(f['ts'], tz=A.WAT))
     if verbose:
         print(f"sportybet in window {len(evs)}  |  joined to flashscore {len(pairs)}", flush=True)
+        print(f"model: {_B['kind']}  slice precision {MEASURED:.1%}  fair {FAIR:.2f}  "
+              f"need >= {FAIR*(1+margin):.2f}  p_cut {P_CUT:.3f}", flush=True)
 
     need = FAIR * (1 + margin)
     out, st = [], collections.Counter()
     for ev, f, _s in pairs:
         try:
-            h, a = form(f['id'])
+            hrec, arec = D.records_for(f['id'])      # venue-split, as the corpus
+            rich = _rich(f['id'])                    # cached by the call above
         except Exception:
-            st['no history'] += 1
-            continue
-        ft = features(h, a)
+            hrec = arec = rich = None
+        ft = features(rich, f.get('league'), hrec, arec) if (rich and hrec and arec) else None
         if not ft:
-            st['no history'] += 1
-            continue
-        if not fires(ft):
-            st['pattern did not fire'] += 1
-            continue
+            st['no history'] += 1; continue
+        if not in_pocket(ft):
+            st['outside pocket'] += 1; continue
+        p = prob(ft)
+        if p < P_CUT:
+            st['model below cut'] += 1; continue
         odds, oid = draw_price(ev)
         if not odds or not oid:
-            st['no draw price'] += 1
-            continue
+            st['no draw price'] += 1; continue
         if odds < need:
-            st[f'priced under {need:.2f}'] += 1
-            continue
+            st[f'priced under {need:.2f}'] += 1; continue
         out.append({
             'ts': dt.datetime.fromtimestamp(int(ev['estimateStartTime']) / 1000, tz=A.WAT),
             'match': f"{ev.get('homeTeamName')} v {ev.get('awayTeamName')}",
-            'league': f.get('league'), 'odds': odds, 'ft': ft,
-            'label': f"1X2 / Draw  [xg {ft['xg']:.2f} cd {ft['cd']} mm {ft['mismatch']:.2f} btts {ft['btts']:.2f}]",
-            'stats': [f"xg {ft['xg']:.2f}  mismatch {ft['mismatch']:.2f}  "
-                      f"combined draws {ft['cd']}  btts {ft['btts']:.0%}"],
+            'league': f.get('league'), 'odds': odds, 'p': p, 'ft': ft,
+            'label': f"1X2 / Draw  [p {p:.2f} xg {ft['xg']:.2f} cd {ft['cd']} mm {ft['mismatch']:.2f}]",
+            'stats': [f"model p {p:.2f}  xg {ft['xg']:.2f}  mismatch {ft['mismatch']:.2f}  "
+                      f"combined draws {ft['cd']}  btts {(ft.get('sum_btts') or 0)/2:.0%}  "
+                      f"2H goals {ft.get('sum_shgoals')}  league draw {ft.get('lg_draw')}"],
             'bs': dict(eventId=ev['eventId'], productId=3, marketId='1',
                        specifier='', outcomeId=oid),
         })
@@ -149,7 +203,7 @@ def build(until_h=23, days=0, margin=MARGIN, verbose=True):
         for k, v in st.most_common():
             print(f"   {k}: {v}", flush=True)
         print(f"   DRAW CANDIDATES: {len(out)}", flush=True)
-    out.sort(key=lambda x: x['ts'])
+    out.sort(key=lambda x: -x['p'])
     return out
 
 
@@ -160,26 +214,21 @@ def main():
     dry = '--dry' in sys.argv
     legs = build(until_h=until, days=days, margin=margin)
     if not legs:
-        print("\n>> no fixture clears the draw gate and the price floor today")
-        return
-    combo = 1.0
-    for l in legs:
-        combo *= l['odds']
-    print(f"\n=== DRAW MODE — {len(legs)} legs, combined ~{combo:,.1f}x "
-          f"(gate hits {MEASURED:.1%}, fair {FAIR:.2f}, need {FAIR*(1+margin):.2f})")
+        print("\n>> no fixture clears the model cut and the price floor today"); return
+    print(f"\n=== DRAW MODE — {len(legs)} candidates (slice hits {MEASURED:.1%}, fair {FAIR:.2f}, need {FAIR*(1+margin):.2f})")
     for l in legs:
         print(f"   {l['ts']:%a %H:%M}  {l['match'][:40]:<40} @{l['odds']:<6} {l['stats'][0]}")
     if dry:
-        print("\n(dry run - nothing booked)")
-        return
-    bk = A.book([l['bs'] for l in legs])
-    if bk and bk.get('code'):
-        print(f"\ncode {bk['code']}  {bk['url']}")
-        A.log_booking(bk['code'], bk['url'], f"draw mode {len(legs)} legs until {until}:00",
-                      [(l['ts'].timestamp(), l['match'], l['label'], l['odds'], l['stats'])
-                       for l in legs])
-    else:
-        print("\nbooking failed")
+        print("\n(dry run - nothing booked)"); return
+    # a 37% instrument is a SINGLES instrument: one code per fixture
+    for l in legs:
+        bk = A.book([l['bs']])
+        if bk and bk.get('code'):
+            print(f"\n{l['match'][:40]} @{l['odds']}  ->  code {bk['code']}  {bk['url']}")
+            A.log_booking(bk['code'], bk['url'], f"draw model single @{l['odds']} until {until}:00",
+                          [(l['ts'].timestamp(), l['match'], l['label'], l['odds'], l['stats'])])
+        else:
+            print(f"\n{l['match'][:40]}  booking failed")
 
 
 if __name__ == '__main__':
