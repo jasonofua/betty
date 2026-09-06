@@ -10,7 +10,7 @@ model learn to rank fixtures within it using every stat the corpus carries.
 Time-ordered split inside the pocket: oldest 70% train, next 10% tune, newest
 20% test. Reported against the narrow four-term rule on the same test rows.
 """
-import json, os, pickle
+import json, os, sys, pickle
 import numpy as np
 from train_draw import FEATS, load, rule
 
@@ -24,10 +24,25 @@ OUT = os.path.join(ROOT, 'draw_model.pkl')
 POCKETS = {
     'goals': dict(mode='goals', xg_max=2.4, cd_min=3, mm_max=1.0),
     'stats': dict(mode='stats', smis_max=None, sxg_max=None, cd_min=2),
+    # NO GATE (user's instruction, 6 Sep): every match is scored by the full
+    # model on all 83 features and the model's number alone decides.
+    'all':   dict(mode='all'),
+    # GOALS AND STATS TOGETHER (user's instruction, 6 Sep): the quiet-game
+    # check on goals, AND quiet/even on shots on target - expected SoT volume
+    # and the SoT evenness gap - thresholds tuned on the train slice.
+    'both':  dict(mode='both', xg_max=2.4, cd_min=3, mm_max=1.0, sxg_max=None, smis_max=None),
 }
 
 
 def in_pocket(r, P):
+    if P['mode'] == 'all':
+        return True
+    if P['mode'] == 'both':
+        if not (r['xg'] < P['xg_max'] and r['cd'] >= P['cd_min'] and r['mismatch'] <= P['mm_max']):
+            return False
+        if r.get('sxg') is None or r.get('smis') is None:
+            return False
+        return r['sxg'] <= P['sxg_max'] and r['smis'] <= P['smis_max']
     if P['mode'] == 'goals':
         return r['xg'] < P['xg_max'] and r['cd'] >= P['cd_min'] and r['mismatch'] <= P['mm_max']
     if r.get('smis') is None or r.get('sxg') is None:
@@ -77,7 +92,7 @@ def fit_and_report(rows, X, y, P, label):
         order = np.argsort(-p)
         print(f"--- {name} ---   {'top':>6}{'n':>6}{'prec':>8}{'fair':>7}")
         out = {}
-        for frac in (0.10, 0.20, 0.30, 0.40, 0.50):
+        for frac in (0.02, 0.05, 0.10, 0.20, 0.30, 0.40, 0.50):
             k = max(1, int(len(yte) * frac))
             prec = yte[order[:k]].mean()
             out[frac] = (prec, k)
@@ -125,10 +140,47 @@ def fit_and_report(rows, X, y, P, label):
                 rule_precision=float(rule_p), rule_n=int(rsel.sum()), label=label)
 
 
+def tune_both_pocket(train_rows):
+    """On top of the goal gate, pick the SoT volume / evenness cut-offs on the
+    train slice: highest draw rate holding at least 900 matches."""
+    best = None
+    for sxg in (7.0, 7.5, 8.0, 8.5, 9.0, 10.0, 99.0):
+        for smis in (1.0, 1.5, 2.0, 2.5, 3.0, 99.0):
+            P = dict(mode='both', xg_max=2.4, cd_min=3, mm_max=1.0, sxg_max=sxg, smis_max=smis)
+            sub = [r for r in train_rows if in_pocket(r, P)]
+            if len(sub) < 900:
+                continue
+            rate = sum(r['draw'] for r in sub) / len(sub)
+            if best is None or rate > best[0]:
+                best = (rate, len(sub), P)
+    return best
+
+
 def main():
     rows, X, y = load()
     n = len(y)
     train_rows = rows[:int(n * 0.7)]
+    if '--both' in sys.argv:
+        tuned = tune_both_pocket(train_rows)
+        rate, cnt, P = tuned
+        print(f"goals+stats gate tuned on train: xg<{P['xg_max']} cd>={P['cd_min']} mismatch<={P['mm_max']} "
+              f"AND expected SoT<={P['sxg_max']} SoT-evenness<={P['smis_max']}  ->  {cnt} train matches at {rate:.1%} draws")
+        both = fit_and_report(rows, X, y, P, 'GOALS + STATS gate')
+        goals = fit_and_report(rows, X, y, POCKETS['goals'], 'GOALS-only gate (for comparison)')
+        print(f"\n=== goals+stats {both['kind']} top-30% {both['test_precision']:.1%} (n={both['test_n']})"
+              f"   vs goals-only {goals['kind']} {goals['test_precision']:.1%} (n={goals['test_n']})"
+              f"   vs rule {both['rule_precision']:.1%} (n={both['rule_n']})")
+        pickle.dump(both, open(OUT, 'wb'))
+        print(f"saved goals+stats model -> {OUT}")
+        return
+    if '--all' in sys.argv:
+        # no gate: score everything, save that model, done
+        best = fit_and_report(rows, X, y, POCKETS['all'], 'ALL MATCHES (no gate)')
+        print(f"\n=== SAVED: no-gate {best['kind']}  top-30% precision {best['test_precision']:.1%} "
+              f"(n={best['test_n']}) p_cut {best['p_cut']:.3f}   [rule on same rows {best['rule_precision']:.1%}/{best['rule_n']}]")
+        pickle.dump(best, open(OUT, 'wb'))
+        print(f"saved -> {OUT}")
+        return
     results = [fit_and_report(rows, X, y, POCKETS['goals'], 'GOALS (recent scorelines)')]
     tuned = tune_stats_pocket(train_rows)
     if tuned:

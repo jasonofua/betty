@@ -125,6 +125,15 @@ def features(rich, league, home_rec, away_rec):
 
 
 def in_pocket(f):
+    if POCKET.get('mode') == 'all':          # no gate - every fixture is scored
+        return True
+    if POCKET.get('mode') == 'both':         # quiet on goals AND quiet/even on SoT
+        if not (f['xg'] < POCKET['xg_max'] and f['cd'] >= POCKET['cd_min']
+                and f['mismatch'] <= POCKET['mm_max']):
+            return False
+        if f.get('sxg') is None or f.get('smis') is None:
+            return False
+        return f['sxg'] <= POCKET['sxg_max'] and f['smis'] <= POCKET['smis_max']
     if POCKET.get('mode', 'goals') == 'goals':
         return (f['xg'] < POCKET['xg_max'] and f['cd'] >= POCKET['cd_min']
                 and f['mismatch'] <= POCKET['mm_max'])
