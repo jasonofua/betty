@@ -179,8 +179,8 @@ def build(until_h=23, days=0, margin=MARGIN, verbose=True):
                    lambda f: dt.datetime.fromtimestamp(f['ts'], tz=A.WAT))
     if verbose:
         print(f"sportybet in window {len(evs)}  |  joined to flashscore {len(pairs)}", flush=True)
-        print(f"model: {_B['kind']}  slice precision {MEASURED:.1%}  fair {FAIR:.2f}  "
-              f"need >= {FAIR*(1+margin):.2f}  p_cut {P_CUT:.3f}", flush=True)
+        print(f"model: {_B['kind']}  p_cut {P_CUT:.3f}  (held-out precision at the cut {MEASURED:.1%}; "
+              f"no price floor)", flush=True)
 
     need = FAIR * (1 + margin)
     out, st = [], collections.Counter()
@@ -201,8 +201,8 @@ def build(until_h=23, days=0, margin=MARGIN, verbose=True):
         odds, oid = draw_price(ev)
         if not odds or not oid:
             st['no draw price'] += 1; continue
-        if odds < need:
-            st[f'priced under {need:.2f}'] += 1; continue
+        # PRICE FLOOR REMOVED 6 Sep on the user's instruction - the model's
+        # cut is the only selection. The odds are still recorded per leg.
         out.append({
             'ts': dt.datetime.fromtimestamp(int(ev['estimateStartTime']) / 1000, tz=A.WAT),
             'match': f"{ev.get('homeTeamName')} v {ev.get('awayTeamName')}",
@@ -230,7 +230,7 @@ def main():
     legs = build(until_h=until, days=days, margin=margin)
     if not legs:
         print("\n>> no fixture clears the model cut and the price floor today"); return
-    print(f"\n=== DRAW MODE — {len(legs)} candidates (slice hits {MEASURED:.1%}, fair {FAIR:.2f}, need {FAIR*(1+margin):.2f})")
+    print(f"\n=== DRAW MODE — {len(legs)} candidates above the model cut {P_CUT:.3f} (no price floor)")
     for l in legs:
         print(f"   {l['ts']:%a %H:%M}  {l['match'][:40]:<40} @{l['odds']:<6} {l['stats'][0]}")
     if dry:
