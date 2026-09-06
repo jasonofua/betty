@@ -1061,6 +1061,82 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
                                  0.918 if _cush <= 2.5 else 0.947)
                         if (1.0 / odds) > _true - 0.01:
                             continue
+            # GOAL-OVER BLANK GATE (6 Sep) - the mirror of the cushion rule.
+            # A stat Under dies when the line sits under the sample max; a goal
+            # Over dies when the sample is full of blanks. The floors were FLAT
+            # (FT Over 0.5 at 1.08, 2H Over 0.5 at 1.17) and took no account of
+            # how often these sides actually fail to score, which is what beat
+            # the 5 Sep book:
+            #   Quindio v Real Santander  2H O0.5  0:0        killed 7 codes
+            #   Tokushima v Iwaki         2H O0.5  1:0 (1H)   killed 6
+            #   Gifu v Kanazawa           2H O0.5  0:1 (1H)   killed 2
+            #   Fujieda v Vanraure        FT O0.5  0:0        killed 3
+            # Measured on the corpus, counting goalless periods across both
+            # sides' last 7 (n >= 300 per cell):
+            #   blanks    0     1     2     3     4     5     6     7     8
+            #   2H O0.5 89.1  83.7  82.1  79.2  75.1  72.1  68.0  66.8  58.6
+            #   FT O0.5 95.8  93.6  88.7  88.3  80.8  79.0
+            # The book sells 2H O0.5 at 1.17-1.26 and FT O0.5 at 1.03-1.11, so
+            # from four blanks up every one of these is sold below fair value.
+            if (qkey in ('goals', 'h2') and side == 'match'
+                    and d.startswith('over')):
+                mm = re.search(r'([\d.]+)', d)
+                if mm and float(mm.group(1)) == 0.5:
+                    _tot = [f + a for f, a in home_rec.pairs(qkey)] + \
+                           [f + a for f, a in away_rec.pairs(qkey)]
+                    if len(_tot) >= 8:
+                        _bl = sum(1 for v in _tot if v == 0)
+                        if qkey == 'h2':
+                            _tbl = [0.891, 0.837, 0.821, 0.792, 0.751,
+                                    0.721, 0.680, 0.668, 0.586]
+                        else:
+                            _tbl = [0.958, 0.936, 0.887, 0.883, 0.808, 0.790]
+                        _t = _tbl[min(_bl, len(_tbl) - 1)]
+                        if (1.0 / odds) > _t - 0.01:
+                            continue
+
+            # GENERAL STAT-UNDER CUSHION GATE (6 Sep). Corners and TEAM
+            # offsides had a cushion rule; shots on target, total shots,
+            # bookings and MATCH offsides had none, and that is where the
+            # 5 Sep book died. Every losing stat Under that day sat BELOW the
+            # sample maximum:
+            #   Dundee Utd v Falkirk  SoT Under 11.5   series max 13   -1.5
+            #   Brighton  v Leeds     Off Under 3.5    max 6           -2.5
+            #   Fulham    v Palace    1H Off Under 2.5 max 7           -4.5
+            #   Rangers   v Motherwell Shots Under 33.5 max 45        -11.5
+            # Measured over the corpus (15,503-28,141 samples per stat), the
+            # cliff is at cushion 0 and it is the same shape for all four:
+            #   cushion  -2     -1      0     +1     +2
+            #   sot     73.9%  80.5%  90.6%  93.4%  95.4%
+            #   corners 74.8%  81.4%  91.2%  94.1%  96.1%
+            #   yellow  63.6%  77.6%  91.5%  95.7%  98.1%
+            #   offsid  66.2%  78.0%  91.7%  95.3%  97.6%
+            # Below the sample max the bet is a 64-81% shot the book never
+            # pays for, so refuse outright; at or above, price by the band.
+            # The sot column is used as the floor because it is the lowest.
+            if (qkey in ('sot', 'shots', 'yellow', 'offsides', 'corners')
+                    and d.startswith('under')):
+                mm = re.search(r'([\d.]+)', d)
+                if mm:
+                    _ln = float(mm.group(1))
+                    if side == 'match':
+                        _vals = [f + a for f, a in home_rec.pairs(qkey)] + \
+                                [f + a for f, a in away_rec.pairs(qkey)]
+                    else:
+                        _own = home_rec if side == 'home' else away_rec
+                        _opp = away_rec if side == 'home' else home_rec
+                        _vals = [f for f, _ in _own.pairs(qkey)] + \
+                                [a for _, a in _opp.pairs(qkey)]
+                    if _vals:
+                        _c = _ln - max(_vals)
+                        if _c < 0:
+                            continue
+                        _t = (0.906 if _c < 1 else
+                              0.934 if _c < 2 else
+                              0.954 if _c < 3 else 0.969)
+                        if (1.0 / odds) > _t - 0.01:
+                            continue
+
             # HALF-TOTAL UNDERS MUST BE SPOTLESS, like corners: any in-sample
             # half at or above the line kills the bet, however old. A 6/7
             # tally reads as form but hides a proven breach - Fulham Utd 2H
