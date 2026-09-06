@@ -244,15 +244,17 @@ def main():
         print(f"   {l['ts']:%a %H:%M}  {l['match'][:40]:<40} @{l['odds']:<6} {l['stats'][0]}")
     if dry:
         print("\n(dry run - nothing booked)"); return
-    # a 37% instrument is a SINGLES instrument: one code per fixture
+    # ONE SLIP (user's instruction, 6 Sep) - every candidate on the same code
+    combo = 1.0
     for l in legs:
-        bk = A.book([l['bs']])
-        if bk and bk.get('code'):
-            print(f"\n{l['match'][:40]} @{l['odds']}  ->  code {bk['code']}  {bk['url']}")
-            A.log_booking(bk['code'], bk['url'], f"draw model single @{l['odds']} until {until}:00",
-                          [(l['ts'].timestamp(), l['match'], l['label'], l['odds'], l['stats'])])
-        else:
-            print(f"\n{l['match'][:40]}  booking failed")
+        combo *= l['odds']
+    bk = A.book([l['bs'] for l in legs])
+    if bk and bk.get('code'):
+        print(f"\ncode {bk['code']}  {bk['url']}   ({len(legs)} legs, ~{combo:,.1f}x)")
+        A.log_booking(bk['code'], bk['url'], f"draw model slip {combo:,.1f}x ({len(legs)} legs) until {until}:00",
+                      [(l['ts'].timestamp(), l['match'], l['label'], l['odds'], l['stats']) for l in legs])
+    else:
+        print("\nbooking failed")
 
 
 if __name__ == '__main__':

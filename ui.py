@@ -109,8 +109,11 @@ def draw_job(until, days, dry):
                 JOB.update(state='done', result={'error':
                     'no fixture clears the model cut and the price floor'})
                 return
-            res = {'combo': round(max(l['odds'] for l in legs), 2), 'pool': len(legs),
-                   'est': round(DRW.MEASURED * 100, 1), 'singles': True,
+            combo = 1.0
+            for l in legs:
+                combo *= l['odds']
+            res = {'combo': round(combo, 1), 'pool': len(legs),
+                   'est': round(DRW.MEASURED ** len(legs) * 100, 2),
                    'legs': [dict(when=l['ts'].strftime('%a %H:%M'), match=l['match'],
                                  label=l['label'], odds=l['odds'],
                                  prob=round(l['p'] * 100)) for l in legs]}
@@ -118,19 +121,13 @@ def draw_job(until, days, dry):
                 res['dry'] = True
             else:
                 JOB['state'] = 'booking'
-                codes = []
-                for l, lg in zip(legs, res['legs']):
-                    bk = A.book([l['bs']])
-                    if bk and bk.get('code'):
-                        lg['code'] = bk['code']; codes.append(bk['code'])
-                        A.log_booking(bk['code'], bk['url'],
-                                      f"draw model single @{l['odds']} until {until}:00",
-                                      [(l['ts'].timestamp(), l['match'], l['label'],
-                                        l['odds'], l['stats'])])
-                if codes:
-                    res['code'] = codes[0]
-                    res['codes'] = codes
-                    res['url'] = f"http://www.sportybet.com/ng/?shareCode={codes[0]}"
+                bk = A.book([l['bs'] for l in legs])          # ONE SLIP (user, 6 Sep)
+                if bk and bk.get('code'):
+                    res['code'] = bk['code']; res['url'] = bk['url']
+                    A.log_booking(bk['code'], bk['url'],
+                                  f"draw model slip {combo:,.1f}x ({len(legs)} legs) until {until}:00",
+                                  [(l['ts'].timestamp(), l['match'], l['label'],
+                                    l['odds'], l['stats']) for l in legs])
         JOB.update(state='done', result=res)
     except Exception as e:
         JOB.update(state='done', result={'error': f'{type(e).__name__}: {e}'})
