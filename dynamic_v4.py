@@ -1207,10 +1207,33 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
                         _c = _ln - max(_vals)
                         if _c < 0:
                             continue
+                        # 7 Sep: BOOKINGS Unders need a full card of room. Every
+                        # FT bookings-Under loss of the weekend sat at +0.5
+                        # (Udinese 5 cards vs max 4, Sevilla the same). Corpus,
+                        # home team U: +0.5 96.9%, +1.5 99.2%. The 23 Aug ledger
+                        # said it first: 4.5/5.5 lines 5-0, the 3.5 line 1-2.
+                        if qkey == 'yellow' and _c < 1.5:
+                            continue
+                        # 7 Sep: FIRST-HALF stat lines are priced off the
+                        # thinnest series the engine has (1H stats are ~2% of
+                        # the corpus). Need depth and a full unit of room.
+                        if period == 'h1' and (len(_vals) < 10 or _c < 1.0):
+                            continue
                         _t = (0.906 if _c < 1 else
                               0.934 if _c < 2 else
                               0.954 if _c < 3 else 0.969)
                         if (1.0 / odds) > _t - 0.01:
+                            continue
+                        # 7 Sep: THE MARKET KNOWS. The band rate is unconditional;
+                        # the book is calibrated within two points. A +0.5-cushion
+                        # leg the corpus rates 90% and the book sells at 1.25 (80%)
+                        # is not value, it is information - a home side expected to
+                        # lose and get frustrated, a strict referee. Max-odds mode
+                        # was reaching for exactly these: the weekend's bookings
+                        # Unders went 7-4 against a 97% corpus rate, and the three
+                        # priced 1.12+ all lost. Refuse when the book sits more than
+                        # 4 points under the measured rate.
+                        if (1.0 / odds) < _t - 0.04:
                             continue
 
             # HALF-TOTAL UNDERS MUST BE SPOTLESS, like corners: any in-sample
