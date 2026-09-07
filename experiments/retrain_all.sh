@@ -26,6 +26,6 @@ TAIL=2  run dedupe   python3 dedupe_corpus.py
 TAIL=12 run hybrid   python3 train_hybrid.py
 TAIL=10 run nn_all   python3 train_nn_all.py
 TAIL=14 run drawset  python3 build_draw_dataset.py
-TAIL=30 run draw     python3 train_draw_pocket.py
+TAIL=60 run draw     python3 train_draw_pocket.py --both
 echo "=== all models retrained ==="
 ls -la hybrid_bundle.pkl nn_all_bundle.pkl draw_model.pkl | awk '{print $6, $7, $8, $5, $9}'

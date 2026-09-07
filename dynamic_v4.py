@@ -1089,6 +1089,39 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
                                  0.918 if _cush <= 2.5 else 0.947)
                         if (1.0 / odds) > _true - 0.01:
                             continue
+            # STAT-OVER CUSHION GATE (7 Sep) - the Under rule mirrored. A stat
+            # Over dies when the line sits ABOVE the sample minimum: Parma home
+            # offsides Over 0.5 (sample min 0), Espanyol shots Over 18.5 (sample
+            # min 18) both lost on the 6 Sep /max slip. Corpus, match totals,
+            # line c below the sample min (10,772-20,076 samples per stat):
+            #   c        -2     -1      0     +1     +2
+            #   sot     76.1%  83.6%  89.7%  93.8%  96.5%
+            #   corners 79.4%  86.4%  91.4%  94.9%  97.1%
+            #   yellow  61.0%  78.3%  91.1%  97.5%  99.6%
+            #   offsid  61.3%  79.4%  92.2%  98.1%  99.7%
+            # Refuse above the min; price the rest by band (sot column, lowest).
+            if (qkey in ('sot', 'shots', 'yellow', 'offsides', 'corners', 'fouls', 'saves')
+                    and d.startswith('over')):
+                mm = re.search(r'([\d.]+)', d)
+                if mm:
+                    _ln = float(mm.group(1))
+                    if side == 'match':
+                        _vals = [f + a for f, a in home_rec.pairs(qkey)] + \
+                                [f + a for f, a in away_rec.pairs(qkey)]
+                    else:
+                        _own = home_rec if side == 'home' else away_rec
+                        _opp = away_rec if side == 'home' else home_rec
+                        _vals = [f for f, _ in _own.pairs(qkey)] + \
+                                [a for _, a in _opp.pairs(qkey)]
+                    if _vals:
+                        _c = min(_vals) - _ln
+                        if _c < 0:
+                            continue
+                        _t = (0.897 if _c < 1 else
+                              0.938 if _c < 2 else 0.965)
+                        if (1.0 / odds) > _t - 0.01:
+                            continue
+
             # GOAL-OVER BLANK GATE (6 Sep) - the mirror of the cushion rule.
             # A stat Under dies when the line sits under the sample max; a goal
             # Over dies when the sample is full of blanks. The floors were FLAT
@@ -1109,19 +1142,31 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
             if (qkey in ('goals', 'h2') and side == 'match'
                     and d.startswith('over')):
                 mm = re.search(r'([\d.]+)', d)
-                if mm and float(mm.group(1)) == 0.5:
+                _line = float(mm.group(1)) if mm else None
+                if _line in (0.5, 1.5):
                     _tot = [f + a for f, a in home_rec.pairs(qkey)] + \
                            [f + a for f, a in away_rec.pairs(qkey)]
                     if len(_tot) >= 8:
-                        _bl = sum(1 for v in _tot if v == 0)
-                        if qkey == 'h2':
-                            _tbl = [0.891, 0.837, 0.821, 0.792, 0.751,
-                                    0.721, 0.680, 0.668, 0.586]
+                        if _line == 0.5:
+                            _bl = sum(1 for v in _tot if v == 0)
+                            _tbl = ([0.891, 0.837, 0.821, 0.792, 0.751, 0.721, 0.680, 0.668, 0.586]
+                                    if qkey == 'h2' else
+                                    [0.958, 0.936, 0.887, 0.883, 0.808, 0.790])
                         else:
-                            _tbl = [0.958, 0.936, 0.887, 0.883, 0.808, 0.790]
-                        _t = _tbl[min(_bl, len(_tbl) - 1)]
-                        if (1.0 / odds) > _t - 0.01:
-                            continue
+                            # FT Over 1.5 (7 Sep): games with <= 1 goal across both
+                            # sides' last 7. Corpus: 0 -> 85.8%, 3 -> 77.0%,
+                            # 5 -> 70.9%, 7 -> 64.1%. The flat 1.21 floor was under
+                            # fair from three low games up; Livorno 1:0 and
+                            # Extremadura 1:0 were both sold there on 6 Sep.
+                            if qkey != 'goals':
+                                _tbl = None
+                            else:
+                                _bl = sum(1 for v in _tot if v <= 1)
+                                _tbl = [0.858, 0.832, 0.796, 0.770, 0.737, 0.709, 0.685, 0.641, 0.645]
+                        if _tbl:
+                            _t = _tbl[min(_bl, len(_tbl) - 1)]
+                            if (1.0 / odds) > _t - 0.01:
+                                continue
 
             # GENERAL STAT-UNDER CUSHION GATE (6 Sep). Corners and TEAM
             # offsides had a cushion rule; shots on target, total shots,
@@ -1142,7 +1187,10 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
             # Below the sample max the bet is a 64-81% shot the book never
             # pays for, so refuse outright; at or above, price by the band.
             # The sot column is used as the floor because it is the lowest.
-            if (qkey in ('sot', 'shots', 'yellow', 'offsides', 'corners')
+            # 7 Sep: fouls and saves added - Arsenal v Chelsea 1H away fouls Under
+            # 6.5 was booked against a Chelsea 1H series topping at 11 (cushion
+            # -4.5) because neither quantity was in this list.
+            if (qkey in ('sot', 'shots', 'yellow', 'offsides', 'corners', 'fouls', 'saves')
                     and d.startswith('under')):
                 mm = re.search(r'([\d.]+)', d)
                 if mm:

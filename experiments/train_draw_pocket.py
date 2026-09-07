@@ -142,15 +142,24 @@ def fit_and_report(rows, X, y, P, label):
 
 def tune_both_pocket(train_rows):
     """On top of the goal gate, pick the SoT volume / evenness cut-offs on the
-    train slice: highest draw rate holding at least 900 matches."""
+    train slice: highest draw rate holding at least 600 matches.
+
+    7 Sep: on the 16 live draws of 6 Sep the ONLY pre-match column that
+    separated winners from losers was expected SoT (median 6.81 vs 8.11);
+    every evenness column was identical. So the volume grid goes down to 6.5
+    and the volume floor drops to 600 so a tighter cut can win on merit.
+    The whole grid is printed so the trade-off is visible."""
     best = None
-    for sxg in (7.0, 7.5, 8.0, 8.5, 9.0, 10.0, 99.0):
-        for smis in (1.0, 1.5, 2.0, 2.5, 3.0, 99.0):
+    print(f"   {'exp SoT <=':>11}{'SoT gap <=':>12}{'n':>7}{'draws':>8}")
+    for sxg in (6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 10.0, 99.0):
+        for smis in (1.0, 1.5, 2.0, 99.0):
             P = dict(mode='both', xg_max=2.4, cd_min=3, mm_max=1.0, sxg_max=sxg, smis_max=smis)
             sub = [r for r in train_rows if in_pocket(r, P)]
-            if len(sub) < 900:
+            if len(sub) < 600:
                 continue
             rate = sum(r['draw'] for r in sub) / len(sub)
+            if smis in (1.0, 99.0):
+                print(f"   {sxg:>11}{smis:>12}{len(sub):>7}{rate:>8.1%}")
             if best is None or rate > best[0]:
                 best = (rate, len(sub), P)
     return best
