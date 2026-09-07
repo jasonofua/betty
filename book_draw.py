@@ -133,7 +133,14 @@ def in_pocket(f):
             return False
         if f.get('sxg') is None or f.get('smis') is None:
             return False
-        return f['sxg'] <= POCKET['sxg_max'] and f['smis'] <= POCKET['smis_max']
+        if f['sxg'] > POCKET['sxg_max'] or f['smis'] > POCKET['smis_max']:
+            return False
+        # both sides blank, and blank alike (7 Sep)
+        if f['blank'] < POCKET.get('blank_min', 0):
+            return False
+        if abs(f['h_blank'] - f['a_blank']) > POCKET.get('bgap_max', 99):
+            return False
+        return True
     if POCKET.get('mode', 'goals') == 'goals':
         return (f['xg'] < POCKET['xg_max'] and f['cd'] >= POCKET['cd_min']
                 and f['mismatch'] <= POCKET['mm_max'])

@@ -30,7 +30,13 @@ POCKETS = {
     # GOALS AND STATS TOGETHER (user's instruction, 6 Sep): the quiet-game
     # check on goals, AND quiet/even on shots on target - expected SoT volume
     # and the SoT evenness gap - thresholds tuned on the train slice.
-    'both':  dict(mode='both', xg_max=2.4, cd_min=3, mm_max=1.0, sxg_max=None, smis_max=None),
+    # 7 Sep: blanks and their split added (user's instruction). On the 26 draws
+    # booked 6-7 Sep every winner had both sides blanking 5+ times between them
+    # and the blanks split evenly; the losers that also had 5+ were lopsided
+    # (one side never scoring, the other scoring). Corpus, inside the gate:
+    # blanks>=5 & split<=1 -> 34.8% (n=442) vs 33.4%; split>=3 -> 30.4%.
+    'both':  dict(mode='both', xg_max=2.4, cd_min=3, mm_max=1.0, sxg_max=None, smis_max=None,
+                  blank_min=5, bgap_max=1),
 }
 
 
@@ -42,7 +48,14 @@ def in_pocket(r, P):
             return False
         if r.get('sxg') is None or r.get('smis') is None:
             return False
-        return r['sxg'] <= P['sxg_max'] and r['smis'] <= P['smis_max']
+        if r['sxg'] > P['sxg_max'] or r['smis'] > P['smis_max']:
+            return False
+        # both sides blank, and blank ALIKE
+        if r['blank'] < P.get('blank_min', 0):
+            return False
+        if abs(r['h_blank'] - r['a_blank']) > P.get('bgap_max', 99):
+            return False
+        return True
     if P['mode'] == 'goals':
         return r['xg'] < P['xg_max'] and r['cd'] >= P['cd_min'] and r['mismatch'] <= P['mm_max']
     if r.get('smis') is None or r.get('sxg') is None:
@@ -153,7 +166,8 @@ def tune_both_pocket(train_rows):
     print(f"   {'exp SoT <=':>11}{'SoT gap <=':>12}{'n':>7}{'draws':>8}")
     for sxg in (6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 10.0, 99.0):
         for smis in (1.0, 1.5, 2.0, 99.0):
-            P = dict(mode='both', xg_max=2.4, cd_min=3, mm_max=1.0, sxg_max=sxg, smis_max=smis)
+            P = dict(mode='both', xg_max=2.4, cd_min=3, mm_max=1.0, sxg_max=sxg, smis_max=smis,
+                     blank_min=5, bgap_max=1)
             sub = [r for r in train_rows if in_pocket(r, P)]
             if len(sub) < 600:
                 continue
@@ -173,7 +187,8 @@ def main():
         tuned = tune_both_pocket(train_rows)
         rate, cnt, P = tuned
         print(f"goals+stats gate tuned on train: xg<{P['xg_max']} cd>={P['cd_min']} mismatch<={P['mm_max']} "
-              f"AND expected SoT<={P['sxg_max']} SoT-evenness<={P['smis_max']}  ->  {cnt} train matches at {rate:.1%} draws")
+              f"AND expected SoT<={P['sxg_max']} SoT-evenness<={P['smis_max']} "
+              f"AND blanks>={P['blank_min']} split<={P['bgap_max']}  ->  {cnt} train matches at {rate:.1%} draws")
         both = fit_and_report(rows, X, y, P, 'GOALS + STATS gate')
         goals = fit_and_report(rows, X, y, POCKETS['goals'], 'GOALS-only gate (for comparison)')
         print(f"\n=== goals+stats {both['kind']} top-30% {both['test_precision']:.1%} (n={both['test_n']})"
