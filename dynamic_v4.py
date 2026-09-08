@@ -1100,7 +1100,7 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
             #   yellow  61.0%  78.3%  91.1%  97.5%  99.6%
             #   offsid  61.3%  79.4%  92.2%  98.1%  99.7%
             # Refuse above the min; price the rest by band (sot column, lowest).
-            if (qkey in ('sot', 'shots', 'yellow', 'offsides', 'corners', 'fouls', 'saves')
+            if (quantity in ('sot', 'shots', 'yellow', 'offsides', 'corners', 'fouls', 'saves')
                     and d.startswith('over')):
                 mm = re.search(r'([\d.]+)', d)
                 if mm:
@@ -1190,7 +1190,9 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
             # 7 Sep: fouls and saves added - Arsenal v Chelsea 1H away fouls Under
             # 6.5 was booked against a Chelsea 1H series topping at 11 (cushion
             # -4.5) because neither quantity was in this list.
-            if (qkey in ('sot', 'shots', 'yellow', 'offsides', 'corners', 'fouls', 'saves')
+            # keyed on the BASE quantity: qkey carries the _h1/_h2 suffix, so keying on
+            # it let every first-half stat line skip this gate entirely (found 8 Sep).
+            if (quantity in ('sot', 'shots', 'yellow', 'offsides', 'corners', 'fouls', 'saves')
                     and d.startswith('under')):
                 mm = re.search(r'([\d.]+)', d)
                 if mm:
@@ -1212,7 +1214,7 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
                         # (Udinese 5 cards vs max 4, Sevilla the same). Corpus,
                         # home team U: +0.5 96.9%, +1.5 99.2%. The 23 Aug ledger
                         # said it first: 4.5/5.5 lines 5-0, the 3.5 line 1-2.
-                        if qkey == 'yellow' and _c < 1.5:
+                        if quantity == 'yellow' and _c < 1.5:
                             continue
                         # 7 Sep: FIRST-HALF stat lines are priced off the
                         # thinnest series the engine has (1H stats are ~2% of
