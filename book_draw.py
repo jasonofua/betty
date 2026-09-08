@@ -46,6 +46,46 @@ def _mean(xs):
     return sum(xs) / len(xs) if xs else None
 
 
+def venue_form(fixture_id, kickoff_s):
+    """Home side's HOME games and away side's AWAY games as [(gf, ga), ...],
+    most recent first, from the history feed's own Home/Away tabs, cut at
+    kickoff. This is exactly how accumulate.py builds the corpus rows the
+    gate was tuned on. dynamic_v4.records_for was used for this since 6 Sep,
+    but its goal series come from the deep list, which MIXES venues - OFK
+    Beograd v IMT scored xg 2.50 on the mixed series and 1.86 on the split
+    one, and the gate verdict flipped (found 8 Sep)."""
+    raw = F2.fetch(f"df_hh_1_{fixture_id}")
+    out = {'home': [], 'away': []}
+    tab = blk = None
+    for sec in F2.sections(raw or ''):
+        if 'KA' in sec:
+            tab = sec['KA']
+        if 'KB' in sec:
+            blk = sec['KB']
+            continue
+        if 'KJ' in sec and 'KK' in sec and blk and tab and 'Head' not in blk:
+            try:
+                kc = int(sec.get('KC', '0')); hg = int(sec.get('KU', '')); ag = int(sec.get('KT', ''))
+            except ValueError:
+                continue
+            if kickoff_s and kc >= kickoff_s:
+                continue
+            gf, ga = (hg, ag) if sec.get('KS') == 'home' else (ag, hg)
+            if 'Home' in tab and sec.get('KS') == 'home':
+                out['home'].append((gf, ga))
+            if 'Away' in tab and sec.get('KS') == 'away':
+                out['away'].append((gf, ga))
+    return out['home'][:7], out['away'][:7]
+
+
+class _Rec:
+    """Minimal record: only the goal series, from venue_form."""
+    def __init__(self, pairs):
+        self._p = pairs
+    def pairs(self, q):
+        return self._p if q == 'goals' else []
+
+
 def _rich(fixture_id):
     out = F3.fetch_rich_history(fixture_id)
     for x in (out if isinstance(out, tuple) else (out,)):
@@ -202,8 +242,9 @@ def build(until_h=23, days=0, margin=MARGIN, verbose=True):
     out, st = [], collections.Counter()
     for ev, f, _s in pairs:
         try:
-            hrec, arec = D.records_for(f['id'])      # venue-split, as the corpus
-            rich = _rich(f['id'])                    # cached by the call above
+            _hp, _ap = venue_form(f['id'], int(ev['estimateStartTime']) / 1000)
+            hrec, arec = _Rec(_hp), _Rec(_ap)        # true venue-split, cut at kickoff
+            rich = _rich(f['id'])                    # halves + stats (per-team, all games)
         except Exception:
             hrec = arec = rich = None
         ft = features(rich, f.get('league'), hrec, arec) if (rich and hrec and arec) else None
