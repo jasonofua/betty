@@ -63,7 +63,7 @@ with open(DS,'a') as out:
                     if _k in WANT_STATS: st[_k + '_h2'] = [_v[0], _v[1]]
         except Exception:
             pass
-        out.write(json.dumps(dict(id=r['id'],ts=r['ts'],lg=r['lg'],
+        out.write(json.dumps(dict(id=r['id'],ts=r['ts'],lg=r['lg'],h=r['h'],a=r['a'],
             hgf=[x['gf'] for x in hv],hga=[x['ga'] for x in hv],
             agf=[x['gf'] for x in av],aga=[x['ga'] for x in av],
             h1=[h1h,h1a],h2=[h2h,h2a],ft=[r['gh'],r['ga']],st=st))+'\n')
