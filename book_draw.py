@@ -32,7 +32,12 @@ import fetcher_v3 as F3
 ROOT = os.path.dirname(os.path.abspath(__file__))
 _B = pickle.load(open(os.path.join(ROOT, 'experiments', 'draw_model.pkl'), 'rb'))
 MODEL, FEATS, POCKET, P_CUT = _B['model'], _B['feats'], _B['pocket'], _B['p_cut']
-MEASURED = _B['test_precision']          # held-out precision of the bet slice
+# 9 Sep: MODEL CUT REMOVED on the user's instruction ("remove the model cut
+# and book again"). The gate alone is the selection; the model's p is still
+# computed and recorded on every leg. Over five days the cut kept 1 of 6
+# gate games (corpus: 2.1 gate games/day -> 0.5 after the cut).
+MODEL_CUT = False
+MEASURED = _B['test_precision'] if MODEL_CUT else _B.get('rule_precision', _B['test_precision'])
 FAIR = 1.0 / MEASURED
 MARGIN = 0.05
 try:
@@ -248,8 +253,11 @@ def build(until_h=23, days=0, margin=MARGIN, verbose=True):
                    lambda f: dt.datetime.fromtimestamp(f['ts'], tz=A.WAT))
     if verbose:
         print(f"sportybet in window {len(evs)}  |  joined to flashscore {len(pairs)}", flush=True)
-        print(f"model: {_B['kind']}  p_cut {P_CUT:.3f}  (held-out precision at the cut {MEASURED:.1%}; "
-              f"no price floor)", flush=True)
+        if MODEL_CUT:
+            print(f"model: {_B['kind']}  p_cut {P_CUT:.3f}  (held-out precision at the cut {MEASURED:.1%}; "
+                  f"no price floor)", flush=True)
+        else:
+            print(f"gate only - model cut OFF (held-out gate draw rate {MEASURED:.1%}; no price floor)", flush=True)
 
     need = FAIR * (1 + margin)
     out, st = [], collections.Counter()
@@ -266,7 +274,7 @@ def build(until_h=23, days=0, margin=MARGIN, verbose=True):
         if not in_pocket(ft):
             st['outside pocket'] += 1; continue
         p = prob(ft)
-        if p < P_CUT:
+        if MODEL_CUT and p < P_CUT:
             st['model below cut'] += 1; continue
         odds, oid = draw_price(ev)
         if not odds or not oid:
@@ -302,8 +310,8 @@ def main():
         HALF = True                                  # half-time draw instead of full-time
     legs = build(until_h=until, days=days, margin=margin)
     if not legs:
-        print("\n>> no fixture clears the model cut and the price floor today"); return
-    print(f"\n=== DRAW MODE — {len(legs)} candidates above the model cut {P_CUT:.3f} (no price floor)")
+        print("\n>> no fixture clears the gate today"); return
+    print(f"\n=== DRAW MODE — {len(legs)} gate candidates ({'model cut ' + format(P_CUT, '.3f') if MODEL_CUT else 'no model cut'}, no price floor)")
     for l in legs:
         print(f"   {l['ts']:%a %H:%M}  {l['match'][:40]:<40} @{l['odds']:<6} {l['stats'][0]}")
     if dry:

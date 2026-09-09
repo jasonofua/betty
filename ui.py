@@ -108,7 +108,7 @@ def draw_job(until, days, dry, half=False):
             legs = DRW.build(until_h=until, days=days)
             if not legs:
                 JOB.update(state='done', result={'error':
-                    'no fixture clears the model cut and the price floor'})
+                    'no fixture clears the draw gate'})
                 return
             combo = 1.0
             for l in legs:
