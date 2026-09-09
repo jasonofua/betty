@@ -40,7 +40,8 @@ HELP = (
     "/aiunder [until]\n"
     "/strict [until]        highest odds, opponent's record must confirm every team leg\n"
     "/aistrict [until]\n"
-    "/draw [until]          draws only, goals+stats gate, one slip\n\n"
+    "/draw [until]          draws only, goals+stats gate, one slip\n"
+    "/hdraw [until]         same gate, HALF-TIME draw (market 60)\n\n"
     "/grade CODE ...        grade share codes\n"
     "/sweep                 bank yesterday's results\n"
     "/slips [n]             recent booked codes\n"
@@ -231,6 +232,11 @@ def _handle(cmd, args, chat, job, lock, run_job, grade_fn, crawl_fn):
         _dispatch_run(chat, job, lock, run_job, f'{eng} strict max odds',
                       target=6, until=num(0, 23), days=0, dry=False,
                       engine=eng, maxodds=True, strict=True)
+
+    elif cmd in ('/hdraw', '/htdraw'):
+        import ui as _ui
+        _dispatch_run(chat, job, lock, _ui.draw_job, 'half-time draw',
+                      until=num(0, 23), days=0, dry=False, half=True)
 
     elif cmd in ('/draw', '/draws'):
         # draw mode lives in book_draw, driven by ui.draw_job - imported late

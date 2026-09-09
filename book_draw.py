@@ -19,7 +19,7 @@ Live features are rebuilt from fetcher_v3's deep history to the same
 definitions the corpus builder used. Where a stat is missing live, the
 pipeline's median imputer fills it, exactly as in training.
 
-    python3 book_draw.py --until 23 [--days N] [--dry] [--margin 0.05]
+    python3 book_draw.py --until 23 [--days N] [--dry] [--half]   (--half = half-time draw, market 60)
 """
 import sys, os, re, json, pickle, datetime as dt, collections
 import numpy as np
@@ -173,7 +173,10 @@ def in_pocket(f):
             return False
         if f.get('sxg') is None or f.get('smis') is None:
             return False
-        if f['sxg'] > POCKET['sxg_max'] or f['smis'] > POCKET['smis_max']:
+        # 9 Sep: the evenness cap is a FLOOR, not a tuned parameter. The 8 Sep
+        # retrain let the grid drop it (smis 99) to keep volume and Damac v
+        # Al-Ula walked through with a 4.0 SoT gap (17 shots to 6, 0:1).
+        if f['sxg'] > POCKET['sxg_max'] or f['smis'] > min(POCKET['smis_max'], 2.0):
             return False
         # both sides blank, and blank alike (7 Sep)
         if f['blank'] < POCKET.get('blank_min', 0):
@@ -199,9 +202,19 @@ def prob(f):
     return float(MODEL.predict_proba(X)[0, 1])
 
 
+# HALF-TIME DRAW (9 Sep). Corpus: inside the gate the HT draw lands 47.9%
+# (fair 2.09) vs 40.0% for all matches; with league draw rate >= 34% it is
+# 54.2% (fair 1.85). Only 48.7% of gate matches level at HT stay level to
+# FT - the gate finds games that stay level for an hour, so bet the hour.
+# SportyBet market 60 '1st Half - 1X2', priced 2.00-2.10 on the quiet games.
+HALF = False                      # set by --half / API half:true
+HT_MEASURED = 0.479
+
+
 def draw_price(ev):
+    want = '60' if HALF else '1'
     for m in (ev.get('markets') or []):
-        if str(m.get('id')) != '1':
+        if str(m.get('id')) != want:
             continue
         for o in (m.get('outcomes') or []):
             if o.get('desc') == 'Draw' and o.get('isActive', 1):
@@ -264,11 +277,11 @@ def build(until_h=23, days=0, margin=MARGIN, verbose=True):
             'ts': dt.datetime.fromtimestamp(int(ev['estimateStartTime']) / 1000, tz=A.WAT),
             'match': f"{ev.get('homeTeamName')} v {ev.get('awayTeamName')}",
             'league': f.get('league'), 'odds': odds, 'p': p, 'ft': ft,
-            'label': f"1X2 / Draw  [p {p:.2f} xg {ft['xg']:.2f} cd {ft['cd']} mm {ft['mismatch']:.2f}]",
+            'label': f"{'1st Half - 1X2' if HALF else '1X2'} / Draw  [p {p:.2f} xg {ft['xg']:.2f} cd {ft['cd']} mm {ft['mismatch']:.2f}]",
             'stats': [f"model p {p:.2f}  xg {ft['xg']:.2f}  mismatch {ft['mismatch']:.2f}  "
                       f"combined draws {ft['cd']}  btts {(ft.get('sum_btts') or 0)/2:.0%}  "
                       f"2H goals {ft.get('sum_shgoals')}  league draw {ft.get('lg_draw')}"],
-            'bs': dict(eventId=ev['eventId'], productId=3, marketId='1',
+            'bs': dict(eventId=ev['eventId'], productId=3, marketId=('60' if HALF else '1'),
                        specifier='', outcomeId=oid),
         })
     if verbose:
@@ -284,6 +297,9 @@ def main():
     days = int(sys.argv[sys.argv.index('--days') + 1]) if '--days' in sys.argv else 0
     margin = float(sys.argv[sys.argv.index('--margin') + 1]) if '--margin' in sys.argv else MARGIN
     dry = '--dry' in sys.argv
+    global HALF
+    if '--half' in sys.argv:
+        HALF = True                                  # half-time draw instead of full-time
     legs = build(until_h=until, days=days, margin=margin)
     if not legs:
         print("\n>> no fixture clears the model cut and the price floor today"); return
@@ -299,7 +315,7 @@ def main():
     bk = A.book([l['bs'] for l in legs])
     if bk and bk.get('code'):
         print(f"\ncode {bk['code']}  {bk['url']}   ({len(legs)} legs, ~{combo:,.1f}x)")
-        A.log_booking(bk['code'], bk['url'], f"draw model slip {combo:,.1f}x ({len(legs)} legs) until {until}:00",
+        A.log_booking(bk['code'], bk['url'], f"{'HT ' if HALF else ''}draw slip {combo:,.1f}x ({len(legs)} legs) until {until}:00",
                       [(l['ts'].timestamp(), l['match'], l['label'], l['odds'], l['stats']) for l in legs])
     else:
         print("\nbooking failed")

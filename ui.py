@@ -93,7 +93,7 @@ class _LogIO(io.TextIOBase):
         return len(s)
 
 
-def draw_job(until, days, dry):
+def draw_job(until, days, dry, half=False):
     """Draw mode - the trained model in book_draw, booked as SINGLES.
 
     A slice that hits ~37% is a singles instrument; nine of them on one slip
@@ -103,6 +103,7 @@ def draw_job(until, days, dry):
                started=dt.datetime.now(A.WAT).strftime('%H:%M'))
     try:
         import book_draw as DRW
+        DRW.HALF = bool(half)
         with contextlib.redirect_stdout(_LogIO()):
             legs = DRW.build(until_h=until, days=days)
             if not legs:
@@ -125,7 +126,7 @@ def draw_job(until, days, dry):
                 if bk and bk.get('code'):
                     res['code'] = bk['code']; res['url'] = bk['url']
                     A.log_booking(bk['code'], bk['url'],
-                                  f"draw model slip {combo:,.1f}x ({len(legs)} legs) until {until}:00",
+                                  f"{'HT ' if half else ''}draw slip {combo:,.1f}x ({len(legs)} legs) until {until}:00",
                                   [(l['ts'].timestamp(), l['match'], l['label'],
                                     l['odds'], l['stats']) for l in legs])
         JOB.update(state='done', result=res)
@@ -356,7 +357,7 @@ class Handler(BaseHTTPRequestHandler):
             try:
                 p2 = json.loads(self.rfile.read(n) or b'{}')
                 until = int(p2.get('until', 23)); days = int(p2.get('days', 0))
-                dry = bool(p2.get('dry'))
+                dry = bool(p2.get('dry')); half = bool(p2.get('half'))
                 assert 0 <= until <= 23 and 0 <= days <= 4
             except Exception:
                 self._send(json.dumps({'error': 'bad parameters'}), code=400); return
@@ -365,7 +366,7 @@ class Handler(BaseHTTPRequestHandler):
                     self._send(json.dumps({'error': 'a run is already in progress'}), code=409)
                     return
                 JOB['state'] = 'building'
-            threading.Thread(target=draw_job, args=(until, days, dry), daemon=True).start()
+            threading.Thread(target=draw_job, args=(until, days, dry, half), daemon=True).start()
             self._send(json.dumps({'ok': True})); return
         if path != '/api/run':
             self._send('not found', 'text/plain', 404); return
