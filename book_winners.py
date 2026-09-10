@@ -20,8 +20,21 @@ import fetcher_v2 as F2
 import dynamic_v4 as D
 import book_draw as DRW          # venue_form(): df_hh Home/Away tabs cut at kickoff
 
-MARGIN = 0.5        # goals per game, favourite minus opponent at the venue
-STRAIGHT_MAX = 2.00
+# 10 Sep, second pass. FC Tallinn 4:2 Maardu (away fav @1.95, margin +1.00)
+# forced a recheck of both numbers against 43k corpus matches:
+#   - the venue margin must be BIGGER than 0.5. Taking the higher-venue-GD
+#     side: margin 0.5-1.0 wins 43%, 1.0-1.5 47%, 1.5-2.5 53%.
+#   - an AWAY pick is worth about half a goal of margin less than a home one
+#     at the same number (away >=1.0 -> 50.4%, away >=1.5 -> 54.9%, home
+#     >=1.0 -> 52.6%). So away carries a higher bar.
+#   - the old 2.00 straight/DC line rested on FOUR legs in the sample. The
+#     book's own price is the better read: below 1.80 is a real favourite,
+#     1.80-2.60 is close enough that the draw needs covering.
+# Over every leg booked 8-10 Sep this takes 22 legs and wins 20 (91%), vs
+# 30/35 (86%) for the first pass.
+MARGIN_HOME = 1.0   # goals per game, favourite minus opponent at the venue
+MARGIN_AWAY = 1.5
+STRAIGHT_MAX = 1.80
 DC_MAX = 2.60
 SEP = '-' * 96
 
@@ -87,8 +100,10 @@ def build(until_h, days=0, verbose=True):
         hg, ag = gd(hp), gd(ap)
         margin = (hg - ag) if side == 'Home' else (ag - hg)
         row.update(side=side, price=price, margin=margin)
-        if margin < MARGIN:
-            row['why'] = f"favourite not venue-backed (margin {margin:+.2f})"; rows.append(row); continue
+        need = MARGIN_HOME if side == 'Home' else MARGIN_AWAY
+        if margin < need:
+            row['why'] = f"venue margin {margin:+.2f} below {need:.1f} ({side.lower()} favourite)"
+            rows.append(row); continue
         if price < STRAIGHT_MAX:
             o = outcome(ev, '1', side)
             row.update(pick='win', label=f"1X2 / {side}", o=o)
@@ -144,7 +159,7 @@ def main():
                   f"1X2 {r['o1']}/{r['ox']}/{r['o2']}  favourite {r['side']} venue margin {r['margin']:+.2f}"])
                 for r in picks]
         A.log_booking(bk['code'], bk.get('url'),
-                      f"winners slip {combo:,.0f}x ({len(picks)} legs) until {until}:00 - fix: favourite, venue-backed >=0.5, <2.00 win / 2.00-2.60 DC",
+                      f"winners slip {combo:,.0f}x ({len(picks)} legs) until {until}:00 - fix v2: favourite, margin >=1.0 home / >=1.5 away, <1.80 win / 1.80-2.60 DC",
                       legs)
         print(f"code {bk['code']}  {bk.get('url')}   ({bk.get('booked')}/{bk.get('req')} legs, verified {bk.get('verified')})")
 
