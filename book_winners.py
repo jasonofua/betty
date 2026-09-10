@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-"""Winners slip - the 10 Sep rule set, measured on 73 legs (8-10 Sep):
+"""Winners slip - the 10 Sep rule set (second pass), measured on every leg
+booked 8-10 Sep plus 43k corpus matches:
 
     1. the MARKET picks the side: the 1X2 favourite only (against-market 2/9)
-    2. venue goal difference decides WHETHER to bet: the favourite must be
-       backed by >= 0.5 goals/game at the venue (home side's home games vs
-       away side's away games, last 7). Unbacked favourites lost OUTRIGHT
-       (10/14, four defeats) so no cover helps - skip.
-    3. price < 2.00  -> straight win        (19/19)
-    4. price 2.00-2.60 -> double chance     (15/16; 7 of 8 losses were draws)
+    2. venue goal difference decides WHETHER to bet - the favourite must be
+       backed by >= 1.0 goals/game at the venue if it is at HOME, >= 1.5 if
+       it is AWAY (home side's home games vs away side's away games, last 7).
+       Unbacked favourites lose OUTRIGHT, so no cover helps - skip them.
+    3. price < 1.80  -> straight win
+    4. price 1.80-2.60 -> double chance (the loss in this band is the draw)
        above 2.60 -> skip
 
 One slip, every qualifying game in the window. Window opens one hour ahead.
