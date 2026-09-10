@@ -41,7 +41,8 @@ HELP = (
     "/strict [until]        highest odds, opponent's record must confirm every team leg\n"
     "/aistrict [until]\n"
     "/draw [until]          draws only, goals+stats gate, one slip\n"
-    "/hdraw [until]         same gate, HALF-TIME draw (market 60)\n\n"
+    "/hdraw [until]         same gate, HALF-TIME draw (market 60)\n"
+    "/winners [until]       match winners: market's favourite, venue-backed, one slip\n\n"
     "/grade CODE ...        grade share codes\n"
     "/sweep                 bank yesterday's results\n"
     "/slips [n]             recent booked codes\n"
@@ -232,6 +233,11 @@ def _handle(cmd, args, chat, job, lock, run_job, grade_fn, crawl_fn):
         _dispatch_run(chat, job, lock, run_job, f'{eng} strict max odds',
                       target=6, until=num(0, 23), days=0, dry=False,
                       engine=eng, maxodds=True, strict=True)
+
+    elif cmd in ('/winners', '/win'):
+        import ui as _ui
+        _dispatch_run(chat, job, lock, _ui.winners_job, 'winners slip',
+                      until=num(0, 23), days=0, dry=False)
 
     elif cmd in ('/hdraw', '/htdraw'):
         import ui as _ui

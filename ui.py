@@ -134,6 +134,53 @@ def draw_job(until, days, dry, half=False):
         JOB.update(state='done', result={'error': f'{type(e).__name__}: {e}'})
 
 
+def winners_job(until, days, dry):
+    """Winners slip - book_winners rule set (10 Sep v2): the market picks the
+    side, venue goal difference decides whether to bet (>=1.0 home, >=1.5
+    away), below 1.80 straight, 1.80-2.60 double chance, above that skip."""
+    JOB.update(state='building', log=[], result=None,
+               params=dict(mode='winners', until=until, days=days, dry=dry),
+               started=dt.datetime.now(A.WAT).strftime('%H:%M'))
+    try:
+        import book_winners as BW
+        with contextlib.redirect_stdout(_LogIO()):
+            rows = BW.build(until_h=until, days=days)
+            picks = [r for r in rows if r['pick']]
+            if not picks:
+                JOB.update(state='done', result={'error': 'no fixture clears the winners rule'})
+                return
+            picks.sort(key=lambda r: r['ts'])
+            combo = 1.0
+            for r in picks:
+                combo *= float(r['o']['odds'])
+            res = {'combo': round(combo, 1), 'pool': len(picks), 'seen': len(rows),
+                   'legs': [dict(when=dt.datetime.fromtimestamp(r['ts'], tz=A.WAT).strftime('%a %H:%M'),
+                                 match=f"{r['home']} v {r['away']}", label=r['label'],
+                                 odds=float(r['o']['odds']), margin=round(r['margin'], 2))
+                            for r in picks]}
+            if dry:
+                res['dry'] = True
+            else:
+                JOB['state'] = 'booking'
+                bk = A.book([dict(eventId=r['ev']['eventId'], productId=3,
+                                  marketId=('10' if r['pick'] == 'dc' else '1'),
+                                  specifier='', outcomeId=r['o']['id']) for r in picks])
+                if bk and bk.get('code'):
+                    res['code'] = bk['code']; res['url'] = bk['url']
+                    A.log_booking(bk['code'], bk['url'],
+                                  f"winners slip {combo:,.0f}x ({len(picks)} legs) until {until}:00 - "
+                                  f"fix v2: favourite, margin >=1.0 home / >=1.5 away, <1.80 win / 1.80-2.60 DC",
+                                  [(r['ts'], f"{r['ev']['homeTeamName']} v {r['ev']['awayTeamName']}",
+                                    r['label'], float(r['o']['odds']),
+                                    [f"{r['home']} HOME {BW.fmt(r['hp'])} {BW.rec(r['hp'])}",
+                                     f"{r['away']} AWAY {BW.fmt(r['ap'])} {BW.rec(r['ap'])}",
+                                     f"1X2 {r['o1']}/{r['ox']}/{r['o2']}  favourite {r['side']} "
+                                     f"venue margin {r['margin']:+.2f}"]) for r in picks])
+        JOB.update(state='done', result=res)
+    except Exception as e:
+        JOB.update(state='done', result={'error': f'{type(e).__name__}: {e}'})
+
+
 def run_job(target, until, days, dry, rollover=False, engine='composite',
             maxodds=False, goalsonly=False, undersonly=False, strict=False):
     JOB.update(state='building', log=[], result=None,
@@ -351,6 +398,22 @@ class Handler(BaseHTTPRequestHandler):
                 self._send(json.dumps({'error': 'crawl already running'}), code=409); return
             threading.Thread(target=crawl_job, args=(cap, floor, mode),
                              daemon=True).start()
+            self._send(json.dumps({'ok': True})); return
+        if path == '/api/winners':
+            n = int(self.headers.get('Content-Length', 0))
+            try:
+                p2 = json.loads(self.rfile.read(n) or b'{}')
+                until = int(p2.get('until', 23)); days = int(p2.get('days', 0))
+                dry = bool(p2.get('dry'))
+                assert 0 <= until <= 23 and 0 <= days <= 4
+            except Exception:
+                self._send(json.dumps({'error': 'bad parameters'}), code=400); return
+            with LOCK:
+                if JOB['state'] not in ('idle', 'done'):
+                    self._send(json.dumps({'error': 'a run is already in progress'}), code=409)
+                    return
+                JOB['state'] = 'building'
+            threading.Thread(target=winners_job, args=(until, days, dry), daemon=True).start()
             self._send(json.dumps({'ok': True})); return
         if path == '/api/draws':
             n = int(self.headers.get('Content-Length', 0))
