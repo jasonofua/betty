@@ -169,26 +169,45 @@ def features(rich, league, home_rec, away_rec):
     return f
 
 
+def _quiet(f):
+    """The 7-9 Sep gate: quiet on goals AND quiet/even on SoT, both sides blank
+    and blank alike. Corpus 33.7% (n=614), 34.7% since Jun 2026, ~2 games/day."""
+    if not (f['xg'] < POCKET['xg_max'] and f['cd'] >= POCKET['cd_min']
+            and f['mismatch'] <= POCKET['mm_max']):
+        return False
+    if f.get('sxg') is None or f.get('smis') is None:
+        return False
+    # 9 Sep: the evenness cap is a FLOOR, not a tuned parameter. The 8 Sep
+    # retrain let the grid drop it (smis 99) to keep volume and Damac v
+    # Al-Ula walked through with a 4.0 SoT gap (17 shots to 6, 0:1).
+    if f['sxg'] > POCKET['sxg_max'] or f['smis'] > min(POCKET['smis_max'], 2.0):
+        return False
+    # both sides blank, and blank alike (7 Sep)
+    if f['blank'] < POCKET.get('blank_min', 0):
+        return False
+    if abs(f['h_blank'] - f['a_blank']) > POCKET.get('bgap_max', 99):
+        return False
+    return True
+
+
+def home_profile(f):
+    """10 Sep: the shape of the draws that WON on 6 Sep. The home side draws
+    at home (3+ of 7), concedes little at home (<= 1.0/game), both sides blank
+    (5+), in a league that draws (>= 30%). Corpus 33.5% (n=651), 35.2% since
+    Jun 2026, ~2.2/day, almost disjoint from _quiet (overlap 81). The union is
+    33.4% (n=1,184), every 2026 month 30-39%. Without the league term this
+    profile is only 29% - the league rate is what makes it bet-worthy."""
+    if f.get('h_def') is None or f.get('lg_draw') is None:
+        return False
+    return (f['h_draws'] >= 3 and f['h_def'] <= 1.0 and f['blank'] >= 5
+            and f['lg_draw'] >= 0.30)
+
+
 def in_pocket(f):
     if POCKET.get('mode') == 'all':          # no gate - every fixture is scored
         return True
-    if POCKET.get('mode') == 'both':         # quiet on goals AND quiet/even on SoT
-        if not (f['xg'] < POCKET['xg_max'] and f['cd'] >= POCKET['cd_min']
-                and f['mismatch'] <= POCKET['mm_max']):
-            return False
-        if f.get('sxg') is None or f.get('smis') is None:
-            return False
-        # 9 Sep: the evenness cap is a FLOOR, not a tuned parameter. The 8 Sep
-        # retrain let the grid drop it (smis 99) to keep volume and Damac v
-        # Al-Ula walked through with a 4.0 SoT gap (17 shots to 6, 0:1).
-        if f['sxg'] > POCKET['sxg_max'] or f['smis'] > min(POCKET['smis_max'], 2.0):
-            return False
-        # both sides blank, and blank alike (7 Sep)
-        if f['blank'] < POCKET.get('blank_min', 0):
-            return False
-        if abs(f['h_blank'] - f['a_blank']) > POCKET.get('bgap_max', 99):
-            return False
-        return True
+    if POCKET.get('mode') == 'both':         # quiet game  OR  home-side draw profile
+        return _quiet(f) or home_profile(f)
     if POCKET.get('mode', 'goals') == 'goals':
         return (f['xg'] < POCKET['xg_max'] and f['cd'] >= POCKET['cd_min']
                 and f['mismatch'] <= POCKET['mm_max'])
@@ -288,7 +307,8 @@ def build(until_h=23, days=0, margin=MARGIN, verbose=True):
             'label': f"{'1st Half - 1X2' if HALF else '1X2'} / Draw  [p {p:.2f} xg {ft['xg']:.2f} cd {ft['cd']} mm {ft['mismatch']:.2f}]",
             'stats': [f"model p {p:.2f}  xg {ft['xg']:.2f}  mismatch {ft['mismatch']:.2f}  "
                       f"combined draws {ft['cd']}  btts {(ft.get('sum_btts') or 0)/2:.0%}  "
-                      f"2H goals {ft.get('sum_shgoals')}  league draw {ft.get('lg_draw')}"],
+                      f"2H goals {ft.get('sum_shgoals')}  league draw {ft.get('lg_draw')}  "
+                      f"gate {'quiet' if _quiet(ft) else 'home-profile'}"],
             'bs': dict(eventId=ev['eventId'], productId=3, marketId=('60' if HALF else '1'),
                        specifier='', outcomeId=oid),
         })
