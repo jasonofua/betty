@@ -125,8 +125,15 @@ def main():
     until = int(sys.argv[sys.argv.index('--until') + 1]) if '--until' in sys.argv else 23
     days = int(sys.argv[sys.argv.index('--days') + 1]) if '--days' in sys.argv else 0
     dry = '--dry' in sys.argv
+    top = int(sys.argv[sys.argv.index('--top') + 1]) if '--top' in sys.argv else 0
     rows = build(until, days)
     picks = [r for r in rows if r['pick']]
+    if top and len(picks) > top:
+        # "best" = most likely to land, which is the book's own implied
+        # probability of the SELECTION (a double chance price already carries
+        # its cover). Venue margin breaks ties.
+        picks = sorted(picks, key=lambda r: (float(r['o']['odds']), -r['margin']))[:top]
+        print(f"\n>> keeping the {top} most likely legs of {len([r for r in rows if r['pick']])}")
     print(f"\n{SEP}\nALL GAMES IN THE WINDOW - {len(rows)} with prices, {len(picks)} qualify\n{SEP}")
     cur = None
     for r in rows:
