@@ -150,7 +150,12 @@ def fit_and_report(rows, X, y, P, label):
     cut = float(np.sort(p)[::-1][k30 - 1])
     return dict(model=model, kind=name, feats=FEATS, pocket=P, p_cut=cut,
                 test_precision=float(prec30), test_n=int(k30),
-                rule_precision=float(rule_p), rule_n=int(rsel.sum()), label=label)
+                rule_precision=float(rule_p), rule_n=int(rsel.sum()), label=label,
+                # 11 Sep: the gate's own draw rate over the WHOLE pocket. This
+                # is the number the break-even price floor in book_draw uses -
+                # the held-out slices (n=52, n=68) are far too small to price
+                # against.
+                pocket_rate=float(np.mean(y)), pocket_n=int(len(y)))
 
 
 def tune_both_pocket(train_rows):

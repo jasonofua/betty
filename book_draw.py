@@ -38,7 +38,12 @@ MODEL, FEATS, POCKET, P_CUT = _B['model'], _B['feats'], _B['pocket'], _B['p_cut'
 # gate games (corpus: 2.1 gate games/day -> 0.5 after the cut).
 MODEL_CUT = False
 MEASURED = _B['test_precision'] if MODEL_CUT else _B.get('rule_precision', _B['test_precision'])
-FAIR = 1.0 / MEASURED
+# The price floor prices against the GATE'S OWN RATE over the whole pocket
+# (871 matches, 34.6%), not the held-out slices - test_precision is measured
+# on 52 rows and rule_precision on 68, far too few to set a price against.
+# Our live record agrees with the pocket: 7 of 20 settled draw legs = 35%.
+RATE = _B.get('pocket_rate') or 0.346
+FAIR = 1.0 / RATE
 MARGIN = 0.05
 try:
     LG_DRAW = json.load(open(os.path.join(ROOT, 'experiments', 'league_draw_rates.json')))
@@ -233,6 +238,7 @@ def prob(f):
 # SportyBet market 60 '1st Half - 1X2', priced 2.00-2.10 on the quiet games.
 HALF = False                      # set by --half / API half:true
 HT_MEASURED = 0.479
+FLOOR = True                      # refuse a draw priced under 1/MEASURED
 
 
 def draw_price(ev):
@@ -298,8 +304,15 @@ def build(until_h=23, days=0, margin=MARGIN, verbose=True):
         odds, oid = draw_price(ev)
         if not odds or not oid:
             st['no draw price'] += 1; continue
-        # PRICE FLOOR REMOVED 6 Sep on the user's instruction - the model's
-        # cut is the only selection. The odds are still recorded per leg.
+        # 11 Sep: a BREAK-EVEN floor, not a selection filter. The 6 Sep floor
+        # was fair*(1+margin) and it rejected almost everything, which is what
+        # the user threw out. This one refuses only prices that lose money at
+        # our OWN measured gate rate: 34.6% -> 2.89. Cumbaya @2.70 (10 Sep,
+        # 0:1) was such a bet - wrong even if the pick had landed. 3 of the 11
+        # priced legs booked since 6 Sep were below fair. Nothing about which
+        # GAME gets picked changes; this only declines a bad number.
+        if FLOOR and odds < FAIR:
+            st[f'price below fair {FAIR:.2f}'] += 1; continue
         out.append({
             'ts': dt.datetime.fromtimestamp(int(ev['estimateStartTime']) / 1000, tz=A.WAT),
             'match': f"{ev.get('homeTeamName')} v {ev.get('awayTeamName')}",
