@@ -188,7 +188,7 @@ def live_job(until, dry, chat=None):
     """Live draw watcher (live_draw.py) - runs in its own thread, separate from
     JOB so a build can still run alongside it. Pushes codes to the chat that
     started it."""
-    import live_draw as LD
+    import live_ht as LD          # 12 Sep: the general half-time watcher (draw + 2H goals)
     if LIVE['state'] == 'running':
         return False
     LIVE.update(state='running', log=[], started=dt.datetime.now(A.WAT).strftime('%H:%M'))

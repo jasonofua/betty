@@ -43,7 +43,7 @@ HELP = (
     "/draw [until]          draws only, goals+stats gate, one slip\n"
     "/hdraw [until]         same gate, HALF-TIME draw (market 60)\n"
     "/winners [until]       match winners: market's favourite, venue-backed, one slip\n"
-    "/live [until]          LIVE: watch the draw-gate games, book the Draw at half-time if level\n"
+    "/live [until]          LIVE at half-time: Draw on gate games, 2H Over 0.5 / Under 1.5 from trailing halves\n"
     "/livelog               what the live watcher has seen\n\n"
     "/grade CODE ...        grade share codes\n"
     "/sweep                 bank yesterday's results\n"
