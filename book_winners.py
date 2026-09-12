@@ -121,8 +121,59 @@ def build(until_h, days=0, verbose=True):
     return rows
 
 
+def yesterday_check():
+    """12 Sep: run BEFORE booking, every time. Applies the rule to every game
+    played yesterday (cached venue form + the results feed) and prints how
+    the venue-backed side did across the WHOLE board, next to the corpus
+    norm. This is the "was it the rule or the night" test, and on 12 Sep it
+    was run after booking instead of before. It reports; it does not block -
+    one bad night is noise (Fri 11 Sep: 55.8% across 208 games, our 26 legs
+    35% outright losses = the bad end of normal)."""
+    try:
+        import fetcher_v3 as F3
+        res = {}
+        cur = None
+        for sct in F3.sections(F3.fetch('f_1_-1_1_en-ng_1', ttl=1800)):
+            if 'ZA' in sct:
+                cur = sct['ZA']
+            elif 'AA' in sct and sct.get('AG') is not None and sct.get('AH') is not None:
+                res[(sct.get('AE'), sct.get('AF'))] = (int(sct['AG']), int(sct['AH']))
+        rows = []
+        for f in F2.get_fixtures(-1):
+            key = (f['home'], f['away'])
+            if key not in res or not F3.is_cached(f"df_hh_1_{f["id"]}", ttl=999 * 3600):
+                continue                      # cached form only - this must stay fast
+            try:
+                hp, ap = DRW.venue_form(f['id'], f['ts'])
+            except Exception:
+                continue
+            if len(hp) < 4 or len(ap) < 4:
+                continue
+            hg, ag = gd(hp), gd(ap)
+            if hg == ag:
+                continue
+            side = 'H' if hg > ag else 'A'
+            m = abs(hg - ag)
+            if not ((side == 'H' and m >= MARGIN_HOME) or (side == 'A' and m >= MARGIN_AWAY)):
+                continue
+            gh, ga = res[key]
+            won = (gh > ga) if side == 'H' else (ga > gh)
+            rows.append((side, won, gh == ga))
+        if len(rows) < 30:
+            print(f"yesterday check: only {len(rows)} qualifying games with cached form - skipped"); return
+        for lab, rs in (('all', rows), ('home', [r for r in rows if r[0] == 'H']), ('away', [r for r in rows if r[0] == 'A'])):
+            if not rs:
+                continue
+            w = sum(r[1] for r in rs); d = sum(r[2] for r in rs)
+            print(f"yesterday check {lab:5} n {len(rs):>4}  won {w/len(rs):.1%}  win-or-draw {(w+d)/len(rs):.1%}"
+                  f"   (corpus: home 52.6% / 75.9%, away 54.9% / 73.8%)")
+    except Exception as e:
+        print(f"yesterday check failed: {type(e).__name__}: {e}")
+
+
 def main():
     until = int(sys.argv[sys.argv.index('--until') + 1]) if '--until' in sys.argv else 23
+    yesterday_check()
     days = int(sys.argv[sys.argv.index('--days') + 1]) if '--days' in sys.argv else 0
     dry = '--dry' in sys.argv
     top = int(sys.argv[sys.argv.index('--top') + 1]) if '--top' in sys.argv else 0
