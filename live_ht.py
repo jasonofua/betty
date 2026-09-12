@@ -205,9 +205,11 @@ def run(until_h=None, dry=False, poll=POLL):
                 # 12 Sep evening, user's call: bar dropped from 14/14 (83.6%) to 13/14
                 # (80.2%) for volume; the book prices this at 1.20-1.30, so at 13/14
                 # the price floor moves to 1.25 to stay at or above fair.
-                if o05 >= len(t2) - 1 and len(t2) >= 13:
+                # 12 Sep 21:45, user's call: back to 14/14 after 13/14 went 3 won 2 lost
+                # in its first evening (Paris FC 0:0, Borac 1:0). 14/14 was 5/5.
+                if o05 == len(t2) and len(t2) >= 14:
                     best = same_event(True, 0.5)
-                    floor = O05_MIN if o05 == len(t2) else 1.25
+                    floor = O05_MIN
                     if best and best[0] >= floor:
                         legs.append(('2H O0.5', best[4], best[0], dict(marketId=best[3], specifier=best[2], outcomeId=best[1]),
                                      f"trailing 2H halves scored {o05}/{len(t2)} ({'83.6' if o05 == len(t2) else '80.2'}%)"))
