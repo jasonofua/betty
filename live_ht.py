@@ -202,11 +202,15 @@ def run(until_h=None, dry=False, poll=POLL):
                         if pp:
                             found.append((pp, oo, ss, mid, lab))
                     return max(found, key=lambda x: x[0], default=None)
-                if o05 == len(t2):
+                # 12 Sep evening, user's call: bar dropped from 14/14 (83.6%) to 13/14
+                # (80.2%) for volume; the book prices this at 1.20-1.30, so at 13/14
+                # the price floor moves to 1.25 to stay at or above fair.
+                if o05 >= len(t2) - 1 and len(t2) >= 13:
                     best = same_event(True, 0.5)
-                    if best and best[0] >= O05_MIN:
+                    floor = O05_MIN if o05 == len(t2) else 1.25
+                    if best and best[0] >= floor:
                         legs.append(('2H O0.5', best[4], best[0], dict(marketId=best[3], specifier=best[2], outcomeId=best[1]),
-                                     f"trailing 2H halves scored {o05}/{len(t2)} (83.6%)"))
+                                     f"trailing 2H halves scored {o05}/{len(t2)} ({'83.6' if o05 == len(t2) else '80.2'}%)"))
                 if u15 >= 12:
                     best = same_event(False, 1.5)
                     if best and best[0] >= U15_MIN:
