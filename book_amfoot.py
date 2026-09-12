@@ -24,9 +24,20 @@ import fetcher_v3 as F
 BASE = 'https://www.sportybet.com/api/ng/factsCenter/'
 AGREE = 11
 MISMATCH_PRICE = 1.05
-SKIP_MISMATCH = False     # 12 Sep: user does not pick winners, so totals and handicaps on
-                          # mismatch games stay in play; --skip-mismatch turns the skip on.
-                          # The histories are still class-mixed - the print marks these games.
+SKIP_MISMATCH = False     # user, 12 Sep: never skip - find the better option instead
+SEASON_START = dt.datetime(2026, 8, 20).timestamp()
+# 12 Sep evening, after Wagner +45.5 (11/14) lost 80:3 and Wash State +18.5
+# (13/14) lost 34:7. Two changes, neither a skip:
+#   MISMATCH games (winner <= 1.05): the mixed 14-game history is against
+#   a different class of opponent. Score the lines against the games that
+#   LOOK like this one instead - the favourite's blowouts (won by 30+) and
+#   the underdog's heaviest defeats (lost by 30+). Indiana's blowouts said
+#   Howard +62.5 4/4 (won); JMU's and Wagner's said +45.5 1/5 (lost).
+#   STALE college rosters (fewer than 2 this-season venue games a side): a
+#   handicap is a bet on relative class, which a new roster changes; a total
+#   is a bet on tempo, which the coaching carries over. Prefer the total,
+#   and hold a handicap to 12/14 instead of 11/14.
+BLOWOUT = 30
 KEEP = {'219': 'Winner', '225': 'FT O/U', '223': 'Handicap', '68': '1H O/U'}
 ALIAS = {'fiu': 'floridainternational', 'britishcolumbia': 'bc', 'ucf': 'centralflorida', 'smu': 'southernmethodist',
          'lsu': 'lsu', 'byu': 'brighamyoung', 'usc': 'southerncalifornia', 'tcu': 'tcu', 'utsa': 'utsa', 'unlv': 'unlv'}
@@ -98,7 +109,7 @@ def venue_games(mid, kickoff, team, suffix):
                 pf, pa = int(d['KU']), int(d['KT'])
                 if not home_is_team:
                     pf, pa = pa, pf
-                out.append(dict(id=d.get('KP'), pf=pf, pa=pa, home=home_is_team))
+                out.append(dict(id=d.get('KP'), pf=pf, pa=pa, home=home_is_team, ts=int(d['KC'])))
     return out[:7]
 
 
@@ -122,8 +133,9 @@ def lines(mk, key):
     return sorted(out)
 
 
-def score_game(hg, ag, mk):
+def score_game(hg, ag, mk, hcp_agree=None):
     """Every qualifying line for one game -> list of (hits, n, label, odds, sel)."""
+    hcp_agree = hcp_agree or AGREE
     ht = [g['pf'] + g['pa'] for g in hg]; at = [g['pf'] + g['pa'] for g in ag]
     h1 = [g['fh'][0] + g['fh'][1] for g in hg if g['fh']]; a1 = [g['fh'][0] + g['fh'][1] for g in ag if g['fh']]
     hm = [g['pf'] - g['pa'] for g in hg]; am = [g['pf'] - g['pa'] for g in ag]
@@ -146,18 +158,20 @@ def score_game(hg, ag, mk):
         need = -v
         hcov = sum(x > need for x in hm) + sum(-x > need for x in am); acov = n - hcov
         for want, hits, lab in (('Home', hcov, f"Home {v:+g}"), ('Away', acov, f"Away {-v:+g}")):
-            if hits >= AGREE:
+            if hits >= hcp_agree:
                 sel = next((s for s in m['outs'] if s[0].startswith(want)), None)
                 if sel:
                     cands.append((hits, n, f"Handicap {lab}", sel[1], dict(mid=m['id'], spec=m['spec'], oid=sel[2])))
     return cands
 
 
-def best_of(cands):
+def best_of(cands, prefer_totals=False):
     """One leg per game: highest agreement, then the line nearest the middle of
     its ladder (the middle line is where the book's own number sits)."""
     if not cands:
         return None
+    if prefer_totals and any('O/U' in c[2] for c in cands):
+        cands = [c for c in cands if 'O/U' in c[2]]
     top = max(c[0] for c in cands)
     tied = [c for c in cands if c[0] == top]
     tied.sort(key=lambda c: abs(c[3] - 1.85))
@@ -196,14 +210,35 @@ def main():
             skipped['no venue form'] += 1; print(f"  {t:%a %H:%M}  {name:52} skip: venue form {len(hg)}/{len(ag)}"); continue
         for g in hg + ag:
             g['fh'] = first_half(g['id'], g['home']) if g['id'] else None
-        cands = score_game(hg, ag, mk)
-        pick = best_of(cands)
+        note = ''
+        if mismatch:
+            # the games that look like this one: favourite's blowouts, underdog's heaviest defeats
+            fav_home = min(o[1] for o in win[0]['outs']) == win[0]['outs'][0][1]
+            fav, dog = (hg, ag) if fav_home else (ag, hg)
+            fav_sub = [g for g in fav if g['pf'] - g['pa'] >= BLOWOUT]
+            dog_sub = [g for g in dog if g['pa'] - g['pf'] >= BLOWOUT]
+            sub_h, sub_a = (fav_sub, dog_sub) if fav_home else (dog_sub, fav_sub)
+            if len(sub_h) + len(sub_a) >= 4:
+                old_agree = AGREE
+                globals()['AGREE'] = max(3, int(round(0.8 * (len(sub_h) + len(sub_a)))))
+                cands = score_game(sub_h, sub_a, mk); globals()['AGREE'] = old_agree
+                note = f"  [MISMATCH: scored on {len(sub_h)}+{len(sub_a)} lookalike games]"
+            else:
+                cands = []; note = "  [MISMATCH: fewer than 4 lookalike games - no line]"
+            pick = best_of(cands)
+        else:
+            fresh_h = sum(g['ts'] >= SEASON_START for g in hg); fresh_a = sum(g['ts'] >= SEASON_START for g in ag)
+            stale = 'NCAA' in (e.get('_tour') or '') and min(fresh_h, fresh_a) < 2
+            cands = score_game(hg, ag, mk, hcp_agree=12 if stale else None)
+            pick = best_of(cands, prefer_totals=stale)
+            if stale:
+                note = f"  [stale roster {fresh_h}/{fresh_a} this season: totals first, handicap needs 12/14]"
         fmt = lambda gs: ' '.join(f"{g['pf']}:{g['pa']}" for g in gs)
         if not pick:
             skipped['no line at agreement'] += 1
-            print(f"  {t:%a %H:%M}  {name:52} no line reaches {AGREE}/14   H {fmt(hg)} | A {fmt(ag)}"); continue
+            print(f"  {t:%a %H:%M}  {name:52} no line{note}   H {fmt(hg)} | A {fmt(ag)}"); continue
         hits, n, lab, odds, sel = pick
-        print(f"  {t:%a %H:%M}  {name:52} PICK {lab} @{odds:.2f}  {hits}/{n}{'  [MISMATCH]' if mismatch else ''}   H {fmt(hg)} | A {fmt(ag)}")
+        print(f"  {t:%a %H:%M}  {name:52} PICK {lab} @{odds:.2f}  {hits}/{n}{note}   H {fmt(hg)} | A {fmt(ag)}")
         legs.append(dict(ts=ets, match=name, label=lab, odds=odds, hits=hits, n=n, ev=e, sel=sel,
                          stats=[f"{f['h']} HOME {fmt(hg)}", f"{f['a']} AWAY {fmt(ag)}",
                                 f"{lab}: {hits}/{n} of the two venue histories agree"]))
