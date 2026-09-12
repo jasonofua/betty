@@ -255,9 +255,9 @@ def draw_price(ev):
     return None, None
 
 
-def build(until_h=23, days=0, margin=MARGIN, verbose=True):
+def build(until_h=23, days=0, margin=MARGIN, verbose=True, lead_h=1.0):
     now = dt.datetime.now(A.WAT)
-    start = now + dt.timedelta(hours=1)
+    start = now + dt.timedelta(hours=lead_h)      # live watcher passes a negative lead to keep in-play games
     cutoff = now.replace(hour=until_h, minute=0, second=0, microsecond=0)
     if cutoff <= now:
         cutoff += dt.timedelta(days=1)

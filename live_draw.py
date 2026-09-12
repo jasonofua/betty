@@ -60,7 +60,11 @@ def gate_events(until_h, days=0):
     old = DRW.FLOOR
     DRW.FLOOR = False
     try:
-        legs = DRW.build(until_h=until_h, days=days, verbose=False)
+        # 12 Sep: All Boys v San Telmo kicked off 19:30, the watcher restarted at
+        # 18:35 and built its gate from 19:35 on - so a gate game that was 0:0 at
+        # the break was read as "nothing". The live gate keeps everything that
+        # kicked off in the last three hours.
+        legs = DRW.build(until_h=until_h, days=days, verbose=False, lead_h=-3.0)
     finally:
         DRW.FLOOR = old
     out = {}
