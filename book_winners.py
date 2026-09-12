@@ -114,7 +114,10 @@ def warnings_for(row, w):
     fav_home = row['side'] == 'Home'
     flags = []
     allf = w['h_all'] if fav_home else w['a_all']
-    if allf and allf[0] < allf[2]:
+    # 12 Sep evening: trips at LEVEL too. Hubei (3W4D3L) and Olympiacos (4W2D4L)
+    # both passed the strict "<" and both lost; a favourite that has not won
+    # more than it has lost in its last ten is not a favourite the sheet backs.
+    if allf and allf[0] <= allf[2]:
         flags.append(f"overall form {allf[0]}W{allf[1]}D{allf[2]}L")
     sot = w['h_sot'] if fav_home else w['a_sot']
     if sot and sot[1] > sot[0]:
@@ -172,13 +175,19 @@ def build(until_h, days=0, verbose=True):
         if margin < need:
             row['why'] = f"venue margin {margin:+.2f} below {need:.1f} ({side.lower()} favourite)"
             rows.append(row); continue
-        if price < STRAIGHT_MAX:
+        fav_pairs = hp if side == 'Home' else ap
+        fav_draws = sum(g == c for g, c in fav_pairs)
+        # 12 Sep evening: a favourite that has drawn 5+ of its last 7 at the venue
+        # goes on as a double chance whatever the price. Corpus: 5+ venue draws
+        # -> draws 30.7% (rest 22%), win-or-draw 79.6% (rest 75%). De Treffers
+        # 1W6D0L at home went straight at 1.38 and drew 1:1.
+        if price < STRAIGHT_MAX and fav_draws < 5:
             o = outcome(ev, '1', side)
             row.update(pick='win', label=f"1X2 / {side}", o=o)
-        elif price < DC_MAX:
+        elif price < DC_MAX or fav_draws >= 5:
             want = 'Home or Draw' if side == 'Home' else 'Draw or Away'
             o = outcome(ev, '10', want)
-            row.update(pick='dc', label=f"Double Chance / {want}", o=o)
+            row.update(pick='dc', label=f"Double Chance / {want}" + (f"  [{fav_draws} venue draws]" if fav_draws >= 5 else ''), o=o)
         else:
             row['why'] = f"favourite priced {price:.2f} (above {DC_MAX})"; rows.append(row); continue
         if not row.get('o'):
