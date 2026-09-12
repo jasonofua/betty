@@ -116,26 +116,40 @@ def book_batch(pending, dry):
 
 def run(until_h=None, dry=False, poll=POLL):
     STOP['flag'] = False
+    import threading
+    state = dict(gate={}, fx=[f for off in (0, 1) for f in F2.get_fixtures(off)], built=0.0, building=False)
+
     def build_gate():
-        g = LD.gate_events(23, days=1)
-        f_ = [f for off in (0, 1) for f in F2.get_fixtures(off)]
-        return g, f_, time.time()
-    gate, fx, built = build_gate()
-    LOG(f"live HT watcher: {len(gate)} draw-gate games; {len(fx)} flashscore fixtures; polling every {poll}s; "
-        f"{'until ' + str(until_h) + ':00' if until_h else 'until /stop'}; 2+ legs in a {BATCH_S}s window go on one slip")
+        # the draw-gate list needs every fixture's history - an hour or two on a
+        # cold server. The 2H rules need none of it, so this runs in the
+        # background and the draw rule switches on when it lands.
+        state['building'] = True
+        try:
+            g = LD.gate_events(23, days=0)
+            state['gate'] = g; state['built'] = time.time()
+            LOG(f"draw gate ready: {len(g)} games today")
+            if SEND:
+                SEND(f"draw gate ready: {len(g)} gate games today - the half-time Draw is now armed on them")
+        except Exception as ex:
+            LOG(f"gate build failed: {type(ex).__name__}: {ex}"); state['built'] = time.time()
+        finally:
+            state['building'] = False
+    threading.Thread(target=build_gate, daemon=True).start()
+    LOG(f"live HT watcher: polling every {poll}s; {'until ' + str(until_h) + ':00' if until_h else 'until /stop'}; "
+        f"{len(state['fx'])} fixtures for joining; 2+ legs in a {BATCH_S}s window go on one slip; draw gate building in the background")
     if SEND:
-        SEND(f"live watcher on. Draw on {len(gate)} gate games; 2H Over 0.5 / Under 1.5 from the trailing second halves on any game. "
-             f"Codes land here at half-time; two or more together go on one slip. /stop ends it, /livelog shows what it has seen.")
+        SEND("live watcher on. 2H Over 0.5 / Under 1.5 from the trailing second halves on any game, from now. "
+             "The half-time Draw on gate games arms itself once the gate list is built (up to an hour). "
+             "Codes land here at half-time; two or more together go on one slip. /stop ends it, /livelog shows what it has seen.")
     done, seen = set(), set()
     pending, pending_since = [], None
     end = (dt.datetime.now(tz=A.WAT).replace(hour=until_h, minute=59, second=0, microsecond=0) if until_h
            else dt.datetime.now(tz=A.WAT) + dt.timedelta(days=30))
     while dt.datetime.now(tz=A.WAT) < end and not STOP['flag']:
-        if time.time() - built > 6 * 3600:            # a new day's gate games and fixtures
-            try:
-                gate, fx, built = build_gate(); LOG(f"gate refreshed: {len(gate)} games")
-            except Exception as ex:
-                LOG(f"gate refresh failed: {ex}"); built = time.time()
+        gate, fx = state['gate'], state['fx']
+        if state['built'] and time.time() - state['built'] > 6 * 3600 and not state['building']:
+            state['fx'] = [f for off in (0, 1) for f in F2.get_fixtures(off)]
+            threading.Thread(target=build_gate, daemon=True).start()
         try:
             board = LD.live_board()
         except Exception as ex:
