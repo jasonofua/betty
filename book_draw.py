@@ -280,9 +280,10 @@ def build(until_h=23, days=0, margin=MARGIN, verbose=True):
         print(f"sportybet in window {len(evs)}  |  joined to flashscore {len(pairs)}", flush=True)
         if MODEL_CUT:
             print(f"model: {_B['kind']}  p_cut {P_CUT:.3f}  (held-out precision at the cut {MEASURED:.1%}; "
-                  f"no price floor)", flush=True)
+                  f"{'price floor ' + format(FAIR, '.2f') if FLOOR else 'no price floor'})", flush=True)
         else:
-            print(f"gate only - model cut OFF (held-out gate draw rate {MEASURED:.1%}; no price floor)", flush=True)
+            print(f"gate only - model cut OFF (gate rate {RATE:.1%}; price floor {FAIR:.2f})" if FLOOR else
+                  f"gate only - model cut OFF (gate rate {RATE:.1%}; no price floor)", flush=True)
 
     need = FAIR * (1 + margin)
     out, st = [], collections.Counter()
@@ -344,7 +345,7 @@ def main():
     legs = build(until_h=until, days=days, margin=margin)
     if not legs:
         print("\n>> no fixture clears the gate today"); return
-    print(f"\n=== DRAW MODE — {len(legs)} gate candidates ({'model cut ' + format(P_CUT, '.3f') if MODEL_CUT else 'no model cut'}, no price floor)")
+    print(f"\n=== DRAW MODE — {len(legs)} gate candidates ({'model cut ' + format(P_CUT, '.3f') if MODEL_CUT else 'no model cut'}, {'floor ' + format(FAIR, '.2f') if FLOOR else 'no price floor'})")
     for l in legs:
         print(f"   {l['ts']:%a %H:%M}  {l['match'][:40]:<40} @{l['odds']:<6} {l['stats'][0]}")
     if dry:
