@@ -46,7 +46,7 @@ MIN_ODDS = 1.05      # ignore near-1.0 legs (lets the form's safe goals line thr
 TEAMU_MIN_ODDS = 1.02   # team-Unders get a lower floor: the safe weak-side under is the most robust acca
                         # leg (validated 282g: 100% land, +7 vs match-under, 0 broken) but prices ~1.03
 MAX_FORM = 600
-MAX_CODE = 60
+MAX_CODE = 50   # SportyBet betslip cap - the share API accepts 60 but the slip will not load past 50 (user, 12 Sep)
 OU_LINES = {0.5, 1.5, 2.5, 3.5, 4.5, 5.5}   # match Over/Under ladder (deep lines DO combine - verified)
 MATCH_UNDER_FLOOR = 3.5   # never bet match Under 2.5 (unvalidatable 6-pick sample, 0/2 live, 1 team breaks it)
 TEAM_LINES = {0.5, 1.5, 2.5, 3.5}            # per-team Over/Under ladder

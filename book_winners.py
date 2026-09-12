@@ -128,7 +128,8 @@ def main():
     top = int(sys.argv[sys.argv.index('--top') + 1]) if '--top' in sys.argv else 0
     rows = build(until, days)
     picks = [r for r in rows if r['pick']]
-    if top and len(picks) > top:
+    top = min(top, A.MAX_CODE) if top else A.MAX_CODE      # SportyBet slip cap
+    if len(picks) > top:
         # "best" = most likely to land, which is the book's own implied
         # probability of the SELECTION (a double chance price already carries
         # its cover). Venue margin breaks ties.
