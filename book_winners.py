@@ -62,6 +62,73 @@ def fmt(pairs):
     return ' '.join(f"{a}:{b}" for a, b in pairs)
 
 
+def wider_sheet(f):
+    """12 Sep: the three columns the 12 Sep losses had and the rule never read.
+    overall  - last 10 games at any venue: (W, D, L)
+    h2h      - last 6 meetings from the favourite's side: (W, D, L)
+    sot      - the favourite's shots on target per game, for and against
+    Each returns None when the feed has nothing."""
+    import re as _re
+    import fetcher_v3 as F3
+    out = dict(h_all=None, a_all=None, h2h=[], h_sot=None, a_sot=None)
+    try:
+        raw = F3.fetch(f"df_hh_1_{f['id']}", ttl=3600)
+        hr, ar, _ = F3.parse_history(raw)
+        cut = f['ts'] - 3600
+        for key, rows in (('h_all', hr), ('a_all', ar)):
+            g = [x for x in rows if 0 < x['kc'] < cut][:10]
+            if len(g) >= 5:
+                out[key] = (sum(x['gf'] > x['ga'] for x in g), sum(x['gf'] == x['ga'] for x in g), sum(x['gf'] < x['ga'] for x in g))
+        seen = set()
+        for tab in raw.split('~KA÷'):
+            for blk in tab.split('~KB÷')[1:]:
+                if not blk.startswith('Head-to-head'):
+                    continue
+                for g in _re.split(r'~(?=KC÷)', blk):
+                    d = dict(_re.findall(r'([A-Z]{2,3})÷([^¬]*)', g))
+                    if 'KC' not in d or not d.get('KU') or int(d['KC']) >= cut or d['KC'] in seen:
+                        continue
+                    seen.add(d['KC'])
+                    hn = d.get('KJ', '').lstrip('*'); hs, as_ = int(d['KU']), int(d['KT'])
+                    home_is_fhome = hn == f['home']
+                    out['h2h'].append((int(d['KC']), hs if home_is_fhome else as_, as_ if home_is_fhome else hs))   # from f['home']'s view
+        out['h2h'] = sorted(out['h2h'], reverse=True)[:6]
+    except Exception:
+        pass
+    try:
+        rich = DRW._rich(f['id'])
+        for side, key in (('home', 'h_sot'), ('away', 'a_sot')):
+            s = ((rich or {}).get(f'{side}_stats') or {}).get('sot') or {}
+            fo, ag = s.get('series_for') or [], s.get('series_against') or []
+            if len(fo) >= 3 and len(ag) >= 3:
+                out[key] = (sum(fo) / len(fo), sum(ag) / len(ag))
+    except Exception:
+        pass
+    return out
+
+
+def warnings_for(row, w):
+    """Flags on the FAVOURITE from the wider sheet. Each one was present on a
+    12 Sep loss: Juventus U20 (overall 2W of 10), Hubei (out-shot 2.1 v 3.7,
+    lost both h2h), Daejeon (lost the last two h2h)."""
+    fav_home = row['side'] == 'Home'
+    flags = []
+    allf = w['h_all'] if fav_home else w['a_all']
+    if allf and allf[0] < allf[2]:
+        flags.append(f"overall form {allf[0]}W{allf[1]}D{allf[2]}L")
+    sot = w['h_sot'] if fav_home else w['a_sot']
+    if sot and sot[1] > sot[0]:
+        flags.append(f"out-shot on target {sot[0]:.1f} for / {sot[1]:.1f} against")
+    if w['h2h']:
+        fav_w = sum((a > b) if fav_home else (b > a) for _, a, b in w['h2h'])
+        fav_l = sum((a < b) if fav_home else (b < a) for _, a, b in w['h2h'])
+        last2 = w['h2h'][:2]
+        lost_last2 = len(last2) == 2 and all((a < b) if fav_home else (b < a) for _, a, b in last2)
+        if fav_l > fav_w or lost_last2:
+            flags.append(f"h2h {fav_w}W{len(w['h2h']) - fav_w - fav_l}D{fav_l}L" + (" lost last two" if lost_last2 else ""))
+    return flags
+
+
 def build(until_h, days=0, verbose=True):
     now = dt.datetime.now(tz=A.WAT)
     start = now + dt.timedelta(hours=1)
@@ -116,6 +183,10 @@ def build(until_h, days=0, verbose=True):
             row['why'] = f"favourite priced {price:.2f} (above {DC_MAX})"; rows.append(row); continue
         if not row.get('o'):
             row['why'] = 'market not offered'; row['pick'] = None
+        if row['pick']:
+            w = wider_sheet(f); row['wide'] = w; row['flags'] = warnings_for(row, w)
+            if row['flags']:
+                row['why'] = 'flagged: ' + '; '.join(row['flags']); row['pick'] = None
         rows.append(row)
     rows.sort(key=lambda r: (r['league'], r['ts']))
     return rows
@@ -197,6 +268,11 @@ def main():
         if r['hp'] and r['ap']:
             print(f"      {r['home'][:20]:20} HOME {fmt(r['hp']):32} {rec(r['hp'])}")
             print(f"      {r['away'][:20]:20} AWAY {fmt(r['ap']):32} {rec(r['ap'])}")
+        w = r.get('wide')
+        if w:
+            h2 = '  '.join(f"{a}:{b}" for _, a, b in w['h2h']) or 'none'
+            print(f"      overall last10: home {w['h_all']}  away {w['a_all']}   h2h (home view): {h2}   "
+                  f"SoT for/against: home {tuple(round(x, 1) for x in w['h_sot']) if w['h_sot'] else '-'}  away {tuple(round(x, 1) for x in w['a_sot']) if w['a_sot'] else '-'}")
     if not picks:
         print("\n>> nothing qualifies"); return
     picks.sort(key=lambda r: r['ts'])
@@ -216,7 +292,9 @@ def main():
     if bk and bk.get('code'):
         legs = [(r['ts'], f"{r['ev']['homeTeamName']} v {r['ev']['awayTeamName']}", r['label'], float(r['o']['odds']),
                  [f"{r['home']} HOME {fmt(r['hp'])} {rec(r['hp'])}", f"{r['away']} AWAY {fmt(r['ap'])} {rec(r['ap'])}",
-                  f"1X2 {r['o1']}/{r['ox']}/{r['o2']}  favourite {r['side']} venue margin {r['margin']:+.2f}"])
+                  f"1X2 {r['o1']}/{r['ox']}/{r['o2']}  favourite {r['side']} venue margin {r['margin']:+.2f}",
+                  f"overall last10 home {r.get('wide', {}).get('h_all')} away {r.get('wide', {}).get('a_all')}  h2h {[(a, b) for _, a, b in r.get('wide', {}).get('h2h', [])]}  "
+                  f"SoT home {r.get('wide', {}).get('h_sot')} away {r.get('wide', {}).get('a_sot')}"])
                 for r in picks]
         A.log_booking(bk['code'], bk.get('url'),
                       f"winners slip {combo:,.0f}x ({len(picks)} legs) until {until}:00 - fix v2: favourite, margin >=1.0 home / >=1.5 away, <1.80 win / 1.80-2.60 DC",

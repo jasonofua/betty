@@ -191,7 +191,16 @@ def live_job(until, dry, chat=None):
     import live_ht as LD          # 12 Sep: the general half-time watcher (draw + 2H goals)
     if LIVE['state'] == 'running':
         return False
-    LIVE.update(state='running', log=[], started=dt.datetime.now(A.WAT).strftime('%H:%M'))
+    # 12 Sep: a live code is loadable only while the market is open - minutes,
+    # not hours. Without a chat the code sat in the log until someone read it
+    # (UV8C8U). Default to the bot's own chat so every code is pushed at once.
+    if not chat:
+        try:
+            import telegram_bot as _TB
+            chat = _TB.LAST_CHAT
+        except Exception:
+            chat = None
+    LIVE.update(state='running', log=[], started=dt.datetime.now(A.WAT).strftime('%H:%M'), chat=bool(chat))
     def log(msg):
         for part in str(msg).splitlines():
             if part.strip():

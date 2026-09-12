@@ -53,6 +53,7 @@ HELP = (
 )
 TOKEN = os.environ.get('TELEGRAM_TOKEN', '').strip()
 ONLY_CHAT = os.environ.get('TELEGRAM_CHAT', '').strip()
+LAST_CHAT = ONLY_CHAT or None
 
 
 def _call(method, **params):
@@ -145,6 +146,9 @@ def _loop(job, lock, run_job, grade_fn, crawl_fn):
             msg = upd.get('message') or upd.get('channel_post') or {}
             text = (msg.get('text') or '').strip()
             chat = str((msg.get('chat') or {}).get('id', ''))
+            if chat:
+                global LAST_CHAT
+                LAST_CHAT = chat                   # the live watcher pushes here when started without a chat
             if not text or not chat:
                 continue
             if ONLY_CHAT and chat != ONLY_CHAT:
