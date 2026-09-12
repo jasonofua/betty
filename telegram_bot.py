@@ -42,7 +42,9 @@ HELP = (
     "/aistrict [until]\n"
     "/draw [until]          draws only, goals+stats gate, one slip\n"
     "/hdraw [until]         same gate, HALF-TIME draw (market 60)\n"
-    "/winners [until]       match winners: market's favourite, venue-backed, one slip\n\n"
+    "/winners [until]       match winners: market's favourite, venue-backed, one slip\n"
+    "/live [until]          LIVE: watch the draw-gate games, book the Draw at half-time if level\n"
+    "/livelog               what the live watcher has seen\n\n"
     "/grade CODE ...        grade share codes\n"
     "/sweep                 bank yesterday's results\n"
     "/slips [n]             recent booked codes\n"
@@ -233,6 +235,15 @@ def _handle(cmd, args, chat, job, lock, run_job, grade_fn, crawl_fn):
         _dispatch_run(chat, job, lock, run_job, f'{eng} strict max odds',
                       target=6, until=num(0, 23), days=0, dry=False,
                       engine=eng, maxodds=True, strict=True)
+
+    elif cmd == '/live':
+        import ui as _ui
+        ok = _ui.live_job(num(0, 23), False, chat=chat)
+        send(chat, 'live draw watcher started - codes will land here at half-time' if ok else 'live watcher already running')
+
+    elif cmd == '/livelog':
+        import ui as _ui
+        send(chat, '\n'.join(_ui.LIVE['log'][-30:]) or 'no live log')
 
     elif cmd in ('/winners', '/win'):
         import ui as _ui

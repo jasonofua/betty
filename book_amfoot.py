@@ -24,8 +24,18 @@ import fetcher_v3 as F
 BASE = 'https://www.sportybet.com/api/ng/factsCenter/'
 AGREE = 11
 MISMATCH_PRICE = 1.05
+SKIP_MISMATCH = False     # 12 Sep: user does not pick winners, so totals and handicaps on
+                          # mismatch games stay in play; --skip-mismatch turns the skip on.
+                          # The histories are still class-mixed - the print marks these games.
 KEEP = {'219': 'Winner', '225': 'FT O/U', '223': 'Handicap', '68': '1H O/U'}
-norm = lambda s: re.sub(r'[^a-z]', '', (s or '').lower())
+ALIAS = {'fiu': 'floridainternational', 'britishcolumbia': 'bc', 'ucf': 'centralflorida', 'smu': 'southernmethodist',
+         'lsu': 'lsu', 'byu': 'brighamyoung', 'usc': 'southerncalifornia', 'tcu': 'tcu', 'utsa': 'utsa', 'unlv': 'unlv'}
+def norm(s):
+    s = re.sub(r'[^a-z]', '', (s or '').lower())
+    for k, v in ALIAS.items():
+        if s.startswith(k):
+            s = v + s[len(k):]
+    return s
 
 
 def get(url):
@@ -157,7 +167,9 @@ def best_of(cands):
 def main():
     days = int(sys.argv[sys.argv.index('--days') + 1]) if '--days' in sys.argv else 0
     dry = '--dry' in sys.argv
-    global AGREE
+    global AGREE, SKIP_MISMATCH
+    if '--skip-mismatch' in sys.argv:
+        SKIP_MISMATCH = True
     if '--agree' in sys.argv:
         AGREE = int(sys.argv[sys.argv.index('--agree') + 1])
     now = dt.datetime.now(tz=A.WAT); start = now + dt.timedelta(hours=1)
@@ -176,7 +188,8 @@ def main():
             skipped['no flashscore fixture'] += 1; print(f"  {t:%a %H:%M}  {name:52} skip: no flashscore fixture"); continue
         mk = sb_markets(e['eventId'])
         win = mk.get('Winner')
-        if win and min(o[1] for o in win[0]['outs']) <= MISMATCH_PRICE:
+        mismatch = bool(win and min(o[1] for o in win[0]['outs']) <= MISMATCH_PRICE)
+        if mismatch and SKIP_MISMATCH:
             skipped['class mismatch (winner <= 1.05)'] += 1; print(f"  {t:%a %H:%M}  {name:52} skip: class mismatch"); continue
         hg = venue_games(f['id'], f['ts'], f['h'], '- Home'); ag = venue_games(f['id'], f['ts'], f['a'], '- Away')
         if len(hg) < 5 or len(ag) < 5:
@@ -190,7 +203,7 @@ def main():
             skipped['no line at agreement'] += 1
             print(f"  {t:%a %H:%M}  {name:52} no line reaches {AGREE}/14   H {fmt(hg)} | A {fmt(ag)}"); continue
         hits, n, lab, odds, sel = pick
-        print(f"  {t:%a %H:%M}  {name:52} PICK {lab} @{odds:.2f}  {hits}/{n}   H {fmt(hg)} | A {fmt(ag)}")
+        print(f"  {t:%a %H:%M}  {name:52} PICK {lab} @{odds:.2f}  {hits}/{n}{'  [MISMATCH]' if mismatch else ''}   H {fmt(hg)} | A {fmt(ag)}")
         legs.append(dict(ts=ets, match=name, label=lab, odds=odds, hits=hits, n=n, ev=e, sel=sel,
                          stats=[f"{f['h']} HOME {fmt(hg)}", f"{f['a']} AWAY {fmt(ag)}",
                                 f"{lab}: {hits}/{n} of the two venue histories agree"]))

@@ -181,6 +181,41 @@ def winners_job(until, days, dry):
         JOB.update(state='done', result={'error': f'{type(e).__name__}: {e}'})
 
 
+LIVE = {'state': 'idle', 'log': [], 'started': None}
+
+
+def live_job(until, dry, chat=None):
+    """Live draw watcher (live_draw.py) - runs in its own thread, separate from
+    JOB so a build can still run alongside it. Pushes codes to the chat that
+    started it."""
+    import live_draw as LD
+    if LIVE['state'] == 'running':
+        return False
+    LIVE.update(state='running', log=[], started=dt.datetime.now(A.WAT).strftime('%H:%M'))
+    def log(msg):
+        for part in str(msg).splitlines():
+            if part.strip():
+                LIVE['log'].append(part.rstrip())
+        LIVE['log'][:] = LIVE['log'][-400:]
+    def send(text):
+        if chat:
+            try:
+                import telegram_bot as TB
+                TB.send(chat, text)
+            except Exception:
+                pass
+    def worker():
+        try:
+            LD.LOG = log; LD.SEND = send
+            LD.run(until_h=until, dry=dry)
+        except Exception as e:
+            log(f"live watcher crashed: {type(e).__name__}: {e}")
+        finally:
+            LIVE['state'] = 'idle'
+    threading.Thread(target=worker, daemon=True).start()
+    return True
+
+
 def run_job(target, until, days, dry, rollover=False, engine='composite',
             maxodds=False, goalsonly=False, undersonly=False, strict=False):
     JOB.update(state='building', log=[], result=None,
@@ -322,6 +357,8 @@ class Handler(BaseHTTPRequestHandler):
         u = urlparse(self.path)
         if u.path == '/':
             self._send(_page(), 'text/html; charset=utf-8')
+        elif u.path == '/api/live':
+            self._send(json.dumps(LIVE)); return
         elif u.path == '/api/status':
             self._send(json.dumps({'state': JOB['state'], 'log': JOB['log'][-40:],
                                    'result': JOB['result'], 'started': JOB['started'],
@@ -399,6 +436,16 @@ class Handler(BaseHTTPRequestHandler):
             threading.Thread(target=crawl_job, args=(cap, floor, mode),
                              daemon=True).start()
             self._send(json.dumps({'ok': True})); return
+        if path == '/api/live':
+            n = int(self.headers.get('Content-Length', 0))
+            try:
+                p2 = json.loads(self.rfile.read(n) or b'{}')
+                until = int(p2.get('until', 23)); dry = bool(p2.get('dry'))
+                assert 0 <= until <= 23
+            except Exception:
+                self._send(json.dumps({'error': 'bad parameters'}), code=400); return
+            ok = live_job(until, dry, chat=p2.get('chat'))
+            self._send(json.dumps({'ok': ok, 'error': None if ok else 'live watcher already running'})); return
         if path == '/api/winners':
             n = int(self.headers.get('Content-Length', 0))
             try:
