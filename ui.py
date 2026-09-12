@@ -216,13 +216,22 @@ def live_job(until, dry, chat=None):
     def worker():
         try:
             LD.LOG = log; LD.SEND = send
-            LD.run(until_h=until, dry=dry)
+            LD.run(until_h=until or None, dry=dry)
         except Exception as e:
             log(f"live watcher crashed: {type(e).__name__}: {e}")
         finally:
             LIVE['state'] = 'idle'
     threading.Thread(target=worker, daemon=True).start()
     return True
+
+
+def live_stop():
+    try:
+        import live_ht as LD
+        LD.STOP['flag'] = True
+        return LIVE['state'] == 'running'
+    except Exception:
+        return False
 
 
 def run_job(target, until, days, dry, rollover=False, engine='composite',
@@ -449,10 +458,12 @@ class Handler(BaseHTTPRequestHandler):
             n = int(self.headers.get('Content-Length', 0))
             try:
                 p2 = json.loads(self.rfile.read(n) or b'{}')
-                until = int(p2.get('until', 23)); dry = bool(p2.get('dry'))
+                until = int(p2.get('until', 0)); dry = bool(p2.get('dry'))
                 assert 0 <= until <= 23
             except Exception:
                 self._send(json.dumps({'error': 'bad parameters'}), code=400); return
+            if p2.get('stop'):
+                self._send(json.dumps({'ok': live_stop()})); return
             ok = live_job(until, dry, chat=p2.get('chat'))
             self._send(json.dumps({'ok': ok, 'error': None if ok else 'live watcher already running'})); return
         if path == '/api/winners':

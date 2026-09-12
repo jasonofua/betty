@@ -43,7 +43,8 @@ HELP = (
     "/draw [until]          draws only, goals+stats gate, one slip\n"
     "/hdraw [until]         same gate, HALF-TIME draw (market 60)\n"
     "/winners [until]       match winners: market's favourite, venue-backed, one slip\n"
-    "/live [until]          LIVE at half-time: Draw on gate games, 2H Over 0.5 / Under 1.5 from trailing halves\n"
+    "/live                  LIVE: watch every half-time, book Draw / 2H Over 0.5 / 2H Under 1.5, send codes here until /stop\n"
+    "/stop                  stop the live watcher\n"
     "/livelog               what the live watcher has seen\n\n"
     "/grade CODE ...        grade share codes\n"
     "/sweep                 bank yesterday's results\n"
@@ -242,8 +243,13 @@ def _handle(cmd, args, chat, job, lock, run_job, grade_fn, crawl_fn):
 
     elif cmd == '/live':
         import ui as _ui
-        ok = _ui.live_job(num(0, 23), False, chat=chat)
-        send(chat, 'live draw watcher started - codes will land here at half-time' if ok else 'live watcher already running')
+        ok = _ui.live_job(num(0, 0) or None, False, chat=chat)
+        send(chat, 'live watcher started - codes land here at half-time, two or more together on one slip; /stop ends it'
+             if ok else 'live watcher already running (/stop to end it)')
+
+    elif cmd in ('/stop', '/livestop'):
+        import ui as _ui
+        send(chat, 'stopping the live watcher' if _ui.live_stop() else 'live watcher is not running')
 
     elif cmd == '/livelog':
         import ui as _ui

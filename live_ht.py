@@ -84,15 +84,58 @@ def trailing_2h(rich):
     return tot
 
 
-def run(until_h=23, dry=False, poll=POLL):
-    gate = LD.gate_events(until_h)
-    fx = [f for off in (0, 1) for f in F2.get_fixtures(off)]
-    LOG(f"live HT watcher: {len(gate)} draw-gate games; {len(fx)} flashscore fixtures for joining; polling every {poll}s until {until_h}:00")
+BATCH_S = 120        # legs found within this window go on ONE slip (half-times of a kickoff wave land together)
+STOP = {'flag': False}
+
+
+def book_batch(pending, dry):
+    """One code for the batch: a single if one leg, one slip if two or more."""
+    if not pending:
+        return
+    legs = pending[:A.MAX_CODE]
+    if dry:
+        for l in legs:
+            LOG(f"DRY HT {l['sc']} {l['name']}: {l['label']} @{l['p']:.2f}  [{l['why']}]")
+        return
+    bk = A.book([dict(eventId=l['eid'], productId=1, **l['sel']) for l in legs])
+    code = (bk or {}).get('code')
+    combo = 1.0
+    for l in legs:
+        combo *= l['p']
+    head = (f"LIVE {'SLIP' if len(legs) > 1 else legs[0]['kind']}  {len(legs)} leg{'s' if len(legs) > 1 else ''}  ~{combo:.2f}x\n"
+            if len(legs) > 1 else f"LIVE {legs[0]['kind']}\n")
+    body = "\n".join(f"{l['name']}  HT {l['sc']}\n  {l['label']} @{l['p']:.2f}  [{l['why']}]" for l in legs)
+    msg = f"{head}{body}\ncode {code}  {(bk or {}).get('url')}"
+    LOG(msg)
+    if code:
+        A.log_booking(code, bk.get('url'), f"LIVE {'slip' if len(legs) > 1 else legs[0]['kind']} at HT ({len(legs)} legs, {combo:.2f}x)",
+                      [(l['ets'], l['name'], f"{l['label']} (live, HT {l['sc']})", l['p'], [l['why'], f"1H stats {l['st']}", f"trailing 2H totals {l['t2']}"]) for l in legs])
+        if SEND:
+            SEND(msg)
+
+
+def run(until_h=None, dry=False, poll=POLL):
+    STOP['flag'] = False
+    def build_gate():
+        g = LD.gate_events(23, days=1)
+        f_ = [f for off in (0, 1) for f in F2.get_fixtures(off)]
+        return g, f_, time.time()
+    gate, fx, built = build_gate()
+    LOG(f"live HT watcher: {len(gate)} draw-gate games; {len(fx)} flashscore fixtures; polling every {poll}s; "
+        f"{'until ' + str(until_h) + ':00' if until_h else 'until /stop'}; 2+ legs in a {BATCH_S}s window go on one slip")
     if SEND:
-        SEND(f"live HT watcher on. Draw on {len(gate)} gate games; 2H Over 0.5 / Under 1.5 on any game whose trailing second halves say so. Codes land here at half-time.")
+        SEND(f"live watcher on. Draw on {len(gate)} gate games; 2H Over 0.5 / Under 1.5 from the trailing second halves on any game. "
+             f"Codes land here at half-time; two or more together go on one slip. /stop ends it, /livelog shows what it has seen.")
     done, seen = set(), set()
-    end = dt.datetime.now(tz=A.WAT).replace(hour=until_h, minute=59, second=0, microsecond=0)
-    while dt.datetime.now(tz=A.WAT) < end:
+    pending, pending_since = [], None
+    end = (dt.datetime.now(tz=A.WAT).replace(hour=until_h, minute=59, second=0, microsecond=0) if until_h
+           else dt.datetime.now(tz=A.WAT) + dt.timedelta(days=30))
+    while dt.datetime.now(tz=A.WAT) < end and not STOP['flag']:
+        if time.time() - built > 6 * 3600:            # a new day's gate games and fixtures
+            try:
+                gate, fx, built = build_gate(); LOG(f"gate refreshed: {len(gate)} games")
+            except Exception as ex:
+                LOG(f"gate refresh failed: {ex}"); built = time.time()
         try:
             board = LD.live_board()
         except Exception as ex:
@@ -165,22 +208,20 @@ def run(until_h=23, dry=False, poll=POLL):
             if not legs:
                 LOG(f"HT {sc} {name}: 2H halves {t2} - nothing"); continue
             for kind, label, p, sel, why in legs:
-                if dry:
-                    LOG(f"DRY HT {sc} {name}: {label} @{p:.2f}  [{why}]"); continue
-                bk = A.book([dict(eventId=eid, productId=1, **sel)])
-                code = (bk or {}).get('code')
-                msg = f"LIVE {kind}  {name}  HT {sc}\n{label} @{p:.2f}  [{why}]\ncode {code}  {(bk or {}).get('url')}"
-                LOG(msg)
-                if code:
-                    A.log_booking(code, bk.get('url'), f"LIVE {kind} at HT {sc} @{p:.2f}",
-                                  [(ets, name, f"{label} (live, HT {sc})", p, [why, f"1H stats {st}", f"trailing 2H totals {t2}"])])
-                    if SEND:
-                        SEND(msg)
+                pending.append(dict(kind=kind, label=label, p=p, sel=sel, why=why, eid=eid, name=name, sc=sc, ets=ets, st=st, t2=t2))
+                pending_since = pending_since or time.time()
+                LOG(f"queued HT {sc} {name}: {label} @{p:.2f}")
+        if pending and time.time() - pending_since >= BATCH_S:
+            book_batch(pending, dry); pending, pending_since = [], None
         time.sleep(poll)
-    LOG("live HT watcher finished")
+    if pending:
+        book_batch(pending, dry)
+    LOG("live HT watcher stopped" if STOP['flag'] else "live HT watcher finished")
+    if SEND:
+        SEND("live watcher stopped")
 
 
 if __name__ == '__main__':
     a = sys.argv
-    run(until_h=int(a[a.index('--until') + 1]) if '--until' in a else 23, dry='--dry' in a,
+    run(until_h=int(a[a.index('--until') + 1]) if '--until' in a else None, dry='--dry' in a,
         poll=int(a[a.index('--poll') + 1]) if '--poll' in a else POLL)
