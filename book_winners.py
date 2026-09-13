@@ -176,24 +176,35 @@ def build(until_h, days=0, verbose=True):
             row['why'] = f"venue margin {margin:+.2f} below {need:.1f} ({side.lower()} favourite)"
             rows.append(row); continue
         fav_pairs = hp if side == 'Home' else ap
+        opp_pairs = ap if side == 'Home' else hp
         fav_draws = sum(g == c for g, c in fav_pairs)
+        opp_draws = sum(g == c for g, c in opp_pairs)
+        w = wider_sheet(f); row['wide'] = w
+        opp_all = w['a_all'] if side == 'Home' else w['h_all']
         # 12 Sep evening: a favourite that has drawn 5+ of its last 7 at the venue
-        # goes on as a double chance whatever the price. Corpus: 5+ venue draws
-        # -> draws 30.7% (rest 22%), win-or-draw 79.6% (rest 75%). De Treffers
-        # 1W6D0L at home went straight at 1.38 and drew 1:1.
-        if price < STRAIGHT_MAX and fav_draws < 5:
+        # goes on as a double chance whatever the price (corpus: draws 30.7% vs 22%).
+        # 13 Sep: draw-proneness on EITHER side. Corpus, 19,945 qualifying
+        # favourites: fav + opponent venue draws 6+ -> straight win 46.1% (55.5%
+        # at 0-1), opponent 4+ venue draws -> 48.4%; win-or-draw stays 75-76%.
+        # Forward Madison (last three home games 1:1) v Sarasota (3 away draws)
+        # went straight at 1.66 and drew. Al Nassr at Al Khaleej (0W5D5L overall,
+        # unmeasured on the corpus - it has no overall records) drew at 1.29.
+        drawy = (fav_draws >= 5 or opp_draws >= 4 or fav_draws + opp_draws >= 6
+                 or (opp_all and opp_all[1] >= 4))
+        row['drawy'] = drawy
+        if price < STRAIGHT_MAX and not drawy:
             o = outcome(ev, '1', side)
             row.update(pick='win', label=f"1X2 / {side}", o=o)
-        elif price < DC_MAX or fav_draws >= 5:
+        elif price < DC_MAX or drawy:
             want = 'Home or Draw' if side == 'Home' else 'Draw or Away'
             o = outcome(ev, '10', want)
-            row.update(pick='dc', label=f"Double Chance / {want}" + (f"  [{fav_draws} venue draws]" if fav_draws >= 5 else ''), o=o)
+            row.update(pick='dc', label=f"Double Chance / {want}" + (f"  [draw-prone: fav {fav_draws} opp {opp_draws} venue, opp overall {opp_all}]" if drawy else ''), o=o)
         else:
             row['why'] = f"favourite priced {price:.2f} (above {DC_MAX})"; rows.append(row); continue
         if not row.get('o'):
             row['why'] = 'market not offered'; row['pick'] = None
         if row['pick']:
-            w = wider_sheet(f); row['wide'] = w; row['flags'] = warnings_for(row, w)
+            row['flags'] = warnings_for(row, w)
             if row['flags']:
                 row['why'] = 'flagged: ' + '; '.join(row['flags']); row['pick'] = None
         rows.append(row)
