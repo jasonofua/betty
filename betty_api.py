@@ -540,6 +540,36 @@ def record(days=35):
     return dict(tiles=tiles, per=per, settled=settled, heat=heat, since=str(since), losses=losses)
 
 
+def legs_list(days=35, limit=1200):
+    """The Results page: every graded leg of the last N days as a flat list,
+    newest code first, with per-leg stats. Superseded rebooks are skipped so a
+    leg is not counted three times."""
+    today = dt.datetime.now(tz=WAT).date()
+    since = today - dt.timedelta(days=days)
+    rows, codes = [], dict(won=0, lost=0, open=0)
+    for c in parse_bookings():
+        d = _day_of(c['when'])
+        if d < since:
+            break
+        if not c['legs'] or c['superseded_by']:
+            continue
+        g = graded(c['code'])
+        if not (g.get('legs') or []):
+            continue
+        dc = decorate(c)
+        st = [l['state'] for l in dc['legs']]
+        codes['lost' if 'lost' in st else 'won' if all(x in ('won', 'void') for x in st) else 'open'] += 1
+        for l in dc['legs']:
+            sh = l.get('sheet') or {}
+            note = loss_cause(l, c['product']) if l['state'] == 'lost' else ((sh.get('flags') or [''])[0])
+            rows.append(dict(code=c['code'], product=c['product'], sport=c['sport'], date=d.strftime('%-d %b'), iso=str(d),
+                             comp=l.get('comp') or '', match=l['match'], sel=l['sel'], price=l['price'], score=l['score'] or '',
+                             state=l['state'], hint=l.get('hint') or '', note=note))
+    won = sum(r['state'] == 'won' for r in rows); lost = sum(r['state'] == 'lost' for r in rows)
+    return dict(rows=rows[:limit], total=len(rows), since=str(since), legs=dict(won=won, lost=lost, graded=won + lost,
+                rate=round(won / (won + lost) * 100, 1) if won + lost else None), codes=codes)
+
+
 # ---------------------------------------------------------------- any code
 
 def grade_any(code):

@@ -420,7 +420,7 @@ class Handler(BaseHTTPRequestHandler):
             self._send(_site(), 'text/html; charset=utf-8')
         elif u.path == '/ops':
             self._send(_page(), 'text/html; charset=utf-8')
-        elif u.path in ('/api/codes', '/api/record', '/api/rules', '/api/livefeed', '/api/banner', '/api/console', '/api/gradecode'):
+        elif u.path in ('/api/codes', '/api/record', '/api/rules', '/api/livefeed', '/api/banner', '/api/console', '/api/gradecode', '/api/legs'):
             # 13 Sep: the website's data. Everything comes from bookings.md (repo
             # copy + the Railway volume), the share API grader and the watcher.
             import betty_api as BA
@@ -438,6 +438,8 @@ class Handler(BaseHTTPRequestHandler):
                     body = BA.console_state(LIVE, JOB, BUILD)
                 elif u.path == '/api/gradecode':
                     body = BA.grade_any(q.get('code', [''])[0])
+                elif u.path == '/api/legs':
+                    body = BA.legs_list(int(q.get('days', ['35'])[0]))
                 else:
                     body = BA.live_feed(LIVE)
                 body['now'] = dt.datetime.now(A.WAT).strftime('%H:%M:%S')
