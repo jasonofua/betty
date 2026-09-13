@@ -180,6 +180,17 @@ def run(until_h=None, dry=False, poll=POLL):
             except Exception as ex:
                 LOG(f"markets error {name}: {ex}"); continue
             legs = []
+            # 13 Sep: the live first half as a CHECK on what the histories say.
+            # Every loss of 12 Sep with a stat sheet had the warning on it and no win
+            # did: the Over losses were dead first halves (Borac 1 shot, Paris 6),
+            # the Under losses were a dominant side pressing at 0:0 (12 shots, 64-71%
+            # possession). A game with no live stats at all (Suzano U20) is not read.
+            shots = st.get('shots'); poss = st.get('poss')
+            tot_shots = (shots[0] + shots[1]) if shots else None
+            dead = tot_shots is not None and tot_shots < 7                      # Over needs a live game
+            pressing = (tot_shots is not None and tot_shots >= 10
+                        and poss and max(poss) >= 60 and h == a)               # Under dies to a dominant side at level
+            no_stats = tot_shots is None
             # 1) the draw, gate games only
             if eid in gate and h == a:
                 p, oid, sp = price(mk, '1', 'Draw')
@@ -207,13 +218,13 @@ def run(until_h=None, dry=False, poll=POLL):
                 # the price floor moves to 1.25 to stay at or above fair.
                 # 12 Sep 21:45, user's call: back to 14/14 after 13/14 went 3 won 2 lost
                 # in its first evening (Paris FC 0:0, Borac 1:0). 14/14 was 5/5.
-                if o05 == len(t2) and len(t2) >= 14:
+                if o05 == len(t2) and len(t2) >= 14 and not dead and not no_stats:
                     best = same_event(True, 0.5)
                     floor = O05_MIN
                     if best and best[0] >= floor:
                         legs.append(('2H O0.5', best[4], best[0], dict(marketId=best[3], specifier=best[2], outcomeId=best[1]),
                                      f"trailing 2H halves scored {o05}/{len(t2)} ({'83.6' if o05 == len(t2) else '80.2'}%)"))
-                if u15 >= 12:
+                if u15 >= 12 and not pressing and not no_stats:
                     best = same_event(False, 1.5)
                     if best and best[0] >= U15_MIN:
                         legs.append(('2H U1.5', best[4], best[0], dict(marketId=best[3], specifier=best[2], outcomeId=best[1]),
@@ -226,7 +237,8 @@ def run(until_h=None, dry=False, poll=POLL):
             except Exception:
                 pass
             if not legs:
-                LOG(f"HT {sc} {name}: 2H halves {t2} - nothing"); continue
+                why = ('no live stats' if no_stats else 'dead 1H' if dead and o05 == len(t2) else 'pressing at level' if pressing and u15 >= 12 else '')
+                LOG(f"HT {sc} {name}: 2H halves {t2}  1H shots {shots} poss {poss} - nothing{(' (' + why + ')') if why else ''}"); continue
             for kind, label, p, sel, why in legs:
                 pending.append(dict(kind=kind, label=label, p=p, sel=sel, why=why, eid=eid, name=name, sc=sc, ets=ets, st=st, t2=t2))
                 pending_since = pending_since or time.time()
