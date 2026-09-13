@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""American football - totals, first-half totals and handicaps, no winners.
+"""Points sports - totals, first-period totals and handicaps, no winners.
+One engine for American football, basketball, ice hockey and handball (--sport).
 
 Data: Flashscore sport 5 (form feed df_hh_5: each side's last 7 games at its
 venue; df_sur_5: quarter scores per past game -> first-half totals). No team
@@ -22,7 +23,22 @@ import acca as A
 import fetcher_v3 as F
 
 BASE = 'https://www.sportybet.com/api/ng/factsCenter/'
+# 13 Sep: one engine, four sports. Everything below is the same read - each side's
+# last 7 games at its venue, first-period totals from the period-score feed, a
+# line qualifies when the two histories agree - keyed by a sport config.
+SPORTS = {
+    'amfoot':     dict(fs=5,  sb='sr:sport:16', board='1,18,60',     winner='219', ft='225', hcp='223', first='68',
+                       periods=4, first_periods=2, blowout=30, reg_only=False, label='American football'),
+    'basketball': dict(fs=3,  sb='sr:sport:2',  board='219,225,223', winner='219', ft='225', hcp='223', first='68',
+                       periods=4, first_periods=2, blowout=20, reg_only=False, label='Basketball'),
+    'hockey':     dict(fs=4,  sb='sr:sport:4',  board='1,18,16',     winner='1',   ft='18',  hcp='16',  first='446',
+                       periods=3, first_periods=1, blowout=4,  reg_only=True,  label='Ice hockey'),
+    'handball':   dict(fs=7,  sb='sr:sport:6',  board='1,18,16',     winner='1',   ft='18',  hcp='16',  first='68',
+                       periods=2, first_periods=1, blowout=10, reg_only=False, label='Handball'),
+}
+SPORT = SPORTS['amfoot']
 AGREE = 11
+MIN_PRICE = 1.40          # user wants the 1.6-2.2 band on these sports; 1.14 hockey Overs are not it. --min-price
 MISMATCH_PRICE = 1.05
 SKIP_MISMATCH = False     # user, 12 Sep: never skip - find the better option instead
 SEASON_START = dt.datetime(2026, 8, 20).timestamp()
@@ -38,7 +54,9 @@ SEASON_START = dt.datetime(2026, 8, 20).timestamp()
 #   is a bet on tempo, which the coaching carries over. Prefer the total,
 #   and hold a handicap to 12/14 instead of 11/14.
 BLOWOUT = 30
-KEEP = {'219': 'Winner', '225': 'FT O/U', '223': 'Handicap', '68': '1H O/U'}
+def keep_map():
+    return {SPORT['winner']: 'Winner', SPORT['ft']: 'FT O/U', SPORT['hcp']: 'Handicap', SPORT['first']: '1H O/U'}
+KEEP = keep_map()
 ALIAS = {'fiu': 'floridainternational', 'britishcolumbia': 'bc', 'ucf': 'centralflorida', 'smu': 'southernmethodist',
          'lsu': 'lsu', 'byu': 'brighamyoung', 'usc': 'southerncalifornia', 'tcu': 'tcu', 'utsa': 'utsa', 'unlv': 'unlv'}
 def norm(s):
@@ -58,7 +76,7 @@ def sb_board():
     evs = []
     for pg in range(1, 6):
         try:
-            d = get(BASE + f'pcUpcomingEvents?sportId=sr:sport:16&marketId=1,18,60&pageSize=100&pageNum={pg}&option=1')
+            d = get(BASE + f"pcUpcomingEvents?sportId={SPORT['sb']}&marketId={SPORT['board']}&pageSize=100&pageNum={pg}&option=1")
         except Exception:
             break
         tours = (d.get('data') or {}).get('tournaments') or []
@@ -85,7 +103,7 @@ def fs_board(days):
     games = []
     for off in range(0, days + 1):
         cur = None
-        for s in F.sections(F.fetch(f'f_5_{off}_1_en-ng_1', ttl=900)):
+        for s in F.sections(F.fetch(f"f_{SPORT['fs']}_{off}_1_en-ng_1", ttl=900)):
             if 'ZA' in s:
                 cur = s['ZA']
             elif 'AA' in s and s.get('AG') is None:
@@ -94,7 +112,7 @@ def fs_board(days):
 
 
 def venue_games(mid, kickoff, team, suffix):
-    hh = F.fetch(f'df_hh_5_{mid}', ttl=3600); out = []
+    hh = F.fetch(f"df_hh_{SPORT['fs']}_{mid}", ttl=3600); out = []
     for tab in hh.split('~KA÷')[1:]:
         if not tab.split('¬')[0].endswith(suffix):
             continue
@@ -113,13 +131,37 @@ def venue_games(mid, kickoff, team, suffix):
     return out[:7]
 
 
-def first_half(gid, home_is_team):
+def periods(gid):
+    """[(home, away), ...] per period from the period-score feed, regulation only."""
     try:
-        d = dict(re.findall(r'B([A-H])÷(\d+)', F.fetch(f'df_sur_5_{gid}', ttl=999 * 3600)))
-        h1, a1 = int(d['A']) + int(d['C']), int(d['B']) + int(d['D'])
+        d = dict(re.findall(r'B([A-Z])÷(\d+)', F.fetch(f"df_sur_{SPORT['fs']}_{gid}", ttl=999 * 3600)))
     except Exception:
         return None
+    out = []
+    for i in range(SPORT['periods']):
+        hk, ak = chr(ord('A') + 2 * i), chr(ord('B') + 2 * i)
+        if hk not in d or ak not in d:
+            break
+        out.append((int(d[hk]), int(d[ak])))
+    return out if len(out) >= SPORT['first_periods'] else None
+
+
+def first_half(gid, home_is_team):
+    ps = periods(gid)
+    if not ps:
+        return None
+    h1 = sum(p[0] for p in ps[:SPORT['first_periods']]); a1 = sum(p[1] for p in ps[:SPORT['first_periods']])
     return (h1, a1) if home_is_team else (a1, h1)
+
+
+def regulation(gid, home_is_team):
+    """Hockey: the book's plain totals and Asian handicaps are regulation time, and
+    the form feed's final score includes overtime and shootout goals."""
+    ps = periods(gid)
+    if not ps or len(ps) < SPORT['periods']:
+        return None
+    h, a = sum(p[0] for p in ps), sum(p[1] for p in ps)
+    return (h, a) if home_is_team else (a, h)
 
 
 def lines(mk, key):
@@ -155,7 +197,7 @@ def score_game(hg, ag, mk, hcp_agree=None):
         n = len(hm) + len(am)
         if n < 10:
             continue
-        need = -v
+        need = -v           # same convention on every sport: spec is the home line, 'Home (+1.0)' for hcp=1
         hcov = sum(x > need for x in hm) + sum(-x > need for x in am); acov = n - hcov
         for want, hits, lab in (('Home', hcov, f"Home {v:+g}"), ('Away', acov, f"Away {-v:+g}")):
             if hits >= hcp_agree:
@@ -168,6 +210,7 @@ def score_game(hg, ag, mk, hcp_agree=None):
 def best_of(cands, prefer_totals=False):
     """One leg per game: highest agreement, then the line nearest the middle of
     its ladder (the middle line is where the book's own number sits)."""
+    cands = [c for c in cands if c[3] >= MIN_PRICE]
     if not cands:
         return None
     if prefer_totals and any('O/U' in c[2] for c in cands):
@@ -179,6 +222,9 @@ def best_of(cands, prefer_totals=False):
 
 
 def main():
+    global SPORT, KEEP
+    if '--sport' in sys.argv:
+        SPORT = SPORTS[sys.argv[sys.argv.index('--sport') + 1]]; KEEP = keep_map()
     days = int(sys.argv[sys.argv.index('--days') + 1]) if '--days' in sys.argv else 0
     dry = '--dry' in sys.argv
     global AGREE, SKIP_MISMATCH
@@ -186,10 +232,14 @@ def main():
         SKIP_MISMATCH = True
     if '--agree' in sys.argv:
         AGREE = int(sys.argv[sys.argv.index('--agree') + 1])
+    global MIN_PRICE
+    if '--min-price' in sys.argv:
+        MIN_PRICE = float(sys.argv[sys.argv.index('--min-price') + 1])
     now = dt.datetime.now(tz=A.WAT); start = now + dt.timedelta(hours=1)
-    sb = [e for e in sb_board() if dt.datetime.fromtimestamp(int(e['estimateStartTime']) / 1000, tz=A.WAT) > start]
+    horizon = (now + dt.timedelta(days=days)).replace(hour=23, minute=59, second=59)
+    sb = [e for e in sb_board() if start < dt.datetime.fromtimestamp(int(e['estimateStartTime']) / 1000, tz=A.WAT) <= horizon]
     fs = fs_board(days)
-    print(f"sportybet american football {len(sb)} events  |  flashscore {len(fs)} fixtures over {days + 1} day(s)", flush=True)
+    print(f"sportybet {SPORT['label'].lower()} {len(sb)} events  |  flashscore {len(fs)} fixtures over {days + 1} day(s)", flush=True)
     legs, skipped = [], collections.Counter()
     for e in sorted(sb, key=lambda e: e['estimateStartTime']):
         ets = int(e['estimateStartTime']) // 1000
@@ -210,6 +260,10 @@ def main():
             skipped['no venue form'] += 1; print(f"  {t:%a %H:%M}  {name:52} skip: venue form {len(hg)}/{len(ag)}"); continue
         for g in hg + ag:
             g['fh'] = first_half(g['id'], g['home']) if g['id'] else None
+            if SPORT['reg_only'] and g['id']:
+                r = regulation(g['id'], g['home'])
+                if r:
+                    g['pf'], g['pa'] = r
         note = ''
         if mismatch:
             # the games that look like this one: favourite's blowouts, underdog's heaviest defeats
@@ -258,7 +312,7 @@ def main():
     bk = A.book(sels)
     print('\nbooked', bk)
     if bk and bk.get('code'):
-        A.log_booking(bk['code'], bk.get('url'), f"american football slip {combo:,.1f}x ({len(legs)} legs) - totals/1H/handicap, venue histories agree >= {AGREE}/14",
+        A.log_booking(bk['code'], bk.get('url'), f"{SPORT['label'].lower()} slip {combo:,.1f}x ({len(legs)} legs) - totals/1H/handicap, venue histories agree >= {AGREE}/14",
                       [(l['ts'], l['match'], l['label'], l['odds'], l['stats']) for l in legs])
         print(f"code {bk['code']}  {bk.get('url')}   ({bk.get('booked')}/{bk.get('req')} legs, verified {bk.get('verified')})")
 
