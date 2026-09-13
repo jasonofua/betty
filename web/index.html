@@ -159,6 +159,21 @@ h1.page em{font-style:normal;color:var(--ac-tx)}
 .older{margin:4px 0 16px;text-align:center}
 .older button{font-size:12.5px;color:var(--tx2);border:1px solid var(--line2);border-radius:999px;padding:7px 13px}
 
+/* pick your odds */
+.pick{margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.pick .k{font-size:11px;letter-spacing:.09em;text-transform:uppercase;font-weight:800;color:var(--tx3);margin-bottom:8px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pick .k i{font-style:normal;font-weight:500;letter-spacing:0;text-transform:none;color:var(--tx3);font-size:12px}
+.pick .chips{margin-bottom:0}
+.pick .chips button{font-family:var(--mono);font-weight:700}
+.pick .chips button.have{border-color:var(--ac);color:var(--ac-tx);background:var(--ac-soft)}
+.pick .chips button.busy{opacity:.6}
+.nest{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:10px;padding:10px 12px;border-radius:14px;background:var(--s2);border:1px solid var(--line)}
+.nest .t{font-family:var(--mono);font-weight:700;font-size:13px;color:var(--ac-tx);min-width:44px}
+.nest .cb{font-family:var(--mono);font-weight:700;font-size:17px;letter-spacing:.18em;padding:8px 12px;border-radius:10px;background:var(--code-bg);color:var(--code-tx);border:1px solid var(--line2)}
+.nest .m{font-size:12px;color:var(--tx2);flex:1;min-width:120px}
+.nest .copy{min-height:40px;padding:9px 14px;font-size:13px}
+.pick .msg{margin-top:8px;font-size:12.5px;color:var(--lost)}
+
 /* grade box */
 .gradebox{background:var(--s1);border:1px solid var(--line);border-radius:16px;padding:12px 14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:18px}
 .gradebox .t{font-weight:700;font-size:14px}
@@ -409,7 +424,7 @@ nav.bottom span{font-size:10.5px;font-weight:700}
     theme: 'dark', stake: '1000', recFilter: 'All', recWhen: 'all', recRes: 'all', productFilter: 'All', prefs: null, tg: true, showOlder: false, recShow: 60,
     codes: {}, codesAt: {}, banner: null, live: null, liveAt: 0, record: null, legsData: null, rules: null, console: null, consoleAt: 0,
     pane: 'Run', runProduct: 'Winners', runVals: { until: '23', days: '0', top: '0', target: '50', sport: 'amfoot', min_price: '1.40', agree: '11' },
-    runFlags: { dry: false, strict: false, undersonly: false, goalsonly: false, rollover: false }, runMsg: '', graded: null, gradeBusy: false,
+    runFlags: { dry: false, strict: false, undersonly: false, goalsonly: false, rollover: false }, runMsg: '', graded: null, gradeBusy: false, nestBusy: {}, nestMsg: {},
     err: null, tick: 0, key: ''
   };
   try {
@@ -558,8 +573,39 @@ nav.bottom span{font-size:10.5px;font-weight:700}
       (c.legs.length > 6 ? '<button class="showall" data-expand="' + esc(c.code) + '">' + (expanded ? 'Show fewer' : 'Show all ' + c.legs.length + ' legs') + '</button>' : '') + '</div>' +
       '<div class="coderow"><span class="codebar">' + esc(c.code) + '</span>' + copyBtn(c.code, false) + '</div>' +
       '<div class="links"><a href="' + esc(sporty(c.code)) + '" target="_blank" rel="noopener">Open on SportyBet &rarr;</a><a href="#slip/' + esc(c.code) + '">The numbers behind every leg</a>' +
-      (opts.countdown != null ? '<span class="muted">' + opts.countdown + '</span>' : (c.window ? '<span class="muted">' + esc(c.window) + '</span>' : '')) + '</div></div>';
+      (opts.countdown != null ? '<span class="muted">' + opts.countdown + '</span>' : (c.window ? '<span class="muted">' + esc(c.window) + '</span>' : '')) + '</div>' +
+      pickRow(c) + '</div>';
     return h;
+  }
+  function pickRow(c) {
+    var targets = c.targets || [];
+    if (!targets.length && !(c.nested || []).length) return '';
+    var have = {}; (c.nested || []).forEach(function (n) { have[n.target] = n; });
+    var h = '<div class="pick"><div class="k">Pick your odds <i>the shortest prices of this slip, still to kick off, as their own code</i></div>' +
+      '<div class="chips">' + targets.map(function (t) {
+        var n = have[t], busy = S.nestBusy[c.code + ':' + t];
+        return '<button data-nest="' + esc(c.code) + '" data-target="' + t + '" class="' + (n ? 'have' : '') + (busy ? ' busy' : '') + '"' + (busy ? ' disabled' : '') + '>' + (busy ? '\u2026' : t + 'x') + '</button>';
+      }).join('') + '</div>';
+    if (S.nestMsg[c.code]) h += '<div class="msg">' + esc(S.nestMsg[c.code]) + '</div>';
+    (c.nested || []).forEach(function (n) {
+      h += '<div class="nest"><span class="t">' + n.target + 'x</span><span class="cb">' + esc(n.code) + '</span><span class="m">' + n.n + ' leg' + (n.n === 1 ? '' : 's') + ' \u00b7 ' + fmtOdds(n.odds) + 'x \u00b7 first kickoff ' + esc((n.legs && n.legs[0] && n.legs[0].ko) || '') + '</span>' +
+        '<button class="copy' + (S.copied === n.code ? ' on' : '') + '" data-copy="' + esc(n.code) + '">' + (S.copied === n.code ? '\u2713 Copied' : 'Copy') + '</button><a class="btn line" style="min-height:40px;padding:8px 12px;font-size:13px" href="' + esc(sporty(n.code)) + '" target="_blank" rel="noopener">Open</a></div>';
+    });
+    return h + '</div>';
+  }
+  function nest(code, target) {
+    var k = code + ':' + target;
+    if (S.nestBusy[k]) return;
+    S.nestBusy[k] = true; S.nestMsg[code] = ''; render();
+    post('/api/nest', { code: code, target: target }).then(function (j) {
+      delete S.nestBusy[k];
+      if (j.error) { S.nestMsg[code] = j.error; render(); return; }
+      var c = findCode(code);
+      if (c) { c.nested = (c.nested || []).filter(function (n) { return n.target !== j.target; }).concat([j]).sort(function (a, b) { return a.target - b.target; }); }
+      S.copied = j.code; try { navigator.clipboard.writeText(j.code); } catch (e) {}
+      clearTimeout(doCopy.t); doCopy.t = setTimeout(function () { S.copied = null; render(); }, 1800);
+      render();
+    }).catch(function (e) { delete S.nestBusy[k]; S.nestMsg[code] = 'Failed: ' + e.message; render(); });
   }
   function gradeBox(small) {
     return '<form class="gradebox' + (small ? ' small' : '') + '" id="gradeform"><span><span class="t">Have a code? Check it.</span><br><span class="d">Any SportyBet booking code, graded leg by leg.</span></span>' +
@@ -911,9 +957,10 @@ nav.bottom span{font-size:10.5px;font-weight:700}
   // ---------- events ----------
   document.addEventListener('click', function (e) {
     if (!e.target.closest('#moreWrap')) closeMenu();
-    var t = e.target.closest('[data-copy],[data-open],[data-go],[data-day],[data-leg],[data-filter],[data-when],[data-res],[data-more],[data-pref],[data-tg],[data-pf],[data-older],[data-expand],[data-pane],[data-runp],[data-flag],[data-run],[data-yest],[data-watch]');
+    var t = e.target.closest('[data-copy],[data-open],[data-go],[data-day],[data-leg],[data-filter],[data-when],[data-res],[data-more],[data-pref],[data-tg],[data-pf],[data-older],[data-expand],[data-pane],[data-runp],[data-flag],[data-run],[data-yest],[data-watch],[data-nest]');
     if (!t) return;
     if (t.hasAttribute('data-copy')) { e.stopPropagation(); doCopy(t.getAttribute('data-copy')); return; }
+    if (t.hasAttribute('data-nest')) { nest(t.getAttribute('data-nest'), +t.getAttribute('data-target')); return; }
     if (t.hasAttribute('data-open')) { var code = t.getAttribute('data-open'); if (findCode(code)) openSlip(code); else gradeCode(code); return; }
     if (t.hasAttribute('data-go')) { go(t.getAttribute('data-go')); return; }
     if (t.hasAttribute('data-day')) { S.day = t.getAttribute('data-day'); render(); loadCodes(); return; }

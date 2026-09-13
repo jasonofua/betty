@@ -98,9 +98,11 @@ def parse_bookings():
                     cur['stats'].append(line.strip())
             lab = m.group(2)
             rb = re.match(r'^.*?\b([A-Z0-9]{6}) with\b', lab)         # a hand rebook names the code it replaces
+            nest = re.search(r'nested ([\d.]+)x from ([A-Z0-9]{6})', lab)   # pick-your-odds subset of another code
             seen[code] = dict(code=code, when=m.group(1), label=lab, product=product_of(lab), sport=sport_of(lab),
                               url=url or f'http://www.sportybet.com/ng/?shareCode={code}', legs=legs,
-                              replaces=rb.group(1) if rb and rb.group(1) != code else None, superseded_by=None)
+                              replaces=rb.group(1) if rb and rb.group(1) != code else None, superseded_by=None,
+                              nested_from=nest.group(2) if nest else None)
     for c in seen.values():
         if c['replaces'] and c['replaces'] in seen:
             seen[c['replaces']]['superseded_by'] = c['code']
@@ -461,7 +463,14 @@ def codes_for(day='today'):
             target = dt.date.fromisoformat(day)
         except ValueError:
             target = today
-    out = [decorate(c) for c in parse_bookings() if _day_of(c['when']) == target]
+    out = []
+    for c in parse_bookings():
+        if _day_of(c['when']) != target or c['nested_from']:
+            continue
+        d = decorate(c)
+        d['nested'] = nested_for(c['code'])
+        d['targets'] = [t for t in NEST_TARGETS if d['odds'] and t < d['odds'] * 0.9] if c['product'] != 'Live' else []
+        out.append(d)
     return dict(day=str(target), codes=out)
 
 
@@ -474,6 +483,8 @@ def banner():
         d = _day_of(c['when'])
         if d < today - dt.timedelta(days=1):
             break
+        if c['nested_from'] or c['superseded_by']:
+            continue
         legs = graded(c['code']).get('legs') or [] if c['legs'] else []
         if legs and any(l['state'] == 'lost' for l in legs):
             continue
@@ -500,7 +511,7 @@ def record(days=35):
         d = _day_of(c['when'])
         if d < since:
             break
-        if not c['legs']:
+        if not c['legs'] or c['nested_from']:
             continue
         g = graded(c['code'])
         gl = g.get('legs') or []
@@ -551,7 +562,7 @@ def legs_list(days=35, limit=1200):
         d = _day_of(c['when'])
         if d < since:
             break
-        if not c['legs'] or c['superseded_by']:
+        if not c['legs'] or c['superseded_by'] or c['nested_from']:
             continue
         g = graded(c['code'])
         if not (g.get('legs') or []):
@@ -568,6 +579,91 @@ def legs_list(days=35, limit=1200):
     won = sum(r['state'] == 'won' for r in rows); lost = sum(r['state'] == 'lost' for r in rows)
     return dict(rows=rows[:limit], total=len(rows), since=str(since), legs=dict(won=won, lost=lost, graded=won + lost,
                 rate=round(won / (won + lost) * 100, 1) if won + lost else None), codes=codes)
+
+
+# ---------------------------------------------------------------- pick your odds
+
+NEST_TARGETS = [3, 5, 10, 25, 50, 100, 200]
+_NEST = {'loaded': False, 'map': {}}
+
+
+def _nest_path():
+    vol = os.environ.get('BOOKINGS_PATH')
+    return os.path.join(os.path.dirname(vol) if vol else ROOT, 'nested.json')
+
+
+def _nest_load():
+    if not _NEST['loaded']:
+        try:
+            _NEST['map'] = json.load(open(_nest_path()))
+        except Exception:
+            _NEST['map'] = {}
+        _NEST['loaded'] = True
+    return _NEST['map']
+
+
+def _nest_save():
+    try:
+        json.dump(_NEST['map'], open(_nest_path(), 'w'))
+    except OSError:
+        pass
+
+
+def nested_for(code):
+    """[{target, code, odds, n}] already booked from this code, freshest first."""
+    m = _nest_load()
+    out = [v for k, v in m.items() if k.startswith(code + ':')]
+    return sorted(out, key=lambda v: v['target'])
+
+
+def nest_code(code, target):
+    """Pick your odds: a slip of the MOST LIKELY legs of an existing code (shortest
+    prices first, games not yet kicked off) up to the target multiplier, booked as
+    its own share code. One booking per (code, target); repeats return the cached
+    code while its first game has not started."""
+    code = (code or '').strip().upper()
+    try:
+        target = float(target)
+    except (TypeError, ValueError):
+        return dict(error='target must be a number')
+    if target < 1.5 or target > 5000:
+        return dict(error='target must be between 1.5 and 5000')
+    key = f"{code}:{target:g}"
+    cache = _nest_load()
+    hit = cache.get(key)
+    now = time.time()
+    if hit and hit.get('first_ko', 0) > now + 60:
+        return dict(hit, cached=True)
+    src = next((c for c in parse_bookings() if c['code'] == code), None)
+    g = graded(code, force=True)
+    legs = [l for l in (g.get('legs') or []) if l['state'] == 'pending' and l.get('ko', 0) > now + 300
+            and l.get('ids', {}).get('active', 1) != 0]
+    if not legs:
+        return dict(error='no leg of this code is still to kick off')
+    legs.sort(key=lambda l: l['price'])
+    pick, combo = [], 1.0
+    for l in legs:
+        pick.append(l); combo *= l['price']
+        if combo >= target:
+            break
+    if combo < target:
+        return dict(error=f"the legs still to play only reach {combo:.2f}x together; pick a lower target", max=round(combo, 2))
+    if src and src['product'] == 'Live':
+        return dict(error='live codes are single shots at the whistle; nothing to pick from')
+    bk = A.book([dict(eventId=l['ids']['eventId'], productId=3, marketId=l['ids']['marketId'],
+                      specifier=l['ids']['specifier'], outcomeId=l['ids']['outcomeId']) for l in pick])
+    if not bk or not bk.get('code'):
+        return dict(error='SportyBet did not return a code' + (f": {bk.get('msg')}" if bk and bk.get('msg') else ''))
+    prod = (src['product'] if src else 'code').lower()
+    words = {'winners': 'winners', 'draws': 'draw', 'half-time draw': 'HT draw', 'points sports': (src or {}).get('sport') or 'points', 'max odds': 'max odds'}.get(prod, prod)
+    A.log_booking(bk['code'], bk.get('url'), f"{words} nested {target:g}x from {code} ({len(pick)} legs, {combo:.2f}x) - pick your odds",
+                  [(l['ko'], l['match'], l['sel'], l['price'], [f"from {code}: the {len(pick)} shortest prices still to play"]) for l in pick])
+    res = dict(target=target, code=bk['code'], url=bk.get('url'), odds=round(combo, 2), n=len(pick), source=code,
+               first_ko=min(l['ko'] for l in pick), first=dt.datetime.fromtimestamp(min(l['ko'] for l in pick), tz=WAT).strftime('%a %H:%M'),
+               booked=dt.datetime.now(tz=WAT).strftime('%H:%M'),
+               legs=[dict(match=l['match'], sel=l['sel'], price=l['price'], ko=dt.datetime.fromtimestamp(l['ko'], tz=WAT).strftime('%a %H:%M')) for l in pick])
+    cache[key] = res; _nest_save()
+    return res
 
 
 # ---------------------------------------------------------------- any code

@@ -453,7 +453,9 @@ def grade_struct(code):
         row = dict(home=o.get('homeTeamName', ''), away=o.get('awayTeamName', ''),
                    match=f"{o.get('homeTeamName', '')} v {o.get('awayTeamName', '')}",
                    sel=shown, price=float(oc.get('odds') or 0), comp=comp,
-                   ko=int(o.get('estimateStartTime') or 0) // 1000, ms=ms, score=(ss or '').replace(':', '-'))
+                   ko=int(o.get('estimateStartTime') or 0) // 1000, ms=ms, score=(ss or '').replace(':', '-'),
+                   ids=dict(eventId=o.get('eventId'), marketId=str(m.get('id')), specifier=m.get('specifier') or '',
+                            outcomeId=str(oc.get('id')), active=oc.get('isActive', 1), mstatus=m.get('status')))
         if o.get('status') == 5 or ms == 'Cancelled':
             rows.append(dict(row, state='void', hint='void')); continue
         gs = o.get('gameScore') or []                       # periods: ['1H','2H'] (+ 'ET','PEN' if played)

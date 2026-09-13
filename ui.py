@@ -529,6 +529,20 @@ class Handler(BaseHTTPRequestHandler):
             if not self._authed(p0):
                 self._send(json.dumps({'error': 'operator key required'}), code=401); return
             self._body = p0
+        if path == '/api/nest':
+            # pick your odds: a subset of an existing code at a target multiplier.
+            # Public, like the codes themselves; one booking per (code, target).
+            import betty_api as BA
+            n = int(self.headers.get('Content-Length', 0))
+            try:
+                p3 = json.loads(self.rfile.read(n) or b'{}')
+            except Exception:
+                self._send(json.dumps({'error': 'bad json'}), code=400); return
+            try:
+                self._send(json.dumps(BA.nest_code(p3.get('code'), p3.get('target')), default=str))
+            except Exception as e:
+                self._send(json.dumps({'error': f"{type(e).__name__}: {e}"}), code=500)
+            return
         if path == '/api/yesterday':
             import betty_api as BA
             self._send(json.dumps({'ok': BA.run_yesterday(), 'state': BA.YEST['state']})); return
