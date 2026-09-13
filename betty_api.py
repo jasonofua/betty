@@ -19,7 +19,9 @@ _lock = threading.Lock()
 _grade_cache = {}          # code -> (ts, result)
 _book_cache = {'sig': None, 'val': []}
 
-PRODUCTS = ['Live', 'Winners', 'Draws', 'American Football', 'Basketball', 'Ice Hockey', 'Handball', 'Max']
+PRODUCTS = ['Live', 'Winners', 'Draws', 'Half-time draw', 'Points sports', 'Max odds']
+SPORT_LABEL = {'american football': 'American football', 'nfl': 'American football', 'ncaa': 'American football',
+               'basketball': 'Basketball', 'ice hockey': 'Ice hockey', 'hockey': 'Ice hockey', 'handball': 'Handball'}
 
 
 # ---------------------------------------------------------------- bookings
@@ -32,23 +34,28 @@ def bookings_paths():
     return [p for p in out if os.path.exists(p)]
 
 
+def sport_of(label):
+    l = label.lower()
+    for k, v in SPORT_LABEL.items():
+        if k in l:
+            return v
+    return None
+
+
 def product_of(label):
+    """The design's six products: Winners, Draws, Half-time draw, Live, Points sports, Max odds."""
     l = label.lower()
     if l.startswith('live '):
         return 'Live'
-    if 'american football' in l or 'nfl' in l or 'ncaa' in l:
-        return 'American Football'
-    if 'basketball' in l:
-        return 'Basketball'
-    if 'hockey' in l:
-        return 'Ice Hockey'
-    if 'handball' in l:
-        return 'Handball'
+    if sport_of(label):
+        return 'Points sports'
     if 'winner' in l:                 # before 'draw': "3+ venue draws -> double chance" is a winners slip
         return 'Winners'
+    if 'ht draw' in l or 'half-time draw' in l or 'half time draw' in l:
+        return 'Half-time draw'
     if 'draw' in l:
         return 'Draws'
-    return 'Max'
+    return 'Max odds'
 
 
 _HEAD = re.compile(r'^## (\d{4}-\d\d-\d\d \d\d:\d\d) WAT\s+\|\s+(.+?)\s+\|\s+code (\w{6})\s*$', re.M)
@@ -89,8 +96,14 @@ def parse_bookings():
                     legs.append(cur); continue
                 if cur is not None and line.startswith('    ') and line.strip():
                     cur['stats'].append(line.strip())
-            seen[code] = dict(code=code, when=m.group(1), label=m.group(2), product=product_of(m.group(2)),
-                              url=url or f'http://www.sportybet.com/ng/?shareCode={code}', legs=legs)
+            lab = m.group(2)
+            rb = re.match(r'^.*?\b([A-Z0-9]{6}) with\b', lab)         # a hand rebook names the code it replaces
+            seen[code] = dict(code=code, when=m.group(1), label=lab, product=product_of(lab), sport=sport_of(lab),
+                              url=url or f'http://www.sportybet.com/ng/?shareCode={code}', legs=legs,
+                              replaces=rb.group(1) if rb and rb.group(1) != code else None, superseded_by=None)
+    for c in seen.values():
+        if c['replaces'] and c['replaces'] in seen:
+            seen[c['replaces']]['superseded_by'] = c['code']
     val = sorted(seen.values(), key=lambda c: c['when'], reverse=True)
     _book_cache.update(sig=sig, val=val)
     return val
@@ -310,6 +323,76 @@ def sheet_for(leg, product):
     return sh
 
 
+# ---------------------------------------------------------------- losses
+
+def _score(leg):
+    m = re.match(r'^(\d+)-(\d+)', leg.get('score') or '')
+    return (int(m.group(1)), int(m.group(2))) if m else (None, None)
+
+
+def loss_cause(leg, product):
+    """What the sheet said against what happened, for a lost leg. Facts from
+    the logged stat lines and the final score - no theory."""
+    sh = leg.get('sheet') or {}
+    sel = leg['sel']; h, a = _score(leg)
+    if h is None:
+        return 'Settled as lost by SportyBet; no final score on the share API.'
+    home, away = (leg['match'].split(' v ') + [''])[:2]
+    bits = []
+    if product == 'Winners':
+        fav_home = 'Home' in sel and 'Away' not in sel
+        fav, opp = (home, away) if fav_home else (away, home)
+        venue = sh.get('venue') or []
+        vf = next((v for v in venue if v['side'] == fav), None); vo = next((v for v in venue if v['side'] != fav), None)
+        if h == a:
+            bits.append(f"Finished {h}-{a}: the favourite ({fav}) was held and the straight win died to the draw; the double chance would have landed")
+        else:
+            fav_goals, opp_goals = (h, a) if fav_home else (a, h)
+            bits.append(f"Finished {h}-{a}: the favourite ({fav}) was beaten {opp_goals}-{fav_goals} {'at home' if fav_home else 'away'}")
+        if vf: bits.append(f"{fav} at its venue: {vf['rec']}, goal difference {vf['margin']}")
+        if vo:
+            d = sum(p[1] == 'D' for p in vo['pills']); w = sum(p[1] == 'W' for p in vo['pills'])
+            bits.append(f"{opp} at its venue: {vo['rec']}" + (f" - {d} draws in {len(vo['pills'])}" if d >= 3 else '') + (f" - {w} wins in {len(vo['pills'])}" if w >= 3 else ''))
+        shots = sh.get('shots') or []
+        if len(shots) == 4:
+            ff, fa = (shots[0][1], shots[1][1]) if fav_home else (shots[2][1], shots[3][1])
+            of_, oa = (shots[2][1], shots[3][1]) if fav_home else (shots[0][1], shots[1][1])
+            if ff < of_:
+                bits.append(f"shots on target per game: {fav} {ff} v {opp} {of_} - the favourite was the lower-shot side")
+        ov = sh.get('overall') or []
+        for o in ov:
+            if o['side'] == fav and o.get('rec'):
+                bits.append(f"{fav} last 10 overall {o['rec']}")
+        h2h = sh.get('h2h') or []
+        if h2h:
+            hv = [x[1] for x in h2h]
+            fav_view = hv if fav_home else ['W' if r == 'L' else 'L' if r == 'W' else r for r in hv]
+            if fav_view.count('L') >= fav_view.count('W'):
+                bits.append(f"head to head from the favourite's side: {fav_view.count('W')}W {fav_view.count('D')}D {fav_view.count('L')}L")
+    elif product == 'Live':
+        ht = leg.get('ht')
+        if ht:
+            hh, ha = (int(x) for x in ht.split('-'))
+            bits.append(f"Half time {ht}, full time {h}-{a}: the second half produced {(h - hh) + (a - ha)} goal{'s' if (h - hh) + (a - ha) != 1 else ''}")
+        else:
+            bits.append(f"Full time {h}-{a}")
+        if sh.get('flags'):
+            bits.append('rule fired on: ' + sh['flags'][0])
+        for x in sh.get('half') or []:
+            if x['k'] in ('Shots', 'Possession'):
+                bits.append(f"first-half {x['k'].lower()} {x['v']}")
+    elif product in ('Draws', 'Half-time draw'):
+        bits.append(f"Finished {h}-{a}" + (f" (half time {leg['ht']})" if leg.get('ht') else ''))
+        bits += [f for f in (sh.get('flags') or [])[:2]]
+    elif product == 'Points sports':
+        tot, mrg = h + a, h - a
+        bits.append(f"Finished {h}-{a}: total {tot}, home margin {mrg:+d}; the line was {sh.get('afLine') or sel}" + (f", {sh['afAgree']}" if sh.get('afAgree') else ''))
+    else:
+        bits.append(f"Finished {h}-{a}" + (f" (half time {leg['ht']})" if leg.get('ht') else ''))
+        bits += [f for f in (sh.get('flags') or [])[:1]]
+    return '. '.join(bits) + '.'
+
+
 # ---------------------------------------------------------------- shaping
 
 def _day_of(when):
@@ -412,7 +495,7 @@ def record(days=35):
     today = dt.datetime.now(tz=WAT).date()
     since = today - dt.timedelta(days=days)
     per = collections.defaultdict(lambda: dict(won=0, lost=0, open=0, legs_won=0, legs_lost=0, first=None))
-    settled, heat = [], collections.defaultdict(lambda: dict(won=0, lost=0))
+    settled, heat, losses = [], collections.defaultdict(lambda: dict(won=0, lost=0)), []
     for c in parse_bookings():
         d = _day_of(c['when'])
         if d < since:
@@ -431,6 +514,12 @@ def record(days=35):
         res = 'lost' if any(s == 'lost' for s in st) else 'won' if all(s in ('won', 'void') for s in st) else 'open'
         p = per[c['product']]
         p[res] += 1
+        if res == 'lost' and len(losses) < 40:
+            dc = decorate(c)
+            for l in dc['legs']:
+                if l['state'] == 'lost' and len(losses) < 40:
+                    losses.append(dict(code=c['code'], product=c['product'], date=d.strftime('%-d %b'), match=l['match'],
+                                       sel=l['sel'], score=l['score'] or 'lost', cause=loss_cause(l, c['product'])))
         p['legs_won'] += legs_won; p['legs_lost'] += sum(s == 'lost' for s in st)
         p['first'] = d.strftime('%-d %b')
         if res != 'open':
@@ -448,7 +537,30 @@ def record(days=35):
         tiles.append(dict(product=prod, rate=f"{p['won']}-{p['lost']}",
                           sample=f"{p['won'] / n * 100:.1f}% of {n} codes",
                           since=f"since {p['first']}; legs {lw}-{ll} ({lw / (lw + ll) * 100:.0f}%)" if lw + ll else f"since {p['first']}"))
-    return dict(tiles=tiles, per=per, settled=settled, heat=heat, since=str(since))
+    return dict(tiles=tiles, per=per, settled=settled, heat=heat, since=str(since), losses=losses)
+
+
+# ---------------------------------------------------------------- any code
+
+def grade_any(code):
+    """A code we did not book, shaped like one of ours (no sheet)."""
+    code = (code or '').strip().upper()
+    if not re.match(r'^[A-Z0-9]{5,8}$', code):
+        return dict(error='a share code is 6 letters and digits', legs=[])
+    ours = next((c for c in parse_bookings() if c['code'] == code), None)
+    if ours:
+        return decorate(ours)
+    g = graded(code, force=True)
+    if not g.get('legs'):
+        return dict(code=code, error=g.get('error') or 'SportyBet returned no legs for this code (expired or mistyped)', legs=[])
+    legs = []
+    for x in g['legs']:
+        ko = dt.datetime.fromtimestamp(x['ko'], tz=WAT) if x.get('ko') else None
+        legs.append(dict(day=ko.strftime('%a') if ko else '', ko=ko.strftime('%H:%M') if ko else '', match=x['match'], sel=x['sel'],
+                         note='', price=x['price'], state=x['state'], score=x['score'], hint=x['hint'], comp=x.get('comp', ''),
+                         kots=x.get('ko', 0), ht=x.get('ht'), sheet=dict(flags=['Not a Betty code: graded from the share API, no sheet.'])))
+    return dict(code=code, when='', label='graded from the share API', product='Graded code', sport=None, url=f'http://www.sportybet.com/ng/?shareCode={code}',
+                legs=legs, odds=round(_combo(legs), 2), booked='', date='', window=_window('', legs), error=None, replaces=None, superseded_by=None)
 
 
 # ---------------------------------------------------------------- live
@@ -497,30 +609,40 @@ def live_feed(LIVE):
 # ---------------------------------------------------------------- rules (static, edited by hand when a rule changes)
 
 RULES = [
-    dict(product='Winners', tag='win or draw',
-         plain="The market picks the side, the venue record decides whether to bet. A favourite needs a venue goal-difference margin of 1.0 at home or 1.5 away. Under 1.80 it goes as a straight win; 1.80 to 2.60 as a double chance; above that nothing. Draw-proneness on either side, or no shot stats on the favourite, forces the cover at any price. A favourite whose last ten shows wins no better than losses, is out-shot on target, or has a losing head-to-head is dropped.",
-         thresholds=[dict(k='Venue margin, home / away', v='+1.0 / +1.5'), dict(k='Straight win, price under', v='1.80'), dict(k='Double chance, price under', v='2.60'),
-                     dict(k='Cover forced when', v='fav 5+ or opp 4+ venue draws; combined 4+; opp 4+ of last 10; no shot stats')],
-         measured='Corpus: home favourites at margin 1.0+ win 52.6%, win-or-draw 75.9% (19,945 matches). Combined venue draws 4+: straight win falls 54% to 49.5%.'),
-    dict(product='Draws', tag='the gate',
-         plain="Quiet games. The gate is expected goals under 2.4, combined draws 3+, mismatch 1.0 or less, expected shots on target 8 or fewer with a 2.0 evenness floor, blanks 5+ split evenly. A second branch takes a home side that draws at home, concedes little, in a league that draws 30%+. Price floor at the gate's own rate. One slip.",
-         thresholds=[dict(k='Gate draw rate', v='34.6%'), dict(k='Price floor (1 / rate)', v='2.89'), dict(k='Home-profile branch', v='h draws 3+, conceded <= 1.0, league 30%+')],
-         measured='Corpus: 871 gate matches at 34.6%, every 2026 month between 30% and 39%. The best any threshold rule reaches on 44,250 matches is 36.7%.'),
+    dict(product='Winners', tag='match result',
+         plain="The market favourite only, and only when venue goal difference backs it. Short prices go as a straight win, mid prices as a double chance, and any price becomes a double chance when either side is draw-prone or the favourite has no shot stats on the feed. A favourite whose last ten shows more losses than wins, that is out-shot on target, or that has a losing head-to-head is dropped.",
+         thresholds=[dict(k='Venue goal difference, home', v='1.0 a game'), dict(k='Venue goal difference, away', v='1.5 a game'), dict(k='Straight win, price under', v='1.80'),
+                     dict(k='Double chance band', v='1.80 to 2.60'), dict(k='Draw-prone: favourite venue draws', v='5+'), dict(k='Draw-prone: opponent venue draws', v='4+'),
+                     dict(k='Draw-prone: combined venue draws', v='4+'), dict(k='Dropped when', v='more losses than wins, out-shot on target, losing H2H')],
+         measured='Corpus: home favourites at margin 1.0+ win 52.6%, win-or-draw 75.9% (19,945 matches). The yesterday check replays the rule over the whole previous board before every booking.'),
+    dict(product='Draws', tag='draw gate',
+         plain="Two branches. The quiet-game filter reads expected goals, combined draws, mismatch, expected shots on target, shot evenness and blanks. The home-profile branch takes home sides that draw at home and concede little, in leagues that draw often. Price floor at the gate's own rate. One slip a day.",
+         thresholds=[dict(k='Quiet game', v='xG < 2.4, draws 3+, mismatch <= 1.0, exp. SoT <= 8, blanks 5+'), dict(k='Home profile', v='home draws 3+, conceded <= 1.0, league draws 30%+'),
+                     dict(k='Break-even price floor', v='2.89'), dict(k='Slips per run', v='1')],
+         measured='Corpus: 34.6% on 871 matches through the gate, every 2026 month between 30% and 39%. The best any threshold rule reaches on 44,250 matches is 36.7%.'),
+    dict(product='Half-time draw', tag='1st Half 1X2 Draw',
+         plain="The same gate as Draws, priced into the first-half market instead of the full-time one. Halves finish level far more often than matches do, which is where the edge sits: only about half of the gate games level at the break stay level to the end, so the hour is the bet.",
+         thresholds=[dict(k='Gate', v='identical to Draws'), dict(k='Market', v='1st Half 1X2 Draw (market 60)'), dict(k='Fair price inside the gate', v='2.09')],
+         measured='Corpus: 47.9% half-time draws inside the gate against 40.0% for all matches; 54.2% where the league draws 34%+.'),
     dict(product='Live', tag='half-time whistle',
-         plain="At the break the watcher reads the score, the live first-half shots and possession, and both sides' last seven second-half goal totals. Draw on a gate game level at 0-0 or 1-1. 2H Over 0.5 when all fourteen trailing second halves scored and the first half had 7+ shots. 2H Under 1.5 when twelve of fourteen had one goal or fewer, at most one goal on the board, and no side pressing at level. No live stats, no bet. Legs found within two minutes go on one slip.",
-         thresholds=[dict(k='Draw: gate game level at HT', v='49.3%, floor 2.10'), dict(k='Over: trailing halves scored', v='14 of 14, floor 1.20'), dict(k='Under: halves with <= 1 goal', v='12 of 14, HT total <= 1, floor 1.55')],
-         measured='Corpus: 26,447 rows in time order, 2H Over 0.5 at 14/14 = 83.6%, Under at 0-0 = 71.6%. Live-booked since 12 Sep on the Record page.'),
-    dict(product='American Football', tag='line agreement',
-         plain="Each side's last seven games at its venue plus the quarter scores. A total, first-half total or handicap line is taken when eleven of the fourteen games agree. Mismatch games, winner at 1.05 or under, are scored on lookalike games only: the favourite's blowouts and the underdog's heaviest defeats. College sides with fewer than two games this season prefer the total over the handicap. No winners.",
-         thresholds=[dict(k='Agreement', v='11 of 14'), dict(k='Mismatch games', v='lookalike subset, 80%'), dict(k='Price floor', v='1.40')],
-         measured='First weekend (12-13 Sep): totals 5 of 5, first-half totals 2 of 2, handicaps 2 of 4. Unmeasured beyond that; the same engine runs basketball, ice hockey and handball.'),
-    dict(product='Max', tag='accumulator engine',
-         plain="The original goal-and-stat engine: over/unders, team totals, corners, bookings, shots, offsides, fouls, saves, first and second half markets. Stat Unders need the line above the sample maximum; stat Overs need it below the sample minimum; goal Overs use blank-rate tables; bookings need a 1.5 cushion; a market-knows cap refuses a price the book has already moved. Highest odds inside the 50-leg cap.",
-         thresholds=[dict(k='Stat Under cushion', v='line above sample max'), dict(k='Bookings cushion', v='1.5'), dict(k='Market-knows cap', v='refuse if implied < rate - 0.04')],
+         plain="The watcher reads every game on the live board at the break and books three shapes: the Draw on gate games level at 0-0 or 1-1; second-half Over 0.5 when every one of the fourteen trailing second halves scored and the first half had shots in it; second-half Under 1.5 when twelve of fourteen trailing halves stayed at one goal or fewer, at most one goal is on the board, and nobody is pressing. No live stats, no bet. Legs that land within two minutes go on one slip.",
+         thresholds=[dict(k='Draw taken at', v='0-0 or 1-1, gate games, price 2.10+'), dict(k='2H Over 0.5 needs', v='14 of 14 trailing halves scored, price 1.20+'), dict(k='2H Over 0.5 first-half shots', v='7+'),
+                     dict(k='2H Under 1.5 needs', v='12 of 14 halves at <= 1 goal, HT total <= 1, price 1.55+'), dict(k='Under blocked when a side is at', v='10+ shots and 60% possession'), dict(k='One slip when legs land within', v='2 minutes')],
+         measured='Corpus: 2H Over 0.5 at 14/14 = 83.6% (1,073 rows), Under 1.5 at 0-0 = 71.6%, gate draw level at HT = 49.3%. Every half-time read is logged with its stats.'),
+    dict(product='Points sports', tag='American football, basketball, ice hockey, handball',
+         plain="One engine across four points sports. Totals, first-half or first-period totals and handicaps only, never winners. Each side's last seven venue games and period scores are read, and a line only goes out when the large majority of past margins agree. Mismatch games, winner at 1.05 or under, are scored on lookalike games only. College sides with fewer than two games this season prefer the total.",
+         thresholds=[dict(k='Agreement, at least', v='11 of 14'), dict(k='Price floor', v='1.40'), dict(k='Mismatch games (winner at 1.05 or under)', v='scored on lookalikes, 80%'),
+                     dict(k='Stale college rosters', v='prefer totals; handicap needs 12 of 14'), dict(k='Markets', v='totals, period totals, handicaps')],
+         measured='First weekend (12-13 Sep): totals 5 of 5, first-half totals 2 of 2, handicaps 2 of 4. No corpus yet for the other three sports.'),
+    dict(product='Max odds', tag='composite engine',
+         plain="The goal-and-stats accumulator: over and unders, team totals, corners, bookings, shots, offsides, fouls, saves, and half markets. Cushion gates and blank-rate tables decide what goes on, family bans stop correlated legs, and the daily rollover follows the biggest slip that lands one time in three.",
+         thresholds=[dict(k='Modes', v='strict, unders-only, goals-only, target odds, rollover'), dict(k='Stat Under cushion', v='line above the sample max'), dict(k='Stat Over cushion', v='line below the sample min'),
+                     dict(k='Bookings cushion', v='1.5'), dict(k='Rollover trigger', v='biggest slip landing 30%+'), dict(k='SportyBet slip cap', v='50 legs')],
          measured='Per-leg 84-95% on the families kept; the slips are long by design and die to one or two legs.'),
 ]
 
 CHANGELOG = [
+    dict(date='13 Sep', txt='Website: every code with its sheet, live codes with the countdown, the record, the rules, and the operator console.'),
     dict(date='13 Sep', txt='Live: Draw needs 0-0 or 1-1 at the break; Under 1.5 needs at most one goal banked (corpus 71.6% at 0-0, 58.7% at 2+). First-half shots now check the histories: Over needs 7+ shots, Under refuses a side pressing at level.'),
     dict(date='13 Sep', txt='Winners: draw-proneness on either side forces the cover; combined venue-draw line 6 -> 4; a favourite with no shot stats goes on as cover only.'),
     dict(date='13 Sep', txt='Points sports: one engine for American football, basketball, ice hockey and handball; period totals from the Flashscore period feed; mismatch games scored on lookalike games instead of skipped.'),
@@ -529,12 +651,205 @@ CHANGELOG = [
     dict(date='12 Sep', txt='Slips capped at 50 legs (SportyBet cap); winners keep the 50 most likely.'),
     dict(date='11 Sep', txt='Draw price floor restored at the gate rate (2.89). Model cut removed on 9 Sep; the gate alone selects.'),
     dict(date='10 Sep', txt='Winners v2: margin 1.0 home / 1.5 away, straight/cover line 1.80. Corpus 43k matches.'),
+    dict(date='9 Sep', txt='Half-time draw: the gate priced into the 1st Half 1X2 market (47.9% inside the gate, fair 2.09).'),
 ]
 
 CORPUS_TILES = [
     dict(product='Draws', rate='34.6%', sample='871 gate matches', since='draw gate, corpus measured'),
-    dict(product='Winners', rate='75.9%', sample='19,945 matches', since='win-or-draw, home margin 1.0+'),
+    dict(product='Half-time draw', rate='47.9%', sample='871 gate matches', since='same gate, 1st half 1X2 draw; 40.0% for all matches'),
+    dict(product='Winners', rate='75.9%', sample='19,945 matches', since='win-or-draw, home favourite at venue margin 1.0+'),
     dict(product='Live', rate='83.6%', sample='1,073 rows', since='2H Over 0.5 when 14 of 14 trailing halves scored'),
     dict(product='Live', rate='71.6%', sample='0-0 at the break', since='2H Under 1.5 when 12 of 14 halves had one goal or fewer'),
-    dict(product='American Football', rate='unmeasured', sample='one weekend', since='11 of 14 agreement rule'),
+    dict(product='Points sports', rate='unmeasured', sample='one weekend', since='11 of 14 agreement rule'),
 ]
+
+
+# ---------------------------------------------------------------- console
+
+YEST = {'state': 'idle', 'ts': 0, 'tiles': [], 'sample': [], 'lines': [], 'error': None}
+
+
+def run_yesterday():
+    """book_winners.yesterday_rows() in the background: the rule replayed over
+    yesterday's whole board. Cached for 30 minutes."""
+    if YEST['state'] == 'running':
+        return False
+    if YEST['ts'] and time.time() - YEST['ts'] < 1800 and YEST['tiles']:
+        return True
+    YEST.update(state='running', error=None)
+
+    def work():
+        try:
+            import book_winners as BW
+            rows = BW.yesterday_rows()
+            summ = BW.yesterday_summary(rows)
+            tiles = [dict(k='Games the rule backed', v=str(len(rows)))]
+            for lab, n, w, wd in summ:
+                tiles.append(dict(k=f"{lab.title()} won", v=f"{w * 100:.1f}%"))
+                tiles.append(dict(k=f"{lab.title()} win-or-draw", v=f"{wd * 100:.1f}%"))
+            sample = [dict(match=r['match'], league=r.get('league') or '', sel=('Home' if r['side'] == 'H' else 'Away') + ' backed by venue GD',
+                           margin=f"{r['margin']:+.2f}", res='won' if r['won'] else ('draw' if r['draw'] else 'lost'), score=r['score'])
+                      for r in rows]
+            YEST.update(state='done', ts=time.time(), tiles=tiles, sample=sample,
+                        lines=[f"{lab} n {n} won {w:.1%} win-or-draw {wd:.1%}" for lab, n, w, wd in summ],
+                        error=None if len(rows) >= 30 else f"only {len(rows)} qualifying games with cached form")
+        except Exception as e:
+            YEST.update(state='done', error=f"{type(e).__name__}: {e}")
+    threading.Thread(target=work, daemon=True).start()
+    return True
+
+
+COMMANDS = [
+    dict(c='/book [target] [until]', d='Composite slip to a target price', ai=True),
+    dict(c='/rollover', d='Follow the biggest slip that lands one time in three', ai=False),
+    dict(c='/max [until]', d='Highest odds the gates allow', ai=True),
+    dict(c='/goals [until]', d='Goals-only mode', ai=True),
+    dict(c='/under [until]', d='Unders-only mode', ai=True),
+    dict(c='/strict [until]', d="Highest odds, the opponent's record must confirm every team leg", ai=True),
+    dict(c='/draw [until]', d='Draw gate, one slip', ai=False),
+    dict(c='/hdraw [until]', d='Same gate, half-time draw (market 60)', ai=False),
+    dict(c='/winners [until]', d="Market favourite, venue-backed, one slip", ai=False),
+    dict(c='/live', d='Start the half-time watcher; codes come to this chat until /stop', ai=False),
+    dict(c='/stop', d='Stop the watcher', ai=False),
+    dict(c='/livelog', d='What the watcher has seen', ai=False),
+    dict(c='/grade CODE ...', d='Grade share codes leg by leg', ai=False),
+    dict(c='/sweep', d="Bank yesterday's results into the corpus", ai=False),
+    dict(c='/slips [n]', d='Recent booked codes', ai=False),
+    dict(c='/status', d='What the engine is doing', ai=False),
+    dict(c='/whoami', d='Your chat id', ai=False),
+]
+
+ENDPOINTS = [
+    dict(p='POST /api/run', q='target, until, days, engine, maxodds, goalsonly, undersonly, strict, rollover, dry'),
+    dict(p='POST /api/winners', q='until, days, top, dry (runs book_winners.py with the yesterday check)'),
+    dict(p='POST /api/draws', q='until, days, half, dry'),
+    dict(p='POST /api/points', q='sport (amfoot | basketball | hockey | handball), days, min_price, agree, dry'),
+    dict(p='POST /api/live', q='until, dry, chat | stop'),
+    dict(p='POST /api/yesterday', q='replay the winners rule over yesterday\'s board'),
+    dict(p='GET /api/status', q='job state, log, result, build stamp'),
+    dict(p='GET /api/codes?day=', q='today | yesterday | tomorrow | YYYY-MM-DD, graded, with sheets'),
+    dict(p='GET /api/gradecode?code=', q='any SportyBet share code, leg by leg'),
+    dict(p='GET /api/record', q='per-product tallies, settled table, day heat, losses'),
+    dict(p='GET /api/livefeed', q='live codes, the board being watched, log tail'),
+    dict(p='GET /api/console', q='watcher, corpus, models, commands, coverage, booking log'),
+    dict(p='GET /api/grade?codes=', q='the text grader'),
+    dict(p='POST /api/crawl', q='cap, floor, mode'),
+]
+
+COVERAGE = [
+    dict(sport='Football', form=1, stats=1, prices=1, note='46k matches, venue split, half splits, shots/corners/cards'),
+    dict(sport='American football', form=1, stats=0, prices=1, note='quarter scores, no post-match stats on the feed'),
+    dict(sport='Basketball', form=1, stats=0, prices=1, note='period scores only'),
+    dict(sport='Ice hockey', form=1, stats=0, prices=1, note='period scores; regulation totals'),
+    dict(sport='Handball', form=1, stats=0, prices=1, note='halves only'),
+    dict(sport='Tennis', form=1, stats=0, prices=1, note='no engine'),
+    dict(sport='Rugby', form=0, stats=0, prices=1, note='no form on the feed'),
+]
+
+_CORPUS = {'sig': None, 'rows': 0}
+
+
+def corpus_rows():
+    path = os.path.join(ROOT, 'experiments', 'dataset.jsonl')
+    try:
+        sig = (os.path.getsize(path), int(os.path.getmtime(path)))
+    except OSError:
+        return 0, None
+    if sig != _CORPUS['sig']:
+        n = 0
+        with open(path, 'rb') as fh:
+            for _ in fh:
+                n += 1
+        _CORPUS.update(sig=sig, rows=n)
+    return _CORPUS['rows'], dt.datetime.fromtimestamp(sig[1], tz=WAT)
+
+
+def _mtime(rel):
+    try:
+        return dt.datetime.fromtimestamp(os.path.getmtime(os.path.join(ROOT, rel)), tz=WAT)
+    except OSError:
+        return None
+
+
+def _log_tail(rel, pat):
+    try:
+        lines = [l.strip() for l in open(os.path.join(ROOT, rel), encoding='utf-8', errors='replace') if l.strip()]
+    except OSError:
+        return ''
+    for l in reversed(lines):
+        if re.search(pat, l):
+            return l.replace('saved hybrid_bundle.pkl: ', '').replace('saved nn_all_bundle.pkl: ', '')[:120]
+    return ''
+
+
+def models():
+    out = []
+    for name, rel, target, log, pat in (
+            ('hybrid bundle', 'experiments/hybrid_bundle.pkl', 'goal markets (NN) + stat markets (XGBoost); the live composite engine', 'experiments/retrain_hybrid.log', r'^saved hybrid_bundle'),
+            ('nn_all', 'experiments/nn_all_bundle.pkl', 'nets on every option family', 'experiments/retrain_nn_all.log', r'beats its baseline|^saved nn_all'),
+            ('draw model', 'experiments/draw_model.pkl', 'draw probability; the gate rate sets the price floor', 'experiments/retrain_draw.log', r'%')):
+        t = _mtime(rel)
+        out.append(dict(name=name, target=target, trained=t.strftime('%-d %b %H:%M') if t else 'missing', metric=_log_tail(log, pat) or '-'))
+    try:
+        import book_draw as DRW
+        out[-1]['metric'] = f"gate {DRW.RATE:.1%} on the pocket; held-out {DRW._B.get('test_precision', 0):.1%} (n {DRW._B.get('test_n')})"
+    except Exception:
+        pass
+    return out
+
+
+def livelog_rows(LIVE, n=40):
+    """Every half-time state the watcher read: from experiments/live_ht_log.jsonl
+    when the container still has it, else parsed from the watcher's log lines."""
+    rows = []
+    path = os.path.join(ROOT, 'experiments', 'live_ht_log.jsonl')
+    try:
+        lines = open(path, encoding='utf-8').read().splitlines()[-n:]
+        for ln in lines:
+            try:
+                r = json.loads(ln)
+            except ValueError:
+                continue
+            st = r.get('stats') or {}
+            parts = []
+            if st.get('shots'): parts.append(f"shots {st['shots'][0]} v {st['shots'][1]}")
+            if st.get('sot'): parts.append(f"on target {st['sot'][0]} v {st['sot'][1]}")
+            if st.get('poss'): parts.append(f"possession {st['poss'][0]}%")
+            t2 = r.get('trailing_2h') or []
+            if t2: parts.append(f"trailing 2H {sum(x >= 1 for x in t2)}/{len(t2)} scored, {sum(x <= 1 for x in t2)}/{len(t2)} at <=1")
+            legs = r.get('legs') or []
+            act = ', '.join(f"{l[1]} @{l[2]:.2f}" for l in legs) if legs else ('no bet' + (' (gate game)' if r.get('gate') else ''))
+            rows.append(dict(t=dt.datetime.fromtimestamp(r['ts'], tz=WAT).strftime('%H:%M'), match=r.get('match', ''), league=r.get('league') or '',
+                             ht=(r.get('ht') or '').replace(':', '-'), stats=' \u00b7 '.join(parts) or 'no live stats', act=act))
+    except OSError:
+        pass
+    if not rows:
+        for ln in (LIVE.get('log') or [])[-n:]:
+            m = re.match(r'^HT (\d+:\d+) (.+?): (.*)$', ln)
+            if m:
+                rows.append(dict(t='', match=m.group(2), league='', ht=m.group(1).replace(':', '-'), stats=m.group(3)[:140], act=''))
+            m = re.match(r'^queued HT (\d+:\d+) (.+?): (.*)$', ln)
+            if m:
+                rows.append(dict(t='', match=m.group(2), league='', ht=m.group(1).replace(':', '-'), stats='', act='queued ' + m.group(3)))
+    rows.reverse()
+    return rows
+
+
+def console_state(LIVE, JOB, BUILD):
+    try:
+        import live_ht as LH
+        booked = len(set(LH.BOOKED.values())); read = len(LH.READ)
+    except Exception:
+        booked = read = 0
+    n, crawled = corpus_rows()
+    retrained = _mtime('experiments/draw_model.pkl')
+    return dict(
+        watcher=dict(state=LIVE.get('state'), started=LIVE.get('started'), chat=LIVE.get('chat'), bot=bot_name(),
+                     halftimes_read=read, codes_booked=booked),
+        job=dict(state=JOB.get('state'), started=JOB.get('started'), params=JOB.get('params'), result=JOB.get('result'), log=(JOB.get('log') or [])[-60:]),
+        corpus=[dict(k='Matches in corpus', v=f"{n:,}"), dict(k='Last crawl', v=crawled.strftime('%-d %b %H:%M') if crawled else '-'),
+                dict(k='Last retrain', v=retrained.strftime('%-d %b %H:%M') if retrained else '-'), dict(k='Build stamp', v=BUILD)],
+        models=models(), livelog=livelog_rows(LIVE), commands=COMMANDS, endpoints=ENDPOINTS, coverage=COVERAGE,
+        yesterday=dict(YEST),
+        bookinglog=[dict(code=c['code'], product=c['product'], sport=c['sport'], nlegs=len(c['legs']), odds=round(_combo(c['legs']), 2) if c['legs'] else None,
+                         booked=c['when'], url=c['url'], label=c['label']) for c in parse_bookings()[:15]])

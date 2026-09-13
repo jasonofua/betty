@@ -217,51 +217,64 @@ def build(until_h, days=0, verbose=True):
     return rows
 
 
+def yesterday_rows():
+    """The rule replayed across yesterday's WHOLE board (cached venue form +
+    the results feed): one row per qualifying game with the side the rule
+    backed and what happened. Used by yesterday_check() and the website's
+    Console."""
+    import fetcher_v3 as F3
+    res = {}
+    for sct in F3.sections(F3.fetch('f_1_-1_1_en-ng_1', ttl=1800)):
+        if 'AA' in sct and sct.get('AG') is not None and sct.get('AH') is not None:
+            res[(sct.get('AE'), sct.get('AF'))] = (int(sct['AG']), int(sct['AH']))
+    rows = []
+    for f in F2.get_fixtures(-1):
+        key = (f['home'], f['away'])
+        if key not in res or not F3.is_cached(f"df_hh_1_{f['id']}", ttl=999 * 3600):
+            continue                      # cached form only - this must stay fast
+        try:
+            hp, ap = DRW.venue_form(f['id'], f['ts'])
+        except Exception:
+            continue
+        if len(hp) < 4 or len(ap) < 4:
+            continue
+        hg, ag = gd(hp), gd(ap)
+        if hg == ag:
+            continue
+        side = 'H' if hg > ag else 'A'
+        m = abs(hg - ag)
+        if not ((side == 'H' and m >= MARGIN_HOME) or (side == 'A' and m >= MARGIN_AWAY)):
+            continue
+        gh, ga = res[key]
+        won = (gh > ga) if side == 'H' else (ga > gh)
+        rows.append(dict(side=side, won=won, draw=gh == ga, match=f"{f['home']} v {f['away']}",
+                         league=f.get('league'), score=f"{gh}-{ga}", margin=round(m, 2)))
+    return rows
+
+
+def yesterday_summary(rows):
+    """[(label, n, won%, win-or-draw%)] for all / home / away."""
+    out = []
+    for lab, rs in (('all', rows), ('home', [r for r in rows if r['side'] == 'H']), ('away', [r for r in rows if r['side'] == 'A'])):
+        if rs:
+            w = sum(r['won'] for r in rs); d = sum(r['draw'] for r in rs)
+            out.append((lab, len(rs), w / len(rs), (w + d) / len(rs)))
+    return out
+
+
 def yesterday_check():
     """12 Sep: run BEFORE booking, every time. Applies the rule to every game
-    played yesterday (cached venue form + the results feed) and prints how
-    the venue-backed side did across the WHOLE board, next to the corpus
-    norm. This is the "was it the rule or the night" test, and on 12 Sep it
-    was run after booking instead of before. It reports; it does not block -
-    one bad night is noise (Fri 11 Sep: 55.8% across 208 games, our 26 legs
-    35% outright losses = the bad end of normal)."""
+    played yesterday and prints how the venue-backed side did across the
+    WHOLE board, next to the corpus norm. This is the "was it the rule or the
+    night" test, and on 12 Sep it was run after booking instead of before. It
+    reports; it does not block - one bad night is noise (Fri 11 Sep: 55.8%
+    across 208 games, our 26 legs 35% outright losses = the bad end of normal)."""
     try:
-        import fetcher_v3 as F3
-        res = {}
-        cur = None
-        for sct in F3.sections(F3.fetch('f_1_-1_1_en-ng_1', ttl=1800)):
-            if 'ZA' in sct:
-                cur = sct['ZA']
-            elif 'AA' in sct and sct.get('AG') is not None and sct.get('AH') is not None:
-                res[(sct.get('AE'), sct.get('AF'))] = (int(sct['AG']), int(sct['AH']))
-        rows = []
-        for f in F2.get_fixtures(-1):
-            key = (f['home'], f['away'])
-            if key not in res or not F3.is_cached(f"df_hh_1_{f["id"]}", ttl=999 * 3600):
-                continue                      # cached form only - this must stay fast
-            try:
-                hp, ap = DRW.venue_form(f['id'], f['ts'])
-            except Exception:
-                continue
-            if len(hp) < 4 or len(ap) < 4:
-                continue
-            hg, ag = gd(hp), gd(ap)
-            if hg == ag:
-                continue
-            side = 'H' if hg > ag else 'A'
-            m = abs(hg - ag)
-            if not ((side == 'H' and m >= MARGIN_HOME) or (side == 'A' and m >= MARGIN_AWAY)):
-                continue
-            gh, ga = res[key]
-            won = (gh > ga) if side == 'H' else (ga > gh)
-            rows.append((side, won, gh == ga))
+        rows = yesterday_rows()
         if len(rows) < 30:
             print(f"yesterday check: only {len(rows)} qualifying games with cached form - skipped"); return
-        for lab, rs in (('all', rows), ('home', [r for r in rows if r[0] == 'H']), ('away', [r for r in rows if r[0] == 'A'])):
-            if not rs:
-                continue
-            w = sum(r[1] for r in rs); d = sum(r[2] for r in rs)
-            print(f"yesterday check {lab:5} n {len(rs):>4}  won {w/len(rs):.1%}  win-or-draw {(w+d)/len(rs):.1%}"
+        for lab, n, w, wd in yesterday_summary(rows):
+            print(f"yesterday check {lab:5} n {n:>4}  won {w:.1%}  win-or-draw {wd:.1%}"
                   f"   (corpus: home 52.6% / 75.9%, away 54.9% / 73.8%)")
     except Exception as e:
         print(f"yesterday check failed: {type(e).__name__}: {e}")

@@ -225,6 +225,37 @@ def live_job(until, dry, chat=None):
     return True
 
 
+def script_job(mode, args, label):
+    """Run a booking script as a subprocess and stream its output into the job
+    log - the same run the operator gets locally (book_winners.py includes the
+    yesterday check, --top and the wider sheet; book_amfoot.py the four points
+    sports). The share code is read off the script's own 'code XXXXXX' line."""
+    JOB.update(state='building', log=[], result=None, params=dict(mode=mode, args=args),
+               started=dt.datetime.now(A.WAT).strftime('%H:%M'))
+    try:
+        p = subprocess.Popen([sys.executable, '-u'] + args, cwd=ROOT, stdout=subprocess.PIPE,
+                             stderr=subprocess.STDOUT, text=True)
+        code = url = None
+        for line in p.stdout:
+            line = line.rstrip()
+            if line:
+                JOB['log'].append(line); JOB['log'][:] = JOB['log'][-600:]
+            m = re.search(r'\bcode ([A-Z0-9]{6})\b\s+(http\S+)?', line)
+            if m and 'shareCode' in (m.group(2) or ''):
+                code, url = m.group(1), m.group(2)
+        p.wait(timeout=3600)
+        res = dict(mode=mode, label=label)
+        if code:
+            res.update(code=code, url=url)
+        elif '--dry' in args:
+            res['dry'] = True
+        else:
+            res['error'] = 'no code booked - see the log'
+        JOB.update(state='done', result=res)
+    except Exception as e:
+        JOB.update(state='done', result={'error': f'{type(e).__name__}: {e}'})
+
+
 def live_stop():
     try:
         import live_ht as LD
@@ -389,7 +420,7 @@ class Handler(BaseHTTPRequestHandler):
             self._send(_site(), 'text/html; charset=utf-8')
         elif u.path == '/ops':
             self._send(_page(), 'text/html; charset=utf-8')
-        elif u.path in ('/api/codes', '/api/record', '/api/rules', '/api/livefeed', '/api/banner'):
+        elif u.path in ('/api/codes', '/api/record', '/api/rules', '/api/livefeed', '/api/banner', '/api/console', '/api/gradecode'):
             # 13 Sep: the website's data. Everything comes from bookings.md (repo
             # copy + the Railway volume), the share API grader and the watcher.
             import betty_api as BA
@@ -403,6 +434,10 @@ class Handler(BaseHTTPRequestHandler):
                     body = dict(rules=BA.RULES, changelog=BA.CHANGELOG)
                 elif u.path == '/api/banner':
                     body = BA.banner()
+                elif u.path == '/api/console':
+                    body = BA.console_state(LIVE, JOB, BUILD)
+                elif u.path == '/api/gradecode':
+                    body = BA.grade_any(q.get('code', [''])[0])
                 else:
                     body = BA.live_feed(LIVE)
                 body['now'] = dt.datetime.now(A.WAT).strftime('%H:%M:%S')
@@ -473,12 +508,50 @@ class Handler(BaseHTTPRequestHandler):
         else:
             self._send('not found', 'text/plain', 404)
 
+    def _authed(self, p):
+        """13 Sep: optional guard for the operator endpoints. With OPS_KEY set on
+        Railway, a POST needs the key (X-Ops-Key header or "key" in the body);
+        unset, everything stays open as before."""
+        want = os.environ.get('OPS_KEY', '').strip()
+        return (not want) or self.headers.get('X-Ops-Key', '') == want or str(p.get('key', '')) == want
+
     def do_POST(self):
         path = urlparse(self.path).path
-        if path == '/api/crawl':
+        if path in ('/api/yesterday', '/api/points', '/api/winners', '/api/draws', '/api/run', '/api/live', '/api/crawl'):
             n = int(self.headers.get('Content-Length', 0))
+            raw = self.rfile.read(n) if n else b''
             try:
-                p = json.loads(self.rfile.read(n) or b'{}')
+                p0 = json.loads(raw or b'{}')
+            except Exception:
+                self._send(json.dumps({'error': 'bad json'}), code=400); return
+            if not self._authed(p0):
+                self._send(json.dumps({'error': 'operator key required'}), code=401); return
+            self._body = p0
+        if path == '/api/yesterday':
+            import betty_api as BA
+            self._send(json.dumps({'ok': BA.run_yesterday(), 'state': BA.YEST['state']})); return
+        if path == '/api/points':
+            p2 = self._body
+            sport = str(p2.get('sport', 'amfoot'))
+            if sport not in ('amfoot', 'basketball', 'hockey', 'handball'):
+                self._send(json.dumps({'error': 'sport must be amfoot | basketball | hockey | handball'}), code=400); return
+            try:
+                days = int(p2.get('days', 0)); assert 0 <= days <= 7
+                args = ['book_amfoot.py', '--sport', sport, '--days', str(days)]
+                if p2.get('min_price'): args += ['--min-price', str(float(p2['min_price']))]
+                if p2.get('agree'): args += ['--agree', str(int(p2['agree']))]
+                if p2.get('dry'): args.append('--dry')
+            except Exception:
+                self._send(json.dumps({'error': 'bad parameters'}), code=400); return
+            with LOCK:
+                if JOB['state'] not in ('idle', 'done'):
+                    self._send(json.dumps({'error': 'a run is already in progress'}), code=409); return
+                JOB['state'] = 'building'
+            threading.Thread(target=script_job, args=('points', args, f'{sport} slip'), daemon=True).start()
+            self._send(json.dumps({'ok': True})); return
+        if path == '/api/crawl':
+            try:
+                p = self._body
                 cap = int(p.get('cap', 6000)); floor = str(p.get('floor', '2026-06-01'))
                 mode = str(p.get('mode', 'deep'))
             except Exception:
@@ -489,9 +562,8 @@ class Handler(BaseHTTPRequestHandler):
                              daemon=True).start()
             self._send(json.dumps({'ok': True})); return
         if path == '/api/live':
-            n = int(self.headers.get('Content-Length', 0))
             try:
-                p2 = json.loads(self.rfile.read(n) or b'{}')
+                p2 = self._body
                 until = int(p2.get('until', 0)); dry = bool(p2.get('dry'))
                 assert 0 <= until <= 23
             except Exception:
@@ -501,12 +573,11 @@ class Handler(BaseHTTPRequestHandler):
             ok = live_job(until, dry, chat=p2.get('chat'))
             self._send(json.dumps({'ok': ok, 'error': None if ok else 'live watcher already running'})); return
         if path == '/api/winners':
-            n = int(self.headers.get('Content-Length', 0))
             try:
-                p2 = json.loads(self.rfile.read(n) or b'{}')
+                p2 = self._body
                 until = int(p2.get('until', 23)); days = int(p2.get('days', 0))
-                dry = bool(p2.get('dry'))
-                assert 0 <= until <= 23 and 0 <= days <= 4
+                dry = bool(p2.get('dry')); top = int(p2.get('top', 0) or 0)
+                assert 0 <= until <= 23 and 0 <= days <= 4 and 0 <= top <= A.MAX_CODE
             except Exception:
                 self._send(json.dumps({'error': 'bad parameters'}), code=400); return
             with LOCK:
@@ -514,12 +585,16 @@ class Handler(BaseHTTPRequestHandler):
                     self._send(json.dumps({'error': 'a run is already in progress'}), code=409)
                     return
                 JOB['state'] = 'building'
-            threading.Thread(target=winners_job, args=(until, days, dry), daemon=True).start()
+            # 13 Sep: the script itself (yesterday check, --top, the wider sheet in
+            # bookings.md) instead of the older in-process winners_job.
+            args = ['book_winners.py', '--until', str(until), '--days', str(days)]
+            if top: args += ['--top', str(top)]
+            if dry: args.append('--dry')
+            threading.Thread(target=script_job, args=('winners', args, 'winners slip'), daemon=True).start()
             self._send(json.dumps({'ok': True})); return
         if path == '/api/draws':
-            n = int(self.headers.get('Content-Length', 0))
             try:
-                p2 = json.loads(self.rfile.read(n) or b'{}')
+                p2 = self._body
                 until = int(p2.get('until', 23)); days = int(p2.get('days', 0))
                 dry = bool(p2.get('dry')); half = bool(p2.get('half'))
                 assert 0 <= until <= 23 and 0 <= days <= 4
@@ -534,9 +609,8 @@ class Handler(BaseHTTPRequestHandler):
             self._send(json.dumps({'ok': True})); return
         if path != '/api/run':
             self._send('not found', 'text/plain', 404); return
-        n = int(self.headers.get('Content-Length', 0))
         try:
-            p = json.loads(self.rfile.read(n) or b'{}')
+            p = self._body
             target = float(p.get('target', 50))
             until = int(p.get('until', 23))
             days = int(p.get('days', 0))
