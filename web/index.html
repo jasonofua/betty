@@ -159,6 +159,31 @@ h1.page em{font-style:normal;color:var(--ac-tx)}
 .older{margin:4px 0 16px;text-align:center}
 .older button{font-size:12.5px;color:var(--tx2);border:1px solid var(--line2);border-radius:999px;padding:7px 13px}
 
+/* the odds picker - the first control on the page */
+.oddsbar{position:sticky;top:61px;z-index:30;background:var(--bg);padding:10px 0 12px;margin-bottom:8px}
+.oddsbar .k{font-size:11px;letter-spacing:.09em;text-transform:uppercase;font-weight:800;color:var(--tx3);margin-bottom:8px;text-align:center}
+.seg{display:flex;gap:4px;padding:4px;background:var(--s2);border:1px solid var(--line);border-radius:999px;width:fit-content;max-width:100%;margin:0 auto;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.seg button{flex:none;padding:10px 16px;border-radius:999px;font-family:var(--mono);font-size:14px;font-weight:700;color:var(--tx2);min-height:42px;transition:transform 120ms cubic-bezier(.23,1,.32,1),background 160ms ease,color 160ms ease}
+.seg button.on{background:var(--ac);color:var(--ac-ink)}
+.seg button:active{transform:scale(.96)}
+.seg button.none{opacity:.45}
+.oddsnote{text-align:center;color:var(--tx2);font-size:13.5px;margin:10px 0 18px}
+.rung{background:var(--s1);border:1px solid var(--line);border-radius:22px;padding:20px 22px;margin-bottom:14px;animation:rise 240ms cubic-bezier(.23,1,.32,1) both}
+.rung:nth-child(2){animation-delay:40ms}.rung:nth-child(3){animation-delay:80ms}.rung:nth-child(4){animation-delay:120ms}
+@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.rung{animation:none}}
+.rung .head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.rung .lab{font-size:11px;letter-spacing:.09em;text-transform:uppercase;font-weight:800;color:var(--ac-tx)}
+.rung h2{margin:2px 0 0;font-family:var(--serif);font-weight:400;font-size:22px}
+.rung .odds{font-family:var(--mono);font-size:24px;font-weight:700}
+.rung .odds small{font-size:12px;color:var(--tx3);font-family:var(--sans);font-weight:600;margin-left:6px}
+.rung .legs{max-height:none}
+.copy,.btn,.pills button,.ghost{transition:transform 120ms cubic-bezier(.23,1,.32,1),background 160ms ease,border-color 160ms ease}
+.copy:active,.btn:active,.pills button:active,.ghost:active{transform:scale(.97)}
+.daylink{text-align:center;margin:6px 0 16px;font-size:13px}
+.daylink a{color:var(--tx2);font-weight:600;margin:0 8px}
+.daylink a.on{color:var(--ac-tx)}
+
 /* pick your odds */
 .pick{margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
 .pick .k{font-size:11px;letter-spacing:.09em;text-transform:uppercase;font-weight:800;color:var(--tx3);margin-bottom:8px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
@@ -422,7 +447,7 @@ nav.bottom span{font-size:10.5px;font-weight:700}
   var S = {
     tab: 'Today', day: 'today', slip: null, openLeg: null, copied: null, expanded: {},
     theme: 'dark', stake: '1000', recFilter: 'All', recWhen: 'all', recRes: 'all', productFilter: 'All', prefs: null, tg: true, showOlder: false, recShow: 60,
-    codes: {}, codesAt: {}, banner: null, live: null, liveAt: 0, record: null, legsData: null, rules: null, console: null, consoleAt: 0,
+    ladder: null, ladderAt: 0, ladderBusy: false, odds: '5', codes: {}, codesAt: {}, banner: null, live: null, liveAt: 0, record: null, legsData: null, rules: null, console: null, consoleAt: 0,
     pane: 'Run', runProduct: 'Winners', runVals: { until: '23', days: '0', top: '0', target: '50', sport: 'amfoot', min_price: '1.40', agree: '11' },
     runFlags: { dry: false, strict: false, undersonly: false, goalsonly: false, rollover: false }, runMsg: '', graded: null, gradeBusy: false, nestBusy: {}, nestMsg: {},
     err: null, tick: 0, key: ''
@@ -433,6 +458,7 @@ nav.bottom span{font-size:10.5px;font-weight:700}
     S.prefs = JSON.parse(localStorage.getItem('betty.prefs') || 'null');
     S.tg = localStorage.getItem('betty.tg') !== '0';
     S.key = localStorage.getItem('betty.key') || '';
+    S.odds = localStorage.getItem('betty.odds') || '5';
   } catch (e) {}
   if (/[?&]t=light/.test(location.search)) S.theme = 'light';
   if (/[?&]t=dark/.test(location.search)) S.theme = 'dark';
@@ -469,6 +495,15 @@ nav.bottom span{font-size:10.5px;font-weight:700}
     return get('/api/codes?day=' + day).then(function (j) { S.codes[day] = (j.codes || []).map(decorate); S.codesAt[day] = Date.now(); S.err = null; render(); })
       .catch(function (e) { S.err = 'Could not load codes: ' + e.message; render(); });
   }
+  function loadLadder(force) {
+    if (S.ladderBusy) return Promise.resolve();
+    if (!force && S.ladder && Date.now() - S.ladderAt < 45000 && S.ladder.day === (S.day === 'yesterday' ? 'y' : 't')) return Promise.resolve();
+    S.ladderBusy = true;
+    return get('/api/ladder?day=' + S.day).then(function (j) {
+      j.products = (j.products || []).map(decorate); j.dayKey = S.day === 'yesterday' ? 'y' : 't';
+      S.ladder = j; S.ladderAt = Date.now(); S.ladderBusy = false; S.err = null; if (S.tab === 'Today') render();
+    }).catch(function (e) { S.ladderBusy = false; S.err = 'Could not load the codes: ' + e.message; render(); });
+  }
   function loadBanner() { return get('/api/banner').then(function (j) { S.banner = j; }).catch(function () {}); }
   function loadLive() {
     return get('/api/livefeed').then(function (j) { j.codes = (j.codes || []).map(decorate); S.live = j; S.liveAt = Date.now(); if (S.tab === 'Live') render(); })
@@ -501,7 +536,7 @@ nav.bottom span{font-size:10.5px;font-weight:700}
   function setHash(h) { if (location.hash !== h) { try { history.replaceState(null, '', h); } catch (e) { location.hash = h; } } }
   function go(tab) { S.tab = tab; S.slip = null; S.err = null; closeMenu(); window.scrollTo(0, 0); setHash(tab === 'Today' ? '#' : '#' + tab.toLowerCase()); render(); ensure(); }
   function ensure() {
-    if (S.tab === 'Today') loadCodes();
+    if (S.tab === 'Today') { loadLadder(); loadCodes(); }
     if (S.tab === 'Live') loadLive();
     if (S.tab === 'Record') { if (!S.legsData) loadLegs(); }
     if (S.tab === 'Rules') { if (!S.rules) loadRules(); }
@@ -612,28 +647,47 @@ nav.bottom span{font-size:10.5px;font-weight:700}
       '<input id="gradein" placeholder="ABC123" maxlength="8" autocomplete="off" spellcheck="false"><button class="btn" type="submit"' + (S.gradeBusy ? ' disabled' : '') + '>' + (S.gradeBusy ? 'Grading…' : 'Check') + '</button></form>';
   }
 
-  // ---------- Today ----------
+  // ---------- Today: pick your odds ----------
+  function rungCard(p, t) {
+    var full = t === 'full';
+    var r = full ? p : (p.ladder || {})[t];
+    var title = (TITLE[p.product] || p.product);
+    if (p.product === 'Points sports' && p.sport) title = p.sport + ' slip';
+    if (!r) return '';
+    var legs = full ? p.legs : r.legs.map(function (l) { return { match: l.match, sel: l.sel, price: l.price, ko: l.ko, state: 'pending', comp: '' }; });
+    var code = r.code, odds = r.odds;
+    var h = '<div class="rung' + (full && p.dead ? ' dead' : '') + '"><div class="head"><span><span class="lab">' + esc(p.product) + (p.sport ? ' · ' + esc(p.sport) : '') + '</span><h2>' + esc(title) + (full ? '' : ' · ' + t + ' odds') + '</h2></span>' +
+      '<span class="odds">' + fmtOdds(odds) + '<small>' + legs.length + ' leg' + (legs.length === 1 ? '' : 's') + (full ? ' · ' + esc(p.stateTxt.toLowerCase()) : '') + '</small></span></div>';
+    var expanded = !!S.expanded[code] || legs.length <= 8;
+    var shown = expanded ? legs : legs.slice(0, 8);
+    h += '<div class="box"><div class="legs' + (expanded ? ' all' : '') + '">' + shown.map(legLine).join('') + '</div>' +
+      (legs.length > 8 ? '<button class="showall" data-expand="' + esc(code) + '">' + (expanded ? 'Show fewer' : 'Show all ' + legs.length + ' legs') + '</button>' : '') + '</div>';
+    h += '<div class="coderow"><span class="codebar">' + esc(code) + '</span>' + copyBtn(code, false) + '</div>';
+    h += '<div class="links"><a href="' + esc(sporty(code)) + '" target="_blank" rel="noopener">Open on SportyBet &rarr;</a><a href="#slip/' + esc(p.code) + '">The numbers behind the legs</a>' +
+      '<span class="muted">' + (full ? esc(p.window || '') : 'first kickoff ' + esc(r.first || '')) + '</span></div></div>';
+    return h;
+  }
   function renderToday() {
-    var list = S.codes[S.day];
+    var L = S.ladder;
     var b = S.banner;
     var h = '<div class="col"><div class="center"><span class="livepill"><i></i>' + (b && b.open ? b.open + ' open code' + (b.open === 1 ? '' : 's') : 'live updates') + (b && b.next_ko ? ' · next kickoff ' + esc(b.next_ko) : '') + '</span>' +
-      '<h1 class="page">Today’s <em>Codes</em></h1><p class="lead">SportyBet booking codes from measured rules. Copy a code, load it on SportyBet, stake.</p></div>';
-    h += '<div class="pills center">' + [['today', 'Today'], ['yesterday', 'Yesterday'], ['tomorrow', 'Tomorrow']].map(function (d) { return '<button data-day="' + d[0] + '"' + (S.day === d[0] ? ' class="on"' : '') + '>' + d[1] + '</button>'; }).join('') + '</div>';
-    var have = (list || []).map(function (c) { return c.product; });
-    h += '<div class="pills center">' + ['All'].concat(PRODUCTS.filter(function (p) { return have.indexOf(p) >= 0; })).map(function (p) { return '<button data-pf="' + esc(p) + '"' + (S.productFilter === p ? ' class="on2"' : '') + '>' + esc(p) + '</button>'; }).join('') + '</div>';
-    h += gradeBox(true);
+      '<h1 class="page">' + (S.day === 'yesterday' ? 'Yesterday’s' : 'Today’s') + ' <em>Codes</em></h1><p class="lead" style="margin-bottom:6px">Pick the odds you want. Betty builds the code from the day’s slip: the shortest prices first, up to your odds.</p></div>';
+    h += '<div class="oddsbar"><div class="k">Pick your odds</div><div class="seg">' + [['3', '3x'], ['5', '5x'], ['10', '10x'], ['25', '25x'], ['50', '50x'], ['100', '100x'], ['full', 'Full slip']].map(function (o) {
+      var avail = !L || L.products.some(function (p) { return o[0] === 'full' || (p.ladder || {})[o[0]]; });
+      return '<button data-odds="' + o[0] + '" class="' + (S.odds === o[0] ? 'on' : '') + (avail ? '' : ' none') + '">' + o[1] + '</button>';
+    }).join('') + '</div></div>';
     if (S.err) h += '<div class="err">' + esc(S.err) + '</div>';
-    if (!list) return h + '<div class="muted center">Loading codes…</div></div>';
-    var shown = list.filter(function (c) { return S.productFilter === 'All' || c.product === S.productFilter; });
-    var current = shown.filter(function (c) { return !c.superseded_by; }), older = shown.filter(function (c) { return c.superseded_by; });
-    if (!shown.length) {
-      return h + '<div class="empty"><div class="t">No codes ' + (S.day === 'today' ? 'yet today' : S.day) + '</div><div class="d">Winners and Draws are booked in the morning; live codes fire at the whistle. Check the Live tab.</div></div></div>';
+    if (!L) return h + '<div class="muted center" style="margin:30px 0">Building today’s codes…</div></div>';
+    var cards = L.products.map(function (p) { return rungCard(p, S.odds); }).filter(Boolean);
+    if (!cards.length) {
+      h += '<div class="empty"><div class="t">No ' + (S.odds === 'full' ? '' : S.odds + 'x ') + 'code ' + (S.day === 'yesterday' ? 'yesterday' : 'yet today') + '</div><div class="d">' +
+        (L.products.length ? 'Today’s slips do not reach ' + S.odds + 'x with games still to kick off. Try a lower odds or the full slip.' : 'The morning run books at 09:05 WAT and the evening run at 16:35. Live codes fire at the whistle on the Live tab.') + '</div></div>';
+    } else {
+      h += '<div class="oddsnote">' + (S.odds === 'full' ? 'The whole slip each product booked today.' : 'One code per product at about ' + S.odds + 'x · the shortest prices of the day’s slip that are still to kick off.') + '</div>';
+      h += cards.join('');
     }
-    var use = S.showOlder ? shown : current;
-    ORDER.concat(use.map(function (c) { return c.product; }).filter(function (p, i, a) { return ORDER.indexOf(p) < 0 && a.indexOf(p) === i; })).forEach(function (p) {
-      use.filter(function (c) { return c.product === p; }).forEach(function (c) { h += tipCard(c); });
-    });
-    if (older.length) h += '<div class="older"><button data-older="1">' + (S.showOlder ? 'Hide' : 'Show') + ' ' + older.length + ' earlier version' + (older.length === 1 ? '' : 's') + ' of rebooked slips</button></div>';
+    h += '<div class="daylink"><a href="#" data-day="today" class="' + (S.day === 'today' ? 'on' : '') + '">Today</a>·<a href="#" data-day="yesterday" class="' + (S.day === 'yesterday' ? 'on' : '') + '">Yesterday</a>·<a href="#results">Results</a></div>';
+    h += gradeBox(true);
     return h + '</div>';
   }
 
@@ -957,13 +1011,14 @@ nav.bottom span{font-size:10.5px;font-weight:700}
   // ---------- events ----------
   document.addEventListener('click', function (e) {
     if (!e.target.closest('#moreWrap')) closeMenu();
-    var t = e.target.closest('[data-copy],[data-open],[data-go],[data-day],[data-leg],[data-filter],[data-when],[data-res],[data-more],[data-pref],[data-tg],[data-pf],[data-older],[data-expand],[data-pane],[data-runp],[data-flag],[data-run],[data-yest],[data-watch],[data-nest]');
+    var t = e.target.closest('[data-copy],[data-open],[data-go],[data-day],[data-leg],[data-filter],[data-when],[data-res],[data-more],[data-pref],[data-tg],[data-pf],[data-older],[data-expand],[data-pane],[data-runp],[data-flag],[data-run],[data-yest],[data-watch],[data-nest],[data-odds]');
     if (!t) return;
     if (t.hasAttribute('data-copy')) { e.stopPropagation(); doCopy(t.getAttribute('data-copy')); return; }
     if (t.hasAttribute('data-nest')) { nest(t.getAttribute('data-nest'), +t.getAttribute('data-target')); return; }
     if (t.hasAttribute('data-open')) { var code = t.getAttribute('data-open'); if (findCode(code)) openSlip(code); else gradeCode(code); return; }
     if (t.hasAttribute('data-go')) { go(t.getAttribute('data-go')); return; }
-    if (t.hasAttribute('data-day')) { S.day = t.getAttribute('data-day'); render(); loadCodes(); return; }
+    if (t.hasAttribute('data-day')) { e.preventDefault(); S.day = t.getAttribute('data-day'); S.ladder = null; render(); loadLadder(true); loadCodes(); return; }
+    if (t.hasAttribute('data-odds')) { S.odds = t.getAttribute('data-odds'); save('betty.odds', S.odds); render(); return; }
     if (t.hasAttribute('data-leg')) { var i = +t.getAttribute('data-leg'); S.openLeg = S.openLeg === i ? null : i; render(); return; }
     if (t.hasAttribute('data-filter')) { S.recFilter = t.getAttribute('data-filter'); S.recShow = 60; render(); return; }
     if (t.hasAttribute('data-when')) { S.recWhen = t.getAttribute('data-when'); S.recShow = 60; render(); return; }
@@ -1010,11 +1065,11 @@ nav.bottom span{font-size:10.5px;font-weight:700}
     }
   }, 1000);
   setInterval(function () { loadLive(); loadBanner().then(function () { if (S.tab === 'Today') render(); }); }, 30000);
-  setInterval(function () { if (S.tab === 'Today' || S.tab === 'Slip') loadCodes(S.day, true); if (S.tab === 'Record') loadLegs(); }, 60000);
+  setInterval(function () { if (S.tab === 'Today') loadLadder(true); if (S.tab === 'Today' || S.tab === 'Slip') loadCodes(S.day, true); if (S.tab === 'Record') loadLegs(); }, 60000);
   setInterval(function () { if (S.tab === 'Console') loadConsole(); }, 5000);
 
   render();
-  loadCodes('today').then(loadBanner).then(function () { render(); route(); });
+  loadLadder(true); loadCodes('today').then(loadBanner).then(function () { render(); route(); });
   loadLive();
   window.addEventListener('hashchange', route);
 })();

@@ -8,7 +8,7 @@ straight into the same build/pick_for_target/book path the CLI uses. This has
 to run locally: a board build takes 15-40 minutes of Flashscore fetching and
 Poisson work, which is why the old Vercel page could never use this engine.
 """
-import io, json, re, threading, subprocess, sys, contextlib, datetime as dt
+import io, json, re, threading, subprocess, sys, contextlib, time, datetime as dt
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import urlparse, parse_qs
 
@@ -200,7 +200,7 @@ def live_job(until, dry, chat=None):
             chat = _TB.LAST_CHAT
         except Exception:
             chat = None
-    LIVE.update(state='running', log=[], started=dt.datetime.now(A.WAT).strftime('%H:%M'), chat=bool(chat))
+    LIVE.update(state='running', log=[], started=dt.datetime.now(A.WAT).strftime('%H:%M'), chat=bool(chat), wanted=True)
     def log(msg):
         for part in str(msg).splitlines():
             if part.strip():
@@ -260,9 +260,50 @@ def live_stop():
     try:
         import live_ht as LD
         LD.STOP['flag'] = True
+        LIVE['wanted'] = False            # 13 Sep: the scheduler leaves it off until /live
         return LIVE['state'] == 'running'
     except Exception:
         return False
+
+
+def scheduler():
+    """13 Sep: the codes are generated every day. Every minute: run any job on
+    betty_api.SCHEDULE whose time has passed and that has not run today (one at
+    a time, through the same JOB lock as the buttons), build the odds ladder
+    from each new code, and keep the live watcher running unless /stop asked
+    for it to be off. State lives next to bookings.md on the volume, so a
+    redeploy never repeats a run."""
+    import betty_api as BA
+    time.sleep(20)
+    while True:
+        try:
+            if LIVE.get('wanted', True) and LIVE['state'] != 'running':
+                live_job(0, False)
+            for hhmm, job, path, body in BA.sched_due():
+                with LOCK:
+                    if JOB['state'] not in ('idle', 'done'):
+                        break
+                    JOB['state'] = 'building'
+                if path == '/api/winners':
+                    args = ['book_winners.py', '--until', str(body['until']), '--days', str(body.get('days', 0))]
+                    script_job('winners', args, 'winners slip (scheduled)')
+                elif path == '/api/points':
+                    args = ['book_amfoot.py', '--sport', body['sport'], '--days', str(body.get('days', 0))]
+                    script_job('points', args, f"{body['sport']} slip (scheduled)")
+                elif path == '/api/draws':
+                    draw_job(body['until'], body.get('days', 0), False, bool(body.get('half')))
+                res = JOB.get('result') or {}
+                code = res.get('code')
+                if code:
+                    try:
+                        BA.build_ladder(code)
+                    except Exception as e:
+                        res['ladder_error'] = f"{type(e).__name__}: {e}"
+                BA.sched_mark(job, code or res.get('error') or 'no code')
+                JOB['state'] = 'done'
+        except Exception as e:
+            print(f'scheduler: {type(e).__name__}: {e}', flush=True)
+        time.sleep(60)
 
 
 def run_job(target, until, days, dry, rollover=False, engine='composite',
@@ -420,7 +461,7 @@ class Handler(BaseHTTPRequestHandler):
             self._send(_site(), 'text/html; charset=utf-8')
         elif u.path == '/ops':
             self._send(_page(), 'text/html; charset=utf-8')
-        elif u.path in ('/api/codes', '/api/record', '/api/rules', '/api/livefeed', '/api/banner', '/api/console', '/api/gradecode', '/api/legs'):
+        elif u.path in ('/api/codes', '/api/record', '/api/rules', '/api/livefeed', '/api/banner', '/api/console', '/api/gradecode', '/api/legs', '/api/ladder'):
             # 13 Sep: the website's data. Everything comes from bookings.md (repo
             # copy + the Railway volume), the share API grader and the watcher.
             import betty_api as BA
@@ -436,10 +477,13 @@ class Handler(BaseHTTPRequestHandler):
                     body = BA.banner()
                 elif u.path == '/api/console':
                     body = BA.console_state(LIVE, JOB, BUILD)
+                    body['schedule'] = BA.sched_view()
                 elif u.path == '/api/gradecode':
                     body = BA.grade_any(q.get('code', [''])[0])
                 elif u.path == '/api/legs':
                     body = BA.legs_list(int(q.get('days', ['35'])[0]))
+                elif u.path == '/api/ladder':
+                    body = BA.ladder_for(q.get('day', ['today'])[0], build=q.get('build', ['1'])[0] != '0')
                 else:
                     body = BA.live_feed(LIVE)
                 body['now'] = dt.datetime.now(A.WAT).strftime('%H:%M:%S')
@@ -688,6 +732,7 @@ if __name__ == '__main__':
     try:
         import betty_api as _BA
         _BA.start_warmer()           # 13 Sep: the website's grade cache, refreshed every 3 min
+        threading.Thread(target=scheduler, daemon=True).start()   # daily codes + watcher keep-alive
     except Exception as _e:
-        print(f'betty_api: warmer not started ({_e})')
+        print(f'betty_api: warmer/scheduler not started ({_e})')
     ThreadingHTTPServer((HOST, PORT), Handler).serve_forever()

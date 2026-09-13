@@ -628,6 +628,8 @@ def nest_code(code, target):
         return dict(error='target must be a number')
     if target < 1.5 or target > 5000:
         return dict(error='target must be between 1.5 and 5000')
+    if target == int(target):
+        target = int(target)
     key = f"{code}:{target:g}"
     cache = _nest_load()
     hit = cache.get(key)
@@ -641,12 +643,22 @@ def nest_code(code, target):
     if not legs:
         return dict(error='no leg of this code is still to kick off')
     legs.sort(key=lambda l: l['price'])
-    pick, combo = [], 1.0
-    for l in legs:
-        pick.append(l); combo *= l['price']
-        if combo >= target:
-            break
-    if combo < target:
+    # the shortest k prices plus ONE more leg from further down the list, the
+    # combination that lands nearest the target (a 5x rung should read ~5x, not
+    # 6.8x because the tenth short price overshot)
+    best, base, pick, combo = None, 1.0, [], 1.0
+    for k in range(len(legs)):
+        for j in range(k, len(legs)):
+            cand = base * legs[j]['price']
+            if cand >= target * 0.95 and (best is None or abs(cand - target) < abs(best[0] - target)):
+                best = (cand, k, j)
+        base *= legs[k]['price']
+    if best:
+        cand, k, j = best
+        pick = legs[:k] + [legs[j]]; combo = cand
+    else:
+        pick = list(legs); combo = base
+    if combo < target * 0.95:
         return dict(error=f"the legs still to play only reach {combo:.2f}x together; pick a lower target", max=round(combo, 2))
     if src and src['product'] == 'Live':
         return dict(error='live codes are single shots at the whistle; nothing to pick from')
@@ -664,6 +676,54 @@ def nest_code(code, target):
                legs=[dict(match=l['match'], sel=l['sel'], price=l['price'], ko=dt.datetime.fromtimestamp(l['ko'], tz=WAT).strftime('%a %H:%M')) for l in pick])
     cache[key] = res; _nest_save()
     return res
+
+
+LADDER = [3, 5, 10, 25, 50, 100]
+
+
+def build_ladder(code):
+    """Every rung of the ladder from one base code: nest_code at each target the
+    slip can reach. Cached rungs (first game not started) are reused."""
+    out = {}
+    for t in LADDER:
+        r = nest_code(code, t)
+        if r.get('code'):
+            out[t] = r
+        elif r.get('max') is not None:
+            break                                  # the slip cannot reach this or any higher rung
+    return out
+
+
+def ladder_for(day='today', build=True):
+    """The Codes page: per product, today's base slip and its ladder of odds."""
+    today = dt.datetime.now(tz=WAT).date()
+    target = {'today': today, 'yesterday': today - dt.timedelta(days=1)}.get(day, today)
+    products, seen = [], set()
+    for c in parse_bookings():
+        if _day_of(c['when']) != target or c['nested_from'] or c['superseded_by'] or not c['legs']:
+            continue
+        key = (c['product'], c['sport'])
+        if key in seen:
+            continue                                # newest base code per product only
+        seen.add(key)
+        d = decorate(c)
+        rungs = {n['target']: n for n in nested_for(c['code'])}
+        if build and c['product'] != 'Live' and target == today:
+            for t in LADDER:
+                if t in rungs and rungs[t].get('first_ko', 0) > time.time() + 60:
+                    continue
+                if not d['odds'] or t >= d['odds'] * 0.9:
+                    break
+                r = nest_code(c['code'], t)
+                if r.get('code'):
+                    rungs[t] = r
+                else:
+                    break
+        d['ladder'] = {str(t): rungs[t] for t in sorted(rungs)}
+        products.append(d)
+    order = {p: i for i, p in enumerate(PRODUCTS)}
+    products.sort(key=lambda d: order.get(d['product'], 9))
+    return dict(day=str(target), targets=LADDER, products=products)
 
 
 # ---------------------------------------------------------------- any code
@@ -980,3 +1040,72 @@ def console_state(LIVE, JOB, BUILD):
         yesterday=dict(YEST),
         bookinglog=[dict(code=c['code'], product=c['product'], sport=c['sport'], nlegs=len(c['legs']), odds=round(_combo(c['legs']), 2) if c['legs'] else None,
                          booked=c['when'], url=c['url'], label=c['label']) for c in parse_bookings()[:15]])
+
+
+# ---------------------------------------------------------------- daily schedule
+
+SCHEDULE = [
+    # (time WAT, job id, POST endpoint, body) - the codes are generated every day
+    ('09:05', 'winners-am', '/api/winners', dict(until=23, days=0)),
+    ('09:20', 'draws', '/api/draws', dict(until=23, days=0)),
+    ('09:35', 'points-amfoot', '/api/points', dict(sport='amfoot', days=0)),
+    ('09:40', 'points-basketball', '/api/points', dict(sport='basketball', days=0)),
+    ('09:45', 'points-hockey', '/api/points', dict(sport='hockey', days=0)),
+    ('09:50', 'points-handball', '/api/points', dict(sport='handball', days=0)),
+    ('16:35', 'winners-pm', '/api/winners', dict(until=6, days=0)),
+]
+
+
+def _sched_path():
+    vol = os.environ.get('BOOKINGS_PATH')
+    return os.path.join(os.path.dirname(vol) if vol else ROOT, 'schedule_state.json')
+
+
+def sched_state():
+    try:
+        return json.load(open(_sched_path()))
+    except Exception:
+        return {}
+
+
+def sched_mark(job, note):
+    st = sched_state()
+    st[job] = dict(date=str(dt.datetime.now(tz=WAT).date()), at=dt.datetime.now(tz=WAT).strftime('%H:%M'), note=note)
+    try:
+        json.dump(st, open(_sched_path(), 'w'))
+    except OSError:
+        pass
+
+
+GRACE_MIN = 90
+
+
+def sched_due(now=None):
+    """Jobs whose time has passed today (within the grace window) and that have
+    not run today. A job older than the grace window is marked missed rather
+    than run late - a container that comes up at 19:30 must not book the
+    morning's slips."""
+    now = now or dt.datetime.now(tz=WAT)
+    st = sched_state(); due = []
+    for hhmm, job, path, body in SCHEDULE:
+        h, m = (int(x) for x in hhmm.split(':'))
+        if st.get(job, {}).get('date') == str(now.date()):
+            continue
+        late = (now.hour * 60 + now.minute) - (h * 60 + m)
+        if late < 0:
+            continue
+        if late > GRACE_MIN:
+            sched_mark(job, f'missed (server was not up within {GRACE_MIN} min)')
+            continue
+        due.append((hhmm, job, path, body))
+    return due
+
+
+def sched_view():
+    st = sched_state(); now = dt.datetime.now(tz=WAT)
+    out = []
+    for hhmm, job, path, body in SCHEDULE:
+        last = st.get(job) or {}
+        out.append(dict(time=hhmm, job=job, what=f"{path} {json.dumps(body)}", last=(f"{last.get('date')} {last.get('at')} - {last.get('note')}" if last else 'never'),
+                        today=last.get('date') == str(now.date())))
+    return out
