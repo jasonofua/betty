@@ -460,6 +460,9 @@ class Handler(BaseHTTPRequestHandler):
         if u.path == '/':
             self._send(_site(), 'text/html; charset=utf-8')
         elif u.path == '/ops':
+            # 13 Sep: the old operator page is behind the same key as the Console
+            if not self._authed({'key': q.get('key', [''])[0]}):
+                self._send('operator key required (?key=...)', 'text/plain', 401); return
             self._send(_page(), 'text/html; charset=utf-8')
         elif u.path in ('/api/codes', '/api/record', '/api/rules', '/api/livefeed', '/api/banner', '/api/console', '/api/gradecode', '/api/legs', '/api/ladder'):
             # 13 Sep: the website's data. Everything comes from bookings.md (repo
@@ -476,6 +479,8 @@ class Handler(BaseHTTPRequestHandler):
                 elif u.path == '/api/banner':
                     body = BA.banner()
                 elif u.path == '/api/console':
+                    if not self._authed({'key': q.get('key', [''])[0]}):
+                        self._send(json.dumps({'error': 'operator key required'}), code=401); return
                     body = BA.console_state(LIVE, JOB, BUILD)
                     body['schedule'] = BA.sched_view()
                 elif u.path == '/api/gradecode':

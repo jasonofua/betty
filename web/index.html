@@ -397,8 +397,7 @@ nav.bottom span{font-size:10.5px;font-weight:700}
     <div class="hbar">
       <button class="brand" data-go="Today"><span class="word">Betty</span><span class="dot"></span></button>
       <nav class="top" id="topnav"></nav>
-      <div class="more" id="moreWrap" style="margin-left:auto"><button class="ghost" id="moreBtn" style="min-height:36px">More &#9662;</button><div class="menu" id="menu"><button data-go="Rules">Rules</button><button data-go="Account">Account</button><button data-go="Console">Console</button><button id="themeM">Theme</button></div></div>
-      <button class="theme" id="theme" title="Toggle light mode"><span id="themeLabel">Light</span></button>
+      <button class="theme" id="theme" title="Toggle light mode" style="margin-left:auto"><span id="themeLabel">Light</span></button>
     </div>
   </header>
   <main id="main"></main>
@@ -511,7 +510,13 @@ nav.bottom span{font-size:10.5px;font-weight:700}
   }
   function loadLegs() { return get('/api/legs').then(function (j) { S.legsData = j; if (S.tab === 'Record') render(); }).catch(function (e) { S.err = 'Could not load results: ' + e.message; render(); }); }
   function loadRules() { return get('/api/rules').then(function (j) { S.rules = j; if (S.tab === 'Rules') render(); }).catch(function (e) { S.err = 'Could not load the rules: ' + e.message; render(); }); }
-  function loadConsole() { return get('/api/console').then(function (j) { S.console = j; S.consoleAt = Date.now(); if (S.tab === 'Console') render(); }).catch(function (e) { S.err = 'Could not load the console: ' + e.message; render(); }); }
+  function loadConsole() {
+    return fetch('/api/console', { cache: 'no-store', headers: { 'X-Ops-Key': S.key || '' } }).then(function (r) {
+      if (r.status === 401) { S.locked = true; S.console = null; if (S.tab === 'Console') render(); return; }
+      if (!r.ok) throw new Error('console ' + r.status);
+      return r.json().then(function (j) { S.locked = false; S.console = j; S.consoleAt = Date.now(); if (S.tab === 'Console') render(); });
+    }).catch(function (e) { S.err = 'Could not load the console: ' + e.message; render(); });
+  }
 
   function decorate(c) {
     var n = { won: 0, lost: 0, live: 0, pending: 0, void: 0 };
@@ -540,7 +545,6 @@ nav.bottom span{font-size:10.5px;font-weight:700}
     if (S.tab === 'Live') loadLive();
     if (S.tab === 'Record') { if (!S.legsData) loadLegs(); }
     if (S.tab === 'Rules') { if (!S.rules) loadRules(); }
-    if (S.tab === 'Account') loadCodes('today');
     if (S.tab === 'Console') loadConsole();
   }
   function openSlip(code) { S.slip = code; S.tab = 'Slip'; S.openLeg = null; window.scrollTo(0, 0); setHash('#slip/' + code); render(); }
@@ -554,7 +558,7 @@ nav.bottom span{font-size:10.5px;font-weight:700}
     }
     var mc = /^console(?:\/(\w+))?$/.exec(h);
     if (mc) { if (mc[1]) { var p = mc[1].charAt(0).toUpperCase() + mc[1].slice(1); if (CONSOLE_PANES.indexOf(p) >= 0) S.pane = p; } if (S.tab !== 'Console') go('Console'); return; }
-    var tab = { live: 'Live', record: 'Record', results: 'Record', rules: 'Rules', account: 'Account' }[h];
+    var tab = { live: 'Live', record: 'Record', results: 'Record', rules: 'Rules' }[h];
     if (tab && tab !== S.tab) go(tab);
   }
   function doCopy(code) {
@@ -573,7 +577,7 @@ nav.bottom span{font-size:10.5px;font-weight:700}
       S.graded = decorate(j); openSlip(j.code);
     }).catch(function (e) { S.gradeBusy = false; S.err = 'Could not grade ' + code + ': ' + e.message; render(); });
   }
-  function closeMenu() { var m = document.getElementById('menu'); if (m) m.classList.remove('open'); }
+  function closeMenu() {}
 
   // ---------- pieces ----------
   function chip(k, txt) { return '<span class="chip ' + k + '">' + esc(txt) + '</span>'; }
@@ -825,7 +829,7 @@ nav.bottom span{font-size:10.5px;font-weight:700}
         '<span class="sc">' + esc(r.score || '—') + '</span>' + resTag(r) + '</div>';
     }).join('') : '<div class="empty"><div class="t">No legs match</div><div class="d">Try another day or product.</div></div>';
     if (rows.length > show.length) h += '<button class="more-rows" data-more="1">Show more (' + (rows.length - show.length) + ' left)</button>';
-    h += '<div class="muted" style="margin-top:14px">SportyBet share codes expire after about two weeks, so older codes cannot be re-graded; the window starts ' + esc(D.since) + '. Hover a note for the full line; open the code for the numbers behind each pick.</div>';
+    h += '<div class="muted" style="margin-top:14px">SportyBet share codes expire after about two weeks, so older codes cannot be re-graded; the window starts ' + esc(D.since) + '. Open a code for the numbers behind each pick.</div>';
     return h + '</div>';
   }
 
@@ -844,47 +848,15 @@ nav.bottom span{font-size:10.5px;font-weight:700}
     return h;
   }
 
-  // ---------- Account ----------
-  function renderAccount() {
-    var st = stakeNum();
-    var open = (S.codes.today || []).filter(function (c) { return !c.dead && !c.superseded_by; });
-    var bot = S.live && S.live.bot;
-    var h = '<h1 class="page" style="margin-bottom:18px">Account</h1>';
-    h += '<div class="agrid">' +
-      '<div class="acard"><div class="top"><span class="plan">Free</span><span class="chip">Current plan</span></div><div class="price">₦0</div>' +
-      ['Every code, live', 'The full Record page', 'Every slip sheet'].map(function (f) { return '<div class="feat"><b>✓</b><span>' + f + '</span></div>'; }).join('') + '</div>' +
-      '<div class="acard paid"><div class="top"><span class="plan">Paid</span><span class="chip" style="background:var(--ac-soft);color:var(--ac-tx)">Everything</span></div>' +
-      '<div class="price">₦4,500<small> /month</small> <span style="font-size:15px;color:var(--tx2)">₦1,500<small> /week</small></span></div>' +
-      ['Live half-time codes the moment they fire', 'Telegram push per product', 'Points sports', 'Same-day slip sheets', 'Max odds accumulators'].map(function (f) { return '<div class="feat"><b>✓</b><span>' + f + '</span></div>'; }).join('') +
-      '<button class="btn wide" style="margin-top:8px" disabled>Upgrade</button><div class="fine">Prices are placeholders. Nothing is charged today; everything is open while Betty is in its first month.</div></div></div>';
-    h += '<div class="agrid" style="margin-bottom:0">' +
-      '<div class="acard"><div class="kicker" style="margin-bottom:12px">Stake calculator</div><label class="l">Stake per code (₦)</label>' +
-      '<input class="input" id="stake" inputmode="numeric" value="' + esc(S.stake) + '">' +
-      (open.length ? open.map(function (c) { return '<div class="srow"><span class="c">' + esc(c.code) + '</span><span class="o">×' + fmtOdds(c.odds) + '</span><span class="r">' + naira(st * (c.odds || 0)) + '</span></div>'; }).join('') : '<div class="muted">No open code today.</div>') +
-      '<div class="fine" style="text-align:left">Returns are gross, before SportyBet deductions. Open codes today only.</div></div>' +
-      '<div class="stack">' +
-      '<div class="acard" style="background:var(--s2)"><div style="display:flex;gap:12px;align-items:flex-start"><div class="tgico" style="width:36px;height:36px;font-size:15px">TG</div><div style="flex:1;min-width:0"><div style="font-size:15px;font-weight:700;margin-bottom:2px">Telegram</div>' +
-      '<div style="font-size:12.5px;color:var(--tx2)">' + (bot ? '@' + esc(bot) + ' pushes every code as it is booked; /live starts the half-time watcher, /stop ends it.' : 'The bot is not reachable right now.') + '</div></div>' +
-      '<button class="track' + (S.tg ? ' on' : '') + '" data-tg="1" title="Telegram pushes"><span class="knob"></span></button></div>' +
-      (bot ? '<a class="btn line" style="display:flex;margin-top:12px" href="https://t.me/' + esc(bot) + '" target="_blank" rel="noopener">Open @' + esc(bot) + '</a>' : '') + '</div>' +
-      '<div class="acard"><div class="kicker" style="margin-bottom:12px">Notify me per product</div>' +
-      PRODUCTS.map(function (p) { return '<div class="prow">' + badge(p) + '<button class="track' + (S.prefs[p] ? ' on' : '') + '" data-pref="' + esc(p) + '"><span class="knob"></span></button></div>'; }).join('') +
-      '<div class="fine" style="text-align:left">Saved on this device. Per-product Telegram filtering lands with accounts.</div></div>' +
-      '<div class="acard"><div class="kicker" style="margin-bottom:12px">Sign in</div><label class="l">Phone number</label>' +
-      '<div style="display:flex;gap:8px;margin-bottom:10px"><span class="mono" style="padding:12px 13px;border-radius:999px;background:var(--s2);border:1px solid var(--line2);font-size:15px;color:var(--tx2)">+234</span>' +
-      '<input class="input" style="flex:1;min-width:0;margin:0;font-size:15px" placeholder="802 000 0000" disabled></div>' +
-      '<div class="otp">' + '<span></span>'.repeat(6) + '</div><button class="btn wide" disabled>Send code by SMS</button>' +
-      '<div class="fine">Accounts open with the paid plan. Until then every page is public.</div></div>' +
-      '</div></div>';
-    return h;
-  }
-
   // ---------- Console ----------
   function hk2(items) { return '<div class="hk2">' + items.map(function (x) { return '<span><span class="k">' + esc(x.k) + '</span><span class="v">' + esc(x.v) + '</span></span>'; }).join('') + '</div>'; }
   function renderConsole() {
     var C = S.console;
     var h = '<h1 class="page">Console</h1><p class="lead" style="margin-bottom:16px">The operator side: run each engine with its options, drive the live watcher, and read the state of the corpus the rules are measured on.</p>';
     if (S.err) h += '<div class="err">' + esc(S.err) + '</div>';
+    if (S.locked) {
+      return h + '<form class="gradebox" id="keyform"><span><span class="t">Operator key</span><br><span class="d">This page runs the engines. It is locked.</span></span><input id="keyin" type="password" placeholder="key" autocomplete="off" style="letter-spacing:.1em;text-transform:none"><button class="btn" type="submit">Unlock</button></form>';
+    }
     h += '<div class="chips" style="margin-bottom:20px">' + CONSOLE_PANES.map(function (p) { return '<button data-pane="' + p + '"' + (S.pane === p ? ' class="on"' : '') + '>' + p + '</button>'; }).join('') + '</div>';
     if (!C) return h + '<div class="muted">Loading…</div>';
     if (S.pane === 'Run') h += paneRun(C);
@@ -1004,13 +976,12 @@ nav.bottom span{font-size:10.5px;font-weight:700}
     var focus = document.activeElement && document.activeElement.id;
     var val = focus === 'gradein' ? document.getElementById('gradein').value : null;
     m.innerHTML = S.tab === 'Today' ? renderToday() : S.tab === 'Slip' ? renderSlip() : S.tab === 'Live' ? renderLive()
-      : S.tab === 'Record' ? renderRecord() : S.tab === 'Rules' ? '<div class="col">' + renderRules() + '</div>' : S.tab === 'Console' ? renderConsole() : '<div class="col">' + renderAccount() + '</div>';
+      : S.tab === 'Record' ? renderRecord() : S.tab === 'Rules' ? '<div class="col">' + renderRules() + '</div>' : S.tab === 'Console' ? renderConsole() : renderToday();
     if (val != null) { var gi = document.getElementById('gradein'); if (gi) { gi.value = val; gi.focus(); } }
   }
 
   // ---------- events ----------
   document.addEventListener('click', function (e) {
-    if (!e.target.closest('#moreWrap')) closeMenu();
     var t = e.target.closest('[data-copy],[data-open],[data-go],[data-day],[data-leg],[data-filter],[data-when],[data-res],[data-more],[data-pref],[data-tg],[data-pf],[data-older],[data-expand],[data-pane],[data-runp],[data-flag],[data-run],[data-yest],[data-watch],[data-nest],[data-odds]');
     if (!t) return;
     if (t.hasAttribute('data-copy')) { e.stopPropagation(); doCopy(t.getAttribute('data-copy')); return; }
@@ -1040,16 +1011,13 @@ nav.bottom span{font-size:10.5px;font-weight:700}
       return;
     }
   });
-  document.getElementById('moreBtn').addEventListener('click', function (e) { e.stopPropagation(); document.getElementById('menu').classList.toggle('open'); });
-  document.getElementById('themeM').addEventListener('click', function () { S.theme = S.theme === 'dark' ? 'light' : 'dark'; save('betty.theme', S.theme); closeMenu(); render(); });
   document.getElementById('theme').addEventListener('click', function () { S.theme = S.theme === 'dark' ? 'light' : 'dark'; save('betty.theme', S.theme); render(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
-  document.addEventListener('submit', function (e) { if (e.target.id === 'gradeform') { e.preventDefault(); gradeCode(document.getElementById('gradein').value); } });
+  document.addEventListener('submit', function (e) {
+    if (e.target.id === 'gradeform') { e.preventDefault(); gradeCode(document.getElementById('gradein').value); }
+    if (e.target.id === 'keyform') { e.preventDefault(); S.key = document.getElementById('keyin').value.trim(); save('betty.key', S.key); S.err = null; loadConsole(); }
+  });
   document.addEventListener('input', function (e) {
-    if (e.target.id === 'stake') { S.stake = e.target.value; save('betty.stake', S.stake);
-      var rows = document.querySelectorAll('.srow'); var st = stakeNum();
-      (S.codes.today || []).filter(function (c) { return !c.dead && !c.superseded_by; }).forEach(function (c, i) { if (rows[i]) rows[i].querySelector('.r').textContent = naira(st * (c.odds || 0)); });
-    }
     if (e.target.hasAttribute('data-opt')) S.runVals[e.target.getAttribute('data-opt')] = e.target.value;
   });
 
