@@ -736,10 +736,10 @@ def live_feed(LIVE):
 
 RULES = [
     dict(product='Winners', tag='match result',
-         plain="The market favourite only, and only when venue goal difference backs it. Short prices go as a straight win, mid prices as a double chance, and any price becomes a double chance when either side is draw-prone or the favourite has no shot stats on the feed. A favourite whose last ten shows more losses than wins, that is out-shot on target, or that has a losing head-to-head is dropped.",
+         plain="The market favourite only, and only when venue goal difference backs it. Short prices go as a straight win, mid prices as a double chance, and any price becomes a double chance when either side is draw-prone or the favourite has no shot stats on the feed. A favourite whose last ten shows more losses than wins, that is out-shot on target, that creates fewer shots on target than the opponent does, or that has a losing head-to-head is dropped. A dead heat in the market is no favourite.",
          thresholds=[dict(k='Venue goal difference, home', v='1.0 a game'), dict(k='Venue goal difference, away', v='1.5 a game'), dict(k='Straight win, price under', v='1.80'),
                      dict(k='Double chance band', v='1.80 to 2.60'), dict(k='Draw-prone: favourite venue draws', v='5+'), dict(k='Draw-prone: opponent venue draws', v='4+'),
-                     dict(k='Draw-prone: combined venue draws', v='4+'), dict(k='Dropped when', v='more losses than wins, out-shot on target, losing H2H')],
+                     dict(k='Draw-prone: combined venue draws', v='4+'), dict(k='Dropped when', v='more losses than wins, out-shot on target, out-created on target, losing H2H, dead heat')],
          measured='Corpus: home favourites at margin 1.0+ win 52.6%, win-or-draw 75.9% (19,945 matches). The yesterday check replays the rule over the whole previous board before every booking.'),
     dict(product='Draws', tag='draw gate',
          plain="Two branches. The quiet-game filter reads expected goals, combined draws, mismatch, expected shots on target, shot evenness and blanks. The home-profile branch takes home sides that draw at home and concede little, in leagues that draw often. Price floor at the gate's own rate. One slip a day.",
@@ -751,9 +751,9 @@ RULES = [
          thresholds=[dict(k='Gate', v='identical to Draws'), dict(k='Market', v='1st Half 1X2 Draw (market 60)'), dict(k='Fair price inside the gate', v='2.09')],
          measured='Corpus: 47.9% half-time draws inside the gate against 40.0% for all matches; 54.2% where the league draws 34%+.'),
     dict(product='Live', tag='half-time whistle',
-         plain="The watcher reads every game on the live board at the break and books three shapes: the Draw on gate games level at 0-0 or 1-1; second-half Over 0.5 when every one of the fourteen trailing second halves scored and the first half had shots in it; second-half Under 1.5 when twelve of fourteen trailing halves stayed at one goal or fewer, at most one goal is on the board, and nobody is pressing. No live stats, no bet. Legs that land within two minutes go on one slip.",
+         plain="The watcher reads every game on the live board at the break and books three shapes: the Draw on gate games level at 0-0 or 1-1; second-half Over 0.5 when every one of the fourteen trailing second halves scored and the first half had shots in it; second-half Under 1.5 when twelve of fourteen trailing halves stayed at one goal or fewer, the game is 0-0 at the break, and nobody is pressing. No live stats, no bet. Legs that land within two minutes go on one slip.",
          thresholds=[dict(k='Draw taken at', v='0-0 or 1-1, gate games, price 2.10+'), dict(k='2H Over 0.5 needs', v='14 of 14 trailing halves scored, price 1.20+'), dict(k='2H Over 0.5 first-half shots', v='7+'),
-                     dict(k='2H Under 1.5 needs', v='12 of 14 halves at <= 1 goal, HT total <= 1, price 1.55+'), dict(k='Under blocked when a side is at', v='10+ shots and 60% possession'), dict(k='One slip when legs land within', v='2 minutes')],
+                     dict(k='2H Under 1.5 needs', v='12 of 14 halves at <= 1 goal, 0-0 at the break, price 1.55+'), dict(k='Under blocked when a side is at', v='10+ shots and 60% possession'), dict(k='One slip when legs land within', v='2 minutes')],
          measured='Corpus: 2H Over 0.5 at 14/14 = 83.6% (1,073 rows), Under 1.5 at 0-0 = 71.6%, gate draw level at HT = 49.3%. Every half-time read is logged with its stats.'),
     dict(product='Points sports', tag='American football, basketball, ice hockey, handball',
          plain="One engine across four points sports. Totals, first-half or first-period totals and handicaps only, never winners. Each side's last seven venue games and period scores are read, and a line only goes out when the large majority of past margins agree. Mismatch games, winner at 1.05 or under, are scored on lookalike games only. College sides with fewer than two games this season prefer the total.",
@@ -768,6 +768,7 @@ RULES = [
 ]
 
 CHANGELOG = [
+    dict(date='13 Sep', txt='Winners: a favourite that creates fewer shots on target than its opponent is dropped (corpus: 46.3% v 54.7% at home, 36.2% v 56.1% away); a dead heat in the market is no favourite. Live: 2H Under 1.5 only at 0-0 (corpus 74.2% v 63.1% with a goal banked).'),
     dict(date='13 Sep', txt='Website: every code with its sheet, live codes with the countdown, the record, the rules, and the operator console.'),
     dict(date='13 Sep', txt='Live: Draw needs 0-0 or 1-1 at the break; Under 1.5 needs at most one goal banked (corpus 71.6% at 0-0, 58.7% at 2+). First-half shots now check the histories: Over needs 7+ shots, Under refuses a side pressing at level.'),
     dict(date='13 Sep', txt='Winners: draw-proneness on either side forces the cover; combined venue-draw line 6 -> 4; a favourite with no shot stats goes on as cover only.'),

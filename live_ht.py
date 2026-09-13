@@ -261,7 +261,11 @@ def run(until_h=None, dry=False, poll=POLL):
                                      f"trailing 2H halves scored {o05}/{len(t2)} ({'83.6' if o05 == len(t2) else '80.2'}%)"))
                 # 13 Sep: Under needs at most one goal at the break - corpus 71.6% at
                 # 0-0, 63.4% at one goal, 58.7% at 2+ (the price is ~fair there).
-                if u15 >= 12 and not pressing and not no_stats and banked <= 1:
+                # 13 Sep evening: 0-0 ONLY. Re-measured with trailing halves built
+                # from the corpus itself (fix_audit_13sep.py): 12/14 at 0-0 = 74.2%
+                # (n 256), at one goal banked 63.1% (n 236) - fair 1.59, and the
+                # book prices it 1.55-1.65. Radnicki 1-0 -> 3-1 was that shape.
+                if u15 >= 12 and not pressing and not no_stats and banked == 0:
                     best = same_event(False, 1.5)
                     if best and best[0] >= U15_MIN:
                         legs.append(('2H U1.5', best[4], best[0], dict(marketId=best[3], specifier=best[2], outcomeId=best[1]),

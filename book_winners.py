@@ -122,6 +122,16 @@ def warnings_for(row, w):
     sot = w['h_sot'] if fav_home else w['a_sot']
     if sot and sot[1] > sot[0]:
         flags.append(f"out-shot on target {sot[0]:.1f} for / {sot[1]:.1f} against")
+    # 13 Sep evening: the favourite must CREATE more than the opponent does.
+    # Corpus (experiments/fix_audit_13sep.py, prior 7 games' shots on target,
+    # any venue): a venue-backed favourite whose SoT-for is below the
+    # opponent's wins 46.3% at home (54.7% otherwise) and 36.2% away (56.1%);
+    # win-or-draw 71.7% / 65.3% against 78.9% / 75.6%. Suwon 3.9 v 4.1,
+    # River Plate 5.6 v 6.6 and Al Saqer 4.2 v 4.8 all lost on 13 Sep; on
+    # R785M7 the check removes 3 lost legs and 2 won.
+    opp_sot = w['a_sot'] if fav_home else w['h_sot']
+    if sot and opp_sot and sot[0] < opp_sot[0]:
+        flags.append(f"out-created: SoT for {sot[0]:.1f} v opponent's {opp_sot[0]:.1f}")
     if w['h2h']:
         fav_w = sum((a > b) if fav_home else (b > a) for _, a, b in w['h2h'])
         fav_l = sum((a < b) if fav_home else (b < a) for _, a, b in w['h2h'])
@@ -166,6 +176,10 @@ def build(until_h, days=0, verbose=True):
                    pick=None, why='')
         if len(hp) < 4 or len(ap) < 4:
             row['why'] = 'no venue form'; rows.append(row); continue
+        if o1 == o2:
+            # 13 Sep: River Plate URU v Fenix at 2.65 / 2.95 / 2.65 - a dead heat has
+            # no favourite; the tie used to break to Home and the cover lost 0-1.
+            row['why'] = f"no favourite: home and away both {o1}"; rows.append(row); continue
         side = 'Home' if o1 <= o2 else 'Away'
         price = o1 if side == 'Home' else o2
         hg, ag = gd(hp), gd(ap)
