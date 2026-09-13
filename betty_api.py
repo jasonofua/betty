@@ -700,8 +700,8 @@ def ladder_for(day='today', build=True):
     target = {'today': today, 'yesterday': today - dt.timedelta(days=1)}.get(day, today)
     products, seen = [], set()
     for c in parse_bookings():
-        if _day_of(c['when']) != target or c['nested_from'] or c['superseded_by'] or not c['legs']:
-            continue
+        if _day_of(c['when']) != target or c['nested_from'] or c['superseded_by'] or not c['legs'] or c['product'] == 'Live':
+            continue                                # live codes live on the Live tab
         key = (c['product'], c['sport'])
         if key in seen:
             continue                                # newest base code per product only
