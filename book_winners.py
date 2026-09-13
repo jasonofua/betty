@@ -189,8 +189,12 @@ def build(until_h, days=0, verbose=True):
         # Forward Madison (last three home games 1:1) v Sarasota (3 away draws)
         # went straight at 1.66 and drew. Al Nassr at Al Khaleej (0W5D5L overall,
         # unmeasured on the corpus - it has no overall records) drew at 1.29.
-        drawy = (fav_draws >= 5 or opp_draws >= 4 or fav_draws + opp_draws >= 6
-                 or (opp_all and opp_all[1] >= 4))
+        # 13 Sep afternoon: combined line 6 -> 4 (corpus: straight win 54.2% at 2
+        # combined draws, 49.5% at 4; Norrkoping 0:0 had 4). No shot stats on the
+        # favourite (Aarhus, Suzano lost with two checks blind) -> cover only.
+        fav_sot = w['h_sot'] if side == 'Home' else w['a_sot']
+        drawy = (fav_draws >= 5 or opp_draws >= 4 or fav_draws + opp_draws >= 4
+                 or (opp_all and opp_all[1] >= 4) or fav_sot is None)
         row['drawy'] = drawy
         if price < STRAIGHT_MAX and not drawy:
             o = outcome(ev, '1', side)
@@ -198,7 +202,8 @@ def build(until_h, days=0, verbose=True):
         elif price < DC_MAX or drawy:
             want = 'Home or Draw' if side == 'Home' else 'Draw or Away'
             o = outcome(ev, '10', want)
-            row.update(pick='dc', label=f"Double Chance / {want}" + (f"  [draw-prone: fav {fav_draws} opp {opp_draws} venue, opp overall {opp_all}]" if drawy else ''), o=o)
+            tag = ('  [no shot stats]' if fav_sot is None else f"  [draw-prone: fav {fav_draws} opp {opp_draws} venue, opp overall {opp_all}]") if drawy else ''
+            row.update(pick='dc', label=f"Double Chance / {want}" + tag, o=o)
         else:
             row['why'] = f"favourite priced {price:.2f} (above {DC_MAX})"; rows.append(row); continue
         if not row.get('o'):
