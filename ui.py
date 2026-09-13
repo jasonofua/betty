@@ -336,13 +336,24 @@ def run_job(target, until, days, dry, rollover=False, engine='composite',
 
 
 def _page():
-    """The front-end lives in ui_page.html and is re-read per request, so
-    design changes land on refresh without restarting the server."""
+    """The operator page (build buttons, rollover, grade box) - public/index.html,
+    re-read per request so design changes land on refresh. Served at /ops
+    since 13 Sep; the Betty site (web/index.html) took over /."""
     try:
         with open(os.path.join(ROOT, 'public', 'index.html'), encoding='utf-8') as f:
             return f.read()
     except OSError:
         return '<h1>public/index.html missing</h1>'
+
+
+def _site(name='index.html'):
+    """The Betty website - web/index.html, the Claude Design page implemented
+    over /api/codes, /api/record, /api/rules and /api/livefeed."""
+    try:
+        with open(os.path.join(ROOT, 'web', name), encoding='utf-8') as f:
+            return f.read()
+    except OSError:
+        return '<h1>web/index.html missing</h1>'
 
 
 
@@ -373,8 +384,31 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         u = urlparse(self.path)
+        q = parse_qs(u.query)
         if u.path == '/':
+            self._send(_site(), 'text/html; charset=utf-8')
+        elif u.path == '/ops':
             self._send(_page(), 'text/html; charset=utf-8')
+        elif u.path in ('/api/codes', '/api/record', '/api/rules', '/api/livefeed', '/api/banner'):
+            # 13 Sep: the website's data. Everything comes from bookings.md (repo
+            # copy + the Railway volume), the share API grader and the watcher.
+            import betty_api as BA
+            try:
+                if u.path == '/api/codes':
+                    body = BA.codes_for(q.get('day', ['today'])[0])
+                elif u.path == '/api/record':
+                    body = BA.record(int(q.get('days', ['35'])[0]))
+                    body['corpus'] = BA.CORPUS_TILES
+                elif u.path == '/api/rules':
+                    body = dict(rules=BA.RULES, changelog=BA.CHANGELOG)
+                elif u.path == '/api/banner':
+                    body = BA.banner()
+                else:
+                    body = BA.live_feed(LIVE)
+                body['now'] = dt.datetime.now(A.WAT).strftime('%H:%M:%S')
+                self._send(json.dumps(body, default=str))
+            except Exception as e:
+                self._send(json.dumps({'error': f"{type(e).__name__}: {e}"}), code=500)
         elif u.path == '/api/live':
             self._send(json.dumps(LIVE)); return
         elif u.path == '/api/status':
@@ -561,4 +595,9 @@ except Exception as _e:
 
 if __name__ == '__main__':
     print(f"dynamic booker UI  ->  http://localhost:{PORT}")
+    try:
+        import betty_api as _BA
+        _BA.start_warmer()           # 13 Sep: the website's grade cache, refreshed every 3 min
+    except Exception as _e:
+        print(f'betty_api: warmer not started ({_e})')
     ThreadingHTTPServer((HOST, PORT), Handler).serve_forever()

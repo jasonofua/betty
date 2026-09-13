@@ -433,20 +433,29 @@ def grade(label, h, a, h1h=None, h1a=None):
 
     return '?'
 
-def grade_code(code):
+def grade_struct(code):
+    """Leg-by-leg grading as data. Every row: match, sel, price, state in
+    won/lost/void/live/pending, score, hint, ko (epoch s), comp, home, away.
+    The same four steps as before (SportyBet's own settlement flag first, then
+    not-started, then score-based for ended-but-unsettled, then a live preview)
+    - grade_code() prints from this, the website reads it as JSON."""
     r = json.loads(urllib.request.urlopen(urllib.request.Request(
         'https://www.sportybet.com/api/ng/orders/share/' + code, headers=HDRS), timeout=20).read().decode())
     outs = (r.get('data') or {}).get('outcomes', [])
-    w = l = p = live = pend = void = 0
     rows = []
     for o in outs:
         m = o['markets'][0]; oc = m['outcomes'][0]
         label = label_of(m.get('id'), m.get('specifier', ''), oc.get('desc', ''))
         shown = api_label(m, oc)          # always meaningful, never '?'
         ms = o.get('matchStatus', ''); ss = o.get('setScore')
-        name = f"{o.get('homeTeamName','')[:18]:18} v {o.get('awayTeamName','')[:16]:16}"
+        cat = ((o.get('sport') or {}).get('category') or {})
+        comp = ' \u00b7 '.join(x for x in (cat.get('name'), (cat.get('tournament') or {}).get('name')) if x)
+        row = dict(home=o.get('homeTeamName', ''), away=o.get('awayTeamName', ''),
+                   match=f"{o.get('homeTeamName', '')} v {o.get('awayTeamName', '')}",
+                   sel=shown, price=float(oc.get('odds') or 0), comp=comp,
+                   ko=int(o.get('estimateStartTime') or 0) // 1000, ms=ms, score=(ss or '').replace(':', '-'))
         if o.get('status') == 5 or ms == 'Cancelled':
-            void += 1; rows.append(('void', f"  void {'-':7} {name} {shown}")); continue
+            rows.append(dict(row, state='void', hint='void')); continue
         gs = o.get('gameScore') or []                       # periods: ['1H','2H'] (+ 'ET','PEN' if played)
         def per(i):
             if i < len(gs) and ':' in str(gs[i]):
@@ -455,69 +464,69 @@ def grade_code(code):
             return None
         p1, p2 = per(0), per(1)
         h1h, h1a = p1 if p1 else (None, None)
-        # ET/pens: SportyBet settles 90-min markets on regulation, but setScore includes ET+penalties.
-        disp = ss or '-'; h = a = None
+        h = a = None
         if ss:
             h, a = map(int, ss.split(':'))
-            # Strip extra time and penalties whenever the period list shows them,
-            # not only when matchStatus says AET/AP. CS Lotus v Crisul reported
-            # plain "Ended" with gameScore ['0:0','0:0','0:0','3:5'] - 0-0 in
-            # regulation, won 5-3 on penalties - so setScore was the SHOOTOUT.
-            # Grading a 90-minute market off that is simply the wrong match.
+            # Strip extra time and penalties whenever the period list shows them
+            # (CS Lotus v Crisul: plain "Ended" with a shootout in setScore).
             if (ms in ('AET', 'AP') or len(gs) > 2) and p1 and p2:
-                h, a = p1[0] + p2[0], p1[1] + p2[1]; disp = f"{h}:{a}r"   # 'r' = 90-min regulation
+                h, a = p1[0] + p2[0], p1[1] + p2[1]; row['score'] = f"{h}-{a}"; row['hint'] = '90 min'
+        if p1:
+            row['ht'] = f"{p1[0]}-{p1[1]}"
         # 1) AUTHORITATIVE: SportyBet's own settlement (isWinning/refundFactor, market status 3).
-        #    Works for EVERY market incl exotic ones (No 3-in-a-row) that cannot be recomputed from score.
         if 'isWinning' in oc or m.get('status') in (3, '3'):
             rf = oc.get('refundFactor') or 0; iw = oc.get('isWinning')
-            res = 'PUSH' if (rf and rf >= 1) else ('WIN' if iw == 1 else ('LOSE' if iw == 0 else '?'))
-            w += res == 'WIN'; l += res == 'LOSE'; p += res == 'PUSH'
-            tag = {'WIN': 'WIN ', 'LOSE': 'LOSE', 'PUSH': 'void', '?': ' ?  '}[res]
-            rows.append((res, f"  {tag} {disp:7} {name} {shown}")); continue
+            res = 'void' if (rf and rf >= 1) else ('won' if iw == 1 else ('lost' if iw == 0 else 'pending'))
+            rows.append(dict(row, state=res, hint=row.get('hint') or ('void' if res == 'void' else 'FT'))); continue
         # 2) not started -> pending
         if not ss:
-            pend += 1; rows.append(('pend', f"  .... {'-':7} {name} {shown}")); continue
+            rows.append(dict(row, state='pending', hint='not started', score='')); continue
         # 3) ended but not yet settled (lag) -> score-based for markets we can compute
         if ms in ('Ended', 'AET', 'AP'):
             res = grade(label, h, a, h1h, h1a)
             if res == '?':
                 res = grade_by_predicate(m, oc, h, a, h1h, h1a,
                                          (o.get('homeTeamName'), o.get('awayTeamName')))
-            w += res == 'WIN'; l += res == 'LOSE'; p += res == 'PUSH'
-            tag = {'WIN': 'WIN ', 'LOSE': 'LOSE', 'PUSH': 'void', '?': ' ?  '}[res]
-            rows.append((res, f"  {tag} {disp:7} {name} {shown}"))
+            st = {'WIN': 'won', 'LOSE': 'lost', 'PUSH': 'void'}.get(res, 'live')
+            rows.append(dict(row, state=st, hint='FT, settling' if st != 'live' else 'FT, awaiting settlement'))
+            continue
         # 4) in play -> live covering preview
-        else:
-            tot = h + a
-            failed_live = False
-            # A per-half Under must be judged on THAT HALF's goals only. This used to
-            # compare the full-match running total against any Under line, so a 2H
-            # Under 1.5 was called breached at 2:1 when the second half held one goal
-            # (Slavia Sofia v Lokomotiv, 31 Jul).
-            m_u = re.search(r'^(1H |2H )?Under([\d.]+)', label)
-            if m_u:
-                pre, ln = m_u.group(1), float(m_u.group(2))
-                if pre == '1H ':
-                    cur = (h1h + h1a) if h1h is not None else (tot if ms == '1H' else None)
-                elif pre == '2H ':
-                    cur = ((h - h1h) + (a - h1a)) if h1h is not None else None
-                else:
-                    cur = tot
-                if cur is not None and cur > ln: failed_live = True
-            if label == '1H Home CS (Away 0)' and ((h1a is not None and h1a > 0) or (a > 0 and ms in ('1H', 'HT', '2H'))): failed_live = True
-            if label == '1H Away CS (Home 0)' and ((h1h is not None and h1h > 0) or (h > 0 and ms in ('1H', 'HT', '2H'))): failed_live = True
-
-            if failed_live:
-                l += 1
-                rows.append(('LOSE', f"  LOSE {ss:7} {name} {shown}  (breached in live)"))
+        tot = h + a
+        failed_live = False
+        m_u = re.search(r'^(1H |2H )?Under([\d.]+)', label)
+        if m_u:
+            pre, ln = m_u.group(1), float(m_u.group(2))
+            if pre == '1H ':
+                cur = (h1h + h1a) if h1h is not None else (tot if ms == '1H' else None)
+            elif pre == '2H ':
+                cur = ((h - h1h) + (a - h1a)) if h1h is not None else None
             else:
-                live += 1
-                rows.append(('live', f"  live {ss:7} {name} {shown}  ({ms})"))
-    print(f"==== {code}: WON {w} | LOST {l} | VOID {p+void} | live {live} | pending {pend}  (of {len(outs)})")
+                cur = tot
+            if cur is not None and cur > ln: failed_live = True
+        if label == '1H Home CS (Away 0)' and ((h1a is not None and h1a > 0) or (a > 0 and ms in ('1H', 'HT', '2H'))): failed_live = True
+        if label == '1H Away CS (Home 0)' and ((h1h is not None and h1h > 0) or (h > 0 and ms in ('1H', 'HT', '2H'))): failed_live = True
+        mins = (o.get('playedSeconds') or '').split(':')[0]
+        hint = (mins + "'") if mins.isdigit() else (ms or 'live')
+        if ms == 'HT': hint = 'HT'
+        if failed_live:
+            rows.append(dict(row, state='lost', hint=hint + ', breached in play'))
+        else:
+            rows.append(dict(row, state='live', hint=hint))
+    c = {k: sum(x['state'] == k for x in rows) for k in ('won', 'lost', 'void', 'live', 'pending')}
+    return dict(code=code, legs=rows, counts=c, n=len(outs))
+
+
+def grade_code(code):
+    g = grade_struct(code)
+    c = g['counts']; w, l = c['won'], c['lost']
+    print(f"==== {code}: WON {w} | LOST {l} | VOID {c['void']} | live {c['live']} | pending {c['pending']}  (of {g['n']})")
     if w + l: print(f"     per-leg settled: {w}/{w+l} = {w/(w+l)*100:.0f}%")
-    for res, line in rows:
-        if res in ('LOSE', 'live') or res == 'WIN':
-            print(line)
+    tag = {'won': 'WIN ', 'lost': 'LOSE', 'void': 'void', 'live': 'live', 'pending': '....'}
+    for x in g['legs']:
+        if x['state'] in ('won', 'lost', 'live'):
+            name = f"{x['home'][:18]:18} v {x['away'][:16]:16}"
+            extra = f"  ({x['hint']})" if x['state'] == 'live' or 'breached' in x['hint'] else ''
+            print(f"  {tag[x['state']]} {(x['score'] or '-'):7} {name} {x['sel']}{extra}")
     print()
 
 if __name__ == '__main__':

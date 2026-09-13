@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Betty</title>
+<meta name="description" content="SportyBet codes from measured rules, graded leg by leg, live codes at the half-time whistle.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Figtree:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>
+:root{
+  --bg:#171411; --s1:#201c17; --s2:#29241d; --s3:#332d24; --line:#3a3329; --line2:#4b4339;
+  --tx:#f4ece0; --tx2:#b5a895; --tx3:#8a7e6d;
+  --ac:#e08b4f; --ac-ink:#2b1a0c; --ac-soft:rgba(224,139,79,.13); --ac-tx:#f0a367;
+  --won:#63ab58; --won-soft:rgba(99,171,88,.14);
+  --lost:#dd6350; --lost-soft:rgba(221,99,80,.14);
+  --livec:#dda032; --live-soft:rgba(221,160,50,.14);
+  --pend:#8a7e6d; --pend-soft:rgba(138,126,109,.15);
+  --void:#6f9ecd; --void-soft:rgba(111,158,205,.14);
+  --terra:#f0a367; --sage:#a8c07a; --sage-soft:rgba(168,192,122,.13);
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --serif:'Caprasimo',Georgia,serif;
+  --sans:'Figtree',system-ui,-apple-system,sans-serif;
+}
+[data-t="light"]{
+  --bg:#f5ead8; --s1:#fdf4e9; --s2:#eee7db; --s3:#e3d9c8; --line:#dcd3c4; --line2:#c0b6a5;
+  --tx:#201e1d; --tx2:#645c50; --tx3:#82796a;
+  --ac:#c67139; --ac-ink:#fff6ee; --ac-soft:rgba(198,113,57,.11); --ac-tx:#8c491a;
+  --won:#3f7a33; --won-soft:rgba(63,122,51,.12);
+  --lost:#b2402f; --lost-soft:rgba(178,64,47,.11);
+  --livec:#8c6415; --live-soft:rgba(140,100,21,.13);
+  --pend:#82796a; --pend-soft:rgba(130,121,106,.13);
+  --void:#3a6a99; --void-soft:rgba(58,106,153,.12);
+  --terra:#8c491a; --sage:#4f5d38; --sage-soft:rgba(122,138,94,.12);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+html{background:#171411}
+body{background:var(--bg);color:var(--tx);font-family:var(--sans);font-size:15px;line-height:1.45;-webkit-font-smoothing:antialiased;min-height:100vh}
+a{color:var(--ac-tx);text-decoration:none}
+a:hover{color:var(--ac);text-decoration:underline}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit;font-size:inherit}
+input{font-family:inherit}
+::selection{background:var(--ac-soft)}
+:focus-visible{outline:2px solid var(--ac);outline-offset:2px}
+@keyframes bpulse{0%,100%{opacity:1}50%{opacity:.35}}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.serif{font-family:var(--serif);font-weight:400}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+#app{min-height:100vh;background:var(--bg);color:var(--tx)}
+
+/* header */
+header{position:sticky;top:0;z-index:40;background:var(--s1);border-bottom:1px solid var(--line)}
+.hbar{display:flex;align-items:center;gap:16px;padding:12px 16px;max-width:1180px;margin:0 auto}
+.brand{display:flex;align-items:baseline;gap:7px;padding:0}
+.brand .word{font-family:var(--serif);font-size:24px;line-height:1;color:var(--tx)}
+.brand .dot{width:7px;height:7px;border-radius:999px;background:var(--ac);display:block}
+nav.top{display:flex;gap:4px;margin-left:12px;flex:1}
+nav.top button{padding:8px 14px;border-radius:999px;font-size:13.5px;font-weight:700;color:var(--tx2)}
+nav.top button.on{background:var(--ac-soft);color:var(--ac-tx)}
+.theme{display:flex;align-items:center;gap:7px;padding:7px 13px;border-radius:999px;border:1px solid var(--line2);color:var(--tx2);font-size:12.5px;font-weight:600;margin-left:auto}
+.banner{background:var(--s2);border-top:1px solid var(--line)}
+.banner .in{max-width:1180px;margin:0 auto;padding:7px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--tx)}
+.banner .sep{color:var(--tx3)}
+.banner .pulse{width:6px;height:6px;border-radius:999px;background:var(--ac);animation:bpulse 2.4s infinite;display:inline-block;margin-right:7px;vertical-align:middle}
+.banner strong{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+main{max-width:1180px;margin:0 auto;padding:20px 16px 40px}
+h1.page{font-family:var(--serif);font-weight:400;font-size:clamp(24px,4vw,32px);margin:0 0 6px}
+.lead{margin:0 0 20px;color:var(--tx2);font-size:14px;max-width:660px;text-wrap:pretty}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(26px,4.4vw,38px);line-height:1.1;margin:0 0 8px;letter-spacing:-.01em}
+.hero p{margin:0;color:var(--tx2);font-size:14.5px;text-wrap:pretty}
+.hero{max-width:640px;margin-bottom:18px}
+.kicker{font-size:11px;letter-spacing:.09em;text-transform:uppercase;font-weight:800;color:var(--tx3);margin-bottom:10px}
+
+/* chips + badges */
+.chip{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;background:var(--s3);color:var(--tx2)}
+.chip.won{background:var(--won-soft);color:var(--won)}
+.chip.lost{background:var(--lost-soft);color:var(--lost)}
+.chip.live{background:var(--live-soft);color:var(--livec)}
+.chip.pending{background:var(--pend-soft);color:var(--pend)}
+.chip.void{background:var(--void-soft);color:var(--void)}
+.badge{display:inline-flex;align-items:center;padding:4px 11px;border-radius:999px;font-size:11.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;background:var(--s3);color:var(--tx2)}
+.badge[data-p="Winners"]{background:var(--sage-soft);color:var(--sage)}
+.badge[data-p="Draws"]{background:var(--void-soft);color:var(--void)}
+.badge[data-p="Live"]{background:var(--live-soft);color:var(--livec)}
+.badge[data-p="American Football"],.badge[data-p="Basketball"],.badge[data-p="Ice Hockey"],.badge[data-p="Handball"]{background:var(--ac-soft);color:var(--terra)}
+.pill{display:inline-flex;align-items:center;justify-content:center;min-width:34px;padding:3px 6px;border-radius:8px;font-family:var(--mono);font-size:11.5px;font-weight:700;font-variant-numeric:tabular-nums;background:var(--pend-soft);color:var(--pend)}
+.pill.W{background:var(--won-soft);color:var(--won)}
+.pill.L{background:var(--lost-soft);color:var(--lost)}
+.wdl{width:20px;height:20px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;background:var(--pend-soft);color:var(--pend)}
+.wdl.W{background:var(--won-soft);color:var(--won)}
+.wdl.L{background:var(--lost-soft);color:var(--lost)}
+.num{width:20px;height:20px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11.5px;font-weight:700;background:var(--s3);color:var(--tx3)}
+.num.hot{background:var(--won-soft);color:var(--won)}
+.copy{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:11px 14px;border-radius:999px;background:var(--ac);color:var(--ac-ink);border:1px solid transparent;font-weight:800;font-size:13.5px;white-space:nowrap;min-height:44px}
+.copy.big{padding:14px 20px;font-size:15px;min-height:48px;width:100%}
+.copy.on{background:var(--won-soft);color:var(--won);border-color:var(--won)}
+.track{width:46px;height:27px;border-radius:999px;background:var(--s3);border:1px solid var(--line2);padding:2px;display:flex;justify-content:flex-start;align-items:center;flex:none}
+.track.on{background:var(--ac);justify-content:flex-end}
+.knob{width:21px;height:21px;border-radius:999px;background:var(--tx3);display:block}
+.track.on .knob{background:var(--ac-ink)}
+.seg{display:flex;gap:6px;padding:4px;background:var(--s2);border-radius:999px;border:1px solid var(--line);width:fit-content;margin-bottom:20px}
+.seg button{padding:8px 16px;border-radius:999px;font-size:13.5px;font-weight:700;color:var(--tx2);min-height:40px}
+.seg button.on{background:var(--ac);color:var(--ac-ink)}
+.ghost{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:999px;border:1px solid var(--line2);color:var(--tx2);font-size:13px;font-weight:600}
+
+/* today */
+.empty{border:1px dashed var(--line2);border-radius:28px;padding:44px 24px;text-align:center;background:var(--s1)}
+.empty .t{font-family:var(--serif);font-size:20px;margin-bottom:8px}
+.empty .d{color:var(--tx2);font-size:14px}
+.group{margin-bottom:28px}
+.ghead{display:flex;align-items:center;gap:10px;margin-bottom:11px}
+.ghead .meta{font-size:12.5px;color:var(--tx3);font-family:var(--mono);white-space:nowrap}
+.ghead .hr{flex:1;height:1px;background:var(--line);min-width:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:12px}
+.card{text-align:left;width:100%;padding:15px;border-radius:22px;background:var(--s1);border:1px solid var(--line);border-left:3px solid var(--line2);display:block}
+.card.dead{border-color:var(--lost);opacity:.9}
+.card.live{border-left-color:var(--livec)}
+.card.won{border-left-color:var(--won)}
+.card .row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.booked{font-family:var(--mono);font-size:11.5px;color:var(--tx3);font-variant-numeric:tabular-nums}
+.codebox{flex:1;display:flex;align-items:center;justify-content:center;gap:2px;padding:11px 12px;border-radius:16px;background:var(--s3);border:1px solid var(--line2);font-family:var(--mono);font-weight:700;font-size:clamp(19px,5vw,23px);letter-spacing:.14em;font-variant-numeric:tabular-nums;color:var(--tx)}
+.codebox.big{padding:13px 20px;border-radius:18px;font-size:clamp(24px,6vw,32px);letter-spacing:.16em;flex:none}
+.codebox.huge{padding:14px;border-radius:18px;font-size:28px;letter-spacing:.18em}
+.kv{display:flex;gap:18px;margin-bottom:12px;font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kv span{display:block}
+.kv .k{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx3);font-family:var(--sans);font-weight:700;margin-bottom:2px}
+.kv .v{font-size:17px;font-weight:700}
+.kv .v.small{font-size:12.5px;color:var(--tx2);font-weight:500}
+.kv .v.xl{font-size:22px}
+.strip{display:flex;height:6px;border-radius:999px;overflow:hidden;background:var(--s3);gap:1.5px;margin-bottom:8px}
+.strip span{flex:1;display:block}
+.strip .won{background:var(--won)}.strip .lost{background:var(--lost)}.strip .live{background:var(--livec)}.strip .pending{background:var(--pend)}.strip .void{background:var(--void)}
+.counts{display:flex;flex-wrap:wrap;gap:10px;font-size:12px;font-family:var(--mono);font-variant-numeric:tabular-nums}
+.counts span{font-weight:700}
+.counts .won{color:var(--won)}.counts .lost{color:var(--lost)}.counts .live{color:var(--livec)}.counts .pending{color:var(--pend)}.counts .void{color:var(--void)}
+.deadnote{margin-top:10px;padding-top:9px;border-top:1px solid var(--line);font-size:12px;color:var(--tx2)}
+
+/* slip */
+.shead{background:var(--s1);border:1px solid var(--line);border-left:3px solid var(--line2);border-radius:24px;padding:16px}
+.shead.dead{border-color:var(--lost)}
+.legs{display:flex;flex-direction:column;gap:8px;margin-top:16px}
+.leg{background:var(--s1);border:1px solid var(--line);border-left:3px solid var(--pend);border-radius:18px;overflow:hidden}
+.leg.won{border-left-color:var(--won)}.leg.lost{border-left-color:var(--lost)}.leg.live{border-left-color:var(--livec)}.leg.void{border-left-color:var(--void)}
+.leg > button{width:100%;text-align:left;padding:13px 14px;display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:12px;align-items:start}
+.leg .ko{font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums;color:var(--tx2);padding-top:2px}
+.leg .comp{display:block;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--tx3);font-weight:700;margin-bottom:3px}
+.leg .match{display:block;font-size:15px;font-weight:600;margin-bottom:4px}
+.leg .sel{display:inline-block;font-size:13.5px;color:var(--tx);font-weight:600}
+.leg .right{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:5px}
+.leg .price{font-family:var(--mono);font-size:15px;font-weight:700;font-variant-numeric:tabular-nums}
+.leg .score{font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums;color:var(--tx2)}
+.leg .hint{font-size:11px;color:var(--tx3);font-weight:700}
+.sheet{padding:2px 14px 16px;border-top:1px solid var(--line)}
+.sheet .title{display:flex;align-items:center;gap:8px;margin:13px 0 12px}
+.sheet .title b{font-size:11px;letter-spacing:.09em;text-transform:uppercase;font-weight:800;color:var(--tx2)}
+.sheet .title i{font-style:normal;font-size:11.5px;color:var(--tx3)}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:10px;align-items:start}
+.blk{background:var(--s2);border:1px solid var(--line);border-radius:16px;padding:13px}
+.blk .h{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:800;color:var(--tx3);margin-bottom:10px}
+.blk.half{background:var(--live-soft)}.blk.half .h{color:var(--livec)}
+.blk.flags{background:var(--sage-soft)}.blk.flags .h{color:var(--sage)}
+.side{font-size:13px;font-weight:700}
+.sidelab{font-size:11px;color:var(--tx3)}
+.pills{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px}
+.rec{font-family:var(--mono);font-size:12px;color:var(--tx2);font-variant-numeric:tabular-nums}
+.rec strong{color:var(--tx)}
+.wdls{display:flex;gap:3px;flex-wrap:wrap}
+.bar{height:6px;border-radius:999px;background:var(--s3);overflow:hidden}
+.bar i{display:block;height:100%;border-radius:999px;background:var(--pend)}
+.bar i.hot{background:var(--ac)}
+.flag{display:flex;gap:8px;font-size:13px;line-height:1.4;text-wrap:pretty}
+.flag b{color:var(--sage);font-weight:800}
+.hk{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:11px;font-family:var(--mono);font-variant-numeric:tabular-nums}
+.hk span{display:block}
+.hk .k{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--tx3);font-family:var(--sans);font-weight:700}
+.hk .v{font-size:15px;font-weight:700}
+
+/* live */
+.lcard{background:var(--s1);border:1px solid var(--line);border-left:3px solid var(--livec);border-radius:22px;padding:15px}
+.lcard .cd{font-family:var(--mono);font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--livec)}
+.lcard .cd.low{color:var(--lost)}
+.lcard .cd.over{color:var(--tx3)}
+.lcard .comp{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--tx3);font-weight:700;margin-bottom:3px}
+.lcard .match{font-size:15.5px;font-weight:600;margin-bottom:3px}
+.lcard .state{font-family:var(--mono);font-size:12.5px;color:var(--tx2);margin-bottom:10px;font-variant-numeric:tabular-nums}
+.lcard .selrow{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 11px;border-radius:14px;background:var(--s2);margin-bottom:8px}
+.lcard .selrow .s{font-size:13.5px;font-weight:600}
+.lcard .selrow .p{font-family:var(--mono);font-size:15px;font-weight:700}
+.lcard .note{margin-top:9px;font-size:11.5px;color:var(--tx3);font-family:var(--mono)}
+.watch{background:var(--s1);border:1px solid var(--line);border-radius:22px;overflow:hidden;margin-bottom:22px}
+.wrow{display:grid;grid-template-columns:46px minmax(0,1fr) auto auto;gap:12px;align-items:center;padding:12px 14px;border-top:1px solid var(--line)}
+.wrow:first-child{border-top:none}
+.wrow .min{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--tx2);font-variant-numeric:tabular-nums}
+.wrow .min.hot{color:var(--livec)}
+.wrow .comp{display:block;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--tx3);font-weight:700}
+.wrow .match{display:block;font-size:14.5px;font-weight:600}
+.wrow .score{font-family:var(--mono);font-size:16px;font-weight:700;font-variant-numeric:tabular-nums}
+.wnote{padding:3px 9px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;background:var(--s3);color:var(--tx3)}
+.wnote.reading{background:var(--live-soft);color:var(--livec)}
+.wnote.booked{background:var(--sage-soft);color:var(--sage)}
+.wnote.nobet{background:var(--lost-soft);color:var(--lost)}
+.tg{background:var(--s2);border:1px solid var(--line);border-radius:22px;padding:16px;display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap}
+.tgico{width:40px;height:40px;border-radius:999px;background:var(--void-soft);color:var(--void);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;flex:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 16px;border-radius:999px;background:var(--ac);color:var(--ac-ink);font-weight:700;font-size:13.5px;text-decoration:none}
+.btn:hover{text-decoration:none;color:var(--ac-ink)}
+.btn.line{background:transparent;border:1px solid var(--line2);color:var(--tx)}
+.btn.wide{width:100%;padding:12px;font-weight:800;font-size:14px}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.log{font-family:var(--mono);font-size:11.5px;color:var(--tx2);white-space:pre-wrap;line-height:1.5;padding:12px 14px;max-height:220px;overflow:auto}
+
+/* record */
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:10px;margin-bottom:24px}
+.tile{background:var(--s1);border:1px solid var(--line);border-radius:20px;padding:14px}
+.tile.corpus{border-left:3px solid var(--void)}
+.tile .top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:9px}
+.tile .tag{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:800;color:var(--sage)}
+.tile.corpus .tag{color:var(--void)}
+.tile .rate{font-family:var(--mono);font-size:29px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums;margin-bottom:5px}
+.tile .sample{font-family:var(--mono);font-size:12.5px;color:var(--tx2);font-variant-numeric:tabular-nums}
+.tile .since{font-size:11.5px;color:var(--tx3);margin-top:4px}
+.legend{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.legend .dot{width:8px;height:8px;border-radius:999px;display:block}
+.legend b{font-size:11px;letter-spacing:.09em;text-transform:uppercase;font-weight:800;color:var(--tx)}
+.legend i{font-style:normal;font-size:11.5px;color:var(--tx3)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
+.filters button{padding:7px 14px;border-radius:999px;font-size:12.5px;font-weight:700;border:1px solid var(--line2);color:var(--tx2);min-height:38px}
+.filters button.on{border-color:var(--ac);background:var(--ac-soft);color:var(--ac-tx)}
+.filters .n{font-family:var(--mono);font-size:12px;color:var(--tx3);margin-left:4px}
+.tablewrap{background:var(--s1);border:1px solid var(--line);border-radius:22px;overflow:auto;margin-bottom:26px}
+.trow{display:grid;grid-template-columns:96px 1fr 74px 62px 66px 90px;gap:8px;padding:11px 14px;border-top:1px solid var(--line);align-items:center;min-width:560px;font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums}
+.trow.head{border-top:none;background:var(--s2);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;font-weight:800;color:var(--tx3);font-family:var(--sans)}
+.trow .code{font-weight:700;letter-spacing:.08em}
+.trow .code button{font-family:var(--mono);font-weight:700;letter-spacing:.08em;padding:0}
+.trow .dp{font-family:var(--sans);font-size:13px;min-width:0}
+.trow .dp b{font-weight:600}
+.trow .dp span{color:var(--tx3)}
+.trow .res{font-weight:700;text-transform:uppercase;font-size:11.5px;letter-spacing:.05em}
+.trow .res.won{color:var(--won)}.trow .res.lost{color:var(--lost)}
+.heatbox{background:var(--s1);border:1px solid var(--line);border-radius:22px;padding:16px}
+.heat{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px;max-width:420px}
+.heat .d{font-size:10px;text-align:center;color:var(--tx3);font-weight:700}
+.heat .c{aspect-ratio:1/1;border-radius:6px;background:var(--s3);display:block}
+.heat .c.won{background:var(--won);opacity:.9}.heat .c.mixed{background:var(--livec);opacity:.9}.heat .c.lost{background:var(--lost);opacity:.9}
+.heat .c.expired{background:repeating-linear-gradient(45deg,var(--s3) 0 3px,var(--line2) 3px 5px)}
+.heat .c.today{outline:2px solid var(--ac);outline-offset:1px}
+.hlegend{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:11.5px;color:var(--tx3);flex-wrap:wrap}
+.hlegend span{display:flex;align-items:center;gap:5px}
+.hlegend i{width:11px;height:11px;border-radius:4px;display:block}
+
+/* rules */
+.rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:12px;margin-bottom:26px}
+.rule{background:var(--s1);border:1px solid var(--line);border-radius:22px;padding:16px}
+.rule .top{display:flex;align-items:center;gap:9px;margin-bottom:11px}
+.rule .tag{font-family:var(--mono);font-size:11.5px;color:var(--tx3)}
+.rule p{margin:0 0 12px;font-size:14px;color:var(--tx);text-wrap:pretty}
+.thr{display:flex;justify-content:space-between;gap:10px;padding:8px 11px;background:var(--s2);border-radius:12px;margin-bottom:7px}
+.thr .k{font-size:12.5px;color:var(--tx2);min-width:0}
+.thr .v{font-family:var(--mono);font-size:12.5px;font-weight:700;font-variant-numeric:tabular-nums;text-align:right}
+.measured{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--tx2);font-variant-numeric:tabular-nums}
+.clog{background:var(--s1);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.crow{display:grid;grid-template-columns:64px minmax(0,1fr);gap:12px;padding:13px 15px;border-top:1px solid var(--line)}
+.crow:first-child{border-top:none}
+.crow .d{font-family:var(--mono);font-size:12.5px;color:var(--tx2);font-weight:700}
+.crow .t{font-size:13.5px;text-wrap:pretty}
+
+/* account */
+.agrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px;margin-bottom:26px}
+.acard{background:var(--s1);border:1px solid var(--line);border-radius:22px;padding:16px}
+.acard.paid{border-color:var(--ac)}
+.acard .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.acard .plan{font-family:var(--serif);font-size:19px}
+.acard .price{font-family:var(--mono);font-size:24px;font-weight:700;margin-bottom:12px}
+.acard .price small{font-size:13px;color:var(--tx3);font-weight:400}
+.feat{display:flex;gap:8px;font-size:13.5px;color:var(--tx2);margin-bottom:7px}
+.feat b{color:var(--won);font-weight:800}
+.acard.paid .feat{color:var(--tx)}
+.acard.paid .feat b{color:var(--ac)}
+.fine{margin-top:9px;font-size:11.5px;color:var(--tx3);text-align:center}
+label.l{display:block;font-size:12.5px;color:var(--tx2);margin-bottom:6px}
+.input{width:100%;padding:12px 15px;border-radius:999px;background:var(--s2);border:1px solid var(--line2);color:var(--tx);font-family:var(--mono);font-size:16px;font-weight:700;margin-bottom:13px}
+.srow{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 11px;background:var(--s2);border-radius:12px;margin-bottom:7px}
+.srow .c{font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:.08em}
+.srow .o{font-family:var(--mono);font-size:12px;color:var(--tx3)}
+.srow .r{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--tx)}
+.prow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:9px}
+.otp{display:flex;gap:7px;margin-bottom:10px}
+.otp span{flex:1;aspect-ratio:1/1;max-width:46px;border-radius:12px;background:var(--s2);border:1px solid var(--line2);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:17px;font-weight:700;color:var(--tx2)}
+.stack{display:flex;flex-direction:column;gap:12px}
+
+footer{border-top:1px solid var(--line);background:var(--s1);padding:20px 16px}
+footer .in{max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:14px;align-items:center;font-size:12px;color:var(--tx3)}
+footer .age{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:999px;border:2px solid var(--tx3);font-weight:800;font-size:11.5px;color:var(--tx2);flex:none}
+footer .txt{max-width:560px;text-wrap:pretty}
+footer strong{font-family:var(--mono);color:var(--tx2)}
+
+nav.bottom{display:none;position:fixed;bottom:0;left:0;right:0;z-index:50;background:var(--s1);border-top:1px solid var(--line);grid-template-columns:repeat(5,1fr);padding:6px 4px 8px}
+nav.bottom button{display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 2px;border-radius:14px;color:var(--tx3);min-height:46px}
+nav.bottom button.on{color:var(--ac-tx)}
+nav.bottom span{font-size:10.5px;font-weight:700;letter-spacing:.01em}
+.err{border:1px solid var(--lost);background:var(--lost-soft);color:var(--lost);border-radius:14px;padding:10px 14px;font-size:13px;margin-bottom:14px}
+.muted{color:var(--tx3);font-size:12.5px}
+@media (max-width:819px){
+  nav.top{display:none}
+  nav.bottom{display:grid}
+  #app{padding-bottom:78px}
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="hbar">
+      <button class="brand" data-go="Today"><span class="word">Betty</span><span class="dot"></span></button>
+      <nav class="top" id="topnav"></nav>
+      <button class="theme" id="theme"><span class="mono" id="themeLabel">Light</span></button>
+    </div>
+    <div class="banner" id="banner" hidden><div class="in" id="bannerIn"></div></div>
+  </header>
+  <main id="main"></main>
+  <footer>
+    <div class="in">
+      <span class="age">18+</span>
+      <span class="txt">Betty publishes booking codes and the numbers behind them. It is not advice and it is not a guarantee. Stake only what you can afford to lose.</span>
+      <div style="flex:1"></div>
+      <a href="https://www.begambleaware.org">BeGambleAware</a>
+      <a href="/ops" style="color:var(--tx3)">operator</a>
+    </div>
+  </footer>
+  <nav class="bottom" id="botnav"></nav>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var TABS = [
+    ['Today', 'M3 4h18v17H3zM8 2v4M16 2v4M3 10h18'],
+    ['Live', 'M3 12h4l3-8 4 16 3-8h4'],
+    ['Record', 'M4 20V10M10 20V4M16 20v-7M22 20H2'],
+    ['Rules', 'M12 6v14M12 6C10 4 6 3.5 3 4v14c3-.5 7 0 9 2 2-2 6-2.5 9-2V4c-3-.5-7 0-9 2'],
+    ['Account', 'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM4 21c1.5-4 4.5-6 8-6s6.5 2 8 6']
+  ];
+  var ORDER = ['Live', 'Winners', 'Draws', 'American Football', 'Basketball', 'Ice Hockey', 'Handball', 'Max'];
+  var RULE_LINE = {
+    Winners: 'favourite backed by its venue record; straight win under 1.80, cover to 2.60',
+    Draws: 'quiet games through the gate, price at or above 2.89',
+    Live: 'booked at the half-time whistle; loadable for about fifteen minutes',
+    'American Football': 'totals, first-half totals and handicaps where 11 of 14 venue games agree',
+    Basketball: 'totals and handicaps where 11 of 14 venue games agree',
+    'Ice Hockey': 'regulation totals and handicaps where 11 of 14 venue games agree',
+    Handball: 'totals and handicaps where 11 of 14 venue games agree',
+    Max: 'the accumulator engine; long by design'
+  };
+  var S = {
+    tab: 'Today', day: 'today', slip: null, openLeg: null, copied: null,
+    theme: 'dark', stake: '1000', recFilter: 'All', prefs: null, tg: true,
+    codes: {}, codesAt: {}, banner: null, live: null, liveAt: 0, record: null, rules: null,
+    err: null, tick: 0
+  };
+  try {
+    S.theme = localStorage.getItem('betty.theme') || 'dark';
+    S.stake = localStorage.getItem('betty.stake') || '1000';
+    S.prefs = JSON.parse(localStorage.getItem('betty.prefs') || 'null');
+    S.tg = localStorage.getItem('betty.tg') !== '0';
+  } catch (e) {}
+  if (/[?&]t=light/.test(location.search)) S.theme = 'light';
+  if (/[?&]t=dark/.test(location.search)) S.theme = 'dark';
+  S.prefs = S.prefs || { Winners: true, Draws: true, Live: true, 'American Football': true, Max: false };
+
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function pad(n) { return String(n).padStart(2, '0'); }
+  function mmss(s) { s = Math.max(0, Math.floor(s)); return pad(Math.floor(s / 60)) + ':' + pad(s % 60); }
+  function fmtOdds(x) {
+    if (x == null) return '-';
+    if (x >= 1e12) return (x / 1e12).toFixed(1) + 'tn';
+    if (x >= 1e9) return (x / 1e9).toFixed(1) + 'bn';
+    if (x >= 1e6) return (x / 1e6).toFixed(1) + 'm';
+    if (x >= 10000) return Math.round(x).toLocaleString('en-US');
+    return x.toFixed(2);
+  }
+  function naira(n) { return '₦' + Math.round(n).toLocaleString('en-US'); }
+  function stakeNum() { return parseFloat(String(S.stake).replace(/[^0-9.]/g, '')) || 0; }
+  function save(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+
+  // ---------- data ----------
+  function get(url) {
+    return fetch(url, { cache: 'no-store' }).then(function (r) { if (!r.ok) throw new Error(url + ' ' + r.status); return r.json(); });
+  }
+  function loadCodes(day, force) {
+    day = day || S.day;
+    if (!force && S.codesAt[day] && Date.now() - S.codesAt[day] < 45000) return Promise.resolve();
+    return get('/api/codes?day=' + day).then(function (j) {
+      S.codes[day] = (j.codes || []).map(decorate); S.codesAt[day] = Date.now(); S.err = null; render();
+    }).catch(function (e) { S.err = 'Could not load codes: ' + e.message; render(); });
+  }
+  function loadBanner() { return get('/api/banner').then(function (j) { S.banner = j; renderBanner(); }).catch(function () {}); }
+  function loadLive() {
+    return get('/api/livefeed').then(function (j) {
+      j.codes = (j.codes || []).map(decorate); S.live = j; S.liveAt = Date.now(); if (S.tab === 'Live') render(); renderBanner();
+    }).catch(function (e) { if (S.tab === 'Live') { S.err = 'Could not load the live feed: ' + e.message; render(); } });
+  }
+  function loadRecord() { return get('/api/record').then(function (j) { S.record = j; if (S.tab === 'Record') render(); }).catch(function (e) { S.err = 'Could not load the record: ' + e.message; render(); }); }
+  function loadRules() { return get('/api/rules').then(function (j) { S.rules = j; if (S.tab === 'Rules') render(); }).catch(function (e) { S.err = 'Could not load the rules: ' + e.message; render(); }); }
+
+  function decorate(c) {
+    var n = { won: 0, lost: 0, live: 0, pending: 0, void: 0 };
+    (c.legs || []).forEach(function (l) { n[l.state] = (n[l.state] || 0) + 1; });
+    var total = (c.legs || []).length;
+    c.n = n; c.total = total; c.dead = n.lost > 0;
+    c.allWon = total > 0 && n.won + n.void === total && n.won > 0;
+    c.stateKey = c.dead ? 'lost' : n.live > 0 ? 'live' : c.allWon ? 'won' : 'pending';
+    c.stateTxt = c.allWon ? 'All legs won' : n.live > 0 ? n.live + ' live now' : 'Open';
+    c.lostTxt = n.lost === 1 ? '1 leg lost' : n.lost + ' legs lost';
+    var ungraded = n.live + n.pending;
+    c.deadNote = ungraded > 0 ? ungraded + ' legs still being graded, shown for the record' : 'All legs settled';
+    return c;
+  }
+  function allCodes() {
+    var out = [];
+    Object.keys(S.codes).forEach(function (d) { out = out.concat(S.codes[d]); });
+    if (S.live) S.live.codes.forEach(function (c) { if (!out.some(function (x) { return x.code === c.code; })) out.push(c); });
+    return out;
+  }
+  function findCode(code) { return allCodes().filter(function (c) { return c.code === code; })[0]; }
+
+  // ---------- actions ----------
+  function setHash(h) { if (location.hash !== h) { try { history.replaceState(null, '', h); } catch (e) { location.hash = h; } } }
+  function go(tab) { S.tab = tab; S.slip = null; S.err = null; window.scrollTo(0, 0); setHash(tab === 'Today' ? '#' : '#' + tab.toLowerCase()); render(); ensure(); }
+  function ensure() {
+    if (S.tab === 'Today') loadCodes();
+    if (S.tab === 'Live') loadLive();
+    if (S.tab === 'Record') { if (!S.record) loadRecord(); }
+    if (S.tab === 'Rules') { if (!S.rules) loadRules(); }
+    if (S.tab === 'Account') loadCodes('today');
+  }
+  function openSlip(code) { S.slip = code; S.tab = 'Slip'; S.openLeg = null; window.scrollTo(0, 0); setHash('#slip/' + code); render(); }
+  function route() {
+    var h = (location.hash || '').replace(/^#\/?/, '');
+    var m = /^slip\/(\w{6})(?:\/(\d+))?$/.exec(h);
+    if (m) {
+      var code = m[1], leg = m[2] != null ? +m[2] : null;
+      if (findCode(code)) { openSlip(code); if (leg != null) { S.openLeg = leg; render(); } return; }
+      // not in today's set: try yesterday, then the record's day list
+      get('/api/codes?day=yesterday').then(function (j) { S.codes.yesterday = (j.codes || []).map(decorate); S.codesAt.yesterday = Date.now(); if (findCode(code)) openSlip(code); else { S.err = 'Code ' + code + ' is not in the last two days.'; go('Today'); } }).catch(function () {});
+      return;
+    }
+    var tab = { live: 'Live', record: 'Record', rules: 'Rules', account: 'Account' }[h];
+    if (tab && tab !== S.tab) go(tab);
+  }
+  function doCopy(code) {
+    S.copied = code;
+    try { navigator.clipboard.writeText(code); } catch (e) {}
+    clearTimeout(doCopy.t); doCopy.t = setTimeout(function () { S.copied = null; render(); }, 1800);
+    render();
+  }
+
+  // ---------- pieces ----------
+  function chip(k, txt) { return '<span class="chip ' + k + '">' + esc(txt) + '</span>'; }
+  function badge(p) { return '<span class="badge" data-p="' + esc(p) + '">' + esc(p) + '</span>'; }
+  function copyBtn(code, big, label) {
+    var on = S.copied === code;
+    return '<button class="copy' + (big ? ' big' : '') + (on ? ' on' : '') + '" data-copy="' + esc(code) + '">' + (on ? (label ? 'Code copied' : 'Copied') : (label || 'Copy')) + '</button>';
+  }
+  function strip(c) {
+    var out = '';
+    ['won', 'live', 'pending', 'lost', 'void'].forEach(function (k) { for (var i = 0; i < (c.n[k] || 0); i++) out += '<span class="' + k + '"></span>'; });
+    return '<div class="strip">' + out + '</div>';
+  }
+  function counts(c) {
+    return '<div class="counts">' + ['won', 'live', 'pending', 'lost', 'void'].filter(function (k) { return c.n[k] > 0; })
+      .map(function (k) { return '<span class="' + k + '">' + c.n[k] + ' ' + k + '</span>'; }).join('') + '</div>';
+  }
+  function kv(items, xl) {
+    return '<div class="kv">' + items.map(function (it) {
+      return '<span><span class="k">' + esc(it[0]) + '</span><span class="v' + (it[2] ? ' ' + it[2] : '') + (xl ? ' xl' : '') + '">' + esc(it[1]) + '</span></span>';
+    }).join('') + '</div>';
+  }
+  function card(c) {
+    var cls = 'card' + (c.dead ? ' dead' : c.stateKey === 'live' ? ' live' : c.allWon ? ' won' : '');
+    return '<div class="' + cls + '" data-open="' + esc(c.code) + '" role="button" tabindex="0">' +
+      '<div class="row">' + (c.dead ? chip('lost', 'Dead — ' + c.lostTxt) : chip(c.stateKey, c.stateTxt)) +
+      '<span class="booked">booked ' + esc(c.booked) + '</span></div>' +
+      '<div class="row" style="gap:8px"><span class="codebox">' + esc(c.code) + '</span>' + copyBtn(c.code, false) + '</div>' +
+      kv([['Odds', fmtOdds(c.odds)], ['Legs', c.total], ['Window', c.window || '-', 'small']]) +
+      strip(c) + counts(c) +
+      (c.dead ? '<div class="deadnote">' + esc(c.deadNote) + '</div>' : '') +
+      '</div>';
+  }
+
+  // ---------- Today ----------
+  function renderToday() {
+    var list = S.codes[S.day];
+    var h = '<div class="hero"><h1>Every code shows its numbers. Every rule shows its record.</h1>' +
+      '<p>SportyBet codes from measured rules, graded leg by leg, live codes at the half-time whistle.</p></div>';
+    h += '<div class="seg">' + [['yesterday', 'Yesterday'], ['today', 'Today'], ['tomorrow', 'Tomorrow']].map(function (d) {
+      return '<button data-day="' + d[0] + '"' + (S.day === d[0] ? ' class="on"' : '') + '>' + d[1] + '</button>';
+    }).join('') + '</div>';
+    if (S.err) h += '<div class="err">' + esc(S.err) + '</div>';
+    if (!list) { h += '<div class="muted">Loading codes…</div>'; return h; }
+    if (!list.length) {
+      h += '<div class="empty"><div class="t">No codes ' + (S.day === 'today' ? 'yet today' : S.day) + '</div>' +
+        '<div class="d">Winners and Draws are booked in the morning window; live codes fire at the whistle' + (S.day === 'tomorrow' ? '. Tomorrow’s codes are booked tomorrow' : '') + '.</div></div>';
+      return h;
+    }
+    ORDER.concat(list.map(function (c) { return c.product; }).filter(function (p, i, a) { return ORDER.indexOf(p) < 0 && a.indexOf(p) === i; })).forEach(function (p) {
+      var g = list.filter(function (c) { return c.product === p; });
+      if (!g.length) return;
+      h += '<section class="group"><div class="ghead">' + badge(p) + '<span class="meta">' + g.length + (g.length === 1 ? ' code' : ' codes') + '</span>' +
+        '<span class="muted" style="font-size:12px">' + esc(RULE_LINE[p] || '') + '</span><div class="hr"></div></div>' +
+        '<div class="grid">' + g.map(card).join('') + '</div></section>';
+    });
+    return h;
+  }
+
+  // ---------- Slip ----------
+  function pills(arr) { return '<div class="pills">' + (arr || []).map(function (p) { return '<span class="pill ' + p[1] + '">' + esc(p[0]) + '</span>'; }).join('') + '</div>'; }
+  function sheet(l) {
+    var sh = l.sheet || {}; var h = '';
+    if (sh.venue) {
+      h += '<div class="blk"><div class="h">Venue form</div>' + sh.venue.map(function (v) {
+        return '<div style="margin-bottom:12px"><div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:6px"><span class="side">' + esc(v.side) + '</span><span class="sidelab">' + esc(v.label) + '</span></div>' +
+          pills(v.pills) + '<div class="rec">' + esc(v.rec) + '</div><div class="rec">goal difference <strong>' + esc(v.margin) + '</strong></div></div>';
+      }).join('') + '</div>';
+    }
+    if (sh.overall) {
+      h += '<div class="blk"><div class="h">Overall form · last 10, any venue</div>' + sh.overall.map(function (o) {
+        return '<div style="margin-bottom:11px"><div class="side" style="margin-bottom:5px">' + esc(o.side) + ' <span class="sidelab mono">' + esc(o.rec || '') + '</span></div><div class="wdls">' +
+          (o.strip || '').split('').map(function (r) { return '<span class="wdl ' + r + '">' + r + '</span>'; }).join('') + '</div></div>';
+      }).join('') + '</div>';
+    }
+    if (sh.h2h && sh.h2h.length) {
+      h += '<div class="blk"><div class="h">Head to head · last ' + sh.h2h.length + ', home view</div>' + pills(sh.h2h) + '</div>';
+    }
+    if (sh.shots && sh.shots.length) {
+      h += '<div class="blk"><div class="h">Shots on target · per game</div>' + sh.shots.map(function (s) {
+        return '<div style="margin-bottom:9px"><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px"><span style="color:var(--tx2)">' + esc(s[0]) + '</span><span class="mono" style="font-weight:700">' + esc(s[1]) + '</span></div>' +
+          '<div class="bar"><i class="' + (s[2] ? 'hot' : '') + '" style="width:' + Math.min(100, s[1] / 8 * 100) + '%"></i></div></div>';
+      }).join('') + '</div>';
+    }
+    if (sh.half || sh.h2goals) {
+      h += '<div class="blk half"><div class="h">At the whistle</div>';
+      if (sh.half) h += '<div class="hk">' + sh.half.map(function (x) { return '<span><span class="k">' + esc(x.k) + '</span><span class="v">' + esc(x.v) + '</span></span>'; }).join('') + '</div>';
+      if (sh.h2goals) {
+        h += '<div class="h" style="margin-bottom:6px">Second-half goals, last 7</div>' + sh.h2goals.map(function (g) {
+          return '<div style="display:flex;align-items:center;gap:8px;margin-bottom:5px;flex-wrap:wrap"><span style="font-size:12px;color:var(--tx2);min-width:92px">' + esc(g.side) + '</span><span style="display:flex;gap:3px">' +
+            (g.nums || []).map(function (n) { return '<span class="num' + (n > 0 ? ' hot' : '') + '">' + n + '</span>'; }).join('') + '</span></div>';
+        }).join('');
+      }
+      h += '</div>';
+    }
+    if (sh.af) {
+      h += '<div class="blk"><div class="h">Venue history · the line</div>' + sh.af.map(function (a) {
+        return '<div style="margin-bottom:10px"><div class="side" style="margin-bottom:5px">' + esc(a.side) + '</div>' + pills(a.pills) + '</div>';
+      }).join('') + '<div class="hk" style="padding-top:8px;border-top:1px solid var(--line);margin-bottom:0"><span><span class="k">Line</span><span class="v">' + esc(sh.afLine || l.sel) + '</span></span>' +
+        '<span><span class="k">Agreement</span><span class="v" style="color:var(--won)">' + esc(sh.afAgree || '-') + '</span></span></div></div>';
+    }
+    var flags = sh.flags || [];
+    h += '<div class="blk flags"><div class="h">Flags · why the pick is shaped this way</div><div style="display:flex;flex-direction:column;gap:8px">' +
+      (flags.length ? flags.map(function (f) { return '<div class="flag"><b>·</b><span>' + esc(f) + '</span></div>'; }).join('') : '<div class="flag"><b>·</b><span>No stat lines were logged with this leg.</span></div>') + '</div></div>';
+    return '<div class="sheet"><div class="title"><b>The sheet</b><i>the numbers this pick was made from</i></div><div class="sgrid">' + h + '</div></div>';
+  }
+  function legRow(l, i, code) {
+    var open = S.openLeg === i;
+    var st = { pending: 'Pending', live: 'Live', void: 'Void', won: 'Won', lost: 'Lost' }[l.state] || l.state;
+    return '<div class="leg ' + l.state + '"><button data-leg="' + i + '">' +
+      '<span class="ko">' + esc(l.ko) + '</span>' +
+      '<span style="min-width:0"><span class="comp">' + esc(l.comp || l.day || '') + '</span><span class="match">' + esc(l.match) + '</span><span class="sel">' + esc(l.sel) + '</span></span>' +
+      '<span class="right"><span class="price">' + (l.price || 0).toFixed(2) + '</span>' + chip(l.state, st) +
+      '<span class="score">' + esc(l.score || '—') + '</span><span class="hint">' + esc(l.hint || '') + '</span></span>' +
+      '</button>' + (open ? sheet(l) : '') + '</div>';
+  }
+  function renderSlip() {
+    var c = findCode(S.slip);
+    var h = '<button class="ghost" data-go="Today" style="margin-bottom:16px">&larr; All codes</button>';
+    if (!c) return h + '<div class="muted">Code ' + esc(S.slip) + ' is not loaded.</div>';
+    h += '<div class="shead' + (c.dead ? ' dead' : '') + '">' +
+      '<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px">' + badge(c.product) +
+      (c.dead ? chip('lost', 'Dead — ' + c.lostTxt) : chip(c.stateKey, c.stateTxt)) +
+      '<span class="booked" style="font-size:12px">' + esc(c.window) + ' · booked ' + esc(c.booked) + (c.date ? ' · ' + esc(c.date) : '') + '</span></div>' +
+      '<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><span class="codebox big">' + esc(c.code) + '</span>' +
+      '<button class="copy big' + (S.copied === c.code ? ' on' : '') + '" style="width:auto;padding:14px 22px" data-copy="' + esc(c.code) + '">' + (S.copied === c.code ? 'Copied' : 'Copy') + '</button>' +
+      '<a class="btn line" href="' + esc(c.url) + '" target="_blank" rel="noopener">Open on SportyBet</a><div style="flex:1"></div>' +
+      kv([['Combined odds', fmtOdds(c.odds)], ['Legs', c.total]], true) + '</div>' +
+      '<div style="margin-top:14px">' + counts(c) + '</div>' +
+      (c.error ? '<div class="muted" style="margin-top:10px">Grading unavailable: ' + esc(c.error) + '</div>' : '') +
+      '<div class="muted" style="margin-top:10px">' + esc(c.label) + '</div></div>';
+    h += '<div class="legs">' + c.legs.map(function (l, i) { return legRow(l, i, c.code); }).join('') + '</div>';
+    return h;
+  }
+
+  // ---------- Live ----------
+  function liveCard(c) {
+    var left = c.closes_in - Math.floor((Date.now() - S.liveAt) / 1000);
+    var cd = left > 0 ? mmss(left) : 'closed';
+    var cls = left <= 0 ? 'over' : left < 180 ? 'low' : '';
+    var h = '<div class="lcard"><div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px">' +
+      '<span class="chip live"><span style="width:5px;height:5px;border-radius:999px;background:var(--livec);animation:bpulse 1.8s infinite;display:block"></span>Live</span><span class="cd ' + cls + '">' + cd + '</span></div>';
+    c.legs.forEach(function (l) {
+      var half = (l.sheet && l.sheet.half) || [];
+      h += '<div class="comp">' + esc(l.comp || '') + '</div><div class="match">' + esc(l.match) + '</div>' +
+        '<div class="state">' + esc(half.map(function (x) { return x.k + ' ' + x.v; }).join(' · ') || ('booked ' + c.booked)) + (l.score ? ' · now ' + esc(l.score) : '') + '</div>' +
+        '<div class="selrow"><span class="s">' + esc(l.sel) + '</span><span class="p">' + (l.price || 0).toFixed(2) + '</span></div>';
+    });
+    h += '<div style="display:flex;flex-direction:column;gap:8px;margin-top:4px"><span class="codebox huge">' + esc(c.code) + '</span>' + copyBtn(c.code, true, 'Copy code') + '</div>' +
+      '<div class="note">' + (c.legs.length > 1 ? c.legs.length + ' legs, ' + fmtOdds(c.odds) + 'x · ' : '') + 'price at booking · stake before the countdown ends</div>' +
+      '<div style="margin-top:8px"><button class="ghost" data-open="' + esc(c.code) + '">Open the sheet</button></div></div>';
+    return h;
+  }
+  function renderLive() {
+    var L = S.live;
+    var age = L ? Math.floor((Date.now() - S.liveAt) / 1000) : 0;
+    var h = '<div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px"><h1 class="page" style="margin:0">Live</h1>' +
+      '<span class="mono" style="font-size:12px;color:var(--tx3)">' + (L ? 'updated ' + age + 's ago · refreshes every 30s' : 'loading…') + '</span></div>' +
+      '<p class="lead">Codes booked at the half-time whistle stay loadable on SportyBet for about fifteen minutes.</p>';
+    if (S.err) h += '<div class="err">' + esc(S.err) + '</div>';
+    if (!L) return h;
+    var on = L.state === 'running';
+    h += '<div class="kicker">Watcher · ' + (on ? 'on since ' + esc(L.started || '') + (L.chat ? ', pushing to Telegram' : '') : 'off') + '</div>';
+    h += '<div class="kicker">Live codes · booked in the last hour</div>';
+    h += L.codes.length ? '<div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));margin-bottom:30px">' + L.codes.map(liveCard).join('') + '</div>'
+      : '<div class="empty" style="margin-bottom:30px;padding:28px 20px"><div class="t">No live code in the last hour</div><div class="d">' + (on ? 'The watcher reads every game at the break. A code appears here the moment one is booked.' : 'The watcher is off. Start it from Telegram with /live.') + '</div></div>';
+    h += '<div class="kicker">Watching now · ' + (L.watching || []).length + ' games on the live board' + (L.board_age != null ? ', read ' + L.board_age + 's ago' : '') + '</div>';
+    var W = (L.watching || []).slice(0, 40);
+    h += '<div class="watch">' + (W.length ? W.map(function (w) {
+      var nk = w.note === 'reading' ? 'reading' : w.note === 'code booked' ? 'booked' : w.note === 'no bet' ? 'nobet' : '';
+      return '<div class="wrow"><span class="min' + (w.note === 'reading' ? ' hot' : '') + '">' + esc(w.min) + '</span><span style="min-width:0"><span class="comp">' + esc(w.comp) + '</span><span class="match">' + esc(w.match) + '</span></span>' +
+        '<span class="score">' + esc(w.score) + '</span><span class="wnote ' + nk + '">' + esc(w.note) + '</span></div>';
+    }).join('') : '<div class="wrow" style="grid-template-columns:1fr"><span class="muted">' + (on ? 'Waiting for the first board read.' : 'Nothing is being watched while the watcher is off.') + '</span></div>') + '</div>';
+    if (L.log && L.log.length) h += '<div class="kicker">Watcher log · last lines</div><div class="watch"><div class="log">' + esc(L.log.slice(-14).join('\n')) + '</div></div>';
+    h += tgBlock(L.bot, true);
+    return h;
+  }
+  function tgBlock(bot, wide) {
+    var link = bot ? 'https://t.me/' + bot : null;
+    return '<div class="tg"><div class="tgico">TG</div><div style="flex:1;min-width:200px"><div style="font-size:15.5px;font-weight:700;margin-bottom:3px">Get live codes on Telegram</div>' +
+      '<div style="font-size:13px;color:var(--tx2);text-wrap:pretty">Pushed the moment the whistle goes, so you do not have to keep the site open. One message per code, no chatter.</div></div>' +
+      '<div style="display:flex;align-items:center;gap:10px">' + (link ? '<a class="btn" href="' + esc(link) + '" target="_blank" rel="noopener">Open @' + esc(bot) + '</a>' : '<span class="muted">bot offline</span>') + '</div></div>';
+  }
+
+  // ---------- Record ----------
+  function tile(t, corpus) {
+    return '<div class="tile' + (corpus ? ' corpus' : '') + '"><div class="top">' + badge(t.product) + '<span class="tag">' + (corpus ? 'Corpus' : 'Live') + '</span></div>' +
+      '<div class="rate">' + esc(t.rate) + '</div><div class="sample">' + esc(t.sample) + '</div><div class="since">' + esc(t.since) + '</div></div>';
+  }
+  function heatGrid(R) {
+    var today = new Date(); today.setHours(0, 0, 0, 0);
+    var dow = (today.getDay() + 6) % 7;                 // Monday = 0
+    var end = new Date(today); end.setDate(today.getDate() + (6 - dow));
+    var start = new Date(end); start.setDate(end.getDate() - 34);
+    var h = ['M', 'T', 'W', 'T', 'F', 'S', 'S'].map(function (d) { return '<span class="d">' + d + '</span>'; }).join('');
+    for (var i = 0; i < 35; i++) {
+      var d = new Date(start); d.setDate(start.getDate() + i);
+      var key = d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+      var v = (R.heat || {})[key];
+      var graded = v && (v.won || 0) + (v.lost || 0) > 0;
+      var cls = !v ? '' : !graded ? 'expired' : v.won > 0 && v.lost === 0 ? 'won' : v.won > 0 ? 'mixed' : 'lost';
+      var title = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) + ': ' + (graded ? v.won + ' won, ' + v.lost + ' lost' + (v.expired ? ', ' + v.expired + ' expired' : '') : v ? v.expired + ' booked, share codes expired' : d > today ? '' : 'no codes');
+      h += '<span class="c ' + cls + (d.getTime() === today.getTime() ? ' today' : '') + '" title="' + esc(title) + '"></span>';
+    }
+    return '<div class="heat">' + h + '</div>';
+  }
+  function renderRecord() {
+    var R = S.record;
+    var h = '<h1 class="page">Record</h1><p class="lead" style="max-width:640px">Two kinds of number live on this page and they are never mixed. Live-booked results are codes we actually published. Corpus rates are what the rule measures across historical matches.</p>';
+    if (S.err) h += '<div class="err">' + esc(S.err) + '</div>';
+    if (!R) return h + '<div class="muted">Grading every code of the last five weeks… this takes a moment the first time.</div>';
+    h += '<div class="legend"><span class="dot" style="background:var(--sage)"></span><b>Live-booked results</b><i>codes we published, since ' + esc(R.since) + '</i></div>';
+    h += '<div class="tiles">' + (R.tiles.length ? R.tiles.map(function (t) { return tile(t, false); }).join('') : '<div class="muted">No settled codes yet.</div>') + '</div>';
+    h += '<div class="legend"><span class="dot" style="background:var(--void)"></span><b>Corpus-measured rates</b><i>the rule across history, not booked slips</i></div>';
+    h += '<div class="tiles" style="margin-bottom:28px">' + (R.corpus || []).map(function (t) { return tile(t, true); }).join('') + '</div>';
+    var prods = []; R.settled.forEach(function (r) { if (prods.indexOf(r.product) < 0) prods.push(r.product); });
+    var filters = ['All'].concat(ORDER.filter(function (p) { return prods.indexOf(p) >= 0; })).concat(['Won only', 'Lost only']);
+    var f = S.recFilter;
+    var rows = R.settled.filter(function (r) { return f === 'All' || (f === 'Won only' ? r.result === 'won' : f === 'Lost only' ? r.result === 'lost' : r.product === f); });
+    h += '<div class="filters">' + filters.map(function (x) { return '<button data-filter="' + esc(x) + '"' + (f === x ? ' class="on"' : '') + '>' + esc(x) + '</button>'; }).join('') + '<span class="n">' + rows.length + ' codes</span></div>';
+    var st = stakeNum();
+    h += '<div class="tablewrap"><div class="trow head"><span>Code</span><span>Date · product</span><span>Legs won</span><span>Odds</span><span>Result</span><span>Returned</span></div>' +
+      rows.map(function (r) {
+        return '<div class="trow"><span class="code"><button data-open="' + esc(r.code) + '" data-day="' + '' + '">' + esc(r.code) + '</button></span>' +
+          '<span class="dp"><b>' + esc(r.date) + '</b> <span>' + esc(r.product) + '</span></span><span style="color:var(--tx2)">' + esc(r.legsWon) + '</span><span>' + fmtOdds(r.odds) + '</span>' +
+          '<span class="res ' + r.result + '">' + r.result + '</span><span style="color:var(--tx2)">' + (r.result === 'won' ? naira(st * r.odds) : naira(0)) + '</span></div>';
+      }).join('') + '</div>';
+    h += '<div class="kicker">By day · last 5 weeks</div><div class="heatbox">' + heatGrid(R) +
+      '<div class="hlegend"><span><i style="background:var(--won)"></i>all codes landed</span><span><i style="background:var(--livec)"></i>mixed</span><span><i style="background:var(--lost)"></i>none landed</span><span><i style="background:var(--s3)"></i>no codes</span><span><i style="background:repeating-linear-gradient(45deg,var(--s3) 0 3px,var(--line2) 3px 5px)"></i>booked, share codes expired</span></div></div>';
+    h += '<div class="muted" style="margin-top:10px">SportyBet share codes expire after about two weeks, so older codes cannot be re-graded and are shown hatched. Returned = stake × odds at ' + naira(st) + ' per code (set on the Account page), gross of SportyBet deductions.</div>';
+    return h;
+  }
+
+  // ---------- Rules ----------
+  function renderRules() {
+    var R = S.rules;
+    var h = '<h1 class="page">Rules</h1><p class="lead">Each product is a rule with thresholds, and each threshold was set by a measurement. Both are printed here. When a rule changes, the change and its number go in the changelog.</p>';
+    if (S.err) h += '<div class="err">' + esc(S.err) + '</div>';
+    if (!R) return h + '<div class="muted">Loading…</div>';
+    h += '<div class="rgrid">' + R.rules.map(function (r) {
+      return '<div class="rule"><div class="top">' + badge(r.product) + '<span class="tag">' + esc(r.tag) + '</span></div><p>' + esc(r.plain) + '</p>' +
+        r.thresholds.map(function (t) { return '<div class="thr"><span class="k">' + esc(t.k) + '</span><span class="v">' + esc(t.v) + '</span></div>'; }).join('') +
+        '<div class="measured">' + esc(r.measured) + '</div></div>';
+    }).join('') + '</div>';
+    h += '<div class="kicker">Changelog</div><div class="clog">' + R.changelog.map(function (c) { return '<div class="crow"><span class="d">' + esc(c.date) + '</span><span class="t">' + esc(c.txt) + '</span></div>'; }).join('') + '</div>';
+    return h;
+  }
+
+  // ---------- Account ----------
+  function renderAccount() {
+    var st = stakeNum();
+    var open = (S.codes.today || []).filter(function (c) { return !c.dead; });
+    var bot = S.live && S.live.bot;
+    var h = '<h1 class="page" style="margin-bottom:18px">Account</h1>';
+    h += '<div class="agrid">' +
+      '<div class="acard"><div class="top"><span class="plan">Free</span><span class="chip">Current plan</span></div><div class="price">₦0</div>' +
+      ['Every code, live', 'The full Record page', 'Every slip sheet'].map(function (f) { return '<div class="feat"><b>✓</b><span>' + f + '</span></div>'; }).join('') + '</div>' +
+      '<div class="acard paid"><div class="top"><span class="plan">Paid</span><span class="chip" style="background:var(--ac-soft);color:var(--ac-tx)">Everything</span></div>' +
+      '<div class="price">₦4,500<small> /month</small> <span style="font-size:15px;color:var(--tx2)">₦1,500<small> /week</small></span></div>' +
+      ['Live half-time codes the moment they fire', 'Telegram push per product', 'American Football and the other sports', 'Same-day slip sheets', 'Max accumulators'].map(function (f) { return '<div class="feat"><b>✓</b><span>' + f + '</span></div>'; }).join('') +
+      '<button class="btn wide" style="margin-top:8px" disabled>Upgrade</button><div class="fine">Prices are placeholders. Nothing is charged today; everything is open while Betty is in its first month.</div></div></div>';
+    h += '<div class="agrid" style="margin-bottom:0">' +
+      '<div class="acard"><div class="kicker" style="margin-bottom:12px">Stake calculator</div><label class="l">Stake per code (₦)</label>' +
+      '<input class="input" id="stake" inputmode="numeric" value="' + esc(S.stake) + '">' +
+      (open.length ? open.map(function (c) { return '<div class="srow"><span class="c">' + esc(c.code) + '</span><span class="o">×' + fmtOdds(c.odds) + '</span><span class="r">' + naira(st * (c.odds || 0)) + '</span></div>'; }).join('') : '<div class="muted">No open code today.</div>') +
+      '<div class="fine" style="text-align:left">Returns are gross, before SportyBet deductions. Open codes today only.</div></div>' +
+      '<div class="stack">' +
+      '<div class="acard" style="background:var(--s2)"><div style="display:flex;gap:12px;align-items:flex-start"><div class="tgico" style="width:36px;height:36px;font-size:15px">TG</div><div style="flex:1;min-width:0"><div style="font-size:15px;font-weight:700;margin-bottom:2px">Telegram</div>' +
+      '<div style="font-size:12.5px;color:var(--tx2)">' + (bot ? '@' + esc(bot) + ' pushes every code as it is booked; /live starts the half-time watcher, /stop ends it.' : 'The bot is not reachable right now.') + '</div></div>' +
+      '<button class="track' + (S.tg ? ' on' : '') + '" data-tg="1" title="Telegram pushes"><span class="knob"></span></button></div>' +
+      (bot ? '<a class="btn line" style="display:flex;margin-top:12px" href="https://t.me/' + esc(bot) + '" target="_blank" rel="noopener">Open @' + esc(bot) + '</a>' : '') + '</div>' +
+      '<div class="acard"><div class="kicker" style="margin-bottom:12px">Notify me per product</div>' +
+      ['Winners', 'Draws', 'Live', 'American Football', 'Max'].map(function (p) { return '<div class="prow">' + badge(p) + '<button class="track' + (S.prefs[p] ? ' on' : '') + '" data-pref="' + esc(p) + '"><span class="knob"></span></button></div>'; }).join('') +
+      '<div class="fine" style="text-align:left">Saved on this device. Per-product Telegram filtering lands with accounts.</div></div>' +
+      '<div class="acard"><div class="kicker" style="margin-bottom:12px">Sign in</div><label class="l">Phone number</label>' +
+      '<div style="display:flex;gap:8px;margin-bottom:10px"><span class="mono" style="padding:12px 13px;border-radius:999px;background:var(--s2);border:1px solid var(--line2);font-size:15px;color:var(--tx2)">+234</span>' +
+      '<input class="input" style="flex:1;min-width:0;margin:0;font-size:15px" placeholder="802 000 0000" disabled></div>' +
+      '<div class="otp">' + '<span></span>'.repeat(6) + '</div><button class="btn wide" disabled>Send code by SMS</button>' +
+      '<div class="fine">Accounts open with the paid plan. Until then every page is public.</div></div>' +
+      '</div></div>';
+    return h;
+  }
+
+  // ---------- render ----------
+  function renderNav() {
+    var active = S.tab === 'Slip' ? 'Today' : S.tab;
+    document.getElementById('topnav').innerHTML = TABS.map(function (t) { return '<button data-go="' + t[0] + '"' + (active === t[0] ? ' class="on"' : '') + '>' + t[0] + '</button>'; }).join('');
+    document.getElementById('botnav').innerHTML = TABS.map(function (t) {
+      return '<button data-go="' + t[0] + '"' + (active === t[0] ? ' class="on"' : '') + '><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="' + t[1] + '"></path></svg><span>' + t[0] + '</span></button>';
+    }).join('');
+    document.getElementById('themeLabel').textContent = S.theme === 'dark' ? 'Light' : 'Dark';
+    document.getElementById('app').setAttribute('data-t', S.theme);
+    document.documentElement.style.background = S.theme === 'dark' ? '#171411' : '#f5ead8';
+  }
+  function renderBanner() {
+    var el = document.getElementById('banner');
+    var show = S.tab === 'Today' || S.tab === 'Live' || S.tab === 'Slip';
+    el.hidden = !show || !S.banner;
+    if (el.hidden) return;
+    var b = S.banner, L = S.live, parts = [];
+    parts.push('<span><span class="pulse"></span><strong>' + b.open + '</strong> open code' + (b.open === 1 ? '' : 's') + '</span>');
+    parts.push('<span>next kickoff <strong>' + esc(b.next_ko || '—') + '</strong> WAT</span>');
+    if (L) {
+      var soon = L.codes.filter(function (c) { return c.closes_in - Math.floor((Date.now() - S.liveAt) / 1000) > 0; });
+      if (soon.length) {
+        var left = Math.min.apply(null, soon.map(function (c) { return c.closes_in - Math.floor((Date.now() - S.liveAt) / 1000); }));
+        parts.push('<span style="color:var(--tx2)">live window closes in <strong style="color:var(--livec)">' + mmss(left) + '</strong></span>');
+      } else {
+        parts.push('<span style="color:var(--tx2)">watcher ' + (L.state === 'running' ? '<strong style="color:var(--livec)">on</strong>' : 'off') + '</span>');
+      }
+    }
+    document.getElementById('bannerIn').innerHTML = parts.join('<span class="sep">|</span>');
+  }
+  function render() {
+    renderNav(); renderBanner();
+    var m = document.getElementById('main');
+    m.innerHTML = S.tab === 'Today' ? renderToday() : S.tab === 'Slip' ? renderSlip() : S.tab === 'Live' ? renderLive()
+      : S.tab === 'Record' ? renderRecord() : S.tab === 'Rules' ? renderRules() : renderAccount();
+  }
+
+  // ---------- events ----------
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('[data-copy],[data-open],[data-go],[data-day],[data-leg],[data-filter],[data-pref],[data-tg]');
+    if (!t) return;
+    if (t.hasAttribute('data-copy')) { e.stopPropagation(); doCopy(t.getAttribute('data-copy')); return; }
+    if (t.hasAttribute('data-open')) {
+      var code = t.getAttribute('data-open');
+      if (findCode(code)) { openSlip(code); return; }
+      // a code from the record table may be outside the loaded days: fetch its day
+      var row = (S.record && S.record.settled || []).filter(function (r) { return r.code === code; })[0];
+      var day = row ? row.iso : null;
+      if (day) { get('/api/codes?day=' + day).then(function (j) { S.codes[day] = (j.codes || []).map(decorate); S.codesAt[day] = Date.now(); openSlip(code); }).catch(function () {}); }
+      return;
+    }
+    if (t.hasAttribute('data-go')) { go(t.getAttribute('data-go')); return; }
+    if (t.hasAttribute('data-day')) { S.day = t.getAttribute('data-day'); render(); loadCodes(); return; }
+    if (t.hasAttribute('data-leg')) { var i = +t.getAttribute('data-leg'); S.openLeg = S.openLeg === i ? null : i; render(); return; }
+    if (t.hasAttribute('data-filter')) { S.recFilter = t.getAttribute('data-filter'); render(); return; }
+    if (t.hasAttribute('data-pref')) { var p = t.getAttribute('data-pref'); S.prefs[p] = !S.prefs[p]; save('betty.prefs', JSON.stringify(S.prefs)); render(); return; }
+    if (t.hasAttribute('data-tg')) { S.tg = !S.tg; save('betty.tg', S.tg ? '1' : '0'); render(); return; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if ((e.key === 'Enter' || e.key === ' ') && e.target.hasAttribute && e.target.hasAttribute('data-open')) { e.preventDefault(); e.target.click(); }
+  });
+  document.addEventListener('input', function (e) {
+    if (e.target.id === 'stake') { S.stake = e.target.value; save('betty.stake', S.stake);
+      var rows = document.querySelectorAll('.srow'); var st = stakeNum();
+      (S.codes.today || []).filter(function (c) { return !c.dead; }).forEach(function (c, i) { if (rows[i]) rows[i].querySelector('.r').textContent = naira(st * (c.odds || 0)); });
+    }
+  });
+  document.getElementById('theme').addEventListener('click', function () { S.theme = S.theme === 'dark' ? 'light' : 'dark'; save('betty.theme', S.theme); render(); });
+
+  // ---------- timers ----------
+  setInterval(function () {
+    S.tick++;
+    renderBanner();
+    if (S.tab === 'Live') { document.querySelectorAll('.lcard .cd').forEach(function (el, i) {
+      var c = S.live && S.live.codes[i]; if (!c) return;
+      var left = c.closes_in - Math.floor((Date.now() - S.liveAt) / 1000);
+      el.textContent = left > 0 ? mmss(left) : 'closed'; el.className = 'cd ' + (left <= 0 ? 'over' : left < 180 ? 'low' : '');
+    }); }
+  }, 1000);
+  setInterval(function () { loadLive(); loadBanner(); }, 30000);
+  setInterval(function () { if (S.tab === 'Today' || S.tab === 'Slip') loadCodes(S.day, true); if (S.tab === 'Record') loadRecord(); }, 60000);
+
+  render();
+  loadCodes('today').then(loadBanner).then(route);
+  loadLive();
+  window.addEventListener('hashchange', route);
+})();
+</script>
+</body>
+</html>

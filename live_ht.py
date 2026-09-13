@@ -86,6 +86,36 @@ def trailing_2h(rich):
 
 BATCH_S = 120        # legs found within this window go on ONE slip (half-times of a kickoff wave land together)
 STOP = {'flag': False}
+# 13 Sep: the website's "Watching now" list - every game on the live board with
+# what the watcher did about it (reading / code booked / no bet / in play).
+BOARD = {'ts': 0.0, 'rows': []}
+BOOKED = {}          # eventId -> code
+READ = {}            # eventId -> 'no bet' | 'queued'
+
+
+def snapshot(board, done):
+    rows = []
+    for e in board:
+        eid = e.get('eventId')
+        ms = (e.get('matchStatus') or '').upper()
+        mins = (e.get('playedSeconds') or '').split(':')[0]
+        if eid in BOOKED:
+            note = 'code booked'
+        elif eid in READ:
+            note = READ[eid]
+        elif LD.at_half_time(e) and eid not in done:
+            note = 'reading'
+        else:
+            note = 'in play'
+        cat = ((e.get('sport') or {}).get('category') or {})
+        comp = ' - '.join(x for x in (cat.get('name'), (cat.get('tournament') or {}).get('name')) if x)
+        rows.append(dict(event=eid, comp=comp,
+                         match=f"{e.get('homeTeamName')} v {e.get('awayTeamName')}",
+                         min=('HT' if ms == 'HT' else (mins + "'" if mins.isdigit() else ms)),
+                         score=(e.get('setScore') or '0:0').replace(':', '-'), status=ms, note=note))
+    order = {'reading': 0, 'code booked': 1, 'queued': 2, 'no bet': 3, 'in play': 4}
+    rows.sort(key=lambda r: (order.get(r['note'], 9), r['match']))
+    BOARD['ts'] = time.time(); BOARD['rows'] = rows[:80]
 
 
 def book_batch(pending, dry):
@@ -108,6 +138,8 @@ def book_batch(pending, dry):
     msg = f"{head}{body}\ncode {code}  {(bk or {}).get('url')}"
     LOG(msg)
     if code:
+        for l in legs:
+            BOOKED[l['eid']] = code
         A.log_booking(code, bk.get('url'), f"LIVE {'slip' if len(legs) > 1 else legs[0]['kind']} at HT ({len(legs)} legs, {combo:.2f}x)",
                       [(l['ets'], l['name'], f"{l['label']} (live, HT {l['sc']})", l['p'], [l['why'], f"1H stats {l['st']}", f"trailing 2H totals {l['t2']}"]) for l in legs])
         if SEND:
@@ -154,6 +186,7 @@ def run(until_h=None, dry=False, poll=POLL):
             board = LD.live_board()
         except Exception as ex:
             LOG(f"board error {type(ex).__name__}: {ex}"); time.sleep(poll); continue
+        snapshot(board, done)
         for e in board:
             eid = e.get('eventId')
             if eid in done or not LD.at_half_time(e):
@@ -242,7 +275,9 @@ def run(until_h=None, dry=False, poll=POLL):
                 pass
             if not legs:
                 why = ('no live stats' if no_stats else 'dead 1H' if dead and o05 == len(t2) else 'pressing at level' if pressing and u15 >= 12 else '')
+                READ[eid] = 'no bet'
                 LOG(f"HT {sc} {name}: 2H halves {t2}  1H shots {shots} poss {poss} - nothing{(' (' + why + ')') if why else ''}"); continue
+            READ[eid] = 'queued'
             for kind, label, p, sel, why in legs:
                 pending.append(dict(kind=kind, label=label, p=p, sel=sel, why=why, eid=eid, name=name, sc=sc, ets=ets, st=st, t2=t2))
                 pending_since = pending_since or time.time()
