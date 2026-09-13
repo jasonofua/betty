@@ -192,7 +192,9 @@ def run(until_h=None, dry=False, poll=POLL):
                         and poss and max(poss) >= 60 and h == a)               # Under dies to a dominant side at level
             no_stats = tot_shots is None
             # 1) the draw, gate games only
-            if eid in gate and h == a:
+            # 13 Sep: level means 0-0 or 1-1. The corpus has six gate games at 2-2+
+            # at the break in two years; Sol de America 2:2 at HT was booked and lost 3:2.
+            if eid in gate and h == a and h <= 1:
                 p, oid, sp = price(mk, '1', 'Draw')
                 if p and p >= DRAW_MIN:
                     legs.append(('DRAW', f"1X2 / Draw", p, dict(marketId='1', specifier=sp, outcomeId=oid), f"gate game level at HT (49.3%)"))
@@ -224,7 +226,9 @@ def run(until_h=None, dry=False, poll=POLL):
                     if best and best[0] >= floor:
                         legs.append(('2H O0.5', best[4], best[0], dict(marketId=best[3], specifier=best[2], outcomeId=best[1]),
                                      f"trailing 2H halves scored {o05}/{len(t2)} ({'83.6' if o05 == len(t2) else '80.2'}%)"))
-                if u15 >= 12 and not pressing and not no_stats:
+                # 13 Sep: Under needs at most one goal at the break - corpus 71.6% at
+                # 0-0, 63.4% at one goal, 58.7% at 2+ (the price is ~fair there).
+                if u15 >= 12 and not pressing and not no_stats and banked <= 1:
                     best = same_event(False, 1.5)
                     if best and best[0] >= U15_MIN:
                         legs.append(('2H U1.5', best[4], best[0], dict(marketId=best[3], specifier=best[2], outcomeId=best[1]),
