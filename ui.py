@@ -292,6 +292,10 @@ def scheduler():
                     script_job('points', args, f"{body['sport']} slip (scheduled)")
                 elif path == '/api/draws':
                     draw_job(body['until'], body.get('days', 0), False, bool(body.get('half')))
+                elif path == '/api/run':
+                    run_job(float(body.get('target', 50)), int(body['until']), int(body.get('days', 0)), False,
+                            bool(body.get('rollover')), 'composite', bool(body.get('maxodds')),
+                            bool(body.get('goalsonly')), bool(body.get('undersonly')), bool(body.get('strict')))
                 res = JOB.get('result') or {}
                 code = res.get('code')
                 if code:

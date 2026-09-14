@@ -1069,11 +1069,13 @@ SCHEDULE = [
     # (time WAT, job id, POST endpoint, body) - the codes are generated every day
     ('09:05', 'winners-am', '/api/winners', dict(until=23, days=0)),
     ('09:20', 'draws', '/api/draws', dict(until=23, days=0)),
+    ('09:28', 'max', '/api/run', dict(target=6, until=23, days=0, maxodds=True)),
     ('09:35', 'points-amfoot', '/api/points', dict(sport='amfoot', days=0)),
     ('09:40', 'points-basketball', '/api/points', dict(sport='basketball', days=0)),
     ('09:45', 'points-hockey', '/api/points', dict(sport='hockey', days=0)),
     ('09:50', 'points-handball', '/api/points', dict(sport='handball', days=0)),
     ('16:35', 'winners-pm', '/api/winners', dict(until=6, days=0)),
+    ('16:50', 'max-pm', '/api/run', dict(target=6, until=6, days=0, maxodds=True)),
 ]
 
 
