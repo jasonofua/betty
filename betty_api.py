@@ -731,10 +731,8 @@ def ladder_for(day='today', build=True):
     for c in parse_bookings():
         if _day_of(c['when']) != target or c['nested_from'] or c['superseded_by'] or not c['legs'] or c['product'] == 'Live':
             continue                                # live codes live on the Live tab
-        key = (c['product'], c['sport'])
-        if key in seen:
-            continue                                # newest base code per product only
-        seen.add(key)
+        # 14 Sep: every base code of the day, not only the newest per product -
+        # the 16:35 evening slip was hiding the morning slip while it was still in play
         d = decorate(c)
         rungs = {n['target']: n for n in nested_for(c['code'])
                  if n['code'] != c['code'] and n['odds'] <= n['target'] * 1.5}   # a rung, not the whole slip
@@ -761,6 +759,7 @@ def ladder_for(day='today', build=True):
         d['ladder'] = {str(t): rungs[t] for t in sorted(rungs)}
         products.append(d)
     order = {p: i for i, p in enumerate(PRODUCTS)}
+    products.sort(key=lambda d: (order.get(d['product'], 9), d['when']), reverse=False)
     products.sort(key=lambda d: order.get(d['product'], 9))
     return dict(day=str(target), targets=LADDER, products=products)
 

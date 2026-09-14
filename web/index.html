@@ -667,7 +667,7 @@ nav.bottom span{font-size:10.5px;font-weight:700}
     var dead = n.lost > 0, allWon = legs.length && n.won + n.void === legs.length && n.won > 0;
     var status = dead ? 'lost' : allWon ? 'won' : n.live ? 'live' : 'pending';
     var statusTxt = dead ? n.lost + ' lost' : allWon ? 'all won' : (n.won ? n.won + ' won \u00b7 ' : '') + (n.live ? n.live + ' in play \u00b7 ' : '') + n.pending + ' to play';
-    var h = '<div class="rung' + (dead ? ' dead' : allWon ? ' won' : '') + '"><div class="head"><span><span class="lab">' + esc(p.product) + (p.sport ? ' \u00b7 ' + esc(p.sport) : '') + '</span><h2>' + esc(title) + (full ? '' : ' \u00b7 ' + t + ' odds') + '</h2></span>' +
+    var h = '<div class="rung' + (dead ? ' dead' : allWon ? ' won' : '') + '"><div class="head"><span><span class="lab">' + esc(p.product) + (p.sport ? ' \u00b7 ' + esc(p.sport) : '') + (p.booked ? ' <span style="color:var(--tx3);letter-spacing:.02em;text-transform:none;font-weight:600">\u00b7 booked ' + esc(p.booked) + '</span>' : '') + '</span><h2>' + esc(title) + (full ? '' : ' \u00b7 ' + t + ' odds') + '</h2></span>' +
       '<span class="odds">' + fmtOdds(odds) + '<small>' + legs.length + ' leg' + (legs.length === 1 ? '' : 's') + '</small><div style="margin-top:4px">' + chip(status, statusTxt) + '</div></span></div>';
     var expanded = !!S.expanded[code] || legs.length <= 8;
     var shown = expanded ? legs : legs.slice(0, 8);
