@@ -79,8 +79,16 @@ def parse_bookings():
         heads = list(_HEAD.finditer(txt))
         for i, m in enumerate(heads):
             code = m.group(3)
-            if code in seen and seen[code]['when'] >= m.group(1):
-                continue                                # keep the newest booking of a re-booked code
+            lab = m.group(2)
+            nest = re.search(r'nested ([\d.]+)x from ([A-Z0-9]{6})', lab)   # pick-your-odds subset of another code
+            nested_from = nest.group(2) if nest and nest.group(2) != code else None
+            if code in seen:
+                # the same code logged twice: a base booking always beats a "nested"
+                # record (a rung that turned out to be the whole slip comes back
+                # as the base code itself); between two base records the newest wins
+                old = seen[code]
+                if (old['nested_from'] is None and nested_from is not None) or (old['nested_from'] is None and old['when'] >= m.group(1)):
+                    continue
             block = txt[m.end():heads[i + 1].start() if i + 1 < len(heads) else len(txt)]
             legs, cur, url = [], None, None
             for line in block.split('\n'):
@@ -96,13 +104,11 @@ def parse_bookings():
                     legs.append(cur); continue
                 if cur is not None and line.startswith('    ') and line.strip():
                     cur['stats'].append(line.strip())
-            lab = m.group(2)
             rb = re.match(r'^.*?\b([A-Z0-9]{6}) with\b', lab)         # a hand rebook names the code it replaces
-            nest = re.search(r'nested ([\d.]+)x from ([A-Z0-9]{6})', lab)   # pick-your-odds subset of another code
             seen[code] = dict(code=code, when=m.group(1), label=lab, product=product_of(lab), sport=sport_of(lab),
                               url=url or f'http://www.sportybet.com/ng/?shareCode={code}', legs=legs,
                               replaces=rb.group(1) if rb and rb.group(1) != code else None, superseded_by=None,
-                              nested_from=nest.group(2) if nest else None)
+                              nested_from=nested_from)
     for c in seen.values():
         if c['replaces'] and c['replaces'] in seen:
             seen[c['replaces']]['superseded_by'] = c['code']
@@ -653,7 +659,7 @@ def nest_code(code, target):
     cache = _nest_load()
     hit = cache.get(key)
     now = time.time()
-    if hit and hit.get('first_ko', 0) > now + 60:
+    if hit and hit.get('first_ko', 0) > now + 60 and hit.get('code') != code and hit.get('odds', 0) <= target * 1.5:
         return dict(hit, cached=True)
     src = next((c for c in parse_bookings() if c['code'] == code), None)
     g = graded(code, force=True)
