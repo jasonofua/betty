@@ -815,10 +815,10 @@ def live_feed(LIVE):
 
 RULES = [
     dict(product='Winners', tag='match result',
-         plain="The market favourite only, and only when venue goal difference backs it. Short prices go as a straight win, mid prices as a double chance, and any price becomes a double chance when either side is draw-prone or the favourite has no shot stats on the feed. A favourite whose last ten shows more losses than wins, that is out-shot on target, that creates fewer shots on target than the opponent does, or that has a losing head-to-head is dropped. A dead heat in the market is no favourite.",
-         thresholds=[dict(k='Venue goal difference, home', v='1.0 a game'), dict(k='Venue goal difference, away', v='1.5 a game'), dict(k='Straight win, price under', v='1.80'),
-                     dict(k='Double chance band', v='1.80 to 2.60'), dict(k='Draw-prone: favourite venue draws', v='5+'), dict(k='Draw-prone: opponent venue draws', v='4+'),
-                     dict(k='Draw-prone: combined venue draws', v='4+'), dict(k='Dropped when', v='more losses than wins, out-shot on target, out-created on target, losing H2H, dead heat')],
+         plain="The market favourite only, and only when venue goal difference backs it. Prices under 1.60 go as a straight win, 1.60 to 2.60 as a double chance, and any price becomes a double chance when either side is draw-prone or the favourite has no shot stats on the feed. A favourite whose last ten shows more losses than wins, that is out-shot on target, that creates fewer shots on target than the opponent does, or that has a losing head-to-head is dropped. A dead heat in the market is no favourite.",
+         thresholds=[dict(k='Venue goal difference, home', v='1.0 a game'), dict(k='Venue goal difference, away', v='1.5 a game'), dict(k='Straight win, price under', v='1.60'),
+                     dict(k='Double chance band', v='1.60 to 2.60'), dict(k='Draw-prone: favourite venue draws', v='5+'), dict(k='Draw-prone: opponent venue draws', v='4+'),
+                     dict(k='Draw-prone: combined venue draws', v='4+'), dict(k='Dropped when', v='more losses than wins, out-shot or out-created on target, losing H2H, dead heat, opponent with 7+ of 10 or more wins than the favourite, opponent 3 of its last 4 at the venue')],
          measured='Corpus: home favourites at margin 1.0+ win 52.6%, win-or-draw 75.9% (19,945 matches). The yesterday check replays the rule over the whole previous board before every booking.'),
     dict(product='Draws', tag='draw gate',
          plain="Two branches. The quiet-game filter reads expected goals, combined draws, mismatch, expected shots on target, shot evenness and blanks. The home-profile branch takes home sides that draw at home and concede little, in leagues that draw often. Price floor at the gate's own rate. One slip a day.",
@@ -847,6 +847,7 @@ RULES = [
 ]
 
 CHANGELOG = [
+    dict(date='14 Sep', txt="Winners: straight-win line 1.80 -> 1.60 (two days of legs: straight at 1.60-1.94 went 9-9, six of the nine draws; covers there 15-2). The opponent's form now counts: 7+ wins in its last 10, more wins than the favourite, or 3 of its last 4 at the venue drops the leg (corpus 37.5% / 45.7% / 43.3% favourite wins)."),
     dict(date='13 Sep', txt='Winners: a favourite that creates fewer shots on target than its opponent is dropped (corpus: 46.3% v 54.7% at home, 36.2% v 56.1% away); a dead heat in the market is no favourite. Live: 2H Under 1.5 only at 0-0 (corpus 74.2% v 63.1% with a goal banked).'),
     dict(date='13 Sep', txt='Website: every code with its sheet, live codes with the countdown, the record, the rules, and the operator console.'),
     dict(date='13 Sep', txt='Live: Draw needs 0-0 or 1-1 at the break; Under 1.5 needs at most one goal banked (corpus 71.6% at 0-0, 58.7% at 2+). First-half shots now check the histories: Over needs 7+ shots, Under refuses a side pressing at level.'),

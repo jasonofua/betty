@@ -35,7 +35,9 @@ import book_draw as DRW          # venue_form(): df_hh Home/Away tabs cut at kic
 # 30/35 (86%) for the first pass.
 MARGIN_HOME = 1.0   # goals per game, favourite minus opponent at the venue
 MARGIN_AWAY = 1.5
-STRAIGHT_MAX = 1.80
+STRAIGHT_MAX = 1.60      # 14 Sep: was 1.80. Two days of settled legs (106): straight wins at
+                         # 1.60-1.94 went 9-9 with six of the nine losses draws; covers in the
+                         # same band 15-2. Under 1.60 the straight win went 22-9.
 DC_MAX = 2.60
 SEP = '-' * 96
 
@@ -132,6 +134,18 @@ def warnings_for(row, w):
     opp_sot = w['a_sot'] if fav_home else w['h_sot']
     if sot and opp_sot and sot[0] < opp_sot[0]:
         flags.append(f"out-created: SoT for {sot[0]:.1f} v opponent's {opp_sot[0]:.1f}")
+    # 14 Sep: the OPPONENT'S form. Corpus (experiments/fix_audit_14sep.py, venue-GD
+    # favourites, prior results only): opponent with 7+ wins in its last 10 ->
+    # favourite wins 37.5% (67.7% win-or-draw, n 248); opponent's overall wins
+    # >= favourite's -> 45.7% / 71.7% (n 3,210) against 54.2% / 78.1%; opponent
+    # 3+ wins in its last 4 at the venue -> 43.3% / 67.4% (n 383). Concepcion
+    # (8W1D1L) held Colo-Colo, Cali (3 of its last 4 away) won at Once Caldas.
+    oppall = w['a_all'] if fav_home else w['h_all']
+    if oppall and allf and (oppall[0] >= 7 or oppall[0] >= allf[0]):
+        flags.append(f"opponent's form {oppall[0]}W{oppall[1]}D{oppall[2]}L v favourite's {allf[0]}W{allf[1]}D{allf[2]}L")
+    opp_pairs = row['ap'] if fav_home else row['hp']
+    if len(opp_pairs) >= 4 and sum(g > c for g, c in opp_pairs[:4]) >= 3:
+        flags.append("opponent has won 3 of its last 4 at this venue")
     if w['h2h']:
         fav_w = sum((a > b) if fav_home else (b > a) for _, a, b in w['h2h'])
         fav_l = sum((a < b) if fav_home else (b < a) for _, a, b in w['h2h'])
