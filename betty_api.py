@@ -79,8 +79,8 @@ def parse_bookings():
         heads = list(_HEAD.finditer(txt))
         for i, m in enumerate(heads):
             code = m.group(3)
-            if code in seen:
-                continue
+            if code in seen and seen[code]['when'] >= m.group(1):
+                continue                                # keep the newest booking of a re-booked code
             block = txt[m.end():heads[i + 1].start() if i + 1 < len(heads) else len(txt)]
             legs, cur, url = [], None, None
             for line in block.split('\n'):
@@ -677,6 +677,10 @@ def nest_code(code, target):
         pick = legs[:k] + [legs[j]]; combo = cand
     else:
         pick = list(legs); combo = base
+    if combo > target * 1.5:
+        return dict(error=f"the nearest this slip can get to {target:g}x is {combo:.2f}x", max=round(combo, 2))
+    if len(pick) >= len(legs):
+        return dict(error='that is the whole slip - use the full code', max=round(combo, 2))
     if combo < target * 0.95:
         return dict(error=f"the legs still to play only reach {combo:.2f}x together; pick a lower target", max=round(combo, 2))
     if src and src['product'] == 'Live':
@@ -726,7 +730,8 @@ def ladder_for(day='today', build=True):
             continue                                # newest base code per product only
         seen.add(key)
         d = decorate(c)
-        rungs = {n['target']: n for n in nested_for(c['code'])}
+        rungs = {n['target']: n for n in nested_for(c['code'])
+                 if n['code'] != c['code'] and n['odds'] <= n['target'] * 1.5}   # a rung, not the whole slip
         if build and c['product'] != 'Live' and target == today:
             for t in LADDER:
                 if t in rungs and rungs[t].get('first_ko', 0) > time.time() + 60:
