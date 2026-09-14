@@ -227,7 +227,19 @@ def run(until_h=None, dry=False, poll=POLL):
             # 1) the draw, gate games only
             # 13 Sep: level means 0-0 or 1-1. The corpus has six gate games at 2-2+
             # at the break in two years; Sol de America 2:2 at HT was booked and lost 3:2.
-            if eid in gate and h == a and h <= 1:
+            # 14 Sep: the live Draw went 1-4. Corpus (experiments/fix_audit_livedraw.py,
+            # quiet-gate games level at the break): one side with 75%+ of the
+            # first-half shots -> FT draw 26.2% against 41.8% when shared; all 14
+            # trailing second halves scored -> 30.8%. San Martin de Tucuman had
+            # 8 v 0 shots and 14/14 at 0-0 and won 3-0; Urena had no live stats at
+            # all. So: live stats required, no dominant side, not 14/14.
+            dominant = (tot_shots is not None and tot_shots >= 4 and max(shots) / tot_shots >= 0.75)
+            all_scored = len(t2) >= 14 and all(x >= 1 for x in t2[:14])
+            if eid in gate and h == a and h <= 1 and no_stats:
+                LOG(f"HT {sc} {name}: gate game, no live stats - no draw")
+            elif eid in gate and h == a and h <= 1 and (dominant or all_scored):
+                LOG(f"HT {sc} {name}: gate game, {'one side has ' + str(max(shots)) + ' of ' + str(tot_shots) + ' shots' if dominant else 'all 14 trailing halves scored'} - no draw")
+            elif eid in gate and h == a and h <= 1:
                 p, oid, sp = price(mk, '1', 'Draw')
                 if p and p >= DRAW_MIN:
                     legs.append(('DRAW', f"1X2 / Draw", p, dict(marketId='1', specifier=sp, outcomeId=oid), f"gate game level at HT (49.3%)"))

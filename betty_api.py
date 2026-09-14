@@ -831,7 +831,7 @@ RULES = [
          measured='Corpus: 47.9% half-time draws inside the gate against 40.0% for all matches; 54.2% where the league draws 34%+.'),
     dict(product='Live', tag='half-time whistle',
          plain="The watcher reads every game on the live board at the break and books three shapes: the Draw on gate games level at 0-0 or 1-1; second-half Over 0.5 when every one of the fourteen trailing second halves scored and the first half had shots in it; second-half Under 1.5 when twelve of fourteen trailing halves stayed at one goal or fewer, the game is 0-0 at the break, and nobody is pressing. No live stats, no bet. Legs that land within two minutes go on one slip.",
-         thresholds=[dict(k='Draw taken at', v='0-0 or 1-1, gate games, price 2.10+'), dict(k='2H Over 0.5 needs', v='14 of 14 trailing halves scored, price 1.20+'), dict(k='2H Over 0.5 first-half shots', v='7+'),
+         thresholds=[dict(k='Draw taken at', v='0-0 or 1-1, gate games, price 2.10+, live stats present, no side with 75%+ of the 1H shots, not 14/14 trailing halves scored'), dict(k='2H Over 0.5 needs', v='14 of 14 trailing halves scored, price 1.20+'), dict(k='2H Over 0.5 first-half shots', v='7+'),
                      dict(k='2H Under 1.5 needs', v='12 of 14 halves at <= 1 goal, 0-0 at the break, price 1.55+'), dict(k='Under blocked when a side is at', v='10+ shots and 60% possession'), dict(k='One slip when legs land within', v='2 minutes')],
          measured='Corpus: 2H Over 0.5 at 14/14 = 83.6% (1,073 rows), Under 1.5 at 0-0 = 71.6%, gate draw level at HT = 49.3%. Every half-time read is logged with its stats.'),
     dict(product='Points sports', tag='American football, basketball, ice hockey, handball',
@@ -847,6 +847,7 @@ RULES = [
 ]
 
 CHANGELOG = [
+    dict(date='14 Sep', txt='Live Draw: needs live stats, no side with 75%+ of the first-half shots (corpus 26.2% v 41.8% draws) and not all 14 trailing second halves scored (30.8%). The live Draw had gone 1-4.'),
     dict(date='14 Sep', txt="Winners: straight-win line 1.80 -> 1.60 (two days of legs: straight at 1.60-1.94 went 9-9, six of the nine draws; covers there 15-2). The opponent's form now counts: 7+ wins in its last 10, more wins than the favourite, or 3 of its last 4 at the venue drops the leg (corpus 37.5% / 45.7% / 43.3% favourite wins)."),
     dict(date='13 Sep', txt='Winners: a favourite that creates fewer shots on target than its opponent is dropped (corpus: 46.3% v 54.7% at home, 36.2% v 56.1% away); a dead heat in the market is no favourite. Live: 2H Under 1.5 only at 0-0 (corpus 74.2% v 63.1% with a goal banked).'),
     dict(date='13 Sep', txt='Website: every code with its sheet, live codes with the countdown, the record, the rules, and the operator console.'),
