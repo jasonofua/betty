@@ -57,16 +57,13 @@ def gate_events(until_h, days=0):
     """Today's gate passers as SportyBet events - the pre-match PRICE FLOOR is
     switched off here: a game the book priced under fair before kickoff is
     still a gate game, and the live price at HT is what we bet."""
-    old = DRW.FLOOR
-    DRW.FLOOR = False
-    try:
-        # 12 Sep: All Boys v San Telmo kicked off 19:30, the watcher restarted at
-        # 18:35 and built its gate from 19:35 on - so a gate game that was 0:0 at
-        # the break was read as "nothing". The live gate keeps everything that
-        # kicked off in the last three hours.
-        legs = DRW.build(until_h=until_h, days=days, verbose=False, lead_h=-3.0)
-    finally:
-        DRW.FLOOR = old
+    # 12 Sep: All Boys v San Telmo kicked off 19:30, the watcher restarted at
+    # 18:35 and built its gate from 19:35 on - so a gate game that was 0:0 at
+    # the break was read as "nothing". The live gate keeps everything that
+    # kicked off in the last three hours.
+    # 14 Sep: floor passed as a parameter, never flipped on the module (the
+    # scheduled draws run shares the process with this thread).
+    legs = DRW.build(until_h=until_h, days=days, verbose=False, lead_h=-3.0, floor=False)
     out = {}
     for l in legs:
         out[l['bs']['eventId']] = dict(match=l['match'], ko=l['ts'], stats=l['stats'])

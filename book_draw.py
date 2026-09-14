@@ -255,7 +255,11 @@ def draw_price(ev):
     return None, None
 
 
-def build(until_h=23, days=0, margin=MARGIN, verbose=True, lead_h=1.0):
+def build(until_h=23, days=0, margin=MARGIN, verbose=True, lead_h=1.0, floor=None):
+    # 14 Sep: the floor is a PARAMETER. live_draw used to flip the module global
+    # FLOOR off while it built its gate in the watcher thread, and the 09:20
+    # draws run in the same process booked Fenix Pilar at 2.75 under the 2.89 floor.
+    use_floor = FLOOR if floor is None else bool(floor)
     now = dt.datetime.now(A.WAT)
     start = now + dt.timedelta(hours=lead_h)      # live watcher passes a negative lead to keep in-play games
     cutoff = now.replace(hour=until_h, minute=0, second=0, microsecond=0)
@@ -280,9 +284,9 @@ def build(until_h=23, days=0, margin=MARGIN, verbose=True, lead_h=1.0):
         print(f"sportybet in window {len(evs)}  |  joined to flashscore {len(pairs)}", flush=True)
         if MODEL_CUT:
             print(f"model: {_B['kind']}  p_cut {P_CUT:.3f}  (held-out precision at the cut {MEASURED:.1%}; "
-                  f"{'price floor ' + format(FAIR, '.2f') if FLOOR else 'no price floor'})", flush=True)
+                  f"{'price floor ' + format(FAIR, '.2f') if use_floor else 'no price floor'})", flush=True)
         else:
-            print(f"gate only - model cut OFF (gate rate {RATE:.1%}; price floor {FAIR:.2f})" if FLOOR else
+            print(f"gate only - model cut OFF (gate rate {RATE:.1%}; price floor {FAIR:.2f})" if use_floor else
                   f"gate only - model cut OFF (gate rate {RATE:.1%}; no price floor)", flush=True)
 
     need = FAIR * (1 + margin)
@@ -312,7 +316,7 @@ def build(until_h=23, days=0, margin=MARGIN, verbose=True, lead_h=1.0):
         # 0:1) was such a bet - wrong even if the pick had landed. 3 of the 11
         # priced legs booked since 6 Sep were below fair. Nothing about which
         # GAME gets picked changes; this only declines a bad number.
-        if FLOOR and odds < FAIR:
+        if use_floor and odds < FAIR:
             st[f'price below fair {FAIR:.2f}'] += 1; continue
         out.append({
             'ts': dt.datetime.fromtimestamp(int(ev['estimateStartTime']) / 1000, tz=A.WAT),
