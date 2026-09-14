@@ -749,6 +749,15 @@ def ladder_for(day='today', build=True):
                     rungs[t] = r
                 else:
                     break
+        # the rungs carry the live state of their legs from the graded base slip
+        bykey = {_key(l['match'].split(' v ')[0])[:10]: l for l in d['legs']}
+        for r in rungs.values():
+            for rl in r.get('legs') or []:
+                g = bykey.get(_key(rl['match'].split(' v ')[0])[:10])
+                if g:
+                    rl.update(state=g['state'], score=g['score'], hint=g['hint'], comp=g.get('comp', ''))
+            n = collections.Counter(rl.get('state', 'pending') for rl in r.get('legs') or [])
+            r['n'] = len(r.get('legs') or []); r['won'] = n['won']; r['lost'] = n['lost']; r['live'] = n['live']
         d['ladder'] = {str(t): rungs[t] for t in sorted(rungs)}
         products.append(d)
     order = {p: i for i, p in enumerate(PRODUCTS)}
