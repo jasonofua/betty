@@ -1029,7 +1029,11 @@ def livelog_rows(LIVE, n=40):
     """Every half-time state the watcher read: from experiments/live_ht_log.jsonl
     when the container still has it, else parsed from the watcher's log lines."""
     rows = []
-    path = os.path.join(ROOT, 'experiments', 'live_ht_log.jsonl')
+    try:
+        import live_ht as LH
+        path = LH.LOGFILE
+    except Exception:
+        path = os.path.join(ROOT, 'experiments', 'live_ht_log.jsonl')
     try:
         lines = open(path, encoding='utf-8').read().splitlines()[-n:]
         for ln in lines:

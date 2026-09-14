@@ -36,7 +36,10 @@ import live_draw as LD
 POLL = 45
 SEND = None
 LOG = print
-LOGFILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'experiments', 'live_ht_log.jsonl')
+# 14 Sep: on Railway the log lives next to bookings.md on the volume - the
+# container's own filesystem is wiped by every deploy, and with it the day's reads.
+LOGFILE = (os.path.join(os.path.dirname(os.environ['BOOKINGS_PATH']), 'live_ht_log.jsonl') if os.environ.get('BOOKINGS_PATH')
+           else os.path.join(os.path.dirname(os.path.abspath(__file__)), 'experiments', 'live_ht_log.jsonl'))
 DRAW_MIN, O05_MIN, U15_MIN = 2.10, 1.20, 1.55
 
 
