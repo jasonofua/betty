@@ -167,25 +167,44 @@ def _key(name):
 
 
 def merge_grades(legs, gl):
-    """Attach the graded row to each booked leg: by home-team match first, by order second."""
+    """Attach the graded row to each booked leg. Match on the home team, then on
+    the away team; fall back to position ONLY when both lists are the same
+    length. A booked leg the share API no longer carries (NETHQ5: Sandecja v
+    Slask II vanished from the code) used to shift every later leg one row
+    down and mis-grade the whole slip."""
     used = set()
-    for i, leg in enumerate(legs):
-        home = _key(leg['match'].split(' v ')[0])[:10]
-        hit = None
+
+    def find(key, side):
+        if len(key) < 5:
+            return None
         for j, x in enumerate(gl):
             if j in used:
                 continue
-            gh = _key(x['home'])
-            if home and (home in gh or gh[:10] in home):
-                hit = j; break
-        if hit is None and i < len(gl) and i not in used:
-            hit = i
-        if hit is not None:
-            used.add(hit); x = gl[hit]
+            gk = _key(x[side])
+            if key in gk or (len(gk) >= 5 and gk[:10] in key):
+                return j
+        return None
+
+    hits = {}
+    for i, leg in enumerate(legs):
+        home, away = (leg['match'].split(' v ') + [''])[:2]
+        j = find(_key(home)[:10], 'home')
+        if j is None:
+            j = find(_key(away)[:10], 'away')
+        if j is not None:
+            used.add(j); hits[i] = j
+    if len(legs) == len(gl):
+        for i in range(len(legs)):
+            if i not in hits and i not in used:
+                hits[i] = i; used.add(i)
+    for i, leg in enumerate(legs):
+        j = hits.get(i)
+        if j is not None:
+            x = gl[j]
             leg.update(state=x['state'], score=x['score'], hint=x['hint'], comp=x.get('comp', ''),
                        kots=x.get('ko', 0), ht=x.get('ht'))
         else:
-            leg.update(state='pending', score='', hint='not started', comp='', kots=0)
+            leg.update(state='void', score='', hint='not on the share code', comp='', kots=0)
     return legs
 
 
@@ -426,7 +445,7 @@ def _donor_stats(c, leg):
     and product booked within a day of it."""
     d = _day_of(c['when'])
     for o in parse_bookings():
-        if o['code'] == c['code'] or o['product'] != c['product'] or abs((_day_of(o['when']) - d).days) > 1:
+        if o['code'] == c['code'] or o['product'] != c['product'] or o['nested_from'] or abs((_day_of(o['when']) - d).days) > 1:
             continue
         for l in o['legs']:
             if l['match'] == leg['match'] and l['stats']:
