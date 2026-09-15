@@ -791,11 +791,17 @@ def combined_code(slot='am'):
             ids = l.get('ids') or {}
             if l['state'] != 'pending' or l.get('ko', 0) <= now + 300 or ids.get('active', 1) == 0:
                 continue
-            key = (ids.get('eventId'), ids.get('marketId'), ids.get('specifier'), ids.get('outcomeId'))
-            if key in seen:
-                continue
-            seen.add(key); sels.append(dict(leg=l, ids=ids, src=c))
+            sels.append(dict(leg=l, ids=ids, src=c))
         srcs.append(c['code'])
+    # one leg per MATCH (user's call): a game on two tickets - Como 1X on winners
+    # and Como Over 0.5 on max, or a winners 1X against a draws Draw - keeps only
+    # its shortest price
+    bymatch = {}
+    for x in sels:
+        k = x['ids'].get('eventId')
+        if k not in bymatch or x['leg']['price'] < bymatch[k]['leg']['price']:
+            bymatch[k] = x
+    sels = list(bymatch.values())
     if len(sels) < 2:
         return dict(error=f"only {len(sels)} leg{'s' if len(sels) != 1 else ''} still to play across today's tickets")
     sels.sort(key=lambda x: x['leg']['price'])
@@ -808,7 +814,10 @@ def combined_code(slot='am'):
     combo = 1.0
     for x in sels:
         combo *= x['leg']['price']
-    A.log_booking(bk['code'], bk.get('url'), f"all games {slot} - combined slip {combo:,.1f}x ({len(sels)} legs) from {', '.join(sorted(set(srcs)))}",
+    prev = next((c['code'] for c in parse_bookings() if _day_of(c['when']) == today and c['product'] == 'All games'
+                 and f' {slot} ' in c['label'] and not c['superseded_by']), None)
+    A.log_booking(bk['code'], bk.get('url'), f"all games {slot} - combined slip {combo:,.1f}x ({len(sels)} legs) from {', '.join(sorted(set(srcs)))}"
+                  + (f" - {prev} with today's tickets rebuilt" if prev and prev != bk['code'] else ''),
                   [(x['leg']['ko'], x['leg']['match'], x['leg']['sel'], x['leg']['price'], [f"from {x['src']['code']} ({x['src']['product']})"]) for x in sels])
     _book_cache['sig'] = None
     return dict(code=bk['code'], url=bk.get('url'), odds=round(combo, 2), n=len(sels), sources=sorted(set(srcs)), booked=bk.get('booked'), verified=bk.get('verified'))
