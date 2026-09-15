@@ -83,6 +83,10 @@ def build():
                                 avgh=num(r.get('AvgH')), avgd=num(r.get('AvgD')), avga=num(r.get('AvgA')),
                                 maxh=num(r.get('MaxH')), maxd=num(r.get('MaxD')), maxa=num(r.get('MaxA')))
                     stats = {k.lower(): num(r.get(k)) for k in ('HS', 'AS', 'HST', 'AST', 'HC', 'AC', 'HF', 'AF', 'HY', 'AY', 'HR', 'AR') if r.get(k) not in (None, '')}
+                    for k in ('B365>2.5', 'B365<2.5', 'Avg>2.5', 'Avg<2.5', 'Max>2.5', 'Max<2.5', 'BbAv>2.5', 'BbAv<2.5'):
+                        v = num(r.get(k))
+                        if v: odds[k.lower().replace('bbav', 'avg')] = v
+                    if r.get('Referee'): odds['referee'] = r['Referee']
                 if not home or hg is None or ag is None:
                     continue
                 day = parse_date(r.get('Date', ''), r.get('Time'))

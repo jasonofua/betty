@@ -323,8 +323,18 @@ def run(until_h=None, dry=False, poll=POLL):
                     if best and best[0] >= U15_MIN:
                         legs.append(('2H U1.5', best[4], best[0], dict(marketId=best[3], specifier=best[2], outcomeId=best[1]),
                                      f"trailing 2H halves <=1 goal {u15}/{len(t2)} (66.1%)"))
+            # 15 Sep: every level half-time read carries the pre-match draw implied and the
+            # LIVE draw price, booked or not - the in-play dataset the draw search
+            # continues on (join to the corpus by fixture id for the result).
+            live_draw = None
+            if h == a:
+                try:
+                    live_draw = price(mk, '1', 'Draw')[0]
+                except Exception:
+                    live_draw = None
             rec = dict(ts=time.time(), event=eid, fixture=f['id'], match=name, league=f.get('league'), ht=sc,
-                       stats=st, trailing_2h=t2, legs=[(l[0], l[1], l[2]) for l in legs], gate=eid in gate)
+                       stats=st, trailing_2h=t2, legs=[(l[0], l[1], l[2]) for l in legs], gate=eid in gate,
+                       pre_draw=PRE.get(eid), live_draw=live_draw)
             try:
                 with open(LOGFILE, 'a') as fh:
                     fh.write(json.dumps(rec) + '\n')
