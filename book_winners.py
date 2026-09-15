@@ -15,7 +15,7 @@ One slip, every qualifying game in the window. Window opens one hour ahead.
 
     python3 book_winners.py --until 23 [--days 0] [--dry]
 """
-import sys, datetime as dt, json
+import collections, sys, datetime as dt, json
 import acca as A
 import fetcher_v2 as F2
 import dynamic_v4 as D
@@ -35,6 +35,8 @@ import book_draw as DRW          # venue_form(): df_hh Home/Away tabs cut at kic
 # 30/35 (86%) for the first pass.
 MARGIN_HOME = 1.0   # goals per game, favourite minus opponent at the venue
 MARGIN_AWAY = 1.5
+MIN_PRICE = 1.15         # 15 Sep: DAC at 1.01 away to Velke Ludince (Slovak Cup) lost 3-2. A leg
+                         # under 1.15 adds nothing to a slip and carries the whole risk - no value.
 STRAIGHT_MAX = 1.60      # 14 Sep: was 1.80. Two days of settled legs (106): straight wins at
                          # 1.60-1.94 went 9-9 with six of the nine losses draws; covers in the
                          # same band 15-2. Under 1.60 the straight win went 22-9.
@@ -196,6 +198,19 @@ def build(until_h, days=0, verbose=True):
             row['why'] = f"no favourite: home and away both {o1}"; rows.append(row); continue
         side = 'Home' if o1 <= o2 else 'Away'
         price = o1 if side == 'Home' else o2
+        if price < MIN_PRICE:
+            row['why'] = f"favourite priced {price:.2f} - below {MIN_PRICE:.2f}, no value"; rows.append(row); continue
+        # 15 Sep: a tie between two tiers (Velke Ludince v DAC in the Slovak Cup,
+        # York City v Newcastle U21 in the EFL Trophy) - the two venue histories
+        # come from different competitions and say nothing about each other.
+        try:
+            hc, ac = DRW.venue_comps(f['id'], f['ts'])
+            top = lambda xs: collections.Counter(x for x in xs if x).most_common(1)[0][0] if any(xs) else None
+            hm, am = top(hc), top(ac)
+            if hm and am and hm != am:
+                row['why'] = f"cross-competition tie: {hm} v {am}"; rows.append(row); continue
+        except Exception:
+            pass
         hg, ag = gd(hp), gd(ap)
         margin = (hg - ag) if side == 'Home' else (ag - hg)
         row.update(side=side, price=price, margin=margin)

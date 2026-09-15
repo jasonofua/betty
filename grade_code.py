@@ -471,7 +471,8 @@ def grade_struct(code):
             h, a = map(int, ss.split(':'))
             # Strip extra time and penalties whenever the period list shows them
             # (CS Lotus v Crisul: plain "Ended" with a shootout in setScore).
-            if (ms in ('AET', 'AP') or len(gs) > 2) and p1 and p2:
+            football = ((o.get('sport') or {}).get('id') in (None, 'sr:sport:1'))
+            if football and (ms in ('AET', 'AP') or len(gs) > 2) and p1 and p2:
                 h, a = p1[0] + p2[0], p1[1] + p2[1]; row['score'] = f"{h}-{a}"; row['hint'] = '90 min'
         if p1:
             row['ht'] = f"{p1[0]}-{p1[1]}"

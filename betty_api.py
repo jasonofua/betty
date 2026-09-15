@@ -665,8 +665,9 @@ def nest_code(code, target):
         return dict(hit, cached=True)
     src = next((c for c in parse_bookings() if c['code'] == code), None)
     g = graded(code, force=True)
+    # 15 Sep: no leg under 1.12 on a rung - a 1.01 adds nothing and can still lose
     legs = [l for l in (g.get('legs') or []) if l['state'] == 'pending' and l.get('ko', 0) > now + 300
-            and l.get('ids', {}).get('active', 1) != 0]
+            and l.get('ids', {}).get('active', 1) != 0 and l['price'] >= 1.12]
     if not legs:
         return dict(error='no leg of this code is still to kick off')
     legs.sort(key=lambda l: l['price'])
@@ -925,6 +926,7 @@ RULES = [
 ]
 
 CHANGELOG = [
+    dict(date='15 Sep', txt='Winners: no leg under 1.15 (DAC at 1.01 lost in the Slovak Cup); a tie between two tiers - the two venue histories from different competitions - is skipped. Rungs: no leg under 1.12. Live Draw: needs 12 trailing second halves on record.'),
     dict(date='15 Sep', txt='Points sports: each venue history counts only games in the same competition as the fixture; friendlies and pre-season games are skipped (Breogan v Rilski, an ACB side v a Bulgarian side, lost +15.5 by 45). Draws: the home-profile branch now caps the venue mismatch at 2.0 (27.3% above it).'),
     dict(date='14 Sep', txt='Live Draw: needs live stats, no side with 75%+ of the first-half shots (corpus 26.2% v 41.8% draws) and not all 14 trailing second halves scored (30.8%). The live Draw had gone 1-4.'),
     dict(date='14 Sep', txt="Winners: straight-win line 1.80 -> 1.60 (two days of legs: straight at 1.60-1.94 went 9-9, six of the nine draws; covers there 15-2). The opponent's form now counts: 7+ wins in its last 10, more wins than the favourite, or 3 of its last 4 at the venue drops the leg (corpus 37.5% / 45.7% / 43.3% favourite wins)."),

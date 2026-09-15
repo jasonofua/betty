@@ -56,6 +56,34 @@ def _mean(xs):
     return sum(xs) / len(xs) if xs else None
 
 
+def venue_comps(fixture_id, kickoff_s):
+    """The competition each of the last-7 venue games was played in (KI field),
+    home side's home games and away side's away games - so a cup tie between
+    two tiers can be recognised."""
+    raw = F2.fetch(f"df_hh_1_{fixture_id}")
+    out = {'home': [], 'away': []}
+    tab = blk = None
+    for sec in F2.sections(raw or ''):
+        if 'KA' in sec:
+            tab = sec['KA']
+        if 'KB' in sec:
+            blk = sec['KB']
+            continue
+        if 'KJ' in sec and 'KK' in sec and blk and tab and 'Head' not in blk:
+            try:
+                kc = int(sec.get('KC', '0')); int(sec.get('KU', '')); int(sec.get('KT', ''))
+            except ValueError:
+                continue
+            if kickoff_s and kc >= kickoff_s:
+                continue
+            comp = (sec.get('KI') or sec.get('KF') or '').strip().lower()
+            if 'Home' in tab and sec.get('KS') == 'home':
+                out['home'].append(comp)
+            if 'Away' in tab and sec.get('KS') == 'away':
+                out['away'].append(comp)
+    return out['home'][:7], out['away'][:7]
+
+
 def venue_form(fixture_id, kickoff_s):
     """Home side's HOME games and away side's AWAY games as [(gf, ga), ...],
     most recent first, from the history feed's own Home/Away tabs, cut at

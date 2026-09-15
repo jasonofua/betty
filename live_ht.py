@@ -238,7 +238,9 @@ def run(until_h=None, dry=False, poll=POLL):
             # all. So: live stats required, no dominant side, not 14/14.
             dominant = (tot_shots is not None and tot_shots >= 4 and max(shots) / tot_shots >= 0.75)
             all_scored = len(t2) >= 14 and all(x >= 1 for x in t2[:14])
-            if eid in gate and h == a and h <= 1 and no_stats:
+            if eid in gate and h == a and h <= 1 and len(t2) < 12:
+                LOG(f"HT {sc} {name}: gate game, only {len(t2)} trailing halves on record - no draw")   # Etincelles (3) v Musanze (0), 15 Sep
+            elif eid in gate and h == a and h <= 1 and no_stats:
                 LOG(f"HT {sc} {name}: gate game, no live stats - no draw")
             elif eid in gate and h == a and h <= 1 and (dominant or all_scored):
                 LOG(f"HT {sc} {name}: gate game, {'one side has ' + str(max(shots)) + ' of ' + str(tot_shots) + ' shots' if dominant else 'all 14 trailing halves scored'} - no draw")
