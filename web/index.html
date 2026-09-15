@@ -96,7 +96,7 @@ h1.page em{font-style:normal;color:var(--ac-tx)}
 .chip.pending{background:var(--live-soft);color:var(--livec)}
 .chip.void{background:var(--void-soft);color:var(--void)}
 .badge{display:inline-flex;align-items:center;padding:3px 9px;border-radius:8px;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;background:var(--s3);color:var(--tx2)}
-.badge[data-p="Winners"],.badge[data-p="Draws"],.badge[data-p="Half-time draw"],.badge[data-p="Live"],.badge[data-p="Points sports"],.badge[data-p="Max odds"],.badge[data-p="Graded code"]{background:var(--ac-soft);color:var(--ac-tx)}
+.badge[data-p="Winners"],.badge[data-p="Draws"],.badge[data-p="Half-time draw"],.badge[data-p="Live"],.badge[data-p="Points sports"],.badge[data-p="Max odds"],.badge[data-p="All games"],.badge[data-p="Graded code"]{background:var(--ac-soft);color:var(--ac-tx)}
 .badge[data-p="Live"]{background:var(--live-soft);color:var(--livec)}
 .pill{display:inline-flex;align-items:center;justify-content:center;min-width:34px;padding:3px 6px;border-radius:8px;font-family:var(--mono);font-size:11.5px;font-weight:700;background:var(--pend-soft);color:var(--pend)}
 .pill.W{background:var(--won-soft);color:var(--won)}
@@ -423,9 +423,9 @@ nav.bottom span{font-size:10.5px;font-weight:700}
     ['Record', 'M4 20V10M10 20V4M16 20v-7M22 20H2', 'Results'],
     ['Rules', 'M12 6v14M12 6C10 4 6 3.5 3 4v14c3-.5 7 0 9 2 2-2 6-2.5 9-2V4c-3-.5-7 0-9 2', 'Rules']
   ];
-  var PRODUCTS = ['Winners', 'Draws', 'Half-time draw', 'Live', 'Max odds', 'Points sports'];
-  var ORDER = ['Live', 'Winners', 'Draws', 'Half-time draw', 'Points sports', 'Max odds'];
-  var TITLE = { Winners: 'Winners slip', Draws: 'Draws slip', 'Half-time draw': 'Half-time draws', Live: 'Live code', 'Points sports': 'Points sports slip', 'Max odds': 'Max odds accumulator', 'Graded code': 'Your code' };
+  var PRODUCTS = ['Winners', 'Draws', 'Half-time draw', 'Live', 'Max odds', 'Points sports', 'All games'];
+  var ORDER = ['Live', 'Winners', 'Draws', 'Half-time draw', 'Points sports', 'Max odds', 'All games'];
+  var TITLE = { Winners: 'Winners slip', Draws: 'Draws slip', 'Half-time draw': 'Half-time draws', Live: 'Live code', 'Points sports': 'Points sports slip', 'Max odds': 'Max odds accumulator', 'All games': 'Every ticket in one code', 'Graded code': 'Your code' };
   var SUB = {
     Winners: 'Match winners: the favourite only where its venue record backs it. Straight win under 1.60, double chance up to 2.60.',
     Draws: 'Quiet games that pass the draw gate, priced at 2.89 or better.',
@@ -433,6 +433,7 @@ nav.bottom span{font-size:10.5px;font-weight:700}
     Live: 'Booked at the half-time whistle. Loadable on SportyBet for about fifteen minutes.',
     'Points sports': 'Totals, period totals and handicaps where 11 of the last 14 venue games agree.',
     'Max odds': 'The accumulator engine. Long by design.',
+    'All games': 'Every game from every ticket of the day, still to kick off, on one slip.',
     'Graded code': 'Graded from the SportyBet share API.'
   };
   var CONSOLE_PANES = ['Run', 'Watcher', 'Corpus', 'Telegram', 'Coverage', 'Log'];

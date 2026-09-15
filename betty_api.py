@@ -19,7 +19,7 @@ _lock = threading.Lock()
 _grade_cache = {}          # code -> (ts, result)
 _book_cache = {'sig': None, 'val': []}
 
-PRODUCTS = ['Live', 'Winners', 'Draws', 'Half-time draw', 'Points sports', 'Max odds']
+PRODUCTS = ['Live', 'Winners', 'Draws', 'Half-time draw', 'Points sports', 'Max odds', 'All games']
 SPORT_LABEL = {'american football': 'American football', 'nfl': 'American football', 'ncaa': 'American football',
                'basketball': 'Basketball', 'ice hockey': 'Ice hockey', 'hockey': 'Ice hockey', 'handball': 'Handball'}
 
@@ -47,6 +47,8 @@ def product_of(label):
     l = label.lower()
     if l.startswith('live '):
         return 'Live'
+    if l.startswith('all games') or 'combined slip' in l:
+        return 'All games'
     if sport_of(label):
         return 'Points sports'
     if 'winner' in l:                 # before 'draw': "3+ venue draws -> double chance" is a winners slip
@@ -764,6 +766,49 @@ def ladder_for(day='today', build=True):
     return dict(day=str(target), targets=LADDER, products=products)
 
 
+# ---------------------------------------------------------------- all games in one code
+
+def combined_code(slot='am'):
+    """15 Sep, user's call: after the individual tickets, ONE code with every
+    game of the day. Every base code booked today (all products but Live),
+    every leg still to kick off, deduplicated by selection, shortest prices
+    kept when there are more than SportyBet's 50. Booked once per slot."""
+    today = dt.datetime.now(tz=WAT).date()
+    now = time.time()
+    sels, seen, srcs = [], set(), []
+    for c in parse_bookings():
+        if _day_of(c['when']) != today or c['nested_from'] or c['superseded_by'] or not c['legs']:
+            continue
+        if c['product'] in ('Live', 'All games'):
+            continue
+        g = graded(c['code'], force=True)
+        for l in g.get('legs') or []:
+            ids = l.get('ids') or {}
+            if l['state'] != 'pending' or l.get('ko', 0) <= now + 300 or ids.get('active', 1) == 0:
+                continue
+            key = (ids.get('eventId'), ids.get('marketId'), ids.get('specifier'), ids.get('outcomeId'))
+            if key in seen:
+                continue
+            seen.add(key); sels.append(dict(leg=l, ids=ids, src=c))
+        srcs.append(c['code'])
+    if len(sels) < 2:
+        return dict(error=f"only {len(sels)} leg{'s' if len(sels) != 1 else ''} still to play across today's tickets")
+    sels.sort(key=lambda x: x['leg']['price'])
+    if len(sels) > A.MAX_CODE:
+        sels = sels[:A.MAX_CODE]                    # the 50 most likely
+    bk = A.book([dict(eventId=x['ids']['eventId'], productId=3, marketId=x['ids']['marketId'],
+                      specifier=x['ids']['specifier'], outcomeId=x['ids']['outcomeId']) for x in sels])
+    if not bk or not bk.get('code'):
+        return dict(error='SportyBet did not return a code' + (f": {bk.get('msg')}" if bk and bk.get('msg') else ''))
+    combo = 1.0
+    for x in sels:
+        combo *= x['leg']['price']
+    A.log_booking(bk['code'], bk.get('url'), f"all games {slot} - combined slip {combo:,.1f}x ({len(sels)} legs) from {', '.join(sorted(set(srcs)))}",
+                  [(x['leg']['ko'], x['leg']['match'], x['leg']['sel'], x['leg']['price'], [f"from {x['src']['code']} ({x['src']['product']})"]) for x in sels])
+    _book_cache['sig'] = None
+    return dict(code=bk['code'], url=bk.get('url'), odds=round(combo, 2), n=len(sels), sources=sorted(set(srcs)), booked=bk.get('booked'), verified=bk.get('verified'))
+
+
 # ---------------------------------------------------------------- any code
 
 def grade_any(code):
@@ -1098,8 +1143,10 @@ SCHEDULE = [
     ('09:40', 'points-basketball', '/api/points', dict(sport='basketball', days=0)),
     ('09:45', 'points-hockey', '/api/points', dict(sport='hockey', days=0)),
     ('09:50', 'points-handball', '/api/points', dict(sport='handball', days=0)),
+    ('10:05', 'all-games-am', '/api/combined', dict(slot='am')),
     ('16:35', 'winners-pm', '/api/winners', dict(until=6, days=0)),
     ('16:50', 'max-pm', '/api/run', dict(target=6, until=6, days=0, maxodds=True)),
+    ('17:10', 'all-games-pm', '/api/combined', dict(slot='pm')),
 ]
 
 

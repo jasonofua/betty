@@ -296,6 +296,11 @@ def scheduler():
                     run_job(float(body.get('target', 50)), int(body['until']), int(body.get('days', 0)), False,
                             bool(body.get('rollover')), 'composite', bool(body.get('maxodds')),
                             bool(body.get('goalsonly')), bool(body.get('undersonly')), bool(body.get('strict')))
+                elif path == '/api/combined':
+                    JOB.update(state='building', log=[], result=None, params=dict(mode='all games', slot=body.get('slot')),
+                               started=dt.datetime.now(A.WAT).strftime('%H:%M'))
+                    r = BA.combined_code(body.get('slot', 'am'))
+                    JOB['log'].append(json.dumps(r)); JOB.update(state='done', result=r)
                 res = JOB.get('result') or {}
                 code = res.get('code')
                 if code:
@@ -572,7 +577,7 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         path = urlparse(self.path).path
-        if path in ('/api/yesterday', '/api/points', '/api/winners', '/api/draws', '/api/run', '/api/live', '/api/crawl'):
+        if path in ('/api/yesterday', '/api/points', '/api/winners', '/api/draws', '/api/run', '/api/live', '/api/crawl', '/api/combined'):
             n = int(self.headers.get('Content-Length', 0))
             raw = self.rfile.read(n) if n else b''
             try:
@@ -599,6 +604,19 @@ class Handler(BaseHTTPRequestHandler):
         if path == '/api/yesterday':
             import betty_api as BA
             self._send(json.dumps({'ok': BA.run_yesterday(), 'state': BA.YEST['state']})); return
+        if path == '/api/combined':
+            import betty_api as BA
+            try:
+                r = BA.combined_code(str(self._body.get('slot', 'am')))
+                if r.get('code'):
+                    try:
+                        BA.build_ladder(r['code'])
+                    except Exception:
+                        pass
+                self._send(json.dumps(r, default=str))
+            except Exception as e:
+                self._send(json.dumps({'error': f"{type(e).__name__}: {e}"}), code=500)
+            return
         if path == '/api/points':
             p2 = self._body
             sport = str(p2.get('sport', 'amfoot'))
