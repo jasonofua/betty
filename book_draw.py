@@ -204,8 +204,11 @@ def home_profile(f):
     profile is only 29% - the league rate is what makes it bet-worthy."""
     if f.get('h_def') is None or f.get('lg_draw') is None:
         return False
+    # 15 Sep: mismatch capped at 2.0. Petrovac v Tivat came through here with a
+    # 2.14-goal venue gap (the quiet branch caps at 1.0) and lost 1-2; on the draw
+    # dataset the branch draws 33.7% at mismatch <= 1.0, 32.5% at 1-2, 27.3% above 2 (n 22).
     return (f['h_draws'] >= 3 and f['h_def'] <= 1.0 and f['blank'] >= 5
-            and f['lg_draw'] >= 0.30)
+            and f['lg_draw'] >= 0.30 and (f.get('mismatch') or 0) <= 2.0)
 
 
 def in_pocket(f):

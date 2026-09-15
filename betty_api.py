@@ -841,7 +841,7 @@ RULES = [
          measured='Corpus: home favourites at margin 1.0+ win 52.6%, win-or-draw 75.9% (19,945 matches). The yesterday check replays the rule over the whole previous board before every booking.'),
     dict(product='Draws', tag='draw gate',
          plain="Two branches. The quiet-game filter reads expected goals, combined draws, mismatch, expected shots on target, shot evenness and blanks. The home-profile branch takes home sides that draw at home and concede little, in leagues that draw often. Price floor at the gate's own rate. One slip a day.",
-         thresholds=[dict(k='Quiet game', v='xG < 2.4, draws 3+, mismatch <= 1.0, exp. SoT <= 8, blanks 5+'), dict(k='Home profile', v='home draws 3+, conceded <= 1.0, league draws 30%+'),
+         thresholds=[dict(k='Quiet game', v='xG < 2.4, draws 3+, mismatch <= 1.0, exp. SoT <= 8, blanks 5+'), dict(k='Home profile', v='home draws 3+, conceded <= 1.0, league draws 30%+, mismatch <= 2.0'),
                      dict(k='Break-even price floor', v='2.89'), dict(k='Slips per run', v='1')],
          measured='Corpus: 34.6% on 871 matches through the gate, every 2026 month between 30% and 39%. The best any threshold rule reaches on 44,250 matches is 36.7%.'),
     dict(product='Half-time draw', tag='1st Half 1X2 Draw',
@@ -856,7 +856,7 @@ RULES = [
     dict(product='Points sports', tag='American football, basketball, ice hockey, handball',
          plain="One engine across four points sports. Totals, first-half or first-period totals and handicaps only, never winners. Each side's last seven venue games and period scores are read, and a line only goes out when the large majority of past margins agree. Mismatch games, winner at 1.05 or under, are scored on lookalike games only. College sides with fewer than two games this season prefer the total.",
          thresholds=[dict(k='Agreement, at least', v='11 of 14'), dict(k='Price floor', v='1.40'), dict(k='Mismatch games (winner at 1.05 or under)', v='scored on lookalikes, 80%'),
-                     dict(k='Stale college rosters', v='prefer totals; handicap needs 12 of 14'), dict(k='Markets', v='totals, period totals, handicaps')],
+                     dict(k='Stale college rosters', v='prefer totals; handicap needs 12 of 14'), dict(k='Same competition only', v='venue games from other competitions are dropped; friendlies and pre-season skipped'), dict(k='Markets', v='totals, period totals, handicaps')],
          measured='First weekend (12-13 Sep): totals 5 of 5, first-half totals 2 of 2, handicaps 2 of 4. No corpus yet for the other three sports.'),
     dict(product='Max odds', tag='composite engine',
          plain="The goal-and-stats accumulator: over and unders, team totals, corners, bookings, shots, offsides, fouls, saves, and half markets. Cushion gates and blank-rate tables decide what goes on, family bans stop correlated legs, and the daily rollover follows the biggest slip that lands one time in three.",
@@ -866,6 +866,7 @@ RULES = [
 ]
 
 CHANGELOG = [
+    dict(date='15 Sep', txt='Points sports: each venue history counts only games in the same competition as the fixture; friendlies and pre-season games are skipped (Breogan v Rilski, an ACB side v a Bulgarian side, lost +15.5 by 45). Draws: the home-profile branch now caps the venue mismatch at 2.0 (27.3% above it).'),
     dict(date='14 Sep', txt='Live Draw: needs live stats, no side with 75%+ of the first-half shots (corpus 26.2% v 41.8% draws) and not all 14 trailing second halves scored (30.8%). The live Draw had gone 1-4.'),
     dict(date='14 Sep', txt="Winners: straight-win line 1.80 -> 1.60 (two days of legs: straight at 1.60-1.94 went 9-9, six of the nine draws; covers there 15-2). The opponent's form now counts: 7+ wins in its last 10, more wins than the favourite, or 3 of its last 4 at the venue drops the leg (corpus 37.5% / 45.7% / 43.3% favourite wins)."),
     dict(date='13 Sep', txt='Winners: a favourite that creates fewer shots on target than its opponent is dropped (corpus: 46.3% v 54.7% at home, 36.2% v 56.1% away); a dead heat in the market is no favourite. Live: 2H Under 1.5 only at 0-0 (corpus 74.2% v 63.1% with a goal banked).'),

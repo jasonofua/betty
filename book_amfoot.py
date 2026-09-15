@@ -111,8 +111,20 @@ def fs_board(days):
     return games
 
 
-def venue_games(mid, kickoff, team, suffix):
+def _comp_key(name):
+    """'SPAIN: ACB' / 'ACB' / 'Chile: LNB - Clausura' -> 'acb', 'lnb'."""
+    n = (name or '').split(':')[-1].split(' - ')[0]
+    return re.sub(r'[^a-z0-9]', '', n.lower())
+
+
+def venue_games(mid, kickoff, team, suffix, comp=None):
+    """The side's last 7 games at this venue. 15 Sep: SAME COMPETITION ONLY.
+    Breogan (ACB) v Rilski Sportist (Bulgarian league) was a pre-season friendly;
+    "12 of 14 venue games agree" compared two histories against different
+    classes of opponent and Rilski +15.5 lost by 45. A pre-season, cup or
+    friendly game in the history is dropped for the same reason."""
     hh = F.fetch(f"df_hh_{SPORT['fs']}_{mid}", ttl=3600); out = []
+    want = _comp_key(comp) if comp else None
     for tab in hh.split('~KA÷')[1:]:
         if not tab.split('¬')[0].endswith(suffix):
             continue
@@ -123,6 +135,8 @@ def venue_games(mid, kickoff, team, suffix):
                 d = dict(re.findall(r'([A-Z]{2,3})÷([^¬]*)', g))
                 if 'KC' not in d or not d.get('KU') or not d.get('KT') or int(d['KC']) >= kickoff - 3600:
                     continue
+                if want and _comp_key(d.get('KI') or d.get('KF')) != want:
+                    continue                          # a different competition tells us nothing here
                 home_is_team = d.get('KJ', '').lstrip('*') == team
                 pf, pa = int(d['KU']), int(d['KT'])
                 if not home_is_team:
@@ -255,9 +269,11 @@ def main():
         mismatch = bool(win and min(o[1] for o in win[0]['outs']) <= MISMATCH_PRICE)
         if mismatch and SKIP_MISMATCH:
             skipped['class mismatch (winner <= 1.05)'] += 1; print(f"  {t:%a %H:%M}  {name:52} skip: class mismatch"); continue
-        hg = venue_games(f['id'], f['ts'], f['h'], '- Home'); ag = venue_games(f['id'], f['ts'], f['a'], '- Away')
+        if re.search(r'friendl|pre-season|preseason', f.get('lg') or '', re.I):
+            skipped['friendly / pre-season'] += 1; print(f"  {t:%a %H:%M}  {name:52} skip: {f.get('lg')}"); continue
+        hg = venue_games(f['id'], f['ts'], f['h'], '- Home', f.get('lg')); ag = venue_games(f['id'], f['ts'], f['a'], '- Away', f.get('lg'))
         if len(hg) < 5 or len(ag) < 5:
-            skipped['no venue form'] += 1; print(f"  {t:%a %H:%M}  {name:52} skip: venue form {len(hg)}/{len(ag)}"); continue
+            skipped['no venue form in this competition'] += 1; print(f"  {t:%a %H:%M}  {name:52} skip: venue form in {f.get('lg')} {len(hg)}/{len(ag)}"); continue
         for g in hg + ag:
             g['fh'] = first_half(g['id'], g['home']) if g['id'] else None
             if SPORT['reg_only'] and g['id']:
