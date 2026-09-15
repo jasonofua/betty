@@ -673,9 +673,14 @@ def nest_code(code, target):
     # the shortest k prices plus ONE more leg from further down the list, the
     # combination that lands nearest the target (a 5x rung should read ~5x, not
     # 6.8x because the tenth short price overshot)
+    # 15 Sep: the closing leg may only be a SHORT price (<= 2.00, and at most
+    # 2.5x the leg it replaces) - the all-games 3x rung had become a single
+    # 3.00 draw instead of eight short winners.
     best, base, pick, combo = None, 1.0, [], 1.0
     for k in range(len(legs)):
         for j in range(k, len(legs)):
+            if legs[j]['price'] > max(2.0, 2.5 * legs[k]['price']):
+                break
             cand = base * legs[j]['price']
             if cand >= target * 0.95 and (best is None or abs(cand - target) < abs(best[0] - target)):
                 best = (cand, k, j)
