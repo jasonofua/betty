@@ -15,7 +15,7 @@ One slip, every qualifying game in the window. Window opens one hour ahead.
 
     python3 book_winners.py --until 23 [--days 0] [--dry]
 """
-import collections, sys, datetime as dt, json
+import collections, re, sys, datetime as dt, json
 import acca as A
 import fetcher_v2 as F2
 import dynamic_v4 as D
@@ -203,14 +203,21 @@ def build(until_h, days=0, verbose=True):
         # 15 Sep: a tie between two tiers (Velke Ludince v DAC in the Slovak Cup,
         # York City v Newcastle U21 in the EFL Trophy) - the two venue histories
         # come from different competitions and say nothing about each other.
-        try:
-            hc, ac = DRW.venue_comps(f['id'], f['ts'])
-            top = lambda xs: collections.Counter(x for x in xs if x).most_common(1)[0][0] if any(xs) else None
-            hm, am = top(hc), top(ac)
-            if hm and am and hm != am:
-                row['why'] = f"cross-competition tie: {hm} v {am}"; rows.append(row); continue
-        except Exception:
-            pass
+        # Only DOMESTIC cups: an international tie (Copa Sudamericana, Champions
+        # League, a U23 qualifier) is two top-flight sides with domestic histories,
+        # and the user's rule is that professional sides with stats are playable.
+        lg = f.get('league') or ''
+        domestic_cup = (re.search(r'cup|pohar|trophy|coppa|copa|pokal|ta[cç]a|cupa|beker|puchar|kubok|shield', lg, re.I)
+                        and not re.match(r'\s*(EUROPE|SOUTH AMERICA|ASIA|AFRICA|WORLD|NORTH)', lg, re.I))
+        if domestic_cup:
+            try:
+                hc, ac = DRW.venue_comps(f['id'], f['ts'])
+                top = lambda xs: collections.Counter(x for x in xs if x).most_common(1)[0][0] if any(xs) else None
+                hm, am = top(hc), top(ac)
+                if hm and am and hm != am:
+                    row['why'] = f"cup tie between tiers ({hm} v {am})"; rows.append(row); continue
+            except Exception:
+                pass
         hg, ag = gd(hp), gd(ap)
         margin = (hg - ag) if side == 'Home' else (ag - hg)
         row.update(side=side, price=price, margin=margin)
