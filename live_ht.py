@@ -43,6 +43,28 @@ LOGFILE = (os.path.join(os.path.dirname(os.environ['BOOKINGS_PATH']), 'live_ht_l
 DRAW_MIN, O05_MIN, U15_MIN = 2.10, 1.20, 1.55
 
 
+def prematch_draw():
+    """15 Sep: the pre-match draw price is the best predictor of a full-time draw
+    once a game is level at the break (football-data, 78k priced matches, both
+    halves of the sample): FT draw 45.7% when the market had the draw at 32%+
+    before kickoff (n 1,952 at 0-0, 465 at 1-1), 41% at 27-32%, 33% under 27%.
+    The pre-match price comes from the 08:55 board snapshot: eventId -> implied."""
+    path = (os.path.join(os.path.dirname(os.environ['BOOKINGS_PATH']), 'sporty_odds.jsonl') if os.environ.get('BOOKINGS_PATH')
+            else os.path.join(os.path.dirname(os.path.abspath(__file__)), 'experiments', 'sporty_odds.jsonl'))
+    out = {}
+    try:
+        for line in open(path):
+            try:
+                r = json.loads(line)
+            except ValueError:
+                continue
+            s_ = 1 / r['o1'] + 1 / r['ox'] + 1 / r['o2']
+            out[r['eid']] = (1 / r['ox']) / s_
+    except OSError:
+        pass
+    return out
+
+
 def live_markets(eid):
     return ((LD.get(LD.BASE + f"event?eventId={eid}&productId=1").get('data') or {}).get('markets')) or []
 
@@ -92,6 +114,8 @@ STOP = {'flag': False}
 # 13 Sep: the website's "Watching now" list - every game on the live board with
 # what the watcher did about it (reading / code booked / no bet / in play).
 BOARD = {'ts': 0.0, 'rows': []}
+PRE = {}             # eventId -> pre-match implied draw probability (from the 08:55 snapshot)
+PRE_AT = [0.0]
 BOOKED = {}          # eventId -> code
 READ = {}            # eventId -> 'no bet' | 'queued'
 
@@ -182,6 +206,8 @@ def run(until_h=None, dry=False, poll=POLL):
            else dt.datetime.now(tz=A.WAT) + dt.timedelta(days=30))
     while dt.datetime.now(tz=A.WAT) < end and not STOP['flag']:
         gate, fx = state['gate'], state['fx']
+        if time.time() - PRE_AT[0] > 1800:
+            PRE.clear(); PRE.update(prematch_draw()); PRE_AT[0] = time.time()
         if state['built'] and time.time() - state['built'] > 6 * 3600 and not state['building']:
             state['fx'] = [f for off in (0, 1) for f in F2.get_fixtures(off)]
             threading.Thread(target=build_gate, daemon=True).start()
@@ -238,18 +264,28 @@ def run(until_h=None, dry=False, poll=POLL):
             # all. So: live stats required, no dominant side, not 14/14.
             dominant = (tot_shots is not None and tot_shots >= 4 and max(shots) / tot_shots >= 0.75)
             all_scored = len(t2) >= 14 and all(x >= 1 for x in t2[:14])
-            if eid in gate and h == a and h <= 1 and len(t2) < 12:
-                LOG(f"HT {sc} {name}: gate game, only {len(t2)} trailing halves on record - no draw")   # Etincelles (3) v Musanze (0), 15 Sep
-            elif eid in gate and h == a and h <= 1 and no_stats:
-                LOG(f"HT {sc} {name}: gate game, no live stats - no draw")
-            elif eid in gate and h == a and h <= 1 and (dominant or all_scored):
-                LOG(f"HT {sc} {name}: gate game, {'one side has ' + str(max(shots)) + ' of ' + str(tot_shots) + ' shots' if dominant else 'all 14 trailing halves scored'} - no draw")
-            elif eid in gate and h == a and h <= 1:
+            # 15 Sep: the gate is out of the draw rule (1-5 live; on 78k priced
+            # matches its inputs add nothing over the price). What predicts a
+            # full-time draw from a level half-time is the PRE-MATCH draw price:
+            # 45.7% when the market had it at 32%+ (fair 2.19), 40-41% at 27-32%
+            # (fair 2.45). Floors carry a nickel over fair.
+            pre = PRE.get(eid)
+            floor = 2.30 if (pre is not None and pre >= 0.32) else 2.60 if (pre is not None and pre >= 0.27) else None
+            if h == a and h <= 1 and floor and len(t2) < 12:
+                LOG(f"HT {sc} {name}: draw shape, only {len(t2)} trailing halves on record - no draw")   # Etincelles (3) v Musanze (0), 15 Sep
+            elif h == a and h <= 1 and floor and no_stats:
+                LOG(f"HT {sc} {name}: draw shape, no live stats - no draw")
+            elif h == a and h <= 1 and floor and (dominant or all_scored):
+                LOG(f"HT {sc} {name}: draw shape, {'one side has ' + str(max(shots)) + ' of ' + str(tot_shots) + ' shots' if dominant else 'all 14 trailing halves scored'} - no draw")
+            elif h == a and h <= 1 and floor:
                 p, oid, sp = price(mk, '1', 'Draw')
-                if p and p >= DRAW_MIN:
-                    legs.append(('DRAW', f"1X2 / Draw", p, dict(marketId='1', specifier=sp, outcomeId=oid), f"gate game level at HT (49.3%)"))
+                if p and p >= floor:
+                    legs.append(('DRAW', f"1X2 / Draw", p, dict(marketId='1', specifier=sp, outcomeId=oid),
+                                 f"pre-match draw {pre:.0%} -> FT draw {'45.7' if pre >= 0.32 else '41.2'}% from a level HT (football-data 78k)"))
                 else:
-                    LOG(f"HT {sc} {name}: gate game, Draw {p} - no bet")
+                    LOG(f"HT {sc} {name}: pre-match draw {pre:.0%}, live Draw {p} under {floor} - no bet")
+            elif h == a and h <= 1 and pre is None and eid in gate:
+                LOG(f"HT {sc} {name}: level, no pre-match price on record (snapshot) - no draw")
             # 2) second-half goals from the trailing second halves
             if len(t2) >= 12:
                 o05 = sum(x >= 1 for x in t2); u15 = sum(x <= 1 for x in t2)

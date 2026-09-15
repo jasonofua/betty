@@ -440,7 +440,7 @@ nav.bottom span{font-size:10.5px;font-weight:700}
   var RUN_PRODUCTS = ['Winners', 'Draws', 'Half-time draw', 'Live', 'Max odds', 'Points sports'];
   var OPT_DEFS = {
     'Winners': [['Window until hour', 'value', 'until'], ['Days ahead', 'value', 'days'], ['Top N legs (0 = all)', 'value', 'top'], ['Dry run', 'toggle', 'dry']],
-    'Draws': [['Window until hour', 'value', 'until'], ['Days ahead', 'value', 'days'], ['Dry run', 'toggle', 'dry']],
+    'Draws': [['Dry run', 'toggle', 'dry']],
     'Half-time draw': [['Window until hour', 'value', 'until'], ['Days ahead', 'value', 'days'], ['Dry run', 'toggle', 'dry']],
     'Live': [['Dry run', 'toggle', 'dry']],
     'Max odds': [['Target odds', 'value', 'target'], ['Window until hour', 'value', 'until'], ['Days ahead', 'value', 'days'], ['Strict mode', 'toggle', 'strict'], ['Unders only', 'toggle', 'undersonly'], ['Goals only', 'toggle', 'goalsonly'], ['Rollover', 'toggle', 'rollover'], ['Dry run', 'toggle', 'dry']],
@@ -957,7 +957,8 @@ nav.bottom span{font-size:10.5px;font-weight:700}
     var p = S.runProduct, v = S.runVals, f = S.runFlags, req;
     var num = function (k, d) { var x = parseFloat(v[k]); return isNaN(x) ? d : x; };
     if (p === 'Winners') req = post('/api/winners', { until: num('until', 23), days: num('days', 0), top: num('top', 0), dry: !!f.dry });
-    else if (p === 'Draws' || p === 'Half-time draw') req = post('/api/draws', { until: num('until', 23), days: num('days', 0), dry: !!f.dry, half: p === 'Half-time draw' });
+    else if (p === 'Draws') req = post('/api/drawsmkt', { dry: !!f.dry });
+    else if (p === 'Half-time draw') req = post('/api/draws', { until: num('until', 23), days: num('days', 0), dry: !!f.dry, half: true });
     else if (p === 'Live') req = post('/api/live', { until: 0, dry: !!f.dry });
     else if (p === 'Max odds') req = post('/api/run', { target: num('target', 50), until: num('until', 23), days: num('days', 0), dry: !!f.dry, strict: !!f.strict, undersonly: !!f.undersonly, goalsonly: !!f.goalsonly, rollover: !!f.rollover, maxodds: !f.rollover });
     else req = post('/api/points', { sport: String(v.sport || 'amfoot').trim(), days: num('days', 0), min_price: num('min_price', 1.4), agree: num('agree', 11), dry: !!f.dry });

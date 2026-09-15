@@ -292,6 +292,8 @@ def scheduler():
                     script_job('points', args, f"{body['sport']} slip (scheduled)")
                 elif path == '/api/draws':
                     draw_job(body['until'], body.get('days', 0), False, bool(body.get('half')))
+                elif path == '/api/drawsmkt':
+                    script_job('draws', ['book_draw_market.py'], 'draw singles (market)')
                 elif path == '/api/run':
                     run_job(float(body.get('target', 50)), int(body['until']), int(body.get('days', 0)), False,
                             bool(body.get('rollover')), 'composite', bool(body.get('maxodds')),
@@ -584,7 +586,7 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         path = urlparse(self.path).path
-        if path in ('/api/yesterday', '/api/points', '/api/winners', '/api/draws', '/api/run', '/api/live', '/api/crawl', '/api/combined'):
+        if path in ('/api/yesterday', '/api/points', '/api/winners', '/api/draws', '/api/drawsmkt', '/api/run', '/api/live', '/api/crawl', '/api/combined'):
             n = int(self.headers.get('Content-Length', 0))
             raw = self.rfile.read(n) if n else b''
             try:
@@ -611,6 +613,14 @@ class Handler(BaseHTTPRequestHandler):
         if path == '/api/yesterday':
             import betty_api as BA
             self._send(json.dumps({'ok': BA.run_yesterday(), 'state': BA.YEST['state']})); return
+        if path == '/api/drawsmkt':
+            with LOCK:
+                if JOB['state'] not in ('idle', 'done'):
+                    self._send(json.dumps({'error': 'a run is already in progress'}), code=409); return
+                JOB['state'] = 'building'
+            args = ['book_draw_market.py'] + (['--dry'] if self._body.get('dry') else [])
+            threading.Thread(target=script_job, args=('draws', args, 'draw singles (market)'), daemon=True).start()
+            self._send(json.dumps({'ok': True})); return
         if path == '/api/combined':
             import betty_api as BA
             try:
