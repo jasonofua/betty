@@ -296,6 +296,13 @@ def scheduler():
                     run_job(float(body.get('target', 50)), int(body['until']), int(body.get('days', 0)), False,
                             bool(body.get('rollover')), 'composite', bool(body.get('maxodds')),
                             bool(body.get('goalsonly')), bool(body.get('undersonly')), bool(body.get('strict')))
+                elif path == '/api/snapshot':
+                    import importlib
+                    JOB.update(state='building', log=[], result=None, params=dict(mode='odds snapshot'), started=dt.datetime.now(A.WAT).strftime('%H:%M'))
+                    snap = importlib.import_module('experiments.odds_snapshot') if os.path.exists(os.path.join(ROOT, 'experiments', '__init__.py')) else None
+                    if snap is None:
+                        sys.path.insert(0, os.path.join(ROOT, 'experiments')); import odds_snapshot as snap
+                    r = snap.snapshot(); JOB.update(state='done', result=r)
                 elif path == '/api/combined':
                     JOB.update(state='building', log=[], result=None, params=dict(mode='all games', slot=body.get('slot')),
                                started=dt.datetime.now(A.WAT).strftime('%H:%M'))

@@ -1152,6 +1152,7 @@ def console_state(LIVE, JOB, BUILD):
 
 SCHEDULE = [
     # (time WAT, job id, POST endpoint, body) - the codes are generated every day
+    ('08:55', 'odds-snapshot', '/api/snapshot', dict()),
     ('09:05', 'winners-am', '/api/winners', dict(until=23, days=0)),
     ('09:20', 'draws', '/api/draws', dict(until=23, days=0)),
     ('09:28', 'max', '/api/run', dict(target=6, until=23, days=0, maxodds=True)),
