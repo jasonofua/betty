@@ -284,38 +284,44 @@ def scheduler():
                     if JOB['state'] not in ('idle', 'done'):
                         break
                     JOB['state'] = 'building'
-                if path == '/api/winners':
-                    args = ['book_winners.py', '--until', str(body['until']), '--days', str(body.get('days', 0))]
-                    script_job('winners', args, 'winners slip (scheduled)')
-                elif path == '/api/points':
-                    args = ['book_amfoot.py', '--sport', body['sport'], '--days', str(body.get('days', 0))]
-                    script_job('points', args, f"{body['sport']} slip (scheduled)")
-                elif path == '/api/draws':
-                    draw_job(body['until'], body.get('days', 0), False, bool(body.get('half')))
-                elif path == '/api/drawsmkt':
-                    script_job('draws', ['book_draw_market.py'], 'draw singles (market)')
-                elif path == '/api/run':
-                    run_job(float(body.get('target', 50)), int(body['until']), int(body.get('days', 0)), False,
-                            bool(body.get('rollover')), 'composite', bool(body.get('maxodds')),
-                            bool(body.get('goalsonly')), bool(body.get('undersonly')), bool(body.get('strict')))
-                elif path == '/api/snapshot':
-                    import importlib
-                    JOB.update(state='building', log=[], result=None, params=dict(mode='odds snapshot'), started=dt.datetime.now(A.WAT).strftime('%H:%M'))
-                    snap = importlib.import_module('experiments.odds_snapshot') if os.path.exists(os.path.join(ROOT, 'experiments', '__init__.py')) else None
-                    if snap is None:
-                        sys.path.insert(0, os.path.join(ROOT, 'experiments')); import odds_snapshot as snap
-                    r = snap.snapshot(); JOB.update(state='done', result=r)
-                elif path == '/api/calib':
-                    sys.path.insert(0, os.path.join(ROOT, 'experiments')); import sporty_calibration as CAL
-                    JOB.update(state='building', log=[], result=None, params=dict(mode='sporty calibration'), started=dt.datetime.now(A.WAT).strftime('%H:%M'))
-                    with contextlib.redirect_stdout(_LogIO()):
-                        CAL.main()
-                    JOB.update(state='done', result=dict(note='see log'))
-                elif path == '/api/combined':
-                    JOB.update(state='building', log=[], result=None, params=dict(mode='all games', slot=body.get('slot')),
-                               started=dt.datetime.now(A.WAT).strftime('%H:%M'))
-                    r = BA.combined_code(body.get('slot', 'am'))
-                    JOB['log'].append(json.dumps(r)); JOB.update(state='done', result=r)
+                try:
+                    if path == '/api/winners':
+                        args = ['book_winners.py', '--until', str(body['until']), '--days', str(body.get('days', 0))]
+                        script_job('winners', args, 'winners slip (scheduled)')
+                    elif path == '/api/points':
+                        args = ['book_amfoot.py', '--sport', body['sport'], '--days', str(body.get('days', 0))]
+                        script_job('points', args, f"{body['sport']} slip (scheduled)")
+                    elif path == '/api/draws':
+                        draw_job(body['until'], body.get('days', 0), False, bool(body.get('half')))
+                    elif path == '/api/drawsmkt':
+                        script_job('draws', ['book_draw_market.py'], 'draw singles (market)')
+                    elif path == '/api/run':
+                        run_job(float(body.get('target', 50)), int(body['until']), int(body.get('days', 0)), False,
+                                bool(body.get('rollover')), 'composite', bool(body.get('maxodds')),
+                                bool(body.get('goalsonly')), bool(body.get('undersonly')), bool(body.get('strict')))
+                    elif path == '/api/snapshot':
+                        import importlib
+                        JOB.update(state='building', log=[], result=None, params=dict(mode='odds snapshot'), started=dt.datetime.now(A.WAT).strftime('%H:%M'))
+                        snap = importlib.import_module('experiments.odds_snapshot') if os.path.exists(os.path.join(ROOT, 'experiments', '__init__.py')) else None
+                        if snap is None:
+                            sys.path.insert(0, os.path.join(ROOT, 'experiments')); import odds_snapshot as snap
+                        r = snap.snapshot(); JOB.update(state='done', result=r)
+                    elif path == '/api/calib':
+                        sys.path.insert(0, os.path.join(ROOT, 'experiments')); import sporty_calibration as CAL
+                        JOB.update(state='building', log=[], result=None, params=dict(mode='sporty calibration'), started=dt.datetime.now(A.WAT).strftime('%H:%M'))
+                        with contextlib.redirect_stdout(_LogIO()):
+                            CAL.main()
+                        JOB.update(state='done', result=dict(note='see log'))
+                    elif path == '/api/combined':
+                        JOB.update(state='building', log=[], result=None, params=dict(mode='all games', slot=body.get('slot')),
+                                   started=dt.datetime.now(A.WAT).strftime('%H:%M'))
+                        r = BA.combined_code(body.get('slot', 'am'))
+                        JOB['log'].append(json.dumps(r)); JOB.update(state='done', result=r)
+                except Exception as e:
+                    # 16 Sep: a crashed job (calibration before its first snapshot) left the
+                    # flag on 'building' and every later run of the day was marked missed.
+                    JOB.update(state='done', result=dict(error=f'{type(e).__name__}: {e}'))
+                    print(f'scheduler {job}: {type(e).__name__}: {e}', flush=True)
                 res = JOB.get('result') or {}
                 code = res.get('code')
                 if code:

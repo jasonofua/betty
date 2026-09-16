@@ -26,6 +26,8 @@ def results(days=(-2, -1, 0)):
 
 def main():
     first = {}
+    if not os.path.exists(SNAP):
+        print(f'no snapshot yet ({SNAP}) - nothing to join'); return
     for line in open(SNAP):
         try: r = json.loads(line)
         except ValueError: continue
