@@ -16,7 +16,7 @@ average and the market-implied draw probability is 30-36%.
 
     python3 book_draw_market.py [--dry] [--ratio 1.05]
 """
-import csv, json, os, re, subprocess, sys, datetime as dt
+import csv, json, os, re, sys, datetime as dt
 import acca as A
 import dynamic_v4 as D
 import fetcher_v2 as F2
@@ -48,8 +48,18 @@ BAND_MIN = 0.27          # 16 Sep: games with no reference price - SportyBet's o
 
 
 def fixtures():
+    # 16 Sep: urllib, not curl - the Railway image has no curl and every server run
+    # of this script had died here (the 09:20 slot never booked a draws slip)
+    import urllib.request, io
     path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'experiments', 'odds_raw', 'fixtures.csv')
-    subprocess.run(['curl', '-s', '-L', '--max-time', '60', '-A', 'Mozilla/5.0', '-o', path, 'https://www.football-data.co.uk/fixtures.csv'])
+    try:
+        raw = urllib.request.urlopen(urllib.request.Request('https://www.football-data.co.uk/fixtures.csv', headers={'User-Agent': 'Mozilla/5.0'}), timeout=60).read()
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        open(path, 'wb').write(raw)
+    except Exception as e:
+        print(f"fixtures.csv: {type(e).__name__}: {e}" + (' - using the cached copy' if os.path.exists(path) else ' - no reference prices today'))
+        if not os.path.exists(path):
+            return []
     out = []
     for r in csv.DictReader(open(path, encoding='utf-8-sig', errors='replace')):
         try:
