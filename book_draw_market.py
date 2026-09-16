@@ -167,6 +167,7 @@ def main():
     dry = '--dry' in sys.argv
     ratio = float(sys.argv[sys.argv.index('--ratio') + 1]) if '--ratio' in sys.argv else RATIO
     replaces = sys.argv[sys.argv.index('--replaces') + 1] if '--replaces' in sys.argv else None   # a hand rebook names the code it retires
+    only = [x.strip().lower() for x in sys.argv[sys.argv.index('--only') + 1].split(',') if x.strip()] if '--only' in sys.argv else []   # user's call: these games, checks waived
     now = dt.datetime.now(tz=A.WAT)
     fx = fixtures(); board = SNAP.board()
     print(f"fixtures.csv {len(fx)} priced main-league fixtures | SportyBet board {len(board)} games")
@@ -225,6 +226,13 @@ def main():
                                                           lambda f: dt.datetime.fromtimestamp(f['ts'], tz=A.WAT))}
     kept = []
     for p in band_picks:
+        if only:
+            if any(k in (p['s']['home'] + ' v ' + p['s']['away']).lower() for k in only):
+                p['user'] = True; p['gap'] = 0; p['table'] = (0, 0, 0, 0); p['ppg'] = (0, 0); p['under'] = under25(p['s']['eid']) or 0
+                kept.append(p)
+            else:
+                p['why'] = "not on the user's list"
+            continue
         f = joined.get(p['s']['eid'])
         if not f:
             p['why'] = 'no form feed'; continue
@@ -257,7 +265,7 @@ def main():
     kept.sort(key=lambda p: (-p['f']['imp'], p['gap']))
     for p in band_picks:
         s, ko, imp = p['s'], p['ko'], p['f']['imp']
-        tag = ('PICK (band, table: %d pts/%d v %d pts/%d = %.2f v %.2f a game, Under 2.5 at %.2f)' % (*p['table'], p['ppg'][0], p['ppg'][1], p['under'])) if p in kept[:BAND_CAP] else ('skip: ' + p.get('why', 'over the cap'))
+        tag = ("PICK (user's call, Under 2.5 at %.2f)" % p['under'] if p.get('user') else 'PICK (band, table: %d pts/%d v %d pts/%d = %.2f v %.2f a game, Under 2.5 at %.2f)' % (*p['table'], p['ppg'][0], p['ppg'][1], p['under'])) if p in kept[:BAND_CAP] else ('skip: ' + p.get('why', 'over the cap'))
         print(f"  {ko:%a %H:%M}  {'-':3} {s['home'][:22]:22} v {s['away'][:22]:22} sporty {s['ox']:.2f} own implied {imp:.0%}  {tag}")
     picks += kept[:BAND_CAP]
     print(f"\n{seen} fixtures matched, {len(picks)} draw singles" + (' (dry run)' if dry else ''))
@@ -285,6 +293,9 @@ def main():
         if p['edge'] is not None:
             why = [f"market average draw {f['avgd']:.2f} (max {f['maxd']}), implied {f['imp']:.0%}; SportyBet {s['ox']:.2f} = {p['edge']:.3f}x average",
                    "rule: soft price >= 1.05x market average, market draw 30-36% -> +12% on 700 matches (football-data 2015-26, both halves positive)"]
+        elif p.get('user'):
+            why = [f"SportyBet {s['o1']:.2f}/{s['ox']:.2f}/{s['o2']:.2f} -> draw {f['imp']:.0%} after the overround (band 27%+); Under 2.5 at {p['under']:.2f}",
+                   "user's call: picked by hand from the band, the table / Under checks waived"]
         else:
             why = [f"SportyBet {s['o1']:.2f}/{s['ox']:.2f}/{s['o2']:.2f} -> draw {f['imp']:.0%} after the overround (band 27%+); Under 2.5 at {p['under']:.2f}",
                    f"table this season: {p['table'][0]} pts from {p['table'][1]} v {p['table'][2]} pts from {p['table'][3]} = {p['ppg'][0]} v {p['ppg'][1]} a game (sides close)",
@@ -299,7 +310,7 @@ def main():
     print(f"\nbooked {bk}")
     print(f"code {code}  {(bk or {}).get('url')}   ({(bk or {}).get('booked')}/{len(sels)} legs, verified {(bk or {}).get('verified')})")
     if code:
-        A.log_booking(code, bk.get('url'), f"draw slip (market band) {combo:,.1f}x ({len(legs)} legs){' ' + replaces + ' with' if replaces else ''} - draw band, sides close in the table, home not weaker, Under 2.5 <= 1.70", legs[:A.MAX_CODE])
+        A.log_booking(code, bk.get('url'), f"draw slip ({'user' + chr(39) + 's call' if only else 'market band'}) {combo:,.1f}x ({len(legs)} legs){' ' + replaces + ' with' if replaces else ''} - " + ("picked by hand from the draw band" if only else "draw band, sides close in the table, home not weaker, Under 2.5 <= 1.70"), legs[:A.MAX_CODE])
 
 
 if __name__ == '__main__':
