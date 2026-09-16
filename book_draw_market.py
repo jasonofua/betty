@@ -192,6 +192,11 @@ def main():
     # Asia, Africa, cups) - the band rule on SportyBet's own implied draw probability
     matched_eids = {p['s']['eid'] for p in picks} | {match(f, board)['eid'] for f in fx if match(f, board)}
     cut = now + dt.timedelta(hours=14)
+    if '--until' in sys.argv:                     # --until HH: the window ends at that hour (tomorrow if already past)
+        hh = int(sys.argv[sys.argv.index('--until') + 1])
+        cut = now.replace(hour=hh, minute=0, second=0, microsecond=0)
+        if cut <= now:
+            cut += dt.timedelta(days=1)
     band_picks = []
     for s in board:
         if s['eid'] in matched_eids or s['eid'] in {p['s']['eid'] for p in picks}:

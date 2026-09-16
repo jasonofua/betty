@@ -633,6 +633,8 @@ class Handler(BaseHTTPRequestHandler):
             args = ['book_draw_market.py'] + (['--dry'] if self._body.get('dry') else [])
             if re.fullmatch(r'[A-Z0-9]{6}', str(self._body.get('replaces') or '')):
                 args += ['--replaces', self._body['replaces']]
+            if str(self._body.get('until') or '').isdigit():
+                args += ['--until', str(int(self._body['until']))]
             threading.Thread(target=script_job, args=('draws', args, 'draw slip (market band)'), daemon=True).start()
             self._send(json.dumps({'ok': True})); return
         if path == '/api/combined':
