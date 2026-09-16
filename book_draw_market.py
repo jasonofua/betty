@@ -166,6 +166,7 @@ def season_record(fid, ts, rnd):
 def main():
     dry = '--dry' in sys.argv
     ratio = float(sys.argv[sys.argv.index('--ratio') + 1]) if '--ratio' in sys.argv else RATIO
+    replaces = sys.argv[sys.argv.index('--replaces') + 1] if '--replaces' in sys.argv else None   # a hand rebook names the code it retires
     now = dt.datetime.now(tz=A.WAT)
     fx = fixtures(); board = SNAP.board()
     print(f"fixtures.csv {len(fx)} priced main-league fixtures | SportyBet board {len(board)} games")
@@ -290,7 +291,7 @@ def main():
     print(f"\nbooked {bk}")
     print(f"code {code}  {(bk or {}).get('url')}   ({(bk or {}).get('booked')}/{len(sels)} legs, verified {(bk or {}).get('verified')})")
     if code:
-        A.log_booking(code, bk.get('url'), f"draw slip (market band) {combo:,.1f}x ({len(legs)} legs) - draw band, sides close, home not weaker, Under 2.5 <= 1.70", legs[:A.MAX_CODE])
+        A.log_booking(code, bk.get('url'), f"draw slip (market band) {combo:,.1f}x ({len(legs)} legs){' ' + replaces + ' with' if replaces else ''} - draw band, sides close in the table, home not weaker, Under 2.5 <= 1.70", legs[:A.MAX_CODE])
 
 
 if __name__ == '__main__':

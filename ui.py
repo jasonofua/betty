@@ -294,7 +294,7 @@ def scheduler():
                     elif path == '/api/draws':
                         draw_job(body['until'], body.get('days', 0), False, bool(body.get('half')))
                     elif path == '/api/drawsmkt':
-                        script_job('draws', ['book_draw_market.py'], 'draw singles (market)')
+                        script_job('draws', ['book_draw_market.py'], 'draw slip (market band)')
                     elif path == '/api/run':
                         run_job(float(body.get('target', 50)), int(body['until']), int(body.get('days', 0)), False,
                                 bool(body.get('rollover')), 'composite', bool(body.get('maxodds')),
@@ -631,7 +631,9 @@ class Handler(BaseHTTPRequestHandler):
                     self._send(json.dumps({'error': 'a run is already in progress'}), code=409); return
                 JOB['state'] = 'building'
             args = ['book_draw_market.py'] + (['--dry'] if self._body.get('dry') else [])
-            threading.Thread(target=script_job, args=('draws', args, 'draw singles (market)'), daemon=True).start()
+            if re.fullmatch(r'[A-Z0-9]{6}', str(self._body.get('replaces') or '')):
+                args += ['--replaces', self._body['replaces']]
+            threading.Thread(target=script_job, args=('draws', args, 'draw slip (market band)'), daemon=True).start()
             self._send(json.dumps({'ok': True})); return
         if path == '/api/combined':
             import betty_api as BA
