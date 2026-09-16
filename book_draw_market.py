@@ -34,10 +34,10 @@ UNDER_MAX = 1.70         # 16 Sep, user's call, measured: draw band 30%+ with Un
                          # v 31.4% priced, +2.7% at closing on both halves (+6.7% at best price, n 9,632);
                          # Under 1.71-1.90 in the same band -> 29.2%, -8.1%. Under 1.50 or shorter is
                          # already priced as a draw (32.9% v 32.9%).
-PPG_GAP = 0.5            # 16 Sep, user's call: sides close to each other IN THE TABLE. football-data
-                         # 2015-26, 27%+ band, live standings after 8+ rounds: points-per-game gap < 0.2
-                         # -> 30.6% draws v 29.7% market (+2.6% at best price), 0.2-0.5 -> 30.1% (+1.4%),
-                         # 0.5+ -> 29.3% (-0.2%). Far-apart sides add nothing.
+PPG_GAP = 0.2            # 16 Sep, user's call: sides close to each other IN THE TABLE - the tight bucket.
+                         # football-data 2015-26, 27%+ band, live standings after 8+ rounds: points-per-game
+                         # gap < 0.2 -> 30.6% draws v 29.7% market (+2.6% at best price, positive on both
+                         # halves), 0.2-0.5 -> 30.1% (+1.4%, flat on the second half), 0.5+ -> 29.3%.
 TABLE_MIN = 8            # 16 Sep, user: "use the real table points not last season form". Both sides need
                          # 8+ league games this season (the measured cut); a league two rounds old has no
                          # table and is skipped rather than read off last season's form.
