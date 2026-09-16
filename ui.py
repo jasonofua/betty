@@ -637,6 +637,8 @@ class Handler(BaseHTTPRequestHandler):
                 args += ['--until', str(int(self._body['until']))]
             if self._body.get('only'):
                 args += ['--only', re.sub(r'[^A-Za-z0-9 ,.\'-]', '', str(self._body['only']))[:300]]
+            if str(self._body.get('days') or '').isdigit():
+                args += ['--days', str(min(int(self._body['days']), 7))]
             threading.Thread(target=script_job, args=('draws', args, 'draw slip (market band)'), daemon=True).start()
             self._send(json.dumps({'ok': True})); return
         if path == '/api/combined':

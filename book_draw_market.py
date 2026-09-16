@@ -198,6 +198,8 @@ def main():
         cut = now.replace(hour=hh, minute=0, second=0, microsecond=0)
         if cut <= now:
             cut += dt.timedelta(days=1)
+    if '--days' in sys.argv:                      # --days N: push the window N more days out (a weekend slip)
+        cut += dt.timedelta(days=int(sys.argv[sys.argv.index('--days') + 1]))
     band_picks = []
     for s in board:
         if s['eid'] in matched_eids or s['eid'] in {p['s']['eid'] for p in picks}:
