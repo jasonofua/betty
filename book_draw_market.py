@@ -27,6 +27,11 @@ DIV = {'E0': 'England', 'E1': 'England', 'E2': 'England', 'E3': 'England', 'EC':
        'D1': 'Germany', 'D2': 'Germany', 'I1': 'Italy', 'I2': 'Italy', 'SP1': 'Spain', 'SP2': 'Spain',
        'F1': 'France', 'F2': 'France', 'N1': 'Netherlands', 'B1': 'Belgium', 'P1': 'Portugal', 'T1': 'Turkey', 'G1': 'Greece'}
 RATIO, LO, HI = 1.05, 0.30, 0.36
+BAND_CAP = 12
+BAND_MIN = 0.27          # 16 Sep: games with no reference price - SportyBet's own implied draw (overround
+                         # removed) 28%+ is the market at ~30%+, where draws at the market's best price pay
+                         # (+2.8% at 30-32%, +6% at 32-34%); SportyBet has priced draws at or above the
+                         # market's best on every game checked. Tracked as its own band on Results.
 
 
 def fixtures():
@@ -79,6 +84,28 @@ def main():
         print(f"  {ko:%a %H:%M}  {f['div']:3} {s['home'][:22]:22} v {s['away'][:22]:22} sporty {s['ox']:.2f} avg {f['avgd']:.2f} max {f['maxd'] or 0:.2f} imp {f['imp']:.0%}  {'PICK' if not tag else 'skip: ' + tag}")
         if not tag:
             picks.append(dict(f=f, s=s, edge=edge, ko=ko))
+    # second pass: everything SportyBet prices that football-data does not (South America,
+    # Asia, Africa, cups) - the band rule on SportyBet's own implied draw probability
+    matched_eids = {p['s']['eid'] for p in picks} | {match(f, board)['eid'] for f in fx if match(f, board)}
+    cut = now + dt.timedelta(hours=14)
+    band_picks = []
+    for s in board:
+        if s['eid'] in matched_eids or s['eid'] in {p['s']['eid'] for p in picks}:
+            continue
+        ko = dt.datetime.fromtimestamp(s['ko'], tz=A.WAT)
+        if not (now + dt.timedelta(minutes=30) < ko <= cut):
+            continue
+        if any(x in s['comp'] for x in ('Simulated', 'eSoccer', 'Women', 'U19', 'U20', 'U21', 'U23', 'Youth', 'Reserve', 'Amateur')):
+            continue
+        o = 1 / s['o1'] + 1 / s['ox'] + 1 / s['o2']; imp = (1 / s['ox']) / o
+        if imp >= BAND_MIN:
+            band_picks.append(dict(f=dict(div='-', avgd=None, maxd=None, imp=imp), s=s, edge=None, ko=ko))
+    # the most likely draws first, at most BAND_CAP a run - a single each
+    band_picks.sort(key=lambda p: -p['f']['imp'])
+    for p in band_picks[:BAND_CAP]:
+        s, ko, imp = p['s'], p['ko'], p['f']['imp']
+        print(f"  {ko:%a %H:%M}  {'-':3} {s['home'][:22]:22} v {s['away'][:22]:22} sporty {s['ox']:.2f} own implied {imp:.0%}  PICK (band, no reference)")
+    picks += band_picks[:BAND_CAP]
     print(f"\n{seen} fixtures matched, {len(picks)} draw singles" + (' (dry run)' if dry else ''))
     for p in picks:
         s, f = p['s'], p['f']
@@ -97,10 +124,16 @@ def main():
         code = (bk or {}).get('code')
         print(f"  {p['ko']:%a %H:%M} {s['home']} v {s['away']} Draw @{s['ox']:.2f}  code {code}  {(bk or {}).get('url')}")
         if code:
-            A.log_booking(code, bk.get('url'), f"draw single (market) {s['ox']:.2f}x - SportyBet {p['edge']:.3f}x the market average, market draw {f['imp']:.0%}",
-                          [(s['ko'], f"{s['home']} v {s['away']}", '1X2 / Draw', s['ox'],
-                            [f"market average draw {f['avgd']:.2f} (max {f['maxd']}), implied {f['imp']:.0%}; SportyBet {s['ox']:.2f} = {p['edge']:.3f}x average",
-                             "rule: soft price >= 1.05x market average, market draw 30-36% -> +12% on 700 matches (football-data 2015-26, both halves positive)"])])
+            if p['edge'] is not None:
+                A.log_booking(code, bk.get('url'), f"draw single (market) {s['ox']:.2f}x - SportyBet {p['edge']:.3f}x the market average, market draw {f['imp']:.0%}",
+                              [(s['ko'], f"{s['home']} v {s['away']}", '1X2 / Draw', s['ox'],
+                                [f"market average draw {f['avgd']:.2f} (max {f['maxd']}), implied {f['imp']:.0%}; SportyBet {s['ox']:.2f} = {p['edge']:.3f}x average",
+                                 "rule: soft price >= 1.05x market average, market draw 30-36% -> +12% on 700 matches (football-data 2015-26, both halves positive)"])])
+            else:
+                A.log_booking(code, bk.get('url'), f"draw single (band) {s['ox']:.2f}x - SportyBet's own implied draw {f['imp']:.0%}, no reference price",
+                              [(s['ko'], f"{s['home']} v {s['away']}", '1X2 / Draw', s['ox'],
+                                [f"SportyBet {s['o1']:.2f}/{s['ox']:.2f}/{s['o2']:.2f} -> draw {f['imp']:.0%} after the overround; band 28%+ (market ~30%+)",
+                                 "rule: draws the market has at 30%+ pay at the market's best price (+2.8% at 30-32%, +6% at 32-34%); SportyBet has priced at or above the best on every game checked - this band is tracked on its own"])])
 
 
 if __name__ == '__main__':

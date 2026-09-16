@@ -305,6 +305,12 @@ def scheduler():
                     if snap is None:
                         sys.path.insert(0, os.path.join(ROOT, 'experiments')); import odds_snapshot as snap
                     r = snap.snapshot(); JOB.update(state='done', result=r)
+                elif path == '/api/calib':
+                    sys.path.insert(0, os.path.join(ROOT, 'experiments')); import sporty_calibration as CAL
+                    JOB.update(state='building', log=[], result=None, params=dict(mode='sporty calibration'), started=dt.datetime.now(A.WAT).strftime('%H:%M'))
+                    with contextlib.redirect_stdout(_LogIO()):
+                        CAL.main()
+                    JOB.update(state='done', result=dict(note='see log'))
                 elif path == '/api/combined':
                     JOB.update(state='building', log=[], result=None, params=dict(mode='all games', slot=body.get('slot')),
                                started=dt.datetime.now(A.WAT).strftime('%H:%M'))
