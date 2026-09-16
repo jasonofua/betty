@@ -19,6 +19,8 @@ average and the market-implied draw probability is 30-36%.
 import csv, json, os, re, subprocess, sys, datetime as dt
 import acca as A
 import dynamic_v4 as D
+import fetcher_v2 as F2
+import book_winners as BW
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'experiments'))
 import odds_snapshot as SNAP
 
@@ -28,6 +30,9 @@ DIV = {'E0': 'England', 'E1': 'England', 'E2': 'England', 'E3': 'England', 'EC':
        'F1': 'France', 'F2': 'France', 'N1': 'Netherlands', 'B1': 'Belgium', 'P1': 'Portugal', 'T1': 'Turkey', 'G1': 'Greece'}
 RATIO, LO, HI = 1.05, 0.30, 0.36
 BAND_CAP = 12
+PPG_GAP = 0.5            # 16 Sep, user's call: sides close to each other. football-data, 27%+ band: last-10
+                         # points-per-game gap < 0.2 -> 30.6% draws v 29.7% market (+2.6% at best price),
+                         # 0.2-0.5 -> 30.1% (+1.4%), 0.5+ -> 29.3% (-0.2%). Far-apart sides add nothing.
 BAND_MIN = 0.27          # 16 Sep: games with no reference price - SportyBet's own implied draw (overround
                          # removed) 28%+ is the market at ~30%+, where draws at the market's best price pay
                          # (+2.8% at 30-32%, +6% at 32-34%); SportyBet has priced draws at or above the
@@ -100,12 +105,41 @@ def main():
         o = 1 / s['o1'] + 1 / s['ox'] + 1 / s['o2']; imp = (1 / s['ox']) / o
         if imp >= BAND_MIN:
             band_picks.append(dict(f=dict(div='-', avgd=None, maxd=None, imp=imp), s=s, edge=None, ko=ko))
-    # the most likely draws first, at most BAND_CAP a run - a single each
-    band_picks.sort(key=lambda p: -p['f']['imp'])
-    for p in band_picks[:BAND_CAP]:
+    # the two sides must be close in form points (last 10 league games, from the
+    # Flashscore form feed) - a proxy for standing next to each other in the table
+    fxs = [f for off in (0, 1) for f in F2.get_fixtures(off)]
+    evs = [dict(eventId=p['s']['eid'], homeTeamName=p['s']['home'], awayTeamName=p['s']['away'], estimateStartTime=p['s']['ko'] * 1000) for p in band_picks]
+    joined = {e['eventId']: f for e, f, sc in D.join(evs, fxs, lambda e: dt.datetime.fromtimestamp(int(e['estimateStartTime']) / 1000, tz=A.WAT),
+                                                          lambda f: dt.datetime.fromtimestamp(f['ts'], tz=A.WAT))}
+    kept = []
+    for p in band_picks:
+        f = joined.get(p['s']['eid'])
+        if not f:
+            p['why'] = 'no form feed'; continue
+        try:
+            w = BW.wider_sheet(f)
+        except Exception:
+            w = None
+        ha, aa = (w or {}).get('h_all'), (w or {}).get('a_all')
+        if not ha or not aa:
+            p['why'] = 'no last-10 form'; continue
+        ph, pa = (3 * ha[0] + ha[1]) / 10, (3 * aa[0] + aa[1]) / 10
+        p['ppg'] = (round(ph, 2), round(pa, 2)); p['gap'] = abs(ph - pa)
+        if p['gap'] >= PPG_GAP:
+            p['why'] = f"sides far apart: {ph:.2f} v {pa:.2f} points a game"; continue
+        # 16 Sep: an away side the market makes 10+ points the stronger draws LESS than
+        # priced (27.8% v 29.0%, -7.1% at closing); the home side being the stronger
+        # one is where the band pays (30.5% v 29.3%, +3.5% at best price)
+        s_ = p['s']; tot = 1 / s_['o1'] + 1 / s_['ox'] + 1 / s_['o2']
+        if (1 / s_['o2']) / tot - (1 / s_['o1']) / tot >= 0.10:
+            p['why'] = f"away side clearly stronger ({s_['o1']:.2f} v {s_['o2']:.2f})"; continue
+        kept.append(p)
+    kept.sort(key=lambda p: (-p['f']['imp'], p['gap']))
+    for p in band_picks:
         s, ko, imp = p['s'], p['ko'], p['f']['imp']
-        print(f"  {ko:%a %H:%M}  {'-':3} {s['home'][:22]:22} v {s['away'][:22]:22} sporty {s['ox']:.2f} own implied {imp:.0%}  PICK (band, no reference)")
-    picks += band_picks[:BAND_CAP]
+        tag = 'PICK (band, sides close: %.2f v %.2f ppg)' % p['ppg'] if p in kept[:BAND_CAP] else ('skip: ' + p.get('why', 'over the cap'))
+        print(f"  {ko:%a %H:%M}  {'-':3} {s['home'][:22]:22} v {s['away'][:22]:22} sporty {s['ox']:.2f} own implied {imp:.0%}  {tag}")
+    picks += kept[:BAND_CAP]
     print(f"\n{seen} fixtures matched, {len(picks)} draw singles" + (' (dry run)' if dry else ''))
     for p in picks:
         s, f = p['s'], p['f']
@@ -132,7 +166,7 @@ def main():
             else:
                 A.log_booking(code, bk.get('url'), f"draw single (band) {s['ox']:.2f}x - SportyBet's own implied draw {f['imp']:.0%}, no reference price",
                               [(s['ko'], f"{s['home']} v {s['away']}", '1X2 / Draw', s['ox'],
-                                [f"SportyBet {s['o1']:.2f}/{s['ox']:.2f}/{s['o2']:.2f} -> draw {f['imp']:.0%} after the overround; band 28%+ (market ~30%+)",
+                                [f"SportyBet {s['o1']:.2f}/{s['ox']:.2f}/{s['o2']:.2f} -> draw {f['imp']:.0%} after the overround; band 27%+; last-10 points a game {p['ppg'][0]} v {p['ppg'][1]} (sides close)",
                                  "rule: draws the market has at 30%+ pay at the market's best price (+2.8% at 30-32%, +6% at 32-34%); SportyBet has priced at or above the best on every game checked - this band is tracked on its own"])])
 
 
