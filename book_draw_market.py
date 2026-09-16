@@ -164,33 +164,41 @@ def main():
         print(f"  {ko:%a %H:%M}  {'-':3} {s['home'][:22]:22} v {s['away'][:22]:22} sporty {s['ox']:.2f} own implied {imp:.0%}  {tag}")
     picks += kept[:BAND_CAP]
     print(f"\n{seen} fixtures matched, {len(picks)} draw singles" + (' (dry run)' if dry else ''))
+    if dry or not picks:
+        return
+    # 16 Sep, user's call: ONE slip, not singles. Every pick's Draw on one code.
+    import urllib.request
+    sels, legs = [], []
     for p in picks:
         s, f = p['s'], p['f']
-        if dry:
-            continue
         oid = None
-        if True:
-            import urllib.request
+        try:
             d = json.loads(urllib.request.urlopen(urllib.request.Request(f"https://www.sportybet.com/api/ng/factsCenter/event?eventId={s['eid']}&productId=3", headers=A.HDRS), timeout=25).read().decode())
             for m in (d.get('data') or {}).get('markets', []):
                 if str(m.get('id')) == '1' and not m.get('specifier'):
-                    oid = next((o['id'] for o in m.get('outcomes', []) if o['desc'] == 'Draw'), None)
+                    oid = next((o['id'] for o in m.get('outcomes', []) if o['desc'] == 'Draw' and o.get('isActive', 1)), None)
+        except Exception:
+            pass
         if not oid:
             print(f"  no Draw outcome for {s['home']} v {s['away']}"); continue
-        bk = A.book([dict(eventId=s['eid'], productId=3, marketId='1', specifier='', outcomeId=oid)])
-        code = (bk or {}).get('code')
-        print(f"  {p['ko']:%a %H:%M} {s['home']} v {s['away']} Draw @{s['ox']:.2f}  code {code}  {(bk or {}).get('url')}")
-        if code:
-            if p['edge'] is not None:
-                A.log_booking(code, bk.get('url'), f"draw single (market) {s['ox']:.2f}x - SportyBet {p['edge']:.3f}x the market average, market draw {f['imp']:.0%}",
-                              [(s['ko'], f"{s['home']} v {s['away']}", '1X2 / Draw', s['ox'],
-                                [f"market average draw {f['avgd']:.2f} (max {f['maxd']}), implied {f['imp']:.0%}; SportyBet {s['ox']:.2f} = {p['edge']:.3f}x average",
-                                 "rule: soft price >= 1.05x market average, market draw 30-36% -> +12% on 700 matches (football-data 2015-26, both halves positive)"])])
-            else:
-                A.log_booking(code, bk.get('url'), f"draw single (band) {s['ox']:.2f}x - SportyBet's own implied draw {f['imp']:.0%}, no reference price",
-                              [(s['ko'], f"{s['home']} v {s['away']}", '1X2 / Draw', s['ox'],
-                                [f"SportyBet {s['o1']:.2f}/{s['ox']:.2f}/{s['o2']:.2f} -> draw {f['imp']:.0%} after the overround; band 27%+; last-10 points a game {p['ppg'][0]} v {p['ppg'][1]} (sides close); Under 2.5 at {p['under']:.2f}",
-                                 "rule: draws the market has at 30%+ pay at the market's best price (+2.8% at 30-32%, +6% at 32-34%); SportyBet has priced at or above the best on every game checked - this band is tracked on its own"])])
+        sels.append(dict(eventId=s['eid'], productId=3, marketId='1', specifier='', outcomeId=oid))
+        if p['edge'] is not None:
+            why = [f"market average draw {f['avgd']:.2f} (max {f['maxd']}), implied {f['imp']:.0%}; SportyBet {s['ox']:.2f} = {p['edge']:.3f}x average",
+                   "rule: soft price >= 1.05x market average, market draw 30-36% -> +12% on 700 matches (football-data 2015-26, both halves positive)"]
+        else:
+            why = [f"SportyBet {s['o1']:.2f}/{s['ox']:.2f}/{s['o2']:.2f} -> draw {f['imp']:.0%} after the overround; band 27%+; last-10 points a game {p['ppg'][0]} v {p['ppg'][1]} (sides close); Under 2.5 at {p['under']:.2f}",
+                   "rule: the draw band + sides close + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)"]
+        legs.append((s['ko'], f"{s['home']} v {s['away']}", '1X2 / Draw', s['ox'], why))
+    if not sels:
+        return
+    bk = A.book(sels[:A.MAX_CODE])
+    code = (bk or {}).get('code'); combo = 1.0
+    for l in legs[:A.MAX_CODE]:
+        combo *= l[3]
+    print(f"\nbooked {bk}")
+    print(f"code {code}  {(bk or {}).get('url')}   ({(bk or {}).get('booked')}/{len(sels)} legs, verified {(bk or {}).get('verified')})")
+    if code:
+        A.log_booking(code, bk.get('url'), f"draw slip (market band) {combo:,.1f}x ({len(legs)} legs) - draw band, sides close, home not weaker, Under 2.5 <= 1.70", legs[:A.MAX_CODE])
 
 
 if __name__ == '__main__':
