@@ -260,9 +260,12 @@ def main():
         return
     # 16 Sep, user's call: ONE slip, not singles. Every pick's Draw on one code.
     import urllib.request
-    sels, legs = [], []
+    sels, legs, done = [], [], set()
     for p in picks:
         s, f = p['s'], p['f']
+        if s['eid'] in done:                      # 16 Sep: LG4TB5 carried Caxias v Pelotas twice
+            continue
+        done.add(s['eid'])
         oid = None
         try:
             d = json.loads(urllib.request.urlopen(urllib.request.Request(f"https://www.sportybet.com/api/ng/factsCenter/event?eventId={s['eid']}&productId=3", headers=A.HDRS), timeout=25).read().decode())

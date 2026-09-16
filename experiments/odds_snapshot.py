@@ -11,7 +11,7 @@ import acca as A
 
 def board():
     BASE = 'https://www.sportybet.com/api/ng/factsCenter/'
-    out = []
+    out, seen = [], set()
     for pg in range(1, 15):
         url = BASE + f'pcUpcomingEvents?sportId=sr:sport:1&marketId=1&pageSize=100&pageNum={pg}&option=1'
         try:
@@ -26,7 +26,8 @@ def board():
             if not m:
                 continue
             o = {x['desc']: float(x['odds']) for x in m.get('outcomes', []) if x.get('odds')}
-            if {'Home', 'Draw', 'Away'} <= set(o):
+            if {'Home', 'Draw', 'Away'} <= set(o) and e['eventId'] not in seen:   # pages overlap as the board shifts
+                seen.add(e['eventId'])
                 sp = e.get('sport') or {}; cat = sp.get('category') or {}
                 out.append(dict(snap=int(time.time()), eid=e['eventId'], ko=int(e['estimateStartTime']) // 1000,
                                 comp=f"{cat.get('name', '')}: {(cat.get('tournament') or {}).get('name', '')}",
