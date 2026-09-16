@@ -30,6 +30,10 @@ DIV = {'E0': 'England', 'E1': 'England', 'E2': 'England', 'E3': 'England', 'EC':
        'F1': 'France', 'F2': 'France', 'N1': 'Netherlands', 'B1': 'Belgium', 'P1': 'Portugal', 'T1': 'Turkey', 'G1': 'Greece'}
 RATIO, LO, HI = 1.05, 0.30, 0.36
 BAND_CAP = 12
+UNDER_MAX = 1.70         # 16 Sep, user's call, measured: draw band 30%+ with Under 2.5 at 1.51-1.70 -> 33.3% draws
+                         # v 31.4% priced, +2.7% at closing on both halves (+6.7% at best price, n 9,632);
+                         # Under 1.71-1.90 in the same band -> 29.2%, -8.1%. Under 1.50 or shorter is
+                         # already priced as a draw (32.9% v 32.9%).
 PPG_GAP = 0.5            # 16 Sep, user's call: sides close to each other. football-data, 27%+ band: last-10
                          # points-per-game gap < 0.2 -> 30.6% draws v 29.7% market (+2.6% at best price),
                          # 0.2-0.5 -> 30.1% (+1.4%), 0.5+ -> 29.3% (-0.2%). Far-apart sides add nothing.
@@ -52,6 +56,20 @@ def fixtures():
         out.append(dict(div=r['Div'], country=DIV.get(r['Div']), date=r['Date'], time=r.get('Time'), home=r['HomeTeam'], away=r['AwayTeam'],
                         avgd=avgd, maxd=float(r['MaxD']) if r.get('MaxD') else None, imp=(1 / avgd) / s))
     return out
+
+
+def under25(eid):
+    """SportyBet's Under 2.5 price for the event (market 18, total=2.5), or None."""
+    import urllib.request
+    try:
+        d = json.loads(urllib.request.urlopen(urllib.request.Request(f"https://www.sportybet.com/api/ng/factsCenter/event?eventId={eid}&productId=3", headers=A.HDRS), timeout=25).read().decode())
+    except Exception:
+        return None
+    for m in (d.get('data') or {}).get('markets', []):
+        if str(m.get('id')) == '18' and (m.get('specifier') or '') == 'total=2.5':
+            o = next((o for o in m.get('outcomes', []) if o['desc'] == 'Under 2.5' and o.get('isActive', 1)), None)
+            return float(o['odds']) if o else None
+    return None
 
 
 def match(fx, board):
@@ -133,11 +151,16 @@ def main():
         s_ = p['s']; tot = 1 / s_['o1'] + 1 / s_['ox'] + 1 / s_['o2']
         if (1 / s_['o2']) / tot - (1 / s_['o1']) / tot >= 0.10:
             p['why'] = f"away side clearly stronger ({s_['o1']:.2f} v {s_['o2']:.2f})"; continue
+        u = under25(s_['eid']); p['under'] = u
+        if u is None:
+            p['why'] = 'no Under 2.5 price'; continue
+        if u > UNDER_MAX:
+            p['why'] = f"market expects goals: Under 2.5 at {u:.2f}"; continue
         kept.append(p)
     kept.sort(key=lambda p: (-p['f']['imp'], p['gap']))
     for p in band_picks:
         s, ko, imp = p['s'], p['ko'], p['f']['imp']
-        tag = 'PICK (band, sides close: %.2f v %.2f ppg)' % p['ppg'] if p in kept[:BAND_CAP] else ('skip: ' + p.get('why', 'over the cap'))
+        tag = ('PICK (band, sides close: %.2f v %.2f ppg, Under 2.5 at %.2f)' % (p['ppg'][0], p['ppg'][1], p['under'])) if p in kept[:BAND_CAP] else ('skip: ' + p.get('why', 'over the cap'))
         print(f"  {ko:%a %H:%M}  {'-':3} {s['home'][:22]:22} v {s['away'][:22]:22} sporty {s['ox']:.2f} own implied {imp:.0%}  {tag}")
     picks += kept[:BAND_CAP]
     print(f"\n{seen} fixtures matched, {len(picks)} draw singles" + (' (dry run)' if dry else ''))
@@ -166,7 +189,7 @@ def main():
             else:
                 A.log_booking(code, bk.get('url'), f"draw single (band) {s['ox']:.2f}x - SportyBet's own implied draw {f['imp']:.0%}, no reference price",
                               [(s['ko'], f"{s['home']} v {s['away']}", '1X2 / Draw', s['ox'],
-                                [f"SportyBet {s['o1']:.2f}/{s['ox']:.2f}/{s['o2']:.2f} -> draw {f['imp']:.0%} after the overround; band 27%+; last-10 points a game {p['ppg'][0]} v {p['ppg'][1]} (sides close)",
+                                [f"SportyBet {s['o1']:.2f}/{s['ox']:.2f}/{s['o2']:.2f} -> draw {f['imp']:.0%} after the overround; band 27%+; last-10 points a game {p['ppg'][0]} v {p['ppg'][1]} (sides close); Under 2.5 at {p['under']:.2f}",
                                  "rule: draws the market has at 30%+ pay at the market's best price (+2.8% at 30-32%, +6% at 32-34%); SportyBet has priced at or above the best on every game checked - this band is tracked on its own"])])
 
 
