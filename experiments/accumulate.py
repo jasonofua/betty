@@ -28,7 +28,16 @@ for off in (-1,-2,-3):
             except (TypeError,ValueError): pass
 with open(M,'a') as out:
     for r in new: out.write(json.dumps(r)+'\n')
-print(f'{len(new)} new finished matches appended (corpus now {len(seen)})')
+print(f'{len(new)} new finished matches appended (corpus now {len(seen)})', flush=True)
+# 17 Sep: --resume harvests every match in matches.jsonl from the last 4 days that
+# never reached dataset.jsonl (a crawl killed mid-harvest had already appended the
+# ids to matches.jsonl, so a plain rerun would skip them all)
+if '--resume' in sys.argv:
+    import time as _t
+    have={json.loads(l)['id'] for l in open(DS)} if os.path.exists(DS) else set()
+    cut=_t.time()-4*86400
+    new=[r for r in (json.loads(l) for l in open(M)) if r['id'] not in have and r.get('ts',0)>=cut]
+    print(f'resume: {len(new)} matches from the last 4 days still to harvest', flush=True)
 kept=0
 with open(DS,'a') as out:
     for i,r in enumerate(new):

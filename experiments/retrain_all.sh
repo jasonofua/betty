@@ -6,8 +6,9 @@
 #   1. dedupe the corpus by match id
 #   2. hybrid bundle   - NN goal markets + XGBoost stat markets (LIVE engine)
 #   3. nn_all bundle   - nets on every option family
-#   4. draw dataset    - rebuilt from the deduped corpus
-#   5. draw model      - pocket logistic, the live draw predictor
+#   4. draw dataset    - rebuilt from the deduped corpus (the pocket rate check)
+#   (the draw classifier is no longer fitted - 17 Sep: draws are picked on the
+#    market band + table + Under, the model was never wired into a booking)
 #
 # Each step's full output lands in experiments/retrain_<step>.log; the
 # summary lines are echoed here. Stops on the first failure.
@@ -26,6 +27,5 @@ TAIL=2  run dedupe   python3 dedupe_corpus.py
 TAIL=12 run hybrid   python3 train_hybrid.py
 TAIL=10 run nn_all   python3 train_nn_all.py
 TAIL=14 run drawset  python3 build_draw_dataset.py
-TAIL=60 run draw     python3 train_draw_pocket.py --both
 echo "=== all models retrained ==="
-ls -la hybrid_bundle.pkl nn_all_bundle.pkl draw_model.pkl | awk '{print $6, $7, $8, $5, $9}'
+ls -la hybrid_bundle.pkl nn_all_bundle.pkl | awk '{print $6, $7, $8, $5, $9}'
