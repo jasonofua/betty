@@ -894,9 +894,9 @@ def live_feed(LIVE):
 
 RULES = [
     dict(product='Winners', tag='match result',
-         plain="The market favourite only, and only when venue goal difference backs it. Prices under 1.60 go as a straight win, 1.60 to 2.60 as a double chance, and any price becomes a double chance when either side is draw-prone or the favourite has no shot stats on the feed. A favourite whose last ten shows more losses than wins, that is out-shot on target, that creates fewer shots on target than the opponent does, or that has a losing head-to-head is dropped. A dead heat in the market is no favourite.",
-         thresholds=[dict(k='Venue goal difference, home', v='1.0 a game'), dict(k='Venue goal difference, away', v='1.5 a game'), dict(k='Straight win, price under', v='1.60'),
-                     dict(k='Double chance band', v='1.60 to 2.60'), dict(k='Draw-prone: favourite venue draws', v='5+'), dict(k='Draw-prone: opponent venue draws', v='4+'),
+         plain="The market favourite only, and only when venue goal difference backs it. Only favourites priced 1.30 to 1.60, as a straight win; a draw-prone favourite (or one with no shot stats) inside that band goes as a double chance. Favourites above 1.60 are left alone - on 246 of our own legs (9-17 Sep) covers on them returned -11%, while 1.30-1.60 straight returned +14.5%. Below 1.30 there is nothing to win",
+         thresholds=[dict(k='Venue goal difference, home', v='1.0 a game'), dict(k='Venue goal difference, away', v='1.5 a game'), dict(k='Favourite priced', v='1.30 to 1.60, straight win'),
+                     dict(k='Above 1.60 / below 1.30', v='skipped'), dict(k='Draw-prone: favourite venue draws', v='5+'), dict(k='Draw-prone: opponent venue draws', v='4+'),
                      dict(k='Draw-prone: combined venue draws', v='4+'), dict(k='Dropped when', v='more losses than wins, out-shot or out-created on target, losing H2H, dead heat, opponent with 7+ of 10 or more wins than the favourite, opponent 3 of its last 4 at the venue')],
          measured='Corpus: home favourites at margin 1.0+ win 52.6%, win-or-draw 75.9% (19,945 matches). The yesterday check replays the rule over the whole previous board before every booking.'),
     dict(product='Draws', tag='the band, the table, the Under',
@@ -925,6 +925,7 @@ RULES = [
 ]
 
 CHANGELOG = [
+    dict(date='17 Sep', txt="Winners: favourites only at 1.30-1.60, no more covers on favourites above 1.60. Our own 246 settled legs since 9 Sep by the favourite's price: 1.30-1.60 won 81% and returned +14.5%; 1.60-2.70 covers returned -11% over 158 legs (Phnom Penh Crown 2-1 at 90+1 the last); under 1.30 -5%."),
     dict(date='17 Sep', txt="Points sports: a handicap leg now also needs THIS SEASON's games (both sides, any venue, 2+ each) to cover the line 80%+. Sochi +2.5 lost 0-4 on a 14/14 venue window that was six games of last March while this season already had 1-4 and 1-5. Twelve days of hockey: +2.5 legs 84% -> 93% with the season agreeing, the legs it rejects went 3-3 and 4-6."),
     dict(date='16 Sep', txt="Draws: 'close in the table' now reads the real table - each side's league points this season, this competition, with the round number from the league page - instead of last-10 form (which in September was mostly last season). Both sides need 8+ league games; a league two rounds old is skipped. Booked as one slip."),
     dict(date='16 Sep', txt='Scheduler: a job that crashes (the calibration ran before its first snapshot) no longer blocks the rest of the day - every morning run on 16 Sep was marked missed and re-run by hand at 15:20.'),

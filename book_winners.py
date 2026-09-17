@@ -35,12 +35,17 @@ import book_draw as DRW          # venue_form(): df_hh Home/Away tabs cut at kic
 # 30/35 (86%) for the first pass.
 MARGIN_HOME = 1.0   # goals per game, favourite minus opponent at the venue
 MARGIN_AWAY = 1.5
-MIN_PRICE = 1.15         # 15 Sep: DAC at 1.01 away to Velke Ludince (Slovak Cup) lost 3-2. A leg
-                         # under 1.15 adds nothing to a slip and carries the whole risk - no value.
+MIN_PRICE = 1.30         # 17 Sep: 246 settled legs 9-17 Sep by the favourite's price. 1.15-1.30:
+                         # 79% won, -5.1% return (29 legs). 1.30-1.60: 81% won, +14.5% (59 legs).
+                         # 15 Sep it was 1.15 after DAC at 1.01; the band under 1.30 still loses.
 STRAIGHT_MAX = 1.60      # 14 Sep: was 1.80. Two days of settled legs (106): straight wins at
                          # 1.60-1.94 went 9-9 with six of the nine losses draws; covers in the
                          # same band 15-2. Under 1.60 the straight win went 22-9.
-DC_MAX = 2.60
+DC_MAX = STRAIGHT_MAX    # 17 Sep: NO covers on favourites above 1.60. Same 246 legs: covers on
+                         # favourites at 1.60-2.70 won 59-79% at 1.15-1.40, return -11% over 158
+                         # legs (1.60-1.80 -11.8%, 1.80-2.00 0.0%, 2.00-2.30 -18.6%, 2.30-2.70
+                         # -7.5%; Phnom Penh 2-1 at 90+1 the last of them). Draw-prone favourites
+                         # inside 1.30-1.60 keep the cover (7 of 7, +13%).
 SEP = '-' * 96
 
 
@@ -249,7 +254,9 @@ def build(until_h, days=0, verbose=True):
         if price < STRAIGHT_MAX and not drawy:
             o = outcome(ev, '1', side)
             row.update(pick='win', label=f"1X2 / {side}", o=o)
-        elif price < DC_MAX or drawy:
+        elif price >= DC_MAX:
+            row['why'] = f"favourite priced {price:.2f} - covers above {DC_MAX:.2f} returned -11% on 158 legs"; rows.append(row); continue
+        elif drawy:
             want = 'Home or Draw' if side == 'Home' else 'Draw or Away'
             o = outcome(ev, '10', want)
             tag = ('  [no shot stats]' if fav_sot is None else f"  [draw-prone: fav {fav_draws} opp {opp_draws} venue, opp overall {opp_all}]") if drawy else ''
@@ -385,7 +392,7 @@ def main():
                   f"SoT home {r.get('wide', {}).get('h_sot')} away {r.get('wide', {}).get('a_sot')}"])
                 for r in picks]
         A.log_booking(bk['code'], bk.get('url'),
-                      f"winners slip {combo:,.0f}x ({len(picks)} legs) until {until}:00 - fix v2: favourite, margin >=1.0 home / >=1.5 away, <1.80 win / 1.80-2.60 DC",
+                      f"winners slip {combo:,.0f}x ({len(picks)} legs) until {until}:00 - fix v3: favourite at 1.30-1.60, margin >=1.0 home / >=1.5 away, straight win, cover only when draw-prone",
                       legs)
         print(f"code {bk['code']}  {bk.get('url')}   ({bk.get('booked')}/{bk.get('req')} legs, verified {bk.get('verified')})")
 
