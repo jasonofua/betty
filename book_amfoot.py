@@ -145,6 +145,47 @@ def venue_games(mid, kickoff, team, suffix, comp=None):
     return out[:7]
 
 
+def season_games(mid, kickoff, team, comp=None):
+    """The side's games THIS SEASON in this competition, any venue, from the Overall
+    tab. 17 Sep: Sochi +2.5 lost 0-4 on a 14/14 venue window that was six games of
+    last March; this season Sochi had already lost 1-4, 1-5 and 0-1. On 12 days of
+    hockey (27 games, 38 handicap legs at 11/14): legs where both sides' season games
+    also agree 80%+ hit 93% at +2.5 and 91% at +3.5; legs where the season games
+    disagree went 3-3 and 4-6."""
+    hh = F.fetch(f"df_hh_{SPORT['fs']}_{mid}", ttl=3600); out = []
+    want = _comp_key(comp) if comp else None
+    for tab in hh.split('~KA÷')[1:]:
+        if tab.split('¬')[0] != 'Overall':
+            continue
+        for blk in tab.split('~KB÷')[1:]:
+            if blk.split('¬')[0] != f'Last matches: {team}':
+                continue
+            for g in re.split(r'~(?=KC÷)', blk):
+                d = dict(re.findall(r'([A-Z]{2,3})÷([^¬]*)', g))
+                if 'KC' not in d or not d.get('KU') or not d.get('KT') or int(d['KC']) >= kickoff - 3600 or int(d['KC']) < SEASON_START:
+                    continue
+                if want and _comp_key(d.get('KI') or d.get('KF')) != want:
+                    continue
+                home_is_team = d.get('KJ', '').lstrip('*') == team
+                pf, pa = int(d['KU']), int(d['KT'])
+                if not home_is_team:
+                    pf, pa = pa, pf
+                out.append(dict(id=d.get('KP'), pf=pf, pa=pa, home=home_is_team, ts=int(d['KC'])))
+    return out
+
+
+def season_agrees(lab, hs, as_):
+    """Handicap legs only (the measured case): both sides' season games, 2+ each,
+    must cover the line 80%+. None = too thin to judge, True/False otherwise."""
+    m = re.match(r'Handicap (Home|Away) ([+-]?[\d.]+)', lab)
+    if not m or min(len(hs), len(as_)) < 2:
+        return None
+    side, v = m.group(1), float(m.group(2))
+    mine, theirs = (hs, as_) if side == 'Home' else (as_, hs)
+    hits = sum(g['pf'] - g['pa'] > -v for g in mine) + sum(g['pa'] - g['pf'] > -v for g in theirs)
+    return hits >= 0.8 * (len(mine) + len(theirs))
+
+
 def periods(gid):
     """[(home, away), ...] per period from the period-score feed, regulation only."""
     try:
@@ -308,10 +349,22 @@ def main():
             skipped['no line at agreement'] += 1
             print(f"  {t:%a %H:%M}  {name:52} no line{note}   H {fmt(hg)} | A {fmt(ag)}"); continue
         hits, n, lab, odds, sel = pick
+        hs, as_ = season_games(f['id'], f['ts'], f['h'], f.get('lg')), season_games(f['id'], f['ts'], f['a'], f.get('lg'))
+        if SPORT['reg_only']:
+            for g in hs + as_:
+                r = regulation(g['id'], g['home']) if g['id'] else None
+                if r:
+                    g['pf'], g['pa'] = r
+        sa = season_agrees(lab, hs, as_)
+        if sa is False:
+            skipped['this season disagrees with the handicap'] += 1
+            print(f"  {t:%a %H:%M}  {name:52} skip: {lab} agrees at the venue {hits}/{n} but this season says no   H {fmt(hs)} | A {fmt(as_)}"); continue
+        note += f"  [season {fmt(hs)} | {fmt(as_)} agrees]" if sa else ''
         print(f"  {t:%a %H:%M}  {name:52} PICK {lab} @{odds:.2f}  {hits}/{n}{note}   H {fmt(hg)} | A {fmt(ag)}")
         legs.append(dict(ts=ets, match=name, label=lab, odds=odds, hits=hits, n=n, ev=e, sel=sel,
                          stats=[f"{f['h']} HOME {fmt(hg)}", f"{f['a']} AWAY {fmt(ag)}",
-                                f"{lab}: {hits}/{n} of the two venue histories agree"]))
+                                f"{lab}: {hits}/{n} of the two venue histories agree"] +
+                               ([f"this season {f['h']} {fmt(hs)} | {f['a']} {fmt(as_)} - agrees with the line"] if sa else [])))
     print(f"\nskipped: {dict(skipped)}")
     if not legs:
         print(">> nothing qualifies"); return

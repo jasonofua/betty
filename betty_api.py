@@ -915,7 +915,7 @@ RULES = [
     dict(product='Points sports', tag='American football, basketball, ice hockey, handball',
          plain="One engine across four points sports. Totals, first-half or first-period totals and handicaps only, never winners. Each side's last seven venue games and period scores are read, and a line only goes out when the large majority of past margins agree. Mismatch games, winner at 1.05 or under, are scored on lookalike games only. College sides with fewer than two games this season prefer the total.",
          thresholds=[dict(k='Agreement, at least', v='11 of 14'), dict(k='Price floor', v='1.40'), dict(k='Mismatch games (winner at 1.05 or under)', v='scored on lookalikes, 80%'),
-                     dict(k='Stale college rosters', v='prefer totals; handicap needs 12 of 14'), dict(k='Same competition only', v='venue games from other competitions are dropped; friendlies and pre-season skipped'), dict(k='Markets', v='totals, period totals, handicaps')],
+                     dict(k='Stale college rosters', v='prefer totals; handicap needs 12 of 14'), dict(k='This season must agree (handicaps)', v='both sides\' games this season, any venue, 2+ each, cover the line 80%+'), dict(k='Same competition only', v='venue games from other competitions are dropped; friendlies and pre-season skipped'), dict(k='Markets', v='totals, period totals, handicaps')],
          measured='First weekend (12-13 Sep): totals 5 of 5, first-half totals 2 of 2, handicaps 2 of 4. No corpus yet for the other three sports.'),
     dict(product='Max odds', tag='composite engine',
          plain="The goal-and-stats accumulator: over and unders, team totals, corners, bookings, shots, offsides, fouls, saves, and half markets. Cushion gates and blank-rate tables decide what goes on, family bans stop correlated legs, and the daily rollover follows the biggest slip that lands one time in three.",
@@ -925,6 +925,7 @@ RULES = [
 ]
 
 CHANGELOG = [
+    dict(date='17 Sep', txt="Points sports: a handicap leg now also needs THIS SEASON's games (both sides, any venue, 2+ each) to cover the line 80%+. Sochi +2.5 lost 0-4 on a 14/14 venue window that was six games of last March while this season already had 1-4 and 1-5. Twelve days of hockey: +2.5 legs 84% -> 93% with the season agreeing, the legs it rejects went 3-3 and 4-6."),
     dict(date='16 Sep', txt="Draws: 'close in the table' now reads the real table - each side's league points this season, this competition, with the round number from the league page - instead of last-10 form (which in September was mostly last season). Both sides need 8+ league games; a league two rounds old is skipped. Booked as one slip."),
     dict(date='16 Sep', txt='Scheduler: a job that crashes (the calibration ran before its first snapshot) no longer blocks the rest of the day - every morning run on 16 Sep was marked missed and re-run by hand at 15:20.'),
     dict(date='15 Sep', txt='Draws rebuilt on the market: football-data backfill (147k matches, closing prices) shows the market calibrated on draws in every band and the gate adding nothing; the edge is SportyBet pricing draws above the market (5%+ over the average in the 30-36% band: +12% on 700 matches). Live Draw now keyed to the pre-match draw price (45.7% from a level HT at 32%+) instead of the gate.'),
