@@ -184,7 +184,7 @@ def winners_job(until, days, dry):
 LIVE = {'state': 'idle', 'log': [], 'started': None}
 
 
-def live_job(until, dry, chat=None):
+def live_job(until, dry, chat=None, auto=False):
     """Live draw watcher (live_draw.py) - runs in its own thread, separate from
     JOB so a build can still run alongside it. Pushes codes to the chat that
     started it."""
@@ -216,9 +216,12 @@ def live_job(until, dry, chat=None):
     def worker():
         try:
             LD.LOG = log; LD.SEND = send
-            LD.run(until_h=until or None, dry=dry)
+            LD.run(until_h=until or None, dry=dry, greet=not auto)
         except Exception as e:
+            import traceback
             log(f"live watcher crashed: {type(e).__name__}: {e}")
+            print(f"live watcher crashed: {type(e).__name__}: {e}\n{traceback.format_exc()}", flush=True)
+            LIVE.setdefault('crashes', []).append(time.time())
         finally:
             LIVE['state'] = 'idle'
     threading.Thread(target=worker, daemon=True).start()
@@ -278,7 +281,23 @@ def scheduler():
     while True:
         try:
             if LIVE.get('wanted', True) and LIVE['state'] != 'running':
-                live_job(0, False)
+                # 17 Sep: a watcher that dies is restarted at most every five minutes, and
+                # after three crashes in half an hour it stays down until /live - the
+                # restart-every-minute loop re-read and re-sent the same half-times
+                recent = [t for t in LIVE.get('crashes', []) if time.time() - t < 1800]
+                last = LIVE.get('last_auto', 0)
+                if len(recent) >= 3:
+                    if not LIVE.get('gave_up'):
+                        LIVE['gave_up'] = True
+                        print('scheduler: live watcher crashed three times in 30 min - not restarting until /live', flush=True)
+                        try:
+                            import telegram_bot as _TB
+                            _TB.send(_TB.LAST_CHAT, 'live watcher crashed three times in 30 min - left off; /live restarts it (the crash is in the server log)')
+                        except Exception:
+                            pass
+                elif time.time() - last >= 300:
+                    LIVE['last_auto'] = time.time(); LIVE['gave_up'] = False
+                    live_job(0, False, auto=True)
             for hhmm, job, path, body in BA.sched_due():
                 with LOCK:
                     if JOB['state'] not in ('idle', 'done'):

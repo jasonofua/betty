@@ -173,7 +173,7 @@ def book_batch(pending, dry):
             SEND(msg)
 
 
-def run(until_h=None, dry=False, poll=POLL):
+def run(until_h=None, dry=False, poll=POLL, greet=True):
     STOP['flag'] = False
     import threading
     state = dict(gate={}, fx=[f for off in (0, 1) for f in F2.get_fixtures(off)], built=0.0, building=False)
@@ -187,7 +187,7 @@ def run(until_h=None, dry=False, poll=POLL):
             g = LD.gate_events(23, days=0)
             state['gate'] = g; state['built'] = time.time()
             LOG(f"draw gate ready: {len(g)} games today")
-            if SEND:
+            if SEND and greet:
                 SEND(f"draw gate ready: {len(g)} gate games today - the half-time Draw is now armed on them")
         except Exception as ex:
             LOG(f"gate build failed: {type(ex).__name__}: {ex}"); state['built'] = time.time()
@@ -196,7 +196,7 @@ def run(until_h=None, dry=False, poll=POLL):
     threading.Thread(target=build_gate, daemon=True).start()
     LOG(f"live HT watcher: polling every {poll}s; {'until ' + str(until_h) + ':00' if until_h else 'until /stop'}; "
         f"{len(state['fx'])} fixtures for joining; 2+ legs in a {BATCH_S}s window go on one slip; draw gate building in the background")
-    if SEND:
+    if SEND and greet:
         SEND("live watcher on. 2H Over 0.5 / Under 1.5 from the trailing second halves on any game, from now. "
              "The half-time Draw on gate games arms itself once the gate list is built (up to an hour). "
              "Codes land here at half-time; two or more together go on one slip. /stop ends it, /livelog shows what it has seen.")
@@ -218,8 +218,8 @@ def run(until_h=None, dry=False, poll=POLL):
         snapshot(board, done)
         for e in board:
             eid = e.get('eventId')
-            if eid in done or not LD.at_half_time(e):
-                continue
+            if eid in done or eid in READ or eid in BOOKED or not LD.at_half_time(e):
+                continue                            # READ/BOOKED persist across a restart - one look per game, ever
             name = f"{e.get('homeTeamName')} v {e.get('awayTeamName')}"
             ets = int(e.get('estimateStartTime', 0)) / 1000
             f = next((f for f in fx if abs(f['ts'] - ets) <= 3600 * 2
@@ -228,134 +228,141 @@ def run(until_h=None, dry=False, poll=POLL):
             if not f:
                 done.add(eid); continue
             done.add(eid)                       # one look per game, at the whistle
-            sc = e.get('setScore') or '0:0'
             try:
-                h, a = (int(x) for x in sc.split(':'))
-            except ValueError:
-                continue
-            banked = h + a
-            rich = DRW._rich(f['id'])
-            t2 = trailing_2h(rich) if rich else []
-            st = live_stats(f['id'])
-            try:
-                mk = live_markets(eid)
-            except Exception as ex:
-                LOG(f"markets error {name}: {ex}"); continue
-            legs = []
-            # 13 Sep: the live first half as a CHECK on what the histories say.
-            # Every loss of 12 Sep with a stat sheet had the warning on it and no win
-            # did: the Over losses were dead first halves (Borac 1 shot, Paris 6),
-            # the Under losses were a dominant side pressing at 0:0 (12 shots, 64-71%
-            # possession). A game with no live stats at all (Suzano U20) is not read.
-            shots = st.get('shots'); poss = st.get('poss')
-            tot_shots = (shots[0] + shots[1]) if shots else None
-            dead = tot_shots is not None and tot_shots < 7                      # Over needs a live game
-            pressing = (tot_shots is not None and tot_shots >= 10
-                        and poss and max(poss) >= 60 and h == a)               # Under dies to a dominant side at level
-            no_stats = tot_shots is None
-            # 1) the draw, gate games only
-            # 13 Sep: level means 0-0 or 1-1. The corpus has six gate games at 2-2+
-            # at the break in two years; Sol de America 2:2 at HT was booked and lost 3:2.
-            # 14 Sep: the live Draw went 1-4. Corpus (experiments/fix_audit_livedraw.py,
-            # quiet-gate games level at the break): one side with 75%+ of the
-            # first-half shots -> FT draw 26.2% against 41.8% when shared; all 14
-            # trailing second halves scored -> 30.8%. San Martin de Tucuman had
-            # 8 v 0 shots and 14/14 at 0-0 and won 3-0; Urena had no live stats at
-            # all. So: live stats required, no dominant side, not 14/14.
-            dominant = (tot_shots is not None and tot_shots >= 4 and max(shots) / tot_shots >= 0.75)
-            all_scored = len(t2) >= 14 and all(x >= 1 for x in t2[:14])
-            # 15 Sep: the gate is out of the draw rule (1-5 live; on 78k priced
-            # matches its inputs add nothing over the price). What predicts a
-            # full-time draw from a level half-time is the PRE-MATCH draw price:
-            # 45.7% when the market had it at 32%+ (fair 2.19), 40-41% at 27-32%
-            # (fair 2.45). Floors carry a nickel over fair.
-            pre = PRE.get(eid)
-            floor = 2.30 if (pre is not None and pre >= 0.32) else 2.60 if (pre is not None and pre >= 0.27) else None
-            if h == a and h <= 1 and floor and len(t2) < 12:
-                LOG(f"HT {sc} {name}: draw shape, only {len(t2)} trailing halves on record - no draw")   # Etincelles (3) v Musanze (0), 15 Sep
-            elif h == a and h <= 1 and floor and no_stats:
-                LOG(f"HT {sc} {name}: draw shape, no live stats - no draw")
-            elif h == a and h <= 1 and floor and (dominant or all_scored):
-                LOG(f"HT {sc} {name}: draw shape, {'one side has ' + str(max(shots)) + ' of ' + str(tot_shots) + ' shots' if dominant else 'all 14 trailing halves scored'} - no draw")
-            elif h == a and h <= 1 and floor:
-                p, oid, sp = price(mk, '1', 'Draw')
-                if p and p >= floor:
-                    legs.append(('DRAW', f"1X2 / Draw", p, dict(marketId='1', specifier=sp, outcomeId=oid),
-                                 f"pre-match draw {pre:.0%} -> FT draw {'45.7' if pre >= 0.32 else '41.2'}% from a level HT (football-data 78k)"))
-                else:
-                    LOG(f"HT {sc} {name}: pre-match draw {pre:.0%}, live Draw {p} under {floor} - no bet")
-            elif h == a and h <= 1 and pre is None and eid in gate:
-                LOG(f"HT {sc} {name}: level, no pre-match price on record (snapshot) - no draw")
-            # 2) second-half goals from the trailing second halves
-            if len(t2) >= 12:
-                o05 = sum(x >= 1 for x in t2); u15 = sum(x <= 1 for x in t2)
-                # the same 2H event is sold three ways; lower-tier games only carry the FT
-                # ladder at the break, so try 2H O/U, then FT O/U, then Rest of Match
-                def same_event(want_over, k):
-                    tries = ((('90', f'{"Over" if want_over else "Under"} {k:g}', f'total={k:g}'), f'2nd Half {"Over" if want_over else "Under"} {k:g}'),
-                             (('18', f'{"Over" if want_over else "Under"} {banked + k:g}', f'total={banked + k:g}'), f'FT {"Over" if want_over else "Under"} {banked + k:g}'),
-                             (('900028', f'{"Over" if want_over else "Under"} {k:g}', f'total={k:g}|score={sc}'), f'Rest of Match {"Over" if want_over else "Under"} {k:g}'))
-                    found = []
-                    for (mid, want, spec), lab in tries:
-                        pp, oo, ss = price(mk, mid, want, spec)
-                        if pp:
-                            found.append((pp, oo, ss, mid, lab))
-                    return max(found, key=lambda x: x[0], default=None)
-                # 12 Sep evening, user's call: bar dropped from 14/14 (83.6%) to 13/14
-                # (80.2%) for volume; the book prices this at 1.20-1.30, so at 13/14
-                # the price floor moves to 1.25 to stay at or above fair.
-                # 12 Sep 21:45, user's call: back to 14/14 after 13/14 went 3 won 2 lost
-                # in its first evening (Paris FC 0:0, Borac 1:0). 14/14 was 5/5.
-                if o05 == len(t2) and len(t2) >= 14 and not dead and not no_stats:
-                    best = same_event(True, 0.5)
-                    floor = O05_MIN
-                    if best and best[0] >= floor:
-                        legs.append(('2H O0.5', best[4], best[0], dict(marketId=best[3], specifier=best[2], outcomeId=best[1]),
-                                     f"trailing 2H halves scored {o05}/{len(t2)} ({'83.6' if o05 == len(t2) else '80.2'}%)"))
-                # 13 Sep: Under needs at most one goal at the break - corpus 71.6% at
-                # 0-0, 63.4% at one goal, 58.7% at 2+ (the price is ~fair there).
-                # 13 Sep evening: 0-0 ONLY. Re-measured with trailing halves built
-                # from the corpus itself (fix_audit_13sep.py): 12/14 at 0-0 = 74.2%
-                # (n 256), at one goal banked 63.1% (n 236) - fair 1.59, and the
-                # book prices it 1.55-1.65. Radnicki 1-0 -> 3-1 was that shape.
-                if u15 >= 12 and not pressing and not no_stats and banked == 0:
-                    best = same_event(False, 1.5)
-                    if best and best[0] >= U15_MIN:
-                        legs.append(('2H U1.5', best[4], best[0], dict(marketId=best[3], specifier=best[2], outcomeId=best[1]),
-                                     f"trailing 2H halves <=1 goal {u15}/{len(t2)} (66.1%)"))
-            # 15 Sep: every level half-time read carries the pre-match draw implied and the
-            # LIVE draw price, booked or not - the in-play dataset the draw search
-            # continues on (join to the corpus by fixture id for the result).
-            live_draw = None
-            if h == a:
+                sc = e.get('setScore') or '0:0'
                 try:
-                    live_draw = price(mk, '1', 'Draw')[0]
+                    h, a = (int(x) for x in sc.split(':'))
+                except ValueError:
+                    continue
+                banked = h + a
+                rich = DRW._rich(f['id'])
+                t2 = trailing_2h(rich) if rich else []
+                st = live_stats(f['id'])
+                try:
+                    mk = live_markets(eid)
+                except Exception as ex:
+                    LOG(f"markets error {name}: {ex}"); continue
+                legs = []
+                # 13 Sep: the live first half as a CHECK on what the histories say.
+                # Every loss of 12 Sep with a stat sheet had the warning on it and no win
+                # did: the Over losses were dead first halves (Borac 1 shot, Paris 6),
+                # the Under losses were a dominant side pressing at 0:0 (12 shots, 64-71%
+                # possession). A game with no live stats at all (Suzano U20) is not read.
+                shots = st.get('shots'); poss = st.get('poss')
+                tot_shots = (shots[0] + shots[1]) if shots else None
+                dead = tot_shots is not None and tot_shots < 7                      # Over needs a live game
+                pressing = (tot_shots is not None and tot_shots >= 10
+                            and poss and max(poss) >= 60 and h == a)               # Under dies to a dominant side at level
+                no_stats = tot_shots is None
+                # 1) the draw, gate games only
+                # 13 Sep: level means 0-0 or 1-1. The corpus has six gate games at 2-2+
+                # at the break in two years; Sol de America 2:2 at HT was booked and lost 3:2.
+                # 14 Sep: the live Draw went 1-4. Corpus (experiments/fix_audit_livedraw.py,
+                # quiet-gate games level at the break): one side with 75%+ of the
+                # first-half shots -> FT draw 26.2% against 41.8% when shared; all 14
+                # trailing second halves scored -> 30.8%. San Martin de Tucuman had
+                # 8 v 0 shots and 14/14 at 0-0 and won 3-0; Urena had no live stats at
+                # all. So: live stats required, no dominant side, not 14/14.
+                dominant = (tot_shots is not None and tot_shots >= 4 and max(shots) / tot_shots >= 0.75)
+                all_scored = len(t2) >= 14 and all(x >= 1 for x in t2[:14])
+                # 15 Sep: the gate is out of the draw rule (1-5 live; on 78k priced
+                # matches its inputs add nothing over the price). What predicts a
+                # full-time draw from a level half-time is the PRE-MATCH draw price:
+                # 45.7% when the market had it at 32%+ (fair 2.19), 40-41% at 27-32%
+                # (fair 2.45). Floors carry a nickel over fair.
+                pre = PRE.get(eid)
+                floor = 2.30 if (pre is not None and pre >= 0.32) else 2.60 if (pre is not None and pre >= 0.27) else None
+                if h == a and h <= 1 and floor and len(t2) < 12:
+                    LOG(f"HT {sc} {name}: draw shape, only {len(t2)} trailing halves on record - no draw")   # Etincelles (3) v Musanze (0), 15 Sep
+                elif h == a and h <= 1 and floor and no_stats:
+                    LOG(f"HT {sc} {name}: draw shape, no live stats - no draw")
+                elif h == a and h <= 1 and floor and (dominant or all_scored):
+                    LOG(f"HT {sc} {name}: draw shape, {'one side has ' + str(max(shots)) + ' of ' + str(tot_shots) + ' shots' if dominant else 'all 14 trailing halves scored'} - no draw")
+                elif h == a and h <= 1 and floor:
+                    p, oid, sp = price(mk, '1', 'Draw')
+                    if p and p >= floor:
+                        legs.append(('DRAW', f"1X2 / Draw", p, dict(marketId='1', specifier=sp, outcomeId=oid),
+                                     f"pre-match draw {pre:.0%} -> FT draw {'45.7' if pre >= 0.32 else '41.2'}% from a level HT (football-data 78k)"))
+                    else:
+                        LOG(f"HT {sc} {name}: pre-match draw {pre:.0%}, live Draw {p} under {floor} - no bet")
+                elif h == a and h <= 1 and pre is None and eid in gate:
+                    LOG(f"HT {sc} {name}: level, no pre-match price on record (snapshot) - no draw")
+                # 2) second-half goals from the trailing second halves
+                if len(t2) >= 12:
+                    o05 = sum(x >= 1 for x in t2); u15 = sum(x <= 1 for x in t2)
+                    # the same 2H event is sold three ways; lower-tier games only carry the FT
+                    # ladder at the break, so try 2H O/U, then FT O/U, then Rest of Match
+                    def same_event(want_over, k):
+                        tries = ((('90', f'{"Over" if want_over else "Under"} {k:g}', f'total={k:g}'), f'2nd Half {"Over" if want_over else "Under"} {k:g}'),
+                                 (('18', f'{"Over" if want_over else "Under"} {banked + k:g}', f'total={banked + k:g}'), f'FT {"Over" if want_over else "Under"} {banked + k:g}'),
+                                 (('900028', f'{"Over" if want_over else "Under"} {k:g}', f'total={k:g}|score={sc}'), f'Rest of Match {"Over" if want_over else "Under"} {k:g}'))
+                        found = []
+                        for (mid, want, spec), lab in tries:
+                            pp, oo, ss = price(mk, mid, want, spec)
+                            if pp:
+                                found.append((pp, oo, ss, mid, lab))
+                        return max(found, key=lambda x: x[0], default=None)
+                    # 12 Sep evening, user's call: bar dropped from 14/14 (83.6%) to 13/14
+                    # (80.2%) for volume; the book prices this at 1.20-1.30, so at 13/14
+                    # the price floor moves to 1.25 to stay at or above fair.
+                    # 12 Sep 21:45, user's call: back to 14/14 after 13/14 went 3 won 2 lost
+                    # in its first evening (Paris FC 0:0, Borac 1:0). 14/14 was 5/5.
+                    if o05 == len(t2) and len(t2) >= 14 and not dead and not no_stats:
+                        best = same_event(True, 0.5)
+                        floor = O05_MIN
+                        if best and best[0] >= floor:
+                            legs.append(('2H O0.5', best[4], best[0], dict(marketId=best[3], specifier=best[2], outcomeId=best[1]),
+                                         f"trailing 2H halves scored {o05}/{len(t2)} ({'83.6' if o05 == len(t2) else '80.2'}%)"))
+                    # 13 Sep: Under needs at most one goal at the break - corpus 71.6% at
+                    # 0-0, 63.4% at one goal, 58.7% at 2+ (the price is ~fair there).
+                    # 13 Sep evening: 0-0 ONLY. Re-measured with trailing halves built
+                    # from the corpus itself (fix_audit_13sep.py): 12/14 at 0-0 = 74.2%
+                    # (n 256), at one goal banked 63.1% (n 236) - fair 1.59, and the
+                    # book prices it 1.55-1.65. Radnicki 1-0 -> 3-1 was that shape.
+                    if u15 >= 12 and not pressing and not no_stats and banked == 0:
+                        best = same_event(False, 1.5)
+                        if best and best[0] >= U15_MIN:
+                            legs.append(('2H U1.5', best[4], best[0], dict(marketId=best[3], specifier=best[2], outcomeId=best[1]),
+                                         f"trailing 2H halves <=1 goal {u15}/{len(t2)} (66.1%)"))
+                # 15 Sep: every level half-time read carries the pre-match draw implied and the
+                # LIVE draw price, booked or not - the in-play dataset the draw search
+                # continues on (join to the corpus by fixture id for the result).
+                live_draw = None
+                if h == a:
+                    try:
+                        live_draw = price(mk, '1', 'Draw')[0]
+                    except Exception:
+                        live_draw = None
+                rec = dict(ts=time.time(), event=eid, fixture=f['id'], match=name, league=f.get('league'), ht=sc,
+                           stats=st, trailing_2h=t2, legs=[(l[0], l[1], l[2]) for l in legs], gate=eid in gate,
+                           pre_draw=PRE.get(eid), live_draw=live_draw)
+                try:
+                    with open(LOGFILE, 'a') as fh:
+                        fh.write(json.dumps(rec) + '\n')
                 except Exception:
-                    live_draw = None
-            rec = dict(ts=time.time(), event=eid, fixture=f['id'], match=name, league=f.get('league'), ht=sc,
-                       stats=st, trailing_2h=t2, legs=[(l[0], l[1], l[2]) for l in legs], gate=eid in gate,
-                       pre_draw=PRE.get(eid), live_draw=live_draw)
-            try:
-                with open(LOGFILE, 'a') as fh:
-                    fh.write(json.dumps(rec) + '\n')
-            except Exception:
-                pass
-            if not legs:
-                why = ('no live stats' if no_stats else 'dead 1H' if dead and o05 == len(t2) else 'pressing at level' if pressing and u15 >= 12 else '')
-                READ[eid] = 'no bet'
-                LOG(f"HT {sc} {name}: 2H halves {t2}  1H shots {shots} poss {poss} - nothing{(' (' + why + ')') if why else ''}"); continue
-            READ[eid] = 'queued'
-            for kind, label, p, sel, why in legs:
-                pending.append(dict(kind=kind, label=label, p=p, sel=sel, why=why, eid=eid, name=name, sc=sc, ets=ets, st=st, t2=t2))
-                pending_since = pending_since or time.time()
-                LOG(f"queued HT {sc} {name}: {label} @{p:.2f}")
+                    pass
+                if not legs:
+                    why = ('no live stats' if no_stats else 'dead 1H' if dead and o05 == len(t2) else 'pressing at level' if pressing and u15 >= 12 else '')
+                    READ[eid] = 'no bet'
+                    LOG(f"HT {sc} {name}: 2H halves {t2}  1H shots {shots} poss {poss} - nothing{(' (' + why + ')') if why else ''}"); continue
+                READ[eid] = 'queued'
+                for kind, label, p, sel, why in legs:
+                    pending.append(dict(kind=kind, label=label, p=p, sel=sel, why=why, eid=eid, name=name, sc=sc, ets=ets, st=st, t2=t2))
+                    pending_since = pending_since or time.time()
+                    LOG(f"queued HT {sc} {name}: {label} @{p:.2f}")
+            except Exception as ex:
+                # 17 Sep: one bad game killed the whole watcher, the scheduler restarted it
+                # every minute and every restart re-read the same half-times and re-sent them
+                import traceback as _tb
+                LOG(f"game error {name}: {type(ex).__name__}: {ex}"); print(f"live watcher game error {name}: {type(ex).__name__}: {ex}\n{_tb.format_exc()}", flush=True)
+                continue
         if pending and time.time() - pending_since >= BATCH_S:
             book_batch(pending, dry); pending, pending_since = [], None
         time.sleep(poll)
     if pending:
         book_batch(pending, dry)
     LOG("live HT watcher stopped" if STOP['flag'] else "live HT watcher finished")
-    if SEND:
+    if SEND and greet:
         SEND("live watcher stopped")
 
 
