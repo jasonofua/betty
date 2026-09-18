@@ -19,7 +19,7 @@ _lock = threading.Lock()
 _grade_cache = {}          # code -> (ts, result)
 _book_cache = {'sig': None, 'val': []}
 
-PRODUCTS = ['Live', 'Winners', 'Draws', 'Half-time draw', 'Points sports', 'Max odds', 'All games']
+PRODUCTS = ['Live', 'Winners', 'Draws', 'Half-time draw', 'Points sports', 'Max odds', 'All games', 'Bet of the day']
 SPORT_LABEL = {'american football': 'American football', 'nfl': 'American football', 'ncaa': 'American football',
                'basketball': 'Basketball', 'ice hockey': 'Ice hockey', 'hockey': 'Ice hockey', 'handball': 'Handball'}
 
@@ -49,6 +49,8 @@ def product_of(label):
         return 'Live'
     if l.startswith('all games') or 'combined slip' in l:
         return 'All games'
+    if l.startswith('bet of the day'):
+        return 'Bet of the day'
     if sport_of(label):
         return 'Points sports'
     if 'winner' in l:                 # before 'draw': "3+ venue draws -> double chance" is a winners slip
@@ -824,6 +826,134 @@ def combined_code(slot='am'):
     return dict(code=bk['code'], url=bk.get('url'), odds=round(combo, 2), n=len(sels), sources=sorted(set(srcs)), booked=bk.get('booked'), verified=bk.get('verified'))
 
 
+# ---------------------------------------------------------------- bet of the day
+
+def family_of(sel, product, sport=None, price=None):
+    """The bet family a leg belongs to - the unit the week's record is kept in.
+    18 Sep, user's call: the bet of the day is the best of the day's tickets,
+    and 'best' is measured on our own settled legs family by family."""
+    x = sel or ''; pl = (product or '').lower()
+    if pl == 'live':
+        return 'live draw' if 'Draw' in x else 'live 2H over' if 'Over' in x else 'live 2H under'
+    if pl == 'winners':
+        if 'Double Chance' in x:
+            return 'winners cover'
+        try:
+            p = float(price)
+        except (TypeError, ValueError):
+            p = None
+        return 'winners straight 1.30-1.60' if p is not None and 1.30 <= p < 1.60 else 'winners straight other'
+    if pl in ('draws', 'half-time draw'):
+        return 'draws'
+    if pl == 'points sports':
+        t = 'handicap' if 'andicap' in x else '1st period' if ('1st' in x or '1H ' in x) else 'totals'
+        return f"{(sport or 'points').lower()} {t}"
+    if re.search(r'2nd Half.*Over 0\.5', x): return '2H over 0.5'
+    if re.search(r'Over/Under / Over 0\.5', x): return 'FT over 0.5'
+    if re.search(r'Over 1\.5', x) and not re.search(r'Shots|Corner|Booking|Offside|Foul|Save|Card', x): return 'over 1.5'
+    if re.search(r'2nd Half.*Under', x): return '2H under'
+    if re.search(r'1st Half.*Under', x): return '1H under'
+    if re.search(r'Under [3-9]', x) and not re.search(r'Shots|Corner|Booking|Offside|Foul|Save|Card', x): return 'FT goals under'
+    if 'Both Halves' in x: return 'win both halves - No'
+    if re.search(r'Shots|Corner|Booking|Offside|Foul|Save|Card', x): return 'stat market'
+    if 'Double Chance' in x: return 'double chance'
+    return 'other'
+
+
+def family_stats(days=7):
+    """{family: dict(n, won, ret)} from the last N days of settled legs, one count per
+    (match, selection, day) - the all-games duplicates are not counted twice."""
+    seen, out = set(), {}
+    for r in legs_list(days=days, limit=5000)['rows']:
+        if r['state'] not in ('won', 'lost') or r['product'] in ('All games', 'Bet of the day'):
+            continue
+        k = (r['match'], r['sel'], r['iso'])
+        if k in seen:
+            continue
+        seen.add(k)
+        f = family_of(r['sel'], r['product'], r.get('sport'), r.get('price'))
+        c = out.setdefault(f, dict(n=0, won=0, ret=0.0))
+        c['n'] += 1; c['won'] += int(r['state'] == 'won'); c['ret'] += float(r['price'] or 0) if r['state'] == 'won' else 0.0
+    for f, c in out.items():
+        c['rate'] = round(c['won'] / c['n'] * 100, 1) if c['n'] else None
+        c['edge'] = round((c['ret'] / c['n'] - 1) * 100, 1) if c['n'] else None
+    return out
+
+
+BEST_MIN_LEGS = 8        # a family needs this many settled legs in the week to count
+BEST_MIN_ODDS = 2.0      # user's call: the bet of the day pays at least 2x
+
+
+def best_of_day(dry=False):
+    """The bet of the day: every leg still to play on today's base tickets whose
+    family has paid over the last seven days (positive return on 8+ settled
+    legs), one leg per match, all of them on one slip. Nothing is booked under
+    2x. The families and their week are logged on the slip."""
+    today = dt.datetime.now(tz=WAT).date(); now = time.time()
+    fs = family_stats(7)
+    good = {f: c for f, c in fs.items() if c['n'] >= BEST_MIN_LEGS and c['edge'] is not None and c['edge'] > 0}
+    if not good:
+        return dict(error='no family is in profit over the last seven days')
+    sels, srcs = [], []
+    for c in parse_bookings():
+        if _day_of(c['when']) != today or c['nested_from'] or c['superseded_by'] or not c['legs']:
+            continue
+        if c['product'] in ('Live', 'All games', 'Bet of the day'):
+            continue
+        g = graded(c['code'], force=True)
+        for l in g.get('legs') or []:
+            ids = l.get('ids') or {}
+            if l['state'] != 'pending' or l.get('ko', 0) <= now + 1800 or ids.get('active', 1) == 0:
+                continue
+            fam = family_of(l['sel'], c['product'], c['sport'], l['price'])
+            if fam not in good:
+                continue
+            sels.append(dict(leg=l, ids=ids, src=c, fam=fam))
+        srcs.append(c['code'])
+    bymatch = {}
+    for x in sels:                  # one leg per match: the family with the better week
+        k = x['ids'].get('eventId')
+        if k not in bymatch or good[x['fam']]['edge'] > good[bymatch[k]['fam']]['edge']:
+            bymatch[k] = x
+    sels = sorted(bymatch.values(), key=lambda x: (-good[x['fam']]['edge'], x['leg']['price']))[:A.MAX_CODE]
+    combo = 1.0
+    for x in sels:
+        combo *= float(x['leg']['price'])
+    fams = sorted({x['fam'] for x in sels}, key=lambda f: -good[f]['edge'])
+    view = dict(legs=[dict(when=x['leg'].get('when'), ko=x['leg'].get('ko'), match=x['leg']['match'], sel=x['leg']['sel'], price=x['leg']['price'],
+                           family=x['fam'], week=good[x['fam']], source=x['src']['code'], product=x['src']['product']) for x in sels],
+                families=[dict(family=f, **good[f]) for f in fams], odds=round(combo, 2), n=len(sels), sources=sorted(set(srcs)))
+    if combo < BEST_MIN_ODDS:
+        return dict(error=f"the paying families give only {combo:.2f}x today ({len(sels)} legs) - under the {BEST_MIN_ODDS:g}x floor", **view)
+    if dry:
+        return dict(dry=True, **view)
+    bk = A.book([dict(eventId=x['ids']['eventId'], productId=3, marketId=x['ids']['marketId'],
+                      specifier=x['ids']['specifier'], outcomeId=x['ids']['outcomeId']) for x in sels])
+    if not bk or not bk.get('code'):
+        return dict(error='SportyBet did not return a code' + (f": {bk.get('msg')}" if bk and bk.get('msg') else ''), **view)
+    prev = next((c['code'] for c in parse_bookings() if _day_of(c['when']) == today and c['product'] == 'Bet of the day' and not c['superseded_by']), None)
+    A.log_booking(bk['code'], bk.get('url'),
+                  f"bet of the day {combo:,.1f}x ({len(sels)} legs) - " + ', '.join(f"{f} {good[f]['won']}/{good[f]['n']} {good[f]['edge']:+.0f}%" for f in fams)
+                  + (f" - {prev} with today's tickets rebuilt" if prev and prev != bk['code'] else ''),
+                  [(x['leg']['ko'], x['leg']['match'], x['leg']['sel'], float(x['leg']['price']),
+                    [f"{x['fam']}: {good[x['fam']]['won']} of {good[x['fam']]['n']} this week, {good[x['fam']]['edge']:+.1f}% return", f"from {x['src']['code']} ({x['src']['product']})"]) for x in sels])
+    _book_cache['sig'] = None
+    return dict(code=bk['code'], url=bk.get('url'), booked=bk.get('booked'), verified=bk.get('verified'), **view)
+
+
+def best_view():
+    """The Bet of the day tab: today's code (if any) with legs, plus the week's
+    family table so the reader sees why these legs and not others."""
+    today = dt.datetime.now(tz=WAT).date()
+    fs = family_stats(7)
+    table = sorted([dict(family=f, **c) for f, c in fs.items() if c['n'] >= 4], key=lambda r: -(r['edge'] or -999))
+    code = None
+    for c in parse_bookings():
+        if _day_of(c['when']) == today and c['product'] == 'Bet of the day' and not c['superseded_by']:
+            code = decorate(c); break
+    return dict(day=str(today), code=code, families=table, min_legs=BEST_MIN_LEGS, min_odds=BEST_MIN_ODDS)
+
+
 # ---------------------------------------------------------------- any code
 
 def grade_any(code):
@@ -899,6 +1029,10 @@ RULES = [
                      dict(k='Above 1.60 / below 1.30', v='skipped'), dict(k='Draw-prone: favourite venue draws', v='5+'), dict(k='Draw-prone: opponent venue draws', v='4+'),
                      dict(k='Draw-prone: combined venue draws', v='4+'), dict(k='Dropped when', v='more losses than wins, out-shot or out-created on target, losing H2H, dead heat, opponent with 7+ of 10 or more wins than the favourite, opponent 3 of its last 4 at the venue')],
          measured='Corpus: home favourites at margin 1.0+ win 52.6%, win-or-draw 75.9% (19,945 matches). The yesterday check replays the rule over the whole previous board before every booking.'),
+    dict(product='Bet of the day', tag='the best of the morning tickets',
+         plain="Built at 10:12 after the morning runs. Every leg still to play on the day's tickets is sorted into its bet family (a winners straight win, a second-half Over 0.5, a hockey handicap...), and only the families that are in profit on our own settled legs over the last seven days - eight or more legs, positive return at the booked prices - make the code. One leg per match, the family with the better week when two tickets have the same game. Never booked under 2x; as big as the paying legs make it.",
+         thresholds=[dict(k='Family window', v='last 7 days, our own settled legs'), dict(k='Family needs', v='8+ legs and a positive return'), dict(k='Winners legs', v='favourite at 1.30-1.60 only'), dict(k='Minimum odds', v='2x'), dict(k='Legs per match', v='one')],
+         measured='The family table on the tab is the measure, recomputed daily.'),
     dict(product='Draws', tag='the band, the table, the Under',
          plain="One slip a day of draws from the market's draw band: SportyBet's own price puts the draw at 27% or more after the overround, the two sides are close in the league table THIS season (points a game within 0.2, both with 8+ league games - a league two rounds old has no table and is skipped), the home side is not the weaker one, and Under 2.5 goals is 1.70 or shorter. Main-league games where SportyBet's draw price is 5% or more above the market average are added on the price alone. The old gate - venue form, expected goals, combined draws - is gone: on 78,000 priced matches it added nothing over the price.",
          thresholds=[dict(k='SportyBet-implied draw', v='27% or more'), dict(k='Table', v='points a game within 0.2, 8+ league games each'), dict(k='Home side', v='not 10+ points weaker on the 1X2'), dict(k='Under 2.5', v='1.70 or shorter'), dict(k='Shape', v='one slip, up to 12 legs')],
@@ -925,6 +1059,8 @@ RULES = [
 ]
 
 CHANGELOG = [
+    dict(date='18 Sep', txt="Bet of the day (user's call): a tab and a 10:12 run that takes the morning tickets and keeps only the legs from bet families in profit on our own settled legs over the last seven days (8+ legs, positive return), one leg per match, never under 2x. The week's family table is on the tab."),
+    dict(date='18 Sep', txt="Max odds: full-time match goal Unders out again (own legs 10-18 Sep: 15-6 at ~1.15, -19.6%); FT Over 1.5 not taken under 1.25 (17 legs 64.7%, -22%; at 1.25+ 20 legs 80%). Points sports: totals need 12 of 14 (own totals 10-10 this week against handicaps 17-8; 14 days of hockey: 11/14 totals 4-1, 12/14+ 12-0)."),
     dict(date='18 Sep', txt="Points sports: the SportyBet board is read in full - the list call had hidden 100 of 123 NCAA games (33 of 155 American-football events) that carry priced winner, total and handicap markets. Team names that Flashscore spells differently (Miami (FL), North Carolina State) are joined by alias."),
     dict(date='18 Sep', txt="Points sports: when Flashscore's history feed is empty for a fixture (it was for the Ravens, Jets, Buccaneers, Chargers, Texas Tech, Clemson, Iowa State and the whole CFL board), the venue windows are read from the team's own results page instead - two seasons of results with quarter scores. Same competition only, pre-season out."),
     dict(date='18 Sep', txt='One set of codes a day: the 16:35 winners, 16:50 max odds and 17:10 all-games evening runs are off. The morning runs (09:05-10:05, games until 23:00) are the daily codes; anything later is booked on request.'),
@@ -1169,6 +1305,7 @@ SCHEDULE = [
     ('09:45', 'points-hockey', '/api/points', dict(sport='hockey', days=0)),
     ('09:50', 'points-handball', '/api/points', dict(sport='handball', days=0)),
     ('10:05', 'all-games-am', '/api/combined', dict(slot='am')),
+    ('10:12', 'bet-of-the-day', '/api/best', dict()),
     # 18 Sep, user: one set a day - the morning. The 16:35 / 16:50 / 17:10 evening
     # runs (games until 06:00) are gone; an evening code is booked only when asked.
 ]

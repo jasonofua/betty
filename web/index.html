@@ -419,13 +419,14 @@ nav.bottom span{font-size:10.5px;font-weight:700}
   'use strict';
   var TABS = [
     ['Today', 'M3 4h18v17H3zM8 2v4M16 2v4M3 10h18', 'Codes'],
+    ['Best', 'M12 2l3 6.5 7 .8-5.2 4.8 1.5 7L12 17.5 5.7 21l1.5-7L2 9.3l7-.8z', 'Bet of the day'],
     ['Live', 'M3 12h4l3-8 4 16 3-8h4', 'Live'],
     ['Record', 'M4 20V10M10 20V4M16 20v-7M22 20H2', 'Results'],
     ['Rules', 'M12 6v14M12 6C10 4 6 3.5 3 4v14c3-.5 7 0 9 2 2-2 6-2.5 9-2V4c-3-.5-7 0-9 2', 'Rules']
   ];
-  var PRODUCTS = ['Winners', 'Draws', 'Half-time draw', 'Live', 'Max odds', 'Points sports', 'All games'];
-  var ORDER = ['Live', 'Winners', 'Draws', 'Half-time draw', 'Points sports', 'Max odds', 'All games'];
-  var TITLE = { Winners: 'Winners slip', Draws: 'Draws slip', 'Half-time draw': 'Half-time draws', Live: 'Live code', 'Points sports': 'Points sports slip', 'Max odds': 'Max odds accumulator', 'All games': 'Every ticket in one code', 'Graded code': 'Your code' };
+  var PRODUCTS = ['Winners', 'Draws', 'Half-time draw', 'Live', 'Max odds', 'Points sports', 'All games', 'Bet of the day'];
+  var ORDER = ['Bet of the day', 'Live', 'Winners', 'Draws', 'Half-time draw', 'Points sports', 'Max odds', 'All games'];
+  var TITLE = { Winners: 'Winners slip', Draws: 'Draws slip', 'Half-time draw': 'Half-time draws', Live: 'Live code', 'Points sports': 'Points sports slip', 'Max odds': 'Max odds accumulator', 'All games': 'Every ticket in one code', 'Bet of the day': 'Bet of the day', 'Graded code': 'Your code' };
   var SUB = {
     Winners: 'Match winners: the favourite only where its venue record backs it. Straight win under 1.60, double chance up to 2.60.',
     Draws: 'Quiet games that pass the draw gate, priced at 2.89 or better.',
@@ -543,9 +544,11 @@ nav.bottom span{font-size:10.5px;font-weight:700}
   // ---------- actions ----------
   function setHash(h) { if (location.hash !== h) { try { history.replaceState(null, '', h); } catch (e) { location.hash = h; } } }
   function go(tab) { S.tab = tab; S.slip = null; S.err = null; closeMenu(); window.scrollTo(0, 0); setHash(tab === 'Today' ? '#' : '#' + tab.toLowerCase()); render(); ensure(); }
+  function loadBest() { return get('/api/best').then(function (j) { S.best = j; render(); }).catch(function (e) { S.best = { error: e.message }; render(); }); }
   function ensure() {
     if (S.tab === 'Today') { loadLadder(); loadCodes(); }
     if (S.tab === 'Live') loadLive();
+    if (S.tab === 'Best') loadBest();
     if (S.tab === 'Record') { if (!S.legsData) loadLegs(); }
     if (S.tab === 'Rules') { if (!S.rules) loadRules(); }
     if (S.tab === 'Console') loadConsole();
@@ -561,7 +564,7 @@ nav.bottom span{font-size:10.5px;font-weight:700}
     }
     var mc = /^console(?:\/(\w+))?$/.exec(h);
     if (mc) { if (mc[1]) { var p = mc[1].charAt(0).toUpperCase() + mc[1].slice(1); if (CONSOLE_PANES.indexOf(p) >= 0) S.pane = p; } if (S.tab !== 'Console') go('Console'); return; }
-    var tab = { live: 'Live', record: 'Record', results: 'Record', rules: 'Rules' }[h];
+    var tab = { live: 'Live', record: 'Record', results: 'Record', rules: 'Rules', best: 'Best', 'bet-of-the-day': 'Best' }[h];
     if (tab && tab !== S.tab) go(tab);
   }
   function doCopy(code) {
@@ -693,7 +696,7 @@ nav.bottom span{font-size:10.5px;font-weight:700}
     var cards = L.products.map(function (p) { return rungCard(p, S.odds); }).filter(Boolean);
     if (!cards.length) {
       h += '<div class="empty"><div class="t">No ' + (S.odds === 'full' ? '' : S.odds + 'x ') + 'code ' + (S.day === 'yesterday' ? 'yesterday' : 'yet today') + '</div><div class="d">' +
-        (L.products.length ? 'Today’s slips do not reach ' + S.odds + 'x with games still to kick off. Try a lower odds or the full slip.' : 'The morning run books at 09:05 WAT and the evening run at 16:35. Live codes fire at the whistle on the Live tab.') + '</div></div>';
+        (L.products.length ? 'Today’s slips do not reach ' + S.odds + 'x with games still to kick off. Try a lower odds or the full slip.' : 'The morning runs book from 09:05 WAT. Live codes fire at the whistle on the Live tab.') + '</div></div>';
     } else {
       h += '<div class="oddsnote">' + (S.odds === 'full' ? 'The whole slip each product booked today.' : 'One code per product at about ' + S.odds + 'x · the shortest prices of the day’s slip that are still to kick off.') + '</div>';
       h += cards.join('');
@@ -772,6 +775,41 @@ nav.bottom span{font-size:10.5px;font-weight:700}
       (c.error ? '<div class="muted" style="margin-top:10px">Grading unavailable: ' + esc(c.error) + '</div>' : '') +
       '<div class="muted" style="margin-top:10px">Tap a leg for the numbers it was picked from. ' + esc(c.label) + '</div></div>';
     h += c.legs.map(function (l, i) { return legRow(l, i); }).join('');
+    return h + '</div>';
+  }
+
+  // ---------- Bet of the day ----------
+  function renderBest() {
+    var B = S.best;
+    var h = '<div class="col"><div class="center"><span class="livepill"><i></i>the best of today\u2019s tickets</span><h1 class="page">Bet of the <em>Day</em></h1>' +
+      '<p class="lead" style="margin-bottom:18px">One code a day built after the morning tickets: only the legs from bet families that are in profit on our own settled legs over the last seven days. Never under 2x; as big as the paying legs make it.</p></div>';
+    if (!B) return h + '<div class="muted center" style="margin:30px 0">Loading\u2026</div></div>';
+    if (B.error) h += '<div class="err">' + esc(B.error) + '</div>';
+    if (B.code) {
+      var c = B.code; var legs = c.legs || [];
+      var n = { won: 0, lost: 0, live: 0, pending: 0, void: 0 }; legs.forEach(function (l) { n[l.state] = (n[l.state] || 0) + 1; });
+      var dead = n.lost > 0, allWon = legs.length && n.won + n.void === legs.length && n.won > 0;
+      var status = dead ? 'lost' : allWon ? 'won' : n.live ? 'live' : 'pending';
+      var statusTxt = dead ? n.lost + ' lost' : allWon ? 'all won' : (n.won ? n.won + ' won \u00b7 ' : '') + (n.live ? n.live + ' in play \u00b7 ' : '') + n.pending + ' to play';
+      h += '<div class="rung' + (dead ? ' dead' : allWon ? ' won' : '') + '"><div class="head"><span><span class="lab">Bet of the day' + (c.booked ? ' <span style="color:var(--tx3);letter-spacing:.02em;text-transform:none;font-weight:600">\u00b7 booked ' + esc(c.booked) + '</span>' : '') + '</span><h2>' + esc(B.day) + '</h2></span>' +
+        '<span class="odds">' + fmtOdds(c.odds) + '<small>' + legs.length + ' leg' + (legs.length === 1 ? '' : 's') + '</small><div style="margin-top:4px">' + chip(status, statusTxt) + '</div></span></div>';
+      h += '<div class="box"><div class="legs all">' + legs.map(function (l, i) {
+        var why = (l.sheet && l.sheet.flags && l.sheet.flags[0]) || '';
+        return '<div class="lg"><span class="i">' + (i + 1) + '</span><span style="min-width:0"><div class="m">' + esc(l.match) + '</div><div class="s">' + esc(l.sel) + ' <b>@ ' + (l.price || 0).toFixed(2) + '</b>' + (why ? ' <span class="muted">\u00b7 ' + esc(why) + '</span>' : '') + '</div></span>' +
+          '<span class="r">' + (l.state !== 'pending' ? resTag(l) : '<span class="muted mono">' + esc(l.ko || '') + '</span>') + (l.score ? '<span class="sc">' + esc(l.score) + '</span>' : '') + '</span></div>';
+      }).join('') + '</div></div>';
+      h += '<div class="coderow"><span class="codebar">' + esc(c.code) + '</span>' + copyBtn(c.code, false) + '</div>';
+      h += '<div class="links"><a href="' + esc(sporty(c.code)) + '" target="_blank" rel="noopener">Open on SportyBet &rarr;</a><a href="#slip/' + esc(c.code) + '">The numbers behind the legs</a><span class="muted">' + esc(c.label || '') + '</span></div></div>';
+    } else if (!B.error) {
+      h += '<div class="empty"><div class="t">No bet of the day yet</div><div class="d">It is built at 10:12 WAT from the morning tickets. If no paying family has a game today, or the legs come to under 2x, there is no code.</div></div>';
+    }
+    h += '<div class="kicker" style="margin-top:26px">The week, family by family \u00b7 our own settled legs, last 7 days</div>';
+    h += '<div class="tablewrap"><div class="cov head" style="grid-template-columns:minmax(0,1.4fr) 56px 56px 72px 80px;min-width:420px"><span>Family</span><span>Legs</span><span>Won</span><span>Return</span><span>Status</span></div>' +
+      (B.families || []).map(function (f) {
+        var ok = f.n >= B.min_legs && f.edge > 0;
+        return '<div class="cov" style="grid-template-columns:minmax(0,1.4fr) 56px 56px 72px 80px;min-width:420px"><span>' + esc(f.family) + '</span><span class="mono">' + f.n + '</span><span class="mono">' + (f.rate == null ? '-' : f.rate + '%') + '</span><span class="mono" style="color:' + (f.edge > 0 ? 'var(--won)' : 'var(--lost)') + '">' + (f.edge == null ? '-' : (f.edge > 0 ? '+' : '') + f.edge + '%') + '</span><span>' + (ok ? chip('won', 'in') : f.n < B.min_legs ? chip('pending', 'thin') : chip('lost', 'out')) + '</span></div>';
+      }).join('') + '</div>';
+    h += '<p class="muted" style="font-size:12.5px">A family is in when it has ' + B.min_legs + '+ settled legs this week and a positive return at the booked prices.</p>';
     return h + '</div>';
   }
 
@@ -985,7 +1023,7 @@ nav.bottom span{font-size:10.5px;font-weight:700}
     var focus = document.activeElement && document.activeElement.id;
     var val = focus === 'gradein' ? document.getElementById('gradein').value : null;
     m.innerHTML = S.tab === 'Today' ? renderToday() : S.tab === 'Slip' ? renderSlip() : S.tab === 'Live' ? renderLive()
-      : S.tab === 'Record' ? renderRecord() : S.tab === 'Rules' ? '<div class="col">' + renderRules() + '</div>' : S.tab === 'Console' ? renderConsole() : renderToday();
+      : S.tab === 'Record' ? renderRecord() : S.tab === 'Rules' ? '<div class="col">' + renderRules() + '</div>' : S.tab === 'Console' ? renderConsole() : S.tab === 'Best' ? renderBest() : renderToday();
     if (val != null) { var gi = document.getElementById('gradein'); if (gi) { gi.value = val; gi.focus(); } }
   }
 

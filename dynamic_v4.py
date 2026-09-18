@@ -1139,10 +1139,21 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
             #   FT O0.5 95.8  93.6  88.7  88.3  80.8  79.0
             # The book sells 2H O0.5 at 1.17-1.26 and FT O0.5 at 1.03-1.11, so
             # from four blanks up every one of these is sold below fair value.
+            # FT MATCH GOAL UNDERS out again (18 Sep). Reopened 28 Aug on the
+            # composite's Brier; on our own settled legs 10-18 Sep they went
+            # 15-6 at ~1.15 for -19.6% (Assyriska U5.5 2-5, Kriens U4 4-1,
+            # Veranopolis...). Second-half and first-half totals untouched.
+            if qkey == 'goals' and side == 'match' and d.startswith('under'):
+                continue
             if (qkey in ('goals', 'h2') and side == 'match'
                     and d.startswith('over')):
                 mm = re.search(r'([\d.]+)', d)
                 _line = float(mm.group(1)) if mm else None
+                # FT Over 1.5 under 1.25 (18 Sep): 17 own legs 64.7%, -22%;
+                # at 1.25+ 20 legs 80%, +1.4%. The book's short price on this
+                # line is where it is right and we are not.
+                if qkey == 'goals' and _line == 1.5 and odds < 1.25:
+                    continue
                 if _line in (0.5, 1.5):
                     _tot = [f + a for f, a in home_rec.pairs(qkey)] + \
                            [f + a for f, a in away_rec.pairs(qkey)]

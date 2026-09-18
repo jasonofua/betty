@@ -38,6 +38,7 @@ SPORTS = {
 }
 SPORT = SPORTS['amfoot']
 AGREE = 11
+TOTALS_AGREE = 12      # 18 Sep, see score_game
 MIN_PRICE = 1.40          # user wants the 1.6-2.2 band on these sports; 1.14 hockey Overs are not it. --min-price
 MISMATCH_PRICE = 1.05
 SKIP_MISMATCH = False     # user, 12 Sep: never skip - find the better option instead
@@ -324,7 +325,11 @@ def score_game(hg, ag, mk, hcp_agree=None):
                 continue
             o = sum(x > v for x in H) + sum(x > v for x in Aw); u = n - o
             for want, hits in (('Over', o), ('Under', u)):
-                if hits >= AGREE:
+                # 18 Sep: totals need one more vote than handicaps. Own legs
+                # 10-18 Sep: hockey totals 6-5, American football totals 4-5
+                # (handicaps 7-1 and 10-7). 14 days of hockey at 11/14: 4-1;
+                # at 12/14+: 12-0. Koln U6.5, Freiburg U5.5, Neftyanik O4.5 today.
+                if hits >= max(AGREE, TOTALS_AGREE):
                     sel = next((s for s in m['outs'] if s[0].startswith(want)), None)
                     if sel:
                         cands.append((hits, n, f"{key} {want} {v}", sel[1], dict(mid=m['id'], spec=m['spec'], oid=sel[2])))

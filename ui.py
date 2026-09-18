@@ -336,6 +336,11 @@ def scheduler():
                                    started=dt.datetime.now(A.WAT).strftime('%H:%M'))
                         r = BA.combined_code(body.get('slot', 'am'))
                         JOB['log'].append(json.dumps(r)); JOB.update(state='done', result=r)
+                    elif path == '/api/best':
+                        JOB.update(state='building', log=[], result=None, params=dict(mode='bet of the day'),
+                                   started=dt.datetime.now(A.WAT).strftime('%H:%M'))
+                        r = BA.best_of_day()
+                        JOB['log'].append(json.dumps(r, default=str)[:2000]); JOB.update(state='done', result=r)
                 except Exception as e:
                     # 16 Sep: a crashed job (calibration before its first snapshot) left the
                     # flag on 'building' and every later run of the day was marked missed.
@@ -513,7 +518,7 @@ class Handler(BaseHTTPRequestHandler):
             if not self._authed({'key': q.get('key', [''])[0]}):
                 self._send('operator key required (?key=...)', 'text/plain', 401); return
             self._send(_page(), 'text/html; charset=utf-8')
-        elif u.path in ('/api/codes', '/api/record', '/api/rules', '/api/livefeed', '/api/banner', '/api/console', '/api/gradecode', '/api/legs', '/api/ladder'):
+        elif u.path in ('/api/codes', '/api/record', '/api/rules', '/api/livefeed', '/api/banner', '/api/console', '/api/gradecode', '/api/legs', '/api/ladder', '/api/best'):
             # 13 Sep: the website's data. Everything comes from bookings.md (repo
             # copy + the Railway volume), the share API grader and the watcher.
             import betty_api as BA
@@ -538,6 +543,8 @@ class Handler(BaseHTTPRequestHandler):
                     body = BA.legs_list(int(q.get('days', ['35'])[0]))
                 elif u.path == '/api/ladder':
                     body = BA.ladder_for(q.get('day', ['today'])[0], build=q.get('build', ['1'])[0] != '0')
+                elif u.path == '/api/best':
+                    body = BA.best_view()
                 else:
                     body = BA.live_feed(LIVE)
                 body['now'] = dt.datetime.now(A.WAT).strftime('%H:%M:%S')
@@ -617,7 +624,7 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         path = urlparse(self.path).path
-        if path in ('/api/yesterday', '/api/points', '/api/winners', '/api/draws', '/api/drawsmkt', '/api/run', '/api/live', '/api/crawl', '/api/combined'):
+        if path in ('/api/yesterday', '/api/points', '/api/winners', '/api/draws', '/api/drawsmkt', '/api/run', '/api/live', '/api/crawl', '/api/combined', '/api/best'):
             n = int(self.headers.get('Content-Length', 0))
             raw = self.rfile.read(n) if n else b''
             try:
@@ -660,6 +667,19 @@ class Handler(BaseHTTPRequestHandler):
                 args += ['--days', str(min(int(self._body['days']), 7))]
             threading.Thread(target=script_job, args=('draws', args, 'draw slip (market band)'), daemon=True).start()
             self._send(json.dumps({'ok': True})); return
+        if path == '/api/best':
+            import betty_api as BA
+            try:
+                r = BA.best_of_day(dry=bool(self._body.get('dry')))
+                if r.get('code'):
+                    try:
+                        BA.build_ladder(r['code'])
+                    except Exception:
+                        pass
+                self._send(json.dumps(r, default=str))
+            except Exception as e:
+                self._send(json.dumps({'error': f"{type(e).__name__}: {e}"}), code=500)
+            return
         if path == '/api/combined':
             import betty_api as BA
             try:
