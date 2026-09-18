@@ -107,8 +107,64 @@ def fs_board(days):
             if 'ZA' in s:
                 cur = s['ZA']
             elif 'AA' in s and s.get('AG') is None:
-                games.append(dict(lg=cur, id=s['AA'], ts=int(s['AD']), h=s['AE'], a=s['AF']))
+                games.append(dict(lg=cur, id=s['AA'], ts=int(s['AD']), h=s['AE'], a=s['AF'],
+                                  px=s.get('PX'), py=s.get('PY'), wu=s.get('WU'), wv=s.get('WV')))   # participant ids + slugs
     return games
+
+
+def team_page_games(pid, slug, kickoff, team, want_home, comp=None, n=7):
+    """18 Sep: fallback venue history from the team's own results page. Flashscore's
+    df_hh feed answers 'No match found' for many American-football fixtures (Ravens,
+    Jets, Texas Tech, Clemson, the CFL) although the team pages hold two seasons of
+    results with quarter scores. Same competition only, pre-season and friendlies out.
+    Rows carry the periods, so no df_sur call is needed."""
+    if not pid or not slug:
+        return []
+    import urllib.request, hashlib, time, os, json
+    cf = os.path.join(F.CACHE, 'tp_' + hashlib.md5(f'{pid}'.encode()).hexdigest())
+    if os.path.exists(cf) and time.time() - os.path.getmtime(cf) < 6 * 3600:
+        rows = json.load(open(cf))
+    else:
+        rows = []
+        try:
+            html = urllib.request.urlopen(urllib.request.Request(f'https://www.flashscore.com/team/{slug}/{pid}/results/',
+                                                                 headers={'User-Agent': 'Mozilla/5.0'}), timeout=30).read().decode('utf-8', 'replace')
+            m = re.search(r'initialFeeds\["results"\] = \{\s*data: `([^`]*)`', html)
+            cur = None
+            for blk in (m.group(1) if m else '').split('~'):
+                d = dict(re.findall(r'([A-Z]{2,3})÷([^¬]*)', blk))
+                if 'ZA' in d:
+                    cur = d['ZA']
+                elif d.get('AA') and d.get('AG') not in (None, '') and d.get('AH') not in (None, ''):
+                    rows.append(dict(id=d['AA'], lg=cur, ts=int(d.get('AD', 0)), h=d.get('AE'), a=d.get('AF'), hg=int(d['AG']), ag=int(d['AH']),
+                                     q=[d.get(k) for k in ('BA', 'BB', 'BC', 'BD', 'BE', 'BF', 'BG', 'BH')]))
+        except Exception as e:
+            print(f'  team page {slug}: {type(e).__name__}: {e}')
+        json.dump(rows, open(cf, 'w'))
+    want = _comp_key(comp) if comp else None
+    out = []
+    for r in rows:
+        if r['ts'] >= kickoff - 3600 or re.search(r'friendl|pre-season|preseason', r.get('lg') or '', re.I):
+            continue
+        if want and _comp_key(r.get('lg')) != want:
+            continue
+        is_home = r['h'] == team
+        if (want_home is not None and is_home != want_home) or (not is_home and r['a'] != team):
+            continue
+        if want_home is None and r['ts'] < SEASON_START:      # season mode: this season, any venue
+            continue
+        pf, pa = (r['hg'], r['ag']) if is_home else (r['ag'], r['hg'])
+        fh = None
+        try:
+            q = [int(x) for x in r['q'][:4]]
+            h1, a1 = q[0] + q[2], q[1] + q[3]
+            fh = (h1, a1) if is_home else (a1, h1)
+        except (TypeError, ValueError):
+            pass
+        out.append(dict(id=None, pf=pf, pa=pa, home=is_home, ts=r['ts'], fh=fh))
+        if len(out) >= n:
+            break
+    return out
 
 
 def _comp_key(name):
@@ -313,10 +369,18 @@ def main():
         if re.search(r'friendl|pre-season|preseason', f.get('lg') or '', re.I):
             skipped['friendly / pre-season'] += 1; print(f"  {t:%a %H:%M}  {name:52} skip: {f.get('lg')}"); continue
         hg = venue_games(f['id'], f['ts'], f['h'], '- Home', f.get('lg')); ag = venue_games(f['id'], f['ts'], f['a'], '- Away', f.get('lg'))
+        src = ''
+        if len(hg) < 5:
+            tp = team_page_games(f.get('px'), f.get('wu'), f['ts'], f['h'], True, f.get('lg'))
+            if len(tp) > len(hg): hg = tp; src += ' [home from team page]'
+        if len(ag) < 5:
+            tp = team_page_games(f.get('py'), f.get('wv'), f['ts'], f['a'], False, f.get('lg'))
+            if len(tp) > len(ag): ag = tp; src += ' [away from team page]'
         if len(hg) < 5 or len(ag) < 5:
             skipped['no venue form in this competition'] += 1; print(f"  {t:%a %H:%M}  {name:52} skip: venue form in {f.get('lg')} {len(hg)}/{len(ag)}"); continue
         for g in hg + ag:
-            g['fh'] = first_half(g['id'], g['home']) if g['id'] else None
+            if 'fh' not in g:
+                g['fh'] = first_half(g['id'], g['home']) if g['id'] else None
             if SPORT['reg_only'] and g['id']:
                 r = regulation(g['id'], g['home'])
                 if r:
@@ -350,6 +414,8 @@ def main():
             print(f"  {t:%a %H:%M}  {name:52} no line{note}   H {fmt(hg)} | A {fmt(ag)}"); continue
         hits, n, lab, odds, sel = pick
         hs, as_ = season_games(f['id'], f['ts'], f['h'], f.get('lg')), season_games(f['id'], f['ts'], f['a'], f.get('lg'))
+        if not hs: hs = team_page_games(f.get('px'), f.get('wu'), f['ts'], f['h'], None, f.get('lg'), n=20)
+        if not as_: as_ = team_page_games(f.get('py'), f.get('wv'), f['ts'], f['a'], None, f.get('lg'), n=20)
         if SPORT['reg_only']:
             for g in hs + as_:
                 r = regulation(g['id'], g['home']) if g['id'] else None
@@ -360,7 +426,7 @@ def main():
             skipped['this season disagrees with the handicap'] += 1
             print(f"  {t:%a %H:%M}  {name:52} skip: {lab} agrees at the venue {hits}/{n} but this season says no   H {fmt(hs)} | A {fmt(as_)}"); continue
         note += f"  [season {fmt(hs)} | {fmt(as_)} agrees]" if sa else ''
-        print(f"  {t:%a %H:%M}  {name:52} PICK {lab} @{odds:.2f}  {hits}/{n}{note}   H {fmt(hg)} | A {fmt(ag)}")
+        print(f"  {t:%a %H:%M}  {name:52} PICK {lab} @{odds:.2f}  {hits}/{n}{note}{src}   H {fmt(hg)} | A {fmt(ag)}")
         legs.append(dict(ts=ets, match=name, label=lab, odds=odds, hits=hits, n=n, ev=e, sel=sel,
                          stats=[f"{f['h']} HOME {fmt(hg)}", f"{f['a']} AWAY {fmt(ag)}",
                                 f"{lab}: {hits}/{n} of the two venue histories agree"] +
