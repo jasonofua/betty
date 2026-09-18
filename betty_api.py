@@ -530,10 +530,13 @@ def banner():
     return dict(open=open_codes, next_ko=next_ko.strftime('%H:%M') if next_ko else None)
 
 
+RECORD_SINCE = dt.date(2026, 9, 14)     # 18 Sep, user's call: the site shows this week and beyond - the week before was bad
+
+
 def record(days=35):
     """Settled codes in the last N days: per-product tallies, the table, the day heat map."""
     today = dt.datetime.now(tz=WAT).date()
-    since = today - dt.timedelta(days=days)
+    since = max(today - dt.timedelta(days=days), RECORD_SINCE)
     per = collections.defaultdict(lambda: dict(won=0, lost=0, open=0, legs_won=0, legs_lost=0, first=None))
     settled, heat, losses = [], collections.defaultdict(lambda: dict(won=0, lost=0)), []
     for c in parse_bookings():
@@ -585,7 +588,7 @@ def legs_list(days=35, limit=1200):
     newest code first, with per-leg stats. Superseded rebooks are skipped so a
     leg is not counted three times."""
     today = dt.datetime.now(tz=WAT).date()
-    since = today - dt.timedelta(days=days)
+    since = max(today - dt.timedelta(days=days), RECORD_SINCE)
     rows, codes = [], dict(won=0, lost=0, open=0)
     for c in parse_bookings():
         d = _day_of(c['when'])
@@ -864,7 +867,7 @@ def family_stats(days=7):
     """{family: dict(n, won, ret)} from the last N days of settled legs, one count per
     (match, selection, day) - the all-games duplicates are not counted twice."""
     seen, out = set(), {}
-    for r in legs_list(days=days, limit=5000)['rows']:
+    for r in legs_list(days=days, limit=5000)['rows']:       # legs_list starts at RECORD_SINCE - the site's window
         if r['state'] not in ('won', 'lost') or r['product'] in ('All games', 'Bet of the day'):
             continue
         k = (r['match'], r['sel'], r['iso'])
@@ -1059,6 +1062,7 @@ RULES = [
 ]
 
 CHANGELOG = [
+    dict(date='18 Sep', txt='Results and the record start on Monday 14 Sep (user\'s call): the week before is off the site. The bet of the day reads the same window.'),
     dict(date='18 Sep', txt="Bet of the day (user's call): a tab and a 10:12 run that takes the morning tickets and keeps only the legs from bet families in profit on our own settled legs over the last seven days (8+ legs, positive return), one leg per match, never under 2x. The week's family table is on the tab."),
     dict(date='18 Sep', txt="Max odds: full-time match goal Unders out again (own legs 10-18 Sep: 15-6 at ~1.15, -19.6%); FT Over 1.5 not taken under 1.25 (17 legs 64.7%, -22%; at 1.25+ 20 legs 80%). Points sports: totals need 12 of 14 (own totals 10-10 this week against handicaps 17-8; 14 days of hockey: 11/14 totals 4-1, 12/14+ 12-0)."),
     dict(date='18 Sep', txt="Points sports: the SportyBet board is read in full - the list call had hidden 100 of 123 NCAA games (33 of 155 American-football events) that carry priced winner, total and handicap markets. Team names that Flashscore spells differently (Miami (FL), North Carolina State) are joined by alias."),
