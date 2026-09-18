@@ -925,6 +925,7 @@ RULES = [
 ]
 
 CHANGELOG = [
+    dict(date='18 Sep', txt="Points sports: the SportyBet board is read in full - the list call had hidden 100 of 123 NCAA games (33 of 155 American-football events) that carry priced winner, total and handicap markets. Team names that Flashscore spells differently (Miami (FL), North Carolina State) are joined by alias."),
     dict(date='18 Sep', txt="Points sports: when Flashscore's history feed is empty for a fixture (it was for the Ravens, Jets, Buccaneers, Chargers, Texas Tech, Clemson, Iowa State and the whole CFL board), the venue windows are read from the team's own results page instead - two seasons of results with quarter scores. Same competition only, pre-season out."),
     dict(date='18 Sep', txt='One set of codes a day: the 16:35 winners, 16:50 max odds and 17:10 all-games evening runs are off. The morning runs (09:05-10:05, games until 23:00) are the daily codes; anything later is booked on request.'),
     dict(date='17 Sep', txt="Winners: favourites only at 1.30-1.60, no more covers on favourites above 1.60. Our own 246 settled legs since 9 Sep by the favourite's price: 1.30-1.60 won 81% and returned +14.5%; 1.60-2.70 covers returned -11% over 158 legs (Phnom Penh Crown 2-1 at 90+1 the last); under 1.30 -5%."),

@@ -59,7 +59,15 @@ def keep_map():
 KEEP = keep_map()
 ALIAS = {'fiu': 'floridainternational', 'britishcolumbia': 'bc', 'ucf': 'centralflorida', 'smu': 'southernmethodist',
          'lsu': 'lsu', 'byu': 'brighamyoung', 'usc': 'southerncalifornia', 'tcu': 'tcu', 'utsa': 'utsa', 'unlv': 'unlv'}
+NAMES = {   # 18 Sep: whole-name aliases, SportyBet -> Flashscore, where the first-letters join fails
+    'miami hurricanes': 'miami (fl)', 'nc state wolfpack': 'north carolina state', 'ole miss rebels': 'ole miss',
+    'uab blazers': 'uab', 'utep miners': 'utep', 'ucla bruins': 'ucla', 'pitt panthers': 'pittsburgh',
+    'uconn huskies': 'connecticut', 'ulm warhawks': 'louisiana-monroe',
+}
+
+
 def norm(s):
+    s = NAMES.get((s or '').strip().lower(), s)
     s = re.sub(r'[^a-z]', '', (s or '').lower())
     for k, v in ALIAS.items():
         if s.startswith(k):
@@ -73,18 +81,34 @@ def get(url):
 
 
 def sb_board():
-    evs = []
-    for pg in range(1, 6):
-        try:
-            d = get(BASE + f"pcUpcomingEvents?sportId={SPORT['sb']}&marketId={SPORT['board']}&pageSize=100&pageNum={pg}&option=1")
-        except Exception:
-            break
-        tours = (d.get('data') or {}).get('tournaments') or []
-        if not tours:
-            break
-        for t in tours:
-            for e in t.get('events', []):
-                e['_tour'] = t.get('name'); evs.append(e)
+    """18 Sep: option=1 hid most of the board - 33 of 155 American-football events
+    (20 of 123 NCAA games) although the hidden ones carry priced winner, total and
+    handicap markets. option=2 lists everything; the pages are walked per
+    tournament because the sport-wide list stops at two pages."""
+    evs, seen = [], set()
+    tours = []
+    try:
+        for sp in (get(BASE + 'sportList?productId=3').get('data') or []):
+            if sp.get('id') == SPORT['sb']:
+                tours = [t.get('id') for c in sp.get('categories', []) for t in c.get('tournaments', []) if t.get('id')]
+    except Exception:
+        tours = []
+    for tid in tours or [None]:
+        for pg in range(1, 30):
+            q = f"pcUpcomingEvents?sportId={SPORT['sb']}&marketId={SPORT['board']}&pageSize=100&pageNum={pg}&option=2" + (f"&tournamentId={tid}" if tid else '')
+            try:
+                d = get(BASE + q)
+            except Exception:
+                break
+            ts_ = (d.get('data') or {}).get('tournaments') or []
+            new = 0
+            for t in ts_:
+                for e in t.get('events', []):
+                    if e['eventId'] in seen:
+                        continue
+                    seen.add(e['eventId']); e['_tour'] = t.get('name'); evs.append(e); new += 1
+            if not ts_ or not new:
+                break
     return evs
 
 
