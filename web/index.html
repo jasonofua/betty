@@ -221,6 +221,22 @@ h1.page em{font-style:normal;color:var(--ac-tx)}
 .row .note{font-size:12px;color:var(--tx3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
 .row .sc{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--tx2);padding:4px 8px;border-radius:7px;background:var(--s2)}
 .more-rows{width:100%;padding:12px;border-radius:12px;border:1px solid var(--line2);font-weight:700;color:var(--tx2);margin-top:6px}
+.citem{background:var(--s1);border:1px solid var(--line);border-radius:14px;margin-bottom:8px;overflow:hidden}
+.citem.won{border-color:color-mix(in srgb,var(--won) 45%,var(--line))}
+.citem.lost{border-color:color-mix(in srgb,var(--lost) 40%,var(--line))}
+.citem .chead{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:12px;align-items:center;padding:12px 14px;cursor:pointer;width:100%;text-align:left;color:inherit;background:none}
+.citem .chead .cd{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--tx3);font-weight:700;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.citem .chead .cc{font-family:var(--mono);font-weight:800;font-size:15px;letter-spacing:.04em}
+.citem .chead .cn{font-size:12px;color:var(--tx3);margin-top:2px}
+.citem .chead .co{font-family:var(--mono);font-weight:800;font-size:15px;text-align:right}
+.citem .chead .co small{display:block;font-size:11px;color:var(--tx3);font-weight:600}
+.citem .chead .caret{width:18px;height:18px;color:var(--tx3);transition:transform 200ms cubic-bezier(.23,1,.32,1)}
+.citem.open .chead .caret{transform:rotate(180deg)}
+.citem .cbody{display:none;border-top:1px solid var(--line);padding:6px 14px 10px}
+.citem.open .cbody{display:block}
+.citem .cbody .row{border:none;background:none;border-radius:0;padding:10px 0;margin:0;border-top:1px solid var(--line)}
+.citem .cbody .row:first-child{border-top:none}
+.citem .cbody .cfoot{display:flex;gap:14px;align-items:center;padding-top:10px;border-top:1px solid var(--line);font-size:13px}
 @media (max-width:640px){
   .row{grid-template-columns:minmax(0,1fr) auto;row-gap:8px}
   .row .sel{grid-column:1 / -1}
@@ -381,10 +397,10 @@ footer{border-top:1px solid var(--line);background:var(--s1);padding:20px 16px;m
 footer .in{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:14px;align-items:center;font-size:12px;color:var(--tx3)}
 footer .age{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:999px;border:2px solid var(--tx3);font-weight:800;font-size:11.5px;color:var(--tx2);flex:none}
 footer .txt{max-width:560px}
-nav.bottom{display:none;position:fixed;bottom:0;left:0;right:0;z-index:50;background:var(--s1);border-top:1px solid var(--line);grid-template-columns:repeat(4,1fr);padding:6px 4px 8px}
-nav.bottom button{display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 2px;border-radius:14px;color:var(--tx3);min-height:46px}
+nav.bottom{display:none;position:fixed;bottom:0;left:0;right:0;z-index:50;background:var(--s1);border-top:1px solid var(--line);grid-template-columns:repeat(5,1fr);padding:5px 2px 7px}
+nav.bottom button{display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 0;border-radius:14px;color:var(--tx3);min-height:46px;min-width:0}
 nav.bottom button.on{color:var(--ac-tx)}
-nav.bottom span{font-size:10.5px;font-weight:700}
+nav.bottom span{font-size:10px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
 @media (max-width:819px){
   nav.top{display:none}
   nav.bottom{display:grid}
@@ -418,11 +434,11 @@ nav.bottom span{font-size:10.5px;font-weight:700}
 (function () {
   'use strict';
   var TABS = [
-    ['Today', 'M3 4h18v17H3zM8 2v4M16 2v4M3 10h18', 'Codes'],
-    ['Best', 'M12 2l3 6.5 7 .8-5.2 4.8 1.5 7L12 17.5 5.7 21l1.5-7L2 9.3l7-.8z', 'Bet of the day'],
-    ['Live', 'M3 12h4l3-8 4 16 3-8h4', 'Live'],
-    ['Record', 'M4 20V10M10 20V4M16 20v-7M22 20H2', 'Results'],
-    ['Rules', 'M12 6v14M12 6C10 4 6 3.5 3 4v14c3-.5 7 0 9 2 2-2 6-2.5 9-2V4c-3-.5-7 0-9 2', 'Rules']
+    ['Today', 'M3 4h18v17H3zM8 2v4M16 2v4M3 10h18', 'Codes', 'Codes'],
+    ['Best', 'M12 2l3 6.5 7 .8-5.2 4.8 1.5 7L12 17.5 5.7 21l1.5-7L2 9.3l7-.8z', 'Bet of the day', 'Best bet'],
+    ['Live', 'M3 12h4l3-8 4 16 3-8h4', 'Live', 'Live'],
+    ['Record', 'M4 20V10M10 20V4M16 20v-7M22 20H2', 'Results', 'Results'],
+    ['Rules', 'M12 6v14M12 6C10 4 6 3.5 3 4v14c3-.5 7 0 9 2 2-2 6-2.5 9-2V4c-3-.5-7 0-9 2', 'Rules', 'Rules']
   ];
   var PRODUCTS = ['Winners', 'Draws', 'Half-time draw', 'Live', 'Max odds', 'Points sports', 'All games', 'Bet of the day'];
   var ORDER = ['Bet of the day', 'Live', 'Winners', 'Draws', 'Half-time draw', 'Points sports', 'Max odds', 'All games'];
@@ -449,7 +465,7 @@ nav.bottom span{font-size:10.5px;font-weight:700}
   };
   var S = {
     tab: 'Today', day: 'today', slip: null, openLeg: null, copied: null, expanded: {},
-    theme: 'dark', stake: '1000', recFilter: 'All', recWhen: 'all', recRes: 'all', productFilter: 'All', prefs: null, tg: true, showOlder: false, recShow: 60,
+    theme: 'dark', stake: '1000', recFilter: 'All', recWhen: 'all', recRes: 'all', productFilter: 'All', prefs: null, tg: true, showOlder: false, recShow: 30, recOpen: {},
     ladder: null, ladderAt: 0, ladderBusy: false, odds: '5', codes: {}, codesAt: {}, banner: null, live: null, liveAt: 0, record: null, legsData: null, rules: null, console: null, consoleAt: 0,
     pane: 'Run', runProduct: 'Winners', runVals: { until: '23', days: '0', top: '0', target: '50', sport: 'amfoot', min_price: '1.40', agree: '11' },
     runFlags: { dry: false, strict: false, undersonly: false, goalsonly: false, rollover: false }, runMsg: '', graded: null, gradeBusy: false, nestBusy: {}, nestMsg: {},
@@ -844,7 +860,7 @@ nav.bottom span{font-size:10.5px;font-weight:700}
   // ---------- Results ----------
   function renderRecord() {
     var D = S.legsData;
-    var h = '<div class="col"><h1 class="page">Results</h1><p class="lead">Every leg we booked, graded from SportyBet. Nothing is hidden: won and lost, code by code.</p>';
+    var h = '<div class="col"><h1 class="page">Results</h1><p class="lead">Every code we booked, graded from SportyBet. Nothing is hidden: won and lost. Tap a code for its games.</p>';
     if (S.err) h += '<div class="err">' + esc(S.err) + '</div>';
     if (!D) return h + '<div class="muted">Grading the last five weeks…</div></div>';
     var today = new Date(); today.setHours(0, 0, 0, 0);
@@ -868,13 +884,34 @@ nav.bottom span{font-size:10.5px;font-weight:700}
     var prods = []; D.rows.forEach(function (r) { if (prods.indexOf(r.product) < 0) prods.push(r.product); });
     h += '<div class="pills">' + ['All'].concat(ORDER.filter(function (p) { return prods.indexOf(p) >= 0; })).map(function (p) { return '<button data-filter="' + esc(p) + '"' + (S.recFilter === p ? ' class="on"' : '') + '>' + esc(p) + '</button>'; }).join('') + '</div>';
     h += '<div class="pills">' + [['all', 'All legs'], ['won', 'Won only'], ['lost', 'Lost only']].map(function (x) { return '<button data-res="' + x[0] + '"' + (S.recRes === x[0] ? ' class="on2"' : '') + '>' + x[1] + '</button>'; }).join('') + '<span class="muted" style="align-self:center">' + rows.length + ' legs</span></div>';
-    var show = rows.slice(0, S.recShow);
-    h += show.length ? show.map(function (r) {
-      return '<div class="row"><span style="min-width:0"><div class="cd">' + esc(r.comp || r.product) + ' · ' + esc(r.date) + ' · <a href="#slip/' + esc(r.code) + '">' + esc(r.code) + '</a></div><div class="m">' + esc(r.match) + '</div></span>' +
-        '<span class="sel" style="min-width:0"><span class="selc">' + esc(r.sel) + ' @ ' + (r.price || 0).toFixed(2) + '</span><div class="note" title="' + esc(r.note) + '">' + esc(r.note) + '</div></span>' +
-        '<span class="sc">' + esc(r.score || '—') + '</span>' + resTag(r) + '</div>';
-    }).join('') : '<div class="empty"><div class="t">No legs match</div><div class="d">Try another day or product.</div></div>';
-    if (rows.length > show.length) h += '<button class="more-rows" data-more="1">Show more (' + (rows.length - show.length) + ' left)</button>';
+    // 19 Sep, user's call: one expandable item per code - code, date, product,
+    // odds, legs and the result as the title; tap for the games.
+    var groups = [], byCode = {};
+    rows.forEach(function (r) {
+      var g = byCode[r.code];
+      if (!g) { g = byCode[r.code] = { code: r.code, product: r.product, sport: r.sport, date: r.date, iso: r.iso, legs: [], odds: 1 }; groups.push(g); }
+      g.legs.push(r); g.odds *= (r.price || 1);
+    });
+    var show = groups.slice(0, S.recShow);
+    h += show.length ? show.map(function (g) {
+      var won = g.legs.filter(function (r) { return r.state === 'won'; }).length, lost = g.legs.filter(function (r) { return r.state === 'lost'; }).length;
+      var open = g.legs.length - won - lost - g.legs.filter(function (r) { return r.state === 'void'; }).length;
+      var st = lost ? 'lost' : open ? 'pending' : 'won';
+      var txt = lost ? lost + ' lost' : open ? open + ' to play' : 'all ' + won + ' won';
+      var isOpen = !!S.recOpen[g.code];
+      var title = (TITLE[g.product] || g.product) + (g.sport ? ' \u00b7 ' + g.sport : '');
+      var x = '<div class="citem ' + (st === 'pending' ? '' : st) + (isOpen ? ' open' : '') + '"><button class="chead" data-cexp="' + esc(g.code) + '">' +
+        '<span style="min-width:0"><div class="cd">' + esc(g.date) + ' \u00b7 ' + esc(title) + '</div><span class="cc">' + esc(g.code) + '</span><div class="cn">' + g.legs.length + ' leg' + (g.legs.length === 1 ? '' : 's') + ' \u00b7 ' + won + ' won' + (lost ? ' \u00b7 ' + lost + ' lost' : '') + '</div></span>' +
+        '<span class="co">' + fmtOdds(g.odds) + '<small>' + chip(st, txt) + '</small></span>' +
+        '<svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></button>';
+      x += '<div class="cbody">' + g.legs.map(function (r) {
+        return '<div class="row"><span style="min-width:0"><div class="cd">' + esc(r.comp || r.product) + '</div><div class="m">' + esc(r.match) + '</div></span>' +
+          '<span class="sel" style="min-width:0"><span class="selc">' + esc(r.sel) + ' @ ' + (r.price || 0).toFixed(2) + '</span><div class="note" title="' + esc(r.note) + '">' + esc(r.note) + '</div></span>' +
+          '<span class="sc">' + esc(r.score || '\u2014') + '</span>' + resTag(r) + '</div>';
+      }).join('') + '<div class="cfoot"><a href="#slip/' + esc(g.code) + '">The numbers behind the legs</a><a href="' + esc(sporty(g.code)) + '" target="_blank" rel="noopener">Open on SportyBet &rarr;</a></div></div></div>';
+      return x;
+    }).join('') : '<div class="empty"><div class="t">No codes match</div><div class="d">Try another day or product.</div></div>';
+    if (groups.length > show.length) h += '<button class="more-rows" data-more="1">Show more (' + (groups.length - show.length) + ' codes left)</button>';
     h += '<div class="muted" style="margin-top:14px">SportyBet share codes expire after about two weeks, so older codes cannot be re-graded; the window starts ' + esc(D.since) + '. Open a code for the numbers behind each pick.</div>';
     return h + '</div>';
   }
@@ -1011,7 +1048,7 @@ nav.bottom span{font-size:10.5px;font-weight:700}
     var active = S.tab === 'Slip' ? 'Today' : S.tab;
     document.getElementById('topnav').innerHTML = TABS.map(function (t) { return '<button data-go="' + t[0] + '"' + (active === t[0] ? ' class="on"' : '') + '>' + t[2] + '</button>'; }).join('');
     document.getElementById('botnav').innerHTML = TABS.map(function (t) {
-      return '<button data-go="' + t[0] + '"' + (active === t[0] ? ' class="on"' : '') + '><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="' + t[1] + '"></path></svg><span>' + t[2] + '</span></button>';
+      return '<button data-go="' + t[0] + '"' + (active === t[0] ? ' class="on"' : '') + '><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="' + t[1] + '"></path></svg><span>' + (t[3] || t[2]) + '</span></button>';
     }).join('');
     document.getElementById('app').setAttribute('data-t', S.theme);
     document.getElementById('themeLabel').textContent = S.theme === 'dark' ? 'Light' : 'Dark';
@@ -1029,7 +1066,7 @@ nav.bottom span{font-size:10.5px;font-weight:700}
 
   // ---------- events ----------
   document.addEventListener('click', function (e) {
-    var t = e.target.closest('[data-copy],[data-open],[data-go],[data-day],[data-leg],[data-filter],[data-when],[data-res],[data-more],[data-pref],[data-tg],[data-pf],[data-older],[data-expand],[data-pane],[data-runp],[data-flag],[data-run],[data-yest],[data-watch],[data-nest],[data-odds]');
+    var t = e.target.closest('[data-copy],[data-open],[data-go],[data-day],[data-leg],[data-filter],[data-when],[data-res],[data-more],[data-cexp],[data-pref],[data-tg],[data-pf],[data-older],[data-expand],[data-pane],[data-runp],[data-flag],[data-run],[data-yest],[data-watch],[data-nest],[data-odds]');
     if (!t) return;
     if (t.hasAttribute('data-copy')) { e.stopPropagation(); doCopy(t.getAttribute('data-copy')); return; }
     if (t.hasAttribute('data-nest')) { nest(t.getAttribute('data-nest'), +t.getAttribute('data-target')); return; }
@@ -1038,10 +1075,11 @@ nav.bottom span{font-size:10.5px;font-weight:700}
     if (t.hasAttribute('data-day')) { e.preventDefault(); S.day = t.getAttribute('data-day'); S.ladder = null; render(); loadLadder(true); loadCodes(); return; }
     if (t.hasAttribute('data-odds')) { S.odds = t.getAttribute('data-odds'); save('betty.odds', S.odds); render(); return; }
     if (t.hasAttribute('data-leg')) { var i = +t.getAttribute('data-leg'); S.openLeg = S.openLeg === i ? null : i; render(); return; }
-    if (t.hasAttribute('data-filter')) { S.recFilter = t.getAttribute('data-filter'); S.recShow = 60; render(); return; }
-    if (t.hasAttribute('data-when')) { S.recWhen = t.getAttribute('data-when'); S.recShow = 60; render(); return; }
-    if (t.hasAttribute('data-res')) { S.recRes = t.getAttribute('data-res'); S.recShow = 60; render(); return; }
-    if (t.hasAttribute('data-more')) { S.recShow += 60; render(); return; }
+    if (t.hasAttribute('data-filter')) { S.recFilter = t.getAttribute('data-filter'); S.recShow = 30; render(); return; }
+    if (t.hasAttribute('data-when')) { S.recWhen = t.getAttribute('data-when'); S.recShow = 30; render(); return; }
+    if (t.hasAttribute('data-res')) { S.recRes = t.getAttribute('data-res'); S.recShow = 30; render(); return; }
+    if (t.hasAttribute('data-more')) { S.recShow += 30; render(); return; }
+    if (t.hasAttribute('data-cexp')) { var cc = t.getAttribute('data-cexp'); S.recOpen[cc] = !S.recOpen[cc]; render(); return; }
     if (t.hasAttribute('data-pref')) { var p = t.getAttribute('data-pref'); S.prefs[p] = !S.prefs[p]; save('betty.prefs', JSON.stringify(S.prefs)); render(); return; }
     if (t.hasAttribute('data-tg')) { S.tg = !S.tg; save('betty.tg', S.tg ? '1' : '0'); render(); return; }
     if (t.hasAttribute('data-pf')) { S.productFilter = t.getAttribute('data-pf'); render(); return; }
