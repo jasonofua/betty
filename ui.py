@@ -540,7 +540,7 @@ class Handler(BaseHTTPRequestHandler):
                 elif u.path == '/api/gradecode':
                     body = BA.grade_any(q.get('code', [''])[0])
                 elif u.path == '/api/legs':
-                    body = BA.legs_list(int(q.get('days', ['35'])[0]))
+                    body = BA.legs_list(int(q.get('days', ['35'])[0]), limit=20000)   # 20 Sep: the rungs are in the record; 1,200 rows cut off the morning codes
                 elif u.path == '/api/ladder':
                     body = BA.ladder_for(q.get('day', ['today'])[0], build=q.get('build', ['1'])[0] != '0')
                 elif u.path == '/api/best':
