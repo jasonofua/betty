@@ -261,16 +261,36 @@ def season_games(mid, kickoff, team, comp=None):
     return out
 
 
+SEASON_MIN = 2           # 20 Sep, user's call: no leg on a side that has not played this season
+
+
 def season_agrees(lab, hs, as_):
-    """Handicap legs only (the measured case): both sides' season games, 2+ each,
-    must cover the line 80%+. None = too thin to judge, True/False otherwise."""
-    m = re.match(r'Handicap (Home|Away) ([+-]?[\d.]+)', lab)
-    if not m or min(len(hs), len(as_)) < 2:
+    """Both sides' games THIS SEASON, SEASON_MIN+ each, must agree with the line 80%+.
+    Handicaps (measured 18 Sep) and, from 20 Sep, totals and first-period totals
+    too: every points-sports loss of 18-19 Sep with a season-opener window - Sochi,
+    Koln, Freiburg, Rilski, Hamburg Towers, Ormanspor, Trelleborg - was a side whose
+    venue window was last season's games. None = a side has not played SEASON_MIN
+    games this season (the caller skips the leg)."""
+    if min(len(hs), len(as_)) < SEASON_MIN:
         return None
-    side, v = m.group(1), float(m.group(2))
-    mine, theirs = (hs, as_) if side == 'Home' else (as_, hs)
-    hits = sum(g['pf'] - g['pa'] > -v for g in mine) + sum(g['pa'] - g['pf'] > -v for g in theirs)
-    return hits >= 0.8 * (len(mine) + len(theirs))
+    m = re.match(r'Handicap (Home|Away) ([+-]?[\d.]+)', lab)
+    if m:
+        side, v = m.group(1), float(m.group(2))
+        mine, theirs = (hs, as_) if side == 'Home' else (as_, hs)
+        hits = sum(g['pf'] - g['pa'] > -v for g in mine) + sum(g['pa'] - g['pf'] > -v for g in theirs)
+        return hits >= 0.8 * (len(mine) + len(theirs))
+    m = re.match(r'(FT|1H) O/U (Over|Under) ([\d.]+)', lab)
+    if m:
+        period, want, v = m.group(1), m.group(2), float(m.group(3))
+        if period == '1H':
+            tots = [g['fh'][0] + g['fh'][1] for g in hs + as_ if g.get('fh')]
+            if len(tots) < 2 * SEASON_MIN:
+                return None
+        else:
+            tots = [g['pf'] + g['pa'] for g in hs + as_]
+        hits = sum(x > v for x in tots) if want == 'Over' else sum(x < v for x in tots)
+        return hits >= 0.8 * len(tots)
+    return True
 
 
 def periods(gid):
@@ -457,11 +477,17 @@ def main():
                 r = regulation(g['id'], g['home']) if g['id'] else None
                 if r:
                     g['pf'], g['pa'] = r
+        for g in hs + as_:
+            if 'fh' not in g:
+                g['fh'] = first_half(g['id'], g['home']) if g['id'] else None
         sa = season_agrees(lab, hs, as_)
+        if sa is None:
+            skipped['a side has not played this season'] += 1
+            print(f"  {t:%a %H:%M}  {name:52} skip: {lab} agrees at the venue {hits}/{n} but a side has under {SEASON_MIN} games this season   H {fmt(hs)} | A {fmt(as_)}"); continue
         if sa is False:
-            skipped['this season disagrees with the handicap'] += 1
+            skipped['this season disagrees with the line'] += 1
             print(f"  {t:%a %H:%M}  {name:52} skip: {lab} agrees at the venue {hits}/{n} but this season says no   H {fmt(hs)} | A {fmt(as_)}"); continue
-        note += f"  [season {fmt(hs)} | {fmt(as_)} agrees]" if sa else ''
+        note += f"  [season {fmt(hs)} | {fmt(as_)} agrees]"
         print(f"  {t:%a %H:%M}  {name:52} PICK {lab} @{odds:.2f}  {hits}/{n}{note}{src}   H {fmt(hg)} | A {fmt(ag)}")
         legs.append(dict(ts=ets, match=name, label=lab, odds=odds, hits=hits, n=n, ev=e, sel=sel,
                          stats=[f"{f['h']} HOME {fmt(hg)}", f"{f['a']} AWAY {fmt(ag)}",
