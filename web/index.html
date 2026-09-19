@@ -874,28 +874,31 @@ nav.bottom span{font-size:10px;font-weight:700;white-space:nowrap;overflow:hidde
       if (S.recFilter !== 'All' && r.product !== S.recFilter) return false;
       return true;
     });
-    var won = rows.filter(function (r) { return r.state === 'won'; }).length, lost = rows.filter(function (r) { return r.state === 'lost'; }).length;
-    var rate = won + lost ? Math.round(won / (won + lost) * 1000) / 10 : null;
-    h += '<div class="stats"><div class="stat"><div class="v g">' + (rate == null ? '-' : rate + '%') + '</div><div class="k">Leg win rate</div></div><div class="stat"><div class="v">' + won + '</div><div class="k">Legs won</div></div><div class="stat"><div class="v">' + (won + lost) + '</div><div class="k">Legs graded</div></div>' +
-      '<div class="stat"><div class="v">' + D.codes.won + ' / ' + (D.codes.won + D.codes.lost) + '</div><div class="k">Whole codes landed</div></div></div>';
-    h += '<div class="pills">' + [['today', 'Today'], ['yesterday', 'Yesterday'], ['week', 'This week'], ['all', 'Since 14 Sep']].map(function (x) { return '<button data-when="' + x[0] + '"' + (S.recWhen === x[0] ? ' class="on"' : '') + '>' + x[1] + '</button>'; }).join('') + '</div>';
-    var prods = []; D.rows.forEach(function (r) { if (prods.indexOf(r.product) < 0) prods.push(r.product); });
-    h += '<div class="pills">' + ['All'].concat(ORDER.filter(function (p) { return prods.indexOf(p) >= 0; })).map(function (p) { return '<button data-filter="' + esc(p) + '"' + (S.recFilter === p ? ' class="on"' : '') + '>' + esc(p) + '</button>'; }).join('') + '</div>';
-    h += '<div class="pills">' + [['all', 'All codes'], ['won', 'Won'], ['lost', 'Lost']].map(function (x) { return '<button data-res="' + x[0] + '"' + (S.recRes === x[0] ? ' class="on2"' : '') + '>' + x[1] + '</button>'; }).join('') + '<span class="muted" style="align-self:center">' + rows.length + ' legs</span></div>';
-    // 19 Sep, user's call: one expandable item per code - code, date, product,
-    // odds, legs and the result as the title; tap for the games.
+    // 19 Sep: the tiles count exactly what the list below shows - the codes and
+    // legs inside the day / product filter (the won / lost pill only narrows the list)
     var groups = [], byCode = {};
     rows.forEach(function (r) {
       var g = byCode[r.code];
       if (!g) { g = byCode[r.code] = { code: r.code, product: r.product, sport: r.sport, date: r.date, iso: r.iso, legs: [], odds: 1 }; groups.push(g); }
       g.legs.push(r); g.odds *= (r.price || 1);
     });
-    // won / lost is a CODE filter: a lost code keeps every leg and its full odds
     groups.forEach(function (g) {
       g.won = g.legs.filter(function (r) { return r.state === 'won'; }).length; g.lost = g.legs.filter(function (r) { return r.state === 'lost'; }).length;
       g.open = g.legs.length - g.won - g.lost - g.legs.filter(function (r) { return r.state === 'void'; }).length;
       g.st = g.lost ? 'lost' : g.open ? 'pending' : 'won';
     });
+    var won = rows.filter(function (r) { return r.state === 'won'; }).length, lost = rows.filter(function (r) { return r.state === 'lost'; }).length;
+    var rate = won + lost ? Math.round(won / (won + lost) * 1000) / 10 : null;
+    var cWon = groups.filter(function (g) { return g.st === 'won'; }).length, cLost = groups.filter(function (g) { return g.st === 'lost'; }).length, cOpen = groups.length - cWon - cLost;
+    h += '<div class="stats"><div class="stat"><div class="v g">' + cWon + ' / ' + (cWon + cLost) + '</div><div class="k">Codes landed' + (cOpen ? ' \u00b7 ' + cOpen + ' open' : '') + '</div></div><div class="stat"><div class="v">' + (rate == null ? '-' : rate + '%') + '</div><div class="k">Leg win rate</div></div>' +
+      '<div class="stat"><div class="v">' + won + '</div><div class="k">Legs won</div></div><div class="stat"><div class="v">' + lost + '</div><div class="k">Legs lost</div></div></div>';
+    h += '<div class="pills">' + [['today', 'Today'], ['yesterday', 'Yesterday'], ['week', 'This week'], ['all', 'Since 14 Sep']].map(function (x) { return '<button data-when="' + x[0] + '"' + (S.recWhen === x[0] ? ' class="on"' : '') + '>' + x[1] + '</button>'; }).join('') + '</div>';
+    var prods = []; D.rows.forEach(function (r) { if (prods.indexOf(r.product) < 0) prods.push(r.product); });
+    h += '<div class="pills">' + ['All'].concat(ORDER.filter(function (p) { return prods.indexOf(p) >= 0; })).map(function (p) { return '<button data-filter="' + esc(p) + '"' + (S.recFilter === p ? ' class="on"' : '') + '>' + esc(p) + '</button>'; }).join('') + '</div>';
+    h += '<div class="pills">' + [['all', 'All codes'], ['won', 'Won'], ['lost', 'Lost']].map(function (x) { return '<button data-res="' + x[0] + '"' + (S.recRes === x[0] ? ' class="on2"' : '') + '>' + x[1] + '</button>'; }).join('') + '<span class="muted" style="align-self:center">' + groups.length + ' code' + (groups.length === 1 ? '' : 's') + ' \u00b7 ' + rows.length + ' legs</span></div>';
+    // 19 Sep, user's call: one expandable item per code - code, date, product,
+    // odds, legs and the result as the title; tap for the games. Won / lost is a
+    // CODE filter: a lost code keeps every leg and its full odds.
     if (S.recRes === 'won') groups = groups.filter(function (g) { return g.st === 'won'; });
     if (S.recRes === 'lost') groups = groups.filter(function (g) { return g.st === 'lost'; });
     var show = groups.slice(0, S.recShow);
