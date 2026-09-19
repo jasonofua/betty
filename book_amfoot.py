@@ -38,7 +38,7 @@ SPORTS = {
 }
 SPORT = SPORTS['amfoot']
 AGREE = 11
-TOTALS_AGREE = 12      # 18 Sep, see score_game
+TOTALS_AGREE = 11      # 18 Sep: 12 for a night (17-leg backtest), back to 11 on 19 Sep - too thin to cut a weekend slip from 8 legs to 5 (user's call)
 MIN_PRICE = 1.40          # user wants the 1.6-2.2 band on these sports; 1.14 hockey Overs are not it. --min-price
 MISMATCH_PRICE = 1.05
 SKIP_MISMATCH = False     # user, 12 Sep: never skip - find the better option instead
@@ -367,6 +367,7 @@ def main():
         SPORT = SPORTS[sys.argv[sys.argv.index('--sport') + 1]]; KEEP = keep_map()
     days = int(sys.argv[sys.argv.index('--days') + 1]) if '--days' in sys.argv else 0
     dry = '--dry' in sys.argv
+    replaces = sys.argv[sys.argv.index('--replaces') + 1] if '--replaces' in sys.argv else None   # a rebook names the code it retires
     global AGREE, SKIP_MISMATCH
     if '--skip-mismatch' in sys.argv:
         SKIP_MISMATCH = True
@@ -476,7 +477,7 @@ def main():
     bk = A.book(sels)
     print('\nbooked', bk)
     if bk and bk.get('code'):
-        A.log_booking(bk['code'], bk.get('url'), f"{SPORT['label'].lower()} slip {combo:,.1f}x ({len(legs)} legs) - totals/1H/handicap, venue histories agree >= {AGREE}/14",
+        A.log_booking(bk['code'], bk.get('url'), f"{SPORT['label'].lower()} slip {combo:,.1f}x ({len(legs)} legs){' ' + replaces + ' with' if replaces else ''} - totals/1H/handicap, venue histories agree >= {AGREE}/14",
                       [(l['ts'], l['match'], l['label'], l['odds'], l['stats']) for l in legs])
         print(f"code {bk['code']}  {bk.get('url')}   ({bk.get('booked')}/{bk.get('req')} legs, verified {bk.get('verified')})")
 

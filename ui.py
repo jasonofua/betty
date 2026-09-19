@@ -704,6 +704,7 @@ class Handler(BaseHTTPRequestHandler):
                 if p2.get('min_price'): args += ['--min-price', str(float(p2['min_price']))]
                 if p2.get('agree'): args += ['--agree', str(int(p2['agree']))]
                 if p2.get('dry'): args.append('--dry')
+                if re.fullmatch(r'[A-Z0-9]{6}', str(p2.get('replaces') or '')): args += ['--replaces', p2['replaces']]
             except Exception:
                 self._send(json.dumps({'error': 'bad parameters'}), code=400); return
             with LOCK:
