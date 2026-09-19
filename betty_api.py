@@ -213,7 +213,7 @@ def merge_grades(legs, gl):
         if j is not None:
             x = gl[j]
             leg.update(state=x['state'], score=x['score'], hint=x['hint'], comp=x.get('comp', ''),
-                       kots=x.get('ko', 0), ht=x.get('ht'))
+                       kots=x.get('ko', 0), ht=x.get('ht'), ids=x.get('ids') or {})
         else:
             leg.update(state='void', score='', hint='not on the share code', comp='', kots=0)
     return legs
@@ -894,6 +894,7 @@ def family_stats(days=7):
 
 BEST_MIN_LEGS = 8        # a family needs this many settled legs in the week to count
 BEST_MIN_ODDS = 2.0      # user's call: the bet of the day pays at least 2x
+BEST_MAX_EDGE = 6        # max-odds legs: model support at least this many points over the book (see best_of_day)
 
 
 def best_of_day(dry=False):
@@ -912,15 +913,21 @@ def best_of_day(dry=False):
             continue
         if c['product'] in ('Live', 'All games', 'Bet of the day'):
             continue
-        g = graded(c['code'], force=True)
-        for l in g.get('legs') or []:
+        graded(c['code'], force=True)
+        for l in decorate(c)['legs']:
             ids = l.get('ids') or {}
-            if l['state'] != 'pending' or l.get('ko', 0) <= now + 1800 or ids.get('active', 1) == 0:
+            if l['state'] != 'pending' or l.get('kots', 0) <= now + 1800 or ids.get('active', 1) == 0 or not ids.get('eventId'):
                 continue
             fam = family_of(l['sel'], c['product'], c['sport'], l['price'])
             if fam not in good:
                 continue
-            sels.append(dict(leg=l, ids=ids, src=c, fam=fam))
+            if c['product'] == 'Max odds':
+                # 20 Sep: own legs 14-19 Sep - the model 6+ points over the book's
+                # implied: 29 of 31 won, +16%; 3-5 over: 85%, +1%; 2 or under: 88%, +2%.
+                m = re.search(r'support (\d+)%.*?book implies (\d+)%', ' '.join((l.get('sheet') or {}).get('flags') or []))
+                if not m or int(m.group(1)) - int(m.group(2)) < BEST_MAX_EDGE:
+                    continue
+            sels.append(dict(leg=dict(l, ko=l.get('kots', 0)), ids=ids, src=c, fam=fam))
         srcs.append(c['code'])
     bymatch = {}
     for x in sels:                  # one leg per match: the family with the better week
@@ -1071,6 +1078,7 @@ RULES = [
 ]
 
 CHANGELOG = [
+    dict(date='20 Sep', txt="Bet of the day: a max-odds leg needs the model 6+ points over the book's implied chance. Own legs 14-19 Sep: 6+ over went 29 of 31 (+16%), 3-5 over 85% (+1%), 2 or under 88% (+2%). Draws: the shape of the five winners (home clear favourite, sides level in the table) was tested on the 147k-match backfill and is NOT an edge (30.2% v 30.9% priced, -5%); the rule stays as it is (+1.3% at closing, 33.1% v 31.7%)."),
     dict(date='19 Sep', txt="Points sports, two bugs behind Saturday's losses: (1) the team-page fallback summed the first TWO periods for every sport, so a handball '1st half' was the full-time score and a hockey '1st period' was two periods - every 1H Over agreed 14/14 and handball 1H Overs went 1 of 14, hockey 1st-period Overs 0 of 5; the sum is now the sport's own first period(s). (2) The competition match compared Flashscore's short code ('ALL') with the league name ('Allsvenskan') and never matched, which is what sent those games to the fallback in the first place; the full name is compared first."),
     dict(date='18 Sep', txt='Results and the record start on Monday 14 Sep (user\'s call): the week before is off the site. The bet of the day reads the same window.'),
     dict(date='18 Sep', txt="Bet of the day (user's call): a tab and a 10:12 run that takes the morning tickets and keeps only the legs from bet families in profit on our own settled legs over the last seven days (8+ legs, positive return), one leg per match, never under 2x. The week's family table is on the tab."),
