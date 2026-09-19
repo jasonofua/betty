@@ -751,8 +751,10 @@ def ladder_for(day='today', build=True):
                  if n['code'] != c['code'] and n['odds'] <= n['target'] * 1.5}   # a rung, not the whole slip
         if build and c['product'] != 'Live' and target == today:
             for t in LADDER:
-                if t in rungs and rungs[t].get('first_ko', 0) > time.time() + 60:
-                    continue
+                if t in rungs:
+                    continue        # 19 Sep: a rung is booked once a day and stays - it used to be
+                                    # rebuilt (new code) the moment its first game kicked off, so
+                                    # the code a reader had taken in the morning vanished from the site
                 if not d['odds'] or t >= d['odds'] * 0.9:
                     break
                 r = nest_code(c['code'], t)
