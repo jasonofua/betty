@@ -1064,6 +1064,7 @@ RULES = [
 ]
 
 CHANGELOG = [
+    dict(date='19 Sep', txt="Points sports, two bugs behind Saturday's losses: (1) the team-page fallback summed the first TWO periods for every sport, so a handball '1st half' was the full-time score and a hockey '1st period' was two periods - every 1H Over agreed 14/14 and handball 1H Overs went 1 of 14, hockey 1st-period Overs 0 of 5; the sum is now the sport's own first period(s). (2) The competition match compared Flashscore's short code ('ALL') with the league name ('Allsvenskan') and never matched, which is what sent those games to the fallback in the first place; the full name is compared first."),
     dict(date='18 Sep', txt='Results and the record start on Monday 14 Sep (user\'s call): the week before is off the site. The bet of the day reads the same window.'),
     dict(date='18 Sep', txt="Bet of the day (user's call): a tab and a 10:12 run that takes the morning tickets and keeps only the legs from bet families in profit on our own settled legs over the last seven days (8+ legs, positive return), one leg per match, never under 2x. The week's family table is on the tab."),
     dict(date='18 Sep', txt="Max odds: full-time match goal Unders out again (own legs 10-18 Sep: 15-6 at ~1.15, -19.6%); FT Over 1.5 not taken under 1.25 (17 legs 64.7%, -22%; at 1.25+ 20 legs 80%). Points sports: totals were put at 12 of 14 for a night and are back at 11 - the 17-leg backtest behind it is too thin to cut a weekend slip on."),

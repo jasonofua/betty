@@ -181,8 +181,14 @@ def team_page_games(pid, slug, kickoff, team, want_home, comp=None, n=7):
         pf, pa = (r['hg'], r['ag']) if is_home else (r['ag'], r['hg'])
         fh = None
         try:
-            q = [int(x) for x in r['q'][:4]]
-            h1, a1 = q[0] + q[2], q[1] + q[3]
+            # 19 Sep: the first-half sum is SPORT['first_periods'] periods, not two.
+            # Summing Q1+Q2 for every sport made a handball '1st half' the full-time
+            # score and a hockey '1st period' the first two periods, so every 1H
+            # Over agreed 14/14 - handball 1H Overs went 1 of 14 on 19 Sep, hockey
+            # 1st-period Overs 0 of 5.
+            k = SPORT['first_periods']
+            q = [int(x) for x in r['q'][:2 * k]]
+            h1, a1 = sum(q[0::2]), sum(q[1::2])
             fh = (h1, a1) if is_home else (a1, h1)
         except (TypeError, ValueError):
             pass
@@ -216,7 +222,7 @@ def venue_games(mid, kickoff, team, suffix, comp=None):
                 d = dict(re.findall(r'([A-Z]{2,3})÷([^¬]*)', g))
                 if 'KC' not in d or not d.get('KU') or not d.get('KT') or int(d['KC']) >= kickoff - 3600:
                     continue
-                if want and _comp_key(d.get('KI') or d.get('KF')) != want:
+                if want and _comp_key(d.get('KF') or d.get('KI')) != want and _comp_key(d.get('KI')) != want:
                     continue                          # a different competition tells us nothing here
                 home_is_team = d.get('KJ', '').lstrip('*') == team
                 pf, pa = int(d['KU']), int(d['KT'])
@@ -245,7 +251,7 @@ def season_games(mid, kickoff, team, comp=None):
                 d = dict(re.findall(r'([A-Z]{2,3})÷([^¬]*)', g))
                 if 'KC' not in d or not d.get('KU') or not d.get('KT') or int(d['KC']) >= kickoff - 3600 or int(d['KC']) < SEASON_START:
                     continue
-                if want and _comp_key(d.get('KI') or d.get('KF')) != want:
+                if want and _comp_key(d.get('KF') or d.get('KI')) != want and _comp_key(d.get('KI')) != want:
                     continue
                 home_is_team = d.get('KJ', '').lstrip('*') == team
                 pf, pa = int(d['KU']), int(d['KT'])
