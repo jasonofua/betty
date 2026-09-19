@@ -86,6 +86,7 @@ def parse_bookings():
             lab = m.group(2)
             nest = re.search(r'nested ([\d.]+)x from ([A-Z0-9]{6})', lab)   # pick-your-odds subset of another code
             nested_from = nest.group(2) if nest and nest.group(2) != code else None
+            rung = f"{float(nest.group(1)):g}x" if nested_from else None
             if code in seen:
                 # the same code logged twice: a base booking always beats a "nested"
                 # record (a rung that turned out to be the whole slip comes back
@@ -112,7 +113,7 @@ def parse_bookings():
             seen[code] = dict(code=code, when=m.group(1), label=lab, product=product_of(lab), sport=(None if product_of(lab) == 'Bet of the day' else sport_of(lab)),
                               url=url or f'http://www.sportybet.com/ng/?shareCode={code}', legs=legs,
                               replaces=rb.group(1) if rb and rb.group(1) != code else None, superseded_by=None,
-                              nested_from=nested_from)
+                              nested_from=nested_from, rung=rung)
     for c in seen.values():
         if c['replaces'] and c['replaces'] in seen:
             seen[c['replaces']]['superseded_by'] = c['code']
@@ -590,12 +591,17 @@ def legs_list(days=35, limit=1200):
     today = dt.datetime.now(tz=WAT).date()
     since = max(today - dt.timedelta(days=days), RECORD_SINCE)
     rows, codes = [], dict(won=0, lost=0, open=0)
+    base = {c['code']: c for c in parse_bookings() if not c['nested_from']}
     for c in parse_bookings():
         d = _day_of(c['when'])
         if d < since:
             break
-        if not c['legs'] or c['superseded_by'] or c['nested_from']:
+        if not c['legs'] or c['superseded_by']:
             continue
+        # 20 Sep: the odds-picker rungs are in the record too (a rung a reader
+        # took in the morning was rebuilt and vanished - G7S2WM won 6/6 unseen)
+        prod = base[c['nested_from']]['product'] if c['nested_from'] and c['nested_from'] in base else c['product']
+        sport = base[c['nested_from']].get('sport') if c['nested_from'] and c['nested_from'] in base else c['sport']
         g = graded(c['code'])
         if not (g.get('legs') or []):
             continue
@@ -605,9 +611,10 @@ def legs_list(days=35, limit=1200):
         for l in dc['legs']:
             sh = l.get('sheet') or {}
             note = loss_cause(l, c['product']) if l['state'] == 'lost' else ((sh.get('flags') or [''])[0])
-            rows.append(dict(code=c['code'], product=c['product'], sport=c['sport'], date=d.strftime('%-d %b'), iso=str(d),
+            rows.append(dict(code=c['code'], product=prod, sport=sport, date=d.strftime('%-d %b'), iso=str(d),
                              comp=l.get('comp') or '', match=l['match'], sel=l['sel'], price=l['price'], score=l['score'] or '',
-                             state=l['state'], hint=l.get('hint') or '', note=note))
+                             state=l['state'], hint=l.get('hint') or '', note=note,
+                             rung=(f"{c['rung']} of {c['nested_from']}" if c.get('nested_from') else '')))
     won = sum(r['state'] == 'won' for r in rows); lost = sum(r['state'] == 'lost' for r in rows)
     return dict(rows=rows[:limit], total=len(rows), since=str(since), legs=dict(won=won, lost=lost, graded=won + lost,
                 rate=round(won / (won + lost) * 100, 1) if won + lost else None), codes=codes)
@@ -870,7 +877,7 @@ def family_stats(days=7):
     (match, selection, day) - the all-games duplicates are not counted twice."""
     seen, out = set(), {}
     for r in legs_list(days=days, limit=5000)['rows']:       # legs_list starts at RECORD_SINCE - the site's window
-        if r['state'] not in ('won', 'lost') or r['product'] in ('All games', 'Bet of the day'):
+        if r['state'] not in ('won', 'lost') or r['product'] in ('All games', 'Bet of the day') or r.get('rung'):
             continue
         k = (r['match'], r['sel'], r['iso'])
         if k in seen:

@@ -465,7 +465,7 @@ nav.bottom span{font-size:10px;font-weight:700;white-space:nowrap;overflow:hidde
   };
   var S = {
     tab: 'Today', day: 'today', slip: null, openLeg: null, copied: null, expanded: {},
-    theme: 'dark', stake: '1000', recFilter: 'All', recWhen: 'all', recRes: 'all', productFilter: 'All', prefs: null, tg: true, showOlder: false, recShow: 30, recOpen: {},
+    theme: 'dark', stake: '1000', recFilter: 'All', recWhen: 'all', recRes: 'all', productFilter: 'All', prefs: null, tg: true, showOlder: false, recShow: 30, recOpen: {}, recRungs: false,
     ladder: null, ladderAt: 0, ladderBusy: false, odds: '5', codes: {}, codesAt: {}, banner: null, live: null, liveAt: 0, record: null, legsData: null, rules: null, console: null, consoleAt: 0,
     pane: 'Run', runProduct: 'Winners', runVals: { until: '23', days: '0', top: '0', target: '50', sport: 'amfoot', min_price: '1.40', agree: '11' },
     runFlags: { dry: false, strict: false, undersonly: false, goalsonly: false, rollover: false }, runMsg: '', graded: null, gradeBusy: false, nestBusy: {}, nestMsg: {},
@@ -872,6 +872,7 @@ nav.bottom span{font-size:10px;font-weight:700;white-space:nowrap;overflow:hidde
       if (S.recWhen === 'yesterday' && r.iso !== iso(yday)) return false;
       if (S.recWhen === 'week' && r.iso < iso(week)) return false;
       if (S.recFilter !== 'All' && r.product !== S.recFilter) return false;
+      if (!S.recRungs && r.rung) return false;
       return true;
     });
     // 19 Sep: the tiles count exactly what the list below shows - the codes and
@@ -879,7 +880,7 @@ nav.bottom span{font-size:10px;font-weight:700;white-space:nowrap;overflow:hidde
     var groups = [], byCode = {};
     rows.forEach(function (r) {
       var g = byCode[r.code];
-      if (!g) { g = byCode[r.code] = { code: r.code, product: r.product, sport: r.sport, date: r.date, iso: r.iso, legs: [], odds: 1 }; groups.push(g); }
+      if (!g) { g = byCode[r.code] = { code: r.code, product: r.product, sport: r.sport, date: r.date, iso: r.iso, rung: r.rung || '', legs: [], odds: 1 }; groups.push(g); }
       g.legs.push(r); g.odds *= (r.price || 1);
     });
     groups.forEach(function (g) {
@@ -895,7 +896,8 @@ nav.bottom span{font-size:10px;font-weight:700;white-space:nowrap;overflow:hidde
     h += '<div class="pills">' + [['today', 'Today'], ['yesterday', 'Yesterday'], ['week', 'This week'], ['all', 'Since 14 Sep']].map(function (x) { return '<button data-when="' + x[0] + '"' + (S.recWhen === x[0] ? ' class="on"' : '') + '>' + x[1] + '</button>'; }).join('') + '</div>';
     var prods = []; D.rows.forEach(function (r) { if (prods.indexOf(r.product) < 0) prods.push(r.product); });
     h += '<div class="pills">' + ['All'].concat(ORDER.filter(function (p) { return prods.indexOf(p) >= 0; })).map(function (p) { return '<button data-filter="' + esc(p) + '"' + (S.recFilter === p ? ' class="on"' : '') + '>' + esc(p) + '</button>'; }).join('') + '</div>';
-    h += '<div class="pills">' + [['all', 'All codes'], ['won', 'Won'], ['lost', 'Lost']].map(function (x) { return '<button data-res="' + x[0] + '"' + (S.recRes === x[0] ? ' class="on2"' : '') + '>' + x[1] + '</button>'; }).join('') + '<span class="muted" style="align-self:center">' + groups.length + ' code' + (groups.length === 1 ? '' : 's') + ' \u00b7 ' + rows.length + ' legs</span></div>';
+    h += '<div class="pills">' + [['all', 'All codes'], ['won', 'Won'], ['lost', 'Lost']].map(function (x) { return '<button data-res="' + x[0] + '"' + (S.recRes === x[0] ? ' class="on2"' : '') + '>' + x[1] + '</button>'; }).join('') +
+      '<button data-rungs="1"' + (S.recRungs ? ' class="on2"' : '') + '>' + (S.recRungs ? 'Odds-picker codes shown' : 'Show odds-picker codes') + '</button><span class="muted" style="align-self:center">' + groups.length + ' code' + (groups.length === 1 ? '' : 's') + ' \u00b7 ' + rows.length + ' legs</span></div>';
     // 19 Sep, user's call: one expandable item per code - code, date, product,
     // odds, legs and the result as the title; tap for the games. Won / lost is a
     // CODE filter: a lost code keeps every leg and its full odds.
@@ -906,7 +908,7 @@ nav.bottom span{font-size:10px;font-weight:700;white-space:nowrap;overflow:hidde
       var won = g.won, lost = g.lost, open = g.open, st = g.st;
       var txt = lost ? lost + ' lost' : open ? open + ' to play' : 'all ' + won + ' won';
       var isOpen = !!S.recOpen[g.code];
-      var title = (TITLE[g.product] || g.product) + (g.sport ? ' \u00b7 ' + g.sport : '');
+      var title = (TITLE[g.product] || g.product) + (g.sport ? ' \u00b7 ' + g.sport : '') + (g.rung ? ' \u00b7 ' + g.rung : '');
       var x = '<div class="citem ' + (st === 'pending' ? '' : st) + (isOpen ? ' open' : '') + '"><button class="chead" data-cexp="' + esc(g.code) + '">' +
         '<span style="min-width:0"><div class="cd">' + esc(g.date) + ' \u00b7 ' + esc(title) + '</div><span class="cc">' + esc(g.code) + '</span><div class="cn">' + g.legs.length + ' leg' + (g.legs.length === 1 ? '' : 's') + ' \u00b7 ' + won + ' won' + (lost ? ' \u00b7 ' + lost + ' lost' : '') + '</div></span>' +
         '<span class="co">' + fmtOdds(g.odds) + '<small>' + chip(st, txt) + '</small></span>' +
@@ -1073,7 +1075,7 @@ nav.bottom span{font-size:10px;font-weight:700;white-space:nowrap;overflow:hidde
 
   // ---------- events ----------
   document.addEventListener('click', function (e) {
-    var t = e.target.closest('[data-copy],[data-open],[data-go],[data-day],[data-leg],[data-filter],[data-when],[data-res],[data-more],[data-cexp],[data-pref],[data-tg],[data-pf],[data-older],[data-expand],[data-pane],[data-runp],[data-flag],[data-run],[data-yest],[data-watch],[data-nest],[data-odds]');
+    var t = e.target.closest('[data-copy],[data-open],[data-go],[data-day],[data-leg],[data-filter],[data-when],[data-res],[data-more],[data-cexp],[data-rungs],[data-pref],[data-tg],[data-pf],[data-older],[data-expand],[data-pane],[data-runp],[data-flag],[data-run],[data-yest],[data-watch],[data-nest],[data-odds]');
     if (!t) return;
     if (t.hasAttribute('data-copy')) { e.stopPropagation(); doCopy(t.getAttribute('data-copy')); return; }
     if (t.hasAttribute('data-nest')) { nest(t.getAttribute('data-nest'), +t.getAttribute('data-target')); return; }
@@ -1087,6 +1089,7 @@ nav.bottom span{font-size:10px;font-weight:700;white-space:nowrap;overflow:hidde
     if (t.hasAttribute('data-res')) { S.recRes = t.getAttribute('data-res'); S.recShow = 30; render(); return; }
     if (t.hasAttribute('data-more')) { S.recShow += 30; render(); return; }
     if (t.hasAttribute('data-cexp')) { var cc = t.getAttribute('data-cexp'); S.recOpen[cc] = !S.recOpen[cc]; render(); return; }
+    if (t.hasAttribute('data-rungs')) { S.recRungs = !S.recRungs; S.recShow = 30; render(); return; }
     if (t.hasAttribute('data-pref')) { var p = t.getAttribute('data-pref'); S.prefs[p] = !S.prefs[p]; save('betty.prefs', JSON.stringify(S.prefs)); render(); return; }
     if (t.hasAttribute('data-tg')) { S.tg = !S.tg; save('betty.tg', S.tg ? '1' : '0'); render(); return; }
     if (t.hasAttribute('data-pf')) { S.productFilter = t.getAttribute('data-pf'); render(); return; }
