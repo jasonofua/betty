@@ -109,7 +109,7 @@ def parse_bookings():
                 if cur is not None and line.startswith('    ') and line.strip():
                     cur['stats'].append(line.strip())
             rb = re.match(r'^.*?\b([A-Z0-9]{6}) with\b', lab)         # a hand rebook names the code it replaces
-            seen[code] = dict(code=code, when=m.group(1), label=lab, product=product_of(lab), sport=sport_of(lab),
+            seen[code] = dict(code=code, when=m.group(1), label=lab, product=product_of(lab), sport=(None if product_of(lab) == 'Bet of the day' else sport_of(lab)),
                               url=url or f'http://www.sportybet.com/ng/?shareCode={code}', legs=legs,
                               replaces=rb.group(1) if rb and rb.group(1) != code else None, superseded_by=None,
                               nested_from=nested_from)
