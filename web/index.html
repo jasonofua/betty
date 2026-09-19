@@ -872,8 +872,6 @@ nav.bottom span{font-size:10px;font-weight:700;white-space:nowrap;overflow:hidde
       if (S.recWhen === 'yesterday' && r.iso !== iso(yday)) return false;
       if (S.recWhen === 'week' && r.iso < iso(week)) return false;
       if (S.recFilter !== 'All' && r.product !== S.recFilter) return false;
-      if (S.recRes === 'won' && r.state !== 'won') return false;
-      if (S.recRes === 'lost' && r.state !== 'lost') return false;
       return true;
     });
     var won = rows.filter(function (r) { return r.state === 'won'; }).length, lost = rows.filter(function (r) { return r.state === 'lost'; }).length;
@@ -883,7 +881,7 @@ nav.bottom span{font-size:10px;font-weight:700;white-space:nowrap;overflow:hidde
     h += '<div class="pills">' + [['today', 'Today'], ['yesterday', 'Yesterday'], ['week', 'This week'], ['all', 'Since 14 Sep']].map(function (x) { return '<button data-when="' + x[0] + '"' + (S.recWhen === x[0] ? ' class="on"' : '') + '>' + x[1] + '</button>'; }).join('') + '</div>';
     var prods = []; D.rows.forEach(function (r) { if (prods.indexOf(r.product) < 0) prods.push(r.product); });
     h += '<div class="pills">' + ['All'].concat(ORDER.filter(function (p) { return prods.indexOf(p) >= 0; })).map(function (p) { return '<button data-filter="' + esc(p) + '"' + (S.recFilter === p ? ' class="on"' : '') + '>' + esc(p) + '</button>'; }).join('') + '</div>';
-    h += '<div class="pills">' + [['all', 'All legs'], ['won', 'Won only'], ['lost', 'Lost only']].map(function (x) { return '<button data-res="' + x[0] + '"' + (S.recRes === x[0] ? ' class="on2"' : '') + '>' + x[1] + '</button>'; }).join('') + '<span class="muted" style="align-self:center">' + rows.length + ' legs</span></div>';
+    h += '<div class="pills">' + [['all', 'All codes'], ['won', 'Won'], ['lost', 'Lost']].map(function (x) { return '<button data-res="' + x[0] + '"' + (S.recRes === x[0] ? ' class="on2"' : '') + '>' + x[1] + '</button>'; }).join('') + '<span class="muted" style="align-self:center">' + rows.length + ' legs</span></div>';
     // 19 Sep, user's call: one expandable item per code - code, date, product,
     // odds, legs and the result as the title; tap for the games.
     var groups = [], byCode = {};
@@ -892,11 +890,17 @@ nav.bottom span{font-size:10px;font-weight:700;white-space:nowrap;overflow:hidde
       if (!g) { g = byCode[r.code] = { code: r.code, product: r.product, sport: r.sport, date: r.date, iso: r.iso, legs: [], odds: 1 }; groups.push(g); }
       g.legs.push(r); g.odds *= (r.price || 1);
     });
+    // won / lost is a CODE filter: a lost code keeps every leg and its full odds
+    groups.forEach(function (g) {
+      g.won = g.legs.filter(function (r) { return r.state === 'won'; }).length; g.lost = g.legs.filter(function (r) { return r.state === 'lost'; }).length;
+      g.open = g.legs.length - g.won - g.lost - g.legs.filter(function (r) { return r.state === 'void'; }).length;
+      g.st = g.lost ? 'lost' : g.open ? 'pending' : 'won';
+    });
+    if (S.recRes === 'won') groups = groups.filter(function (g) { return g.st === 'won'; });
+    if (S.recRes === 'lost') groups = groups.filter(function (g) { return g.st === 'lost'; });
     var show = groups.slice(0, S.recShow);
     h += show.length ? show.map(function (g) {
-      var won = g.legs.filter(function (r) { return r.state === 'won'; }).length, lost = g.legs.filter(function (r) { return r.state === 'lost'; }).length;
-      var open = g.legs.length - won - lost - g.legs.filter(function (r) { return r.state === 'void'; }).length;
-      var st = lost ? 'lost' : open ? 'pending' : 'won';
+      var won = g.won, lost = g.lost, open = g.open, st = g.st;
       var txt = lost ? lost + ' lost' : open ? open + ' to play' : 'all ' + won + ' won';
       var isOpen = !!S.recOpen[g.code];
       var title = (TITLE[g.product] || g.product) + (g.sport ? ' \u00b7 ' + g.sport : '');
