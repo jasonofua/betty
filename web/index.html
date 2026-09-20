@@ -822,10 +822,10 @@ nav.bottom span{font-size:10px;font-weight:700;white-space:nowrap;overflow:hidde
     h += '<div class="kicker" style="margin-top:26px">Family by family \u00b7 our own settled legs, last 7 days from 14 Sep</div>';
     h += '<div class="tablewrap"><div class="cov head" style="grid-template-columns:minmax(0,1.4fr) 56px 56px 72px 80px;min-width:420px"><span>Family</span><span>Legs</span><span>Won</span><span>Return</span><span>Status</span></div>' +
       (B.families || []).map(function (f) {
-        var ok = f.n >= B.min_legs && f.edge > 0;
+        var ok = f.n >= B.min_legs && f.edge > 0 && f.rate >= (B.min_rate || 60);
         return '<div class="cov" style="grid-template-columns:minmax(0,1.4fr) 56px 56px 72px 80px;min-width:420px"><span>' + esc(f.family) + '</span><span class="mono">' + f.n + '</span><span class="mono">' + (f.rate == null ? '-' : f.rate + '%') + '</span><span class="mono" style="color:' + (f.edge > 0 ? 'var(--won)' : 'var(--lost)') + '">' + (f.edge == null ? '-' : (f.edge > 0 ? '+' : '') + f.edge + '%') + '</span><span>' + (ok ? chip('won', 'in') : f.n < B.min_legs ? chip('pending', 'thin') : chip('lost', 'out')) + '</span></div>';
       }).join('') + '</div>';
-    h += '<p class="muted" style="font-size:12.5px">A family is in when it has ' + B.min_legs + '+ settled legs this week and a positive return at the booked prices.</p>';
+    h += '<p class="muted" style="font-size:12.5px">A family is in when it has ' + B.min_legs + '+ settled legs this week, wins at least ' + (B.min_rate || 60) + '% of them and shows a positive return at the booked prices.</p>';
     return h + '</div>';
   }
 

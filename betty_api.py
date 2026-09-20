@@ -895,6 +895,7 @@ def family_stats(days=7):
 BEST_MIN_LEGS = 8        # a family needs this many settled legs in the week to count
 BEST_MIN_ODDS = 2.0      # user's call: the bet of the day pays at least 2x
 BEST_MAX_EDGE = 6        # max-odds legs: model support at least this many points over the book (see best_of_day)
+BEST_MIN_RATE = 60       # a family must win at least this share of its legs (draws at 32% are out whatever their return)
 
 
 def best_of_day(dry=False):
@@ -904,7 +905,11 @@ def best_of_day(dry=False):
     2x. The families and their week are logged on the slip."""
     today = dt.datetime.now(tz=WAT).date(); now = time.time()
     fs = family_stats(7)
-    good = {f: c for f, c in fs.items() if c['n'] >= BEST_MIN_LEGS and c['edge'] is not None and c['edge'] > 0}
+    # 20 Sep: a family also needs to WIN most of its legs. The draws family came in at
+    # +4.6% on 14 legs (four wins at ~3.0 carrying ten losses) and put all thirteen
+    # draws on the bet of the day - a 32% family is not 'the best legs' however its
+    # return reads on a good day.
+    good = {f: c for f, c in fs.items() if c['n'] >= BEST_MIN_LEGS and c['edge'] is not None and c['edge'] > 0 and c['rate'] >= BEST_MIN_RATE}
     if not good:
         return dict(error='no family is in profit over the last seven days')
     sels, srcs = [], []
@@ -970,7 +975,7 @@ def best_view():
     for c in parse_bookings():
         if _day_of(c['when']) == today and c['product'] == 'Bet of the day' and not c['superseded_by']:
             code = decorate(c); break
-    return dict(day=str(today), code=code, families=table, min_legs=BEST_MIN_LEGS, min_odds=BEST_MIN_ODDS)
+    return dict(day=str(today), code=code, families=table, min_legs=BEST_MIN_LEGS, min_odds=BEST_MIN_ODDS, min_rate=BEST_MIN_RATE)
 
 
 # ---------------------------------------------------------------- any code
@@ -1078,6 +1083,7 @@ RULES = [
 ]
 
 CHANGELOG = [
+    dict(date='20 Sep', txt="Bet of the day: a bet family must win at least 60% of its legs to get in, not only show a positive return - the draws family read +4.6% on four wins at 3.0 carrying ten losses and put all thirteen draws on the day's code."),
     dict(date='20 Sep', txt='American football: no full-game totals. Own legs 12-19 Sep: full-game totals 5 of 13 at ~1.85 (-29%), handicaps 11 of 18, first-half lines 6 of 9; four of the five NCAA losses on 19 Sep were full-game totals (Kansas 41 points on Over 50.5, Auburn-Florida 83 on Under 52.5, South Carolina-Mississippi State 75 on Under 58.5).'),
     dict(date='20 Sep', txt="Points sports (user's call): no leg on a side that has not played at least two games this season, and this season's games must agree with every line - totals and first-period totals as well as handicaps. Every hockey and basketball loss of 18-19 Sep with a season-opener window (Sochi, Koln, Freiburg, Rilski, Hamburg Towers, Ormanspor, Trelleborg) was read off last season's games."),
     dict(date='20 Sep', txt="Bet of the day: a max-odds leg needs the model 6+ points over the book's implied chance. Own legs 14-19 Sep: 6+ over went 29 of 31 (+16%), 3-5 over 85% (+1%), 2 or under 88% (+2%). Draws: the shape of the five winners (home clear favourite, sides level in the table) was tested on the 147k-match backfill and is NOT an edge (30.2% v 30.9% priced, -5%); the rule stays as it is (+1.3% at closing, 33.1% v 31.7%)."),
