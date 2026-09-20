@@ -28,7 +28,10 @@ BASE = 'https://www.sportybet.com/api/ng/factsCenter/'
 # line qualifies when the two histories agree - keyed by a sport config.
 SPORTS = {
     'amfoot':     dict(fs=5,  sb='sr:sport:16', board='1,18,60',     winner='219', ft='225', hcp='223', first='68',
-                       periods=4, first_periods=2, blowout=30, reg_only=False, label='American football'),
+                       periods=4, first_periods=2, blowout=30, reg_only=False, label='American football',
+                       no_ft_totals=True),   # 20 Sep: own legs 12-19 Sep - full-game totals 5 of 13 at ~1.85 (-29%);
+                                             # handicaps 11 of 18, first-half lines 6 of 9. Four of the five NCAA
+                                             # losses on 19 Sep were full-game totals.
     'basketball': dict(fs=3,  sb='sr:sport:2',  board='219,225,223', winner='219', ft='225', hcp='223', first='68',
                        periods=4, first_periods=2, blowout=20, reg_only=False, label='Basketball'),
     'hockey':     dict(fs=4,  sb='sr:sport:4',  board='1,18,16',     winner='1',   ft='18',  hcp='16',  first='446',
@@ -345,6 +348,8 @@ def score_game(hg, ag, mk, hcp_agree=None):
     hm = [g['pf'] - g['pa'] for g in hg]; am = [g['pf'] - g['pa'] for g in ag]
     cands = []
     for key, H, Aw in (('FT O/U', ht, at), ('1H O/U', h1, a1)):
+        if key == 'FT O/U' and SPORT.get('no_ft_totals'):
+            continue
         for v, m in lines(mk, key):
             n = len(H) + len(Aw)
             if n < 10:
