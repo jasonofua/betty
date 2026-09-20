@@ -955,7 +955,7 @@ def best_of_day(dry=False):
                       specifier=x['ids']['specifier'], outcomeId=x['ids']['outcomeId']) for x in sels])
     if not bk or not bk.get('code'):
         return dict(error='SportyBet did not return a code' + (f": {bk.get('msg')}" if bk and bk.get('msg') else ''), **view)
-    prev = next((c['code'] for c in parse_bookings() if _day_of(c['when']) == today and c['product'] == 'Bet of the day' and not c['superseded_by']), None)
+    prev = next((c['code'] for c in parse_bookings() if _day_of(c['when']) == today and c['product'] == 'Bet of the day' and not c['superseded_by'] and not c['nested_from']), None)
     A.log_booking(bk['code'], bk.get('url'),
                   f"bet of the day {combo:,.1f}x ({len(sels)} legs) - " + ', '.join(f"{f} {good[f]['won']}/{good[f]['n']} {good[f]['edge']:+.0f}%" for f in fams)
                   + (f" - {prev} with today's tickets rebuilt" if prev and prev != bk['code'] else ''),
@@ -973,8 +973,8 @@ def best_view():
     table = sorted([dict(family=f, **c) for f, c in fs.items() if c['n'] >= 4], key=lambda r: -(r['edge'] or -999))
     code = None
     for c in parse_bookings():
-        if _day_of(c['when']) == today and c['product'] == 'Bet of the day' and not c['superseded_by']:
-            code = decorate(c); break
+        if _day_of(c['when']) == today and c['product'] == 'Bet of the day' and not c['superseded_by'] and not c['nested_from']:
+            code = decorate(c); break         # the base code, not one of its odds-picker rungs
     return dict(day=str(today), code=code, families=table, min_legs=BEST_MIN_LEGS, min_odds=BEST_MIN_ODDS, min_rate=BEST_MIN_RATE)
 
 
