@@ -280,7 +280,14 @@ def season_agrees(lab, hs, as_):
     if m:
         side, v = m.group(1), float(m.group(2))
         mine, theirs = (hs, as_) if side == 'Home' else (as_, hs)
-        hits = sum(g['pf'] - g['pa'] > -v for g in mine) + sum(g['pa'] - g['pf'] > -v for g in theirs)
+        own = sum(g['pf'] - g['pa'] > -v for g in mine)
+        # 21 Sep: the side taking the points is judged on ITS OWN season games first.
+        # Toronto Tempo +19.5 had lost by 32 and 20 in six games (4 of 6 cover) and
+        # still passed at 8 of 10 because New York's four away margins were pooled
+        # in; lost by 37.
+        if own < 0.8 * len(mine):
+            return False
+        hits = own + sum(g['pa'] - g['pf'] > -v for g in theirs)
         return hits >= 0.8 * (len(mine) + len(theirs))
     m = re.match(r'(FT|1H) O/U (Over|Under) ([\d.]+)', lab)
     if m:

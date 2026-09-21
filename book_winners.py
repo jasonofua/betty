@@ -248,8 +248,15 @@ def build(until_h, days=0, verbose=True):
         # combined draws, 49.5% at 4; Norrkoping 0:0 had 4). No shot stats on the
         # favourite (Aarhus, Suzano lost with two checks blind) -> cover only.
         fav_sot = w['h_sot'] if side == 'Home' else w['a_sot']
+        # 21 Sep: the draw signals add up. Jicaral (1.31) had 2 venue draws, Rosario 1,
+        # the head-to-head 2 draws in 5 and Jicaral 3 draws in its last 10 - four
+        # signals each under its own threshold, straight win, 1-1. Six of the six
+        # straight losses at 1.30-1.60 this week were draws; covers in the band 12-2.
+        h2h_d = sum(1 for _, x, y in (w.get('h2h') or []) if x == y)
+        fav_all = w['h_all'] if side == 'Home' else w['a_all']
+        signals = fav_draws + opp_draws + h2h_d + (1 if fav_all and fav_all[1] >= 3 else 0)
         drawy = (fav_draws >= 5 or opp_draws >= 4 or fav_draws + opp_draws >= 4
-                 or (opp_all and opp_all[1] >= 4) or fav_sot is None)
+                 or (opp_all and opp_all[1] >= 4) or fav_sot is None or signals >= 5)
         row['drawy'] = drawy
         if price < STRAIGHT_MAX and not drawy:
             o = outcome(ev, '1', side)

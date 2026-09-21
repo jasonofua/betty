@@ -1145,6 +1145,11 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
             # Veranopolis...). Second-half and first-half totals untouched.
             if qkey == 'goals' and side == 'match' and d.startswith('under'):
                 continue
+            # 21 Sep: goal markets need 5+5 reference games. Hong Kong Rangers Over 2.5
+            # (4/4+4/4) and Cornella Over 1.5 (3/3+3/3) both lost 1-0 / 0-0; a six- or
+            # eight-game sample says little about a goals line.
+            if qkey in GOAL_FAMILY and side == 'match' and (len(home_rec.pairs(qkey)) < 5 or len(away_rec.pairs(qkey)) < 5):
+                continue
             if (qkey in ('goals', 'h2') and side == 'match'
                     and d.startswith('over')):
                 mm = re.search(r'([\d.]+)', d)
