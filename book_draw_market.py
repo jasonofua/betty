@@ -41,11 +41,15 @@ PPG_GAP = 0.2            # 16 Sep, user's call: sides close to each other IN THE
 TABLE_MIN = 8            # 16 Sep, user: "use the real table points not last season form". Both sides need
                          # 8+ league games this season (the measured cut); a league two rounds old has no
                          # table and is skipped rather than read off last season's form.
-PATTERN_GAP = (0.08, 0.17)   # 21 Sep, user's pattern: the sides close but not identical in the table
-PATTERN_UNDER = (1.38, 1.50)  # and SportyBet's Under 2.5 between 1.38 and 1.50. On the 26 legs the
-                              # checks booked 16-21 Sep: 4 won, 1 drew and was voided, 2 lost (1.42, 1.49);
-                              # Under 1.50 went 3 of 3, 1.38 2 of 2. Booked as its own slip so the record
-                              # keeps its score apart from the main draws slip.
+# 21 Sep, user's pattern - EXACT values, not a band: inside the four checks, SportyBet's
+# Under 2.5 at 1.38 or 1.50 (any table gap), or Under 1.41-1.43 with the table gap at
+# 0.13. On the 26 legs the checks booked 16-21 Sep: 1.50 went 3 of 3 (Dalian, Fenix,
+# Dock Sud), 1.38 2 of 2 (San Martin SJ, Lugano), 0.13 / 1.41-1.43 Villa Mitre 0-0 and
+# Douglas Haig 0-0 (voided). The ticks in between (1.42, 1.49) lost. Booked as its own
+# slip so the record keeps its score apart from the main draws slip.
+def on_pattern(p):
+    u, g = round(p['under'], 2), round(p['gap'], 2)
+    return u in (1.38, 1.50) or (1.41 <= u <= 1.43 and g == 0.13)
 BAND_MIN = 0.27          # 16 Sep: games with no reference price - SportyBet's own implied draw (overround
                          # removed) 28%+ is the market at ~30%+, where draws at the market's best price pay
                          # (+2.8% at 30-32%, +6% at 32-34%); SportyBet has priced draws at or above the
@@ -273,12 +277,12 @@ def main():
     for p in band_picks:
         s, ko, imp = p['s'], p['ko'], p['f']['imp']
         tag = ("PICK (user's call, Under 2.5 at %.2f)" % p['under'] if p.get('user') else 'PICK (band, table: %d pts/%d v %d pts/%d = %.2f v %.2f a game, Under 2.5 at %.2f)' % (*p['table'], p['ppg'][0], p['ppg'][1], p['under'])) if p in kept[:BAND_CAP] else ('skip: ' + p.get('why', 'over the cap'))
-        if p in kept[:BAND_CAP] and not p.get('user') and PATTERN_GAP[0] <= p['gap'] <= PATTERN_GAP[1] and PATTERN_UNDER[0] <= p['under'] <= PATTERN_UNDER[1]:
+        if p in kept[:BAND_CAP] and not p.get('user') and on_pattern(p):
             tag += '  <- PATTERN'
         print(f"  {ko:%a %H:%M}  {'-':3} {s['home'][:22]:22} v {s['away'][:22]:22} sporty {s['ox']:.2f} own implied {imp:.0%}  {tag}")
     picks += kept[:BAND_CAP]
-    pattern = [p for p in kept[:BAND_CAP] if not p.get('user') and PATTERN_GAP[0] <= p['gap'] <= PATTERN_GAP[1] and PATTERN_UNDER[0] <= p['under'] <= PATTERN_UNDER[1]]
-    print(f"\n{seen} fixtures matched, {len(picks)} draw singles, {len(pattern)} on the user's pattern (gap {PATTERN_GAP[0]}-{PATTERN_GAP[1]}, Under {PATTERN_UNDER[0]}-{PATTERN_UNDER[1]})" + (' (dry run)' if dry else ''))
+    pattern = [p for p in kept[:BAND_CAP] if not p.get('user') and on_pattern(p)]
+    print(f"\n{seen} fixtures matched, {len(picks)} draw singles, {len(pattern)} on the user's pattern (Under 1.38 or 1.50, or 1.41-1.43 at gap 0.13)" + (' (dry run)' if dry else ''))
     if dry or not picks:
         return
     book_slip(picks, 'market band', only, replaces)
@@ -315,7 +319,7 @@ def book_slip(picks, kind, only, replaces):
         else:
             why = [f"SportyBet {s['o1']:.2f}/{s['ox']:.2f}/{s['o2']:.2f} -> draw {f['imp']:.0%} after the overround (band 27%+); Under 2.5 at {p['under']:.2f}",
                    f"table this season: {p['table'][0]} pts from {p['table'][1]} v {p['table'][2]} pts from {p['table'][3]} = {p['ppg'][0]} v {p['ppg'][1]} a game (sides close)",
-                   ("user's pattern: gap 0.08-0.17 and Under 2.5 at 1.38-1.50 - 4 won, 1 void, 2 lost on the first 26 legs (16-21 Sep)" if kind == "user's pattern" else
+                   ("user's pattern: Under 2.5 at exactly 1.38 or 1.50, or 1.41-1.43 at gap 0.13 - 1.50 went 3 of 3, 1.38 2 of 2, 0.13/1.41-1.43 two 0-0s on the first 26 legs (16-21 Sep)" if kind == "user's pattern" else
                     "rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)")]
         legs.append((s['ko'], f"{s['home']} v {s['away']}", '1X2 / Draw', s['ox'], why))
     if not sels:
@@ -328,7 +332,7 @@ def book_slip(picks, kind, only, replaces):
     print(f"code {code}  {(bk or {}).get('url')}   ({(bk or {}).get('booked')}/{len(sels)} legs, verified {(bk or {}).get('verified')})")
     if code:
         what = ("picked by hand from the draw band" if only else
-                f"user's pattern: table gap {PATTERN_GAP[0]}-{PATTERN_GAP[1]} and Under 2.5 at {PATTERN_UNDER[0]}-{PATTERN_UNDER[1]}, inside the band checks" if kind == "user's pattern" else
+                "user's pattern: Under 2.5 at exactly 1.38 or 1.50, or 1.41-1.43 with the table gap at 0.13, inside the band checks" if kind == "user's pattern" else
                 "draw band, sides close in the table, home not weaker, Under 2.5 <= 1.70")
         A.log_booking(code, bk.get('url'), f"draw slip ({'user' + chr(39) + 's call' if only else kind}) {combo:,.1f}x ({len(legs)} legs){' ' + replaces + ' with' if replaces else ''} - " + what, legs[:A.MAX_CODE])
 
