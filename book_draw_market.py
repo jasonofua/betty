@@ -49,7 +49,8 @@ TABLE_MIN = 8            # 16 Sep, user: "use the real table points not last sea
 # slip so the record keeps its score apart from the main draws slip.
 def on_pattern(p):
     u, g = round(p['under'], 2), round(p['gap'], 2)
-    return u in (1.38, 1.50) or (1.41 <= u <= 1.43 and g == 0.13)
+    # 22 Sep: + gap 0.00 at Under 1.29 (Alvarado v Olimpo 1-1, 20 Sep)
+    return u in (1.38, 1.50) or (1.41 <= u <= 1.43 and g == 0.13) or (u == 1.29 and g == 0.0)
 BAND_MIN = 0.27          # 16 Sep: games with no reference price - SportyBet's own implied draw (overround
                          # removed) 28%+ is the market at ~30%+, where draws at the market's best price pay
                          # (+2.8% at 30-32%, +6% at 32-34%); SportyBet has priced draws at or above the
@@ -282,7 +283,7 @@ def main():
         print(f"  {ko:%a %H:%M}  {'-':3} {s['home'][:22]:22} v {s['away'][:22]:22} sporty {s['ox']:.2f} own implied {imp:.0%}  {tag}")
     picks += kept[:BAND_CAP]
     pattern = [p for p in kept[:BAND_CAP] if not p.get('user') and on_pattern(p)]
-    print(f"\n{seen} fixtures matched, {len(picks)} draw singles, {len(pattern)} on the user's pattern (Under 1.38 or 1.50, or 1.41-1.43 at gap 0.13)" + (' (dry run)' if dry else ''))
+    print(f"\n{seen} fixtures matched, {len(picks)} draw singles, {len(pattern)} on the user's pattern (Under 1.38 or 1.50, 1.41-1.43 at gap 0.13, or 1.29 at gap 0.00)" + (' (dry run)' if dry else ''))
     if dry or not picks:
         return
     book_slip(picks, 'market band', only, replaces)
@@ -332,7 +333,7 @@ def book_slip(picks, kind, only, replaces):
     print(f"code {code}  {(bk or {}).get('url')}   ({(bk or {}).get('booked')}/{len(sels)} legs, verified {(bk or {}).get('verified')})")
     if code:
         what = ("picked by hand from the draw band" if only else
-                "user's pattern: Under 2.5 at exactly 1.38 or 1.50, or 1.41-1.43 with the table gap at 0.13, inside the band checks" if kind == "user's pattern" else
+                "user's pattern: Under 2.5 at exactly 1.38 or 1.50, 1.41-1.43 with the table gap at 0.13, or 1.29 with the gap at 0.00, inside the band checks" if kind == "user's pattern" else
                 "draw band, sides close in the table, home not weaker, Under 2.5 <= 1.70")
         A.log_booking(code, bk.get('url'), f"draw slip ({'user' + chr(39) + 's call' if only else kind}) {combo:,.1f}x ({len(legs)} legs){' ' + replaces + ' with' if replaces else ''} - " + what, legs[:A.MAX_CODE])
 
