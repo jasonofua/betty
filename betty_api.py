@@ -532,6 +532,7 @@ def banner():
 
 
 RECORD_SINCE = dt.date(2026, 9, 14)     # 18 Sep, user's call: the site shows this week and beyond - the week before was bad
+BEST_WINDOW = 3650                      # the bet-of-day family table: the whole record, not a rolling window (see family_stats)
 
 
 def record(days=35):
@@ -872,11 +873,19 @@ def family_of(sel, product, sport=None, price=None):
     return 'other'
 
 
-def family_stats(days=7):
+def family_stats(days=BEST_WINDOW):
     """{family: dict(n, won, ret)} from the last N days of settled legs, one count per
-    (match, selection, day) - the all-games duplicates are not counted twice."""
+    (match, selection, day) - the all-games duplicates are not counted twice.
+
+    23 Sep: this ran on a rolling 7-day window and the window itself was the bug.
+    On 22 Sep it began on 16 Sep, so the two ice-hockey-totals losses of 15 Sep
+    (Avto 8:1, Reaktor 3:4) had aged out: the family read 12/19 = 63% instead of
+    12/21 = 57% and cleared the 60% gate, putting three Over 4.5 legs on the bet
+    of the day - Davos 1:2, Lugano 3:2 and Kloten all lost. A family near the
+    line pops over it whenever its bad day falls off the back, so the default is
+    now the whole record since RECORD_SINCE."""
     seen, out = set(), {}
-    for r in legs_list(days=days, limit=5000)['rows']:       # legs_list starts at RECORD_SINCE - the site's window
+    for r in legs_list(days=days, limit=20000)['rows']:      # legs_list starts at RECORD_SINCE - the site's window
         if r['state'] not in ('won', 'lost') or r['product'] in ('All games', 'Bet of the day') or r.get('rung'):
             continue
         k = (r['match'], r['sel'], r['iso'])
@@ -892,26 +901,28 @@ def family_stats(days=7):
     return out
 
 
-BEST_MIN_LEGS = 8        # a family needs this many settled legs in the week to count
+BEST_MIN_LEGS = 8        # a family needs this many settled legs on the record to count
 BEST_MIN_ODDS = 2.0      # user's call: the bet of the day pays at least 2x
 BEST_MAX_EDGE = 6        # max-odds legs: model support at least this many points over the book (see best_of_day)
 BEST_MIN_RATE = 60       # a family must win at least this share of its legs (draws at 32% are out whatever their return)
+BEST_MAX_PER_COMP = 2    # at most this many legs from one competition (see best_of_day)
 
 
 def best_of_day(dry=False):
     """The bet of the day: every leg still to play on today's base tickets whose
-    family has paid over the last seven days (positive return on 8+ settled
-    legs), one leg per match, all of them on one slip. Nothing is booked under
-    2x. The families and their week are logged on the slip."""
+    family has paid over the RECORD (positive return on 8+ settled legs), one leg
+    per match and at most BEST_MAX_PER_COMP per competition, all of them on one
+    slip. Nothing is booked under 2x. The families and their record are logged on
+    the slip."""
     today = dt.datetime.now(tz=WAT).date(); now = time.time()
-    fs = family_stats(7)
+    fs = family_stats()
     # 20 Sep: a family also needs to WIN most of its legs. The draws family came in at
     # +4.6% on 14 legs (four wins at ~3.0 carrying ten losses) and put all thirteen
     # draws on the bet of the day - a 32% family is not 'the best legs' however its
     # return reads on a good day.
     good = {f: c for f, c in fs.items() if c['n'] >= BEST_MIN_LEGS and c['edge'] is not None and c['edge'] > 0 and c['rate'] >= BEST_MIN_RATE}
     if not good:
-        return dict(error='no family is in profit over the last seven days')
+        return dict(error='no family is in profit over the record')
     sels, srcs = [], []
     for c in parse_bookings():
         if _day_of(c['when']) != today or c['nested_from'] or c['superseded_by'] or not c['legs']:
@@ -935,11 +946,26 @@ def best_of_day(dry=False):
             sels.append(dict(leg=dict(l, ko=l.get('kots', 0)), ids=ids, src=c, fam=fam))
         srcs.append(c['code'])
     bymatch = {}
-    for x in sels:                  # one leg per match: the family with the better week
+    for x in sels:                  # one leg per match: the family with the better record
         k = x['ids'].get('eventId')
         if k not in bymatch or good[x['fam']]['edge'] > good[bymatch[k]['fam']]['edge']:
             bymatch[k] = x
-    sels = sorted(bymatch.values(), key=lambda x: (-good[x['fam']]['edge'], x['leg']['price']))[:A.MAX_CODE]
+    sels = sorted(bymatch.values(), key=lambda x: (-good[x['fam']]['edge'], x['leg']['price']))
+    # 23 Sep: and at most BEST_MAX_PER_COMP legs from any one competition. The
+    # 22 Sep slip was four Swiss National League games at the same 18:45 face-off
+    # plus one Liiga game, and the league had a low-scoring night: Davos 1:2,
+    # Lugano 3:2, Kloten 1:4. Measured on our own settled legs since 14 Sep, a leg
+    # whose same-league sibling lost that day wins 69/124 = 56%, against 160/213 =
+    # 75% for a leg that is the only one from its league. The legs are independent
+    # bets on paper and not in practice - one night's referee, ice and schedule
+    # sit underneath all of them.
+    percomp, kept = collections.Counter(), []
+    for x in sels:
+        c = x['leg'].get('comp') or '?'
+        if percomp[c] >= BEST_MAX_PER_COMP:
+            continue
+        percomp[c] += 1; kept.append(x)
+    sels = kept[:A.MAX_CODE]
     combo = 1.0
     for x in sels:
         combo *= float(x['leg']['price'])
@@ -960,16 +986,17 @@ def best_of_day(dry=False):
                   f"bet of the day {combo:,.1f}x ({len(sels)} legs) - " + ', '.join(f"{f} {good[f]['won']}/{good[f]['n']} {good[f]['edge']:+.0f}%" for f in fams)
                   + (f" - {prev} with today's tickets rebuilt" if prev and prev != bk['code'] else ''),
                   [(x['leg']['ko'], x['leg']['match'], x['leg']['sel'], float(x['leg']['price']),
-                    [f"{x['fam']}: {good[x['fam']]['won']} of {good[x['fam']]['n']} this week, {good[x['fam']]['edge']:+.1f}% return", f"from {x['src']['code']} ({x['src']['product']})"]) for x in sels])
+                    [f"{x['fam']}: {good[x['fam']]['won']} of {good[x['fam']]['n']} on the record, {good[x['fam']]['edge']:+.1f}% return", f"from {x['src']['code']} ({x['src']['product']})"]) for x in sels])
     _book_cache['sig'] = None
     return dict(code=bk['code'], url=bk.get('url'), booked=bk.get('booked'), verified=bk.get('verified'), **view)
 
 
 def best_view():
-    """The Bet of the day tab: today's code (if any) with legs, plus the week's
-    family table so the reader sees why these legs and not others."""
+    """The Bet of the day tab: today's code (if any) with legs, plus the family
+    table so the reader sees why these legs and not others - the same whole-record
+    table the gate itself uses."""
     today = dt.datetime.now(tz=WAT).date()
-    fs = family_stats(7)
+    fs = family_stats()
     table = sorted([dict(family=f, **c) for f, c in fs.items() if c['n'] >= 4], key=lambda r: -(r['edge'] or -999))
     code = None
     for c in parse_bookings():
@@ -1054,12 +1081,12 @@ RULES = [
                      dict(k='Draw-prone: combined venue draws', v='4+'), dict(k='Dropped when', v='more losses than wins, out-shot or out-created on target, losing H2H, dead heat, opponent with 7+ of 10 or more wins than the favourite, opponent 3 of its last 4 at the venue')],
          measured='Corpus: home favourites at margin 1.0+ win 52.6%, win-or-draw 75.9% (19,945 matches). The yesterday check replays the rule over the whole previous board before every booking.'),
     dict(product='Bet of the day', tag='the best of the morning tickets',
-         plain="Built at 10:12 after the morning runs. Every leg still to play on the day's tickets is sorted into its bet family (a winners straight win, a second-half Over 0.5, a hockey handicap...), and only the families that are in profit on our own settled legs over the last seven days - eight or more legs, positive return at the booked prices - make the code. One leg per match, the family with the better week when two tickets have the same game. Never booked under 2x; as big as the paying legs make it.",
-         thresholds=[dict(k='Family window', v='last 7 days, our own settled legs'), dict(k='Family needs', v='8+ legs and a positive return'), dict(k='Winners legs', v='favourite at 1.30-1.60 only'), dict(k='Minimum odds', v='2x'), dict(k='Legs per match', v='one')],
-         measured='The family table on the tab is the measure, recomputed daily.'),
+         plain="Built at 10:12 after the morning runs. Every leg still to play on the day's tickets is sorted into its bet family (a winners straight win, a second-half Over 0.5, a hockey handicap...), and only the families in profit on our own settled legs over the WHOLE record - eight or more legs, 60% of them won, positive return at the booked prices - make the code. One leg per match, the family with the better record when two tickets have the same game, and at most two legs from any one competition. Never booked under 2x; as big as the paying legs make it.",
+         thresholds=[dict(k='Family window', v='the whole record since 14 Sep'), dict(k='Family needs', v='8+ legs, 60%+ won, positive return'), dict(k='Winners legs', v='favourite at 1.30-1.60 only'), dict(k='Max-odds legs', v='model 6+ points over the book'), dict(k='Legs per competition', v='two'), dict(k='Minimum odds', v='2x'), dict(k='Legs per match', v='one')],
+         measured='The family table on the tab is the measure. 23 Sep: the window was seven rolling days and a family near the 60% line cleared it whenever its bad day aged out - ice hockey totals read 12/19 on 22 Sep and 12/21 on the record.'),
     dict(product='Draws', tag='the band, the table, the Under',
-         plain="One slip a day of draws from the market's draw band: SportyBet's own price puts the draw at 27% or more after the overround, the two sides are close in the league table THIS season (points a game within 0.2, both with 8+ league games - a league two rounds old has no table and is skipped), the home side is not the weaker one, and Under 2.5 goals is 1.70 or shorter. Main-league games where SportyBet's draw price is 5% or more above the market average are added on the price alone. The old gate - venue form, expected goals, combined draws - is gone: on 78,000 priced matches it added nothing over the price.",
-         thresholds=[dict(k='SportyBet-implied draw', v='27% or more'), dict(k='Table', v='points a game within 0.2, 8+ league games each'), dict(k='Home side', v='not 10+ points weaker on the 1X2'), dict(k='Under 2.5', v='1.70 or shorter'), dict(k='Shape', v='one slip, up to 12 legs')],
+         plain="One slip a day, and since 23 Sep it is the pattern slip only: a game must pass the band checks AND have SportyBet's Under 2.5 at exactly 1.38 or 1.50, or 1.41-1.43 with the table gap at 0.13, or 1.29 with the gap at 0.00. The band checks themselves are unchanged - SportyBet's own price puts the draw at 27% or more after the overround, the two sides are close in the league table THIS season (points a game within 0.2, both with 8+ league games), the home side is not the weaker one, Under 2.5 is 1.70 or shorter. The band slip on its own is retired: 1 of 9 codes and 0.36 back per 1 staked since 14 Sep, legs 14 of 45. Games named by hand are still booked as asked. Nothing is booked on a day with no pattern game.",
+         thresholds=[dict(k='Under 2.5 must be', v='1.38, 1.50, 1.41-1.43 at gap 0.13, or 1.29 at gap 0.00'), dict(k='SportyBet-implied draw', v='27% or more'), dict(k='Table', v='points a game within 0.2, 8+ league games each'), dict(k='Home side', v='not 10+ points weaker on the 1X2'), dict(k='Under 2.5 ceiling', v='1.70'), dict(k='Shape', v='one slip')],
          measured='football-data 2015-26, 27%+ band: table gap under 0.2 a game 30.6% draws v 29.7% priced (+2.6% at best price), 0.2-0.5 30.1% (+1.4%), 0.5+ 29.3%; away side 10+ points stronger 27.8% (-7.1%); Under 2.5 at 1.51-1.70 in the 30%+ band 33.3% v 31.4% (+2.7% at closing). Price rule: +14.6% / +10.6% on the two halves (n 321 / 379).'),
     dict(product='Half-time draw', tag='1st Half 1X2 Draw',
          plain="The same gate as Draws, priced into the first-half market instead of the full-time one. Halves finish level far more often than matches do, which is where the edge sits: only about half of the gate games level at the break stay level to the end, so the hour is the bet.",
@@ -1077,12 +1104,13 @@ RULES = [
          measured='First weekend (12-13 Sep): totals 5 of 5, first-half totals 2 of 2, handicaps 2 of 4. No corpus yet for the other three sports.'),
     dict(product='Max odds', tag='composite engine',
          plain="The goal-and-stats accumulator: over and unders, team totals, corners, bookings, shots, offsides, fouls, saves, and half markets. Cushion gates and blank-rate tables decide what goes on, family bans stop correlated legs, and the daily rollover follows the biggest slip that lands one time in three.",
-         thresholds=[dict(k='Modes', v='strict, unders-only, goals-only, target odds, rollover'), dict(k='Stat Under cushion', v='line above the sample max'), dict(k='Stat Over cushion', v='line below the sample min'),
-                     dict(k='Bookings cushion', v='1.5'), dict(k='Rollover trigger', v='biggest slip landing 30%+'), dict(k='SportyBet slip cap', v='50 legs')],
-         measured='Per-leg 84-95% on the families kept; the slips are long by design and die to one or two legs.'),
+         thresholds=[dict(k='Modes', v='strict, unders-only, goals-only, target odds, rollover'), dict(k='Highest price on a leg', v='1.35'), dict(k='Stat Under cushion', v='line above the sample max'), dict(k='Stat Over cushion', v='line below the sample min'),
+                     dict(k='Bookings cushion', v='1.5'), dict(k='Goal markets need', v='5+5 reference games'), dict(k='Rollover trigger', v='biggest slip landing 30%+'), dict(k='SportyBet slip cap', v='50 legs')],
+         measured="Per-leg 84-95% on the families kept. 23 Sep: no leg above 1.35 - our own settled legs 14-22 Sep went 165 of 183 (90%) at 1.35 or shorter and 6 of 13 (46%) above it, against a book price of 68%. The reference counts do not improve as the price lengthens; what changes is that the book knows something the stat window cannot see."),
 ]
 
 CHANGELOG = [
+    dict(date='23 Sep', txt="Three fixes from Tuesday. Max odds: no leg priced above 1.35 - own settled legs 14-22 Sep were 165 of 183 (90%) at 1.35 or shorter and 6 of 13 (46%) above it against a book price of 68% (Viseu Over 2.5 at 1.65 on 6/6+4/5 finished 1-1). Bet of the day: the family table is the whole record instead of a rolling seven days - on 22 Sep the window began on 16 Sep, so the two ice-hockey-totals losses of 15 Sep had aged out and the family read 12/19 (63%) instead of 12/21 (57%), clearing the 60% gate and putting three Over 4.5 legs on the slip; and at most two legs from any one competition, after four of the five legs came from the same Swiss league at the same face-off (a leg whose same-league sibling lost that day wins 56%, against 75% when it is the only one from its league). Draws: the market-band slip is retired - 1 of 9 codes and 0.36 back per 1 staked since 14 Sep - and the daily draws code is now the user's exact-value pattern alone."),
     dict(date='21 Sep', txt="Draws, user's pattern: inside the four checks, the legs where SportyBet's Under 2.5 is exactly 1.38 or 1.50, 1.41-1.43 with the table gap at 0.13, or 1.29 with the gap at 0.00, go on a second slip of their own so the record keeps its score. On the first 26 legs of the rule: 1.50 went 3 of 3, 1.38 went 2 of 2, and the two 0.13 / 1.41-1.43 games both finished 0-0 (one voided by SportyBet). The ticks in between - 1.42, 1.49 - lost."),
     dict(date='21 Sep', txt="Three fixes from Sunday's losses. Winners: the draw signals add up - favourite's venue draws + opponent's venue draws + head-to-head draws + a 3-draw last-10 for the favourite; five or more and the pick is the cover (Jicaral 1.31 had four separate signals under their own thresholds, went straight, drew). Points sports: the side taking the points is judged on its own season games first (Toronto Tempo had lost by 32 and 20 in six, 4 of 6 covering +19.5, and passed only because New York's margins were pooled in; lost by 37). Max odds: goal markets need 5+5 reference games (Hong Kong Rangers Over 2.5 on 4/4+4/4 and Cornella on 3/3+3/3 both lost)."),
     dict(date='20 Sep', txt="Bet of the day: a bet family must win at least 60% of its legs to get in, not only show a positive return - the draws family read +4.6% on four wins at 3.0 carrying ten losses and put all thirteen draws on the day's code."),

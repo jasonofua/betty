@@ -22,6 +22,14 @@ import book_v3 as B
 import fetcher_v2 as F2
 import dynamic_v4 as D
 
+# 22 Sep: own settled max-odds legs, 14-22 Sep. Priced at 1.35 or shorter they
+# went 165/183 (90%); above 1.35, 6/13 (46%) against a book price of 68%. The
+# reference counts do not get better as the price lengthens - what changes is
+# that the book has a reason for the longer price and the stat window cannot
+# see it (Viseu O2.5 at 1.65 on 6/6+4/5 finished 1-1). Legs above this are not
+# picked; the match can still contribute a shorter option.
+MAX_PRICE = 1.35
+
 
 def build(until_h=10, floor=None, verbose=True, days=0):
     """`days` pushes the cutoff that many extra days out - `--until 23 --days 2`
@@ -68,6 +76,7 @@ def build(until_h=10, floor=None, verbose=True, days=0):
             st['no record'] += 1
             continue
         kw = {'min_odds': floor} if floor else {}
+        kw['max_odds'] = MAX_PRICE
         # team names, so markets written as "CD Real Tomayapo Over/Under" resolve
         # to that team instead of being read as a match total
         kw['teams'] = (ev.get('homeTeamName'), ev.get('awayTeamName'))

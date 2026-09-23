@@ -286,9 +286,17 @@ def main():
     print(f"\n{seen} fixtures matched, {len(picks)} draw singles, {len(pattern)} on the user's pattern (Under 1.38 or 1.50, 1.41-1.43 at gap 0.13, or 1.29 at gap 0.00)" + (' (dry run)' if dry else ''))
     if dry or not picks:
         return
-    book_slip(picks, 'market band', only, replaces)
-    if pattern and not only:
-        book_slip(pattern, "user's pattern", None, None)
+    # 23 Sep: the market-band slip is no longer booked on its own. Own record
+    # since 14 Sep: 1 of 9 codes, 0.36 back per 1 staked, legs 14 of 45 (31%) -
+    # the band is the market's own draw rate and the market prices it correctly.
+    # The user's exact-value pattern keeps running as its own slip. A hand-picked
+    # list (--only) is still booked as asked: that is the user's call, not the band.
+    if only:
+        book_slip(picks, 'market band', only, replaces)
+    elif pattern:
+        book_slip(pattern, "user's pattern", None, replaces)
+    else:
+        print('no game on the pattern today - nothing booked (the band slip is retired, 1 of 9 codes)')
 
 
 def book_slip(picks, kind, only, replaces):
