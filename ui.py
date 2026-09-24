@@ -631,7 +631,7 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         path = urlparse(self.path).path
-        if path in ('/api/yesterday', '/api/points', '/api/winners', '/api/draws', '/api/drawsmkt', '/api/run', '/api/live', '/api/crawl', '/api/combined', '/api/best'):
+        if path in ('/api/yesterday', '/api/points', '/api/winners', '/api/draws', '/api/drawsmkt', '/api/run', '/api/live', '/api/crawl', '/api/combined', '/api/best', '/api/roll'):
             n = int(self.headers.get('Content-Length', 0))
             raw = self.rfile.read(n) if n else b''
             try:
