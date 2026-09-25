@@ -993,12 +993,18 @@ def best_of_day(dry=False):
     return dict(code=bk['code'], url=bk.get('url'), booked=bk.get('booked'), verified=bk.get('verified'), **view)
 
 
-ROLL_TARGET = 1.5        # user's call 24 Sep: a 1.5x code a day, compounded (2,500 -> ~1.09m in 15 days)
+# 25 Sep: 1.35, not 1.5. Rung 1 at 1.5x lost on KaPa 3-2 Haka and the arithmetic
+# behind it was wrong: three legs from families at 86/90/94% is 72-77% a day, not
+# the 91% the 11-day backtest read. Measured across our own boards 14-25 Sep by
+# target - 1.5x built on 8 days, won 7, estimated 79% a day on the family rates;
+# 1.35x built on 9, won 9, estimated 85%, 3.3 legs. Six points of daily survival
+# for four extra rungs is the trade, and 20 rungs still clears 1m from 2,500.
+ROLL_TARGET = 1.35
 ROLL_MIN_RATE = 80       # a family must win this share of its legs on the record to feed the rollover
 ROLL_MIN_LEGS = 8        # ... on at least this many settled legs
 ROLL_MAX_PER_FAM = 2     # at most this many legs from one family, and one per competition
 ROLL_START = 2500        # day-1 stake in naira
-ROLL_DAYS = 15
+ROLL_DAYS = 20
 
 
 def roll_ladder():
@@ -1042,11 +1048,11 @@ def rollover_of_day(dry=False):
     of their legs on the record, stacked until the slip reaches 1.5x, one leg
     per match, at most two per family and one per competition.
 
-    Backtested on our own board 14-24 Sep: a 1.5x slip was available on all 11
-    days and landed on 10 of them (the 18 Sep slip was three second-half Overs
-    at 1.18-1.21 and one of them blanked). The day is skipped rather than reached
-    for when the safe families cannot get there - a 1.5x built out of 60% legs is
-    not the same bet."""
+    Measured on our own boards 14-25 Sep at every target: 1.35x could be built on
+    9 days and won all 9, with an estimated 85% a day from the family rates; 1.5x
+    built on 8, won 7, estimated 79%. The day is skipped rather than reached for
+    when the safe families cannot get there - a 1.35x built out of 60% legs is not
+    the same bet."""
     today = dt.datetime.now(tz=WAT).date(); now = time.time()
     fs = family_stats()
     good = {f: c for f, c in fs.items() if c['n'] >= ROLL_MIN_LEGS and c['rate'] is not None and c['rate'] >= ROLL_MIN_RATE}
@@ -1213,9 +1219,9 @@ RULES = [
                      dict(k='Stale college rosters', v='prefer totals; handicap needs 12 of 14'), dict(k='This season must agree', v='every line: both sides need 2+ games this season, and those games must agree with the line 80%+; a side that has not played this season is skipped'), dict(k='Same competition only', v='venue games from other competitions are dropped; friendlies and pre-season skipped'), dict(k='Markets', v='totals, period totals, handicaps')],
          measured='First weekend (12-13 Sep): totals 5 of 5, first-half totals 2 of 2, handicaps 2 of 4. No corpus yet for the other three sports.'),
     dict(product='Rollover', tag='1.5x a day, compounded',
-         plain="One small code a day at 1.5x, with the whole return staked the next day: 2,500 becomes about 1.09m if fifteen rungs land in a row. The legs come from the day's own tickets - the shortest prices in the bet families that win 80% or more of their legs on the record, one leg per match, at most two from one family and one from one competition, stacked only until the slip reaches 1.5x. When the safe families cannot reach 1.5x the day is skipped; the ticket is never padded with longer prices to hit the number. A losing day sends the ladder back to rung 1.",
-         thresholds=[dict(k='Daily target', v='1.5x'), dict(k='Family must win', v='80%+ of its legs, 8+ legs'), dict(k='Legs per family', v='two'), dict(k='Legs per competition', v='one'), dict(k='Day 1 stake', v='2,500'), dict(k='Rungs', v='15'), dict(k='After a loss', v='back to rung 1')],
-         measured='Our own board 14-24 Sep: a 1.5x slip was available on 11 of 11 days and landed on 10. The one loss (18 Sep) was three second-half Over 0.5 legs at 1.18-1.21. Fifteen in a row at that rate is roughly one run in six, so the ladder is expected to restart more than once.'),
+         plain="One small code a day at 1.35x, with the whole return staked the next day: 2,500 becomes about 1.02m if twenty rungs land in a row. The legs come from the day's own tickets - the shortest prices in the bet families that win 80% or more of their legs on the record, one leg per match, at most two from one family and one from one competition, stacked only until the slip reaches 1.35x. When the safe families cannot reach 1.35x the day is skipped; the ticket is never padded with longer prices to hit the number. A losing day sends the ladder back to rung 1.",
+         thresholds=[dict(k='Daily target', v='1.35x'), dict(k='Family must win', v='80%+ of its legs, 8+ legs'), dict(k='Legs per family', v='two'), dict(k='Legs per competition', v='one'), dict(k='Day 1 stake', v='2,500'), dict(k='Rungs', v='20'), dict(k='After a loss', v='back to rung 1')],
+         measured='Our own boards 14-25 Sep, by target: 1.35x could be built on 9 days and won all 9, estimated 85% a day from the family rates, 3.3 legs a slip; 1.5x built on 8 and won 7 (79% a day); 1.25x built on 11 and won 10 (86%) but needs 27 rungs. At 85% a day a run averages about six rungs before it breaks, so the ladder is built to restart - each rung is a positive-value bet on its own, the full twenty in a row is not the plan.'),
     dict(product='Max odds', tag='composite engine',
          plain="The goal-and-stats accumulator: over and unders, team totals, corners, bookings, shots, offsides, fouls, saves, and half markets. Cushion gates and blank-rate tables decide what goes on, family bans stop correlated legs, and the daily rollover follows the biggest slip that lands one time in three.",
          thresholds=[dict(k='Modes', v='strict, unders-only, goals-only, target odds, rollover'), dict(k='Highest price on a leg', v='1.35'), dict(k='Stat Under cushion', v='line above the sample max'), dict(k='Stat Over cushion', v='line below the sample min'),
@@ -1224,6 +1230,7 @@ RULES = [
 ]
 
 CHANGELOG = [
+    dict(date='25 Sep', txt="Rollover retuned to 1.35x a day over 20 rungs. Rung 1 at 1.5x lost (KaPa 3-2 Haka, draw-or-away at 1.14) and the sizing behind it was wrong: three legs from families at 86/90/94% is 72-77% a day, not the 91% an 11-day backtest read. Measured across our own boards 14-25 Sep by target: 1.35x could be built on 9 days and won all 9 (85% a day on the family rates, 3.3 legs); 1.5x built on 8 and won 7 (79%); 1.25x built on 11 and won 10 (86%) but needs 27 rungs. Two other candidate fixes were tested and rejected as noise - a winners venue margin carried by one big win wins 49/59 (83%) against 21/26 (81%) when it holds without it, and points handicaps with a weak side column are 4/6."),
     dict(date='24 Sep', txt="Rollover (user's call): a 1.5x code every morning at 10:18, compounded - 2,500 on day 1, each day's return staked the next day, 15 rungs to about 1.09m. It is built from the day's own tickets: the shortest prices in the families that win 80%+ of their legs on the whole record, one leg per match, at most two per family and one per competition, stacked until the slip reaches 1.5x. A day whose safe families cannot reach 1.5x is skipped rather than filled with longer prices. Backtested on our own board 14-24 Sep: a 1.5x slip existed on all 11 days and landed on 10 - the 18 Sep one was three second-half Overs at 1.18-1.21 and one blanked. A lost day puts the ladder back to rung 1."),
     dict(date='23 Sep', txt="Three fixes from Tuesday. Max odds: no leg priced above 1.35 - own settled legs 14-22 Sep were 165 of 183 (90%) at 1.35 or shorter and 6 of 13 (46%) above it against a book price of 68% (Viseu Over 2.5 at 1.65 on 6/6+4/5 finished 1-1). Bet of the day: the family table is the whole record instead of a rolling seven days - on 22 Sep the window began on 16 Sep, so the two ice-hockey-totals losses of 15 Sep had aged out and the family read 12/19 (63%) instead of 12/21 (57%), clearing the 60% gate and putting three Over 4.5 legs on the slip; and at most two legs from any one competition, after four of the five legs came from the same Swiss league at the same face-off (a leg whose same-league sibling lost that day wins 56%, against 75% when it is the only one from its league). Draws: the market-band slip is retired - 1 of 9 codes and 0.36 back per 1 staked since 14 Sep - and the daily draws code is now the user's exact-value pattern alone."),
     dict(date='21 Sep', txt="Draws, user's pattern: inside the four checks, the legs where SportyBet's Under 2.5 is exactly 1.38 or 1.50, 1.41-1.43 with the table gap at 0.13, or 1.29 with the gap at 0.00, go on a second slip of their own so the record keeps its score. On the first 26 legs of the rule: 1.50 went 3 of 3, 1.38 went 2 of 2, and the two 0.13 / 1.41-1.43 games both finished 0-0 (one voided by SportyBet). The ticks in between - 1.42, 1.49 - lost."),
