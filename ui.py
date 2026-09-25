@@ -314,6 +314,10 @@ def scheduler():
                         draw_job(body['until'], body.get('days', 0), False, bool(body.get('half')))
                     elif path == '/api/drawsmkt':
                         script_job('draws', ['book_draw_market.py'], 'draw slip (market band)')
+                    elif path == '/api/bymarket':
+                        args = ['book_bymarket.py', '--until', str(body.get('until', 23)),
+                                '--days', str(body.get('days', 0))]
+                        script_job('bymarket', args, 'one market per slip (scheduled)')
                     elif path == '/api/run':
                         run_job(float(body.get('target', 50)), int(body['until']), int(body.get('days', 0)), False,
                                 bool(body.get('rollover')), 'composite', bool(body.get('maxodds')),
@@ -631,7 +635,7 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         path = urlparse(self.path).path
-        if path in ('/api/yesterday', '/api/points', '/api/winners', '/api/draws', '/api/drawsmkt', '/api/run', '/api/live', '/api/crawl', '/api/combined', '/api/best', '/api/roll'):
+        if path in ('/api/yesterday', '/api/points', '/api/winners', '/api/draws', '/api/drawsmkt', '/api/bymarket', '/api/run', '/api/live', '/api/crawl', '/api/combined', '/api/best', '/api/roll'):
             n = int(self.headers.get('Content-Length', 0))
             raw = self.rfile.read(n) if n else b''
             try:
@@ -658,6 +662,20 @@ class Handler(BaseHTTPRequestHandler):
         if path == '/api/yesterday':
             import betty_api as BA
             self._send(json.dumps({'ok': BA.run_yesterday(), 'state': BA.YEST['state']})); return
+        if path == '/api/bymarket':
+            with LOCK:
+                if JOB['state'] not in ('idle', 'done'):
+                    self._send(json.dumps({'error': 'a run is already in progress'}), code=409); return
+                JOB['state'] = 'building'
+            args = ['book_bymarket.py'] + (['--dry'] if self._body.get('dry') else [])
+            if str(self._body.get('until') or '').isdigit():
+                args += ['--until', str(int(self._body['until']))]
+            if str(self._body.get('days') or '').isdigit():
+                args += ['--days', str(int(self._body['days']))]
+            if str(self._body.get('min') or '').isdigit():
+                args += ['--min', str(int(self._body['min']))]
+            threading.Thread(target=script_job, args=('bymarket', args, 'one market per slip'), daemon=True).start()
+            self._send(json.dumps({'ok': True})); return
         if path == '/api/drawsmkt':
             with LOCK:
                 if JOB['state'] not in ('idle', 'done'):

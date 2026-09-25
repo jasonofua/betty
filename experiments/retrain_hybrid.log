@@ -1,0 +1,78 @@
+50326 matches, 39059 sheeted
+
+--- GOAL MARKETS: neural nets (Brier, out-of-time) ---
+target                 base       NN  keep?
+ft_over05            0.0572   0.0592  drop
+ft_over15            0.1667   0.1621  KEEP
+ft_over25            0.2457   0.2369  KEEP
+ft_over35            0.2391   0.2310  KEEP
+ft_under25           0.2457   0.2363  KEEP
+ft_under35           0.2391   0.2310  KEEP
+ft_under45           0.1719   0.1652  KEEP
+ft_under55           0.0993   0.0990  KEEP
+1h_over05            0.1948   0.1916  KEEP
+1h_over15            0.2419   0.2355  KEEP
+1h_under15           0.2419   0.2360  KEEP
+1h_under25           0.1429   0.1417  KEEP
+1h_under35           0.0564   0.0583  drop
+2h_over05            0.1512   0.1524  drop
+2h_over15            0.2522   0.2474  KEEP
+2h_under15           0.2522   0.2476  KEEP
+2h_under25           0.1903   0.1877  KEEP
+2h_under35           0.0919   0.0929  drop
+home_over05          0.1771   0.1732  KEEP
+home_over15          0.2502   0.2405  KEEP
+away_over05          0.2057   0.2003  KEEP
+away_over15          0.2405   0.2299  KEEP
+home_under15         0.2502   0.2388  KEEP
+home_under25         0.1866   0.1772  KEEP
+away_under15         0.2405   0.2321  KEEP
+away_under25         0.1488   0.1456  KEEP
+home_both_halves     0.2188   0.2101  KEEP
+away_both_halves     0.1909   0.1854  KEEP
+home_winboth         0.1319   0.1289  KEEP
+away_winboth         0.0946   0.0930  KEEP
+gg                   0.2483   0.2466  KEEP
+1h_gg                0.1715   0.1727  drop
+2h_gg                0.2044   0.2041  KEEP
+
+--- STAT MARKETS: XGBoost (RMSE, out-of-time) ---
+target                  n   league      XGB  keep?
+corners_home        20495    2.924    2.827  KEEP
+corners_away        20495    2.637    2.556  KEEP
+corners_match       20495    3.451    3.450  KEEP
+yellow_home         18904    1.335    1.318  KEEP
+yellow_away         18904    1.382    1.377  KEEP
+yellow_match        18904    2.029    2.025  KEEP
+sot_home            20485    2.881    2.750  KEEP
+sot_away            20485    2.639    2.528  KEEP
+sot_match           20485    3.987    3.962  KEEP
+offsides_home       11050    1.523    1.477  KEEP
+offsides_away       11050    1.443    1.408  KEEP
+offsides_match      11050    2.068    2.013  KEEP
+fouls_home          10955    4.035    3.880  KEEP
+fouls_away          10955    4.066    3.921  KEEP
+fouls_match         10955    6.137   72.042  drop
+saves_home          10197    1.885    1.848  KEEP
+saves_away          10197    2.132    2.071  KEEP
+saves_match         10197    2.643    2.646  drop
+corners_h1_home             92  too thin
+corners_h1_away             92  too thin
+corners_h1_match            92  too thin
+yellow_h1_home              9  too thin
+yellow_h1_away              9  too thin
+yellow_h1_match             9  too thin
+sot_h1_home             92  too thin
+sot_h1_away             92  too thin
+sot_h1_match            92  too thin
+offsides_h1_home             31  too thin
+offsides_h1_away             31  too thin
+offsides_h1_match            31  too thin
+fouls_h1_home             33  too thin
+fouls_h1_away             33  too thin
+fouls_h1_match            33  too thin
+saves_h1_home             26  too thin
+saves_h1_away             26  too thin
+saves_h1_match            26  too thin
+
+saved hybrid_bundle.pkl: 28 goal nets, 16 stat models (only those that beat their baseline)

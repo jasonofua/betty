@@ -1,0 +1,20 @@
+corpus rows usable: 48550
+wrote 48550 rows -> /Users/apple/Downloads/draw/experiments/draw_dataset.jsonl
+
+feature           coverage
+xg                  100.0%
+lg_draw              53.0%
+h_sot                72.0%
+h_sot_ag             72.0%
+h_corners            72.0%
+h_corners_ag         72.0%
+h_yellow             70.8%
+h_offsides           47.6%
+h_fouls              47.7%
+h_saves              39.5%
+h_htdraw             90.3%
+h_btts               90.3%
+sxg                  67.6%
+smis                 67.6%
+cxg                  67.6%
+cmis                 67.6%

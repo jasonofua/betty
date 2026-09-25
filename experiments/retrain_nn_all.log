@@ -1,0 +1,44 @@
+50326 matches, 39059 with stat sheets
+
+--- CLASSIFIERS (Brier, out-of-time on 15098) ---
+target                 base       NN  verdict
+2h_over05            0.1512   0.1524  base better
+2h_under15           0.2522   0.2476  NN better
+2h_under25           0.1903   0.1877  NN better
+2h_under35           0.0919   0.0912  NN better
+1h_over05            0.1948   0.1916  NN better
+1h_under15           0.2419   0.2360  NN better
+1h_under25           0.1429   0.1398  NN better
+ft_over15            0.1667   0.1621  NN better
+ft_over25            0.2457   0.2369  NN better
+ft_under25           0.2457   0.2363  NN better
+ft_under35           0.2391   0.2310  NN better
+ft_under45           0.1719   0.1671  NN better
+home_winboth         0.1319   0.1293  NN better
+away_winboth         0.0946   0.0918  NN better
+home_both_halves     0.2188   0.2101  NN better
+away_both_halves     0.1909   0.1854  NN better
+
+--- COUNT MODELS (RMSE, out-of-time) ---
+target               n_tr   league       NN  NB alpha
+corners_match       27729    3.657    3.661  0.032
+corners_home        27729    3.028    2.987  0.110  <-- NN better
+corners_away        27729    2.748    2.700  0.127  <-- NN better
+yellow_match        26436    2.087    2.088  0.000
+yellow_home         26436    1.332    1.322  0.000  <-- NN better
+yellow_away         26436    1.375    1.380  0.000
+sot_match           27719    4.130    4.115  0.069  <-- NN better
+sot_home            27719    3.034    2.938  0.120  <-- NN better
+sot_away            27719    2.852    2.787  0.134  <-- NN better
+offsides_match      15633    2.239    2.254  0.068
+offsides_home       15633    1.597    1.600  0.170
+offsides_away       15633    1.561    1.574  0.149
+fouls_match         15561    7.224    7.206  0.018  <-- NN better
+fouls_home          15561    4.505    4.486  0.023  <-- NN better
+fouls_away          15561    4.580    4.577  0.024  <-- NN better
+saves_match         13815    2.917    2.924  0.031
+saves_home          13815    2.010    1.997  0.105  <-- NN better
+saves_away          13815    2.205    2.169  0.082  <-- NN better
+
+saved nn_all_bundle.pkl: 16 classifiers, 18 count models
+targets where the net beats its baseline: 26/34

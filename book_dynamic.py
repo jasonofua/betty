@@ -31,7 +31,7 @@ import dynamic_v4 as D
 MAX_PRICE = 1.35
 
 
-def build(until_h=10, floor=None, verbose=True, days=0):
+def build(until_h=10, floor=None, verbose=True, days=0, cap=None):
     """`days` pushes the cutoff that many extra days out - `--until 23 --days 2`
     means 23:00 the day after tomorrow. Without it the window can never exceed
     24 hours, because the cutoff is the next occurrence of that hour."""
@@ -76,7 +76,7 @@ def build(until_h=10, floor=None, verbose=True, days=0):
             st['no record'] += 1
             continue
         kw = {'min_odds': floor} if floor else {}
-        kw['max_odds'] = MAX_PRICE
+        kw['max_odds'] = MAX_PRICE if cap is None else cap
         # team names, so markets written as "CD Real Tomayapo Over/Under" resolve
         # to that team instead of being read as a match total
         kw['teams'] = (ev.get('homeTeamName'), ev.get('awayTeamName'))

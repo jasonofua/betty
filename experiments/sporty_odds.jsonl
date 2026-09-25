@@ -1,0 +1,998 @@
+{"snap": 1789503563, "eid": "sr:match:72221274", "ko": 1789758000, "comp": "England: Premier League", "home": "Brentford", "away": "Chelsea", "o1": 2.9, "ox": 3.85, "o2": 2.35}
+{"snap": 1789503563, "eid": "sr:match:72221290", "ko": 1789817400, "comp": "England: Premier League", "home": "Tottenham", "away": "Aston Villa", "o1": 2.02, "ox": 3.7, "o2": 3.77}
+{"snap": 1789503563, "eid": "sr:match:72221276", "ko": 1789826400, "comp": "England: Premier League", "home": "Brighton", "away": "Arsenal", "o1": 4.72, "ox": 3.96, "o2": 1.77}
+{"snap": 1789503563, "eid": "sr:match:72221278", "ko": 1789826400, "comp": "England: Premier League", "home": "Everton", "away": "Ipswich Town", "o1": 1.82, "ox": 3.87, "o2": 4.51}
+{"snap": 1789503563, "eid": "sr:match:72221286", "ko": 1789826400, "comp": "England: Premier League", "home": "Newcastle", "away": "Hull City", "o1": 1.64, "ox": 4.41, "o2": 5.21}
+{"snap": 1789503563, "eid": "sr:match:72221288", "ko": 1789835400, "comp": "England: Premier League", "home": "Nottingham Forest", "away": "Coventry City", "o1": 1.7, "ox": 4.07, "o2": 5.1}
+{"snap": 1789503563, "eid": "sr:match:72221272", "ko": 1789909200, "comp": "England: Premier League", "home": "Bournemouth", "away": "Liverpool", "o1": 3.1, "ox": 3.8, "o2": 2.2}
+{"snap": 1789503563, "eid": "sr:match:72221282", "ko": 1789909200, "comp": "England: Premier League", "home": "Leeds United", "away": "Crystal Palace", "o1": 1.84, "ox": 3.81, "o2": 4.27}
+{"snap": 1789503563, "eid": "sr:match:72221284", "ko": 1789909200, "comp": "England: Premier League", "home": "Man City", "away": "Sunderland AFC", "o1": 1.32, "ox": 5.8, "o2": 9.31}
+{"snap": 1789503563, "eid": "sr:match:72221280", "ko": 1789918200, "comp": "England: Premier League", "home": "Fulham", "away": "Man Utd", "o1": 3.42, "ox": 3.8, "o2": 2.06}
+{"snap": 1789503563, "eid": "sr:match:74165904", "ko": 1791909900, "comp": "International Clubs: UEFA Champions League", "home": "Lens", "away": "Sporting", "o1": 2.4, "ox": 3.81, "o2": 2.77}
+{"snap": 1789503563, "eid": "sr:match:74165906", "ko": 1791909900, "comp": "International Clubs: UEFA Champions League", "home": "Sabah Masazir", "away": "Slavia Prague", "o1": 3.51, "ox": 3.78, "o2": 2.04}
+{"snap": 1789503563, "eid": "sr:match:74165908", "ko": 1791918000, "comp": "International Clubs: UEFA Champions League", "home": "Arsenal", "away": "Lille", "o1": 1.23, "ox": 6.62, "o2": 12.76}
+{"snap": 1789503563, "eid": "sr:match:74165910", "ko": 1791918000, "comp": "International Clubs: UEFA Champions League", "home": "Atletico Madrid", "away": "Man Utd", "o1": 2.4, "ox": 3.85, "o2": 2.75}
+{"snap": 1789503563, "eid": "sr:match:74165914", "ko": 1791918000, "comp": "International Clubs: UEFA Champions League", "home": "Galatasaray Istanbul", "away": "Barcelona", "o1": 7.4, "ox": 6.05, "o2": 1.35}
+{"snap": 1789503563, "eid": "sr:match:74165912", "ko": 1791918000, "comp": "International Clubs: UEFA Champions League", "home": "Inter", "away": "Club Brugge", "o1": 1.31, "ox": 5.85, "o2": 9.44}
+{"snap": 1789503563, "eid": "sr:match:74165916", "ko": 1791918000, "comp": "International Clubs: UEFA Champions League", "home": "RB Leipzig", "away": "PSV Eindhoven", "o1": 2.07, "ox": 3.94, "o2": 3.3}
+{"snap": 1789503563, "eid": "sr:match:74165918", "ko": 1791918000, "comp": "International Clubs: UEFA Champions League", "home": "Viking FK", "away": "Bayern Munich", "o1": 17.87, "ox": 11.89, "o2": 1.11}
+{"snap": 1789503563, "eid": "sr:match:74165920", "ko": 1791918000, "comp": "International Clubs: UEFA Champions League", "home": "Villarreal", "away": "Napoli", "o1": 2.37, "ox": 3.52, "o2": 2.99}
+{"snap": 1789503563, "eid": "sr:match:74165922", "ko": 1791996300, "comp": "International Clubs: UEFA Champions League", "home": "Feyenoord", "away": "Como 1907", "o1": 3.53, "ox": 3.92, "o2": 1.99}
+{"snap": 1789503563, "eid": "sr:match:74314590", "ko": 1789584300, "comp": "England: EFL Cup", "home": "Everton", "away": "Wolves", "o1": 1.56, "ox": 4.58, "o2": 6.27}
+{"snap": 1789503563, "eid": "sr:match:74158488", "ko": 1789584300, "comp": "England: EFL Cup", "home": "Fleetwood Town", "away": "Sheffield United", "o1": 5.32, "ox": 4.36, "o2": 1.66}
+{"snap": 1789503563, "eid": "sr:match:74158490", "ko": 1789585200, "comp": "England: EFL Cup", "home": "Coventry City", "away": "Aston Villa", "o1": 3.12, "ox": 3.71, "o2": 2.32}
+{"snap": 1789503563, "eid": "sr:match:74158494", "ko": 1789585200, "comp": "England: EFL Cup", "home": "Man Utd", "away": "Brighton", "o1": 1.89, "ox": 4.18, "o2": 3.96}
+{"snap": 1789503563, "eid": "sr:match:74158496", "ko": 1789669800, "comp": "England: EFL Cup", "home": "Man City", "away": "Norwich", "o1": 1.15, "ox": 10.27, "o2": 18.87}
+{"snap": 1789503563, "eid": "sr:match:72478568", "ko": 1789578000, "comp": "Spain: LaLiga", "home": "Atletico Madrid", "away": "Osasuna", "o1": 1.41, "ox": 5.27, "o2": 8.23}
+{"snap": 1789503563, "eid": "sr:match:72478572", "ko": 1789578000, "comp": "Spain: LaLiga", "home": "RC Deportivo de A Coruna", "away": "Sevilla", "o1": 2.62, "ox": 3.21, "o2": 3.06}
+{"snap": 1789503563, "eid": "sr:match:72478576", "ko": 1789587000, "comp": "Spain: LaLiga", "home": "Barcelona", "away": "Racing Santander", "o1": 1.09, "ox": 15.17, "o2": 27.74}
+{"snap": 1789503563, "eid": "sr:match:72478578", "ko": 1789587000, "comp": "Spain: LaLiga", "home": "Levante", "away": "Athletic Bilbao", "o1": 3.42, "ox": 3.6, "o2": 2.22}
+{"snap": 1789503563, "eid": "sr:match:72478570", "ko": 1789664400, "comp": "Spain: LaLiga", "home": "Betis", "away": "Getafe", "o1": 1.74, "ox": 3.82, "o2": 5.5}
+{"snap": 1789503563, "eid": "sr:match:72478580", "ko": 1789673400, "comp": "Spain: LaLiga", "home": "Malaga CF", "away": "Villarreal", "o1": 3.68, "ox": 3.87, "o2": 2.04}
+{"snap": 1789503563, "eid": "sr:match:72478594", "ko": 1789758000, "comp": "Spain: LaLiga", "home": "Espanyol", "away": "Elche CF", "o1": 1.91, "ox": 3.62, "o2": 4.33}
+{"snap": 1789503563, "eid": "sr:match:72478598", "ko": 1789819200, "comp": "Spain: LaLiga", "home": "Osasuna", "away": "Rayo Vallecano", "o1": 2.29, "ox": 3.39, "o2": 3.35}
+{"snap": 1789503563, "eid": "sr:match:72478586", "ko": 1789827300, "comp": "Spain: LaLiga", "home": "Athletic Bilbao", "away": "Alaves", "o1": 1.67, "ox": 3.97, "o2": 5.54}
+{"snap": 1789503563, "eid": "sr:match:72478590", "ko": 1789835400, "comp": "Spain: LaLiga", "home": "Celta", "away": "Racing Santander", "o1": 1.84, "ox": 3.96, "o2": 4.24}
+{"snap": 1789503563, "eid": "sr:match:72513202", "ko": 1789756200, "comp": "Germany: Bundesliga", "home": "Bayern Munich", "away": "Union Berlin", "o1": 1.08, "ox": 14.56, "o2": 28.32}
+{"snap": 1789503563, "eid": "sr:match:72513210", "ko": 1789824600, "comp": "Germany: Bundesliga", "home": "Borussia M\u00b4gladbach", "away": "Mainz", "o1": 2.97, "ox": 3.8, "o2": 2.33}
+{"snap": 1789503563, "eid": "sr:match:72513208", "ko": 1789824600, "comp": "Germany: Bundesliga", "home": "Eintracht Frankfurt", "away": "Freiburg", "o1": 2.42, "ox": 3.88, "o2": 2.78}
+{"snap": 1789503563, "eid": "sr:match:72513212", "ko": 1789824600, "comp": "Germany: Bundesliga", "home": "Hamburger SV", "away": "Cologne", "o1": 2.79, "ox": 3.72, "o2": 2.48}
+{"snap": 1789503563, "eid": "sr:match:72513214", "ko": 1789824600, "comp": "Germany: Bundesliga", "home": "Werder Bremen", "away": "Augsburg", "o1": 2.39, "ox": 3.91, "o2": 2.82}
+{"snap": 1789503563, "eid": "sr:match:72513204", "ko": 1789835400, "comp": "Germany: Bundesliga", "home": "Stuttgart", "away": "Borussia Dortmund", "o1": 2.39, "ox": 3.96, "o2": 2.79}
+{"snap": 1789503563, "eid": "sr:match:72513206", "ko": 1789911000, "comp": "Germany: Bundesliga", "home": "Bayer Leverkusen", "away": "RB Leipzig", "o1": 2.03, "ox": 4.12, "o2": 3.28}
+{"snap": 1789503563, "eid": "sr:match:72513216", "ko": 1789918200, "comp": "Germany: Bundesliga", "home": "Schalke", "away": "SV 07 Elversberg", "o1": 2.1, "ox": 3.71, "o2": 3.38}
+{"snap": 1789503563, "eid": "sr:match:72513218", "ko": 1789925400, "comp": "Germany: Bundesliga", "home": "Paderborn", "away": "Hoffenheim", "o1": 4.46, "ox": 4.37, "o2": 1.7}
+{"snap": 1789503563, "eid": "sr:match:71945276", "ko": 1789757100, "comp": "Italy: Serie A", "home": "Monza", "away": "Sassuolo", "o1": 3.05, "ox": 3.51, "o2": 2.39}
+{"snap": 1789503563, "eid": "sr:match:71945266", "ko": 1789822800, "comp": "Italy: Serie A", "home": "Bologna", "away": "Torino", "o1": 1.99, "ox": 3.55, "o2": 4.08}
+{"snap": 1789503563, "eid": "sr:match:71945282", "ko": 1789822800, "comp": "Italy: Serie A", "home": "Udinese", "away": "Cagliari", "o1": 2.29, "ox": 3.32, "o2": 3.42}
+{"snap": 1789503563, "eid": "sr:match:71945280", "ko": 1789833600, "comp": "Italy: Serie A", "home": "Roma", "away": "Inter", "o1": 2.71, "ox": 3.59, "o2": 2.61}
+{"snap": 1789503563, "eid": "sr:match:71945284", "ko": 1789843500, "comp": "Italy: Serie A", "home": "Venezia FC", "away": "Lazio", "o1": 3.78, "ox": 3.64, "o2": 2.04}
+{"snap": 1789503563, "eid": "sr:match:71945268", "ko": 1789900200, "comp": "Italy: Serie A", "home": "Fiorentina", "away": "Napoli", "o1": 3.24, "ox": 3.45, "o2": 2.27}
+{"snap": 1789503563, "eid": "sr:match:71945270", "ko": 1789909200, "comp": "Italy: Serie A", "home": "Frosinone", "away": "Como 1907", "o1": 5.61, "ox": 4.84, "o2": 1.53}
+{"snap": 1789503563, "eid": "sr:match:71945278", "ko": 1789909200, "comp": "Italy: Serie A", "home": "Parma Calcio", "away": "Genoa", "o1": 3.11, "ox": 3.1, "o2": 2.52}
+{"snap": 1789503563, "eid": "sr:match:71945272", "ko": 1789920000, "comp": "Italy: Serie A", "home": "Juventus", "away": "Atalanta", "o1": 1.73, "ox": 3.92, "o2": 4.81}
+{"snap": 1789503563, "eid": "sr:match:71945274", "ko": 1789929900, "comp": "Italy: Serie A", "home": "AC Milan", "away": "Lecce", "o1": 1.27, "ox": 6.04, "o2": 11.21}
+{"snap": 1789503563, "eid": "sr:match:68932806", "ko": 1790265600, "comp": "International: UEFA Nations League", "home": "Andorra", "away": "Malta", "o1": 3.32, "ox": 2.89, "o2": 2.54}
+{"snap": 1789503563, "eid": "sr:match:68932720", "ko": 1790275500, "comp": "International: UEFA Nations League", "home": "Austria", "away": "Israel", "o1": 1.42, "ox": 5.11, "o2": 7.13}
+{"snap": 1789503563, "eid": "sr:match:68932722", "ko": 1790275500, "comp": "International: UEFA Nations League", "home": "Kosovo", "away": "Ireland", "o1": 2.89, "ox": 3.21, "o2": 2.62}
+{"snap": 1789503563, "eid": "sr:match:68932068", "ko": 1790275500, "comp": "International: UEFA Nations League", "home": "Liechtenstein", "away": "Lithuania", "o1": 10.0, "ox": 4.3, "o2": 1.41}
+{"snap": 1789503563, "eid": "sr:match:68931508", "ko": 1790275500, "comp": "International: UEFA Nations League", "home": "Netherlands", "away": "Germany", "o1": 2.34, "ox": 3.77, "o2": 2.89}
+{"snap": 1789503563, "eid": "sr:match:68931762", "ko": 1790275500, "comp": "International: UEFA Nations League", "home": "Norway", "away": "Denmark", "o1": 1.96, "ox": 3.68, "o2": 3.86}
+{"snap": 1789503563, "eid": "sr:match:68931810", "ko": 1790275500, "comp": "International: UEFA Nations League", "home": "Portugal", "away": "Wales", "o1": 1.26, "ox": 6.29, "o2": 11.43}
+{"snap": 1789503563, "eid": "sr:match:68931512", "ko": 1790275500, "comp": "International: UEFA Nations League", "home": "Serbia", "away": "Greece", "o1": 2.69, "ox": 3.31, "o2": 2.73}
+{"snap": 1789503563, "eid": "sr:match:68932406", "ko": 1790352000, "comp": "International: UEFA Nations League", "home": "Armenia", "away": "Latvia", "o1": 1.75, "ox": 3.76, "o2": 4.9}
+{"snap": 1789503563, "eid": "sr:match:68932750", "ko": 1790352000, "comp": "International: UEFA Nations League", "home": "Georgia", "away": "Northern Ireland", "o1": 1.94, "ox": 3.6, "o2": 4.07}
+{"snap": 1789503564, "eid": "sr:match:68931646", "ko": 1790448300, "comp": "International: UEFA Nations League", "home": "England", "away": "Spain", "o1": 2.79, "ox": 3.39, "o2": 2.59}
+{"snap": 1789503564, "eid": "sr:match:68932782", "ko": 1790448300, "comp": "International: UEFA Nations League", "home": "North Macedonia", "away": "Switzerland", "o1": 7.44, "ox": 4.86, "o2": 1.43}
+{"snap": 1789503564, "eid": "sr:match:68932358", "ko": 1790448300, "comp": "International: UEFA Nations League", "home": "Slovakia", "away": "Moldova", "o1": 1.32, "ox": 5.29, "o2": 10.94}
+{"snap": 1789503564, "eid": "sr:match:68932070", "ko": 1790514000, "comp": "International: UEFA Nations League", "home": "Lithuania", "away": "Azerbaijan", "o1": 2.73, "ox": 3.11, "o2": 2.83}
+{"snap": 1789503564, "eid": "sr:match:68932724", "ko": 1790524800, "comp": "International: UEFA Nations League", "home": "Austria", "away": "Kosovo", "o1": 1.48, "ox": 4.57, "o2": 6.76}
+{"snap": 1789503564, "eid": "sr:match:68931812", "ko": 1790524800, "comp": "International: UEFA Nations League", "home": "Denmark", "away": "Wales", "o1": 1.71, "ox": 3.84, "o2": 5.09}
+{"snap": 1789503564, "eid": "sr:match:68932808", "ko": 1790524800, "comp": "International: UEFA Nations League", "home": "Gibraltar", "away": "Andorra", "o1": 2.87, "ox": 2.87, "o2": 2.91}
+{"snap": 1789503564, "eid": "sr:match:68931516", "ko": 1790524800, "comp": "International: UEFA Nations League", "home": "Serbia", "away": "Netherlands", "o1": 4.46, "ox": 3.95, "o2": 1.78}
+{"snap": 1789503564, "eid": "sr:match:68931520", "ko": 1790534700, "comp": "International: UEFA Nations League", "home": "Germany", "away": "Greece", "o1": 1.33, "ox": 5.22, "o2": 10.61}
+{"snap": 1789503564, "eid": "sr:match:68932726", "ko": 1790534700, "comp": "International: UEFA Nations League", "home": "Israel", "away": "Ireland", "o1": 3.03, "ox": 3.44, "o2": 2.39}
+{"snap": 1789503564, "eid": "sr:match:72036194", "ko": 1789757100, "comp": "France: Ligue 1", "home": "Monaco", "away": "Lens", "o1": 2.11, "ox": 3.8, "o2": 3.41}
+{"snap": 1789503564, "eid": "sr:match:72036198", "ko": 1789830900, "comp": "France: Ligue 1", "home": "Paris FC", "away": "Strasbourg", "o1": 2.08, "ox": 3.73, "o2": 3.57}
+{"snap": 1789503564, "eid": "sr:match:72036184", "ko": 1789843500, "comp": "France: Ligue 1", "home": "Angers", "away": "Troyes", "o1": 2.28, "ox": 3.37, "o2": 3.41}
+{"snap": 1789503564, "eid": "sr:match:72036188", "ko": 1789843500, "comp": "France: Ligue 1", "home": "Le Mans FC", "away": "Lorient", "o1": 2.75, "ox": 3.47, "o2": 2.64}
+{"snap": 1789503564, "eid": "sr:match:72036190", "ko": 1789843500, "comp": "France: Ligue 1", "home": "Lyon", "away": "Rennes", "o1": 2.18, "ox": 3.88, "o2": 3.18}
+{"snap": 1789503564, "eid": "sr:match:72036200", "ko": 1789843500, "comp": "France: Ligue 1", "home": "Toulouse", "away": "Le Havre", "o1": 1.88, "ox": 3.67, "o2": 4.45}
+{"snap": 1789503564, "eid": "sr:match:72036186", "ko": 1789909200, "comp": "France: Ligue 1", "home": "AJ Auxerre", "away": "Brest", "o1": 2.76, "ox": 3.51, "o2": 2.55}
+{"snap": 1789503564, "eid": "sr:match:72036196", "ko": 1789917300, "comp": "France: Ligue 1", "home": "Nice", "away": "Lille", "o1": 3.69, "ox": 3.49, "o2": 2.07}
+{"snap": 1789503564, "eid": "sr:match:72036192", "ko": 1789929900, "comp": "France: Ligue 1", "home": "Marseille", "away": "PSG", "o1": 6.11, "ox": 5.26, "o2": 1.46}
+{"snap": 1789503564, "eid": "sr:match:74172916", "ko": 1789577100, "comp": "International Clubs: UEFA Europa League", "home": "AC Omonia Nicosia", "away": "Celta", "o1": 3.94, "ox": 3.45, "o2": 2.1}
+{"snap": 1789503564, "eid": "sr:match:74172914", "ko": 1789577100, "comp": "International Clubs: UEFA Europa League", "home": "FC Ararat-Armenia", "away": "Sparta Prague", "o1": 5.27, "ox": 4.26, "o2": 1.68}
+{"snap": 1789503564, "eid": "sr:match:74172918", "ko": 1789585200, "comp": "International Clubs: UEFA Europa League", "home": "AC Milan", "away": "Benfica", "o1": 2.17, "ox": 3.73, "o2": 3.43}
+{"snap": 1789503564, "eid": "sr:match:74172920", "ko": 1789585200, "comp": "International Clubs: UEFA Europa League", "home": "Bayer Leverkusen", "away": "NK Celje", "o1": 1.16, "ox": 9.94, "o2": 17.5}
+{"snap": 1789503564, "eid": "sr:match:74172922", "ko": 1789585200, "comp": "International Clubs: UEFA Europa League", "home": "Hapoel Be`er Sheva FC", "away": "GNK Dinamo Zagreb", "o1": 3.64, "ox": 3.91, "o2": 2.04}
+{"snap": 1789503564, "eid": "sr:match:74172924", "ko": 1789585200, "comp": "International Clubs: UEFA Europa League", "home": "Olympiacos", "away": "Jagiellonia Bialystok", "o1": 1.42, "ox": 5.3, "o2": 8.02}
+{"snap": 1789503564, "eid": "sr:match:74172926", "ko": 1789585200, "comp": "International Clubs: UEFA Europa League", "home": "RSC Anderlecht", "away": "Lyon", "o1": 2.98, "ox": 3.78, "o2": 2.38}
+{"snap": 1789503564, "eid": "sr:match:74172928", "ko": 1789585200, "comp": "International Clubs: UEFA Europa League", "home": "Sturm Graz", "away": "Rennes", "o1": 3.64, "ox": 3.97, "o2": 2.03}
+{"snap": 1789503564, "eid": "sr:match:74172930", "ko": 1789585200, "comp": "International Clubs: UEFA Europa League", "home": "Sunderland AFC", "away": "Alkmaar", "o1": 1.65, "ox": 4.4, "o2": 5.4}
+{"snap": 1789503564, "eid": "sr:match:74172932", "ko": 1789663500, "comp": "International Clubs: UEFA Europa League", "home": "OFI Crete", "away": "Hoffenheim", "o1": 7.81, "ox": 5.28, "o2": 1.42}
+{"snap": 1789503564, "eid": "sr:match:74374512", "ko": 1793120400, "comp": "Germany: DFB Pokal", "home": "Bochum", "away": "Mainz", "o1": 4.19, "ox": 3.65, "o2": 1.83}
+{"snap": 1789503564, "eid": "sr:match:74374514", "ko": 1793120400, "comp": "Germany: DFB Pokal", "home": "Hamburger SV", "away": "Eintracht Frankfurt", "o1": 2.56, "ox": 3.69, "o2": 2.51}
+{"snap": 1789503564, "eid": "sr:match:74374504", "ko": 1793120400, "comp": "Germany: DFB Pokal", "home": "Rot-Weiss Essen", "away": "RB Leipzig", "o1": 12.88, "ox": 6.92, "o2": 1.19}
+{"snap": 1789503564, "eid": "sr:match:74374500", "ko": 1793120400, "comp": "Germany: DFB Pokal", "home": "SG Sonnenhof Grossaspach", "away": "Augsburg", "o1": 7.02, "ox": 4.83, "o2": 1.41}
+{"snap": 1789503564, "eid": "sr:match:74374510", "ko": 1793130300, "comp": "Germany: DFB Pokal", "home": "Borussia Dortmund", "away": "Werder Bremen", "o1": 1.34, "ox": 5.3, "o2": 7.98}
+{"snap": 1789503564, "eid": "sr:match:74374516", "ko": 1793130300, "comp": "Germany: DFB Pokal", "home": "Borussia M\u00b4gladbach", "away": "Karlsruher SC", "o1": 1.42, "ox": 4.89, "o2": 6.53}
+{"snap": 1789503564, "eid": "sr:match:74374506", "ko": 1793130300, "comp": "Germany: DFB Pokal", "home": "Cologne", "away": "Union Berlin", "o1": 2.1, "ox": 3.54, "o2": 3.31}
+{"snap": 1789503564, "eid": "sr:match:74374528", "ko": 1793130300, "comp": "Germany: DFB Pokal", "home": "SV 07 Elversberg", "away": "Darmstadt", "o1": 1.55, "ox": 4.59, "o2": 5.03}
+{"snap": 1789503564, "eid": "sr:match:74374508", "ko": 1793206800, "comp": "Germany: DFB Pokal", "home": "Dynamo Dresden", "away": "Schalke", "o1": 3.26, "ox": 3.67, "o2": 2.08}
+{"snap": 1789503564, "eid": "sr:match:74374526", "ko": 1793206800, "comp": "Germany: DFB Pokal", "home": "Freiburg", "away": "Wolfsburg", "o1": 1.46, "ox": 4.93, "o2": 5.89}
+{"snap": 1789503564, "eid": "sr:match:74173174", "ko": 1792082700, "comp": "International Clubs: UEFA Conference League", "home": "CS Universitatea Craiova", "away": "Getafe", "o1": 3.37, "ox": 3.41, "o2": 2.22}
+{"snap": 1789503564, "eid": "sr:match:74173148", "ko": 1792082700, "comp": "International Clubs: UEFA Conference League", "home": "Gent", "away": "AGF Aarhus", "o1": 1.6, "ox": 4.21, "o2": 5.65}
+{"snap": 1789503564, "eid": "sr:match:74173144", "ko": 1792082700, "comp": "International Clubs: UEFA Conference League", "home": "HNK Hajduk Split", "away": "Ajax", "o1": 5.38, "ox": 4.56, "o2": 1.58}
+{"snap": 1789503564, "eid": "sr:match:74173152", "ko": 1792082700, "comp": "International Clubs: UEFA Conference League", "home": "KF Egnatia Rrogozhine", "away": "FC Midtjylland", "o1": 5.83, "ox": 4.31, "o2": 1.57}
+{"snap": 1789503564, "eid": "sr:match:74173156", "ko": 1792082700, "comp": "International Clubs: UEFA Conference League", "home": "Kuopion Palloseura", "away": "Trabzonspor", "o1": 5.32, "ox": 4.15, "o2": 1.64}
+{"snap": 1789503564, "eid": "sr:match:74173138", "ko": 1792082700, "comp": "International Clubs: UEFA Conference League", "home": "Lugano", "away": "Crvena Zvezda", "o1": 2.75, "ox": 3.57, "o2": 2.52}
+{"snap": 1789503564, "eid": "sr:match:74173160", "ko": 1792082700, "comp": "International Clubs: UEFA Conference League", "home": "Mjallby AIF", "away": "Inter Club de Escaldes", "o1": 1.24, "ox": 6.55, "o2": 11.92}
+{"snap": 1789503564, "eid": "sr:match:74173164", "ko": 1792082700, "comp": "International Clubs: UEFA Conference League", "home": "Panathinaikos", "away": "FK Borac Banja Luka", "o1": 1.24, "ox": 6.71, "o2": 12.09}
+{"snap": 1789503564, "eid": "sr:match:74173166", "ko": 1792082700, "comp": "International Clubs: UEFA Conference League", "home": "PFC CSKA Sofia", "away": "Monaco", "o1": 6.27, "ox": 4.69, "o2": 1.5}
+{"snap": 1789503564, "eid": "sr:match:74173170", "ko": 1792082700, "comp": "International Clubs: UEFA Conference League", "home": "Riga FC", "away": "FC Kairat Almaty", "o1": 1.91, "ox": 3.62, "o2": 4.17}
+{"snap": 1789503564, "eid": "sr:match:74435026", "ko": 1789549200, "comp": "Ukraine: Ukraine Cup", "home": "Kolos Kovalivka", "away": "Karpaty Lviv", "o1": 2.95, "ox": 3.1, "o2": 2.4}
+{"snap": 1789503564, "eid": "sr:match:74435398", "ko": 1789556400, "comp": "Ukraine: Ukraine Cup", "home": "FC Prykarpattya Ivano-Frankivsk", "away": "FC Kharkiv", "o1": 8.9, "ox": 5.4, "o2": 1.28}
+{"snap": 1789503564, "eid": "sr:match:74435742", "ko": 1789563600, "comp": "Ukraine: Ukraine Cup", "home": "FSC Bukovyna Chernivtsi", "away": "LNZ Cherkasy", "o1": 3.25, "ox": 2.9, "o2": 2.3}
+{"snap": 1789503564, "eid": "sr:match:72339842", "ko": 1789758000, "comp": "England: Championship", "home": "Bristol City", "away": "Watford", "o1": 1.93, "ox": 3.58, "o2": 3.95}
+{"snap": 1789503564, "eid": "sr:match:72339846", "ko": 1789817400, "comp": "England: Championship", "home": "Cardiff City", "away": "Charlton Athletic", "o1": 1.75, "ox": 3.98, "o2": 4.39}
+{"snap": 1789503564, "eid": "sr:match:72339850", "ko": 1789817400, "comp": "England: Championship", "home": "Millwall FC", "away": "West Ham", "o1": 4.14, "ox": 3.99, "o2": 1.79}
+{"snap": 1789503564, "eid": "sr:match:72339858", "ko": 1789817400, "comp": "England: Championship", "home": "Stoke City", "away": "Sheffield United", "o1": 2.59, "ox": 3.45, "o2": 2.68}
+{"snap": 1789503564, "eid": "sr:match:72339840", "ko": 1789826400, "comp": "England: Championship", "home": "Birmingham City", "away": "Middlesbrough FC", "o1": 2.94, "ox": 3.55, "o2": 2.34}
+{"snap": 1789503564, "eid": "sr:match:72339844", "ko": 1789826400, "comp": "England: Championship", "home": "Burnley", "away": "Derby County", "o1": 1.84, "ox": 3.65, "o2": 4.27}
+{"snap": 1789503564, "eid": "sr:match:72339848", "ko": 1789826400, "comp": "England: Championship", "home": "Lincoln City", "away": "Swansea City", "o1": 2.85, "ox": 3.41, "o2": 2.47}
+{"snap": 1789503564, "eid": "sr:match:72339854", "ko": 1789826400, "comp": "England: Championship", "home": "Portsmouth FC", "away": "Blackburn Rovers", "o1": 2.13, "ox": 3.42, "o2": 3.47}
+{"snap": 1789503564, "eid": "sr:match:72339856", "ko": 1789826400, "comp": "England: Championship", "home": "Queens Park Rangers", "away": "Preston North End", "o1": 1.7, "ox": 3.98, "o2": 4.72}
+{"snap": 1789503564, "eid": "sr:match:72339862", "ko": 1789826400, "comp": "England: Championship", "home": "Wrexham AFC", "away": "Southampton", "o1": 3.07, "ox": 3.52, "o2": 2.28}
+{"snap": 1789503564, "eid": "sr:match:67015394", "ko": 1789750800, "comp": "Norway: Eliteserien", "home": "Sarpsborg 08", "away": "KFUM Oslo", "o1": 1.62, "ox": 4.32, "o2": 4.92}
+{"snap": 1789503564, "eid": "sr:match:67015388", "ko": 1789826400, "comp": "Norway: Eliteserien", "home": "Kristiansund BK", "away": "Rosenborg BK", "o1": 5.36, "ox": 4.55, "o2": 1.55}
+{"snap": 1789503564, "eid": "sr:match:67015390", "ko": 1789833600, "comp": "Norway: Eliteserien", "home": "Molde", "away": "Aalesunds FK", "o1": 1.34, "ox": 6.1, "o2": 7.18}
+{"snap": 1789503564, "eid": "sr:match:67015400", "ko": 1789907400, "comp": "Norway: Eliteserien", "home": "Vaalerenga IF", "away": "Fredrikstad FK", "o1": 1.89, "ox": 3.87, "o2": 3.68}
+{"snap": 1789503564, "eid": "sr:match:67015392", "ko": 1789916400, "comp": "Norway: Eliteserien", "home": "Sandefjord Fotball", "away": "IK Start", "o1": 2.09, "ox": 3.56, "o2": 3.33}
+{"snap": 1789503564, "eid": "sr:match:67015396", "ko": 1789916400, "comp": "Norway: Eliteserien", "home": "Tromsoe IL", "away": "HamKam", "o1": 1.51, "ox": 4.45, "o2": 5.79}
+{"snap": 1789503564, "eid": "sr:match:67015398", "ko": 1789916400, "comp": "Norway: Eliteserien", "home": "Viking FK", "away": "Lillestroem SK", "o1": 1.41, "ox": 5.32, "o2": 6.22}
+{"snap": 1789503564, "eid": "sr:match:67015386", "ko": 1789924500, "comp": "Norway: Eliteserien", "home": "SK Brann", "away": "Bodoe/Glimt", "o1": 4.29, "ox": 4.37, "o2": 1.67}
+{"snap": 1789503564, "eid": "sr:match:72041144", "ko": 1789754400, "comp": "Netherlands: Eredivisie", "home": "FC Groningen", "away": "PEC Zwolle", "o1": 1.66, "ox": 4.27, "o2": 4.67}
+{"snap": 1789503564, "eid": "sr:match:72041142", "ko": 1789828200, "comp": "Netherlands: Eredivisie", "home": "ADO Den Haag", "away": "SC Cambuur", "o1": 1.8, "ox": 4.06, "o2": 4.05}
+{"snap": 1789503564, "eid": "sr:match:72041140", "ko": 1789836300, "comp": "Netherlands: Eredivisie", "home": "Sparta Rotterdam", "away": "SC Heerenveen", "o1": 2.51, "ox": 3.66, "o2": 2.65}
+{"snap": 1789503565, "eid": "sr:match:72041146", "ko": 1789840800, "comp": "Netherlands: Eredivisie", "home": "Ajax", "away": "Excelsior Rotterdam", "o1": 1.3, "ox": 6.3, "o2": 8.2}
+{"snap": 1789503565, "eid": "sr:match:72041148", "ko": 1789844400, "comp": "Netherlands: Eredivisie", "home": "Willem II Tilburg", "away": "Fortuna Sittard", "o1": 2.54, "ox": 3.77, "o2": 2.56}
+{"snap": 1789503565, "eid": "sr:match:72041150", "ko": 1789899300, "comp": "Netherlands: Eredivisie", "home": "Feyenoord", "away": "FC Utrecht", "o1": 1.28, "ox": 6.2, "o2": 8.48}
+{"snap": 1789503565, "eid": "sr:match:72041152", "ko": 1789907400, "comp": "Netherlands: Eredivisie", "home": "Alkmaar", "away": "SC Telstar", "o1": 1.27, "ox": 6.41, "o2": 8.55}
+{"snap": 1789503565, "eid": "sr:match:72041156", "ko": 1789907400, "comp": "Netherlands: Eredivisie", "home": "FC Twente Enschede", "away": "PSV Eindhoven", "o1": 2.79, "ox": 4.06, "o2": 2.2}
+{"snap": 1789503565, "eid": "sr:match:72041154", "ko": 1789915500, "comp": "Netherlands: Eredivisie", "home": "NEC Nijmegen", "away": "Go Ahead Eagles", "o1": 1.81, "ox": 4.11, "o2": 3.8}
+{"snap": 1789503565, "eid": "sr:match:72530934", "ko": 1789828200, "comp": "Portugal: Liga Portugal", "home": "Gil Vicente Barcelos", "away": "Maritimo Madeira", "o1": 2.01, "ox": 3.31, "o2": 3.99}
+{"snap": 1789503565, "eid": "sr:match:72530936", "ko": 1789828200, "comp": "Portugal: Liga Portugal", "home": "Nacional da Madeira", "away": "FC Famalicao", "o1": 3.65, "ox": 3.34, "o2": 2.1}
+{"snap": 1789503565, "eid": "sr:match:72530928", "ko": 1789837200, "comp": "Portugal: Liga Portugal", "home": "Alverca Futebol", "away": "Rio Ave FC", "o1": 1.9, "ox": 3.6, "o2": 4.07}
+{"snap": 1789503565, "eid": "sr:match:72530942", "ko": 1789846200, "comp": "Portugal: Liga Portugal", "home": "Sporting", "away": "FC Arouca", "o1": 1.23, "ox": 6.8, "o2": 11.4}
+{"snap": 1789503565, "eid": "sr:match:72530930", "ko": 1789914600, "comp": "Portugal: Liga Portugal", "home": "Estrela Amadora", "away": "Academico de Viseu FC", "o1": 2.14, "ox": 3.3, "o2": 3.45}
+{"snap": 1789503565, "eid": "sr:match:72530944", "ko": 1789914600, "comp": "Portugal: Liga Portugal", "home": "Vitoria SC Guimaraes", "away": "Moreirense FC", "o1": 1.53, "ox": 4.1, "o2": 6.13}
+{"snap": 1789503565, "eid": "sr:match:72530932", "ko": 1789923600, "comp": "Portugal: Liga Portugal", "home": "Estoril Praia", "away": "Casa Pia Lisbon", "o1": 1.76, "ox": 3.67, "o2": 4.53}
+{"snap": 1789503565, "eid": "sr:match:72530940", "ko": 1789923600, "comp": "Portugal: Liga Portugal", "home": "Santa Clara Azores", "away": "Braga", "o1": 3.58, "ox": 3.25, "o2": 2.12}
+{"snap": 1789503565, "eid": "sr:match:72530938", "ko": 1789932600, "comp": "Portugal: Liga Portugal", "home": "Porto", "away": "Benfica", "o1": 2.64, "ox": 3.4, "o2": 2.58}
+{"snap": 1789503565, "eid": "sr:match:72513884", "ko": 1789749000, "comp": "Germany: 2. Bundesliga", "home": "Greuther Furth", "away": "1. FC Magdeburg", "o1": 2.8, "ox": 3.8, "o2": 2.3}
+{"snap": 1789503565, "eid": "sr:match:72513870", "ko": 1789749000, "comp": "Germany: 2. Bundesliga", "home": "Wolfsburg", "away": "Darmstadt", "o1": 1.62, "ox": 4.4, "o2": 4.8}
+{"snap": 1789503565, "eid": "sr:match:72513874", "ko": 1789815600, "comp": "Germany: 2. Bundesliga", "home": "1 FC Kaiserslautern", "away": "Eintracht Braunschweig", "o1": 1.95, "ox": 3.8, "o2": 3.5}
+{"snap": 1789503565, "eid": "sr:match:72513880", "ko": 1789815600, "comp": "Germany: 2. Bundesliga", "home": "Holstein Kiel", "away": "VfL 1899 Osnabruck", "o1": 1.81, "ox": 3.9, "o2": 4.0}
+{"snap": 1789503565, "eid": "sr:match:72513876", "ko": 1789815600, "comp": "Germany: 2. Bundesliga", "home": "Karlsruher SC", "away": "1 FC Nuremberg", "o1": 2.9, "ox": 3.9, "o2": 2.2}
+{"snap": 1789503565, "eid": "sr:match:72513878", "ko": 1789842600, "comp": "Germany: 2. Bundesliga", "home": "Dynamo Dresden", "away": "Hertha", "o1": 2.5, "ox": 3.8, "o2": 2.5}
+{"snap": 1789503565, "eid": "sr:match:72513882", "ko": 1789903800, "comp": "Germany: 2. Bundesliga", "home": "Arminia Bielefeld", "away": "Heidenheim", "o1": 2.05, "ox": 3.7, "o2": 3.25}
+{"snap": 1789503565, "eid": "sr:match:72513886", "ko": 1789903800, "comp": "Germany: 2. Bundesliga", "home": "Energie Cottbus", "away": "FC St. Pauli", "o1": 3.1, "ox": 3.8, "o2": 2.1}
+{"snap": 1789503565, "eid": "sr:match:72513872", "ko": 1789903800, "comp": "Germany: 2. Bundesliga", "home": "Hannover 96", "away": "Bochum", "o1": 1.83, "ox": 3.9, "o2": 3.9}
+{"snap": 1789503565, "eid": "sr:match:73835268", "ko": 1789552800, "comp": "International Clubs: AFC Champions League Elite", "home": "Jeonbuk FC", "away": "Kashiwa Reysol", "o1": 3.25, "ox": 3.5, "o2": 2.15}
+{"snap": 1789503565, "eid": "sr:match:73835270", "ko": 1789560900, "comp": "International Clubs: AFC Champions League Elite", "home": "Port FC", "away": "Vissel Kobe", "o1": 4.4, "ox": 3.9, "o2": 1.74}
+{"snap": 1789503565, "eid": "sr:match:73873326", "ko": 1789509600, "comp": "International Clubs: CONMEBOL Libertadores", "home": "CA Platense", "away": "Fluminense FC RJ", "o1": 2.96, "ox": 2.91, "o2": 2.79}
+{"snap": 1789503565, "eid": "sr:match:73903158", "ko": 1789596000, "comp": "International Clubs: CONMEBOL Libertadores", "home": "LDU Quito", "away": "SE Palmeiras SP", "o1": 2.69, "ox": 3.13, "o2": 2.87}
+{"snap": 1789503565, "eid": "sr:match:73911212", "ko": 1789605000, "comp": "International Clubs: CONMEBOL Libertadores", "home": "SC Corinthians SP", "away": "Estudiantes de La Plata", "o1": 1.99, "ox": 3.18, "o2": 4.48}
+{"snap": 1789503565, "eid": "sr:match:74073942", "ko": 1789691400, "comp": "International Clubs: CONMEBOL Libertadores", "home": "CR Flamengo RJ", "away": "CSD Independiente del Valle", "o1": 1.39, "ox": 5.2, "o2": 7.84}
+{"snap": 1789503565, "eid": "sr:match:72477406", "ko": 1789756200, "comp": "Spain: LALIGA HYPERMOTION", "home": "Albacete Balompie", "away": "Cordoba CF", "o1": 2.35, "ox": 3.5, "o2": 2.9}
+{"snap": 1789503565, "eid": "sr:match:72477424", "ko": 1789819200, "comp": "Spain: LALIGA HYPERMOTION", "home": "Real Sociedad San Sebastian B", "away": "Mallorca", "o1": 3.8, "ox": 3.5, "o2": 1.93}
+{"snap": 1789503565, "eid": "sr:match:72477410", "ko": 1789827300, "comp": "Spain: LALIGA HYPERMOTION", "home": "FC Andorra", "away": "Sporting Gijon", "o1": 2.05, "ox": 3.4, "o2": 3.4}
+{"snap": 1789503565, "eid": "sr:match:72477414", "ko": 1789835400, "comp": "Spain: LALIGA HYPERMOTION", "home": "CD Castellon", "away": "Tenerife CD", "o1": 1.54, "ox": 4.2, "o2": 5.5}
+{"snap": 1789503565, "eid": "sr:match:72477418", "ko": 1789835400, "comp": "Spain: LALIGA HYPERMOTION", "home": "Club Deportivo Eldense", "away": "Eibar", "o1": 2.85, "ox": 3.2, "o2": 2.45}
+{"snap": 1789503565, "eid": "sr:match:72477412", "ko": 1789844400, "comp": "Spain: LALIGA HYPERMOTION", "home": "Cadiz", "away": "Girona", "o1": 3.7, "ox": 3.4, "o2": 1.97}
+{"snap": 1789503565, "eid": "sr:match:72477426", "ko": 1789905600, "comp": "Spain: LALIGA HYPERMOTION", "home": "CE Sabadell FC", "away": "Real Oviedo", "o1": 2.4, "ox": 3.0, "o2": 3.1}
+{"snap": 1789503565, "eid": "sr:match:72477416", "ko": 1789913700, "comp": "Spain: LALIGA HYPERMOTION", "home": "AD Ceuta", "away": "Valladolid", "o1": 2.8, "ox": 3.33, "o2": 2.45}
+{"snap": 1789503565, "eid": "sr:match:72477408", "ko": 1789921800, "comp": "Spain: LALIGA HYPERMOTION", "home": "Almeria", "away": "RC Celta Fortuna", "o1": 1.38, "ox": 4.8, "o2": 7.25}
+{"snap": 1789503565, "eid": "sr:match:72477422", "ko": 1789921800, "comp": "Spain: LALIGA HYPERMOTION", "home": "Las Palmas", "away": "Burgos CF", "o1": 2.1, "ox": 3.1, "o2": 3.7}
+{"snap": 1789503565, "eid": "sr:match:73092940", "ko": 1789756200, "comp": "Italy: Serie B", "home": "Juve Stabia", "away": "Cesena FC", "o1": 2.35, "ox": 3.25, "o2": 3.1}
+{"snap": 1789503565, "eid": "sr:match:73092936", "ko": 1789822800, "comp": "Italy: Serie B", "home": "Carrarese Calcio", "away": "Benevento Calcio", "o1": 2.9, "ox": 3.33, "o2": 2.35}
+{"snap": 1789503565, "eid": "sr:match:73092946", "ko": 1789822800, "comp": "Italy: Serie B", "home": "Palermo FC", "away": "Calcio Padova", "o1": 1.59, "ox": 4.0, "o2": 5.2}
+{"snap": 1789503565, "eid": "sr:match:73092938", "ko": 1789822800, "comp": "Italy: Serie B", "home": "US Cremonese", "away": "Virtus Entella", "o1": 1.97, "ox": 3.3, "o2": 3.9}
+{"snap": 1789503565, "eid": "sr:match:73092948", "ko": 1789830900, "comp": "Italy: Serie B", "home": "Sampdoria Genoa", "away": "US Catanzaro", "o1": 2.1, "ox": 3.3, "o2": 3.5}
+{"snap": 1789503565, "eid": "sr:match:73092934", "ko": 1789839000, "comp": "Italy: Serie B", "home": "Ascoli Calcio 1898", "away": "US Avellino", "o1": 2.1, "ox": 3.33, "o2": 3.4}
+{"snap": 1789503565, "eid": "sr:match:73092932", "ko": 1789909200, "comp": "Italy: Serie B", "home": "SS Arezzo", "away": "FC Sudtirol Bolzano", "o1": 2.25, "ox": 3.1, "o2": 3.33}
+{"snap": 1789503565, "eid": "sr:match:73092950", "ko": 1789909200, "comp": "Italy: Serie B", "home": "Verona", "away": "L.R. Vicenza", "o1": 1.91, "ox": 3.5, "o2": 3.8}
+{"snap": 1789503565, "eid": "sr:match:73092942", "ko": 1789917300, "comp": "Italy: Serie B", "home": "Mantova 1911", "away": "SC Pisa", "o1": 2.7, "ox": 3.2, "o2": 2.6}
+{"snap": 1789503565, "eid": "sr:match:73092944", "ko": 1789925400, "comp": "Italy: Serie B", "home": "Modena FC", "away": "Empoli", "o1": 1.67, "ox": 3.7, "o2": 5.0}
+{"snap": 1789503565, "eid": "sr:match:74301822", "ko": 1789574400, "comp": "International Youth: UEFA Youth League", "home": "Thor Akureyri", "away": "FK Zalgiris Vilnius U19", "o1": 1.64, "ox": 4.5, "o2": 4.3}
+{"snap": 1789503565, "eid": "sr:match:72037344", "ko": 1789754400, "comp": "France: Ligue 2", "home": "FC Annecy", "away": "Dijon", "o1": 2.1, "ox": 3.4, "o2": 3.4}
+{"snap": 1789503565, "eid": "sr:match:72037348", "ko": 1789754400, "comp": "France: Ligue 2", "home": "Grenoble Foot", "away": "Clermont Foot", "o1": 2.3, "ox": 3.2, "o2": 3.25}
+{"snap": 1789503565, "eid": "sr:match:72037356", "ko": 1789754400, "comp": "France: Ligue 2", "home": "Pau FC", "away": "USL Dunkerque", "o1": 2.3, "ox": 3.33, "o2": 3.1}
+{"snap": 1789503565, "eid": "sr:match:72037358", "ko": 1789754400, "comp": "France: Ligue 2", "home": "Reims", "away": "Montpellier", "o1": 1.81, "ox": 3.7, "o2": 4.25}
+{"snap": 1789503565, "eid": "sr:match:72037360", "ko": 1789754400, "comp": "France: Ligue 2", "home": "Rodez Aveyron Football", "away": "Nancy-Lorraine", "o1": 2.25, "ox": 3.5, "o2": 3.1}
+{"snap": 1789503565, "eid": "sr:match:72037352", "ko": 1789754400, "comp": "France: Ligue 2", "home": "Stade Lavallois MFC", "away": "Sochaux-Montbeliard", "o1": 2.3, "ox": 3.1, "o2": 3.25}
+{"snap": 1789503565, "eid": "sr:match:72037350", "ko": 1789819200, "comp": "France: Ligue 2", "home": "EA Guingamp", "away": "Red Star FC", "o1": 2.3, "ox": 3.3, "o2": 3.0}
+{"snap": 1789503565, "eid": "sr:match:72037346", "ko": 1789819200, "comp": "France: Ligue 2", "home": "US Boulogne", "away": "Nantes", "o1": 3.6, "ox": 3.25, "o2": 2.05}
+{"snap": 1789503565, "eid": "sr:match:72037354", "ko": 1789840800, "comp": "France: Ligue 2", "home": "Metz", "away": "Saint-Etienne", "o1": 3.4, "ox": 3.5, "o2": 2.05}
+{"snap": 1789503565, "eid": "sr:match:72149750", "ko": 1789808400, "comp": "Japan: J1 League", "home": "Avispa Fukuoka", "away": "Sanfrecce Hiroshima", "o1": 3.93, "ox": 3.6, "o2": 1.93}
+{"snap": 1789503565, "eid": "sr:match:72149740", "ko": 1789808400, "comp": "Japan: J1 League", "home": "Kawasaki Frontale", "away": "Kashima Antlers", "o1": 2.69, "ox": 3.6, "o2": 2.5}
+{"snap": 1789503565, "eid": "sr:match:72149744", "ko": 1789810200, "comp": "Japan: J1 League", "home": "Shimizu S-Pulse", "away": "JEF United Chiba", "o1": 1.96, "ox": 3.52, "o2": 3.89}
+{"snap": 1789503565, "eid": "sr:match:72149736", "ko": 1789810200, "comp": "Japan: J1 League", "home": "Urawa Red Diamonds", "away": "Tokyo Verdy", "o1": 1.81, "ox": 3.51, "o2": 4.73}
+{"snap": 1789503565, "eid": "sr:match:72149752", "ko": 1789810200, "comp": "Japan: J1 League", "home": "V-Varen Nagasaki", "away": "Cerezo Osaka", "o1": 3.5, "ox": 3.52, "o2": 2.08}
+{"snap": 1789503565, "eid": "sr:match:72149748", "ko": 1789812000, "comp": "Japan: J1 League", "home": "Fagiano Okayama", "away": "Kyoto Sanga FC", "o1": 1.97, "ox": 3.5, "o2": 3.87}
+{"snap": 1789503565, "eid": "sr:match:72149734", "ko": 1789812000, "comp": "Japan: J1 League", "home": "FC Tokyo", "away": "Nagoya Grampus", "o1": 1.82, "ox": 3.84, "o2": 4.18}
+{"snap": 1789503565, "eid": "sr:match:72149742", "ko": 1789813800, "comp": "Japan: J1 League", "home": "Yokohama F Marinos", "away": "Mito Hollyhock", "o1": 2.03, "ox": 3.5, "o2": 3.67}
+{"snap": 1789503565, "eid": "sr:match:72149746", "ko": 1789891200, "comp": "Japan: J1 League", "home": "Gamba Osaka", "away": "Vissel Kobe", "o1": 3.25, "ox": 3.25, "o2": 2.25}
+{"snap": 1789503565, "eid": "sr:match:72149738", "ko": 1789891200, "comp": "Japan: J1 League", "home": "Machida Zelvia", "away": "Kashiwa Reysol", "o1": 2.6, "ox": 3.29, "o2": 2.69}
+{"snap": 1789503565, "eid": "sr:match:72723216", "ko": 1789750800, "comp": "Turkiye: Super Lig", "home": "Kasimpasa Istanbul", "away": "Konyaspor", "o1": 2.37, "ox": 3.38, "o2": 3.01}
+{"snap": 1789503565, "eid": "sr:match:72723224", "ko": 1789826400, "comp": "Turkiye: Super Lig", "home": "Corum FK", "away": "Alanyaspor", "o1": 2.14, "ox": 3.3, "o2": 3.59}
+{"snap": 1789503565, "eid": "sr:match:72723228", "ko": 1789826400, "comp": "Turkiye: Super Lig", "home": "Kocaelispor", "away": "Gaziantep FK", "o1": 2.2, "ox": 3.31, "o2": 3.42}
+{"snap": 1789503565, "eid": "sr:match:72723218", "ko": 1789837200, "comp": "Turkiye: Super Lig", "home": "Istanbul BB", "away": "Genclerbirligi SK", "o1": 1.53, "ox": 4.46, "o2": 5.76}
+{"snap": 1789503565, "eid": "sr:match:72723214", "ko": 1789837200, "comp": "Turkiye: Super Lig", "home": "Trabzonspor", "away": "Galatasaray Istanbul", "o1": 3.0, "ox": 3.87, "o2": 2.18}
+{"snap": 1789503565, "eid": "sr:match:72723230", "ko": 1789912800, "comp": "Turkiye: Super Lig", "home": "Erzurumspor FK", "away": "Samsunspor", "o1": 2.63, "ox": 3.26, "o2": 2.68}
+{"snap": 1789503565, "eid": "sr:match:72723226", "ko": 1789912800, "comp": "Turkiye: Super Lig", "home": "Fenerbahce Istanbul", "away": "Eyupspor", "o1": 1.19, "ox": 6.93, "o2": 12.81}
+{"snap": 1789503565, "eid": "sr:match:72723220", "ko": 1789923600, "comp": "Turkiye: Super Lig", "home": "Amed Sportif Faaliyetler", "away": "Besiktas Istanbul", "o1": 3.89, "ox": 3.78, "o2": 1.86}
+{"snap": 1789503565, "eid": "sr:match:72723222", "ko": 1789923600, "comp": "Turkiye: Super Lig", "home": "Goztepe Izmir", "away": "Caykur Rizespor", "o1": 2.36, "ox": 3.44, "o2": 2.9}
+{"snap": 1789503565, "eid": "sr:match:74148230", "ko": 1789556400, "comp": "Turkiye: Turkiye Kupasi", "home": "Karaman FK", "away": "Kepez Spor Futbol AS", "o1": 2.55, "ox": 3.3, "o2": 2.55}
+{"snap": 1789503565, "eid": "sr:match:74148220", "ko": 1789560000, "comp": "Turkiye: Turkiye Kupasi", "home": "Galata Spor Kulubu", "away": "Yalova FK 77 Spor Kulubu", "o1": 2.05, "ox": 3.6, "o2": 3.1}
+{"snap": 1789503565, "eid": "sr:match:74148222", "ko": 1789560000, "comp": "Turkiye: Turkiye Kupasi", "home": "Inkilap Fsk", "away": "Tuzlaspor", "o1": 2.7, "ox": 3.0, "o2": 2.7}
+{"snap": 1789503565, "eid": "sr:match:74148234", "ko": 1789574400, "comp": "Turkiye: Turkiye Kupasi", "home": "Kirikkale Buyuk Anadoluspor", "away": "Kirsehir Belediye Spor", "o1": 1.81, "ox": 3.7, "o2": 3.9}
+{"snap": 1789503565, "eid": "sr:match:72607988", "ko": 1789822800, "comp": "Czechia: 1. Liga", "home": "FK Mlada Boleslav", "away": "FC Zbrojovka Brno", "o1": 2.15, "ox": 3.4, "o2": 3.2}
+{"snap": 1789503565, "eid": "sr:match:72607982", "ko": 1789822800, "comp": "Czechia: 1. Liga", "home": "FK Pardubice", "away": "Bohemians Prague 1905", "o1": 1.93, "ox": 3.6, "o2": 3.7}
+{"snap": 1789503565, "eid": "sr:match:72607980", "ko": 1789822800, "comp": "Czechia: 1. Liga", "home": "SK Artis Brno", "away": "FC Slovan Liberec", "o1": 5.1, "ox": 3.9, "o2": 1.62}
+{"snap": 1789503565, "eid": "sr:match:72607994", "ko": 1789833600, "comp": "Czechia: 1. Liga", "home": "1. FC Slovacko Uherske Hradiste", "away": "FC Banik Ostrava", "o1": 2.45, "ox": 3.25, "o2": 2.8}
+{"snap": 1789503565, "eid": "sr:match:72607984", "ko": 1789902000, "comp": "Czechia: 1. Liga", "home": "FC Hradec Kralove", "away": "FK Teplice", "o1": 1.78, "ox": 3.6, "o2": 4.4}
+{"snap": 1789503565, "eid": "sr:match:72607986", "ko": 1789909200, "comp": "Czechia: 1. Liga", "home": "FK Jablonec", "away": "FC Zlin", "o1": 1.44, "ox": 4.4, "o2": 6.75}
+{"snap": 1789503565, "eid": "sr:match:72607990", "ko": 1789909200, "comp": "Czechia: 1. Liga", "home": "SK Sigma Olomouc", "away": "Sparta Prague", "o1": 2.8, "ox": 3.5, "o2": 2.3}
+{"snap": 1789503565, "eid": "sr:match:72607992", "ko": 1789920000, "comp": "Czechia: 1. Liga", "home": "Slavia Prague", "away": "Viktoria Plzen", "o1": 1.61, "ox": 4.0, "o2": 4.9}
+{"snap": 1789503565, "eid": "sr:match:67126710", "ko": 1789578000, "comp": "Sweden: Allsvenskan", "home": "AIK", "away": "Mjallby AIF", "o1": 2.2, "ox": 3.6, "o2": 3.1}
+{"snap": 1789503565, "eid": "sr:match:67126780", "ko": 1789822800, "comp": "Sweden: Allsvenskan", "home": "IF Brommapojkarna", "away": "IFK Goteborg", "o1": 2.9, "ox": 3.7, "o2": 2.25}
+{"snap": 1789503565, "eid": "sr:match:67126784", "ko": 1789822800, "comp": "Sweden: Allsvenskan", "home": "Vasteraas SK", "away": "Malmo", "o1": 3.2, "ox": 3.7, "o2": 2.1}
+{"snap": 1789503565, "eid": "sr:match:67126776", "ko": 1789831800, "comp": "Sweden: Allsvenskan", "home": "Orgryte IS", "away": "IK Sirius", "o1": 5.6, "ox": 4.8, "o2": 1.48}
+{"snap": 1789503565, "eid": "sr:match:67126774", "ko": 1789905600, "comp": "Sweden: Allsvenskan", "home": "Djurgardens IF", "away": "IF Elfsborg", "o1": 1.59, "ox": 4.25, "o2": 5.1}
+{"snap": 1789503565, "eid": "sr:match:67126788", "ko": 1789905600, "comp": "Sweden: Allsvenskan", "home": "Halmstads BK", "away": "AIK", "o1": 3.4, "ox": 3.6, "o2": 2.05}
+{"snap": 1789503565, "eid": "sr:match:67126786", "ko": 1789905600, "comp": "Sweden: Allsvenskan", "home": "Kalmar FF", "away": "BK Hacken", "o1": 2.85, "ox": 3.6, "o2": 2.3}
+{"snap": 1789503565, "eid": "sr:match:67126782", "ko": 1789914600, "comp": "Sweden: Allsvenskan", "home": "Degerfors IF", "away": "Hammarby IF", "o1": 7.9, "ox": 5.4, "o2": 1.34}
+{"snap": 1789503566, "eid": "sr:match:73580182", "ko": 1789511400, "comp": "Venezuela: Primera Division", "home": "Deportivo Tachira", "away": "Academia Puerto Cabello", "o1": 2.15, "ox": 3.1, "o2": 3.2}
+{"snap": 1789503566, "eid": "sr:match:74501688", "ko": 1789592400, "comp": "Venezuela: Primera Division", "home": "Portuguesa FC", "away": "Estudiantes de Merida", "o1": 2.35, "ox": 3.0, "o2": 2.95}
+{"snap": 1789503566, "eid": "sr:match:74500832", "ko": 1789599600, "comp": "Venezuela: Primera Division", "home": "Trujillanos FC", "away": "Deportivo Rayo Zuliano", "o1": 1.75, "ox": 3.5, "o2": 4.1}
+{"snap": 1789503566, "eid": "sr:match:73265324", "ko": 1789765200, "comp": "Argentina: Primera LPF", "home": "CA Central Cordoba SE", "away": "Defensa y Justicia", "o1": 2.7, "ox": 2.9, "o2": 2.75}
+{"snap": 1789503566, "eid": "sr:match:73265334", "ko": 1789839000, "comp": "Argentina: Primera LPF", "home": "Gimnasia y Esgrima La Plata", "away": "CA Banfield", "o1": 1.8, "ox": 3.4, "o2": 4.4}
+{"snap": 1789503566, "eid": "sr:match:73265322", "ko": 1789839000, "comp": "Argentina: Primera LPF", "home": "Gimnasia y Esgrima Mendoza", "away": "Deportivo Riestra AFBC", "o1": 2.15, "ox": 2.8, "o2": 3.8}
+{"snap": 1789503566, "eid": "sr:match:73265328", "ko": 1789847100, "comp": "Argentina: Primera LPF", "home": "Union de Santa Fe", "away": "CA Independiente Avellaneda", "o1": 2.4, "ox": 3.0, "o2": 3.0}
+{"snap": 1789503566, "eid": "sr:match:73265330", "ko": 1789863300, "comp": "Argentina: Primera LPF", "home": "Instituto AC Cordoba", "away": "CA Talleres de Cordoba", "o1": 1.88, "ox": 3.1, "o2": 4.5}
+{"snap": 1789503566, "eid": "sr:match:73265326", "ko": 1789926300, "comp": "Argentina: Primera LPF", "home": "CA San Lorenzo de Almagro", "away": "Boca Juniors", "o1": 3.9, "ox": 2.95, "o2": 2.05}
+{"snap": 1789503566, "eid": "sr:match:73265318", "ko": 1789934400, "comp": "Argentina: Primera LPF", "home": "CA Platense", "away": "Newell's Old Boys", "o1": 2.15, "ox": 2.9, "o2": 3.75}
+{"snap": 1789503566, "eid": "sr:match:73265332", "ko": 1789934400, "comp": "Argentina: Primera LPF", "home": "CA Rosario Central", "away": "Argentinos Juniors", "o1": 2.15, "ox": 3.0, "o2": 3.4}
+{"snap": 1789503566, "eid": "sr:match:73265316", "ko": 1789950600, "comp": "Argentina: Primera LPF", "home": "Velez Sarsfield", "away": "CA Tigre", "o1": 2.2, "ox": 2.9, "o2": 3.5}
+{"snap": 1789503566, "eid": "sr:match:73265320", "ko": 1790036100, "comp": "Argentina: Primera LPF", "home": "CA Lanus", "away": "Estudiantes de La Plata", "o1": 2.15, "ox": 3.0, "o2": 3.6}
+{"snap": 1789503566, "eid": "sr:match:72203058", "ko": 1789826400, "comp": "Belgium: Pro League", "home": "Oud-Heverlee Leuven", "away": "RAAL La Louviere", "o1": 2.12, "ox": 3.39, "o2": 3.53}
+{"snap": 1789503566, "eid": "sr:match:72203060", "ko": 1789834500, "comp": "Belgium: Pro League", "home": "Royal Charleroi SC", "away": "Cercle Brugge", "o1": 1.78, "ox": 3.98, "o2": 4.21}
+{"snap": 1789503566, "eid": "sr:match:72203062", "ko": 1789843500, "comp": "Belgium: Pro League", "home": "Lommel SK", "away": "Yellow-Red KV Mechelen", "o1": 2.58, "ox": 3.54, "o2": 2.63}
+{"snap": 1789503566, "eid": "sr:match:72203064", "ko": 1789843500, "comp": "Belgium: Pro League", "home": "RSC Anderlecht", "away": "SV Zulte Waregem", "o1": 1.82, "ox": 3.78, "o2": 4.23}
+{"snap": 1789503566, "eid": "sr:match:72203066", "ko": 1789903800, "comp": "Belgium: Pro League", "home": "Royal Antwerp FC", "away": "Union Gilloise", "o1": 5.07, "ox": 3.95, "o2": 1.67}
+{"snap": 1789503566, "eid": "sr:match:72203068", "ko": 1789912800, "comp": "Belgium: Pro League", "home": "St. Truidense VV", "away": "KVC Westerlo", "o1": 1.69, "ox": 4.23, "o2": 4.51}
+{"snap": 1789503566, "eid": "sr:match:72203072", "ko": 1789924500, "comp": "Belgium: Pro League", "home": "KV Kortrijk", "away": "KV Waasland-Beveren", "o1": 2.64, "ox": 3.47, "o2": 2.61}
+{"snap": 1789503566, "eid": "sr:match:74374468", "ko": 1789578000, "comp": "Switzerland: Super League", "home": "FC Thun", "away": "Servette Geneva", "o1": 2.75, "ox": 3.7, "o2": 2.35}
+{"snap": 1789503566, "eid": "sr:match:72176950", "ko": 1789833600, "comp": "Switzerland: Super League", "home": "FC Luzern", "away": "Grasshopper Club Zurich", "o1": 1.71, "ox": 4.1, "o2": 4.2}
+{"snap": 1789503566, "eid": "sr:match:72176954", "ko": 1789905600, "comp": "Switzerland: Super League", "home": "FC Vaduz", "away": "FC Thun", "o1": 2.35, "ox": 4.1, "o2": 2.5}
+{"snap": 1789503566, "eid": "sr:match:72176958", "ko": 1789914600, "comp": "Switzerland: Super League", "home": "Basel", "away": "FC St. Gallen 1879", "o1": 2.25, "ox": 4.0, "o2": 2.65}
+{"snap": 1789503566, "eid": "sr:match:72176956", "ko": 1789914600, "comp": "Switzerland: Super League", "home": "Lausanne-Sport", "away": "Lugano", "o1": 4.1, "ox": 3.9, "o2": 1.75}
+{"snap": 1789503566, "eid": "sr:match:71925028", "ko": 1789750800, "comp": "Denmark: Superliga", "home": "Lyngby BK", "away": "Silkeborg IF", "o1": 1.9, "ox": 4.0, "o2": 3.7}
+{"snap": 1789503566, "eid": "sr:match:71925026", "ko": 1789833600, "comp": "Denmark: Superliga", "home": "Odense Boldklub", "away": "FC Midtjylland", "o1": 4.0, "ox": 3.9, "o2": 1.81}
+{"snap": 1789503566, "eid": "sr:match:71925024", "ko": 1789905600, "comp": "Denmark: Superliga", "home": "Broendby IF", "away": "Copenhagen", "o1": 3.0, "ox": 3.6, "o2": 2.25}
+{"snap": 1789503566, "eid": "sr:match:71925030", "ko": 1789905600, "comp": "Denmark: Superliga", "home": "SonderjyskE", "away": "Randers FC", "o1": 2.85, "ox": 3.5, "o2": 2.35}
+{"snap": 1789503566, "eid": "sr:match:71925034", "ko": 1789920000, "comp": "Denmark: Superliga", "home": "Viborg FF", "away": "Nordsjaelland", "o1": 2.75, "ox": 3.75, "o2": 2.3}
+{"snap": 1789503566, "eid": "sr:match:73878724", "ko": 1789552800, "comp": "International Clubs: AFC Champions League Two", "home": "FC Seoul", "away": "Persib Bandung", "o1": 2.05, "ox": 3.4, "o2": 3.5}
+{"snap": 1789503566, "eid": "sr:match:73835274", "ko": 1789560900, "comp": "International Clubs: AFC Champions League Two", "home": "The Cong - Viettel FC", "away": "Melbourne Victory", "o1": 3.4, "ox": 3.6, "o2": 2.05}
+{"snap": 1789503566, "eid": "sr:match:73835236", "ko": 1789574400, "comp": "International Clubs: AFC Champions League Two", "home": "Al Hussein Irbid", "away": "East Bengal FC", "o1": 1.59, "ox": 4.0, "o2": 5.25}
+{"snap": 1789503566, "eid": "sr:match:73835208", "ko": 1789574400, "comp": "International Clubs: AFC Champions League Two", "home": "Al Nahda", "away": "Al-Taawoun FC", "o1": 3.75, "ox": 3.5, "o2": 1.92}
+{"snap": 1789503566, "eid": "sr:match:73835152", "ko": 1789574400, "comp": "International Clubs: AFC Champions League Two", "home": "Al Wahda FC (UAE)", "away": "Kuwait SC", "o1": 1.48, "ox": 4.3, "o2": 6.1}
+{"snap": 1789503566, "eid": "sr:match:73835154", "ko": 1789574400, "comp": "International Clubs: AFC Champions League Two", "home": "AL-Khaldiya SC", "away": "PFC Nasaf", "o1": 2.3, "ox": 3.2, "o2": 3.1}
+{"snap": 1789503566, "eid": "sr:match:73835210", "ko": 1789582500, "comp": "International Clubs: AFC Champions League Two", "home": "Al Rayyan SC", "away": "AL Faisaly (Jor)", "o1": 1.36, "ox": 5.0, "o2": 7.4}
+{"snap": 1789503566, "eid": "sr:match:73835238", "ko": 1789582500, "comp": "International Clubs: AFC Champions League Two", "home": "Al Shorta SC", "away": "Al-Seeb", "o1": 1.9, "ox": 3.33, "o2": 4.1}
+{"snap": 1789503566, "eid": "sr:match:73835438", "ko": 1789639200, "comp": "International Clubs: AFC Champions League Two", "home": "Lion City Sailors FC", "away": "BG Pathum United", "o1": 2.1, "ox": 3.3, "o2": 3.4}
+{"snap": 1789503566, "eid": "sr:match:73835322", "ko": 1789647300, "comp": "International Clubs: AFC Champions League Two", "home": "Kitchee", "away": "Gangwon FC", "o1": 2.55, "ox": 3.25, "o2": 2.65}
+{"snap": 1789503566, "eid": "sr:match:68823272", "ko": 1789511400, "comp": "Brazil: Brasileiro Serie B", "home": "Londrina EC PR", "away": "AA Ponte Preta SP", "o1": 1.32, "ox": 5.2, "o2": 9.1}
+{"snap": 1789503566, "eid": "sr:match:68823280", "ko": 1789511400, "comp": "Brazil: Brasileiro Serie B", "home": "Nautico PE", "away": "Operario Ferroviario EC PR", "o1": 1.86, "ox": 3.5, "o2": 4.3}
+{"snap": 1789503566, "eid": "sr:match:68823282", "ko": 1789516800, "comp": "Brazil: Brasileiro Serie B", "home": "CR Brasil AL", "away": "SC Recife PE", "o1": 1.92, "ox": 3.6, "o2": 3.8}
+{"snap": 1789503566, "eid": "sr:match:68823304", "ko": 1789770600, "comp": "Brazil: Brasileiro Serie B", "home": "Vila Nova FC GO", "away": "America FC MG", "o1": 1.51, "ox": 4.0, "o2": 6.3}
+{"snap": 1789503566, "eid": "sr:match:68823294", "ko": 1789774200, "comp": "Brazil: Brasileiro Serie B", "home": "Ceara SC CE", "away": "Gremio Novorizontino SP", "o1": 2.7, "ox": 3.2, "o2": 2.55}
+{"snap": 1789503566, "eid": "sr:match:68823288", "ko": 1789776000, "comp": "Brazil: Brasileiro Serie B", "home": "Sao Bernardo FC", "away": "AC Goianiense GO", "o1": 2.35, "ox": 3.1, "o2": 3.1}
+{"snap": 1789503566, "eid": "sr:match:68823290", "ko": 1789853400, "comp": "Brazil: Brasileiro Serie B", "home": "Athletic Club Sjdr MG", "away": "Botafogo FC SP", "o1": 2.3, "ox": 2.95, "o2": 3.4}
+{"snap": 1789503566, "eid": "sr:match:68823296", "ko": 1789930800, "comp": "Brazil: Brasileiro Serie B", "home": "Goias EC GO", "away": "Avai FC SC", "o1": 1.85, "ox": 3.25, "o2": 4.5}
+{"snap": 1789503566, "eid": "sr:match:72202656", "ko": 1789756200, "comp": "Scotland: Championship", "home": "Queens Park FC", "away": "Ayr United FC", "o1": 3.25, "ox": 3.33, "o2": 2.2}
+{"snap": 1789503566, "eid": "sr:match:72202650", "ko": 1789826400, "comp": "Scotland: Championship", "home": "Greenock Morton FC", "away": "Dunfermline Athletic FC", "o1": 3.8, "ox": 3.5, "o2": 1.92}
+{"snap": 1789503566, "eid": "sr:match:72202652", "ko": 1789826400, "comp": "Scotland: Championship", "home": "Livingston FC", "away": "Inverness Caledonian Thistle FC", "o1": 1.93, "ox": 3.5, "o2": 3.75}
+{"snap": 1789503566, "eid": "sr:match:72202654", "ko": 1789826400, "comp": "Scotland: Championship", "home": "Partick Thistle FC", "away": "Raith Rovers FC", "o1": 1.96, "ox": 3.4, "o2": 3.75}
+{"snap": 1789503566, "eid": "sr:match:72202658", "ko": 1789826400, "comp": "Scotland: Championship", "home": "Stenhousemuir FC", "away": "Arbroath FC", "o1": 2.45, "ox": 3.2, "o2": 2.85}
+{"snap": 1789503566, "eid": "sr:match:74303324", "ko": 1793556000, "comp": "Brazil: Copa do Brasil", "home": "CR Vasco da Gama RJ", "away": "SE Palmeiras SP", "o1": 4.2, "ox": 3.6, "o2": 1.8}
+{"snap": 1789503566, "eid": "sr:match:74351802", "ko": 1793556000, "comp": "Brazil: Copa do Brasil", "home": "Gremio FB Porto Alegrense RS", "away": "Atletico Mineiro MG", "o1": 2.4, "ox": 3.25, "o2": 2.95}
+{"snap": 1789503566, "eid": "sr:match:74318098", "ko": 1789569000, "comp": "Denmark: DBU Pokalen", "home": "Brabrand IF", "away": "Viborg FF", "o1": 11.5, "ox": 6.2, "o2": 1.2}
+{"snap": 1789503566, "eid": "sr:match:74318094", "ko": 1789569000, "comp": "Denmark: DBU Pokalen", "home": "Naesby BK", "away": "AC Horsens", "o1": 7.4, "ox": 5.2, "o2": 1.33}
+{"snap": 1789503566, "eid": "sr:match:74440570", "ko": 1789574400, "comp": "Denmark: DBU Pokalen", "home": "AB Gladsaxe", "away": "SonderjyskE", "o1": 2.9, "ox": 3.4, "o2": 2.25}
+{"snap": 1789503566, "eid": "sr:match:74318104", "ko": 1789578000, "comp": "Denmark: DBU Pokalen", "home": "Vendsyssel FF", "away": "Randers FC", "o1": 4.5, "ox": 3.9, "o2": 1.67}
+{"snap": 1789503566, "eid": "sr:match:74318106", "ko": 1789662600, "comp": "Denmark: DBU Pokalen", "home": "Vejle BK", "away": "Broendby IF", "o1": 3.9, "ox": 3.5, "o2": 1.81}
+{"snap": 1789503566, "eid": "sr:match:71913072", "ko": 1789754400, "comp": "Croatia: HNL", "home": "NK Rudes Zagreb", "away": "NK Slaven Belupo", "o1": 3.5, "ox": 3.5, "o2": 1.98}
+{"snap": 1789503566, "eid": "sr:match:71913078", "ko": 1789830000, "comp": "Croatia: HNL", "home": "NK Varazdin", "away": "NK Osijek", "o1": 2.15, "ox": 3.2, "o2": 3.33}
+{"snap": 1789503566, "eid": "sr:match:71913080", "ko": 1789840800, "comp": "Croatia: HNL", "home": "NK Istra 1961", "away": "HNK Gorica", "o1": 1.92, "ox": 3.5, "o2": 3.7}
+{"snap": 1789503566, "eid": "sr:match:71913074", "ko": 1789916400, "comp": "Croatia: HNL", "home": "HNK Rijeka", "away": "HNK Hajduk Split", "o1": 2.15, "ox": 3.3, "o2": 3.25}
+{"snap": 1789503566, "eid": "sr:match:72151148", "ko": 1789704000, "comp": "Japan: J2 League", "home": "Vanraure Hachinohe FC", "away": "Tegevajaro Miyazaki", "o1": 3.6, "ox": 3.3, "o2": 2.1}
+{"snap": 1789503566, "eid": "sr:match:72151146", "ko": 1789794000, "comp": "Japan: J2 League", "home": "Hokkaido Consadole Sapporo", "away": "Oita Trinita", "o1": 2.35, "ox": 3.2, "o2": 3.0}
+{"snap": 1789503566, "eid": "sr:match:72151162", "ko": 1789810200, "comp": "Japan: J2 League", "home": "Fujieda MYFC", "away": "RB Omiya Ardija", "o1": 3.3, "ox": 3.5, "o2": 2.1}
+{"snap": 1789503566, "eid": "sr:match:72151160", "ko": 1789812000, "comp": "Japan: J2 League", "home": "Albirex Niigata", "away": "Jubilo Iwata", "o1": 2.95, "ox": 3.2, "o2": 2.35}
+{"snap": 1789503566, "eid": "sr:match:72151150", "ko": 1789812000, "comp": "Japan: J2 League", "home": "Montedio Yamagata", "away": "Kataller Toyama", "o1": 2.75, "ox": 3.6, "o2": 2.35}
+{"snap": 1789503566, "eid": "sr:match:72151164", "ko": 1789812000, "comp": "Japan: J2 League", "home": "Sagan Tosu", "away": "Iwaki FC", "o1": 1.97, "ox": 3.33, "o2": 3.75}
+{"snap": 1789503566, "eid": "sr:match:72151156", "ko": 1789812000, "comp": "Japan: J2 League", "home": "Shonan Bellmare", "away": "Blaublitz Akita", "o1": 2.1, "ox": 3.25, "o2": 3.5}
+{"snap": 1789503566, "eid": "sr:match:72151152", "ko": 1789891200, "comp": "Japan: J2 League", "home": "Tochigi City FC", "away": "Vegalta Sendai", "o1": 3.4, "ox": 3.4, "o2": 2.05}
+{"snap": 1789503566, "eid": "sr:match:72203906", "ko": 1789826400, "comp": "Scotland: League 1", "home": "Alloa Athletic FC", "away": "East Kilbride FC", "o1": 2.6, "ox": 3.5, "o2": 2.45}
+{"snap": 1789503566, "eid": "sr:match:72203910", "ko": 1789826400, "comp": "Scotland: League 1", "home": "East Fife FC", "away": "Montrose FC", "o1": 2.6, "ox": 3.5, "o2": 2.5}
+{"snap": 1789503566, "eid": "sr:match:72203912", "ko": 1789826400, "comp": "Scotland: League 1", "home": "Hamilton Academical FC", "away": "Queen of the South FC", "o1": 1.36, "ox": 4.7, "o2": 7.6}
+{"snap": 1789503566, "eid": "sr:match:72203914", "ko": 1789826400, "comp": "Scotland: League 1", "home": "Peterhead FC", "away": "Airdrieonians FC", "o1": 2.55, "ox": 3.4, "o2": 2.55}
+{"snap": 1789503566, "eid": "sr:match:74458740", "ko": 1789600500, "comp": "Colombia: Liga DIMAYOR", "home": "CD Once Caldas", "away": "CD Tolima", "o1": 2.0, "ox": 3.3, "o2": 3.6}
+{"snap": 1789503566, "eid": "sr:match:72335178", "ko": 1789608000, "comp": "Colombia: Liga DIMAYOR", "home": "Internacional de Bogota.", "away": "Atletico Nacional", "o1": 3.7, "ox": 3.33, "o2": 1.96}
+{"snap": 1789503566, "eid": "sr:match:72335096", "ko": 1789686000, "comp": "Colombia: Liga DIMAYOR", "home": "CA Bucaramanga", "away": "Independiente Medellin", "o1": 2.2, "ox": 3.2, "o2": 3.3}
+{"snap": 1789503566, "eid": "sr:match:72335120", "ko": 1789765200, "comp": "Colombia: Liga DIMAYOR", "home": "Aguilas Doradas Rionegro", "away": "Deportivo Pereira FC SA", "o1": 1.4, "ox": 4.4, "o2": 7.4}
+{"snap": 1789503566, "eid": "sr:match:72335130", "ko": 1789844400, "comp": "Colombia: Liga DIMAYOR", "home": "Millonarios FC", "away": "Boyaca Chico FC", "o1": 1.18, "ox": 5.9, "o2": 15.5}
+{"snap": 1789503566, "eid": "sr:match:72335128", "ko": 1789859400, "comp": "Colombia: Liga DIMAYOR", "home": "Deportivo Cali", "away": "Cucuta Deportivo FC", "o1": 1.47, "ox": 4.0, "o2": 6.6}
+{"snap": 1789503566, "eid": "sr:match:72335132", "ko": 1789930800, "comp": "Colombia: Liga DIMAYOR", "home": "Fortaleza FC", "away": "CD Junior FC", "o1": 2.65, "ox": 3.1, "o2": 2.6}
+{"snap": 1789503566, "eid": "sr:match:72335136", "ko": 1789945800, "comp": "Colombia: Liga DIMAYOR", "home": "CD Tolima", "away": "America de Cali", "o1": 2.5, "ox": 3.1, "o2": 2.8}
+{"snap": 1789503566, "eid": "sr:match:72335138", "ko": 1789953300, "comp": "Colombia: Liga DIMAYOR", "home": "Llaneros FC", "away": "Atletico Nacional", "o1": 4.5, "ox": 3.4, "o2": 1.76}
+{"snap": 1789503566, "eid": "sr:match:74565608", "ko": 1791936000, "comp": "Colombia: Liga DIMAYOR", "home": "CA Bucaramanga", "away": "Aguilas Doradas Rionegro", "o1": 1.87, "ox": 3.25, "o2": 4.0}
+{"snap": 1789503566, "eid": "sr:match:74364096", "ko": 1789520400, "comp": "Mexico: Liga MX", "home": "Club Puebla", "away": "Deportivo Toluca FC", "o1": 5.5, "ox": 4.4, "o2": 1.56}
+{"snap": 1789503566, "eid": "sr:match:72055174", "ko": 1789779600, "comp": "Mexico: Liga MX", "home": "Club Puebla", "away": "Atlante FC", "o1": 2.15, "ox": 3.6, "o2": 3.2}
+{"snap": 1789503566, "eid": "sr:match:72055176", "ko": 1789786800, "comp": "Mexico: Liga MX", "home": "FC Juarez", "away": "Tigres UANL", "o1": 4.4, "ox": 3.75, "o2": 1.76}
+{"snap": 1789503566, "eid": "sr:match:72055180", "ko": 1789858800, "comp": "Mexico: Liga MX", "home": "Atlas FC", "away": "Pumas UNAM", "o1": 2.45, "ox": 3.3, "o2": 2.9}
+{"snap": 1789503567, "eid": "sr:match:72055178", "ko": 1789858800, "comp": "Mexico: Liga MX", "home": "Atletico San Luis", "away": "Club Necaxa", "o1": 2.15, "ox": 3.5, "o2": 3.2}
+{"snap": 1789503567, "eid": "sr:match:72055182", "ko": 1789866600, "comp": "Mexico: Liga MX", "home": "CF Monterrey", "away": "CF Cruz Azul", "o1": 2.3, "ox": 3.6, "o2": 2.95}
+{"snap": 1789503567, "eid": "sr:match:72055184", "ko": 1789874100, "comp": "Mexico: Liga MX", "home": "CF America", "away": "CD Guadalajara", "o1": 2.5, "ox": 3.4, "o2": 2.7}
+{"snap": 1789503567, "eid": "sr:match:72055186", "ko": 1789948800, "comp": "Mexico: Liga MX", "home": "CF Pachuca", "away": "Club Tijuana de Caliente", "o1": 1.73, "ox": 3.9, "o2": 4.4}
+{"snap": 1789503567, "eid": "sr:match:72055188", "ko": 1789948800, "comp": "Mexico: Liga MX", "home": "Deportivo Toluca FC", "away": "Club Santos Laguna", "o1": 1.24, "ox": 6.5, "o2": 10.0}
+{"snap": 1789503567, "eid": "sr:match:72055190", "ko": 1789956300, "comp": "Mexico: Liga MX", "home": "Queretaro FC", "away": "Club Leon", "o1": 2.3, "ox": 3.5, "o2": 2.9}
+{"snap": 1789503567, "eid": "sr:match:74191654", "ko": 1789570800, "comp": "Tunisia: Ligue 1", "home": "US Ben Guerdane", "away": "CS Sfaxien", "o1": 3.8, "ox": 2.7, "o2": 2.1}
+{"snap": 1789503567, "eid": "sr:match:73463638", "ko": 1789653600, "comp": "Egypt: Premier League", "home": "Zed FC", "away": "El Qanah FC", "o1": 2.05, "ox": 2.9, "o2": 4.5}
+{"snap": 1789503567, "eid": "sr:match:73463652", "ko": 1789664400, "comp": "Egypt: Premier League", "home": "Al Sharqiya Enppi", "away": "Pyramids FC", "o1": 7.25, "ox": 3.9, "o2": 1.52}
+{"snap": 1789503567, "eid": "sr:match:72343992", "ko": 1791983700, "comp": "Russia: Russian Cup", "home": "PFK Krylia Sovetov Samara", "away": "FC Baltika Kaliningrad", "o1": 2.6, "ox": 3.0, "o2": 2.6}
+{"snap": 1789503567, "eid": "sr:match:72343994", "ko": 1791991800, "comp": "Russia: Russian Cup", "home": "FC Dynamo-Makhachkala", "away": "FK Zenit Saint Petersburg", "o1": 5.1, "ox": 3.9, "o2": 1.54}
+{"snap": 1789503567, "eid": "sr:match:72343952", "ko": 1791991800, "comp": "Russia: Russian Cup", "home": "RFK Akhmat Grozny", "away": "FK Dinamo Moscow", "o1": 2.5, "ox": 3.25, "o2": 2.5}
+{"snap": 1789503567, "eid": "sr:match:72344022", "ko": 1791999900, "comp": "Russia: Russian Cup", "home": "CSKA Moscow", "away": "FK Rostov", "o1": 1.66, "ox": 3.7, "o2": 4.5}
+{"snap": 1789503567, "eid": "sr:match:72343928", "ko": 1792078200, "comp": "Russia: Russian Cup", "home": "FK Rubin Kazan", "away": "FC Orenburg", "o1": 1.78, "ox": 3.3, "o2": 4.3}
+{"snap": 1789503567, "eid": "sr:match:72936052", "ko": 1789833600, "comp": "Greece: Super League", "home": "Atromitos Athinon", "away": "AE Kifisia FC", "o1": 2.05, "ox": 3.3, "o2": 3.7}
+{"snap": 1789503567, "eid": "sr:match:72936050", "ko": 1789835400, "comp": "Greece: Super League", "home": "Aris Thessaloniki", "away": "POT Iraklis", "o1": 1.69, "ox": 3.75, "o2": 5.0}
+{"snap": 1789503567, "eid": "sr:match:72936058", "ko": 1789912800, "comp": "Greece: Super League", "home": "APO Levadiakos FC", "away": "Olympiacos", "o1": 7.7, "ox": 4.6, "o2": 1.4}
+{"snap": 1789503567, "eid": "sr:match:72936054", "ko": 1789916400, "comp": "Greece: Super League", "home": "Volos NPS", "away": "AEK Athens", "o1": 8.2, "ox": 4.9, "o2": 1.36}
+{"snap": 1789503567, "eid": "sr:match:72936060", "ko": 1789920000, "comp": "Greece: Super League", "home": "OFI Crete", "away": "Asteras Tripolis", "o1": 2.2, "ox": 3.25, "o2": 3.4}
+{"snap": 1789503567, "eid": "sr:match:72936056", "ko": 1789921800, "comp": "Greece: Super League", "home": "PAE PS Kalamata", "away": "Panathinaikos", "o1": 7.9, "ox": 4.6, "o2": 1.39}
+{"snap": 1789503567, "eid": "sr:match:72388008", "ko": 1789743600, "comp": "Romania: Superliga", "home": "FC Uta Arad", "away": "ACS Sepsi OSK Sfantu Gheorghe", "o1": 1.93, "ox": 3.5, "o2": 3.9}
+{"snap": 1789503567, "eid": "sr:match:72388014", "ko": 1789754400, "comp": "Romania: Superliga", "home": "Rapid Bucuresti 1923", "away": "ACS Champions FC Arges", "o1": 1.76, "ox": 3.5, "o2": 4.9}
+{"snap": 1789503567, "eid": "sr:match:72388012", "ko": 1789828200, "comp": "Romania: Superliga", "home": "CFR Cluj", "away": "FC Botosani", "o1": 2.05, "ox": 3.6, "o2": 3.33}
+{"snap": 1789503567, "eid": "sr:match:72388000", "ko": 1789839000, "comp": "Romania: Superliga", "home": "CS Universitatea Craiova", "away": "Fotbal Club FCSB", "o1": 1.82, "ox": 3.7, "o2": 4.0}
+{"snap": 1789503567, "eid": "sr:match:72388010", "ko": 1789902000, "comp": "Romania: Superliga", "home": "SC FC Voluntari", "away": "FC Universitatea Cluj", "o1": 3.3, "ox": 3.4, "o2": 2.1}
+{"snap": 1789503567, "eid": "sr:match:72388004", "ko": 1789925400, "comp": "Romania: Superliga", "home": "FC Dinamo Bucuresti 1948", "away": "FC Farul Constanta", "o1": 1.66, "ox": 3.8, "o2": 4.9}
+{"snap": 1789503567, "eid": "sr:match:72388002", "ko": 1790013600, "comp": "Romania: Superliga", "home": "FC Petrolul Ploiesti", "away": "AFK Csikszereda Miercurea Ciuc", "o1": 1.71, "ox": 3.6, "o2": 4.75}
+{"snap": 1789503567, "eid": "sr:match:74625628", "ko": 1789795800, "comp": "Australia: Victoria, NPL", "home": "Oakleigh Cannons", "away": "Avondale FC", "o1": 2.35, "ox": 3.6, "o2": 2.55}
+{"snap": 1789503567, "eid": "sr:match:72176590", "ko": 1789752600, "comp": "Switzerland: Challenge League", "home": "FC Wil 1900", "away": "FC Stade Nyonnais", "o1": 1.67, "ox": 4.0, "o2": 4.4}
+{"snap": 1789503567, "eid": "sr:match:72176592", "ko": 1789752600, "comp": "Switzerland: Challenge League", "home": "Neuchatel Xamax", "away": "FC Rapperswil-Jona", "o1": 1.89, "ox": 4.0, "o2": 3.3}
+{"snap": 1789503567, "eid": "sr:match:72176596", "ko": 1789755300, "comp": "Switzerland: Challenge League", "home": "FC Winterthur", "away": "FC Aarau", "o1": 2.25, "ox": 3.7, "o2": 2.75}
+{"snap": 1789503567, "eid": "sr:match:72176598", "ko": 1789905600, "comp": "Switzerland: Challenge League", "home": "Yverdon-Sport", "away": "Stade Lausanne Ouchy", "o1": 2.2, "ox": 3.5, "o2": 2.95}
+{"snap": 1789503567, "eid": "sr:match:72302144", "ko": 1789754400, "comp": "Belgium: Challenger Pro League", "home": "Royal Francs Borains", "away": "RSC Anderlecht Futures", "o1": 1.93, "ox": 3.5, "o2": 3.5}
+{"snap": 1789503567, "eid": "sr:match:72302150", "ko": 1789826400, "comp": "Belgium: Challenger Pro League", "home": "Sporting Hasselt", "away": "K Beerschot VA", "o1": 3.25, "ox": 3.5, "o2": 2.0}
+{"snap": 1789503567, "eid": "sr:match:72302148", "ko": 1789840800, "comp": "Belgium: Challenger Pro League", "home": "KAS Eupen", "away": "RFC Liege", "o1": 1.88, "ox": 3.4, "o2": 3.75}
+{"snap": 1789503567, "eid": "sr:match:73873128", "ko": 1789518600, "comp": "International Clubs: CONMEBOL Sudamericana", "home": "Sao Paulo FC SP", "away": "Boca Juniors", "o1": 2.35, "ox": 3.1, "o2": 3.33}
+{"snap": 1789503567, "eid": "sr:match:73911198", "ko": 1789691400, "comp": "International Clubs: CONMEBOL Sudamericana", "home": "Montevideo City Torque", "away": "Cienciano", "o1": 1.59, "ox": 4.3, "o2": 5.3}
+{"snap": 1789503567, "eid": "sr:match:74322892", "ko": 1789596000, "comp": "Argentina: Copa Argentina", "home": "Independiente Rivadavia", "away": "Atletico Tucuman", "o1": 2.2, "ox": 3.1, "o2": 3.6}
+{"snap": 1789503567, "eid": "sr:match:74322894", "ko": 1790546400, "comp": "Argentina: Copa Argentina", "home": "CA Platense", "away": "Estudiantes de La Plata", "o1": 3.8, "ox": 3.0, "o2": 2.05}
+{"snap": 1789503567, "eid": "sr:match:74322896", "ko": 1790546400, "comp": "Argentina: Copa Argentina", "home": "Racing Club Avellaneda", "away": "Boca Juniors", "o1": 3.5, "ox": 3.1, "o2": 2.1}
+{"snap": 1789503567, "eid": "sr:match:74351766", "ko": 1789560000, "comp": "Greece: Greece Cup", "home": "Niki Volou 1924 PAE", "away": "Asteras Tripolis", "o1": 3.9, "ox": 3.33, "o2": 1.94}
+{"snap": 1789503567, "eid": "sr:match:74069124", "ko": 1789566300, "comp": "Greece: Greece Cup", "home": "Aris Thessaloniki", "away": "GS Marko", "o1": 1.16, "ox": 7.4, "o2": 13.5}
+{"snap": 1789503567, "eid": "sr:match:74069128", "ko": 1789569900, "comp": "Greece: Greece Cup", "home": "AE Kifisia FC", "away": "Panathinaikos", "o1": 5.4, "ox": 3.9, "o2": 1.6}
+{"snap": 1789503567, "eid": "sr:match:74069130", "ko": 1789578000, "comp": "Greece: Greece Cup", "home": "Atromitos Athinon", "away": "PAOK", "o1": 5.6, "ox": 3.9, "o2": 1.57}
+{"snap": 1789503567, "eid": "sr:match:74069126", "ko": 1789651800, "comp": "Greece: Greece Cup", "home": "PAE PS Kalamata", "away": "AE Larissa FC", "o1": 1.55, "ox": 3.8, "o2": 5.8}
+{"snap": 1789503567, "eid": "sr:match:74069122", "ko": 1789656300, "comp": "Greece: Greece Cup", "home": "AEK Athens", "away": "Panserraikos FC", "o1": 1.12, "ox": 8.0, "o2": 15.5}
+{"snap": 1789503567, "eid": "sr:match:72204274", "ko": 1789826400, "comp": "Scotland: League 2", "home": "Dumbarton FC", "away": "Spartans FC", "o1": 4.3, "ox": 4.0, "o2": 1.64}
+{"snap": 1789503567, "eid": "sr:match:72204278", "ko": 1789826400, "comp": "Scotland: League 2", "home": "Forfar Athletic FC", "away": "Annan Athletic FC", "o1": 2.5, "ox": 3.5, "o2": 2.5}
+{"snap": 1789503567, "eid": "sr:match:72204280", "ko": 1789826400, "comp": "Scotland: League 2", "home": "Kelty Hearts FC", "away": "Edinburgh City FC", "o1": 2.2, "ox": 3.6, "o2": 2.75}
+{"snap": 1789503567, "eid": "sr:match:72204282", "ko": 1789826400, "comp": "Scotland: League 2", "home": "Stirling Albion FC", "away": "Clyde FC", "o1": 4.6, "ox": 4.25, "o2": 1.57}
+{"snap": 1789503567, "eid": "sr:match:72341166", "ko": 1789671600, "comp": "England: League One", "home": "AFC Wimbledon", "away": "Milton Keynes Dons", "o1": 3.0, "ox": 3.4, "o2": 2.35}
+{"snap": 1789503567, "eid": "sr:match:72341168", "ko": 1789817400, "comp": "England: League One", "home": "Barnsley FC", "away": "Leicester", "o1": 3.3, "ox": 3.75, "o2": 2.05}
+{"snap": 1789503567, "eid": "sr:match:72341174", "ko": 1789817400, "comp": "England: League One", "home": "Burton Albion", "away": "Mansfield Town", "o1": 2.55, "ox": 3.4, "o2": 2.65}
+{"snap": 1789503567, "eid": "sr:match:72341172", "ko": 1789826400, "comp": "England: League One", "home": "Bromley FC", "away": "Huddersfield", "o1": 5.3, "ox": 4.1, "o2": 1.59}
+{"snap": 1789503567, "eid": "sr:match:72341176", "ko": 1789826400, "comp": "England: League One", "home": "Leyton Orient London", "away": "Stevenage FC", "o1": 2.35, "ox": 3.3, "o2": 3.0}
+{"snap": 1789503567, "eid": "sr:match:72341178", "ko": 1789826400, "comp": "England: League One", "home": "Luton", "away": "Bradford City FC", "o1": 2.1, "ox": 3.5, "o2": 3.4}
+{"snap": 1789503567, "eid": "sr:match:72341180", "ko": 1789826400, "comp": "England: League One", "home": "Oxford United", "away": "Cambridge United", "o1": 2.15, "ox": 3.4, "o2": 3.33}
+{"snap": 1789503567, "eid": "sr:match:72341182", "ko": 1789826400, "comp": "England: League One", "home": "Peterborough United", "away": "Doncaster Rovers", "o1": 2.4, "ox": 3.6, "o2": 2.8}
+{"snap": 1789503567, "eid": "sr:match:72341184", "ko": 1789826400, "comp": "England: League One", "home": "Reading FC", "away": "Notts County", "o1": 1.9, "ox": 3.6, "o2": 3.9}
+{"snap": 1789503567, "eid": "sr:match:72341186", "ko": 1789826400, "comp": "England: League One", "home": "Sheffield Wednesday", "away": "Stockport County FC", "o1": 2.85, "ox": 3.7, "o2": 2.3}
+{"snap": 1789503567, "eid": "sr:match:74259430", "ko": 1789574400, "comp": "Bulgaria: Parva Liga", "home": "FC Lokomotiv 1929 Sofia", "away": "PFC CSKA Sofia", "o1": 5.4, "ox": 4.3, "o2": 1.53}
+{"snap": 1789503567, "eid": "sr:match:71998212", "ko": 1789750800, "comp": "Bulgaria: Parva Liga", "home": "PFC Slavia Sofia", "away": "FC CSKA 1948", "o1": 4.2, "ox": 3.33, "o2": 1.83}
+{"snap": 1789503567, "eid": "sr:match:71998210", "ko": 1789824600, "comp": "Bulgaria: Parva Liga", "home": "FK Septemvri Sofia", "away": "Botev Plovdiv", "o1": 4.1, "ox": 3.6, "o2": 1.79}
+{"snap": 1789503567, "eid": "sr:match:71998200", "ko": 1789833600, "comp": "Bulgaria: Parva Liga", "home": "FC Arda Kardzhali", "away": "PFC Cherno More Varna", "o1": 1.76, "ox": 3.4, "o2": 4.6}
+{"snap": 1789503567, "eid": "sr:match:71998208", "ko": 1789915500, "comp": "Bulgaria: Parva Liga", "home": "PFC Lokomotiv Plovdiv", "away": "PFC CSKA Sofia", "o1": 6.4, "ox": 3.9, "o2": 1.49}
+{"snap": 1789503567, "eid": "sr:match:73293164", "ko": 1789662600, "comp": "Italy: Serie C, Group A", "home": "AC Lumezzane", "away": "Novara FC", "o1": 2.55, "ox": 3.0, "o2": 2.75}
+{"snap": 1789503567, "eid": "sr:match:73293158", "ko": 1789662600, "comp": "Italy: Serie C, Group A", "home": "AS Cittadella", "away": "Juventus Next Gen", "o1": 1.7, "ox": 3.5, "o2": 4.7}
+{"snap": 1789503567, "eid": "sr:match:73293160", "ko": 1789662600, "comp": "Italy: Serie C, Group A", "home": "Calcio Desenzano", "away": "Calcio Lecco 1912", "o1": 2.6, "ox": 2.9, "o2": 2.75}
+{"snap": 1789503567, "eid": "sr:match:73293168", "ko": 1789662600, "comp": "Italy: Serie C, Group A", "home": "Pro Vercelli 1892", "away": "Alcione Milano", "o1": 2.5, "ox": 3.0, "o2": 2.8}
+{"snap": 1789503567, "eid": "sr:match:73293154", "ko": 1789662600, "comp": "Italy: Serie C, Group A", "home": "US Albinoleffe", "away": "FC Arzignano Valchiampo", "o1": 2.3, "ox": 2.95, "o2": 3.2}
+{"snap": 1789503567, "eid": "sr:match:73293166", "ko": 1789662600, "comp": "Italy: Serie C, Group A", "home": "US Pergolettese Crema", "away": "US Folgore Caratese", "o1": 2.6, "ox": 3.0, "o2": 2.7}
+{"snap": 1789503567, "eid": "sr:match:73627006", "ko": 1789563600, "comp": "Italy: Serie D, Group A", "home": "AC Bra", "away": "Biellese", "o1": 2.5, "ox": 3.1, "o2": 2.65}
+{"snap": 1789503567, "eid": "sr:match:73627012", "ko": 1789563600, "comp": "Italy: Serie D, Group A", "home": "ASD Imperia 1923", "away": "Asti Calcio", "o1": 1.83, "ox": 3.25, "o2": 4.1}
+{"snap": 1789503567, "eid": "sr:match:73627016", "ko": 1789563600, "comp": "Italy: Serie D, Group A", "home": "Asd Millesimo", "away": "US Alessandria Calcio 1912", "o1": 4.5, "ox": 3.6, "o2": 1.67}
+{"snap": 1789503567, "eid": "sr:match:73627014", "ko": 1789567200, "comp": "Italy: Serie D, Group A", "home": "SCD Ligorna 1922", "away": "HSL Derthona", "o1": 1.7, "ox": 3.4, "o2": 4.5}
+{"snap": 1789503567, "eid": "sr:match:73628600", "ko": 1789561800, "comp": "Italy: Serie D, Group B", "home": "AC Chievo Verona", "away": "Club Milano SSD", "o1": 1.69, "ox": 3.4, "o2": 4.6}
+{"snap": 1789503567, "eid": "sr:match:73628604", "ko": 1789563600, "comp": "Italy: Serie D, Group B", "home": "AC Leon", "away": "Piacenza Calcio", "o1": 2.5, "ox": 3.25, "o2": 2.6}
+{"snap": 1789503567, "eid": "sr:match:73628608", "ko": 1789563600, "comp": "Italy: Serie D, Group B", "home": "Nibbiano And Valtidone", "away": "Usd Scanzorosciate Calcio", "o1": 2.5, "ox": 3.1, "o2": 2.65}
+{"snap": 1789503567, "eid": "sr:match:73628616", "ko": 1789563600, "comp": "Italy: Serie D, Group B", "home": "S.S.D. Virtus Ciseranobergamo", "away": "Pavonese", "o1": 1.74, "ox": 3.4, "o2": 4.4}
+{"snap": 1789503567, "eid": "sr:match:73628610", "ko": 1789563600, "comp": "Italy: Serie D, Group B", "home": "Ssd Real Calepina FC", "away": "Calcio Caldiero Terme", "o1": 2.3, "ox": 3.1, "o2": 2.9}
+{"snap": 1789503567, "eid": "sr:match:73628606", "ko": 1789574400, "comp": "Italy: Serie D, Group B", "home": "Milan Futuro", "away": "Asd Calcio Brusaporto", "o1": 2.1, "ox": 3.25, "o2": 3.2}
+{"snap": 1789503567, "eid": "sr:match:73628612", "ko": 1789581600, "comp": "Italy: Serie D, Group B", "home": "Tritium Calcio 1908", "away": "Villa Dalme Valle Brembana", "o1": 2.45, "ox": 3.2, "o2": 2.65}
+{"snap": 1789503567, "eid": "sr:match:73628602", "ko": 1789583400, "comp": "Italy: Serie D, Group B", "home": "US Fiorenzuola", "away": "Pro Palazzolo", "o1": 3.1, "ox": 3.2, "o2": 2.15}
+{"snap": 1789503567, "eid": "sr:match:73627950", "ko": 1789563600, "comp": "Italy: Serie D, Group C", "home": "Asd Cjarlins Muzane", "away": "Fcd Conegliano 1907", "o1": 1.57, "ox": 3.7, "o2": 5.2}
+{"snap": 1789503567, "eid": "sr:match:73627952", "ko": 1789563600, "comp": "Italy: Serie D, Group C", "home": "Luparense FC", "away": "AC Virtus Bolzano", "o1": 1.32, "ox": 4.4, "o2": 8.8}
+{"snap": 1789503567, "eid": "sr:match:73627954", "ko": 1789563600, "comp": "Italy: Serie D, Group C", "home": "Obermais", "away": "Lavarian Mortean", "o1": 2.4, "ox": 3.1, "o2": 2.8}
+{"snap": 1789503567, "eid": "sr:match:73627944", "ko": 1789563600, "comp": "Italy: Serie D, Group C", "home": "Ssd Calcio San Dona", "away": "Brian Lignano Calcio", "o1": 2.55, "ox": 3.1, "o2": 2.55}
+{"snap": 1789503567, "eid": "sr:match:73627956", "ko": 1789581600, "comp": "Italy: Serie D, Group C", "home": "Union Clodiense Chioggia SSD", "away": "AC Este", "o1": 1.83, "ox": 3.4, "o2": 3.9}
+{"snap": 1789503567, "eid": "sr:match:73629262", "ko": 1789563600, "comp": "Italy: Serie D, Group D", "home": "Correggese Calcio 1948", "away": "ASD Varesina Calcio", "o1": 2.5, "ox": 3.0, "o2": 2.7}
+{"snap": 1789503567, "eid": "sr:match:73629254", "ko": 1789563600, "comp": "Italy: Serie D, Group D", "home": "Pro Patria Busto Arsizio", "away": "AC Crema 1908", "o1": 1.27, "ox": 4.7, "o2": 10.0}
+{"snap": 1789503567, "eid": "sr:match:73629256", "ko": 1789563600, "comp": "Italy: Serie D, Group D", "home": "USD Casatese Merate", "away": "ASD Sant'Angelo", "o1": 1.69, "ox": 3.5, "o2": 4.5}
+{"snap": 1789503567, "eid": "sr:match:73629258", "ko": 1789563600, "comp": "Italy: Serie D, Group D", "home": "USD Castellanzese 1921", "away": "Oltrepo FBC", "o1": 2.4, "ox": 3.1, "o2": 2.75}
+{"snap": 1789503567, "eid": "sr:match:73629260", "ko": 1789567200, "comp": "Italy: Serie D, Group D", "home": "Cittadella Vis Modena", "away": "Varese FC", "o1": 2.15, "ox": 3.1, "o2": 3.2}
+{"snap": 1789503567, "eid": "sr:match:73629268", "ko": 1789576200, "comp": "Italy: Serie D, Group D", "home": "Pro Sesto", "away": "US Citta Di Pontedera", "o1": 1.89, "ox": 3.25, "o2": 3.8}
+{"snap": 1789503567, "eid": "sr:match:73629874", "ko": 1789563600, "comp": "Italy: Serie D, Group E", "home": "AC Prato 1908", "away": "Asd Grassina", "o1": 1.24, "ox": 4.9, "o2": 11.0}
+{"snap": 1789503567, "eid": "sr:match:73629878", "ko": 1789563600, "comp": "Italy: Serie D, Group E", "home": "ASD Seravezza Pozzi Calcio", "away": "Aquila Montevarchi", "o1": 1.73, "ox": 3.33, "o2": 4.4}
+{"snap": 1789503567, "eid": "sr:match:73629872", "ko": 1789563600, "comp": "Italy: Serie D, Group E", "home": "Mezzolara Calcio", "away": "Nuova Ternana", "o1": 3.9, "ox": 3.33, "o2": 1.83}
+{"snap": 1789503567, "eid": "sr:match:73629876", "ko": 1789563600, "comp": "Italy: Serie D, Group E", "home": "Scandicci", "away": "Rondinella Marzocco Ssd", "o1": 1.92, "ox": 3.25, "o2": 3.7}
+{"snap": 1789503567, "eid": "sr:match:73629880", "ko": 1789563600, "comp": "Italy: Serie D, Group E", "home": "Tau Calcio Altopascio", "away": "Siena 1904", "o1": 2.75, "ox": 3.1, "o2": 2.45}
+{"snap": 1789503567, "eid": "sr:match:73629868", "ko": 1789563600, "comp": "Italy: Serie D, Group E", "home": "US Follonica Gavorrano", "away": "Gsd Ghivizzano Borgoamozzano", "o1": 2.1, "ox": 3.2, "o2": 3.2}
+{"snap": 1789503568, "eid": "sr:match:74661448", "ko": 1789563600, "comp": "International Youth: U20 FIFA World Cup, Women", "home": "Argentina", "away": "Korea Republic", "o1": 1.68, "ox": 4.0, "o2": 4.75}
+{"snap": 1789503568, "eid": "sr:match:74661452", "ko": 1789576200, "comp": "International Youth: U20 FIFA World Cup, Women", "home": "Italy", "away": "China PR", "o1": 1.5, "ox": 4.4, "o2": 6.0}
+{"snap": 1789503568, "eid": "sr:match:74661454", "ko": 1789576200, "comp": "International Youth: U20 FIFA World Cup, Women", "home": "Spain", "away": "Portugal U20", "o1": 1.2, "ox": 6.8, "o2": 12.0}
+{"snap": 1789503568, "eid": "sr:match:72708040", "ko": 1789513200, "comp": "USA: USL Championship", "home": "Indy Eleven", "away": "Brooklyn FC", "o1": 1.81, "ox": 4.0, "o2": 3.6}
+{"snap": 1789503568, "eid": "sr:match:73665026", "ko": 1789605000, "comp": "USA: USL Championship", "home": "Birmingham Legion FC", "away": "New Mexico United", "o1": 2.45, "ox": 3.7, "o2": 2.4}
+{"snap": 1789503568, "eid": "sr:match:67172944", "ko": 1789858800, "comp": "USA: USL Championship", "home": "Brooklyn FC", "away": "FC Tulsa", "o1": 2.6, "ox": 3.33, "o2": 2.45}
+{"snap": 1789503568, "eid": "sr:match:67172950", "ko": 1789858800, "comp": "USA: USL Championship", "home": "Detroit City FC", "away": "Pittsburgh Riverhounds", "o1": 2.3, "ox": 3.0, "o2": 3.1}
+{"snap": 1789503568, "eid": "sr:match:67172954", "ko": 1789858800, "comp": "USA: USL Championship", "home": "Lexington SC", "away": "Orange County SC", "o1": 1.6, "ox": 4.0, "o2": 4.7}
+{"snap": 1789503568, "eid": "sr:match:67172956", "ko": 1789858800, "comp": "USA: USL Championship", "home": "Louisville City FC", "away": "Loudoun United FC", "o1": 1.44, "ox": 4.6, "o2": 5.6}
+{"snap": 1789503568, "eid": "sr:match:67172960", "ko": 1789860600, "comp": "USA: USL Championship", "home": "Rhode Island FC", "away": "Miami FC", "o1": 1.39, "ox": 4.7, "o2": 6.4}
+{"snap": 1789503568, "eid": "sr:match:67172948", "ko": 1789866000, "comp": "USA: USL Championship", "home": "Colorado Springs Switchbacks FC", "away": "New Mexico United", "o1": 1.82, "ox": 3.7, "o2": 3.7}
+{"snap": 1789503568, "eid": "sr:match:67172952", "ko": 1789871400, "comp": "USA: USL Championship", "home": "Las Vegas Lights", "away": "Hartford Athletic", "o1": 2.2, "ox": 3.5, "o2": 2.9}
+{"snap": 1789503568, "eid": "sr:match:67018192", "ko": 1789826400, "comp": "Norway: 1st Division", "home": "Aasane Fotball", "away": "Bryne FK", "o1": 3.4, "ox": 3.6, "o2": 1.99}
+{"snap": 1789503568, "eid": "sr:match:67018178", "ko": 1789916400, "comp": "Norway: 1st Division", "home": "FK Haugesund", "away": "Stroemmen IF", "o1": 1.27, "ox": 6.25, "o2": 8.2}
+{"snap": 1789503568, "eid": "sr:match:67018180", "ko": 1789916400, "comp": "Norway: 1st Division", "home": "Kongsvinger IL Toppfotball", "away": "Hoedd IL", "o1": 1.29, "ox": 6.1, "o2": 7.4}
+{"snap": 1789503568, "eid": "sr:match:67018182", "ko": 1789916400, "comp": "Norway: 1st Division", "home": "Lyn 1896 FK", "away": "Ranheim", "o1": 1.76, "ox": 4.3, "o2": 3.7}
+{"snap": 1789503568, "eid": "sr:match:67018184", "ko": 1789916400, "comp": "Norway: 1st Division", "home": "Odds BK", "away": "Egersunds IK", "o1": 1.78, "ox": 4.1, "o2": 3.8}
+{"snap": 1789503568, "eid": "sr:match:67018186", "ko": 1789916400, "comp": "Norway: 1st Division", "home": "Raufoss IL", "away": "Stroemsgodset IF", "o1": 7.6, "ox": 5.9, "o2": 1.3}
+{"snap": 1789503568, "eid": "sr:match:67018188", "ko": 1789916400, "comp": "Norway: 1st Division", "home": "Sandnes Ulf", "away": "Moss FK", "o1": 2.1, "ox": 3.8, "o2": 3.0}
+{"snap": 1789503568, "eid": "sr:match:67018190", "ko": 1789916400, "comp": "Norway: 1st Division", "home": "Stabaek IF", "away": "Sogndal Fotball", "o1": 1.39, "ox": 5.5, "o2": 5.8}
+{"snap": 1789503568, "eid": "sr:match:72044654", "ko": 1789754400, "comp": "Netherlands: Eerste Divisie", "home": "FC Eindhoven", "away": "FC Emmen", "o1": 3.0, "ox": 3.8, "o2": 2.15}
+{"snap": 1789503568, "eid": "sr:match:72044658", "ko": 1789754400, "comp": "Netherlands: Eerste Divisie", "home": "Jong AZ Alkmaar", "away": "FC Volendam", "o1": 2.75, "ox": 4.0, "o2": 2.25}
+{"snap": 1789503568, "eid": "sr:match:72044660", "ko": 1789754400, "comp": "Netherlands: Eerste Divisie", "home": "Jong FC Utrecht", "away": "VVV Venlo", "o1": 2.55, "ox": 3.75, "o2": 2.5}
+{"snap": 1789503568, "eid": "sr:match:72044662", "ko": 1789754400, "comp": "Netherlands: Eerste Divisie", "home": "RKC Waalwijk", "away": "MVV Maastricht", "o1": 1.62, "ox": 4.3, "o2": 4.7}
+{"snap": 1789503568, "eid": "sr:match:72044664", "ko": 1789754400, "comp": "Netherlands: Eerste Divisie", "home": "TOP Oss", "away": "FC Dordrecht", "o1": 2.55, "ox": 3.6, "o2": 2.55}
+{"snap": 1789503568, "eid": "sr:match:72044666", "ko": 1789828200, "comp": "Netherlands: Eerste Divisie", "home": "Vitesse Arnhem", "away": "Jong PSV Eindhoven", "o1": 1.57, "ox": 4.6, "o2": 4.7}
+{"snap": 1789503568, "eid": "sr:match:72044668", "ko": 1789915500, "comp": "Netherlands: Eerste Divisie", "home": "De Graafschap", "away": "NAC Breda", "o1": 3.25, "ox": 4.0, "o2": 1.95}
+{"snap": 1789503568, "eid": "sr:match:68046756", "ko": 1789812000, "comp": "Republic of Korea: K-League 2", "home": "Gimpo FC", "away": "Busan IPark", "o1": 2.3, "ox": 3.2, "o2": 2.75}
+{"snap": 1789503568, "eid": "sr:match:68046754", "ko": 1789812000, "comp": "Republic of Korea: K-League 2", "home": "Seoul E-Land FC", "away": "Daegu FC", "o1": 2.1, "ox": 3.5, "o2": 2.85}
+{"snap": 1789503568, "eid": "sr:match:68046758", "ko": 1789889400, "comp": "Republic of Korea: K-League 2", "home": "Ansan Greeners FC", "away": "Chungbuk Cheongju FC", "o1": 3.6, "ox": 3.2, "o2": 1.93}
+{"snap": 1789503568, "eid": "sr:match:72342038", "ko": 1789817400, "comp": "England: League Two", "home": "Rochdale AFC", "away": "Oldham Athletic", "o1": 3.4, "ox": 3.5, "o2": 2.05}
+{"snap": 1789503568, "eid": "sr:match:72342004", "ko": 1789826400, "comp": "England: League Two", "home": "Accrington Stanley", "away": "Newport County", "o1": 2.05, "ox": 3.5, "o2": 3.4}
+{"snap": 1789503568, "eid": "sr:match:72342010", "ko": 1789826400, "comp": "England: League Two", "home": "Chesterfield FC", "away": "York City FC", "o1": 2.4, "ox": 3.5, "o2": 2.7}
+{"snap": 1789503568, "eid": "sr:match:72342014", "ko": 1789826400, "comp": "England: League Two", "home": "Colchester United", "away": "Cheltenham Town", "o1": 1.96, "ox": 3.5, "o2": 3.6}
+{"snap": 1789503568, "eid": "sr:match:72342018", "ko": 1789826400, "comp": "England: League Two", "home": "Crewe Alexandra", "away": "Shrewsbury Town", "o1": 2.0, "ox": 3.4, "o2": 3.6}
+{"snap": 1789503568, "eid": "sr:match:72342022", "ko": 1789826400, "comp": "England: League Two", "home": "Exeter City", "away": "Tranmere Rovers FC", "o1": 2.25, "ox": 3.4, "o2": 3.1}
+{"snap": 1789503568, "eid": "sr:match:72342026", "ko": 1789826400, "comp": "England: League Two", "home": "Gillingham FC", "away": "Bristol Rovers", "o1": 3.7, "ox": 3.5, "o2": 1.94}
+{"snap": 1789503568, "eid": "sr:match:72342034", "ko": 1789826400, "comp": "England: League Two", "home": "Northampton Town", "away": "Rotherham United", "o1": 2.35, "ox": 3.33, "o2": 2.9}
+{"snap": 1789503568, "eid": "sr:match:72523932", "ko": 1789670700, "comp": "France: Ligue 3", "home": "SC Bastia", "away": "AS Cannes", "o1": 2.75, "ox": 3.1, "o2": 2.55}
+{"snap": 1789503568, "eid": "sr:match:72523930", "ko": 1789821900, "comp": "France: Ligue 3", "home": "Amiens", "away": "US Orleans", "o1": 2.15, "ox": 3.2, "o2": 3.3}
+{"snap": 1789503568, "eid": "sr:match:72523922", "ko": 1789821900, "comp": "France: Ligue 3", "home": "FC Fleury 91", "away": "Thionville US Lusitanos", "o1": 2.0, "ox": 3.4, "o2": 3.4}
+{"snap": 1789503568, "eid": "sr:match:72523920", "ko": 1789821900, "comp": "France: Ligue 3", "home": "FC Rouen", "away": "SC Aubagne Air Bel", "o1": 1.57, "ox": 3.8, "o2": 5.4}
+{"snap": 1789503568, "eid": "sr:match:72523924", "ko": 1789821900, "comp": "France: Ligue 3", "home": "La Roche Vendee Football", "away": "Valenciennes FC", "o1": 2.35, "ox": 3.2, "o2": 2.95}
+{"snap": 1789503568, "eid": "sr:match:72523926", "ko": 1789821900, "comp": "France: Ligue 3", "home": "Le Puy-En Velay FC", "away": "FC Villefranche-Beaujolais", "o1": 1.68, "ox": 3.75, "o2": 4.5}
+{"snap": 1789503568, "eid": "sr:match:72523916", "ko": 1789821900, "comp": "France: Ligue 3", "home": "Paris 13 Atletico", "away": "Football Bourg-En-Bresse Peronnas 01", "o1": 2.1, "ox": 3.1, "o2": 3.5}
+{"snap": 1789503568, "eid": "sr:match:72523918", "ko": 1789821900, "comp": "France: Ligue 3", "home": "US Concarneau", "away": "SM Caen", "o1": 2.35, "ox": 3.1, "o2": 2.95}
+{"snap": 1789503568, "eid": "sr:match:73739132", "ko": 1789599600, "comp": "USA: MLS Next Pro", "home": "Real Monarchs SLC", "away": "Minnesota United FC 2", "o1": 3.25, "ox": 3.8, "o2": 1.93}
+{"snap": 1789503568, "eid": "sr:match:72636212", "ko": 1789772700, "comp": "Colombia: Torneo DIMAYOR", "home": "Boyaca Patriotas", "away": "Union Magdalena", "o1": 2.4, "ox": 3.0, "o2": 2.85}
+{"snap": 1789503568, "eid": "sr:match:71666002", "ko": 1789599600, "comp": "USA: US Open Cup", "home": "Columbus Crew", "away": "Orlando City SC", "o1": 1.99, "ox": 3.6, "o2": 3.33}
+{"snap": 1789503568, "eid": "sr:match:71666004", "ko": 1789608600, "comp": "USA: US Open Cup", "home": "Colorado Rapids", "away": "Saint Louis City SC", "o1": 2.3, "ox": 3.5, "o2": 2.75}
+{"snap": 1789503568, "eid": "sr:match:67172260", "ko": 1789578000, "comp": "USA: USL League One", "home": "Union Omaha SC", "away": "Spokane Velocity FC", "o1": 2.05, "ox": 3.5, "o2": 3.33}
+{"snap": 1789503568, "eid": "sr:match:67172256", "ko": 1789599600, "comp": "USA: USL League One", "home": "Chattanooga Red Wolves SC", "away": "Forward Madison FC", "o1": 2.5, "ox": 3.5, "o2": 2.45}
+{"snap": 1789503568, "eid": "sr:match:72044338", "ko": 1789750800, "comp": "Denmark: 1. Division", "home": "Kolding IF", "away": "Hillerod Fodbold", "o1": 2.0, "ox": 3.7, "o2": 3.4}
+{"snap": 1789503568, "eid": "sr:match:72044334", "ko": 1789909200, "comp": "Denmark: 1. Division", "home": "FC Fredericia", "away": "Vejle BK", "o1": 2.15, "ox": 3.7, "o2": 2.95}
+{"snap": 1789503568, "eid": "sr:match:72044342", "ko": 1790010000, "comp": "Denmark: 1. Division", "home": "HB Koege", "away": "Hobro IK", "o1": 2.35, "ox": 3.4, "o2": 2.85}
+{"snap": 1789503568, "eid": "sr:match:72738190", "ko": 1789584300, "comp": "England: National League", "home": "Altrincham FC", "away": "Hartlepool United", "o1": 2.25, "ox": 3.5, "o2": 2.9}
+{"snap": 1789503568, "eid": "sr:match:72738198", "ko": 1789817400, "comp": "England: National League", "home": "Hartlepool United", "away": "Worthing FC", "o1": 1.77, "ox": 3.9, "o2": 3.9}
+{"snap": 1789503568, "eid": "sr:match:72738200", "ko": 1789817400, "comp": "England: National League", "home": "Tamworth FC", "away": "Wealdstone FC", "o1": 1.92, "ox": 3.8, "o2": 3.33}
+{"snap": 1789503568, "eid": "sr:match:72738202", "ko": 1789826400, "comp": "England: National League", "home": "AFC Fylde", "away": "Altrincham FC", "o1": 1.68, "ox": 4.0, "o2": 4.3}
+{"snap": 1789503568, "eid": "sr:match:72738204", "ko": 1789826400, "comp": "England: National League", "home": "Barrow AFC", "away": "Aldershot Town FC", "o1": 1.95, "ox": 3.7, "o2": 3.4}
+{"snap": 1789503568, "eid": "sr:match:72738208", "ko": 1789826400, "comp": "England: National League", "home": "Eastleigh FC", "away": "Carlisle United", "o1": 3.8, "ox": 3.9, "o2": 1.78}
+{"snap": 1789503568, "eid": "sr:match:72738210", "ko": 1789826400, "comp": "England: National League", "home": "FC Halifax Town", "away": "Sutton United", "o1": 2.3, "ox": 3.5, "o2": 2.75}
+{"snap": 1789503568, "eid": "sr:match:72738212", "ko": 1789826400, "comp": "England: National League", "home": "Forest Green Rovers", "away": "Boston United FC", "o1": 1.64, "ox": 4.0, "o2": 4.5}
+{"snap": 1789503568, "eid": "sr:match:72738214", "ko": 1789826400, "comp": "England: National League", "home": "Gateshead FC", "away": "Southend United", "o1": 4.1, "ox": 3.9, "o2": 1.74}
+{"snap": 1789503568, "eid": "sr:match:72738216", "ko": 1789826400, "comp": "England: National League", "home": "Woking FC", "away": "Kidderminster Harriers FC", "o1": 2.3, "ox": 3.5, "o2": 2.85}
+{"snap": 1789503568, "eid": "sr:match:67126374", "ko": 1789815600, "comp": "Sweden: Superettan", "home": "Osters IF", "away": "IFK Norrkoping FK", "o1": 4.0, "ox": 3.9, "o2": 1.77}
+{"snap": 1789503568, "eid": "sr:match:67126386", "ko": 1789815600, "comp": "Sweden: Superettan", "home": "United IK Nordic", "away": "Landskrona BoIS", "o1": 2.1, "ox": 3.5, "o2": 3.2}
+{"snap": 1789503568, "eid": "sr:match:67126380", "ko": 1789830000, "comp": "Sweden: Superettan", "home": "Sandvikens IF", "away": "Orebro SK", "o1": 2.05, "ox": 3.7, "o2": 3.2}
+{"snap": 1789503568, "eid": "sr:match:67126378", "ko": 1789902000, "comp": "Sweden: Superettan", "home": "GIF Sundsvall", "away": "Ljungskile SK", "o1": 3.5, "ox": 3.7, "o2": 1.97}
+{"snap": 1789503568, "eid": "sr:match:67126372", "ko": 1789909200, "comp": "Sweden: Superettan", "home": "Helsingborgs IF", "away": "Norrby IF", "o1": 2.1, "ox": 3.7, "o2": 3.2}
+{"snap": 1789503568, "eid": "sr:match:72499040", "ko": 1789750800, "comp": "Denmark: 2nd Division", "home": "BK Fremad Amager", "away": "Naestved BK", "o1": 2.55, "ox": 3.25, "o2": 2.45}
+{"snap": 1789503568, "eid": "sr:match:72499044", "ko": 1789750800, "comp": "Denmark: 2nd Division", "home": "Nykoebing FC", "away": "HIK Hellerup", "o1": 1.4, "ox": 4.25, "o2": 6.1}
+{"snap": 1789503568, "eid": "sr:match:72499046", "ko": 1789750800, "comp": "Denmark: 2nd Division", "home": "Skive IK", "away": "B93 Copenhagen", "o1": 3.2, "ox": 3.3, "o2": 2.0}
+{"snap": 1789503568, "eid": "sr:match:72499048", "ko": 1789819200, "comp": "Denmark: 2nd Division", "home": "Middelfart BK", "away": "Vsk Aarhus", "o1": 2.2, "ox": 3.33, "o2": 2.8}
+{"snap": 1789503568, "eid": "sr:match:72499050", "ko": 1789902000, "comp": "Denmark: 2nd Division", "home": "Thisted FC", "away": "Brabrand IF", "o1": 2.8, "ox": 3.33, "o2": 2.2}
+{"snap": 1789503568, "eid": "sr:match:74625562", "ko": 1789578000, "comp": "Spain: Copa Federacion", "home": "UD Santa Marta", "away": "Bergantinos FC", "o1": 3.1, "ox": 3.3, "o2": 2.1}
+{"snap": 1789503568, "eid": "sr:match:74625566", "ko": 1789579800, "comp": "Spain: Copa Federacion", "home": "Comillas CF", "away": "Sestao River Club", "o1": 16.0, "ox": 5.1, "o2": 1.19}
+{"snap": 1789503568, "eid": "sr:match:74625560", "ko": 1789580700, "comp": "Spain: Copa Federacion", "home": "CD Derio", "away": "Salamanca CF UDS", "o1": 3.1, "ox": 3.25, "o2": 2.15}
+{"snap": 1789503568, "eid": "sr:match:74625572", "ko": 1789583400, "comp": "Spain: Copa Federacion", "home": "RC Recreativo de Huelva", "away": "CP Cacereno SAD", "o1": 2.65, "ox": 3.1, "o2": 2.5}
+{"snap": 1789503568, "eid": "sr:match:74625570", "ko": 1789585200, "comp": "Spain: Copa Federacion", "home": "Atletico Saguntino", "away": "CDA Navalcarnero", "o1": 2.9, "ox": 3.1, "o2": 2.3}
+{"snap": 1789503568, "eid": "sr:match:68311824", "ko": 1789578000, "comp": "Sweden: Ettan", "home": "Hassleholms IF", "away": "Ariana FC", "o1": 2.35, "ox": 3.6, "o2": 2.65}
+{"snap": 1789503568, "eid": "sr:match:68311116", "ko": 1789578000, "comp": "Sweden: Ettan", "home": "IF Karlstad Fotbol", "away": "FBK Karlstad", "o1": 1.81, "ox": 3.75, "o2": 3.8}
+{"snap": 1789503568, "eid": "sr:match:68311826", "ko": 1789578000, "comp": "Sweden: Ettan", "home": "Jonkopings Sodra IF", "away": "Aatvidabergs FF", "o1": 2.25, "ox": 3.4, "o2": 2.95}
+{"snap": 1789503568, "eid": "sr:match:68311828", "ko": 1789578000, "comp": "Sweden: Ettan", "home": "Lunds BK", "away": "Angelholms FF", "o1": 1.45, "ox": 4.7, "o2": 5.6}
+{"snap": 1789503568, "eid": "sr:match:68311118", "ko": 1789578000, "comp": "Sweden: Ettan", "home": "Piteaa IF", "away": "Umea FC", "o1": 2.9, "ox": 3.7, "o2": 2.15}
+{"snap": 1789503568, "eid": "sr:match:68311830", "ko": 1789578000, "comp": "Sweden: Ettan", "home": "Utsiktens BK", "away": "Laholms FK", "o1": 4.0, "ox": 4.4, "o2": 1.67}
+{"snap": 1789503568, "eid": "sr:match:68311122", "ko": 1789579800, "comp": "Sweden: Ettan", "home": "Sollentuna FK", "away": "Enkopings SK", "o1": 2.2, "ox": 3.5, "o2": 2.95}
+{"snap": 1789503568, "eid": "sr:match:68311832", "ko": 1789664400, "comp": "Sweden: Ettan", "home": "Eskilsminne IF", "away": "Tvaakers IF", "o1": 2.15, "ox": 3.5, "o2": 2.9}
+{"snap": 1789503568, "eid": "sr:match:68311124", "ko": 1789664400, "comp": "Sweden: Ettan", "home": "FC Stockholm Internazionale", "away": "IFK Stocksund", "o1": 1.12, "ox": 8.4, "o2": 12.5}
+{"snap": 1789503568, "eid": "sr:match:68311834", "ko": 1789664400, "comp": "Sweden: Ettan", "home": "Kristianstad FC", "away": "BK Olympic", "o1": 2.7, "ox": 3.6, "o2": 2.25}
+{"snap": 1789503569, "eid": "sr:match:71936122", "ko": 1789779600, "comp": "Peru: Liga 1", "home": "Alianza Lima", "away": "Asociacion Deportiva Tarma", "o1": 1.26, "ox": 5.4, "o2": 9.8}
+{"snap": 1789503569, "eid": "sr:match:71936136", "ko": 1789849800, "comp": "Peru: Liga 1", "home": "Sporting Cristal", "away": "Atletico Grau", "o1": 1.36, "ox": 4.8, "o2": 7.3}
+{"snap": 1789503569, "eid": "sr:match:71936134", "ko": 1789927200, "comp": "Peru: Liga 1", "home": "Sport Huancayo", "away": "UTC de Cajamarca", "o1": 1.34, "ox": 4.8, "o2": 7.8}
+{"snap": 1789503569, "eid": "sr:match:71936132", "ko": 1789936200, "comp": "Peru: Liga 1", "home": "Juan Pablo II College", "away": "CD Moquegua", "o1": 1.55, "ox": 4.0, "o2": 5.5}
+{"snap": 1789503569, "eid": "sr:match:74508866", "ko": 1790193600, "comp": "Peru: Liga 1", "home": "Asociacion Deportiva Tarma", "away": "Cienciano", "o1": 2.75, "ox": 3.3, "o2": 2.35}
+{"snap": 1789503569, "eid": "sr:match:68098134", "ko": 1789515000, "comp": "Chile: Primera B", "home": "Union Espanola", "away": "Deportes Temuco", "o1": 2.2, "ox": 3.25, "o2": 3.1}
+{"snap": 1789503569, "eid": "sr:match:67119770", "ko": 1789754400, "comp": "Argentina: Primera B", "home": "Club Comunicaciones", "away": "CA Defensores Unidos", "o1": 1.85, "ox": 3.2, "o2": 4.2}
+{"snap": 1789503569, "eid": "sr:match:67119764", "ko": 1789837200, "comp": "Argentina: Primera B", "home": "Deportivo Camioneros", "away": "CD Armenio", "o1": 1.8, "ox": 3.1, "o2": 4.6}
+{"snap": 1789503569, "eid": "sr:match:67119752", "ko": 1789840800, "comp": "Argentina: Primera B", "home": "CD UAI Urquiza", "away": "CA Excursionistas", "o1": 4.1, "ox": 3.1, "o2": 1.9}
+{"snap": 1789503569, "eid": "sr:match:67119762", "ko": 1789840800, "comp": "Argentina: Primera B", "home": "CS Italiano", "away": "CA Brown de Adrogue", "o1": 2.25, "ox": 2.9, "o2": 3.3}
+{"snap": 1789503569, "eid": "sr:match:67119754", "ko": 1789840800, "comp": "Argentina: Primera B", "home": "Real Pilar FC", "away": "Arsenal de Sarandi", "o1": 2.9, "ox": 2.9, "o2": 2.5}
+{"snap": 1789503569, "eid": "sr:match:67119758", "ko": 1789927200, "comp": "Argentina: Primera B", "home": "CA Villa San Carlos", "away": "CA Talleres de Remedios", "o1": 3.9, "ox": 3.0, "o2": 2.0}
+{"snap": 1789503569, "eid": "sr:match:67119768", "ko": 1789927200, "comp": "Argentina: Primera B", "home": "CS Dock Sud", "away": "Argentino de Quilmes", "o1": 2.0, "ox": 3.1, "o2": 3.7}
+{"snap": 1789503569, "eid": "sr:match:67119756", "ko": 1789927200, "comp": "Argentina: Primera B", "home": "CSD Liniers", "away": "Argentino de Merlo", "o1": 2.15, "ox": 2.95, "o2": 3.6}
+{"snap": 1789503569, "eid": "sr:match:73576630", "ko": 1789547400, "comp": "Indonesia: Super League", "home": "Borneo Samarinda", "away": "Dewa United", "o1": 2.1, "ox": 3.5, "o2": 3.1}
+{"snap": 1789503569, "eid": "sr:match:73576634", "ko": 1789732800, "comp": "Indonesia: Super League", "home": "Madura United", "away": "Psim Yogyakarta", "o1": 2.2, "ox": 3.25, "o2": 3.1}
+{"snap": 1789503569, "eid": "sr:match:73576638", "ko": 1789806600, "comp": "Indonesia: Super League", "home": "PSM Makassar", "away": "Persita Tangerang", "o1": 2.05, "ox": 3.2, "o2": 3.4}
+{"snap": 1789503569, "eid": "sr:match:73576642", "ko": 1789819200, "comp": "Indonesia: Super League", "home": "Persija Jakarta", "away": "Malut United", "o1": 1.47, "ox": 4.4, "o2": 5.5}
+{"snap": 1789503569, "eid": "sr:match:73576648", "ko": 1789905600, "comp": "Indonesia: Super League", "home": "Persijap Jepara", "away": "Persib Bandung", "o1": 5.8, "ox": 3.9, "o2": 1.51}
+{"snap": 1789503569, "eid": "sr:match:72083062", "ko": 1789837200, "comp": "Serbia: Superliga", "home": "FK Radnik Surdulica", "away": "FK Partizan Belgrade", "o1": 3.75, "ox": 3.6, "o2": 1.86}
+{"snap": 1789503569, "eid": "sr:match:72083056", "ko": 1789837200, "comp": "Serbia: Superliga", "home": "OFK Beograd", "away": "FK Radnicki 1923 Kragujevac", "o1": 2.5, "ox": 3.25, "o2": 2.7}
+{"snap": 1789503569, "eid": "sr:match:72083054", "ko": 1789916400, "comp": "Serbia: Superliga", "home": "FK Macva Sabac", "away": "FK Mladost Lucani", "o1": 2.35, "ox": 3.1, "o2": 3.0}
+{"snap": 1789503569, "eid": "sr:match:72083058", "ko": 1789923600, "comp": "Serbia: Superliga", "home": "Crvena Zvezda", "away": "FK Radnicki Nis", "o1": 1.14, "ox": 7.5, "o2": 15.5}
+{"snap": 1789503569, "eid": "sr:match:72083066", "ko": 1790010000, "comp": "Serbia: Superliga", "home": "FK Zeleznicar Pancevo", "away": "Cukaricki", "o1": 1.8, "ox": 3.6, "o2": 4.1}
+{"snap": 1789503569, "eid": "sr:match:72735774", "ko": 1789736400, "comp": "Turkiye: 1. Lig", "home": "Bandirmaspor", "away": "Umraniyespor", "o1": 1.84, "ox": 3.4, "o2": 4.1}
+{"snap": 1789503569, "eid": "sr:match:72735786", "ko": 1789750800, "comp": "Turkiye: 1. Lig", "home": "Muglaspor", "away": "Igdir FK", "o1": 3.2, "ox": 2.95, "o2": 2.35}
+{"snap": 1789503569, "eid": "sr:match:72735768", "ko": 1789826400, "comp": "Turkiye: 1. Lig", "home": "Ankara Keciorengucu", "away": "Sivasspor", "o1": 2.0, "ox": 3.6, "o2": 3.3}
+{"snap": 1789503569, "eid": "sr:match:72735782", "ko": 1789837200, "comp": "Turkiye: 1. Lig", "home": "Batman Petrolspor", "away": "Bursaspor", "o1": 2.8, "ox": 3.2, "o2": 2.45}
+{"snap": 1789503569, "eid": "sr:match:72735778", "ko": 1789837200, "comp": "Turkiye: 1. Lig", "home": "Esenler Erokspor", "away": "Fatih Karagumruk Istanbul", "o1": 1.93, "ox": 3.5, "o2": 3.6}
+{"snap": 1789503569, "eid": "sr:match:72735780", "ko": 1789912800, "comp": "Turkiye: 1. Lig", "home": "Manisa Futbol Kulubu", "away": "Istanbulspor AS", "o1": 1.95, "ox": 3.7, "o2": 3.33}
+{"snap": 1789503569, "eid": "sr:match:72735770", "ko": 1789912800, "comp": "Turkiye: 1. Lig", "home": "Pendikspor", "away": "Bodrum FK", "o1": 2.05, "ox": 3.3, "o2": 3.5}
+{"snap": 1789503569, "eid": "sr:match:72735772", "ko": 1789923600, "comp": "Turkiye: 1. Lig", "home": "Antalyaspor", "away": "Van Spor FK", "o1": 1.57, "ox": 4.1, "o2": 5.0}
+{"snap": 1789503569, "eid": "sr:match:72735784", "ko": 1789923600, "comp": "Turkiye: 1. Lig", "home": "Mardin 1969 Spor", "away": "Kayserispor", "o1": 2.65, "ox": 3.2, "o2": 2.6}
+{"snap": 1789503569, "eid": "sr:match:72345510", "ko": 1789752600, "comp": "Austria: Bundesliga", "home": "SK Rapid", "away": "WSG Tirol", "o1": 1.42, "ox": 5.0, "o2": 6.5}
+{"snap": 1789503569, "eid": "sr:match:72345516", "ko": 1789839000, "comp": "Austria: Bundesliga", "home": "Grazer AK 1902", "away": "FK Austria Wien", "o1": 2.45, "ox": 3.33, "o2": 2.75}
+{"snap": 1789503569, "eid": "sr:match:72345514", "ko": 1789907400, "comp": "Austria: Bundesliga", "home": "SV Ried", "away": "Wolfsberger AC", "o1": 1.94, "ox": 3.6, "o2": 3.6}
+{"snap": 1789503569, "eid": "sr:match:72345512", "ko": 1789907400, "comp": "Austria: Bundesliga", "home": "TSV Hartberg", "away": "LASK Linz", "o1": 9.5, "ox": 5.8, "o2": 1.26}
+{"snap": 1789503569, "eid": "sr:match:72345508", "ko": 1789916400, "comp": "Austria: Bundesliga", "home": "Salzburg", "away": "Sturm Graz", "o1": 1.66, "ox": 4.25, "o2": 4.3}
+{"snap": 1789503569, "eid": "sr:match:72522058", "ko": 1789757100, "comp": "Wales: Cymru Premier", "home": "Airbus UK Broughton", "away": "Flint Town United", "o1": 2.55, "ox": 3.5, "o2": 2.5}
+{"snap": 1789503569, "eid": "sr:match:72522060", "ko": 1789757100, "comp": "Wales: Cymru Premier", "home": "Ammanford", "away": "Pen-y-Bont FC", "o1": 7.7, "ox": 4.3, "o2": 1.4}
+{"snap": 1789503569, "eid": "sr:match:72522064", "ko": 1789757100, "comp": "Wales: Cymru Premier", "home": "Caernarfon Town FC", "away": "Cambrian United", "o1": 1.42, "ox": 4.7, "o2": 6.1}
+{"snap": 1789503569, "eid": "sr:match:72522066", "ko": 1789757100, "comp": "Wales: Cymru Premier", "home": "Colwyn Bay", "away": "Barry Town United FC", "o1": 2.5, "ox": 3.25, "o2": 2.7}
+{"snap": 1789503569, "eid": "sr:match:72522068", "ko": 1789757100, "comp": "Wales: Cymru Premier", "home": "Connah`s Quay Nomads FC", "away": "Cardiff Metropolitan University FC", "o1": 1.72, "ox": 3.7, "o2": 4.4}
+{"snap": 1789503569, "eid": "sr:match:72043170", "ko": 1789747200, "comp": "Poland: Ekstraklasa", "home": "Widzew Lodz", "away": "Wieczysta Krakow", "o1": 1.98, "ox": 3.6, "o2": 3.6}
+{"snap": 1789503569, "eid": "sr:match:72043164", "ko": 1789821900, "comp": "Poland: Ekstraklasa", "home": "Korona Kielce", "away": "Rakow Czestochowa", "o1": 2.15, "ox": 3.4, "o2": 3.25}
+{"snap": 1789503569, "eid": "sr:match:72043168", "ko": 1789831800, "comp": "Poland: Ekstraklasa", "home": "GKS Katowice", "away": "KS Cracovia Krakow", "o1": 2.3, "ox": 3.5, "o2": 2.85}
+{"snap": 1789503569, "eid": "sr:match:72043176", "ko": 1789908300, "comp": "Poland: Ekstraklasa", "home": "Zaglebie Lubin", "away": "Wisla Plock", "o1": 2.3, "ox": 3.33, "o2": 2.95}
+{"snap": 1789503569, "eid": "sr:match:72043174", "ko": 1789918200, "comp": "Poland: Ekstraklasa", "home": "Jagiellonia Bialystok", "away": "Legia Warszawa", "o1": 2.9, "ox": 3.5, "o2": 2.3}
+{"snap": 1789503569, "eid": "sr:match:68774332", "ko": 1789660800, "comp": "Estonia: Esiliiga", "home": "Viimsi JK", "away": "Tartu JK Welco", "o1": 2.25, "ox": 3.7, "o2": 2.55}
+{"snap": 1789503569, "eid": "sr:match:68774338", "ko": 1789741800, "comp": "Estonia: Esiliiga", "home": "JK Tallinna Kalev", "away": "Tallinna FC Flora", "o1": 2.1, "ox": 4.1, "o2": 2.6}
+{"snap": 1789503569, "eid": "sr:match:72661644", "ko": 1789693200, "comp": "Mexico: Liga de Expansion MX", "home": "Alacranes de Durango", "away": "Cruz Azul Hidalgo", "o1": 1.67, "ox": 3.9, "o2": 4.25}
+{"snap": 1789503569, "eid": "sr:match:72661646", "ko": 1789779600, "comp": "Mexico: Liga de Expansion MX", "home": "Piratas Veracruz", "away": "Venados  FC", "o1": 1.6, "ox": 4.1, "o2": 4.6}
+{"snap": 1789503569, "eid": "sr:match:72661648", "ko": 1789779600, "comp": "Mexico: Liga de Expansion MX", "home": "Tepatitlan FC", "away": "CD Mineros de Zacatecas", "o1": 3.2, "ox": 3.7, "o2": 1.98}
+{"snap": 1789503569, "eid": "sr:match:72661650", "ko": 1789786800, "comp": "Mexico: Liga de Expansion MX", "home": "Club Atletico La Paz", "away": "CF Correcaminos UAT", "o1": 1.78, "ox": 3.9, "o2": 3.6}
+{"snap": 1789503569, "eid": "sr:match:72661654", "ko": 1789866000, "comp": "Mexico: Liga de Expansion MX", "home": "Atletico Morelia", "away": "Leones Negros UDEG", "o1": 1.68, "ox": 3.4, "o2": 5.0}
+{"snap": 1789503569, "eid": "sr:match:72661652", "ko": 1789945200, "comp": "Mexico: Liga de Expansion MX", "home": "CD Tapatio", "away": "Tlaxcala FC", "o1": 1.92, "ox": 3.7, "o2": 3.4}
+{"snap": 1789503569, "eid": "sr:match:74735084", "ko": 1789934400, "comp": "Ecuador: LigaPro Primera A", "home": "Barcelona SC", "away": "CSD Independiente del Valle", "o1": 2.9, "ox": 3.2, "o2": 2.35}
+{"snap": 1789503569, "eid": "sr:match:74735296", "ko": 1789934400, "comp": "Ecuador: LigaPro Primera A", "home": "CD Tecnico Universitario", "away": "Delfin SC", "o1": 2.15, "ox": 2.95, "o2": 3.2}
+{"snap": 1789503569, "eid": "sr:match:74735354", "ko": 1789934400, "comp": "Ecuador: LigaPro Primera A", "home": "CS Emelec", "away": "Libertad Loja", "o1": 1.71, "ox": 3.3, "o2": 4.5}
+{"snap": 1789503569, "eid": "sr:match:74735080", "ko": 1789934400, "comp": "Ecuador: LigaPro Primera A", "home": "LDU Quito", "away": "CD Universidad Catolica del Ecuador", "o1": 2.1, "ox": 3.3, "o2": 3.25}
+{"snap": 1789503569, "eid": "sr:match:74735294", "ko": 1789934400, "comp": "Ecuador: LigaPro Primera A", "home": "Manta FC", "away": "Orense SC", "o1": 2.45, "ox": 3.1, "o2": 2.65}
+{"snap": 1789503569, "eid": "sr:match:74288596", "ko": 1789574400, "comp": "Norway: NM Cup", "home": "Arendal FK", "away": "Sandnes Ulf", "o1": 2.8, "ox": 3.9, "o2": 2.3}
+{"snap": 1789503569, "eid": "sr:match:74288588", "ko": 1789574400, "comp": "Norway: NM Cup", "home": "Elverum", "away": "Raufoss IL", "o1": 4.6, "ox": 4.6, "o2": 1.64}
+{"snap": 1789503569, "eid": "sr:match:74288580", "ko": 1789574400, "comp": "Norway: NM Cup", "home": "Gamle Oslo FK", "away": "Lyn 1896 FK", "o1": 7.3, "ox": 5.3, "o2": 1.38}
+{"snap": 1789503569, "eid": "sr:match:74288658", "ko": 1789574400, "comp": "Norway: NM Cup", "home": "IL Sandviken", "away": "Aasane Fotball", "o1": 3.6, "ox": 4.0, "o2": 1.93}
+{"snap": 1789503569, "eid": "sr:match:74288592", "ko": 1789574400, "comp": "Norway: NM Cup", "home": "Notodden FK", "away": "Odds BK", "o1": 4.1, "ox": 4.3, "o2": 1.74}
+{"snap": 1789503569, "eid": "sr:match:74288660", "ko": 1789574400, "comp": "Norway: NM Cup", "home": "Os", "away": "SK Brann", "o1": 31.0, "ox": 12.0, "o2": 1.07}
+{"snap": 1789503569, "eid": "sr:match:74288664", "ko": 1789574400, "comp": "Norway: NM Cup", "home": "Vindbjart FK", "away": "IK Start", "o1": 10.5, "ox": 5.6, "o2": 1.29}
+{"snap": 1789503569, "eid": "sr:match:74288586", "ko": 1789578000, "comp": "Norway: NM Cup", "home": "Eidsvold TF", "away": "Kongsvinger IL Toppfotball", "o1": 4.0, "ox": 4.0, "o2": 1.82}
+{"snap": 1789503569, "eid": "sr:match:66854200", "ko": 1789757100, "comp": "Ireland: Premier Division", "home": "Dundalk FC", "away": "Shelbourne FC", "o1": 2.25, "ox": 3.4, "o2": 2.9}
+{"snap": 1789503569, "eid": "sr:match:66854196", "ko": 1789758000, "comp": "Ireland: Premier Division", "home": "Bohemians Dublin FC", "away": "Drogheda United FC", "o1": 1.46, "ox": 4.4, "o2": 6.0}
+{"snap": 1789503569, "eid": "sr:match:66854202", "ko": 1789758000, "comp": "Ireland: Premier Division", "home": "Shamrock Rovers", "away": "Waterford FC", "o1": 1.45, "ox": 4.5, "o2": 5.9}
+{"snap": 1789503569, "eid": "sr:match:66854204", "ko": 1789843500, "comp": "Ireland: Premier Division", "home": "Sligo Rovers FC", "away": "Saint Patrick\u00b4s Athletic FC", "o1": 6.9, "ox": 4.6, "o2": 1.39}
+{"snap": 1789503569, "eid": "sr:match:73320280", "ko": 1789574400, "comp": "Estonia: Premium Liiga", "home": "Paide Linnameeskond", "away": "Parnu JK Vaprus", "o1": 1.48, "ox": 4.6, "o2": 5.4}
+{"snap": 1789503569, "eid": "sr:match:72935970", "ko": 1789660800, "comp": "Estonia: Premium Liiga", "home": "FCI Levadia Tallinn", "away": "Tartu JK Tammeka", "o1": 1.2, "ox": 6.5, "o2": 9.9}
+{"snap": 1789503569, "eid": "sr:match:68214818", "ko": 1789747200, "comp": "Estonia: Premium Liiga", "home": "Harju JK Laagri", "away": "FC Kuressaare", "o1": 1.98, "ox": 3.7, "o2": 3.2}
+{"snap": 1789503569, "eid": "sr:match:68214822", "ko": 1789826400, "comp": "Estonia: Premium Liiga", "home": "FC Nomme United", "away": "Paide Linnameeskond", "o1": 4.4, "ox": 4.1, "o2": 1.62}
+{"snap": 1789503569, "eid": "sr:match:68214824", "ko": 1789903800, "comp": "Estonia: Premium Liiga", "home": "Tartu JK Tammeka", "away": "Nomme Kalju FC", "o1": 4.0, "ox": 3.8, "o2": 1.73}
+{"snap": 1789503569, "eid": "sr:match:68214826", "ko": 1789912800, "comp": "Estonia: Premium Liiga", "home": "JK Narva Trans", "away": "FCI Levadia Tallinn", "o1": 13.5, "ox": 7.25, "o2": 1.14}
+{"snap": 1789503569, "eid": "sr:match:68214820", "ko": 1789920000, "comp": "Estonia: Premium Liiga", "home": "Tallinna FC Flora", "away": "Parnu JK Vaprus", "o1": 1.47, "ox": 4.5, "o2": 5.4}
+{"snap": 1789503569, "eid": "sr:match:72559078", "ko": 1789758000, "comp": "Spain: Primera Federacion", "home": "UD Logrones", "away": "Pontevedra CF", "o1": 1.92, "ox": 3.1, "o2": 3.75}
+{"snap": 1789503569, "eid": "sr:match:73107776", "ko": 1789815600, "comp": "Spain: Primera Federacion", "home": "Unionistas de Salamanca CF", "away": "UD Ourense", "o1": 2.0, "ox": 3.1, "o2": 3.4}
+{"snap": 1789503569, "eid": "sr:match:73068044", "ko": 1789828200, "comp": "Spain: Primera Federacion", "home": "CF Rayo Majadahonda", "away": "CD Teruel", "o1": 2.45, "ox": 2.9, "o2": 2.75}
+{"snap": 1789503569, "eid": "sr:match:72559072", "ko": 1789828200, "comp": "Spain: Primera Federacion", "home": "Racing Club de Ferrol", "away": "Barakaldo CF", "o1": 2.35, "ox": 3.0, "o2": 2.8}
+{"snap": 1789503569, "eid": "sr:match:73068046", "ko": 1789828200, "comp": "Spain: Primera Federacion", "home": "Real Murcia CF", "away": "CE Europa", "o1": 1.54, "ox": 3.5, "o2": 5.7}
+{"snap": 1789503569, "eid": "sr:match:72559064", "ko": 1789836300, "comp": "Spain: Primera Federacion", "home": "CD Coria", "away": "Real Aviles CF", "o1": 2.3, "ox": 3.0, "o2": 2.9}
+{"snap": 1789503569, "eid": "sr:match:72559070", "ko": 1789836300, "comp": "Spain: Primera Federacion", "home": "Real Union de Irun", "away": "CD Mirandes", "o1": 2.65, "ox": 3.1, "o2": 2.45}
+{"snap": 1789503569, "eid": "sr:match:72559082", "ko": 1789836300, "comp": "Spain: Primera Federacion", "home": "SD Ponferradina", "away": "Merida AD", "o1": 1.73, "ox": 3.3, "o2": 4.3}
+{"snap": 1789503569, "eid": "sr:match:73068050", "ko": 1789836300, "comp": "Spain: Primera Federacion", "home": "Villarreal CF B", "away": "Antequera CF", "o1": 1.67, "ox": 3.4, "o2": 4.5}
+{"snap": 1789503569, "eid": "sr:match:73068042", "ko": 1789844400, "comp": "Spain: Primera Federacion", "home": "Real Jaen CF", "away": "UD Ibiza", "o1": 1.8, "ox": 3.25, "o2": 4.1}
+{"snap": 1789503569, "eid": "sr:match:73804350", "ko": 1789581600, "comp": "Argentina: Primera Nacional", "home": "San Martin de San Juan", "away": "CSD Tristan Suarez", "o1": 1.91, "ox": 2.95, "o2": 4.6}
+{"snap": 1789503569, "eid": "sr:match:67117968", "ko": 1789842600, "comp": "Argentina: Primera Nacional", "home": "CA Acassuso", "away": "Mitre Santiago del Estero", "o1": 3.0, "ox": 2.8, "o2": 2.5}
+{"snap": 1789503569, "eid": "sr:match:67117972", "ko": 1789842600, "comp": "Argentina: Primera Nacional", "home": "CA San Miguel", "away": "CA All Boys", "o1": 2.2, "ox": 2.7, "o2": 3.8}
+{"snap": 1789503571, "eid": "sr:match:67117970", "ko": 1789842600, "comp": "Argentina: Primera Nacional", "home": "CA San Telmo", "away": "CA Estudiantes", "o1": 3.2, "ox": 2.7, "o2": 2.45}
+{"snap": 1789503571, "eid": "sr:match:67117964", "ko": 1789842600, "comp": "Argentina: Primera Nacional", "home": "Ferro Carril Oeste", "away": "Club Ciudad de Bolivar", "o1": 1.6, "ox": 3.3, "o2": 6.1}
+{"snap": 1789503571, "eid": "sr:match:67118672", "ko": 1789844400, "comp": "Argentina: Primera Nacional", "home": "CA Temperley", "away": "Club Almagro", "o1": 1.74, "ox": 3.1, "o2": 5.0}
+{"snap": 1789503571, "eid": "sr:match:67117960", "ko": 1789848000, "comp": "Argentina: Primera Nacional", "home": "Deportivo Madryn", "away": "CA Racing de Cordoba", "o1": 1.64, "ox": 3.4, "o2": 5.4}
+{"snap": 1789503571, "eid": "sr:match:67118686", "ko": 1789851600, "comp": "Argentina: Primera Nacional", "home": "Atletico de Rafaela", "away": "San Martin de Tucuman", "o1": 2.65, "ox": 2.7, "o2": 2.9}
+{"snap": 1789503571, "eid": "sr:match:67118684", "ko": 1789927200, "comp": "Argentina: Primera Nacional", "home": "Agropecuario Argentino", "away": "Gimnasia Y Tiro de Salta", "o1": 2.3, "ox": 2.8, "o2": 3.4}
+{"snap": 1789503571, "eid": "sr:match:67118670", "ko": 1789929000, "comp": "Argentina: Primera Nacional", "home": "CD Maipu", "away": "Gimnasia y Esgrima de Jujuy", "o1": 2.05, "ox": 3.0, "o2": 3.75}
+{"snap": 1789503571, "eid": "sr:match:67117976", "ko": 1789929000, "comp": "Argentina: Primera Nacional", "home": "Deportivo Moron", "away": "CD Godoy Cruz", "o1": 1.95, "ox": 2.9, "o2": 4.3}
+{"snap": 1789503571, "eid": "sr:match:74559684", "ko": 1789932600, "comp": "Argentina: Primera Nacional", "home": "Colon de Santa Fe", "away": "Club Atletico Los Andes", "o1": 1.68, "ox": 3.2, "o2": 5.6}
+{"snap": 1789503571, "eid": "sr:match:67117962", "ko": 1789934400, "comp": "Argentina: Primera Nacional", "home": "CA Central Norte Salta", "away": "CA Defensores de Belgrano", "o1": 2.3, "ox": 2.8, "o2": 3.3}
+{"snap": 1789503571, "eid": "sr:match:111111114451815", "ko": 1789570800, "comp": "Argentina: Primera Nacional, Reserve", "home": "CSYD Tristan Suarez Reserves", "away": "San Telmo Reserves", "o1": 2.2, "ox": 3.1, "o2": 3.1}
+{"snap": 1789503571, "eid": "sr:match:72120874", "ko": 1789567200, "comp": "Serbia: Prva Liga", "home": "FK Smederevo 1924", "away": "FK Spartak Subotica", "o1": 2.45, "ox": 3.2, "o2": 2.45}
+{"snap": 1789503571, "eid": "sr:match:72120872", "ko": 1789574400, "comp": "Serbia: Prva Liga", "home": "FK Napredak Krusevac", "away": "OFK Vrsac", "o1": 1.9, "ox": 3.0, "o2": 3.7}
+{"snap": 1789503571, "eid": "sr:match:72120876", "ko": 1789574400, "comp": "Serbia: Prva Liga", "home": "FK Vozdovac Belgrade", "away": "FK Jedinstvo UB", "o1": 1.69, "ox": 3.4, "o2": 4.1}
+{"snap": 1789503571, "eid": "sr:match:73221932", "ko": 1789574400, "comp": "Serbia: Prva Liga", "home": "Gfk Dubocica", "away": "FK Teleoptik", "o1": 2.05, "ox": 3.4, "o2": 2.9}
+{"snap": 1789503571, "eid": "sr:match:72120862", "ko": 1789581600, "comp": "Serbia: Prva Liga", "home": "FK Borac Cacak", "away": "FK Metalac Gornji Milanovac", "o1": 1.49, "ox": 3.6, "o2": 5.5}
+{"snap": 1789503571, "eid": "sr:match:73998594", "ko": 1789590600, "comp": "Ecuador: Serie B", "home": "Club Deportivo Cuenca Juniors", "away": "San Antonio FC", "o1": 1.65, "ox": 3.4, "o2": 4.4}
+{"snap": 1789503571, "eid": "sr:match:73998596", "ko": 1789668000, "comp": "Ecuador: Serie B", "home": "CD Independiente Juniors", "away": "Atletico Rojiblanco", "o1": 1.84, "ox": 3.1, "o2": 3.8}
+{"snap": 1789503571, "eid": "sr:match:73998592", "ko": 1789676100, "comp": "Ecuador: Serie B", "home": "Vinotinto FC Ecuador", "away": "9 de Octubre FC", "o1": 2.35, "ox": 2.7, "o2": 3.0}
+{"snap": 1789503571, "eid": "sr:match:74172404", "ko": 1789822800, "comp": "Greece: Super League 2", "home": "Anagennisi Karditsas 1904", "away": "Panionios Athens", "o1": 3.6, "ox": 2.85, "o2": 2.1}
+{"snap": 1789503571, "eid": "sr:match:74172402", "ko": 1789909200, "comp": "Greece: Super League 2", "home": "Kallithea FC", "away": "Panserraikos FC", "o1": 2.85, "ox": 2.85, "o2": 2.4}
+{"snap": 1789503571, "eid": "sr:match:74172400", "ko": 1789912800, "comp": "Greece: Super League 2", "home": "Asteras Tripolis B", "away": "Apollon Kalamarias", "o1": 1.97, "ox": 3.0, "o2": 3.7}
+{"snap": 1789503571, "eid": "sr:match:74172406", "ko": 1789912800, "comp": "Greece: Super League 2", "home": "Olympiacos Piraeus B", "away": "GS Marko", "o1": 7.1, "ox": 3.6, "o2": 1.45}
+{"snap": 1789503571, "eid": "sr:match:74172412", "ko": 1789995600, "comp": "Greece: Super League 2", "home": "Pas Pyrgos", "away": "AE Larissa FC", "o1": 6.2, "ox": 3.9, "o2": 1.45}
+{"snap": 1789503571, "eid": "sr:match:74172410", "ko": 1789999200, "comp": "Greece: Super League 2", "home": "Panthrakikos FC Komotini", "away": "Niki Volou 1924 PAE", "o1": 5.4, "ox": 3.4, "o2": 1.58}
+{"snap": 1789503571, "eid": "sr:match:74172414", "ko": 1789999200, "comp": "Greece: Super League 2", "home": "PAOK Thessaloniki B", "away": "Nestos Chrysoupoli FC", "o1": 1.74, "ox": 3.2, "o2": 4.6}
+{"snap": 1789503571, "eid": "sr:match:72042266", "ko": 1789833600, "comp": "Slovakia: Superliga", "home": "FK Kosice", "away": "MFK Ruzomberok", "o1": 1.66, "ox": 4.0, "o2": 4.3}
+{"snap": 1789503571, "eid": "sr:match:72042270", "ko": 1789833600, "comp": "Slovakia: Superliga", "home": "MFK Zemplin Michalovce", "away": "MFk Dukla Banska Bystrica", "o1": 1.73, "ox": 3.8, "o2": 4.2}
+{"snap": 1789503571, "eid": "sr:match:72042272", "ko": 1789842600, "comp": "Slovakia: Superliga", "home": "KFC Komarno", "away": "Slovan Bratislava", "o1": 4.2, "ox": 3.9, "o2": 1.71}
+{"snap": 1789503571, "eid": "sr:match:72042274", "ko": 1789916400, "comp": "Slovakia: Superliga", "home": "MFK Skalica", "away": "FK Zeleziarne Podbrezova", "o1": 3.1, "ox": 3.4, "o2": 2.15}
+{"snap": 1789503571, "eid": "sr:match:72042268", "ko": 1789923600, "comp": "Slovakia: Superliga", "home": "DAC 1904 Dunajska Streda", "away": "Spartak Trnava", "o1": 1.84, "ox": 3.6, "o2": 3.9}
+{"snap": 1789503571, "eid": "sr:match:74299646", "ko": 1789743600, "comp": "Finland: Veikkausliiga", "home": "FC Lahti", "away": "FF Jaro", "o1": 1.53, "ox": 4.1, "o2": 5.1}
+{"snap": 1789503571, "eid": "sr:match:74299676", "ko": 1789747200, "comp": "Finland: Veikkausliiga", "home": "AC Oulu", "away": "FC Inter Turku", "o1": 4.0, "ox": 3.4, "o2": 1.87}
+{"snap": 1789503571, "eid": "sr:match:74299650", "ko": 1789819200, "comp": "Finland: Veikkausliiga", "home": "Turun Palloseura", "away": "Tampereen Ilves", "o1": 2.5, "ox": 3.5, "o2": 2.5}
+{"snap": 1789503571, "eid": "sr:match:74299680", "ko": 1789826400, "comp": "Finland: Veikkausliiga", "home": "Vaasan Palloseura", "away": "Kuopion Palloseura", "o1": 3.0, "ox": 3.33, "o2": 2.2}
+{"snap": 1789503571, "eid": "sr:match:74485484", "ko": 1789574400, "comp": "Latvia: Virsliga", "home": "FK Auda Riga", "away": "Ogre United", "o1": 1.32, "ox": 5.2, "o2": 7.7}
+{"snap": 1789503571, "eid": "sr:match:68492704", "ko": 1789815600, "comp": "Latvia: Virsliga", "home": "FK Liepaja", "away": "BFC Daugavpils", "o1": 1.89, "ox": 3.7, "o2": 3.5}
+{"snap": 1789503571, "eid": "sr:match:68492706", "ko": 1789822800, "comp": "Latvia: Virsliga", "home": "FS Jelgava", "away": "Riga FC", "o1": 8.2, "ox": 5.1, "o2": 1.3}
+{"snap": 1789503571, "eid": "sr:match:68492708", "ko": 1789902000, "comp": "Latvia: Virsliga", "home": "Ogre United", "away": "SK Super Nova", "o1": 2.75, "ox": 3.5, "o2": 2.3}
+{"snap": 1789503571, "eid": "sr:match:68492710", "ko": 1789909200, "comp": "Latvia: Virsliga", "home": "FK Tukums 2000/TSS", "away": "FK Grobina", "o1": 2.2, "ox": 3.5, "o2": 2.9}
+{"snap": 1789503571, "eid": "sr:match:68492702", "ko": 1789916400, "comp": "Latvia: Virsliga", "home": "FK Auda Riga", "away": "FC RFS", "o1": 4.1, "ox": 3.9, "o2": 1.7}
+{"snap": 1789503571, "eid": "sr:match:72230776", "ko": 1789747200, "comp": "Poland: 1. Liga", "home": "Warta Poznan", "away": "Puszcza Niepolomice", "o1": 2.05, "ox": 3.5, "o2": 3.2}
+{"snap": 1789503571, "eid": "sr:match:72230772", "ko": 1789757100, "comp": "Poland: 1. Liga", "home": "Polonia Bytom", "away": "Ruch Chorzow", "o1": 2.75, "ox": 3.4, "o2": 2.3}
+{"snap": 1789503571, "eid": "sr:match:72230762", "ko": 1789813800, "comp": "Poland: 1. Liga", "home": "KS Lechia Gdansk", "away": "FKS Stal Mielec", "o1": 2.05, "ox": 3.6, "o2": 3.1}
+{"snap": 1789503571, "eid": "sr:match:72230760", "ko": 1789824600, "comp": "Poland: 1. Liga", "home": "Bruk-Bet Termalica Nieciecza", "away": "Odra Opole", "o1": 2.0, "ox": 3.33, "o2": 3.4}
+{"snap": 1789503571, "eid": "sr:match:72230768", "ko": 1789824600, "comp": "Poland: 1. Liga", "home": "Pogon Grodzisk Mazowiecki", "away": "LKS Lodz", "o1": 3.2, "ox": 3.33, "o2": 2.1}
+{"snap": 1789503571, "eid": "sr:match:72230774", "ko": 1789824600, "comp": "Poland: 1. Liga", "home": "Polonia Warszawa", "away": "Chrobry Glogow", "o1": 1.84, "ox": 3.5, "o2": 3.8}
+{"snap": 1789503571, "eid": "sr:match:72230764", "ko": 1789837200, "comp": "Poland: 1. Liga", "home": "Miedz Legnica", "away": "ZKS Stal Rzeszow", "o1": 1.62, "ox": 4.0, "o2": 4.4}
+{"snap": 1789503571, "eid": "sr:match:72230770", "ko": 1789907400, "comp": "Poland: 1. Liga", "home": "Pogon Siedlce", "away": "MKS Arka Gdynia", "o1": 3.5, "ox": 3.33, "o2": 2.0}
+{"snap": 1789503571, "eid": "sr:match:72230766", "ko": 1789918200, "comp": "Poland: 1. Liga", "home": "Podbeskidzie Bielsko-Bia\u0142a", "away": "Unia Skierniewice", "o1": 2.05, "ox": 3.5, "o2": 3.1}
+{"snap": 1789503571, "eid": "sr:match:72440670", "ko": 1789749000, "comp": "Austria: 2. Liga", "home": "FAC Wien", "away": "FC Liefering", "o1": 2.4, "ox": 3.6, "o2": 2.55}
+{"snap": 1789503571, "eid": "sr:match:72440674", "ko": 1789749000, "comp": "Austria: 2. Liga", "home": "FC Hertha Wels", "away": "First Vienna FC 1894", "o1": 3.6, "ox": 3.7, "o2": 1.89}
+{"snap": 1789503571, "eid": "sr:match:72440676", "ko": 1789749000, "comp": "Austria: 2. Liga", "home": "Kapfenberger SV", "away": "SKU Amstetten", "o1": 3.7, "ox": 3.9, "o2": 1.81}
+{"snap": 1789503571, "eid": "sr:match:72440666", "ko": 1789756200, "comp": "Austria: 2. Liga", "home": "Blau-Weiss Linz", "away": "FC Admira Wacker Modling", "o1": 1.56, "ox": 4.25, "o2": 5.0}
+{"snap": 1789503571, "eid": "sr:match:72440680", "ko": 1789824600, "comp": "Austria: 2. Liga", "home": "ASK Voitsberg", "away": "Austria Salzburg", "o1": 2.05, "ox": 3.5, "o2": 3.25}
+{"snap": 1789503571, "eid": "sr:match:72440678", "ko": 1789824600, "comp": "Austria: 2. Liga", "home": "SK Sturm Graz II", "away": "Wacker Innsbruck", "o1": 2.95, "ox": 3.8, "o2": 2.1}
+{"snap": 1789503571, "eid": "sr:match:72440672", "ko": 1789893000, "comp": "Austria: 2. Liga", "home": "Young Violets Wien", "away": "Rapid Wien II", "o1": 2.15, "ox": 3.7, "o2": 2.95}
+{"snap": 1789503571, "eid": "sr:match:73841636", "ko": 1789534800, "comp": "International Youth: Asian Games", "home": "United Arab Emirates", "away": "Iran", "o1": 3.9, "ox": 3.25, "o2": 1.95}
+{"snap": 1789503571, "eid": "sr:match:73841640", "ko": 1789552800, "comp": "International Youth: Asian Games", "home": "China", "away": "Korea DPR", "o1": 2.3, "ox": 3.1, "o2": 3.1}
+{"snap": 1789503571, "eid": "sr:match:73841606", "ko": 1789554600, "comp": "International Youth: Asian Games", "home": "Japan", "away": "Hong Kong, China", "o1": 1.01, "ox": 14.0, "o2": 54.0}
+{"snap": 1789503571, "eid": "sr:match:74483746", "ko": 1789657200, "comp": "Georgia: Erovnuli Liga", "home": "FC Iberia 1999", "away": "FC Dila Gori", "o1": 2.1, "ox": 3.3, "o2": 3.1}
+{"snap": 1789503571, "eid": "sr:match:72300792", "ko": 1789747200, "comp": "Czechia: FNL", "home": "1.SK Prostejov", "away": "Dukla Prague", "o1": 3.0, "ox": 3.33, "o2": 2.15}
+{"snap": 1789503571, "eid": "sr:match:72300798", "ko": 1789747200, "comp": "Czechia: FNL", "home": "FC Vysocina Jihlava", "away": "SK Slavia Prague B", "o1": 2.05, "ox": 3.5, "o2": 3.1}
+{"snap": 1789503571, "eid": "sr:match:72587354", "ko": 1789747200, "comp": "Czechia: FNL", "home": "MFK Karvina", "away": "SK Hanacka Slavia Kromeriz", "o1": 1.29, "ox": 5.4, "o2": 7.6}
+{"snap": 1789503571, "eid": "sr:match:72300786", "ko": 1789892100, "comp": "Czechia: FNL", "home": "FK Viktoria Zizkov", "away": "FK Fotbal Trinec", "o1": 1.83, "ox": 3.7, "o2": 3.7}
+{"snap": 1789503571, "eid": "sr:match:72300794", "ko": 1789907400, "comp": "Czechia: FNL", "home": "FC Banik Ostrava B", "away": "FK Usti nad Labem", "o1": 2.05, "ox": 3.5, "o2": 3.1}
+{"snap": 1789503571, "eid": "sr:match:74486274", "ko": 1789765200, "comp": "Honduras: Liga Nacional", "home": "Platense FC Puerto Cortes", "away": "Lobos UPNFM", "o1": 2.45, "ox": 3.25, "o2": 2.7}
+{"snap": 1789503571, "eid": "sr:match:72346314", "ko": 1789826400, "comp": "Northern Ireland: Premiership", "home": "Bangor FC", "away": "Portadown FC", "o1": 2.75, "ox": 3.33, "o2": 2.4}
+{"snap": 1789503571, "eid": "sr:match:72346316", "ko": 1789826400, "comp": "Northern Ireland: Premiership", "home": "Carrick Rangers", "away": "Larne FC", "o1": 3.5, "ox": 3.7, "o2": 1.92}
+{"snap": 1789503571, "eid": "sr:match:72346318", "ko": 1789826400, "comp": "Northern Ireland: Premiership", "home": "Cliftonville FC", "away": "Glentoran FC", "o1": 3.33, "ox": 3.6, "o2": 1.98}
+{"snap": 1789503571, "eid": "sr:match:72346320", "ko": 1789826400, "comp": "Northern Ireland: Premiership", "home": "Coleraine FC", "away": "Limavady United FC", "o1": 1.15, "ox": 7.4, "o2": 13.5}
+{"snap": 1789503571, "eid": "sr:match:72346322", "ko": 1789826400, "comp": "Northern Ireland: Premiership", "home": "Dungannon Swifts", "away": "Ballymena United", "o1": 2.15, "ox": 3.4, "o2": 3.1}
+{"snap": 1789503571, "eid": "sr:match:72346324", "ko": 1789826400, "comp": "Northern Ireland: Premiership", "home": "Linfield FC", "away": "Crusaders FC", "o1": 1.26, "ox": 5.8, "o2": 9.1}
+{"snap": 1789503571, "eid": "sr:match:72053630", "ko": 1789783200, "comp": "Costa Rica: Primera Division", "home": "Perez Zeledon", "away": "Sporting FC", "o1": 3.4, "ox": 3.1, "o2": 2.1}
+{"snap": 1789503571, "eid": "sr:match:73095510", "ko": 1789858800, "comp": "Costa Rica: Primera Division", "home": "Puntarenas FC", "away": "CD Escorpiones Belen", "o1": 1.69, "ox": 3.5, "o2": 4.6}
+{"snap": 1789503571, "eid": "sr:match:72053628", "ko": 1789869600, "comp": "Costa Rica: Primera Division", "home": "Deportivo Saprissa San Jose", "away": "CS Herediano", "o1": 1.73, "ox": 3.33, "o2": 4.75}
+{"snap": 1789503571, "eid": "sr:match:72053622", "ko": 1789945200, "comp": "Costa Rica: Primera Division", "home": "Liga Deportiva Alajuelense", "away": "Inter San Carlos", "o1": 1.64, "ox": 3.7, "o2": 4.8}
+{"snap": 1789503571, "eid": "sr:match:72053626", "ko": 1789952400, "comp": "Costa Rica: Primera Division", "home": "AD San Carlos", "away": "CS Cartagines", "o1": 2.85, "ox": 2.9, "o2": 2.55}
+{"snap": 1789503571, "eid": "sr:match:67604980", "ko": 1789745400, "comp": "Finland: Ykkosliiga", "home": "FC Haka Valkeakoski", "away": "HJK Klubi 04", "o1": 1.5, "ox": 4.5, "o2": 5.2}
+{"snap": 1789503571, "eid": "sr:match:67604982", "ko": 1789745400, "comp": "Finland: Ykkosliiga", "home": "JaPS", "away": "Ekenas Idrottsforening", "o1": 2.65, "ox": 3.5, "o2": 2.45}
+{"snap": 1789503571, "eid": "sr:match:67604986", "ko": 1789822800, "comp": "Finland: Ykkosliiga", "home": "Mikkelin Palloilijat", "away": "JIPPO", "o1": 4.4, "ox": 3.8, "o2": 1.7}
+{"snap": 1789503571, "eid": "sr:match:72578330", "ko": 1789653600, "comp": "Russia: 1. Liga", "home": "FC Tekstilshchik Ivanovo", "away": "SK Rotor Volgograd", "o1": 4.1, "ox": 3.4, "o2": 1.84}
+{"snap": 1789503571, "eid": "sr:match:72578314", "ko": 1789660800, "comp": "Russia: 1. Liga", "home": "FC Nizhny Novgorod", "away": "Leningradets", "o1": 1.43, "ox": 4.4, "o2": 6.5}
+{"snap": 1789503571, "eid": "sr:match:72578326", "ko": 1789660800, "comp": "Russia: 1. Liga", "home": "Torpedo Moscow", "away": "FK Veles Moscow", "o1": 1.49, "ox": 4.1, "o2": 6.1}
+{"snap": 1789503571, "eid": "sr:match:72578328", "ko": 1789740000, "comp": "Russia: 1. Liga", "home": "FC Chelyabinsk", "away": "FK Ufa", "o1": 2.3, "ox": 3.2, "o2": 3.0}
+{"snap": 1789503571, "eid": "sr:match:72578324", "ko": 1789745400, "comp": "Russia: 1. Liga", "home": "FC Shinnik Yaroslavl", "away": "FC Kamaz Naberezhnye Chelny", "o1": 2.05, "ox": 3.25, "o2": 3.6}
+{"snap": 1789503571, "eid": "sr:match:73160396", "ko": 1789750800, "comp": "Cyprus: 1st Division", "home": "Als Omonia", "away": "AEK Larnaca", "o1": 6.5, "ox": 4.25, "o2": 1.45}
+{"snap": 1789503571, "eid": "sr:match:73160394", "ko": 1789750800, "comp": "Cyprus: 1st Division", "home": "Pafos FC", "away": "AEL Limassol", "o1": 1.34, "ox": 4.7, "o2": 8.4}
+{"snap": 1789503571, "eid": "sr:match:73160400", "ko": 1789833600, "comp": "Cyprus: 1st Division", "home": "Apollon Limassol", "away": "APOEL Nikosia", "o1": 2.1, "ox": 3.3, "o2": 3.4}
+{"snap": 1789503571, "eid": "sr:match:73160390", "ko": 1789920000, "comp": "Cyprus: 1st Division", "home": "AC Omonia Nicosia", "away": "Krasava ENY Ypsonas FC", "o1": 1.19, "ox": 6.0, "o2": 13.5}
+{"snap": 1789503571, "eid": "sr:match:73160388", "ko": 1789920000, "comp": "Cyprus: 1st Division", "home": "Aris Limassol", "away": "Karmiotissa FC", "o1": 1.26, "ox": 5.5, "o2": 9.7}
+{"snap": 1789503571, "eid": "sr:match:68686116", "ko": 1789862400, "comp": "Canada: Canadian Premier League", "home": "Pacific FC", "away": "Vancouver Langley FC", "o1": 4.2, "ox": 3.9, "o2": 1.68}
+{"snap": 1789503571, "eid": "sr:match:68686118", "ko": 1789920000, "comp": "Canada: Canadian Premier League", "home": "Atletico Ottawa", "away": "FC Supra Du Quebec", "o1": 2.15, "ox": 3.6, "o2": 2.9}
+{"snap": 1789503571, "eid": "sr:match:68686120", "ko": 1789930800, "comp": "Canada: Canadian Premier League", "home": "HFX Wanderers FC", "away": "Inter Toronto", "o1": 1.71, "ox": 3.9, "o2": 4.1}
+{"snap": 1789503571, "eid": "sr:match:73960310", "ko": 1789570800, "comp": "Czechia: CFL", "home": "SK Sokol Brozany", "away": "FK Pardubice B", "o1": 3.0, "ox": 3.4, "o2": 2.1}
+{"snap": 1789503571, "eid": "sr:match:74160938", "ko": 1789567200, "comp": "Czechia: Czech Cup", "home": "FC Silon Taborsko", "away": "FK Teplice", "o1": 3.6, "ox": 4.2, "o2": 1.77}
+{"snap": 1789503572, "eid": "sr:match:68311140", "ko": 1789909200, "comp": "Sweden: Ettan", "home": "IFK Stocksund", "away": "Umea FC", "o1": 2.75, "ox": 3.9, "o2": 2.15}
+{"snap": 1789503572, "eid": "sr:match:68311142", "ko": 1789912800, "comp": "Sweden: Ettan", "home": "AFC Eskilstuna", "away": "Gefle IF", "o1": 2.1, "ox": 3.7, "o2": 2.95}
+{"snap": 1789503572, "eid": "sr:match:68311852", "ko": 1789912800, "comp": "Sweden: Ettan", "home": "Hassleholms IF", "away": "FC Trollhattan", "o1": 1.73, "ox": 3.9, "o2": 3.9}
+{"snap": 1789503572, "eid": "sr:match:68311144", "ko": 1789912800, "comp": "Sweden: Ettan", "home": "Karlbergs BK", "away": "FC Stockholm Internazionale", "o1": 4.5, "ox": 3.9, "o2": 1.63}
+{"snap": 1789503572, "eid": "sr:match:71936120", "ko": 1789761600, "comp": "Peru: Liga 1", "home": "Alianza Atletico", "away": "Comerciantes Unidos", "o1": 1.59, "ox": 3.8, "o2": 5.25}
+{"snap": 1789503572, "eid": "sr:match:71936122", "ko": 1789779600, "comp": "Peru: Liga 1", "home": "Alianza Lima", "away": "Asociacion Deportiva Tarma", "o1": 1.26, "ox": 5.4, "o2": 9.8}
+{"snap": 1789503572, "eid": "sr:match:71936130", "ko": 1789840800, "comp": "Peru: Liga 1", "home": "FC Cajamarca", "away": "Cusco FC", "o1": 3.1, "ox": 3.6, "o2": 2.1}
+{"snap": 1789503572, "eid": "sr:match:71936136", "ko": 1789849800, "comp": "Peru: Liga 1", "home": "Sporting Cristal", "away": "Atletico Grau", "o1": 1.36, "ox": 4.8, "o2": 7.3}
+{"snap": 1789503572, "eid": "sr:match:71936126", "ko": 1789858800, "comp": "Peru: Liga 1", "home": "Deportivo Garcilaso", "away": "Universitario de Deportes", "o1": 2.9, "ox": 3.1, "o2": 2.4}
+{"snap": 1789503572, "eid": "sr:match:71936128", "ko": 1789866900, "comp": "Peru: Liga 1", "home": "FBC Melgar", "away": "Sport Boys Association", "o1": 1.39, "ox": 4.5, "o2": 7.4}
+{"snap": 1789503572, "eid": "sr:match:71936134", "ko": 1789927200, "comp": "Peru: Liga 1", "home": "Sport Huancayo", "away": "UTC de Cajamarca", "o1": 1.34, "ox": 4.8, "o2": 7.8}
+{"snap": 1789503572, "eid": "sr:match:71936132", "ko": 1789936200, "comp": "Peru: Liga 1", "home": "Juan Pablo II College", "away": "CD Moquegua", "o1": 1.55, "ox": 4.0, "o2": 5.5}
+{"snap": 1789503572, "eid": "sr:match:74508866", "ko": 1790193600, "comp": "Peru: Liga 1", "home": "Asociacion Deportiva Tarma", "away": "Cienciano", "o1": 2.75, "ox": 3.3, "o2": 2.35}
+{"snap": 1789503572, "eid": "sr:match:68098130", "ko": 1789506000, "comp": "Chile: Primera B", "home": "San Luis de Quillota", "away": "CD Antofagasta", "o1": 2.4, "ox": 3.4, "o2": 2.7}
+{"snap": 1789503572, "eid": "sr:match:68098134", "ko": 1789515000, "comp": "Chile: Primera B", "home": "Union Espanola", "away": "Deportes Temuco", "o1": 2.2, "ox": 3.25, "o2": 3.1}
+{"snap": 1789503572, "eid": "sr:match:67119770", "ko": 1789754400, "comp": "Argentina: Primera B", "home": "Club Comunicaciones", "away": "CA Defensores Unidos", "o1": 1.85, "ox": 3.2, "o2": 4.2}
+{"snap": 1789503572, "eid": "sr:match:67119764", "ko": 1789837200, "comp": "Argentina: Primera B", "home": "Deportivo Camioneros", "away": "CD Armenio", "o1": 1.8, "ox": 3.1, "o2": 4.6}
+{"snap": 1789503572, "eid": "sr:match:67119752", "ko": 1789840800, "comp": "Argentina: Primera B", "home": "CD UAI Urquiza", "away": "CA Excursionistas", "o1": 4.1, "ox": 3.1, "o2": 1.9}
+{"snap": 1789503572, "eid": "sr:match:67119762", "ko": 1789840800, "comp": "Argentina: Primera B", "home": "CS Italiano", "away": "CA Brown de Adrogue", "o1": 2.25, "ox": 2.9, "o2": 3.3}
+{"snap": 1789503572, "eid": "sr:match:67119760", "ko": 1789840800, "comp": "Argentina: Primera B", "home": "CSD San Martin", "away": "CSCD Laferrere", "o1": 2.7, "ox": 2.9, "o2": 2.65}
+{"snap": 1789503572, "eid": "sr:match:67119766", "ko": 1789840800, "comp": "Argentina: Primera B", "home": "Deportivo Merlo", "away": "CSD Flandria", "o1": 2.65, "ox": 2.85, "o2": 2.8}
+{"snap": 1789503572, "eid": "sr:match:67119754", "ko": 1789840800, "comp": "Argentina: Primera B", "home": "Real Pilar FC", "away": "Arsenal de Sarandi", "o1": 2.9, "ox": 2.9, "o2": 2.5}
+{"snap": 1789503572, "eid": "sr:match:67119758", "ko": 1789927200, "comp": "Argentina: Primera B", "home": "CA Villa San Carlos", "away": "CA Talleres de Remedios", "o1": 3.9, "ox": 3.0, "o2": 2.0}
+{"snap": 1789503572, "eid": "sr:match:67119768", "ko": 1789927200, "comp": "Argentina: Primera B", "home": "CS Dock Sud", "away": "Argentino de Quilmes", "o1": 2.0, "ox": 3.1, "o2": 3.7}
+{"snap": 1789503572, "eid": "sr:match:67119756", "ko": 1789927200, "comp": "Argentina: Primera B", "home": "CSD Liniers", "away": "Argentino de Merlo", "o1": 2.15, "ox": 2.95, "o2": 3.6}
+{"snap": 1789503572, "eid": "sr:match:73576630", "ko": 1789547400, "comp": "Indonesia: Super League", "home": "Borneo Samarinda", "away": "Dewa United", "o1": 2.1, "ox": 3.5, "o2": 3.1}
+{"snap": 1789503572, "eid": "sr:match:73576632", "ko": 1789720200, "comp": "Indonesia: Super League", "home": "Arema FC", "away": "Persik Kediri", "o1": 1.67, "ox": 3.8, "o2": 4.4}
+{"snap": 1789503572, "eid": "sr:match:73576634", "ko": 1789732800, "comp": "Indonesia: Super League", "home": "Madura United", "away": "Psim Yogyakarta", "o1": 2.2, "ox": 3.25, "o2": 3.1}
+{"snap": 1789503572, "eid": "sr:match:73576638", "ko": 1789806600, "comp": "Indonesia: Super League", "home": "PSM Makassar", "away": "Persita Tangerang", "o1": 2.05, "ox": 3.2, "o2": 3.4}
+{"snap": 1789503572, "eid": "sr:match:73576642", "ko": 1789819200, "comp": "Indonesia: Super League", "home": "Persija Jakarta", "away": "Malut United", "o1": 1.47, "ox": 4.4, "o2": 5.5}
+{"snap": 1789503572, "eid": "sr:match:73576648", "ko": 1789905600, "comp": "Indonesia: Super League", "home": "Persijap Jepara", "away": "Persib Bandung", "o1": 5.8, "ox": 3.9, "o2": 1.51}
+{"snap": 1789503572, "eid": "sr:match:72083064", "ko": 1789830000, "comp": "Serbia: Superliga", "home": "FK Novi Pazar", "away": "FK Zemun", "o1": 1.46, "ox": 4.2, "o2": 6.4}
+{"snap": 1789503572, "eid": "sr:match:72083060", "ko": 1789830000, "comp": "Serbia: Superliga", "home": "FK Vojvodina Novi Sad", "away": "FK IMT Novi Beograd", "o1": 1.6, "ox": 4.0, "o2": 5.0}
+{"snap": 1789503572, "eid": "sr:match:72083062", "ko": 1789837200, "comp": "Serbia: Superliga", "home": "FK Radnik Surdulica", "away": "FK Partizan Belgrade", "o1": 3.75, "ox": 3.6, "o2": 1.86}
+{"snap": 1789503572, "eid": "sr:match:72083056", "ko": 1789837200, "comp": "Serbia: Superliga", "home": "OFK Beograd", "away": "FK Radnicki 1923 Kragujevac", "o1": 2.5, "ox": 3.25, "o2": 2.7}
+{"snap": 1789503572, "eid": "sr:match:72083054", "ko": 1789916400, "comp": "Serbia: Superliga", "home": "FK Macva Sabac", "away": "FK Mladost Lucani", "o1": 2.35, "ox": 3.1, "o2": 3.0}
+{"snap": 1789503572, "eid": "sr:match:72083058", "ko": 1789923600, "comp": "Serbia: Superliga", "home": "Crvena Zvezda", "away": "FK Radnicki Nis", "o1": 1.14, "ox": 7.5, "o2": 15.5}
+{"snap": 1789503572, "eid": "sr:match:72083066", "ko": 1790010000, "comp": "Serbia: Superliga", "home": "FK Zeleznicar Pancevo", "away": "Cukaricki", "o1": 1.8, "ox": 3.6, "o2": 4.1}
+{"snap": 1789503572, "eid": "sr:match:72735774", "ko": 1789736400, "comp": "Turkiye: 1. Lig", "home": "Bandirmaspor", "away": "Umraniyespor", "o1": 1.84, "ox": 3.4, "o2": 4.1}
+{"snap": 1789503572, "eid": "sr:match:72735786", "ko": 1789750800, "comp": "Turkiye: 1. Lig", "home": "Muglaspor", "away": "Igdir FK", "o1": 3.2, "ox": 2.95, "o2": 2.35}
+{"snap": 1789503572, "eid": "sr:match:72735768", "ko": 1789826400, "comp": "Turkiye: 1. Lig", "home": "Ankara Keciorengucu", "away": "Sivasspor", "o1": 2.0, "ox": 3.6, "o2": 3.3}
+{"snap": 1789503572, "eid": "sr:match:72735776", "ko": 1789826400, "comp": "Turkiye: 1. Lig", "home": "Sariyer SK", "away": "Boluspor", "o1": 1.22, "ox": 5.9, "o2": 10.5}
+{"snap": 1789503572, "eid": "sr:match:72735782", "ko": 1789837200, "comp": "Turkiye: 1. Lig", "home": "Batman Petrolspor", "away": "Bursaspor", "o1": 2.8, "ox": 3.2, "o2": 2.45}
+{"snap": 1789503572, "eid": "sr:match:72735778", "ko": 1789837200, "comp": "Turkiye: 1. Lig", "home": "Esenler Erokspor", "away": "Fatih Karagumruk Istanbul", "o1": 1.93, "ox": 3.5, "o2": 3.6}
+{"snap": 1789503572, "eid": "sr:match:72735780", "ko": 1789912800, "comp": "Turkiye: 1. Lig", "home": "Manisa Futbol Kulubu", "away": "Istanbulspor AS", "o1": 1.95, "ox": 3.7, "o2": 3.33}
+{"snap": 1789503572, "eid": "sr:match:72735770", "ko": 1789912800, "comp": "Turkiye: 1. Lig", "home": "Pendikspor", "away": "Bodrum FK", "o1": 2.05, "ox": 3.3, "o2": 3.5}
+{"snap": 1789503572, "eid": "sr:match:72735772", "ko": 1789923600, "comp": "Turkiye: 1. Lig", "home": "Antalyaspor", "away": "Van Spor FK", "o1": 1.57, "ox": 4.1, "o2": 5.0}
+{"snap": 1789503572, "eid": "sr:match:72735784", "ko": 1789923600, "comp": "Turkiye: 1. Lig", "home": "Mardin 1969 Spor", "away": "Kayserispor", "o1": 2.65, "ox": 3.2, "o2": 2.6}
+{"snap": 1789503572, "eid": "sr:match:72345510", "ko": 1789752600, "comp": "Austria: Bundesliga", "home": "SK Rapid", "away": "WSG Tirol", "o1": 1.42, "ox": 5.0, "o2": 6.5}
+{"snap": 1789503572, "eid": "sr:match:72345518", "ko": 1789830000, "comp": "Austria: Bundesliga", "home": "Austria Lustenau", "away": "SCR Altach", "o1": 3.0, "ox": 3.4, "o2": 2.25}
+{"snap": 1789503572, "eid": "sr:match:72345516", "ko": 1789839000, "comp": "Austria: Bundesliga", "home": "Grazer AK 1902", "away": "FK Austria Wien", "o1": 2.45, "ox": 3.33, "o2": 2.75}
+{"snap": 1789503572, "eid": "sr:match:72345514", "ko": 1789907400, "comp": "Austria: Bundesliga", "home": "SV Ried", "away": "Wolfsberger AC", "o1": 1.94, "ox": 3.6, "o2": 3.6}
+{"snap": 1789503572, "eid": "sr:match:72345512", "ko": 1789907400, "comp": "Austria: Bundesliga", "home": "TSV Hartberg", "away": "LASK Linz", "o1": 9.5, "ox": 5.8, "o2": 1.26}
+{"snap": 1789503572, "eid": "sr:match:72345508", "ko": 1789916400, "comp": "Austria: Bundesliga", "home": "Salzburg", "away": "Sturm Graz", "o1": 1.66, "ox": 4.25, "o2": 4.3}
+{"snap": 1789503572, "eid": "sr:match:72522058", "ko": 1789757100, "comp": "Wales: Cymru Premier", "home": "Airbus UK Broughton", "away": "Flint Town United", "o1": 2.55, "ox": 3.5, "o2": 2.5}
+{"snap": 1789503572, "eid": "sr:match:72522060", "ko": 1789757100, "comp": "Wales: Cymru Premier", "home": "Ammanford", "away": "Pen-y-Bont FC", "o1": 7.7, "ox": 4.3, "o2": 1.4}
+{"snap": 1789503572, "eid": "sr:match:72522064", "ko": 1789757100, "comp": "Wales: Cymru Premier", "home": "Caernarfon Town FC", "away": "Cambrian United", "o1": 1.42, "ox": 4.7, "o2": 6.1}
+{"snap": 1789503572, "eid": "sr:match:72522066", "ko": 1789757100, "comp": "Wales: Cymru Premier", "home": "Colwyn Bay", "away": "Barry Town United FC", "o1": 2.5, "ox": 3.25, "o2": 2.7}
+{"snap": 1789503572, "eid": "sr:match:72522068", "ko": 1789757100, "comp": "Wales: Cymru Premier", "home": "Connah`s Quay Nomads FC", "away": "Cardiff Metropolitan University FC", "o1": 1.72, "ox": 3.7, "o2": 4.4}
+{"snap": 1789503572, "eid": "sr:match:72522070", "ko": 1789757100, "comp": "Wales: Cymru Premier", "home": "Haverfordwest County AFC", "away": "Holywell Town", "o1": 1.63, "ox": 4.1, "o2": 4.5}
+{"snap": 1789503572, "eid": "sr:match:72522072", "ko": 1789835400, "comp": "Wales: Cymru Premier", "home": "The New Saints FC", "away": "Llandudno FC", "o1": 1.2, "ox": 6.4, "o2": 11.5}
+{"snap": 1789503572, "eid": "sr:match:72043170", "ko": 1789747200, "comp": "Poland: Ekstraklasa", "home": "Widzew Lodz", "away": "Wieczysta Krakow", "o1": 1.98, "ox": 3.6, "o2": 3.6}
+{"snap": 1789503572, "eid": "sr:match:72043166", "ko": 1789756200, "comp": "Poland: Ekstraklasa", "home": "Wisla Krakow", "away": "WKS Slask Wroclaw", "o1": 1.69, "ox": 4.1, "o2": 4.5}
+{"snap": 1789503572, "eid": "sr:match:72043164", "ko": 1789821900, "comp": "Poland: Ekstraklasa", "home": "Korona Kielce", "away": "Rakow Czestochowa", "o1": 2.15, "ox": 3.4, "o2": 3.25}
+{"snap": 1789503572, "eid": "sr:match:72043168", "ko": 1789831800, "comp": "Poland: Ekstraklasa", "home": "GKS Katowice", "away": "KS Cracovia Krakow", "o1": 2.3, "ox": 3.5, "o2": 2.85}
+{"snap": 1789503572, "eid": "sr:match:72043162", "ko": 1789841700, "comp": "Poland: Ekstraklasa", "home": "LKP Motor Lublin", "away": "Gornik Zabrze", "o1": 3.5, "ox": 3.6, "o2": 1.99}
+{"snap": 1789503572, "eid": "sr:match:72043172", "ko": 1789899300, "comp": "Poland: Ekstraklasa", "home": "GKS Piast Gliwice", "away": "Pogon Szczecin", "o1": 2.35, "ox": 3.5, "o2": 2.8}
+{"snap": 1789503572, "eid": "sr:match:72043176", "ko": 1789908300, "comp": "Poland: Ekstraklasa", "home": "Zaglebie Lubin", "away": "Wisla Plock", "o1": 2.3, "ox": 3.33, "o2": 2.95}
+{"snap": 1789503572, "eid": "sr:match:72043174", "ko": 1789918200, "comp": "Poland: Ekstraklasa", "home": "Jagiellonia Bialystok", "away": "Legia Warszawa", "o1": 2.9, "ox": 3.5, "o2": 2.3}
+{"snap": 1789503572, "eid": "sr:match:72043178", "ko": 1789928100, "comp": "Poland: Ekstraklasa", "home": "KKS Lech Poznan", "away": "RKS Radomiak Radom", "o1": 1.29, "ox": 5.6, "o2": 8.3}
+{"snap": 1789503572, "eid": "sr:match:68774332", "ko": 1789660800, "comp": "Estonia: Esiliiga", "home": "Viimsi JK", "away": "Tartu JK Welco", "o1": 2.25, "ox": 3.7, "o2": 2.55}
+{"snap": 1789503572, "eid": "sr:match:68774338", "ko": 1789741800, "comp": "Estonia: Esiliiga", "home": "JK Tallinna Kalev", "away": "Tallinna FC Flora", "o1": 2.1, "ox": 4.1, "o2": 2.6}
+{"snap": 1789503572, "eid": "sr:match:73146502", "ko": 1789520400, "comp": "Mexico: Liga de Expansion MX", "home": "CSD Dorados Sinaloa", "away": "Cancun FC", "o1": 2.45, "ox": 3.4, "o2": 2.65}
+{"snap": 1789503572, "eid": "sr:match:72661644", "ko": 1789693200, "comp": "Mexico: Liga de Expansion MX", "home": "Alacranes de Durango", "away": "Cruz Azul Hidalgo", "o1": 1.67, "ox": 3.9, "o2": 4.25}
+{"snap": 1789503572, "eid": "sr:match:72661646", "ko": 1789779600, "comp": "Mexico: Liga de Expansion MX", "home": "Piratas Veracruz", "away": "Venados  FC", "o1": 1.6, "ox": 4.1, "o2": 4.6}
+{"snap": 1789503572, "eid": "sr:match:72661648", "ko": 1789779600, "comp": "Mexico: Liga de Expansion MX", "home": "Tepatitlan FC", "away": "CD Mineros de Zacatecas", "o1": 3.2, "ox": 3.7, "o2": 1.98}
+{"snap": 1789503572, "eid": "sr:match:72661650", "ko": 1789786800, "comp": "Mexico: Liga de Expansion MX", "home": "Club Atletico La Paz", "away": "CF Correcaminos UAT", "o1": 1.78, "ox": 3.9, "o2": 3.6}
+{"snap": 1789503572, "eid": "sr:match:72661654", "ko": 1789866000, "comp": "Mexico: Liga de Expansion MX", "home": "Atletico Morelia", "away": "Leones Negros UDEG", "o1": 1.68, "ox": 3.4, "o2": 5.0}
+{"snap": 1789503572, "eid": "sr:match:72661652", "ko": 1789945200, "comp": "Mexico: Liga de Expansion MX", "home": "CD Tapatio", "away": "Tlaxcala FC", "o1": 1.92, "ox": 3.7, "o2": 3.4}
+{"snap": 1789503572, "eid": "sr:match:74735084", "ko": 1789934400, "comp": "Ecuador: LigaPro Primera A", "home": "Barcelona SC", "away": "CSD Independiente del Valle", "o1": 2.9, "ox": 3.2, "o2": 2.35}
+{"snap": 1789503572, "eid": "sr:match:74735298", "ko": 1789934400, "comp": "Ecuador: LigaPro Primera A", "home": "CD Cuenca", "away": "Mushuc Runa SC", "o1": 2.15, "ox": 2.95, "o2": 3.25}
+{"snap": 1789503572, "eid": "sr:match:74735296", "ko": 1789934400, "comp": "Ecuador: LigaPro Primera A", "home": "CD Tecnico Universitario", "away": "Delfin SC", "o1": 2.15, "ox": 2.95, "o2": 3.2}
+{"snap": 1789503572, "eid": "sr:match:74735354", "ko": 1789934400, "comp": "Ecuador: LigaPro Primera A", "home": "CS Emelec", "away": "Libertad Loja", "o1": 1.71, "ox": 3.3, "o2": 4.5}
+{"snap": 1789503572, "eid": "sr:match:74735356", "ko": 1789934400, "comp": "Ecuador: LigaPro Primera A", "home": "Guayaquil City FC", "away": "Leones Futbol Club", "o1": 2.4, "ox": 2.9, "o2": 2.9}
+{"snap": 1789503572, "eid": "sr:match:74735080", "ko": 1789934400, "comp": "Ecuador: LigaPro Primera A", "home": "LDU Quito", "away": "CD Universidad Catolica del Ecuador", "o1": 2.1, "ox": 3.3, "o2": 3.25}
+{"snap": 1789503572, "eid": "sr:match:74735294", "ko": 1789934400, "comp": "Ecuador: LigaPro Primera A", "home": "Manta FC", "away": "Orense SC", "o1": 2.45, "ox": 3.1, "o2": 2.65}
+{"snap": 1789503572, "eid": "sr:match:74735082", "ko": 1789934400, "comp": "Ecuador: LigaPro Primera A", "home": "SD Aucas", "away": "CSD Macara", "o1": 1.94, "ox": 3.2, "o2": 3.9}
+{"snap": 1789503572, "eid": "sr:match:74288596", "ko": 1789574400, "comp": "Norway: NM Cup", "home": "Arendal FK", "away": "Sandnes Ulf", "o1": 2.8, "ox": 3.9, "o2": 2.3}
+{"snap": 1789503572, "eid": "sr:match:74288652", "ko": 1789574400, "comp": "Norway: NM Cup", "home": "Brattvaag", "away": "Kristiansund BK", "o1": 4.1, "ox": 4.3, "o2": 1.74}
+{"snap": 1789503572, "eid": "sr:match:74288588", "ko": 1789574400, "comp": "Norway: NM Cup", "home": "Elverum", "away": "Raufoss IL", "o1": 4.6, "ox": 4.6, "o2": 1.64}
+{"snap": 1789503572, "eid": "sr:match:74288666", "ko": 1789574400, "comp": "Norway: NM Cup", "home": "FK Jerv", "away": "Egersunds IK", "o1": 2.55, "ox": 3.8, "o2": 2.55}
+{"snap": 1789503572, "eid": "sr:match:74288580", "ko": 1789574400, "comp": "Norway: NM Cup", "home": "Gamle Oslo FK", "away": "Lyn 1896 FK", "o1": 7.3, "ox": 5.3, "o2": 1.38}
+{"snap": 1789503572, "eid": "sr:match:74288658", "ko": 1789574400, "comp": "Norway: NM Cup", "home": "IL Sandviken", "away": "Aasane Fotball", "o1": 3.6, "ox": 4.0, "o2": 1.93}
+{"snap": 1789503572, "eid": "sr:match:74288582", "ko": 1789574400, "comp": "Norway: NM Cup", "home": "Kjelsaas", "away": "HamKam", "o1": 4.0, "ox": 4.25, "o2": 1.77}
+{"snap": 1789503572, "eid": "sr:match:74288592", "ko": 1789574400, "comp": "Norway: NM Cup", "home": "Notodden FK", "away": "Odds BK", "o1": 4.1, "ox": 4.3, "o2": 1.74}
+{"snap": 1789503572, "eid": "sr:match:74288660", "ko": 1789574400, "comp": "Norway: NM Cup", "home": "Os", "away": "SK Brann", "o1": 31.0, "ox": 12.0, "o2": 1.07}
+{"snap": 1789503572, "eid": "sr:match:74288650", "ko": 1789574400, "comp": "Norway: NM Cup", "home": "Trygg/Lade", "away": "Molde", "o1": 36.0, "ox": 11.0, "o2": 1.07}
+{"snap": 1789503572, "eid": "sr:match:66854198", "ko": 1789757100, "comp": "Ireland: Premier Division", "home": "Derry City FC", "away": "Galway United FC", "o1": 1.87, "ox": 3.6, "o2": 3.75}
+{"snap": 1789503573, "eid": "sr:match:74448056", "ko": 1789830000, "comp": "Bosnia & Herzegovina: Premijer Liga", "home": "FK Sarajevo", "away": "FK Sloga Doboj", "o1": 1.53, "ox": 3.7, "o2": 6.0}
+{"snap": 1789503573, "eid": "sr:match:74448058", "ko": 1789830000, "comp": "Bosnia & Herzegovina: Premijer Liga", "home": "FK Zeljeznicar Sarajevo", "away": "NK Celik Zenica", "o1": 1.94, "ox": 3.3, "o2": 3.7}
+{"snap": 1789503573, "eid": "sr:match:74448054", "ko": 1789830000, "comp": "Bosnia & Herzegovina: Premijer Liga", "home": "HSK Zrinjski Mostar", "away": "FK Velez Mostar", "o1": 1.36, "ox": 4.5, "o2": 7.6}
+{"snap": 1789503573, "eid": "sr:match:74448060", "ko": 1789830000, "comp": "Bosnia & Herzegovina: Premijer Liga", "home": "NK Siroki Brijeg", "away": "FK Borac Banja Luka", "o1": 5.1, "ox": 3.5, "o2": 1.64}
+{"snap": 1789503573, "eid": "sr:match:74292856", "ko": 1789581600, "comp": "Argentina: Primera LPF, Reserves", "home": "CA Huracan", "away": "CA Quilmes Reserve", "o1": 2.3, "ox": 3.0, "o2": 2.75}
+{"snap": 1789503573, "eid": "sr:match:74292860", "ko": 1789581600, "comp": "Argentina: Primera LPF, Reserves", "home": "CA Lanus", "away": "Independiente Rivadavia de Mendoza Reserve", "o1": 1.64, "ox": 3.5, "o2": 4.4}
+{"snap": 1789503573, "eid": "sr:match:74292804", "ko": 1789581600, "comp": "Argentina: Primera LPF, Reserves", "home": "CA Union Santa Fe Reserve", "away": "CA Tigre Reserve", "o1": 1.83, "ox": 3.2, "o2": 3.7}
+{"snap": 1789503573, "eid": "sr:match:74292858", "ko": 1789581600, "comp": "Argentina: Primera LPF, Reserves", "home": "Ferro Carril Oeste", "away": "CA Platense", "o1": 2.3, "ox": 3.0, "o2": 2.75}
+{"snap": 1789503573, "eid": "sr:match:74292796", "ko": 1789581600, "comp": "Argentina: Primera LPF, Reserves", "home": "Gimnasia de la Plata Reserve", "away": "San Lorenzo de Almagro Res.", "o1": 2.1, "ox": 3.1, "o2": 3.0}
+{"snap": 1789503573, "eid": "sr:match:74292806", "ko": 1789581600, "comp": "Argentina: Primera LPF, Reserves", "home": "Gimnasia de Mendoza Reserve", "away": "CA Talleres de Cordoba Reserve", "o1": 2.7, "ox": 2.95, "o2": 2.35}
+{"snap": 1789503573, "eid": "sr:match:73070112", "ko": 1789741800, "comp": "Croatia: Prva NL", "home": "NK Sesvete", "away": "HNK Cibalia Vinkovci", "o1": 2.0, "ox": 3.2, "o2": 3.3}
+{"snap": 1789503573, "eid": "sr:match:74681586", "ko": 1789555500, "comp": "Simulated Reality League: UEFA Europa League SRL", "home": "FC Ararat-Armenia Srl", "away": "AC Sparta Prague SRL", "o1": 4.92, "ox": 4.04, "o2": 1.67}
+{"snap": 1789503573, "eid": "sr:match:74681594", "ko": 1789563600, "comp": "Simulated Reality League: UEFA Europa League SRL", "home": "Hapoel Beer Sheva FC SRL", "away": "Dinamo Zagreb SRL", "o1": 3.46, "ox": 3.66, "o2": 2.05}
+{"snap": 1789503573, "eid": "sr:match:74681590", "ko": 1789563600, "comp": "Simulated Reality League: UEFA Europa League SRL", "home": "Milan SRL", "away": "Benfica SRL", "o1": 2.13, "ox": 3.6, "o2": 3.3}
+{"snap": 1789503573, "eid": "sr:match:74681596", "ko": 1789563600, "comp": "Simulated Reality League: UEFA Europa League SRL", "home": "Olympiacos SRL", "away": "Jagiellonia SRL", "o1": 1.38, "ox": 5.03, "o2": 7.86}
+{"snap": 1789503573, "eid": "sr:match:74681600", "ko": 1789563600, "comp": "Simulated Reality League: UEFA Europa League SRL", "home": "Sturm Graz SRL", "away": "Rennes SRL", "o1": 3.45, "ox": 3.65, "o2": 2.06}
+{"snap": 1789503573, "eid": "sr:match:74681602", "ko": 1789563600, "comp": "Simulated Reality League: UEFA Europa League SRL", "home": "Sunderland AFC Srl", "away": "AZ Alkmaar SRL", "o1": 1.72, "ox": 4.02, "o2": 4.57}
+{"snap": 1789503573, "eid": "sr:match:70250938", "ko": 1789657200, "comp": "Russia: 2. Liga, Division B, Group 2", "home": "Dinamo Vologda", "away": "FC Spartak-2 Moscow", "o1": 1.8, "ox": 3.6, "o2": 3.75}
+{"snap": 1789503573, "eid": "sr:match:70250930", "ko": 1789729200, "comp": "Russia: 2. Liga, Division B, Group 2", "home": "Zvezda St Petersburg", "away": "FC Murom", "o1": 4.0, "ox": 3.4, "o2": 1.76}
+{"snap": 1789503573, "eid": "sr:match:70250934", "ko": 1789891200, "comp": "Russia: 2. Liga, Division B, Group 2", "home": "Yenisey 2 Krasnoyarsk", "away": "Dinamo St Petersburg", "o1": 4.0, "ox": 3.6, "o2": 1.71}
+{"snap": 1789503573, "eid": "sr:match:70250936", "ko": 1789912800, "comp": "Russia: 2. Liga, Division B, Group 2", "home": "Baltika-Bfu Kaliningrad", "away": "FC Cherepovets", "o1": 1.52, "ox": 4.2, "o2": 4.7}
+{"snap": 1789503573, "eid": "sr:match:70250932", "ko": 1790006400, "comp": "Russia: 2. Liga, Division B, Group 2", "home": "FC Chertanovo Moscow", "away": "Kosmos Dolgoprudny", "o1": 1.49, "ox": 4.0, "o2": 5.3}
+{"snap": 1789503573, "eid": "sr:match:70228498", "ko": 1789660800, "comp": "Russia: 2. Liga, Division B, Group 3", "home": "FK Ryazan", "away": "Saturn Ramenskoye", "o1": 1.83, "ox": 4.7, "o2": 2.95}
+{"snap": 1789503573, "eid": "sr:match:70228502", "ko": 1789815600, "comp": "Russia: 2. Liga, Division B, Group 3", "home": "FC Metallurg Lipetsk", "away": "FC Strogino Moscow", "o1": 1.81, "ox": 4.25, "o2": 3.1}
+{"snap": 1789503573, "eid": "sr:match:70228504", "ko": 1789819200, "comp": "Russia: 2. Liga, Division B, Group 3", "home": "Rodina-3 Moscow", "away": "Ska-Khabarovsk-2", "o1": 1.37, "ox": 5.5, "o2": 5.0}
+{"snap": 1789503573, "eid": "sr:match:70228500", "ko": 1789819200, "comp": "Russia: 2. Liga, Division B, Group 3", "home": "Zenit Penza", "away": "Arsenal-2 Tula", "o1": 1.62, "ox": 4.3, "o2": 3.9}
+{"snap": 1789503573, "eid": "sr:match:70228512", "ko": 1789830000, "comp": "Russia: 2. Liga, Division B, Group 3", "home": "Rotor II Volgograd", "away": "FC Volna Nizhny Novgorod Oblast", "o1": 7.9, "ox": 4.5, "o2": 1.31}
+{"snap": 1789503573, "eid": "sr:match:70228510", "ko": 1789981200, "comp": "Russia: 2. Liga, Division B, Group 3", "home": "FC Kvant Obninsk", "away": "FC Avangard Kursk", "o1": 5.2, "ox": 4.9, "o2": 1.4}
+{"snap": 1789503573, "eid": "sr:match:74457630", "ko": 1789509600, "comp": "Paraguay: Division Intermedia", "home": "Tacuary Asuncion", "away": "12 de Junio de Villa Hayes", "o1": 5.0, "ox": 3.4, "o2": 1.64}
+{"snap": 1789503573, "eid": "sr:match:72302622", "ko": 1789752600, "comp": "Hungary: NB I", "home": "Puskas Akademia FC Felcsut", "away": "Budapest Honved FC", "o1": 2.1, "ox": 3.5, "o2": 3.2}
+{"snap": 1789503573, "eid": "sr:match:72302612", "ko": 1789908300, "comp": "Hungary: NB I", "home": "MTK Budapest", "away": "WKW ETO FC Gyor", "o1": 2.25, "ox": 3.7, "o2": 2.7}
+{"snap": 1789503573, "eid": "sr:match:72302620", "ko": 1789916400, "comp": "Hungary: NB I", "home": "Ujpest FC Budapest", "away": "Zalaegerszeg TE", "o1": 1.88, "ox": 3.7, "o2": 3.6}
+{"snap": 1789503573, "eid": "sr:match:72302618", "ko": 1789925400, "comp": "Hungary: NB I", "home": "Nyiregyhaza Spartacus FC", "away": "Ferencvarosi Budapest", "o1": 4.2, "ox": 3.9, "o2": 1.71}
+{"snap": 1789503573, "eid": "sr:match:74455608", "ko": 1789606800, "comp": "El Salvador: Primera Division", "home": "Inter Formando UN Atleta", "away": "CD FAS Santa Ana", "o1": 3.0, "ox": 3.0, "o2": 2.3}
+{"snap": 1789503573, "eid": "sr:match:73075774", "ko": 1789556400, "comp": "Thailand: Thai League 2", "home": "Chainat Hornbill FC", "away": "Pattaya Dolphins United", "o1": 2.3, "ox": 3.33, "o2": 2.7}
+{"snap": 1789503573, "eid": "sr:match:73075772", "ko": 1789556400, "comp": "Thailand: Thai League 2", "home": "Uttaradit Saksiam FC", "away": "Nongbua Pitchaya FC", "o1": 2.3, "ox": 3.2, "o2": 2.9}
+{"snap": 1789503573, "eid": "sr:match:73075776", "ko": 1789558200, "comp": "Thailand: Thai League 2", "home": "Nakhon Pathom United FC", "away": "Kanchanaburi Power FC", "o1": 3.0, "ox": 3.4, "o2": 2.15}
+{"snap": 1789503573, "eid": "sr:match:73075778", "ko": 1789560000, "comp": "Thailand: Thai League 2", "home": "Mahasarakham United FC", "away": "Nakhon Ratchasima FC", "o1": 2.05, "ox": 3.33, "o2": 3.2}
+{"snap": 1789503573, "eid": "sr:match:73242708", "ko": 1789573500, "comp": "Lithuania: TOPLYGA", "home": "Vilnius FK Zalgiris", "away": "FK Kauno Zalgiris", "o1": 3.25, "ox": 3.5, "o2": 2.05}
+{"snap": 1789503573, "eid": "sr:match:71901892", "ko": 1789816500, "comp": "Lithuania: TOPLYGA", "home": "FK Banga Gargzdai", "away": "Dziugas", "o1": 1.81, "ox": 3.5, "o2": 4.0}
+{"snap": 1789503573, "eid": "sr:match:71901894", "ko": 1789835400, "comp": "Lithuania: TOPLYGA", "home": "FK Transinvest", "away": "Vilnius FK Zalgiris", "o1": 3.1, "ox": 3.6, "o2": 2.05}
+{"snap": 1789503573, "eid": "sr:match:71901896", "ko": 1789902900, "comp": "Lithuania: TOPLYGA", "home": "FC Hegelmann Kaunas", "away": "FK Suduva Marijampole", "o1": 4.5, "ox": 3.6, "o2": 1.7}
+{"snap": 1789503573, "eid": "sr:match:72824608", "ko": 1789920000, "comp": "Lithuania: TOPLYGA", "home": "FA Siauliai", "away": "FK Kauno Zalgiris", "o1": 6.75, "ox": 4.6, "o2": 1.38}
+{"snap": 1789503573, "eid": "sr:match:72224046", "ko": 1789741800, "comp": "Lithuania: 1 Lyga", "home": "Be1 Nfa", "away": "FK Transinvest B", "o1": 1.35, "ox": 4.8, "o2": 6.2}
+{"snap": 1789503573, "eid": "sr:match:72224056", "ko": 1789833600, "comp": "Lithuania: 1 Lyga", "home": "FK Kauno Zalgiris B", "away": "FK Garliava", "o1": 3.5, "ox": 3.5, "o2": 1.85}
+{"snap": 1789503573, "eid": "sr:match:72224058", "ko": 1789905600, "comp": "Lithuania: 1 Lyga", "home": "Vilnius FK Zalgiris B", "away": "FK Babrungas Plunge", "o1": 4.4, "ox": 3.6, "o2": 1.64}
+{"snap": 1789503573, "eid": "sr:match:74506410", "ko": 1789826400, "comp": "Iceland: Besta deild", "home": "KR Reykjavik", "away": "Vikingur Reykjavik", "o1": 2.75, "ox": 4.3, "o2": 2.1}
+{"snap": 1789503573, "eid": "sr:match:74506528", "ko": 1789846200, "comp": "Iceland: Besta deild", "home": "KA Akureyri", "away": "Thor Akureyri", "o1": 1.8, "ox": 4.1, "o2": 3.6}
+{"snap": 1789503573, "eid": "sr:match:74506532", "ko": 1789920000, "comp": "Iceland: Besta deild", "home": "FH Hafnarfjordur", "away": "Stjarnan Gardabae", "o1": 2.55, "ox": 3.75, "o2": 2.4}
+{"snap": 1789503573, "eid": "sr:match:74506412", "ko": 1789920000, "comp": "Iceland: Besta deild", "home": "IA Akranes", "away": "Breidablik", "o1": 2.2, "ox": 4.1, "o2": 2.7}
+{"snap": 1789503573, "eid": "sr:match:74506414", "ko": 1789920000, "comp": "Iceland: Besta deild", "home": "Keflavik IF", "away": "Fram Reykjavik", "o1": 3.1, "ox": 3.9, "o2": 2.05}
+{"snap": 1789503573, "eid": "sr:match:73487164", "ko": 1789506900, "comp": "Bolivia: Division Profesional", "home": "Academia del Balompie Boliviano", "away": "The Strongest", "o1": 4.4, "ox": 4.2, "o2": 1.63}
+{"snap": 1789503573, "eid": "sr:match:73487166", "ko": 1789585200, "comp": "Bolivia: Division Profesional", "home": "Guabira Montero", "away": "Club Aurora", "o1": 1.85, "ox": 3.8, "o2": 3.6}
+{"snap": 1789503573, "eid": "sr:match:73487168", "ko": 1789596000, "comp": "Bolivia: Division Profesional", "home": "CA Nacional Potosi", "away": "Always Ready", "o1": 2.9, "ox": 3.6, "o2": 2.15}
+{"snap": 1789503573, "eid": "sr:match:73487170", "ko": 1789605000, "comp": "Bolivia: Division Profesional", "home": "Blooming Santa Cruz", "away": "FC Universitario de Vinto", "o1": 1.48, "ox": 4.4, "o2": 5.3}
+{"snap": 1789503573, "eid": "sr:match:73487174", "ko": 1789691400, "comp": "Bolivia: Division Profesional", "home": "Club Bolivar", "away": "GV Club Deportivo San Jose de Oruro", "o1": 1.07, "ox": 11.0, "o2": 16.5}
+{"snap": 1789503573, "eid": "sr:match:72501144", "ko": 1789830000, "comp": "Hungary: NB II", "home": "Diosgyori VTK", "away": "Gyirmot FC Gyor", "o1": 2.1, "ox": 3.5, "o2": 3.0}
+{"snap": 1789503573, "eid": "sr:match:72501136", "ko": 1789830000, "comp": "Hungary: NB II", "home": "FC Ajka", "away": "Aqvital FC Csakvar", "o1": 1.9, "ox": 3.4, "o2": 3.7}
+{"snap": 1789503573, "eid": "sr:match:72501148", "ko": 1789830000, "comp": "Hungary: NB II", "home": "Mezokovesd Zsory SE", "away": "Kazincbarcikai SC", "o1": 2.4, "ox": 3.25, "o2": 2.75}
+{"snap": 1789503573, "eid": "sr:match:72501150", "ko": 1789837200, "comp": "Hungary: NB II", "home": "Kecskemeti TE", "away": "Szeged-Csanad Grosics Akademia", "o1": 1.78, "ox": 3.6, "o2": 4.0}
+{"snap": 1789503573, "eid": "sr:match:72501146", "ko": 1789912800, "comp": "Hungary: NB II", "home": "Karcag SE", "away": "Kozarmisleny SE", "o1": 1.83, "ox": 3.4, "o2": 4.0}
+{"snap": 1789503573, "eid": "sr:match:72501140", "ko": 1789912800, "comp": "Hungary: NB II", "home": "Szentlorinc SE", "away": "Bvsc-Zuglo", "o1": 2.35, "ox": 3.1, "o2": 2.9}
+{"snap": 1789503573, "eid": "sr:match:72501138", "ko": 1789923600, "comp": "Hungary: NB II", "home": "Soroksar SC", "away": "Tiszakecskei LC", "o1": 2.1, "ox": 3.5, "o2": 3.0}
+{"snap": 1789503573, "eid": "sr:match:74667946", "ko": 1789833600, "comp": "Iceland: 1. deild", "home": "Throttur Reykjavik", "away": "Fylkir Reykjavik", "o1": 2.15, "ox": 3.6, "o2": 2.9}
+{"snap": 1789503573, "eid": "sr:match:74505128", "ko": 1789511400, "comp": "Brazil: Copa Paulista", "home": "GD Prudente SP", "away": "CA Linense SP", "o1": 2.3, "ox": 3.1, "o2": 3.1}
+{"snap": 1789503573, "eid": "sr:match:74235576", "ko": 1789581600, "comp": "Brazil: Gaucho, Serie A2", "home": "APAFUT Caxias Do Sul RS", "away": "EC Pelotas RS", "o1": 2.65, "ox": 3.1, "o2": 2.65}
+{"snap": 1789503573, "eid": "sr:match:74132168", "ko": 1789581600, "comp": "Brazil: Gaucho, Serie A2", "home": "CE Gramadense RS", "away": "SERC Brasil de Farroupilha RS", "o1": 2.3, "ox": 2.95, "o2": 3.33}
+{"snap": 1789503573, "eid": "sr:match:74245348", "ko": 1789596000, "comp": "Brazil: Gaucho, Serie A2", "home": "Gremio Esportivo Brasil", "away": "FC Santa Cruz RS", "o1": 1.89, "ox": 3.1, "o2": 4.1}
+{"snap": 1789503573, "eid": "sr:match:74245340", "ko": 1789596000, "comp": "Brazil: Gaucho, Serie A2", "home": "Passo Fundo", "away": "CE Bento Goncalves RS", "o1": 1.99, "ox": 3.0, "o2": 3.9}
+{"snap": 1789503573, "eid": "sr:match:74235254", "ko": 1789597800, "comp": "Brazil: Gaucho, Serie A2", "home": "EC Guarani RS", "away": "CE Aimore RS", "o1": 3.1, "ox": 3.0, "o2": 2.35}
+{"snap": 1789503573, "eid": "sr:match:74506140", "ko": 1789664400, "comp": "Algeria: Ligue 1", "home": "US Biskra", "away": "CR Belouizdad", "o1": 3.4, "ox": 3.0, "o2": 2.15}
+{"snap": 1789503573, "eid": "sr:match:74506142", "ko": 1789671600, "comp": "Algeria: Ligue 1", "home": "CR Temouchent", "away": "JS Kabylie", "o1": 2.9, "ox": 2.9, "o2": 2.5}
+{"snap": 1789503573, "eid": "sr:match:73961612", "ko": 1789563600, "comp": "Uganda: Premier League", "home": "Lugazi Municipal FC", "away": "Uganda Police FC", "o1": 2.95, "ox": 2.95, "o2": 2.35}
+{"snap": 1789503573, "eid": "sr:match:73961618", "ko": 1789653600, "comp": "Uganda: Premier League", "home": "Updf FC", "away": "Maroons FC", "o1": 2.15, "ox": 3.1, "o2": 3.3}
+{"snap": 1789503573, "eid": "sr:match:73961620", "ko": 1789660800, "comp": "Uganda: Premier League", "home": "Express FC", "away": "Kitara FC", "o1": 4.4, "ox": 3.1, "o2": 1.82}
+{"snap": 1789503573, "eid": "sr:match:66854916", "ko": 1789757100, "comp": "Ireland: First Division", "home": "Athlone Town AFC", "away": "Kerry FC", "o1": 2.15, "ox": 3.25, "o2": 3.1}
+{"snap": 1789503573, "eid": "sr:match:66854920", "ko": 1789757100, "comp": "Ireland: First Division", "home": "Cork City FC", "away": "University College Dublin", "o1": 1.5, "ox": 4.25, "o2": 5.3}
+{"snap": 1789503573, "eid": "sr:match:66854924", "ko": 1789757100, "comp": "Ireland: First Division", "home": "Wexford FC", "away": "Cobh Ramblers", "o1": 2.2, "ox": 3.25, "o2": 3.1}
+{"snap": 1789503573, "eid": "sr:match:73293900", "ko": 1789576200, "comp": "Italy: Serie C, Group B", "home": "AS Ostia Mare Lido Calcio", "away": "Ravenna FC 1913", "o1": 3.8, "ox": 3.3, "o2": 1.95}
+{"snap": 1789503573, "eid": "sr:match:73293906", "ko": 1789576200, "comp": "Italy: Serie C, Group B", "home": "ASD Pineto Calcio", "away": "Forli FC", "o1": 2.45, "ox": 3.0, "o2": 2.95}
+{"snap": 1789503573, "eid": "sr:match:73293896", "ko": 1789576200, "comp": "Italy: Serie C, Group B", "home": "Latina Calcio", "away": "Guidonia Montecelio 1937 FC", "o1": 2.5, "ox": 2.95, "o2": 2.95}
+{"snap": 1789503573, "eid": "sr:match:73293908", "ko": 1789576200, "comp": "Italy: Serie C, Group B", "home": "Sambenedettese", "away": "Atalanta BC U23", "o1": 2.6, "ox": 3.3, "o2": 2.55}
+{"snap": 1789503573, "eid": "sr:match:73293910", "ko": 1789576200, "comp": "Italy: Serie C, Group B", "home": "SEF Torres Sassari", "away": "US Pianese", "o1": 2.0, "ox": 3.25, "o2": 3.6}
+{"snap": 1789503573, "eid": "sr:match:73293894", "ko": 1789576200, "comp": "Italy: Serie C, Group B", "home": "US Grosseto", "away": "Campobasso FC", "o1": 2.65, "ox": 3.2, "o2": 2.6}
+{"snap": 1789503573, "eid": "sr:match:73293904", "ko": 1789585200, "comp": "Italy: Serie C, Group B", "home": "Delfino Pescara", "away": "AS Gubbio", "o1": 1.59, "ox": 3.9, "o2": 5.2}
+{"snap": 1789503573, "eid": "sr:match:73293898", "ko": 1789585200, "comp": "Italy: Serie C, Group B", "home": "US Livorno 1915", "away": "Vado FC", "o1": 1.79, "ox": 3.4, "o2": 4.5}
+{"snap": 1789503573, "eid": "sr:match:73293912", "ko": 1789585200, "comp": "Italy: Serie C, Group B", "home": "Vis Pesaro 1898", "away": "Reggiana 1919", "o1": 3.9, "ox": 3.6, "o2": 1.84}
+{"snap": 1789503573, "eid": "sr:match:73294680", "ko": 1789821000, "comp": "Italy: Serie C, Group C", "home": "ASD Sorrento 1945", "away": "SSC Bari", "o1": 2.8, "ox": 3.1, "o2": 2.45}
+{"snap": 1789503573, "eid": "sr:match:73294678", "ko": 1789831800, "comp": "Italy: Serie C, Group C", "home": "AC Savoia 1908", "away": "S.S.D. Casarano Calcio", "o1": 3.0, "ox": 3.33, "o2": 2.15}
+{"snap": 1789503573, "eid": "sr:match:73294664", "ko": 1789831800, "comp": "Italy: Serie C, Group C", "home": "Audace Cerignola", "away": "Casertana FC", "o1": 2.25, "ox": 3.2, "o2": 2.95}
+{"snap": 1789503573, "eid": "sr:match:73294662", "ko": 1789842600, "comp": "Italy: Serie C, Group C", "home": "Team Altamura", "away": "AZ Picerno", "o1": 3.0, "ox": 3.1, "o2": 2.3}
+{"snap": 1789503573, "eid": "sr:match:73294672", "ko": 1789907400, "comp": "Italy: Serie C, Group C", "home": "SS Monopoli", "away": "Crotone", "o1": 2.3, "ox": 3.1, "o2": 3.0}
+{"snap": 1789503573, "eid": "sr:match:74557110", "ko": 1789562700, "comp": "Mozambique: Mocambola", "home": "Ferroviario de Lichinga", "away": "Ferroviario de Nacala", "o1": 1.66, "ox": 3.1, "o2": 4.9}
+{"snap": 1789503573, "eid": "sr:match:73806016", "ko": 1789563600, "comp": "Rwanda: Premier League", "home": "AS Kigali", "away": "AL Hilal (SDN)", "o1": 7.2, "ox": 3.9, "o2": 1.36}
+{"snap": 1789503573, "eid": "sr:match:73806018", "ko": 1789576200, "comp": "Rwanda: Premier League", "home": "Apr FC", "away": "Marines FC Gisenyi", "o1": 1.44, "ox": 3.7, "o2": 6.1}
+{"snap": 1789503573, "eid": "sr:match:73180542", "ko": 1789603200, "comp": "International Clubs: Campeones Cup", "home": "Inter Miami CF", "away": "CF Cruz Azul", "o1": 2.2, "ox": 3.6, "o2": 2.85}
+{"snap": 1789503573, "eid": "sr:match:72674286", "ko": 1789552800, "comp": "Germany Amateur: Regionalliga North", "home": "Hamburger SV II", "away": "FC St. Pauli II", "o1": 2.2, "ox": 3.5, "o2": 2.8}
+{"snap": 1789503573, "eid": "sr:match:72674278", "ko": 1789574400, "comp": "Germany Amateur: Regionalliga North", "home": "FSV Schoningen 2011", "away": "SC Weiche Flensburg 08", "o1": 2.45, "ox": 3.5, "o2": 2.45}
+{"snap": 1789503573, "eid": "sr:match:72674284", "ko": 1789576200, "comp": "Germany Amateur: Regionalliga North", "home": "Eintracht Norderstedt", "away": "HSC Hannover", "o1": 1.97, "ox": 3.75, "o2": 3.1}
+{"snap": 1789503573, "eid": "sr:match:72697658", "ko": 1789578000, "comp": "Germany Amateur: Regionalliga Northeast", "home": "Chemnitzer FC", "away": "SV Babelsberg", "o1": 1.59, "ox": 4.3, "o2": 4.2}
+{"snap": 1789503574, "eid": "sr:match:72548700", "ko": 1789752600, "comp": "Austria Amateur: Regionalliga Ost", "home": "SV Oberwart", "away": "SC/ESV Parndorf 1919", "o1": 2.2, "ox": 3.4, "o2": 2.6}
+{"snap": 1789503574, "eid": "sr:match:72963778", "ko": 1789581600, "comp": "Luxembourg: Division Nationale", "home": "F91 Dudelange", "away": "Un Kaerjeng 97", "o1": 2.2, "ox": 3.6, "o2": 2.85}
+{"snap": 1789503574, "eid": "sr:match:72963774", "ko": 1789581600, "comp": "Luxembourg: Division Nationale", "home": "FC Progres Niederkorn", "away": "RFC Union Luxembourg", "o1": 2.35, "ox": 3.33, "o2": 2.85}
+{"snap": 1789503574, "eid": "sr:match:72963770", "ko": 1789581600, "comp": "Luxembourg: Division Nationale", "home": "FC Una Strassen", "away": "US Rumelange", "o1": 1.11, "ox": 8.5, "o2": 15.5}
+{"snap": 1789503574, "eid": "sr:match:72963780", "ko": 1789581600, "comp": "Luxembourg: Division Nationale", "home": "FC Victoria Rosport", "away": "FC Etzella Ettelbruck", "o1": 2.1, "ox": 3.6, "o2": 3.0}
+{"snap": 1789503574, "eid": "sr:match:72963768", "ko": 1789581600, "comp": "Luxembourg: Division Nationale", "home": "Residence Walferdange", "away": "US Mondorf-Les-Bains", "o1": 3.9, "ox": 3.6, "o2": 1.83}
+{"snap": 1789503574, "eid": "sr:match:74531518", "ko": 1789563600, "comp": "Malaysia: FA Cup", "home": "Terengganu FC", "away": "Brunei DPMM FC", "o1": 1.5, "ox": 4.25, "o2": 5.0}
+{"snap": 1789503574, "eid": "sr:match:74078076", "ko": 1789745400, "comp": "Finland: Kakkonen", "home": "Grankulla IFK", "away": "Musan Salama", "o1": 1.4, "ox": 5.1, "o2": 5.6}
+{"snap": 1789503574, "eid": "sr:match:74078150", "ko": 1789815600, "comp": "Finland: Kakkonen", "home": "JS Hercules", "away": "SJK Akatemia/2", "o1": 2.4, "ox": 4.25, "o2": 2.3}
+{"snap": 1789503574, "eid": "sr:match:74078006", "ko": 1789815600, "comp": "Finland: Kakkonen", "home": "Puistolan Urheilijat", "away": "Myllykosken Pallo -47", "o1": 1.71, "ox": 4.25, "o2": 3.7}
+{"snap": 1789503574, "eid": "sr:match:74078004", "ko": 1789815600, "comp": "Finland: Kakkonen", "home": "Union Plaani", "away": "Lahden Reipas", "o1": 3.5, "ox": 4.3, "o2": 1.74}
+{"snap": 1789503574, "eid": "sr:match:74078078", "ko": 1789822800, "comp": "Finland: Kakkonen", "home": "Esbo Bollklubb", "away": "Nurmijarven Jalkapalloseura", "o1": 1.4, "ox": 4.8, "o2": 5.8}
+{"snap": 1789503574, "eid": "sr:match:74077600", "ko": 1789822800, "comp": "Finland: Kakkonen", "home": "FC Honka", "away": "Abo IFK Turku", "o1": 1.49, "ox": 4.5, "o2": 5.2}
+{"snap": 1789503574, "eid": "sr:match:74077802", "ko": 1789822800, "comp": "Finland: Kakkonen", "home": "Huima/Urho", "away": "GBK Kokkola", "o1": 1.63, "ox": 4.7, "o2": 3.8}
+{"snap": 1789503574, "eid": "sr:match:74077804", "ko": 1789822800, "comp": "Finland: Kakkonen", "home": "Jakobstads Bollklubb", "away": "FF Jaro Akademia", "o1": 1.27, "ox": 6.1, "o2": 7.3}
+{"snap": 1789503574, "eid": "sr:match:69343120", "ko": 1789653600, "comp": "Kazakhstan: Premier League", "home": "Astana", "away": "FC Kairat Almaty", "o1": 2.8, "ox": 3.3, "o2": 2.3}
+{"snap": 1789503574, "eid": "sr:match:69343122", "ko": 1789657200, "comp": "Kazakhstan: Premier League", "home": "FK Atyrau", "away": "FC Ordabasy", "o1": 4.9, "ox": 3.75, "o2": 1.61}
+{"snap": 1789503574, "eid": "sr:match:69343126", "ko": 1789729200, "comp": "Kazakhstan: Premier League", "home": "FC Okzhetpes", "away": "FC Zhenis", "o1": 2.1, "ox": 3.4, "o2": 3.2}
+{"snap": 1789503574, "eid": "sr:match:69343118", "ko": 1789732800, "comp": "Kazakhstan: Premier League", "home": "FC Altai Oskemen", "away": "FC Irtysh Pavlodar", "o1": 2.6, "ox": 3.25, "o2": 2.5}
+{"snap": 1789503574, "eid": "sr:match:69343124", "ko": 1789740000, "comp": "Kazakhstan: Premier League", "home": "FC Kyzylzhar SK", "away": "Kaisar Kyzylorda", "o1": 2.15, "ox": 3.2, "o2": 3.2}
+{"snap": 1789503574, "eid": "sr:match:69343116", "ko": 1789743600, "comp": "Kazakhstan: Premier League", "home": "FC Aktobe", "away": "Ulytau FC", "o1": 1.75, "ox": 3.5, "o2": 4.3}
+{"snap": 1789503574, "eid": "sr:match:67850118", "ko": 1789752600, "comp": "Faroe Islands: Premier League", "home": "B36 Torshavn", "away": "NSI Runavik", "o1": 3.25, "ox": 3.6, "o2": 1.98}
+{"snap": 1789503574, "eid": "sr:match:67850120", "ko": 1789752600, "comp": "Faroe Islands: Premier League", "home": "KI Klaksvik", "away": "Skala IF", "o1": 1.2, "ox": 6.0, "o2": 10.5}
+{"snap": 1789503574, "eid": "sr:match:72498252", "ko": 1789756200, "comp": "Malta: Premier League", "home": "Marsaxlokk FC", "away": "Hamrun Spartans FC", "o1": 3.9, "ox": 3.33, "o2": 1.8}
+{"snap": 1789503574, "eid": "sr:match:73736740", "ko": 1789569000, "comp": "Iran: Azadegan League", "home": "Mes Rafsanjan FC", "away": "Havadar SC", "o1": 2.05, "ox": 3.0, "o2": 3.6}
+{"snap": 1789503574, "eid": "sr:match:73730280", "ko": 1789561800, "comp": "Azerbaijan: First Division", "home": "FK Karvan Yevlakh", "away": "Zaqatala FK", "o1": 1.46, "ox": 3.9, "o2": 5.3}
+{"snap": 1789503574, "eid": "sr:match:73730278", "ko": 1789648200, "comp": "Azerbaijan: First Division", "home": "Baku SC", "away": "Sabail FK", "o1": 3.25, "ox": 3.3, "o2": 1.94}
+{"snap": 1789503574, "eid": "sr:match:72814236", "ko": 1789749000, "comp": "Albania: Kategoria Superiore", "home": "Vllaznia Shkoder", "away": "KF Teuta", "o1": 2.45, "ox": 3.0, "o2": 2.85}
+{"snap": 1789503574, "eid": "sr:match:72466532", "ko": 1789912800, "comp": "Bulgaria: Vtora Liga", "home": "Marek Dupnica", "away": "PFC Rilski Sportist Samokov", "o1": 2.4, "ox": 2.85, "o2": 2.95}
+{"snap": 1789503574, "eid": "sr:match:72466528", "ko": 1789912800, "comp": "Bulgaria: Vtora Liga", "home": "OFC Nesebar", "away": "PFK Beroe Stara Zagora", "o1": 2.2, "ox": 3.1, "o2": 3.1}
+{"snap": 1789503574, "eid": "sr:match:72466530", "ko": 1789920000, "comp": "Bulgaria: Vtora Liga", "home": "FC Yantra Gabrovo", "away": "Gorna Oryahovitsa", "o1": 1.42, "ox": 4.0, "o2": 6.5}
+{"snap": 1789503574, "eid": "sr:match:72466520", "ko": 1789925400, "comp": "Bulgaria: Vtora Liga", "home": "SFC Etar Veliko Tarnovo", "away": "PFC Chernomorets Burgas", "o1": 1.65, "ox": 3.75, "o2": 4.2}
+{"snap": 1789503574, "eid": "sr:match:72466524", "ko": 1790006400, "comp": "Bulgaria: Vtora Liga", "home": "PFC Dobrudzha Dobrich", "away": "PFC CSKA SOFIA II", "o1": 3.7, "ox": 3.5, "o2": 1.82}
+{"snap": 1789503574, "eid": "sr:match:73753090", "ko": 1789567200, "comp": "Albania: Kategoria e Pare", "home": "Besa Kavaje", "away": "KF Oriku", "o1": 1.3, "ox": 4.3, "o2": 9.75}
+{"snap": 1789503574, "eid": "sr:match:73753084", "ko": 1789567200, "comp": "Albania: Kategoria e Pare", "home": "FK Kukesi", "away": "KS Pogradeci", "o1": 4.1, "ox": 3.5, "o2": 1.75}
+{"snap": 1789503574, "eid": "sr:match:73753086", "ko": 1789567200, "comp": "Albania: Kategoria e Pare", "home": "Korabi Peshkopi", "away": "KF Iliria Fushe-Kruje", "o1": 2.2, "ox": 3.1, "o2": 3.1}
+{"snap": 1789503574, "eid": "sr:match:73753092", "ko": 1789567200, "comp": "Albania: Kategoria e Pare", "home": "KS Burreli", "away": "Sopoti Librazhd", "o1": 1.59, "ox": 3.7, "o2": 5.0}
+{"snap": 1789503574, "eid": "sr:match:74742052", "ko": 1789545600, "comp": "Mongolia: Premier League", "home": "Khovd Western", "away": "Ulaangom City", "o1": 1.39, "ox": 5.1, "o2": 5.4}
+{"snap": 1789503574, "eid": "sr:match:111111114432596", "ko": 1789536600, "comp": "India: Bangalore Super Division", "home": "Bangalore Dream United", "away": "Roots FC", "o1": 3.0, "ox": 3.6, "o2": 2.05}
+{"snap": 1789503574, "eid": "sr:match:74606112", "ko": 1789583400, "comp": "Wales: Cymru Championship South", "home": "Newport City FC", "away": "Trethomas Bluebirds", "o1": 2.05, "ox": 3.6, "o2": 3.1}
+{"snap": 1789503574, "eid": "sr:match:74648488", "ko": 1789549200, "comp": "Bhutan: Premier League", "home": "Tsirang FC", "away": "Thimphu FC", "o1": 3.0, "ox": 3.9, "o2": 1.97}
+{"snap": 1789503574, "eid": "sr:match:73491908", "ko": 1789824600, "comp": "Bosnia & Herzegovina: Prva Liga, Fed BiH", "home": "FK Sloboda Tuzla", "away": "FK Radnik Hadzici", "o1": 1.59, "ox": 3.5, "o2": 5.1}
+{"snap": 1789503574, "eid": "sr:match:72575814", "ko": 1789549200, "comp": "Czechia: U19 1. Liga", "home": "FK Teplice", "away": "Slavia Prague", "o1": 1.45, "ox": 4.9, "o2": 4.9}
+{"snap": 1789503574, "eid": "sr:match:66918314", "ko": 1789750800, "comp": "Sweden: Damallsvenskan", "home": "Malmo FF", "away": "Djurgardens IF DFF", "o1": 1.41, "ox": 4.2, "o2": 5.5}
+{"snap": 1789503574, "eid": "sr:match:66918304", "ko": 1789815600, "comp": "Sweden: Damallsvenskan", "home": "AIK DFF", "away": "Hammarby IF", "o1": 5.5, "ox": 4.0, "o2": 1.43}
+{"snap": 1789503574, "eid": "sr:match:66918316", "ko": 1789815600, "comp": "Sweden: Damallsvenskan", "home": "Vittsjo GIK", "away": "Vaxjo DFF", "o1": 1.71, "ox": 3.6, "o2": 3.75}
+{"snap": 1789503574, "eid": "sr:match:66918312", "ko": 1789905600, "comp": "Sweden: Damallsvenskan", "home": "Kristianstads DFF", "away": "Piteaa IF DFF", "o1": 1.71, "ox": 3.6, "o2": 3.8}
+{"snap": 1789503574, "eid": "sr:match:66918308", "ko": 1789909200, "comp": "Sweden: Damallsvenskan", "home": "IFK Norrkoping DFK", "away": "FC Rosengaard Malmo", "o1": 2.8, "ox": 3.2, "o2": 2.2}
+{"snap": 1789503574, "eid": "sr:match:74507568", "ko": 1789518600, "comp": "Brazil: Brasileiro A1, Women", "home": "EC Bahia BA", "away": "SC Corinthians SP", "o1": 4.5, "ox": 3.7, "o2": 1.57}
+{"snap": 1789503574, "eid": "sr:match:67912308", "ko": 1789783200, "comp": "USA: National Womens Soccer League", "home": "San Diego Wave FC", "away": "Kansas City Current", "o1": 2.1, "ox": 3.4, "o2": 2.9}
+{"snap": 1789503574, "eid": "sr:match:67912314", "ko": 1789848000, "comp": "USA: National Womens Soccer League", "home": "Orlando Pride", "away": "Portland Thorns FC", "o1": 2.05, "ox": 3.5, "o2": 2.95}
+{"snap": 1789503574, "eid": "sr:match:67912316", "ko": 1789857000, "comp": "USA: National Womens Soccer League", "home": "North Carolina Courage", "away": "Gotham FC", "o1": 2.7, "ox": 3.4, "o2": 2.25}
+{"snap": 1789503574, "eid": "sr:match:73180630", "ko": 1789556400, "comp": "Hungary: NB I, Women", "home": "Pecsi MFC", "away": "Astra HFC Budapest", "o1": 1.46, "ox": 4.2, "o2": 4.8}
+{"snap": 1789503574, "eid": "sr:match:73346012", "ko": 1789754400, "comp": "England Amateur: Super League Women", "home": "Manchester City WFC", "away": "Liverpool LFC", "o1": 1.29, "ox": 5.1, "o2": 7.25}
+{"snap": 1789503574, "eid": "sr:match:73346014", "ko": 1789817400, "comp": "England Amateur: Super League Women", "home": "Charlton Athletic", "away": "London City Lionesses", "o1": 8.0, "ox": 5.0, "o2": 1.27}
+{"snap": 1789503574, "eid": "sr:match:73346016", "ko": 1789818300, "comp": "England Amateur: Super League Women", "home": "Chelsea FC W", "away": "Birmingham City WFC", "o1": 1.05, "ox": 9.1, "o2": 20.0}
+{"snap": 1789503574, "eid": "sr:match:73346018", "ko": 1789835400, "comp": "England Amateur: Super League Women", "home": "Arsenal WFC", "away": "Manchester United WFC", "o1": 1.41, "ox": 4.4, "o2": 5.75}
+{"snap": 1789503574, "eid": "sr:match:73346024", "ko": 1789909200, "comp": "England Amateur: Super League Women", "home": "Brighton and Hove Albion WFC", "away": "Aston Villa WFC", "o1": 1.72, "ox": 3.75, "o2": 3.8}
+{"snap": 1789503574, "eid": "sr:match:73842246", "ko": 1789621200, "comp": "International: Asian Games, Women", "home": "Uzbekistan", "away": "China", "o1": 30.0, "ox": 7.9, "o2": 1.06}
+{"snap": 1789503574, "eid": "sr:match:73842208", "ko": 1789628400, "comp": "International: Asian Games, Women", "home": "Thailand", "away": "Chinese Taipei", "o1": 3.5, "ox": 3.2, "o2": 2.0}
+{"snap": 1789503574, "eid": "sr:match:73842248", "ko": 1789639200, "comp": "International: Asian Games, Women", "home": "Hong Kong", "away": "Philippines", "o1": 17.0, "ox": 7.5, "o2": 1.1}
+{"snap": 1789503574, "eid": "sr:match:73842210", "ko": 1789641000, "comp": "International: Asian Games, Women", "home": "Vietnam", "away": "Japan", "o1": 41.0, "ox": 11.0, "o2": 1.02}
+{"snap": 1789503574, "eid": "sr:match:74731784", "ko": 1789599600, "comp": "Colombia: Liga Femenina", "home": "Atletico Nacional SA", "away": "Asociacion Deportivo Cali", "o1": 2.55, "ox": 2.9, "o2": 2.7}
+{"snap": 1789503574, "eid": "sr:match:74161594", "ko": 1789605000, "comp": "International Clubs: CONCACAF Central American Cup", "home": "CS Cartagines", "away": "Deportivo Saprissa San Jose", "o1": 2.25, "ox": 2.7, "o2": 3.6}
+{"snap": 1789503574, "eid": "sr:match:74508032", "ko": 1789581600, "comp": "Uruguay: Copa Uruguay", "home": "Albion FC", "away": "CA River Plate (URU)", "o1": 2.3, "ox": 3.1, "o2": 3.2}
+{"snap": 1789503574, "eid": "sr:match:74508030", "ko": 1789581600, "comp": "Uruguay: Copa Uruguay", "home": "CA Progreso", "away": "Club Nacional de Football", "o1": 5.4, "ox": 3.7, "o2": 1.63}
+{"snap": 1789503574, "eid": "sr:match:111111114441376", "ko": 1789583400, "comp": "Uruguay: Copa Uruguay", "home": "CA Rentistas", "away": "Plaza Colonia", "o1": 2.7, "ox": 3.1, "o2": 2.65}
+{"snap": 1789503574, "eid": "sr:match:74508006", "ko": 1789669800, "comp": "Uruguay: Copa Uruguay", "home": "CA Juventud de Las Piedras", "away": "Racing Club Montevideo", "o1": 2.45, "ox": 3.2, "o2": 2.85}
+{"snap": 1789503574, "eid": "sr:match:111111114384860", "ko": 1789565400, "comp": "Egypt: Egypt Second Division B", "home": "Al Olympi", "away": "Alexandria Sporting Club", "o1": 1.79, "ox": 3.25, "o2": 4.3}
+{"snap": 1789503574, "eid": "sr:match:111111114435775", "ko": 1789565400, "comp": "Egypt: Egypt Second Division B", "home": "Diamond FC", "away": "Raa SC", "o1": 2.85, "ox": 3.0, "o2": 2.4}
+{"snap": 1789503574, "eid": "sr:match:111111114435774", "ko": 1789565400, "comp": "Egypt: Egypt Second Division B", "home": "Egypt Insurance", "away": "Banha", "o1": 2.6, "ox": 3.0, "o2": 2.6}
+{"snap": 1789503574, "eid": "sr:match:111111114435772", "ko": 1789565400, "comp": "Egypt: Egypt Second Division B", "home": "G FC", "away": "Mustaqbal Sport", "o1": 3.1, "ox": 3.1, "o2": 2.2}
+{"snap": 1789503574, "eid": "sr:match:111111114435771", "ko": 1789565400, "comp": "Egypt: Egypt Second Division B", "home": "Gezira SC", "away": "El-Obour SC", "o1": 2.4, "ox": 3.1, "o2": 2.8}
+{"snap": 1789503574, "eid": "sr:match:111111114435773", "ko": 1789565400, "comp": "Egypt: Egypt Second Division B", "home": "Gomhoryet Shebin", "away": "Nogoom FC", "o1": 2.45, "ox": 2.95, "o2": 2.85}
+{"snap": 1789503574, "eid": "sr:match:111111114435769", "ko": 1789565400, "comp": "Egypt: Egypt Second Division B", "home": "Levels FC", "away": "Cascada SC", "o1": 1.51, "ox": 3.7, "o2": 5.9}
+{"snap": 1789503574, "eid": "sr:match:111111114431145", "ko": 1789565400, "comp": "Egypt: Egypt Second Division B", "home": "Nogoom Masr", "away": "El Minya", "o1": 1.73, "ox": 3.3, "o2": 4.6}
+{"snap": 1789503574, "eid": "sr:match:67473444", "ko": 1789750800, "comp": "Sweden Amateur: Elitettan, Women", "home": "Linkopings FC", "away": "Husqvarna FF", "o1": 1.35, "ox": 4.2, "o2": 6.6}
+{"snap": 1789503574, "eid": "sr:match:67473446", "ko": 1789819200, "comp": "Sweden Amateur: Elitettan, Women", "home": "Trelleborgs FF", "away": "BK Hacken Academy", "o1": 1.44, "ox": 4.1, "o2": 5.3}
+{"snap": 1789503574, "eid": "sr:match:111111114458702", "ko": 1789578000, "comp": "Finland: Kolmonen", "home": "J\u00e4PS/47", "away": "TiPS U21", "o1": 1.2, "ox": 6.25, "o2": 9.25}
+{"snap": 1789503574, "eid": "sr:match:74661810", "ko": 1789504200, "comp": "El Salvador: Liga de Ascenso", "home": "CD Olimpico Litoral", "away": "AD Sesa", "o1": 1.53, "ox": 4.3, "o2": 4.7}
+{"snap": 1789503574, "eid": "sr:match:74463108", "ko": 1789551000, "comp": "India: Mizoram Premier League", "home": "Aizawl FC", "away": "Mizoram Police FC", "o1": 1.13, "ox": 7.2, "o2": 13.0}
+{"snap": 1789503574, "eid": "sr:match:74463110", "ko": 1789565400, "comp": "India: Mizoram Premier League", "home": "Saikhamakawn FC", "away": "Chanmari FC", "o1": 7.25, "ox": 5.0, "o2": 1.31}
+{"snap": 1789503574, "eid": "sr:match:74702154", "ko": 1790452800, "comp": "Argentina: Supercopa Internacional", "home": "Estudiantes de La Plata", "away": "CA Rosario Central", "o1": 2.6, "ox": 2.75, "o2": 2.8}
+{"snap": 1789503574, "eid": "sr:match:72884160", "ko": 1789554600, "comp": "Spain: U19 Division de Honor Juvenil", "home": "Cordoba CF", "away": "Sevilla FC", "o1": 5.25, "ox": 4.2, "o2": 1.49}
+{"snap": 1789503574, "eid": "sr:match:72884164", "ko": 1789556400, "comp": "Spain: U19 Division de Honor Juvenil", "home": "Cadiz CF", "away": "Atletico Melilla CF U19", "o1": 1.49, "ox": 4.1, "o2": 5.3}
+{"snap": 1789503574, "eid": "sr:match:72884152", "ko": 1789574400, "comp": "Spain: U19 Division de Honor Juvenil", "home": "Arenas Armilla CD U19", "away": "Calavera CF", "o1": 3.6, "ox": 4.0, "o2": 1.74}
+{"snap": 1789503574, "eid": "sr:match:72884150", "ko": 1789574400, "comp": "Spain: U19 Division de Honor Juvenil", "home": "Atl\u00e9tico Zabal U19", "away": "FC Alhendin Balompie", "o1": 1.99, "ox": 3.6, "o2": 3.1}
+{"snap": 1789503574, "eid": "sr:match:72884162", "ko": 1789574400, "comp": "Spain: U19 Division de Honor Juvenil", "home": "CD Mosquito U19", "away": "UD Almeria", "o1": 3.3, "ox": 3.6, "o2": 1.94}
+{"snap": 1789503574, "eid": "sr:match:72884158", "ko": 1789574400, "comp": "Spain: U19 Division de Honor Juvenil", "home": "Malaga CF", "away": "Marbella FC", "o1": 1.28, "ox": 5.2, "o2": 8.0}
+{"snap": 1789503574, "eid": "sr:match:72884156", "ko": 1789581600, "comp": "Spain: U19 Division de Honor Juvenil", "home": "Real Betis Balompie", "away": "Granada CF", "o1": 1.27, "ox": 5.2, "o2": 8.4}
+{"snap": 1789503574, "eid": "sr:match:74610506", "ko": 1789581600, "comp": "Brazil: U20 Carioca, Serie A", "home": "Fluminense FC RJ", "away": "Botafogo FR RJ", "o1": 2.7, "ox": 2.65, "o2": 2.8}
+{"snap": 1789503574, "eid": "sr:match:73529826", "ko": 1789581600, "comp": "Brazil: U20 Pernambucano", "home": "Atletico PE", "away": "Ibis PE", "o1": 2.3, "ox": 3.5, "o2": 2.65}
+{"snap": 1789503574, "eid": "sr:match:73735042", "ko": 1789583400, "comp": "International Youth: U21 Premier League International Cup", "home": "Brighton & Hove Albion U21", "away": "Paris Saint Germain", "o1": 2.8, "ox": 3.75, "o2": 2.2}
+{"snap": 1789503574, "eid": "sr:match:73529826", "ko": 1789581600, "comp": "Brazil: U20 Pernambucano", "home": "Atletico PE", "away": "Ibis PE", "o1": 2.3, "ox": 3.5, "o2": 2.65}
+{"snap": 1789503574, "eid": "sr:match:73735042", "ko": 1789583400, "comp": "International Youth: U21 Premier League International Cup", "home": "Brighton & Hove Albion U21", "away": "Paris Saint Germain", "o1": 2.8, "ox": 3.75, "o2": 2.2}

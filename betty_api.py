@@ -19,7 +19,7 @@ _lock = threading.Lock()
 _grade_cache = {}          # code -> (ts, result)
 _book_cache = {'sig': None, 'val': []}
 
-PRODUCTS = ['Live', 'Winners', 'Draws', 'Half-time draw', 'Points sports', 'Max odds', 'All games', 'Bet of the day', 'Rollover']
+PRODUCTS = ['Live', 'Winners', 'Draws', 'Half-time draw', 'Points sports', 'Max odds', 'All games', 'Bet of the day', 'Rollover', 'By market']
 SPORT_LABEL = {'american football': 'American football', 'nfl': 'American football', 'ncaa': 'American football',
                'basketball': 'Basketball', 'ice hockey': 'Ice hockey', 'hockey': 'Ice hockey', 'handball': 'Handball'}
 
@@ -53,6 +53,8 @@ def product_of(label):
         return 'Bet of the day'
     if l.startswith('rollover day'):
         return 'Rollover'
+    if l.startswith('one market:'):
+        return 'By market'
     if sport_of(label):
         return 'Points sports'
     if 'winner' in l:                 # before 'draw': "3+ venue draws -> double chance" is a winners slip
@@ -112,7 +114,7 @@ def parse_bookings():
                 if cur is not None and line.startswith('    ') and line.strip():
                     cur['stats'].append(line.strip())
             rb = re.match(r'^.*?\b([A-Z0-9]{6}) with\b', lab)         # a hand rebook names the code it replaces
-            seen[code] = dict(code=code, when=m.group(1), label=lab, product=product_of(lab), sport=(None if product_of(lab) in ('Bet of the day', 'Rollover') else sport_of(lab)),
+            seen[code] = dict(code=code, when=m.group(1), label=lab, product=product_of(lab), sport=(None if product_of(lab) in ('Bet of the day', 'Rollover', 'By market') else sport_of(lab)),
                               url=url or f'http://www.sportybet.com/ng/?shareCode={code}', legs=legs,
                               replaces=rb.group(1) if rb and rb.group(1) != code else None, superseded_by=None,
                               nested_from=nested_from, rung=rung)
@@ -933,7 +935,7 @@ def best_of_day(dry=False):
     for c in parse_bookings():
         if _day_of(c['when']) != today or c['nested_from'] or c['superseded_by'] or not c['legs']:
             continue
-        if c['product'] in ('Live', 'All games', 'Bet of the day', 'Rollover'):
+        if c['product'] in ('Live', 'All games', 'Bet of the day', 'Rollover', 'By market'):
             continue
         graded(c['code'], force=True)
         for l in decorate(c)['legs']:
@@ -1063,7 +1065,7 @@ def rollover_of_day(dry=False):
     for c in parse_bookings():
         if _day_of(c['when']) != today or c['nested_from'] or c['superseded_by'] or not c['legs']:
             continue
-        if c['product'] in ('Live', 'All games', 'Bet of the day', 'Rollover'):
+        if c['product'] in ('Live', 'All games', 'Bet of the day', 'Rollover', 'By market'):
             continue
         graded(c['code'], force=True)
         for l in decorate(c)['legs']:
@@ -1222,6 +1224,10 @@ RULES = [
          plain="One small code a day at 1.5x, with the whole return staked the next day: 2,500 becomes about 1.09m if fifteen rungs land in a row. The legs come from the day's own tickets - the shortest prices in the bet families that win 80% or more of their legs on the record, one leg per match, at most two from one family and one from one competition, stacked only until the slip reaches 1.5x. When the safe families cannot reach 1.5x the day is skipped; the ticket is never padded with longer prices to hit the number. A losing day sends the ladder back to rung 1.",
          thresholds=[dict(k='Daily target', v='1.5x'), dict(k='Family must win', v='80%+ of its legs, 8+ legs'), dict(k='Legs per family', v='two'), dict(k='Legs per competition', v='one'), dict(k='Day 1 stake', v='2,500'), dict(k='Rungs', v='15'), dict(k='After a loss', v='back to rung 1')],
          measured='Our own boards 14-25 Sep: a 1.5x slip could be built on 8 of the 12 days and won 7 of the 8. Rung 1 on 25 Sep lost to KaPa 3-2 Haka, a side that was 1W 1D 5L at home and had not beaten Haka in five meetings.'),
+    dict(product='By market', tag='one option, many games',
+         plain="Instead of one slip mixing an Over with a handicap and a double chance, every slip carries a single option repeated across the board: all the Over 1.5 games on one code, all the first-half Over 0.5 games on another, all the second-half Under 2.5 games on a third. Football only. Each match is still scored on its own two teams' records and contributes only the options that record backs, so a game appears on a slip because it earned that option, not because the slip needed filling. Any option two or more matches support becomes its own code, one leg per match, up to fifty legs.",
+         thresholds=[dict(k='Sports', v='football only'), dict(k='Games per market', v='two or more'), dict(k='Legs per match', v='one'), dict(k='Slip cap', v='50 legs'), dict(k='Runs at', v='09:58, games until 23:00')],
+         measured="The legs come from the same evaluator as Max odds - each outcome scored against the home side's home games and the away side's away games, ranked by support, with the same family bans and cushion gates."),
     dict(product='Max odds', tag='composite engine',
          plain="The goal-and-stats accumulator: over and unders, team totals, corners, bookings, shots, offsides, fouls, saves, and half markets. Cushion gates and blank-rate tables decide what goes on, family bans stop correlated legs, and the daily rollover follows the biggest slip that lands one time in three.",
          thresholds=[dict(k='Modes', v='strict, unders-only, goals-only, target odds, rollover'), dict(k='Highest price on a leg', v='1.35'), dict(k='Stat Under cushion', v='line above the sample max'), dict(k='Stat Over cushion', v='line below the sample min'),
@@ -1230,6 +1236,7 @@ RULES = [
 ]
 
 CHANGELOG = [
+    dict(date='26 Sep', txt="One market per slip (user's call): a 09:58 run that files every supported option on the board by the option itself and books a code for each - all the Over 1.5 games on one slip, all the 1st Half Over 0.5 games on another, all the 2nd Half Under 2.5 games on a third. Football only, one leg per match, any option two or more matches support becomes a slip, up to 50 legs. A game reaches a slip only because its own two teams' records made that option one of its three best - the market is never chosen first and then filled."),
     dict(date='25 Sep', txt="Checked and rejected after the same losses, so they are not in: a winners venue margin carried by one big win (49/59 = 83%, against 21/26 = 81% when it holds without that win - Lunds' +1.00 was a 7:1 and it still tests as nothing); points handicaps where one side's own column is weak (4/6); a price cap on points legs (1.35-1.60 is 22/35, 1.60-1.90 is 42/68, 1.90+ is 14/21 - no band to cut). Points totals looked bad at 43/79 before 20 Sep but are 7/7 since the season gate went in, so that rule is already doing its job."),
     dict(date='24 Sep', txt="Rollover (user's call): a 1.5x code every morning at 10:18, compounded - 2,500 on day 1, each day's return staked the next day, 15 rungs to about 1.09m. It is built from the day's own tickets: the shortest prices in the families that win 80%+ of their legs on the whole record, one leg per match, at most two per family and one per competition, stacked until the slip reaches 1.5x. A day whose safe families cannot reach 1.5x is skipped rather than filled with longer prices. Backtested on our own board 14-24 Sep: a 1.5x slip existed on all 11 days and landed on 10 - the 18 Sep one was three second-half Overs at 1.18-1.21 and one blanked. A lost day puts the ladder back to rung 1."),
     dict(date='23 Sep', txt="Three fixes from Tuesday. Max odds: no leg priced above 1.35 - own settled legs 14-22 Sep were 165 of 183 (90%) at 1.35 or shorter and 6 of 13 (46%) above it against a book price of 68% (Viseu Over 2.5 at 1.65 on 6/6+4/5 finished 1-1). Bet of the day: the family table is the whole record instead of a rolling seven days - on 22 Sep the window began on 16 Sep, so the two ice-hockey-totals losses of 15 Sep had aged out and the family read 12/19 (63%) instead of 12/21 (57%), clearing the 60% gate and putting three Over 4.5 legs on the slip; and at most two legs from any one competition, after four of the five legs came from the same Swiss league at the same face-off (a leg whose same-league sibling lost that day wins 56%, against 75% when it is the only one from its league). Draws: the market-band slip is retired - 1 of 9 codes and 0.36 back per 1 staked since 14 Sep - and the daily draws code is now the user's exact-value pattern alone."),
@@ -1486,6 +1493,7 @@ SCHEDULE = [
     ('09:40', 'points-basketball', '/api/points', dict(sport='basketball', days=0)),
     ('09:45', 'points-hockey', '/api/points', dict(sport='hockey', days=0)),
     ('09:50', 'points-handball', '/api/points', dict(sport='handball', days=0)),
+    ('09:58', 'by-market', '/api/bymarket', dict(until=23, days=0)),
     ('10:05', 'all-games-am', '/api/combined', dict(slot='am')),
     ('10:12', 'bet-of-the-day', '/api/best', dict()),
     ('10:18', 'rollover', '/api/roll', dict()),
