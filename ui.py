@@ -314,6 +314,10 @@ def scheduler():
                         draw_job(body['until'], body.get('days', 0), False, bool(body.get('half')))
                     elif path == '/api/drawsmkt':
                         script_job('draws', ['book_draw_market.py'], 'draw slip (market band)')
+                    elif path == '/api/h1unders':
+                        args = ['book_h1unders.py', '--until', str(body.get('until', 23)),
+                                '--days', str(body.get('days', 0))]
+                        script_job('h1unders', args, '1st half Under 2.5 (scheduled)')
                     elif path == '/api/bymarket':
                         args = ['book_bymarket.py', '--until', str(body.get('until', 23)),
                                 '--days', str(body.get('days', 0))]
@@ -635,7 +639,7 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self):
         path = urlparse(self.path).path
-        if path in ('/api/yesterday', '/api/points', '/api/winners', '/api/draws', '/api/drawsmkt', '/api/bymarket', '/api/run', '/api/live', '/api/crawl', '/api/combined', '/api/best', '/api/roll'):
+        if path in ('/api/yesterday', '/api/points', '/api/winners', '/api/draws', '/api/drawsmkt', '/api/bymarket', '/api/h1unders', '/api/run', '/api/live', '/api/crawl', '/api/combined', '/api/best', '/api/roll'):
             n = int(self.headers.get('Content-Length', 0))
             raw = self.rfile.read(n) if n else b''
             try:
@@ -662,6 +666,16 @@ class Handler(BaseHTTPRequestHandler):
         if path == '/api/yesterday':
             import betty_api as BA
             self._send(json.dumps({'ok': BA.run_yesterday(), 'state': BA.YEST['state']})); return
+        if path == '/api/h1unders':
+            with LOCK:
+                if JOB['state'] not in ('idle', 'done'):
+                    self._send(json.dumps({'error': 'a run is already in progress'}), code=409); return
+                JOB['state'] = 'building'
+            args = ['book_h1unders.py'] + (['--dry'] if self._body.get('dry') else [])
+            if str(self._body.get('until') or '').isdigit():
+                args += ['--until', str(int(self._body['until']))]
+            threading.Thread(target=script_job, args=('h1unders', args, '1st half Under 2.5'), daemon=True).start()
+            self._send(json.dumps({'ok': True})); return
         if path == '/api/bymarket':
             with LOCK:
                 if JOB['state'] not in ('idle', 'done'):
