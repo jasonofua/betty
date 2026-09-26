@@ -42,6 +42,17 @@ SPORTS = {
 SPORT = SPORTS['amfoot']
 AGREE = 11
 TOTALS_AGREE = 11      # 18 Sep: 12 for a night (17-leg backtest), back to 11 on 19 Sep - too thin to cut a weekend slip from 8 legs to 5 (user's call)
+MARGIN_K = 1.25           # handicaps: the expected margin must clear the line by this
+                          # many standard deviations of the two venue columns (see lines_for)
+
+
+def _pstdev(xs):
+    if len(xs) < 2:
+        return 0.0
+    m = sum(xs) / len(xs)
+    return (sum((x - m) ** 2 for x in xs) / len(xs)) ** 0.5
+
+
 MIN_PRICE = 1.40          # user wants the 1.6-2.2 band on these sports; 1.14 hockey Overs are not it. --min-price
 MISMATCH_PRICE = 1.05
 SKIP_MISMATCH = False     # user, 12 Sep: never skip - find the better option instead
@@ -377,7 +388,25 @@ def score_game(hg, ag, mk, hcp_agree=None):
             continue
         need = -v           # same convention on every sport: spec is the home line, 'Home (+1.0)' for hcp=1
         hcov = sum(x > need for x in hm) + sum(-x > need for x in am); acov = n - hcov
+        # 26 Sep: the agreement count on its own does not predict. On our own
+        # settled legs it ran 11/14 -> 65%, 12/14 -> 59%, 14/14 -> 55%: a tally
+        # of how many past games happened to clear a line throws away the margin,
+        # so Karlovy Vary's 0:2 3:0 2:3 4:0 1:4 0:3 5:2 reads as "4 of 7 within
+        # 1.5" when what it actually says is that their home results scatter by
+        # five goals and a 1.5 line is inside the noise (they won 5:1).
+        #
+        # So the line must also clear the EXPECTED margin by more than the
+        # scatter. Backtested leak-free on 198 hockey fixtures (venue windows cut
+        # at each match date): the agreement rule alone hit 351/442 = 79%; adding
+        # this filter at 1.25 standard deviations gives 199/233 = 85%, and it
+        # holds on both halves of the sample independently (86% older, 85% newer)
+        # where the plain rule reads 82% then 78%.
+        exp = (sum(hm) / len(hm)) - (sum(am) / len(am))       # expected HOME margin
+        spread = _pstdev(hm + [-x for x in am]) or 1.0
         for want, hits, lab in (('Home', hcov, f"Home {v:+g}"), ('Away', acov, f"Away {-v:+g}")):
+            edge = (exp + v) if want == 'Home' else -(exp + v)
+            if edge < MARGIN_K * spread:
+                continue
             if hits >= hcp_agree:
                 sel = next((s for s in m['outs'] if s[0].startswith(want)), None)
                 if sel:
