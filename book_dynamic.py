@@ -31,7 +31,7 @@ import dynamic_v4 as D
 MAX_PRICE = 1.35
 
 
-def build(until_h=10, floor=None, verbose=True, days=0, cap=None):
+def build(until_h=10, floor=None, verbose=True, days=0, cap=None, all_options=False):
     """`days` pushes the cutoff that many extra days out - `--until 23 --days 2`
     means 23:00 the day after tomorrow. Without it the window can never exceed
     24 hours, because the cutoff is the next occurrence of that hour."""
@@ -81,7 +81,8 @@ def build(until_h=10, floor=None, verbose=True, days=0, cap=None):
         # to that team instead of being read as a match total
         kw['teams'] = (ev.get('homeTeamName'), ev.get('awayTeamName'))
         D.set_league(f.get('league'))
-        picks = D.best_three(ev.get('markets') or [], h, a, **kw)
+        picks = (D.every_option(ev.get('markets') or [], h, a, **kw) if all_options
+                 else D.best_three(ev.get('markets') or [], h, a, **kw))
         if not picks:
             st['nothing supported'] += 1
             continue

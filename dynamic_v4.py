@@ -1567,6 +1567,25 @@ def correlated(cand, chosen):
     return False
 
 
+def every_option(markets, home_rec, away_rec, **kw):
+    """EVERY outcome this match's own record supports, not just the best three.
+
+    26 Sep, user's call, for the one-market-per-slip product: the three-option
+    cap exists so a single match cannot fill a mixed slip with three versions of
+    the same bet. When each slip carries one option across many matches that cap
+    only starves the piles - the Over 1.5 slip had six games because only six
+    matches on a 329-game board happened to rank it in their top three. A
+    fourth-ranked option cleared exactly the same gates as the first, so for this
+    product every plausible one is returned. The correlated() guard still runs,
+    so a match never contributes two outcomes that are the same bet."""
+    picked = []
+    for r in evaluate(markets, home_rec, away_rec, **kw):
+        if not plausible(r) or correlated(r, picked):
+            continue
+        picked.append(r)
+    return picked
+
+
 def best_three(markets, home_rec, away_rec, **kw):
     """The three best-supported outcomes, ONE PER QUANTITY, so a match spreads
     across what it measures instead of repeating one thing three ways.

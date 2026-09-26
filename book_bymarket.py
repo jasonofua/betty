@@ -33,7 +33,8 @@ def market_key(label):
 def collect(board):
     """Every supported option on the board, grouped by the option itself."""
     groups = collections.defaultdict(list)
-    for rank in range(D.TOP_N):
+    deep = max((len(m['picks']) for m in board), default=0)
+    for rank in range(deep):
         for l in BD.slip(board, rank):
             groups[market_key(l['label'])].append(l)
     out = {}
@@ -57,7 +58,7 @@ def main():
     if '--min' in sys.argv:
         MIN_LEGS = int(sys.argv[sys.argv.index('--min') + 1])
 
-    board = BD.build(until, None, days=days, cap=cap)
+    board = BD.build(until, None, days=days, cap=cap, all_options=True)
     if not board:
         print(">> no supported options on this board")
         return
