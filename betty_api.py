@@ -1236,6 +1236,7 @@ RULES = [
 ]
 
 CHANGELOG = [
+    dict(date='27 Sep', txt="First-half Unders, two changes (user's call). (1) Season gate: a game is skipped when either side's last game at that venue is more than 35 days old - coming off a summer break with a new squad and last season's window. Kawkab v Hassania (the Botola Pro opener, 87 days) and Union Touarga v FUS Rabat (67 and 86 days) were the only such legs over 26-27 Sep and both lost at Under 1.5. Points sports have had the same rule since 20 Sep. (2) A best-line slip at 10:07: each game gets Under 1.5 or Under 2.5, whichever has the better expected value - the model's chance of that line landing times its price - so a very quiet game takes the longer 1.5 price and a busier one takes the 2.5 cushion. Two codes: a high-% slip (the chosen line at 85%+ on the model, up to 30 legs) and a 40-50 leg slip, both ranked by that probability."),
     dict(date='27 Sep', txt="First-half Under 1.5 is ordered by the book's price. Over two days neither our count nor our expected-goals model ordered the results - today the count's 93% legs went 1 of 2 and its 71% legs 8 of 9, the model's 85%+ legs 2 of 3 - while inside the 1.40 cap the price did: 1.25 or shorter 10 of 12 (83%), 1.25-1.40 20 of 26 (77%). Every leg at 1.25 or shorter goes on first, and 1.25-1.40 legs are added only to bring the slip to 30. Legs are labelled short or fill."),
     dict(date='27 Sep', txt="First-half Under 2.5, user's call: clean windows first. A clean window means neither side has had a 3-goal first half in its last seven; on the settled legs of 26-27 Sep those went 35 of 36 (97%), against 29 of 33 (88%) when one side had. The slip takes every clean window up to 50, and only if there are fewer than 30 does it add one-breach legs to reach 30. A game where both sides have broken the line is never taken. Every leg is labelled clean or one-breach. (Vis Pesaro 2:1 at the break had a 0:3 half at home.)"),
     dict(date='27 Sep', txt="Hockey totals: each side's own venue column must agree 6 of 7, not just the pooled 14. Karlskoga v Vimmerby Over 4.5 read 12/14 on Karlskoga 7/7 carrying Vimmerby 5/7 and finished 1:3; Biel v Servette Over 4.5 read 11/14 on Biel 7/7 carrying Servette 4/7 and finished 0:2. Backtested on 212 leak-free hockey fixtures: the pooled rule alone 136/175 = 78%, with each column at 6 of 7 59/70 = 84%, and it holds on both halves (81% against 75% older, 87% against 81% newer). An expected-total margin on top of it was tested and added nothing."),
@@ -1503,6 +1504,7 @@ SCHEDULE = [
     ('09:58', 'by-market', '/api/bymarket', dict(until=23, days=0)),
     ('10:02', 'h1-under-2.5', '/api/h1unders', dict(until=23, days=0, line=2.5)),
     ('10:04', 'h1-under-1.5', '/api/h1unders', dict(until=23, days=0, line=1.5)),
+    ('10:07', 'h1-under-best-line', '/api/h1unders', dict(until=23, days=0, combined=True)),
     ('10:05', 'all-games-am', '/api/combined', dict(slot='am')),
     ('10:12', 'bet-of-the-day', '/api/best', dict()),
     ('10:18', 'rollover', '/api/roll', dict()),

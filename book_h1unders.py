@@ -26,7 +26,7 @@ gives the chance of 0 or 1 goal. A fixture qualifies when the model says it and
 the model is not simply repeating the price. The count stays on the leg as
 evidence; it no longer decides.
 """
-import sys, math, datetime as dt, json
+import sys, re, math, datetime as dt, json
 import os as _o; sys.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
 import acca as A
 import book_v3 as B
@@ -60,6 +60,34 @@ def expected_half(hp, ap):
     hf = sum(f for f, _ in hp) / len(hp); ha = sum(a for _, a in hp) / len(hp)
     af = sum(f for f, _ in ap) / len(ap); aa = sum(a for _, a in ap) / len(ap)
     return (hf + aa) / 2 + (af + ha) / 2
+
+
+SEASON_GAP_DAYS = 35     # 27 Sep: a side whose last game at this venue is older than this is
+                         # coming off a summer break - new squad, old window. Kawkab v Hassania
+                         # (Botola Pro opener, 87 days) and Union Touarga v FUS Rabat (67/86)
+                         # were the only such legs over 26-27 Sep; both lost at Under 1.5.
+                         # Same rule the points sports have had since 20 Sep.
+
+
+def venue_gap(fid, kickoff):
+    """Days since the home side's last HOME game and the away side's last AWAY
+    game before this kick-off, from the head-to-head feed. The larger of the two."""
+    try:
+        raw = F2.fetch(f"df_hh_1_{fid}")
+    except Exception:
+        return None
+    gaps = []
+    for tab in raw.split('~KA÷')[1:]:
+        name = tab.split('¬')[0]
+        if not (name.endswith(' - Home') or name.endswith(' - Away')):
+            continue
+        for blk in tab.split('~KB÷')[1:2]:
+            ts = [int(d['KC']) for d in (dict(re.findall(r'([A-Z]{2,3})÷([^¬]*)', r))
+                                          for r in re.split(r'~(?=KC÷)', blk))
+                  if 'KC' in d and int(d['KC']) < kickoff - 3600]
+            if ts:
+                gaps.append((kickoff - max(ts)) / 86400)
+    return max(gaps) if len(gaps) == 2 else None
 
 
 def under_market(ev, line=None):
@@ -106,6 +134,9 @@ def scan(until_h=23, days=0, min_rate=MIN_RATE, verbose=True, line=None, min_mod
         got = under_market(ev, line)
         if not got:
             continue
+        gap = venue_gap(f['id'], int(f['ts']))
+        if gap is None or gap > SEASON_GAP_DAYS:
+            continue                                 # off-season window, see SEASON_GAP_DAYS
         h, a = D.records_for(f['id'])
         if not h or not a:
             continue
@@ -182,6 +213,63 @@ def pick_25(legs):
     return out
 
 
+HIGH_PCT = 0.85          # combined high-% slip: chosen line's model probability at least this
+HIGH_MAX = 30
+BIG_MIN, BIG_MAX = 40, 50
+
+
+def combined(until_h=23, days=0):
+    """27 Sep, user's call: one slip mixing both lines, where each game gets the
+    line that suits it. Both scans run with their own gates (and the season gate);
+    a game eligible on both lines takes the one with the better expected value -
+    the model's chance of that line landing times its price. A very quiet game
+    (expected first-half goals ~0.4) goes Under 1.5 for the longer price; a busier
+    one goes Under 2.5 for the cushion.
+
+    Returns (high, big): the high-% slip (chosen line at 85%+ on the model, up to
+    30 legs) and the 40-50 leg slip, both ranked by that probability."""
+    l15 = {l['ids']['eventId']: l for l in scan(until_h, days, line=1.5, verbose=True)}
+    l25 = {l['ids']['eventId']: l for l in scan(until_h, days, line=2.5, verbose=False)}
+    chosen = []
+    for eid in set(l15) | set(l25):
+        a, b = l15.get(eid), l25.get(eid)
+        if a and b:
+            pick = a if a['model'] * a['odds'] >= b['model'] * b['odds'] else b
+        else:
+            pick = a or b
+        pick = dict(pick, line=1.5 if pick is a else 2.5)
+        chosen.append(pick)
+    chosen.sort(key=lambda l: (-l['model'], l['odds']))
+    high = [l for l in chosen if l['model'] >= HIGH_PCT][:HIGH_MAX]
+    big = chosen[:BIG_MAX]
+    return high, big
+
+
+def _book(legs, title):
+    combo = 1.0
+    for l in legs:
+        combo *= l['odds']
+    n15 = sum(1 for l in legs if l['line'] == 1.5)
+    print(f"\n=== {title}  -  {len(legs)} games, {combo:,.2f}x  ({n15} at Under 1.5, {len(legs) - n15} at Under 2.5)\n")
+    for l in legs:
+        print(f"   {l['when']}  {l['match'][:34]:34} U{l['line']}  {l['window']:10} exp {l['lam']:.2f}  "
+              f"model {l['model']*100:3.0f}%  @{l['odds']:<5} {l['lg'][:20]}")
+    if len(legs) < 2:
+        print("   >> fewer than two games - nothing booked")
+        return
+    bk = A.book([l['ids'] for l in legs])
+    if bk and bk.get('code'):
+        print(f"\n   >> CODE {bk['code']}   {bk['url']}")
+        A.log_booking(bk['code'], bk['url'],
+                      f"one market: 1st Half Unders, best line per game - {title} - {combo:,.2f}x ({len(legs)} games)",
+                      [(l['ts'], l['match'], f"1st Half - Over/Under / Under {l['line']}", l['odds'],
+                        [f"first halves under {l['line']}: {l['series']} = {l['rate']*100:.0f}% - {l['window']}",
+                         f"expected first-half goals {l['lam']:.2f}, model {l['model']*100:.0f}% v book {1/l['odds']*100:.0f}%"])
+                       for l in legs])
+    else:
+        print(f"   >> booking failed: {bk.get('msg') if bk else 'no selections'}")
+
+
 def main():
     dry = '--dry' in sys.argv
     until = int(sys.argv[sys.argv.index('--until') + 1]) if '--until' in sys.argv else 23
@@ -189,6 +277,17 @@ def main():
     mr = float(sys.argv[sys.argv.index('--min-rate') + 1]) if '--min-rate' in sys.argv else MIN_RATE
     mm = float(sys.argv[sys.argv.index('--min-model') + 1]) if '--min-model' in sys.argv else MIN_MODEL
     line = float(sys.argv[sys.argv.index('--line') + 1]) if '--line' in sys.argv else LINE
+    if '--combined' in sys.argv:
+        high, big = combined(until, days)
+        if dry:
+            for legs, t in ((high, 'high %'), (big, '40-50')):
+                print(f"{t}: {len(legs)} legs")
+            return
+        _book(high, 'high %')
+        if len(big) < BIG_MIN:
+            print(f"\n   (only {len(big)} games qualify on either line - the big slip is short of {BIG_MIN})")
+        _book(big, '40-50 legs')
+        return
     legs = scan(until, days, mr, line=line, min_model=mm)
     legs = pick_25(legs) if line >= 2 else pick_15(legs)
     if len(legs) < 2:

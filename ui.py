@@ -317,7 +317,10 @@ def scheduler():
                     elif path == '/api/h1unders':
                         args = ['book_h1unders.py', '--until', str(body.get('until', 23)),
                                 '--days', str(body.get('days', 0)), '--line', str(body.get('line', 2.5))]
-                        script_job('h1unders', args, f"1st half Under {body.get('line', 2.5)} (scheduled)")
+                        if body.get('combined'):
+                            args.append('--combined')
+                        script_job('h1unders', args, "1st half Unders, best line (scheduled)" if body.get('combined')
+                                   else f"1st half Under {body.get('line', 2.5)} (scheduled)")
                     elif path == '/api/bymarket':
                         args = ['book_bymarket.py', '--until', str(body.get('until', 23)),
                                 '--days', str(body.get('days', 0))]
@@ -676,6 +679,8 @@ class Handler(BaseHTTPRequestHandler):
                 args += ['--until', str(int(self._body['until']))]
             if str(self._body.get('line') or '') in ('1.5', '2.5'):
                 args += ['--line', str(self._body['line'])]
+            if self._body.get('combined'):
+                args.append('--combined')
             threading.Thread(target=script_job, args=('h1unders', args, '1st half Under 2.5'), daemon=True).start()
             self._send(json.dumps({'ok': True})); return
         if path == '/api/bymarket':
