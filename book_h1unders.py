@@ -146,7 +146,26 @@ def scan(until_h=23, days=0, min_rate=MIN_RATE, verbose=True, line=None, min_mod
     if cap >= 2:
         out.sort(key=lambda r: (r['window'] != 'clean', -r['rate'], r['odds']))
     else:
-        out.sort(key=lambda r: (-r['model'], r['odds']))
+        # 27 Sep: at 1.5 neither our count nor our model has ordered the results
+        # over two days; the book's price has. Inside the 1.40 cap, 26-27 Sep:
+        # 1.25 or shorter 10 of 12 (83%), 1.25-1.40 20 of 26 (77%). Shortest first.
+        for r in out:
+            r['window'] = 'short' if r['odds'] <= SHORT_15 else 'fill'
+        out.sort(key=lambda r: (r['odds'], -r['model']))
+    return out
+
+
+SHORT_15 = 1.25          # Under 1.5: priced this or shorter goes on first (see scan)
+MIN_LEGS_15 = 30
+MAX_LEGS_15 = 50
+
+
+def pick_15(legs):
+    short = [l for l in legs if l['window'] == 'short']
+    fill = [l for l in legs if l['window'] == 'fill']
+    out = short[:MAX_LEGS_15]
+    if len(out) < MIN_LEGS_15:
+        out += fill[:MIN_LEGS_15 - len(out)]
     return out
 
 
@@ -171,8 +190,7 @@ def main():
     mm = float(sys.argv[sys.argv.index('--min-model') + 1]) if '--min-model' in sys.argv else MIN_MODEL
     line = float(sys.argv[sys.argv.index('--line') + 1]) if '--line' in sys.argv else LINE
     legs = scan(until, days, mr, line=line, min_model=mm)
-    if line >= 2:
-        legs = pick_25(legs)
+    legs = pick_25(legs) if line >= 2 else pick_15(legs)
     if len(legs) < 2:
         print(f">> only {len(legs)} games qualify at Under {line} - nothing booked")
         return
@@ -181,7 +199,9 @@ def main():
         combo *= l['odds']
     nclean = sum(1 for l in legs if l.get('window') == 'clean')
     print(f"\n=== 1st Half Under {line}  -  {len(legs)} games, {combo:,.2f}x"
-          + (f"  ({nclean} clean, {len(legs) - nclean} one-breach)" if line >= 2 else '') + "\n")
+          + (f"  ({nclean} clean, {len(legs) - nclean} one-breach)" if line >= 2 else
+             f"  ({sum(1 for l in legs if l.get('window') == 'short')} at 1.25 or shorter, "
+             f"{sum(1 for l in legs if l.get('window') == 'fill')} at 1.25-1.40)") + "\n")
     for l in legs:
         print(f"   {l['when']}  {l['match'][:34]:34} {l['window']:10} {l['series']:9} count {l['rate']*100:3.0f}%  "
               f"exp {l['lam']:.2f} goals, model {l['model']*100:3.0f}%  @{l['odds']:<5} {l['lg'][:20]}")
