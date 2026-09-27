@@ -118,8 +118,14 @@ def scan(until_h=23, days=0, min_rate=MIN_RATE, verbose=True, line=None, min_mod
         odds, ids = got
         lam = expected_half(hp, ap)
         model = poisson_under(lam, cap)
+        hb = sum(1 for x, y in hp if x + y > cap)      # home halves that broke the line
+        ab = sum(1 for x, y in ap if x + y > cap)      # away halves that broke the line
+        window = 'clean' if not hb and not ab else 'one-breach' if bool(hb) != bool(ab) else 'both-breach'
         if cap >= 2:
-            if rate < min_rate:                      # 2.5: the count orders correctly
+            # 27 Sep, user's call: clean windows first, then one-breach legs to fill.
+            # Settled 26-27 Sep: neither side with a 3-goal half 35/36 = 97%, one
+            # side with one 29/33 = 88%. Both sides breaching is never taken.
+            if window == 'both-breach' or rate < min_rate:
                 continue
         else:
             # 1.5: the price cap and the expected-goals bar. A "model must beat the
@@ -134,10 +140,26 @@ def scan(until_h=23, days=0, min_rate=MIN_RATE, verbose=True, line=None, min_mod
         ts = dt.datetime.fromtimestamp(int(ev['estimateStartTime']) / 1000, tz=A.WAT)
         out.append(dict(ts=ts.timestamp(), when=ts.strftime('%a %H:%M'),
                         match=f"{f['home']} v {f['away']}", lg=f.get('league', ''),
-                        odds=odds, rate=rate, lam=lam, model=model, ids=ids,
+                        odds=odds, rate=rate, lam=lam, model=model, ids=ids, window=window,
                         series=f"{sum(1 for v in [x + y for x, y in hp] if v <= cap)}/{len(hp)}+"
                                f"{sum(1 for v in [x + y for x, y in ap] if v <= cap)}/{len(ap)}"))
-    out.sort(key=lambda r: ((-r['rate'], r['odds']) if cap >= 2 else (-r['model'], r['odds'])))
+    if cap >= 2:
+        out.sort(key=lambda r: (r['window'] != 'clean', -r['rate'], r['odds']))
+    else:
+        out.sort(key=lambda r: (-r['model'], r['odds']))
+    return out
+
+
+MIN_LEGS_25 = 30         # user's call 27 Sep: 30-50 legs; clean windows first,
+MAX_LEGS_25 = 50         # one-breach legs only to bring the slip up to 30
+
+
+def pick_25(legs):
+    clean = [l for l in legs if l['window'] == 'clean']
+    fill = [l for l in legs if l['window'] == 'one-breach']
+    out = clean[:MAX_LEGS_25]
+    if len(out) < MIN_LEGS_25:
+        out += fill[:MIN_LEGS_25 - len(out)]
     return out
 
 
@@ -149,15 +171,19 @@ def main():
     mm = float(sys.argv[sys.argv.index('--min-model') + 1]) if '--min-model' in sys.argv else MIN_MODEL
     line = float(sys.argv[sys.argv.index('--line') + 1]) if '--line' in sys.argv else LINE
     legs = scan(until, days, mr, line=line, min_model=mm)
+    if line >= 2:
+        legs = pick_25(legs)
     if len(legs) < 2:
         print(f">> only {len(legs)} games qualify at Under {line} - nothing booked")
         return
     combo = 1.0
     for l in legs:
         combo *= l['odds']
-    print(f"\n=== 1st Half Under {line}  -  {len(legs)} games, {combo:,.2f}x\n")
+    nclean = sum(1 for l in legs if l.get('window') == 'clean')
+    print(f"\n=== 1st Half Under {line}  -  {len(legs)} games, {combo:,.2f}x"
+          + (f"  ({nclean} clean, {len(legs) - nclean} one-breach)" if line >= 2 else '') + "\n")
     for l in legs:
-        print(f"   {l['when']}  {l['match'][:36]:36} {l['series']:9} count {l['rate']*100:3.0f}%  "
+        print(f"   {l['when']}  {l['match'][:34]:34} {l['window']:10} {l['series']:9} count {l['rate']*100:3.0f}%  "
               f"exp {l['lam']:.2f} goals, model {l['model']*100:3.0f}%  @{l['odds']:<5} {l['lg'][:20]}")
     if dry:
         return
@@ -167,7 +193,7 @@ def main():
         A.log_booking(bk['code'], bk['url'],
                       f"one market: 1st Half - Over/Under / Under {line} - {combo:,.2f}x ({len(legs)} games)",
                       [(l['ts'], l['match'], f"1st Half - Over/Under / Under {line}", l['odds'],
-                        [f"first halves under {line}: {l['series']} = {l['rate']*100:.0f}%",
+                        [f"first halves under {line}: {l['series']} = {l['rate']*100:.0f}% - {l['window']} window",
                          f"expected first-half goals {l['lam']:.2f}, model {l['model']*100:.0f}% v book {1/l['odds']*100:.0f}%"]) for l in legs])
     else:
         print(f"   >> booking failed: {bk.get('msg') if bk else 'no selections'}")
