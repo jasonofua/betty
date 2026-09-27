@@ -1504,8 +1504,8 @@ SCHEDULE = [
     ('09:58', 'by-market', '/api/bymarket', dict(until=23, days=0)),
     ('10:02', 'h1-under-2.5', '/api/h1unders', dict(until=23, days=0, line=2.5)),
     ('10:04', 'h1-under-1.5', '/api/h1unders', dict(until=23, days=0, line=1.5)),
-    ('10:07', 'h1-under-best-line', '/api/h1unders', dict(until=23, days=0, combined=True)),
     ('10:05', 'all-games-am', '/api/combined', dict(slot='am')),
+    ('10:07', 'h1-under-best-line', '/api/h1unders', dict(until=23, days=0, combined=True)),
     ('10:12', 'bet-of-the-day', '/api/best', dict()),
     ('10:18', 'rollover', '/api/roll', dict()),
     # 18 Sep, user: one set a day - the morning. The 16:35 / 16:50 / 17:10 evening
