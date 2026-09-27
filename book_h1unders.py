@@ -122,9 +122,14 @@ def scan(until_h=23, days=0, min_rate=MIN_RATE, verbose=True, line=None, min_mod
             if rate < min_rate:                      # 2.5: the count orders correctly
                 continue
         else:
-            # 1.5: expected goals decides, the model has to beat the price, and the
-            # price itself has to be one the book is confident about (see MAX_PRICE_15)
-            if odds > MAX_PRICE_15 or model < min_model or model - (1.0 / odds) < 0.02:
+            # 1.5: the price cap and the expected-goals bar. A "model must beat the
+            # price by two points" test was added on 27 Sep and removed the same
+            # day - it cut 23 of the 55 games inside the cap and nothing measured
+            # supports it. The measured fact is the price band itself: on the 26
+            # Sep board, legs at 1.25 or shorter went 7 of 8, 1.25-1.43 went 10 of
+            # 13, 1.43+ went 4 of 9 - and that holds whether or not our number
+            # happens to sit above the book's.
+            if odds > MAX_PRICE_15 or model < min_model:
                 continue
         ts = dt.datetime.fromtimestamp(int(ev['estimateStartTime']) / 1000, tz=A.WAT)
         out.append(dict(ts=ts.timestamp(), when=ts.strftime('%a %H:%M'),
