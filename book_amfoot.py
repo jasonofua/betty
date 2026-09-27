@@ -35,7 +35,8 @@ SPORTS = {
     'basketball': dict(fs=3,  sb='sr:sport:2',  board='219,225,223', winner='219', ft='225', hcp='223', first='68',
                        periods=4, first_periods=2, blowout=20, reg_only=False, label='Basketball'),
     'hockey':     dict(fs=4,  sb='sr:sport:4',  board='1,18,16',     winner='1',   ft='18',  hcp='16',  first='446',
-                       periods=3, first_periods=1, blowout=4,  reg_only=True,  label='Ice hockey'),
+                       periods=3, first_periods=1, blowout=4,  reg_only=True,  label='Ice hockey',
+                       totals_col_min=6 / 7),   # 27 Sep: each side's own column, see score_game
     'handball':   dict(fs=7,  sb='sr:sport:6',  board='1,18,16',     winner='1',   ft='18',  hcp='16',  first='68',
                        periods=2, first_periods=1, blowout=10, reg_only=False, label='Handball'),
 }
@@ -379,6 +380,19 @@ def score_game(hg, ag, mk, hcp_agree=None):
                 # (handicaps 7-1 and 10-7). 14 days of hockey at 11/14: 4-1;
                 # at 12/14+: 12-0. Koln U6.5, Freiburg U5.5, Neftyanik O4.5 today.
                 if hits >= max(AGREE, TOTALS_AGREE):
+                    # 27 Sep: each side's OWN column must agree, not just the pooled
+                    # 14. Karlskoga v Vimmerby Over 4.5 read 12/14 on Karlskoga 7/7
+                    # carrying Vimmerby 5/7 (finished 1:3); Biel v Servette Over 4.5
+                    # read 11/14 on Biel 7/7 carrying Servette 4/7 (finished 0:2).
+                    # Backtested on 212 leak-free hockey fixtures: pooled 11/14 alone
+                    # 136/175 = 78%; with each column at 6 of 7 or better 59/70 = 84%,
+                    # holding on both halves (81% v 75% older, 87% v 81% newer). An
+                    # expected-total margin on top added nothing, so it is not used.
+                    if SPORT.get('totals_col_min'):
+                        hc = sum((x > v) if want == 'Over' else (x < v) for x in H)
+                        ac = sum((x > v) if want == 'Over' else (x < v) for x in Aw)
+                        if min(hc / len(H), ac / len(Aw)) < SPORT['totals_col_min'] - 1e-9:
+                            continue
                     sel = next((s for s in m['outs'] if s[0].startswith(want)), None)
                     if sel:
                         cands.append((hits, n, f"{key} {want} {v}", sel[1], dict(mid=m['id'], spec=m['spec'], oid=sel[2])))
