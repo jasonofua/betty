@@ -1002,12 +1002,12 @@ def best_of_day(dry=False):
 
 
 ROLL_TARGET = 1.5        # user's call 24 Sep, restated 25 Sep after rung 1 lost: 1.5x a day,
-                         # 15 rungs, 2,500 -> ~1.09m. Do not retune this - the target is the
+                         # 15 rungs, 400 at 1.5x for 15 rungs. Do not retune this - the target is the
                          # user's, and the work goes into the reads that fill it.
 ROLL_MIN_RATE = 80       # a family must win this share of its legs on the record to feed the rollover
 ROLL_MIN_LEGS = 8        # ... on at least this many settled legs
 ROLL_MAX_PER_FAM = 2     # at most this many legs from one family, and one per competition
-ROLL_START = 2500        # day-1 stake in naira
+ROLL_START = 400         # day-1 stake in naira (user's actual stake, 27 Sep)
 ROLL_DAYS = 15
 
 
@@ -1221,8 +1221,8 @@ RULES = [
                      dict(k='Stale college rosters', v='prefer totals; handicap needs 12 of 14'), dict(k='This season must agree', v='every line: both sides need 2+ games this season, and those games must agree with the line 80%+; a side that has not played this season is skipped'), dict(k='Same competition only', v='venue games from other competitions are dropped; friendlies and pre-season skipped'), dict(k='Markets', v='totals, period totals, handicaps')],
          measured='First weekend (12-13 Sep): totals 5 of 5, first-half totals 2 of 2, handicaps 2 of 4. No corpus yet for the other three sports.'),
     dict(product='Rollover', tag='1.5x a day, compounded',
-         plain="One small code a day at 1.5x, with the whole return staked the next day: 2,500 becomes about 1.09m if fifteen rungs land in a row. The legs come from the day's own tickets - the shortest prices in the bet families that win 80% or more of their legs on the record, one leg per match, at most two from one family and one from one competition, stacked only until the slip reaches 1.5x. When the safe families cannot reach 1.5x the day is skipped; the ticket is never padded with longer prices to hit the number. A losing day sends the ladder back to rung 1.",
-         thresholds=[dict(k='Daily target', v='1.5x'), dict(k='Family must win', v='80%+ of its legs, 8+ legs'), dict(k='Legs per family', v='two'), dict(k='Legs per competition', v='one'), dict(k='Day 1 stake', v='2,500'), dict(k='Rungs', v='15'), dict(k='After a loss', v='back to rung 1')],
+         plain="One small code a day at 1.5x, with the whole return staked the next day. The ladder started at 400 on 26 Sep. The legs come from the day's own tickets - the shortest prices in the bet families that win 80% or more of their legs on the record, one leg per match, at most two from one family and one from one competition, stacked only until the slip reaches 1.5x. When the safe families cannot reach 1.5x the day is skipped; the ticket is never padded with longer prices to hit the number. A losing day sends the ladder back to rung 1.",
+         thresholds=[dict(k='Daily target', v='1.5x'), dict(k='Family must win', v='80%+ of its legs, 8+ legs'), dict(k='Legs per family', v='two'), dict(k='Legs per competition', v='one'), dict(k='Day 1 stake', v='400'), dict(k='Rungs', v='15'), dict(k='After a loss', v='back to rung 1')],
          measured='Our own boards 14-25 Sep: a 1.5x slip could be built on 8 of the 12 days and won 7 of the 8. Rung 1 on 25 Sep lost to KaPa 3-2 Haka, a side that was 1W 1D 5L at home and had not beaten Haka in five meetings.'),
     dict(product='By market', tag='one option, many games',
          plain="Instead of one slip mixing an Over with a handicap and a double chance, every slip carries a single option repeated across the board: all the Over 1.5 games on one code, all the first-half Over 0.5 games on another, all the second-half Under 2.5 games on a third. Football only. Each match is still scored on its own two teams' records and contributes only the options that record backs, so a game appears on a slip because it earned that option, not because the slip needed filling. Any option two or more matches support becomes its own code, one leg per match, up to fifty legs.",
