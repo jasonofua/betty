@@ -36,6 +36,12 @@ import fetcher_v2 as F2
 LINE = 2.5
 MIN_RATE = 0.90          # the count bar, used at 2.5 where the count orders correctly
 MIN_MODEL = 0.70         # the expected-goals bar, used at 1.5
+MAX_PRICE_15 = 1.40      # 27 Sep: at a 1.5 line the BOOK orders the games and our count does not.
+                         # 26 Sep board, 30 settled legs: priced 1.25 or shorter 7 of 8 (88%),
+                         # 1.25-1.43 10 of 13 (77%), 1.43 or longer 4 of 9 (44%). Seven of the
+                         # nine losers were priced 1.31+, and Annan v Hibernian B went on at 1.89
+                         # - the book calling it a coin flip - because the count read 5/7+5/5.
+                         # Nothing above this price goes on the Under 1.5 slip.
 MIN_GAMES = 5            # ... over at least this many games each
 
 
@@ -116,8 +122,9 @@ def scan(until_h=23, days=0, min_rate=MIN_RATE, verbose=True, line=None, min_mod
             if rate < min_rate:                      # 2.5: the count orders correctly
                 continue
         else:
-            # 1.5: expected goals decides, and the model has to beat the price
-            if model < min_model or model - (1.0 / odds) < 0.02:
+            # 1.5: expected goals decides, the model has to beat the price, and the
+            # price itself has to be one the book is confident about (see MAX_PRICE_15)
+            if odds > MAX_PRICE_15 or model < min_model or model - (1.0 / odds) < 0.02:
                 continue
         ts = dt.datetime.fromtimestamp(int(ev['estimateStartTime']) / 1000, tz=A.WAT)
         out.append(dict(ts=ts.timestamp(), when=ts.strftime('%a %H:%M'),
