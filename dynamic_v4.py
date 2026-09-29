@@ -1159,6 +1159,14 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
                 # line is where it is right and we are not.
                 if qkey == 'goals' and _line == 1.5 and odds < 1.25:
                     continue
+                # 29 Sep: and not in an even game. FT Over 1.5 on our own legs by the
+                # match's 1X2 favourite: 1.80 or shorter 6/7, 1.80-2.20 17/19, over
+                # 2.20 (nobody favoured) 7/11 = 64% - on both halves of the record
+                # (4/6 then 3/5, against 18/21 then 5/5). Evenly matched sides play
+                # tight: Libertad v Olimpia, the Paraguayan Superclasico at 2.35,
+                # finished 0:1. At ~1.30 the line needs 77% to break even.
+                if qkey == 'goals' and _line == 1.5 and side == 'match' and fav and fav > 2.20:
+                    continue
                 if _line in (0.5, 1.5):
                     _tot = [f + a for f, a in home_rec.pairs(qkey)] + \
                            [f + a for f, a in away_rec.pairs(qkey)]
