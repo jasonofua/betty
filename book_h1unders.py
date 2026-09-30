@@ -90,6 +90,47 @@ def venue_gap(fid, kickoff):
     return max(gaps) if len(gaps) == 2 else None
 
 
+CROSS_COMP = 0.40        # 30 Sep: under this share of the two windows from the fixture's own
+                         # competition, a clean window is not treated as clean. First-half
+                         # Under 2.5 legs 25-30 Sep by that share: 75%+ 86/89 = 97%, 40-75%
+                         # 32/35 = 91%, under 40% 11/13 = 85% - no better than a one-breach
+                         # leg. Mostly cup ties (Copa Chile, Copa Argentina, J.League Cup,
+                         # Belgian Cup, Challenge Cup) and Nottingham U21 v Sporting B, whose
+                         # windows were English U21 leagues and the Portuguese second tier.
+
+
+def _stem(s):
+    s = (s or '').split(':', 1)[-1]
+    s = re.split(r' - |, ', s)[0]
+    return re.sub(r'[^a-z0-9]', '', s.lower())
+
+
+def same_comp_share(fid, kickoff, league):
+    """Share of the home side's last 7 home games and the away side's last 7 away
+    games that were played in the fixture's own competition (Flashscore names on
+    both sides, stage suffixes stripped)."""
+    want = _stem(league)
+    if not want:
+        return None
+    try:
+        raw = F2.fetch(f"df_hh_1_{fid}")
+    except Exception:
+        return None
+    same = tot = 0
+    for tab in raw.split('~KA÷')[1:]:
+        name = tab.split('¬')[0]
+        if not (name.endswith(' - Home') or name.endswith(' - Away')):
+            continue
+        for blk in tab.split('~KB÷')[1:2]:
+            rows = [dict(re.findall(r'([A-Z]{2,3})÷([^¬]*)', r)) for r in re.split(r'~(?=KC÷)', blk)]
+            for d in [d for d in rows if 'KC' in d and int(d['KC']) < kickoff - 3600][:7]:
+                tot += 1
+                c = _stem(d.get('KF') or d.get('KI'))
+                if c and (c in want or want in c):
+                    same += 1
+    return same / tot if tot else None
+
+
 def under_market(ev, line=None):
     line = LINE if line is None else line
     for m in (ev.get('markets') or []):
@@ -149,6 +190,7 @@ def scan(until_h=23, days=0, min_rate=MIN_RATE, verbose=True, line=None, min_mod
         odds, ids = got
         lam = expected_half(hp, ap)
         model = poisson_under(lam, cap)
+        share = same_comp_share(f['id'], int(f['ts']), f.get('league'))
         hb = sum(1 for x, y in hp if x + y > cap)      # home halves that broke the line
         ab = sum(1 for x, y in ap if x + y > cap)      # away halves that broke the line
         window = 'clean' if not hb and not ab else 'one-breach' if bool(hb) != bool(ab) else 'both-breach'
@@ -158,6 +200,8 @@ def scan(until_h=23, days=0, min_rate=MIN_RATE, verbose=True, line=None, min_mod
             # side with one 29/33 = 88%. Both sides breaching is never taken.
             if window == 'both-breach' or rate < min_rate:
                 continue
+            if window == 'clean' and share is not None and share < CROSS_COMP:
+                window = 'cross-comp'                # clean count, but of other competitions
         else:
             # 1.5: the price cap and the expected-goals bar. A "model must beat the
             # price by two points" test was added on 27 Sep and removed the same
@@ -171,7 +215,7 @@ def scan(until_h=23, days=0, min_rate=MIN_RATE, verbose=True, line=None, min_mod
         ts = dt.datetime.fromtimestamp(int(ev['estimateStartTime']) / 1000, tz=A.WAT)
         out.append(dict(ts=ts.timestamp(), when=ts.strftime('%a %H:%M'),
                         match=f"{f['home']} v {f['away']}", lg=f.get('league', ''),
-                        odds=odds, rate=rate, lam=lam, model=model, ids=ids, window=window,
+                        odds=odds, rate=rate, lam=lam, model=model, ids=ids, window=window, share=share,
                         series=f"{sum(1 for v in [x + y for x, y in hp] if v <= cap)}/{len(hp)}+"
                                f"{sum(1 for v in [x + y for x, y in ap] if v <= cap)}/{len(ap)}"))
     if cap >= 2:
@@ -182,6 +226,8 @@ def scan(until_h=23, days=0, min_rate=MIN_RATE, verbose=True, line=None, min_mod
         # 1.25 or shorter 10 of 12 (83%), 1.25-1.40 20 of 26 (77%). Shortest first.
         for r in out:
             r['window'] = 'short' if r['odds'] <= SHORT_15 else 'fill'
+            if r.get('share') is not None and r['share'] < CROSS_COMP:
+                r['window'] = 'fill'                  # read from other competitions (see CROSS_COMP)
         out.sort(key=lambda r: (r['odds'], -r['model']))
     return out
 
@@ -206,7 +252,7 @@ MAX_LEGS_25 = 50         # one-breach legs only to bring the slip up to 30
 
 def pick_25(legs):
     clean = [l for l in legs if l['window'] == 'clean']
-    fill = [l for l in legs if l['window'] == 'one-breach']
+    fill = [l for l in legs if l['window'] in ('one-breach', 'cross-comp')]
     out = clean[:MAX_LEGS_25]
     if len(out) < MIN_LEGS_25:
         out += fill[:MIN_LEGS_25 - len(out)]
@@ -298,7 +344,8 @@ def main():
         combo *= l['odds']
     nclean = sum(1 for l in legs if l.get('window') == 'clean')
     print(f"\n=== 1st Half Under {line}  -  {len(legs)} games, {combo:,.2f}x"
-          + (f"  ({nclean} clean, {len(legs) - nclean} one-breach)" if line >= 2 else
+          + (f"  ({nclean} clean, {sum(1 for l in legs if l.get('window') == 'one-breach')} one-breach, "
+             f"{sum(1 for l in legs if l.get('window') == 'cross-comp')} cross-comp)" if line >= 2 else
              f"  ({sum(1 for l in legs if l.get('window') == 'short')} at 1.25 or shorter, "
              f"{sum(1 for l in legs if l.get('window') == 'fill')} at 1.25-1.40)") + "\n")
     for l in legs:
