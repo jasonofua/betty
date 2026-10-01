@@ -1023,7 +1023,7 @@ def roll_ladder():
         legs = g.get('legs') or []
         state = ('won' if legs and all(l['state'] == 'won' for l in legs)
                  else 'lost' if any(l['state'] == 'lost' for l in legs) else 'open')
-        out.append(dict(code=c['code'], day=_day_of(c['when']), state=state,
+        out.append(dict(code=c['code'], day=str(_day_of(c['when'])), state=state,
                         odds=round(_roll_combo(c), 2)))
     run, stake = [], ROLL_START
     for r in out:

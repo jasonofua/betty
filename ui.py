@@ -346,7 +346,7 @@ def scheduler():
                         JOB.update(state='building', log=[], result=None, params=dict(mode='all games', slot=body.get('slot')),
                                    started=dt.datetime.now(A.WAT).strftime('%H:%M'))
                         r = BA.combined_code(body.get('slot', 'am'))
-                        JOB['log'].append(json.dumps(r)); JOB.update(state='done', result=r)
+                        JOB['log'].append(json.dumps(r, default=str)); JOB.update(state='done', result=r)
                     elif path == '/api/best':
                         JOB.update(state='building', log=[], result=None, params=dict(mode='bet of the day'),
                                    started=dt.datetime.now(A.WAT).strftime('%H:%M'))
@@ -570,11 +570,13 @@ class Handler(BaseHTTPRequestHandler):
             except Exception as e:
                 self._send(json.dumps({'error': f"{type(e).__name__}: {e}"}), code=500)
         elif u.path == '/api/live':
-            self._send(json.dumps(LIVE)); return
+            self._send(json.dumps(LIVE, default=str)); return
         elif u.path == '/api/status':
+            # default=str: a job result can carry dates (the rollover ladder) and an
+            # unserialisable result here took /api/status - the deploy health check - down
             self._send(json.dumps({'state': JOB['state'], 'log': JOB['log'][-40:],
                                    'result': JOB['result'], 'started': JOB['started'],
-                                   'build': BUILD}))
+                                   'build': BUILD}, default=str))
         elif u.path == '/api/slips':
             # Every booking is appended to BOOKINGS_PATH (a Railway volume, so
             # it survives restarts and redeploys). Telegram cannot hand back
