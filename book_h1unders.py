@@ -288,7 +288,32 @@ def combined(until_h=23, days=0):
     chosen.sort(key=lambda l: (-l['model'], l['odds']))
     high = [l for l in chosen if l['model'] >= HIGH_PCT][:HIGH_MAX]
     big = chosen[:BIG_MAX]
+    combined.last_chosen = chosen
     return high, big
+
+
+# Measured landing rates of each group, 26 Sep - 1 Oct, used to build a mixed slip
+# to a multiplier: Under 2.5 clean 97%, one-breach 88%, cross-comp 85%; Under 1.5
+# priced 1.25 or shorter 83%, 1.25-1.40 77%.
+GROUP_RATE = {(2.5, 'clean'): 0.97, (2.5, 'one-breach'): 0.88, (2.5, 'cross-comp'): 0.85,
+              (1.5, 'short'): 0.83, (1.5, 'fill'): 0.77}
+
+
+def to_target(chosen, target, cap=50):
+    """1 Oct, user's call: a mixed Under 1.5 / 2.5 slip built up to a multiplier.
+    Each game keeps the line combined() chose for it; games are then taken in order
+    of how much price they add for the landing chance they cost - log(price) over
+    -log(group rate) - so the target is reached with the fewest, safest legs rather
+    than by stacking the shortest prices."""
+    def eff(l):
+        p = GROUP_RATE.get((l['line'], l['window']), 0.80)
+        return math.log(l['odds']) / -math.log(p)
+    out, combo = [], 1.0
+    for l in sorted(chosen, key=eff, reverse=True):
+        if combo >= target or len(out) >= cap:
+            break
+        out.append(l); combo *= l['odds']
+    return out, combo
 
 
 def _book(legs, title):
@@ -323,6 +348,16 @@ def main():
     mr = float(sys.argv[sys.argv.index('--min-rate') + 1]) if '--min-rate' in sys.argv else MIN_RATE
     mm = float(sys.argv[sys.argv.index('--min-model') + 1]) if '--min-model' in sys.argv else MIN_MODEL
     line = float(sys.argv[sys.argv.index('--line') + 1]) if '--line' in sys.argv else LINE
+    if '--combined' in sys.argv and '--targets' in sys.argv:
+        targets = [float(t) for t in sys.argv[sys.argv.index('--targets') + 1].split(',') if t]
+        combined(until, days)
+        chosen = combined.last_chosen
+        for t in targets:
+            legs, combo = to_target(chosen, t)
+            if combo < t:
+                print(f"\n   (target {t:g}x not reached - {len(legs)} legs give {combo:,.0f}x)")
+            _book(legs, f"{t:g}x target")
+        return
     if '--combined' in sys.argv:
         high, big = combined(until, days)
         if dry:
