@@ -4,3 +4,9 @@ experiments/statbank.jsonl
 experiments/model_bundle.pkl
 experiments/nn_all_bundle.pkl
 experiments/draw_dataset.jsonl
+# 1 Oct: the upload was timing out. Backtest-only data, never read at runtime:
+experiments/odds_history.jsonl
+experiments/retrain_*.log
+# odds_raw: the server reads fixtures.csv (book_draw_market) and nothing else
+experiments/odds_raw/*
+!experiments/odds_raw/fixtures.csv
