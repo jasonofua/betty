@@ -679,6 +679,8 @@ class Handler(BaseHTTPRequestHandler):
                 args += ['--until', str(int(self._body['until']))]
             if str(self._body.get('line') or '') in ('1.5', '2.5'):
                 args += ['--line', str(self._body['line'])]
+            if str(self._body.get('days') or '').isdigit():
+                args += ['--days', str(int(self._body['days']))]
             if self._body.get('combined'):
                 args.append('--combined')
             threading.Thread(target=script_job, args=('h1unders', args, '1st half Under 2.5'), daemon=True).start()
