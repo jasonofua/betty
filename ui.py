@@ -683,6 +683,8 @@ class Handler(BaseHTTPRequestHandler):
                 args += ['--line', str(self._body['line'])]
             if str(self._body.get('days') or '').isdigit():
                 args += ['--days', str(int(self._body['days']))]
+            if str(self._body.get('target') or '').replace('.', '', 1).isdigit():
+                args += ['--target', str(float(self._body['target']))]
             if self._body.get('combined'):
                 args.append('--combined')
             threading.Thread(target=script_job, args=('h1unders', args, '1st half Under 2.5'), daemon=True).start()

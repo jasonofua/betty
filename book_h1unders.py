@@ -334,8 +334,25 @@ def main():
             print(f"\n   (only {len(big)} games qualify on either line - the big slip is short of {BIG_MIN})")
         _book(big, '40-50 legs')
         return
-    legs = scan(until, days, mr, line=line, min_model=mm)
-    legs = pick_25(legs) if line >= 2 else pick_15(legs)
+    full = scan(until, days, mr, line=line, min_model=mm)
+    legs = pick_25(full) if line >= 2 else pick_15(full)
+    # 1 Oct, user's call: --target N keeps adding the next qualifying legs, in the
+    # same order the slip was built in (short or clean first, then fill), until the
+    # slip clears N - capped at 50 legs. A cut can only remove legs, so a 2000x
+    # version of a 1,469x slip has to be built forward like this.
+    target = float(sys.argv[sys.argv.index('--target') + 1]) if '--target' in sys.argv else None
+    if target:
+        combo, have = 1.0, {id(l) for l in legs}
+        for l in legs:
+            combo *= l['odds']
+        for l in full:
+            if combo >= target or len(legs) >= 50:
+                break
+            if id(l) in have:
+                continue
+            legs.append(l); combo *= l['odds']
+        if combo < target:
+            print(f"   (target {target:g}x not reached - every qualifying game is on and the slip is {combo:,.0f}x)")
     if len(legs) < 2:
         print(f">> only {len(legs)} games qualify at Under {line} - nothing booked")
         return
