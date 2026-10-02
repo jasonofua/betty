@@ -33,7 +33,9 @@ SPORTS = {
                                              # handicaps 11 of 18, first-half lines 6 of 9. Four of the five NCAA
                                              # losses on 19 Sep were full-game totals.
     'basketball': dict(fs=3,  sb='sr:sport:2',  board='219,225,223', winner='219', ft='225', hcp='223', first='68',
-                       periods=4, first_periods=2, blowout=20, reg_only=False, label='Basketball'),
+                       periods=4, first_periods=2, blowout=20, reg_only=False, label='Basketball',
+                       totals_col_min=6 / 7,     # 2 Oct: the margin below was measured WITH this rule
+                       totals_margin_k=1.25),   # 2 Oct: expected total must clear the line, see score_game
     'hockey':     dict(fs=4,  sb='sr:sport:4',  board='1,18,16',     winner='1',   ft='18',  hcp='16',  first='446',
                        periods=3, first_periods=1, blowout=4,  reg_only=True,  label='Ice hockey',
                        totals_col_min=6 / 7),   # 27 Sep: each side's own column, see score_game
@@ -392,6 +394,20 @@ def score_game(hg, ag, mk, hcp_agree=None):
                         hc = sum((x > v) if want == 'Over' else (x < v) for x in H)
                         ac = sum((x > v) if want == 'Over' else (x < v) for x in Aw)
                         if min(hc / len(H), ac / len(Aw)) < SPORT['totals_col_min'] - 1e-9:
+                            continue
+                    # 2 Oct, basketball: the expected total must clear the line by 1.25
+                    # standard deviations of the two venue columns. Hapoel v Real Madrid
+                    # Under 180.5 read 12/14 with both columns 6/7, but the two sides
+                    # averaged ~170 with a ~16-point swing - a 0.65 sd cushion - and 106
+                    # came in the first half (102:98). Backtested leak-free on 106
+                    # basketball fixtures, on lines within 1.5 sd of the expected total
+                    # (where a book prices the game): 1287/1494 = 86% as before, 693/758
+                    # = 91% with the margin, holding on both halves (93% and 90%).
+                    if SPORT.get('totals_margin_k'):
+                        exp_t = (sum(H) / len(H) + sum(Aw) / len(Aw)) / 2
+                        sd_t = _pstdev(list(H) + list(Aw)) or 1.0
+                        edge_t = (exp_t - v) if want == 'Over' else (v - exp_t)
+                        if edge_t < SPORT['totals_margin_k'] * sd_t:
                             continue
                     sel = next((s for s in m['outs'] if s[0].startswith(want)), None)
                     if sel:
