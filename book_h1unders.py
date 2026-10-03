@@ -339,35 +339,54 @@ def to_target(chosen, target, cap=50):
 
 
 def to_target_both(l15, l25, target, cap=50):
-    """3 Oct, user's call (3000x / 2000x / 1000x / 800x mixes on a Saturday). Each
-    game may take Under 1.5 or Under 2.5. Pass 1 takes every game at its most
-    efficient line (price added per landing chance lost, on measured group rates),
-    best first, until the target or 50 legs. If that falls short, pass 2 upgrades
-    chosen games from Under 2.5 to Under 1.5 - the longer price - in the order that
-    costs the least efficiency, until the target is reached."""
-    def eff(l):
-        return math.log(l['odds']) / -math.log(group_rate(l))
+    """Mixed Under 1.5 / 2.5 slip built to a multiplier (user's call, 3 Oct).
+
+    Every step chooses the single best MOVE across the board, measured as price
+    gained per landing chance lost on measured group rates (see group_rate):
+      - add a game at Under 2.5,
+      - add a game at Under 1.5,
+      - lift a game already on the slip from Under 2.5 to Under 1.5.
+    3 Oct afternoon: the first version added every game before lifting any, so
+    reaching 1000x on a 47-game board forced in nine one-breach Under 2.5 legs at
+    1.11+ (72% each) - while lifting a clean 1.05 Under 2.5 to a 1.34 Under 1.5
+    gains 1.28x for a 0.73 drop in chance, a better trade than adding a 1.15 leg
+    at 0.72. Weighing both kinds of move together takes the cheaper odds first."""
     opts = {}
     for l in l15.values():
-        opts.setdefault(l['ids']['eventId'], []).append(dict(l, line=1.5))
+        opts.setdefault(l['ids']['eventId'], {})[1.5] = dict(l, line=1.5)
     for l in l25.values():
-        opts.setdefault(l['ids']['eventId'], []).append(dict(l, line=2.5))
-    order = sorted(opts, key=lambda e: -max(eff(o) for o in opts[e]))
+        opts.setdefault(l['ids']['eventId'], {})[2.5] = dict(l, line=2.5)
+
+    def gc(o):
+        return math.log(o['odds']), -math.log(group_rate(o))
+
     chosen, combo = {}, 1.0
-    for e in order:
-        if combo >= target or len(chosen) >= cap:
+    while combo < target:
+        best = None
+        for e, v in opts.items():
+            cur = chosen.get(e)
+            if cur is None:
+                if len(chosen) >= cap:
+                    continue
+                for o in v.values():
+                    g, c = gc(o)
+                    r = g / c if c > 0 else 0
+                    if best is None or r > best[0]:
+                        best = (r, e, o)
+            elif cur['line'] == 2.5 and 1.5 in v and v[1.5]['odds'] > cur['odds']:
+                g1, c1 = gc(v[1.5]); g0, c0 = gc(cur)
+                dg, dc = g1 - g0, c1 - c0
+                r = dg / dc if dc > 0 else (float('inf') if dg > 0 else 0)
+                if best is None or r > best[0]:
+                    best = (r, e, v[1.5])
+        if best is None:
             break
-        best = max(opts[e], key=eff)
-        chosen[e] = best; combo *= best['odds']
-    if combo < target:
-        ups = sorted(((eff(cur) - eff(o), e, o) for e, cur in chosen.items()
-                      for o in opts[e] if o['odds'] > cur['odds']), key=lambda x: x[0])
-        for _, e, o in ups:
-            if combo >= target:
-                break
-            if o['odds'] <= chosen[e]['odds']:
-                continue
-            combo = combo / chosen[e]['odds'] * o['odds']; chosen[e] = o
+        _, e, o = best
+        if e in chosen:
+            combo = combo / chosen[e]['odds'] * o['odds']
+        else:
+            combo *= o['odds']
+        chosen[e] = o
     legs = sorted(chosen.values(), key=lambda l: l['ts'])
     return legs, combo
 
