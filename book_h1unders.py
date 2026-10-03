@@ -324,6 +324,65 @@ def to_target(chosen, target, cap=50):
     return out, combo
 
 
+def to_target_both(l15, l25, target, cap=50):
+    """3 Oct, user's call (3000x / 2000x / 1000x / 800x mixes on a Saturday). Each
+    game may take Under 1.5 or Under 2.5. Pass 1 takes every game at its most
+    efficient line (price added per landing chance lost, on measured group rates),
+    best first, until the target or 50 legs. If that falls short, pass 2 upgrades
+    chosen games from Under 2.5 to Under 1.5 - the longer price - in the order that
+    costs the least efficiency, until the target is reached."""
+    def eff(l):
+        p = GROUP_RATE.get((l['line'], l['window']), 0.80)
+        return math.log(l['odds']) / -math.log(p)
+    opts = {}
+    for l in l15.values():
+        opts.setdefault(l['ids']['eventId'], []).append(dict(l, line=1.5))
+    for l in l25.values():
+        opts.setdefault(l['ids']['eventId'], []).append(dict(l, line=2.5))
+    order = sorted(opts, key=lambda e: -max(eff(o) for o in opts[e]))
+    chosen, combo = {}, 1.0
+    for e in order:
+        if combo >= target or len(chosen) >= cap:
+            break
+        best = max(opts[e], key=eff)
+        chosen[e] = best; combo *= best['odds']
+    if combo < target:
+        ups = sorted(((eff(cur) - eff(o), e, o) for e, cur in chosen.items()
+                      for o in opts[e] if o['odds'] > cur['odds']), key=lambda x: x[0])
+        for _, e, o in ups:
+            if combo >= target:
+                break
+            if o['odds'] <= chosen[e]['odds']:
+                continue
+            combo = combo / chosen[e]['odds'] * o['odds']; chosen[e] = o
+    legs = sorted(chosen.values(), key=lambda l: l['ts'])
+    return legs, combo
+
+
+def _book_line(legs, line, title):
+    """Book a single-line slip (all Under 1.5 or all Under 2.5) and log it."""
+    if len(legs) < 2:
+        print(f"\n   ({title}: only {len(legs)} games - nothing booked)")
+        return
+    combo = 1.0
+    for l in legs:
+        combo *= l['odds']
+    print(f"\n=== 1st Half Under {line} - {title}  -  {len(legs)} games, {combo:,.2f}x\n")
+    for l in legs:
+        print(f"   {l['when']}  {l['match'][:34]:34} {l['window']:10} @{l['odds']:<5} {l['lg'][:22]}")
+    bk = A.book([l['ids'] for l in legs])
+    if bk and bk.get('code'):
+        print(f"\n   >> CODE {bk['code']}   {bk['url']}")
+        A.log_booking(bk['code'], bk['url'],
+                      f"one market: 1st Half - Over/Under / Under {line} - {title} - {combo:,.2f}x ({len(legs)} games)",
+                      [(l['ts'], l['match'], f"1st Half - Over/Under / Under {line}", l['odds'],
+                        [f"first halves under {line}: {l['series']} = {l['rate']*100:.0f}% - {l['window']}",
+                         f"expected first-half goals {l['lam']:.2f}, model {l['model']*100:.0f}% v book {1/l['odds']*100:.0f}%"])
+                       for l in legs])
+    else:
+        print(f"   >> booking failed: {bk.get('msg') if bk else 'no selections'}")
+
+
 def _book(legs, title):
     combo = 1.0
     for l in legs:
@@ -356,6 +415,23 @@ def main():
     mr = float(sys.argv[sys.argv.index('--min-rate') + 1]) if '--min-rate' in sys.argv else MIN_RATE
     mm = float(sys.argv[sys.argv.index('--min-model') + 1]) if '--min-model' in sys.argv else MIN_MODEL
     line = float(sys.argv[sys.argv.index('--line') + 1]) if '--line' in sys.argv else LINE
+    if '--bundle' in sys.argv:
+        # 3 Oct, user's call: one scan of both lines, every slip booked from it.
+        targets = ([float(t) for t in sys.argv[sys.argv.index('--targets') + 1].split(',') if t]
+                   if '--targets' in sys.argv else [])
+        l15 = scan(until, days, line=1.5, verbose=True)
+        l25 = scan(until, days, line=2.5, verbose=False)
+        _book_line(pick_25(list(l25)), 2.5, 'plain')
+        _book_line(pick_15(list(l15)), 1.5, 'keep 30')
+        _book_line([l for l in l15 if l['window'] == 'short'][:50], 1.5, 'short-priced only')
+        d15 = {l['ids']['eventId']: l for l in l15}
+        d25 = {l['ids']['eventId']: l for l in l25}
+        for t in targets:
+            legs, combo = to_target_both(d15, d25, t)
+            if combo < t:
+                print(f"\n   (target {t:g}x not reached - {len(legs)} legs give {combo:,.0f}x)")
+            _book(legs, f"{t:g}x target")
+        return
     if '--combined' in sys.argv and '--targets' in sys.argv:
         targets = [float(t) for t in sys.argv[sys.argv.index('--targets') + 1].split(',') if t]
         combined(until, days)

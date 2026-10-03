@@ -687,6 +687,8 @@ class Handler(BaseHTTPRequestHandler):
                 args += ['--target', str(float(self._body['target']))]
             if self._body.get('combined'):
                 args.append('--combined')
+            if self._body.get('bundle'):
+                args.append('--bundle')
             if re.fullmatch(r'[0-9.,]+', str(self._body.get('targets') or '')):
                 args += ['--targets', str(self._body['targets'])]
             threading.Thread(target=script_job, args=('h1unders', args, '1st half Under 2.5'), daemon=True).start()
