@@ -285,8 +285,8 @@ def combined(until_h=23, days=0):
             # Every Under 1.5 loss on 2 Oct (Sao Paulo, Fortaleza, Atletico FC,
             # Juventude, Independiente) was that band; a fill-band game now takes
             # Under 2.5, a short-priced quiet game still takes Under 1.5.
-            ra = GROUP_RATE.get((1.5, a['window']), 0.75)
-            rb = GROUP_RATE.get((2.5, b['window']), 0.90)
+            ra = group_rate(dict(a, line=1.5))
+            rb = group_rate(dict(b, line=2.5))
             pick = a if ra * a['odds'] >= rb * b['odds'] else b
         else:
             pick = a or b
@@ -305,6 +305,21 @@ def combined(until_h=23, days=0):
 # (return 1.037), 1.25-1.40 36/51 = 71% (return ~0.95).
 GROUP_RATE = {(2.5, 'clean'): 0.97, (2.5, 'one-breach'): 0.88, (2.5, 'cross-comp'): 0.85,
               (1.5, 'short'): 0.85, (1.5, 'fill'): 0.71}
+# 3 Oct: and Under 2.5 depends on the price inside each group. Settled 1H Under 2.5
+# legs 26 Sep - 3 Oct: priced 1.10 or less 144/151 = 95%, 1.11 and up 50/59 = 85%;
+# one-breach legs at 1.11+ 13/18 = 72%. HFC v Quick Boys (one-breach, 1.15-1.18)
+# ranked near the top of every target on a flat 88% and killed all six mixes; the
+# same band also lost Tochigi v Imabari, Miami v Jacksonville, Atl. Nacional v
+# Junior and Athlone v Cork City this week.
+LONG_25 = 1.10
+GROUP_RATE_LONG = {(2.5, 'clean'): 0.85, (2.5, 'one-breach'): 0.72, (2.5, 'cross-comp'): 0.72}
+
+
+def group_rate(l):
+    key = (l['line'], l['window'])
+    if l['line'] == 2.5 and l['odds'] > LONG_25 and key in GROUP_RATE_LONG:
+        return GROUP_RATE_LONG[key]
+    return GROUP_RATE.get(key, 0.80)
 
 
 def to_target(chosen, target, cap=50):
@@ -314,8 +329,7 @@ def to_target(chosen, target, cap=50):
     -log(group rate) - so the target is reached with the fewest, safest legs rather
     than by stacking the shortest prices."""
     def eff(l):
-        p = GROUP_RATE.get((l['line'], l['window']), 0.80)
-        return math.log(l['odds']) / -math.log(p)
+        return math.log(l['odds']) / -math.log(group_rate(l))
     out, combo = [], 1.0
     for l in sorted(chosen, key=eff, reverse=True):
         if combo >= target or len(out) >= cap:
@@ -332,8 +346,7 @@ def to_target_both(l15, l25, target, cap=50):
     chosen games from Under 2.5 to Under 1.5 - the longer price - in the order that
     costs the least efficiency, until the target is reached."""
     def eff(l):
-        p = GROUP_RATE.get((l['line'], l['window']), 0.80)
-        return math.log(l['odds']) / -math.log(p)
+        return math.log(l['odds']) / -math.log(group_rate(l))
     opts = {}
     for l in l15.values():
         opts.setdefault(l['ids']['eventId'], []).append(dict(l, line=1.5))
