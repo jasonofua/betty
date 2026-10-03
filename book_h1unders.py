@@ -190,6 +190,13 @@ def scan(until_h=23, days=0, min_rate=MIN_RATE, verbose=True, line=None, min_mod
         odds, ids = got
         lam = expected_half(hp, ap)
         model = poisson_under(lam, cap)
+        # 3 Oct, user's number: the two ATTACKS only - home first-half goals scored per
+        # home game plus away first-half goals scored per away game. On 84 settled
+        # Under 1.5 legs 26 Sep - 3 Oct: under 0.8 34/39 = 87%, 0.8-1.1 70%, 1.1-1.4
+        # 69%, 1.4+ 3/9 = 33%, holding on both halves (85% / 6 of 6 under 0.8). Our
+        # blended model (scoring with conceding) read 85% / 72% - it let Reading v
+        # Bradford (attacks 1.43) through at 1.07 because both sides concede little.
+        attack = sum(x for x, _ in hp) / len(hp) + sum(x for x, _ in ap) / len(ap)
         share = same_comp_share(f['id'], int(f['ts']), f.get('league'))
         hb = sum(1 for x, y in hp if x + y > cap)      # home halves that broke the line
         ab = sum(1 for x, y in ap if x + y > cap)      # away halves that broke the line
@@ -216,6 +223,7 @@ def scan(until_h=23, days=0, min_rate=MIN_RATE, verbose=True, line=None, min_mod
         out.append(dict(ts=ts.timestamp(), when=ts.strftime('%a %H:%M'),
                         match=f"{f['home']} v {f['away']}", lg=f.get('league', ''),
                         odds=odds, rate=rate, lam=lam, model=model, ids=ids, window=window, share=share,
+                        attack=attack,
                         series=f"{sum(1 for v in [x + y for x, y in hp] if v <= cap)}/{len(hp)}+"
                                f"{sum(1 for v in [x + y for x, y in ap] if v <= cap)}/{len(ap)}"))
     if cap >= 2:
@@ -225,21 +233,22 @@ def scan(until_h=23, days=0, min_rate=MIN_RATE, verbose=True, line=None, min_mod
         # over two days; the book's price has. Inside the 1.40 cap, 26-27 Sep:
         # 1.25 or shorter 10 of 12 (83%), 1.25-1.40 20 of 26 (77%). Shortest first.
         for r in out:
-            r['window'] = 'short' if r['odds'] <= SHORT_15 else 'fill'
+            r['window'] = 'quiet' if r['attack'] < QUIET_15 else 'busy'
             if r.get('share') is not None and r['share'] < CROSS_COMP:
-                r['window'] = 'fill'                  # read from other competitions (see CROSS_COMP)
-        out.sort(key=lambda r: (r['odds'], -r['model']))
+                r['window'] = 'busy'                  # read from other competitions (see CROSS_COMP)
+        out.sort(key=lambda r: (r['window'] != 'quiet', r['attack'], r['odds']))
     return out
 
 
-SHORT_15 = 1.25          # Under 1.5: priced this or shorter goes on first (see scan)
+SHORT_15 = 1.25          # Under 1.5 short-priced-only slip: this price or shorter (user's slip)
+QUIET_15 = 0.8           # Under 1.5: combined first-half scoring under this is 'quiet' (see scan)
 MIN_LEGS_15 = 30
 MAX_LEGS_15 = 50
 
 
 def pick_15(legs):
-    short = [l for l in legs if l['window'] == 'short']
-    fill = [l for l in legs if l['window'] == 'fill']
+    short = [l for l in legs if l['window'] == 'quiet']
+    fill = [l for l in legs if l['window'] == 'busy']
     out = short[:MAX_LEGS_15]
     if len(out) < MIN_LEGS_15:
         out += fill[:MIN_LEGS_15 - len(out)]
@@ -304,7 +313,8 @@ def combined(until_h=23, days=0):
 # one-breach 88%, cross-comp 85%; Under 1.5 priced 1.25 or shorter 23/27 = 85%
 # (return 1.037), 1.25-1.40 36/51 = 71% (return ~0.95).
 GROUP_RATE = {(2.5, 'clean'): 0.97, (2.5, 'one-breach'): 0.88, (2.5, 'cross-comp'): 0.85,
-              (1.5, 'short'): 0.85, (1.5, 'fill'): 0.71}
+              (1.5, 'short'): 0.85, (1.5, 'fill'): 0.71,
+              (1.5, 'quiet'): 0.87, (1.5, 'busy'): 0.62}     # combined scoring under / over 0.8
 # 3 Oct: and Under 2.5 depends on the price inside each group. Settled 1H Under 2.5
 # legs 26 Sep - 3 Oct: priced 1.10 or less 144/151 = 95%, 1.11 and up 50/59 = 85%;
 # one-breach legs at 1.11+ 13/18 = 72%. HFC v Quick Boys (one-breach, 1.15-1.18)
@@ -455,7 +465,7 @@ def main():
         l25 = scan(until, days, line=2.5, verbose=False)
         _book_line(pick_25(list(l25)), 2.5, 'plain')
         _book_line(pick_15(list(l15)), 1.5, 'keep 30')
-        _book_line([l for l in l15 if l['window'] == 'short'][:50], 1.5, 'short-priced only')
+        _book_line(sorted([l for l in l15 if l['odds'] <= SHORT_15], key=lambda l: l['attack'])[:50], 1.5, 'short-priced only')
         d15 = {l['ids']['eventId']: l for l in l15}
         d25 = {l['ids']['eventId']: l for l in l25}
         for t in targets:
@@ -514,8 +524,8 @@ def main():
     print(f"\n=== 1st Half Under {line}  -  {len(legs)} games, {combo:,.2f}x"
           + (f"  ({nclean} clean, {sum(1 for l in legs if l.get('window') == 'one-breach')} one-breach, "
              f"{sum(1 for l in legs if l.get('window') == 'cross-comp')} cross-comp)" if line >= 2 else
-             f"  ({sum(1 for l in legs if l.get('window') == 'short')} at 1.25 or shorter, "
-             f"{sum(1 for l in legs if l.get('window') == 'fill')} at 1.25-1.40)") + "\n")
+             f"  ({sum(1 for l in legs if l.get('window') == 'quiet')} quiet, "
+             f"{sum(1 for l in legs if l.get('window') == 'busy')} busy)") + "\n")
     for l in legs:
         print(f"   {l['when']}  {l['match'][:34]:34} {l['window']:10} {l['series']:9} count {l['rate']*100:3.0f}%  "
               f"exp {l['lam']:.2f} goals, model {l['model']*100:3.0f}%  @{l['odds']:<5} {l['lg'][:20]}")
