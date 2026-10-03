@@ -465,7 +465,10 @@ def main():
         l25 = scan(until, days, line=2.5, verbose=False)
         _book_line(pick_25(list(l25)), 2.5, 'plain')
         _book_line(pick_15(list(l15)), 1.5, 'keep 30')
-        _book_line(sorted([l for l in l15 if l['odds'] <= SHORT_15], key=lambda l: l['attack'])[:50], 1.5, 'short-priced only')
+        # 3 Oct, user's call: short-priced AND quiet. Real Pilar v Villa Dalmine went on
+        # at 1.22 with the two attacks adding up to 1.43 and was 2:0 at the break.
+        _book_line(sorted([l for l in l15 if l['odds'] <= SHORT_15 and l['attack'] < QUIET_15],
+                          key=lambda l: l['attack'])[:50], 1.5, 'short-priced and quiet')
         d15 = {l['ids']['eventId']: l for l in l15}
         d25 = {l['ids']['eventId']: l for l in l25}
         for t in targets:
