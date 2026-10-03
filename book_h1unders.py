@@ -280,7 +280,14 @@ def combined(until_h=23, days=0):
     for eid in set(l15) | set(l25):
         a, b = l15.get(eid), l25.get(eid)
         if a and b:
-            pick = a if a['model'] * a['odds'] >= b['model'] * b['odds'] else b
+            # 3 Oct: decide on the MEASURED rate of each leg's group, not our model -
+            # the model rates Under 1.5 at 71-93% where the 1.25-1.40 band lands 71%.
+            # Every Under 1.5 loss on 2 Oct (Sao Paulo, Fortaleza, Atletico FC,
+            # Juventude, Independiente) was that band; a fill-band game now takes
+            # Under 2.5, a short-priced quiet game still takes Under 1.5.
+            ra = GROUP_RATE.get((1.5, a['window']), 0.75)
+            rb = GROUP_RATE.get((2.5, b['window']), 0.90)
+            pick = a if ra * a['odds'] >= rb * b['odds'] else b
         else:
             pick = a or b
         pick = dict(pick, line=1.5 if pick is a else 2.5)
@@ -292,11 +299,12 @@ def combined(until_h=23, days=0):
     return high, big
 
 
-# Measured landing rates of each group, 26 Sep - 1 Oct, used to build a mixed slip
-# to a multiplier: Under 2.5 clean 97%, one-breach 88%, cross-comp 85%; Under 1.5
-# priced 1.25 or shorter 83%, 1.25-1.40 77%.
+# Measured landing rates of each group, 26 Sep - 3 Oct, used to choose the line per
+# game in the mixed slip and to build it to a multiplier: Under 2.5 clean 97%,
+# one-breach 88%, cross-comp 85%; Under 1.5 priced 1.25 or shorter 23/27 = 85%
+# (return 1.037), 1.25-1.40 36/51 = 71% (return ~0.95).
 GROUP_RATE = {(2.5, 'clean'): 0.97, (2.5, 'one-breach'): 0.88, (2.5, 'cross-comp'): 0.85,
-              (1.5, 'short'): 0.83, (1.5, 'fill'): 0.77}
+              (1.5, 'short'): 0.85, (1.5, 'fill'): 0.71}
 
 
 def to_target(chosen, target, cap=50):
