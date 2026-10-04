@@ -59,6 +59,14 @@ MAX_DEEP_GAMES = 7
 # All games are weighted equally by the consistency scanner, so a February match
 # was counting as hard as yesterday's. Capping the window fixes that at the source.
 RECENT_WINDOW = 10
+# 4 Oct, user's rule (home at home, away at away): the deep series are the home side's
+# HOME games and the away side's AWAY games only, found within this many most-recent
+# games of the current season. The mixed-venue window (last 10 any venue) was being
+# labelled and read as venue form everywhere downstream: Veles Moscow's 'home' 7 were
+# away, home, away, away, away, home, home - three home games, and Volga Ulyanovsk's
+# three away first halves included a 1-2. Season trimming (SEASON_GAP_DAYS) keeps
+# this from reaching back into last season the way the 4 Aug note above describes.
+VENUE_WINDOW = 16
 # A break longer than this means the games before it belong to a previous season.
 # Used ONLY to stop the consistency scanner counting across the gap - the fixture
 # itself stays bettable. Montana v Nesebar (4 Aug, lost 2-1) built a [4/5+4/5]
@@ -402,7 +410,7 @@ def parse_history(raw):
             # kc lets the consistency scanner tell a season break from a normal
             # week; the parser did not capture it before 4 Aug.
             row = dict(gf=gf, ga=ga, res=res, venue=venue, match_id=match_id,
-                       hg=hg, ag=ag, kc=kc)
+                       hg=hg, ag=ag, kc=kc, friendly=bool(re.search(r'Friendl', _comp, re.I)))
             blocks[blk].append(row)
             if match_id:
                 past_ids[blk].append(match_id)
@@ -711,7 +719,7 @@ def fetch_rich_history(fixture_id, verbose=False, raw=None, with_stats=FETCH_STA
     away_stat_rows  = []
     rejected = 0
 
-    def collect(rows, venue, budget, sink, stat_sink, venue_sink=None):
+    def collect(rows, venue, budget, sink, stat_sink, venue_sink=None, kc_sink=None, window=RECENT_WINDOW):
         """Open up to `budget` of this team's games, validating each summary
         against the scoreline already known from the H2H feed.
 
@@ -722,10 +730,12 @@ def fetch_rich_history(fixture_id, verbose=False, raw=None, with_stats=FETCH_STA
         workable minimum. The split is now applied downstream, where it can fall
         back to the full sample when it would leave too little."""
         nonlocal rejected
-        for row in trim_at_season_gap(rows)[:RECENT_WINDOW]:
+        for row in trim_at_season_gap(rows)[:window]:
             mid = row.get("match_id", "")
             if not mid or (venue is not None and row["venue"] != venue):
                 continue
+            if venue is not None and row.get("friendly"):
+                continue                    # 4 Oct: a pre-season friendly is not venue form
             if len(sink) >= budget:
                 break
             cached = is_cached(f"df_sui_1_{mid}", ttl=48 * 3600)
@@ -734,6 +744,8 @@ def fetch_rich_history(fixture_id, verbose=False, raw=None, with_stats=FETCH_STA
                 sink.append(summary)
                 if venue_sink is not None:
                     venue_sink.append(row["venue"])
+                if kc_sink is not None:
+                    kc_sink.append(row.get("kc"))
                 if with_stats:
                     st = parse_match_stats(mid)
                     if st:
@@ -746,11 +758,13 @@ def fetch_rich_history(fixture_id, verbose=False, raw=None, with_stats=FETCH_STA
 
     # Each team gets its own budget - a home team with few home games used to leave
     # the away team free to burn the whole allowance.
-    home_venues, away_venues = [], []
-    collect(home_rows, None, MAX_DEEP_GAMES, home_deep_stats, home_stat_rows, home_venues)
-    collect(away_rows, None, MAX_DEEP_GAMES, away_deep_stats, away_stat_rows, away_venues)
+    home_venues, away_venues, home_kc, away_kc = [], [], [], []
+    collect(home_rows, "home", MAX_DEEP_GAMES, home_deep_stats, home_stat_rows, home_venues, home_kc, VENUE_WINDOW)
+    collect(away_rows, "away", MAX_DEEP_GAMES, away_deep_stats, away_stat_rows, away_venues, away_kc, VENUE_WINDOW)
     rich["home_game_venues"] = home_venues
     rich["away_game_venues"] = away_venues
+    rich["home_game_kc"] = home_kc
+    rich["away_game_kc"] = away_kc
 
     rich["deep_games"]    = len(home_deep_stats) + len(away_deep_stats)
     rich["deep_rejected"] = rejected

@@ -43,15 +43,19 @@ MAX_PRICE_15 = 1.40      # 27 Sep: at a 1.5 line the BOOK orders the games and o
                          # - the book calling it a coin flip - because the count read 5/7+5/5.
                          # Nothing above this price goes on the Under 1.5 slip.
 MIN_GAMES = 5            # ... over at least this many games each
-# 4 Oct, leak-free (each side's window cut at the leg's own kickoff), 240 settled 1H
-# Under 2.5 legs 26 Sep - 3 Oct: when 40%+ of the two windows' first halves had 2 or
-# more goals, 44/55 = 80% (80% in both halves of the data) against 175/185 = 95% for
-# the rest. No 3-goal half yet, but one goal from the line too often - Temperley v
-# Gimnasia and HFC v Quick Boys. At 1.05-1.15 an 80% leg loses money.
-TWO_GOAL_25 = 0.40
-# Same rows, 94 Under 1.5 legs: combined attack (see scan) 1.1 or more won 12/22 = 55%
-# (64% / 45% by half) against 58/72 = 81% under it. The 0.8 quiet line still orders.
+# 4 Oct, measured on VENUE-ONLY windows (home side's home games, away side's away
+# games, friendlies out, cut at each leg's kickoff) for 341 settled legs 26 Sep - 3 Oct.
+# The deep series had been last-10-any-venue until today (see fetcher_v3.VENUE_WINDOW).
+# Under 1.5, legs with 5+ venue games a side:
+#   combined attack 1.1 or more 9/20 = 45% (40% / 50% by half) v 42/51 = 82%
+#   weaker side's own venue column under 70% 25/40 = 62% (75% / 50%) v 26/31 = 84%
+#   passing both: 24/27 = 89% (86% / 92%)
 BUSY_DROP_15 = 1.1
+MIN_SIDE_15 = 0.70
+# Under 2.5: a '40%+ halves with 2 goals' gate went in on 4 Oct from the mixed-venue
+# series (80% v 95%). On venue windows it is 15/17 = 88% v 129/140 = 92% - nothing -
+# and it was taken out the same day. No venue count, breach count or attack number
+# separates Under 2.5 (89-100% in every band).
 
 
 def poisson_under(lmbda, cap):
@@ -215,7 +219,7 @@ def scan(until_h=23, days=0, min_rate=MIN_RATE, verbose=True, line=None, min_mod
             # 27 Sep, user's call: clean windows first, then one-breach legs to fill.
             # Settled 26-27 Sep: neither side with a 3-goal half 35/36 = 97%, one
             # side with one 29/33 = 88%. Both sides breaching is never taken.
-            if window == 'both-breach' or rate < min_rate or two >= TWO_GOAL_25:
+            if window == 'both-breach' or rate < min_rate:
                 continue
             if window == 'clean' and share is not None and share < CROSS_COMP:
                 window = 'cross-comp'                # clean count, but of other competitions
@@ -229,6 +233,9 @@ def scan(until_h=23, days=0, min_rate=MIN_RATE, verbose=True, line=None, min_mod
             # happens to sit above the book's.
             if odds > MAX_PRICE_15 or model < min_model or attack >= BUSY_DROP_15:
                 continue
+            if min(sum(1 for x, y in hp if x + y <= cap) / len(hp),
+                   sum(1 for x, y in ap if x + y <= cap) / len(ap)) < MIN_SIDE_15 - 1e-9:
+                continue                             # one side's own venue halves too busy
         ts = dt.datetime.fromtimestamp(int(ev['estimateStartTime']) / 1000, tz=A.WAT)
         out.append(dict(ts=ts.timestamp(), when=ts.strftime('%a %H:%M'),
                         match=f"{f['home']} v {f['away']}", lg=f.get('league', ''),
