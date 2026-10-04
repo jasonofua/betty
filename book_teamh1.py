@@ -78,11 +78,21 @@ def scan(until_h=23, days=0):
         hp, ap = h.pairs('h1'), a.pairs('h1')
         if len(hp) < 5 or len(ap) < 5:
             continue
+        # 4 Oct: team Under 1.5 also needs both sides to have 2+ goalless first halves
+        # at their venue. On 315 fresh fixtures (30 Sep - 4 Oct, leak-free) the current
+        # rule went 265/293 = 90% - under the 1.07-1.12 price; with the gate 131/139 =
+        # 94% (96% / 94% by half), without it 134/154 = 87%. Danubio (Cerro Largo's six
+        # away first halves all had a goal) and Montevideo Wanderers (Cerro's home first
+        # halves goalless once in six) both lost at Under 1.5 on 4 Oct. Team Under 0.5
+        # had 13 legs in the same set - too few to set anything.
+        quiet = min(sum(1 for x, y in hp if x + y == 0), sum(1 for x, y in ap if x + y == 0)) >= 2
         mk = team_markets(ev['eventId'])
         if not mk:
             continue
         ts = dt.datetime.fromtimestamp(int(ev['estimateStartTime']) / 1000, tz=A.WAT)
         for line in (0.5, 1.5):
+            if line == 1.5 and not quiet:
+                continue
             cands = []
             for side in ('home', 'away'):
                 if (side, line) not in mk:

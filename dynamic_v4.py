@@ -1296,16 +1296,10 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
                             [f + a for f, a in away_rec.pairs(qkey)]
                     if any(v > _ln for v in _vals):
                         continue
-                # ... and each side needs two goalless first halves at its venue.
-                # 4 Oct, venue windows (home side's home games, away side's away games, cut at
-                # kickoff), 101 settled 1H Under 2.5 games 26 Sep - 4 Oct: when either side had at
-                # most ONE goalless first half in its window, 33/41 = 80% (86% / 78% by half) against
-                # 59/60 = 98% (100% / 96%) for the rest. Under 1.5, 71 games: 10/18 = 56% against
-                # 40/53 = 75%. Cerro Largo's six away first halves all had a goal (0-1, 1-0, 0-1, 0-1,
-                # 0-1, 1-0); Danubio scored two and it was 2-1 at the break on ten codes.
-                if qkey == 'h1' and min(sum(1 for f, a in home_rec.pairs('h1') if f + a == 0),
-                                        sum(1 for f, a in away_rec.pairs('h1') if f + a == 0)) < 2:
-                    continue
+                # (4 Oct: a goalless-half gate went in here and came out the same
+                # night - on 315 fresh fixtures, spotless first-half Under 2.5 legs
+                # won 18/19 with it and 18/19 without. The spotless rule above already
+                # does that work; the gate lives in book_h1unders, where it holds.)
             # HOME-corner unders on a blank-prone home side, banned 21 Aug.
             # Measured on 159 unique corner-under legs: when the home team
             # scores, home-corner unders run 86%; when it blanks, 64% - and the
