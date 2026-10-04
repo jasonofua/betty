@@ -64,11 +64,8 @@ def draw_market(ev, minute):
     return None
 
 
-def main():
-    dry = '--dry' in sys.argv
-    minute = int(sys.argv[sys.argv.index('--minute') + 1]) if '--minute' in sys.argv else 5
-    until = int(sys.argv[sys.argv.index('--until') + 1]) if '--until' in sys.argv else 23
-    days = int(sys.argv[sys.argv.index('--days') + 1]) if '--days' in sys.argv else 0
+def scan(minute=5, until=23, days=0):
+    """Every game whose venue windows were level at the minute mark in every readable match."""
     now = dt.datetime.now(A.WAT); start = now + dt.timedelta(hours=1)
     cut = now.replace(hour=until, minute=0, second=0, microsecond=0)
     if cut <= now:
@@ -104,7 +101,15 @@ def main():
         legs.append(dict(ts=ts.timestamp(), when=ts.strftime('%a %H:%M'), match=f"{f['home']} v {f['away']}",
                          lg=f.get('league', ''), odds=odds, ids=ids, n=f"{len(cols[0])}/{len(cols[0])}+{len(cols[1])}/{len(cols[1])}"))
     legs.sort(key=lambda l: l['ts'])
-    legs = legs[:50]
+    return legs
+
+
+def main():
+    dry = '--dry' in sys.argv
+    minute = int(sys.argv[sys.argv.index('--minute') + 1]) if '--minute' in sys.argv else 5
+    until = int(sys.argv[sys.argv.index('--until') + 1]) if '--until' in sys.argv else 23
+    days = int(sys.argv[sys.argv.index('--days') + 1]) if '--days' in sys.argv else 0
+    legs = scan(minute, until, days)[:50]
     if len(legs) < 2:
         print(f">> only {len(legs)} games qualify - nothing booked"); return
     combo = 1.0
