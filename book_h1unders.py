@@ -43,6 +43,15 @@ MAX_PRICE_15 = 1.40      # 27 Sep: at a 1.5 line the BOOK orders the games and o
                          # - the book calling it a coin flip - because the count read 5/7+5/5.
                          # Nothing above this price goes on the Under 1.5 slip.
 MIN_GAMES = 5            # ... over at least this many games each
+# 4 Oct, leak-free (each side's window cut at the leg's own kickoff), 240 settled 1H
+# Under 2.5 legs 26 Sep - 3 Oct: when 40%+ of the two windows' first halves had 2 or
+# more goals, 44/55 = 80% (80% in both halves of the data) against 175/185 = 95% for
+# the rest. No 3-goal half yet, but one goal from the line too often - Temperley v
+# Gimnasia and HFC v Quick Boys. At 1.05-1.15 an 80% leg loses money.
+TWO_GOAL_25 = 0.40
+# Same rows, 94 Under 1.5 legs: combined attack (see scan) 1.1 or more won 12/22 = 55%
+# (64% / 45% by half) against 58/72 = 81% under it. The 0.8 quiet line still orders.
+BUSY_DROP_15 = 1.1
 
 
 def poisson_under(lmbda, cap):
@@ -201,11 +210,12 @@ def scan(until_h=23, days=0, min_rate=MIN_RATE, verbose=True, line=None, min_mod
         hb = sum(1 for x, y in hp if x + y > cap)      # home halves that broke the line
         ab = sum(1 for x, y in ap if x + y > cap)      # away halves that broke the line
         window = 'clean' if not hb and not ab else 'one-breach' if bool(hb) != bool(ab) else 'both-breach'
+        two = sum(1 for v in tot if v >= 2) / len(tot)   # halves one goal (or less) from 3
         if cap >= 2:
             # 27 Sep, user's call: clean windows first, then one-breach legs to fill.
             # Settled 26-27 Sep: neither side with a 3-goal half 35/36 = 97%, one
             # side with one 29/33 = 88%. Both sides breaching is never taken.
-            if window == 'both-breach' or rate < min_rate:
+            if window == 'both-breach' or rate < min_rate or two >= TWO_GOAL_25:
                 continue
             if window == 'clean' and share is not None and share < CROSS_COMP:
                 window = 'cross-comp'                # clean count, but of other competitions
@@ -217,13 +227,13 @@ def scan(until_h=23, days=0, min_rate=MIN_RATE, verbose=True, line=None, min_mod
             # Sep board, legs at 1.25 or shorter went 7 of 8, 1.25-1.43 went 10 of
             # 13, 1.43+ went 4 of 9 - and that holds whether or not our number
             # happens to sit above the book's.
-            if odds > MAX_PRICE_15 or model < min_model:
+            if odds > MAX_PRICE_15 or model < min_model or attack >= BUSY_DROP_15:
                 continue
         ts = dt.datetime.fromtimestamp(int(ev['estimateStartTime']) / 1000, tz=A.WAT)
         out.append(dict(ts=ts.timestamp(), when=ts.strftime('%a %H:%M'),
                         match=f"{f['home']} v {f['away']}", lg=f.get('league', ''),
                         odds=odds, rate=rate, lam=lam, model=model, ids=ids, window=window, share=share,
-                        attack=attack,
+                        attack=attack, two=two,
                         series=f"{sum(1 for v in [x + y for x, y in hp] if v <= cap)}/{len(hp)}+"
                                f"{sum(1 for v in [x + y for x, y in ap] if v <= cap)}/{len(ap)}"))
     if cap >= 2:
