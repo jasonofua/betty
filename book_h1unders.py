@@ -52,6 +52,13 @@ MIN_GAMES = 5            # ... over at least this many games each
 #   passing both: 24/27 = 89% (86% / 92%)
 BUSY_DROP_15 = 1.1
 MIN_SIDE_15 = 0.70
+# 4 Oct, venue windows (home side's home games, away side's away games, cut at
+# kickoff), 101 settled 1H Under 2.5 games 26 Sep - 4 Oct: when either side had at
+# most ONE goalless first half in its window, 33/41 = 80% (86% / 78% by half) against
+# 59/60 = 98% (100% / 96%) for the rest. Under 1.5, 71 games: 10/18 = 56% against
+# 40/53 = 75%. Cerro Largo's six away first halves all had a goal (0-1, 1-0, 0-1, 0-1,
+# 0-1, 1-0); Danubio scored two and it was 2-1 at the break on ten codes.
+MIN_BLANK_HALVES = 2
 # Under 2.5: a '40%+ halves with 2 goals' gate went in on 4 Oct from the mixed-venue
 # series (80% v 95%). On venue windows it is 15/17 = 88% v 129/140 = 92% - nothing -
 # and it was taken out the same day. No venue count, breach count or attack number
@@ -215,6 +222,8 @@ def scan(until_h=23, days=0, min_rate=MIN_RATE, verbose=True, line=None, min_mod
         ab = sum(1 for x, y in ap if x + y > cap)      # away halves that broke the line
         window = 'clean' if not hb and not ab else 'one-breach' if bool(hb) != bool(ab) else 'both-breach'
         two = sum(1 for v in tot if v >= 2) / len(tot)   # halves one goal (or less) from 3
+        if min(sum(1 for x, y in hp if x + y == 0), sum(1 for x, y in ap if x + y == 0)) < MIN_BLANK_HALVES:
+            continue                                 # a side that almost never has a goalless half (see MIN_BLANK_HALVES)
         if cap >= 2:
             # 27 Sep, user's call: clean windows first, then one-breach legs to fill.
             # Settled 26-27 Sep: neither side with a 3-goal half 35/36 = 97%, one
