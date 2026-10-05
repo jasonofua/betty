@@ -16,7 +16,7 @@ average and the market-implied draw probability is 30-36%.
 
     python3 book_draw_market.py [--dry] [--ratio 1.05]
 """
-import csv, json, os, re, sys, datetime as dt
+import csv, json, os, re, sys, collections, datetime as dt
 import acca as A
 import dynamic_v4 as D
 import fetcher_v2 as F2
@@ -226,7 +226,9 @@ def main():
     # competition (16 Sep, user: real table points, not last season's form)
     import fetcher_v3 as F3
     fxs, paths = [], {}
-    for off in (0, 1):
+    # 5 Oct: cover the whole window - a --days run (the week's pattern scan) had
+    # every game past tomorrow fail as 'no form feed'
+    for off in range(0, max(1, (cut.date() - now.date()).days) + 1):
         fxs += F2.get_fixtures(off)
         cur = None
         for sct in F3.sections(F3.fetch(f'f_1_{off}_1_en-ng_1')):
@@ -275,14 +277,23 @@ def main():
             p['why'] = f"market expects goals: Under 2.5 at {u:.2f}"; continue
         kept.append(p)
     kept.sort(key=lambda p: (-p['f']['imp'], p['gap']))
+    # the cap is a DAY's cap (the pattern was measured on one-day boards); a multi-day
+    # window keeps the top BAND_CAP of each day rather than 12 for the whole week
+    _per = collections.Counter(); _k = []
+    for p in kept:
+        _d = p['ko'].date()
+        if _per[_d] < BAND_CAP:
+            _per[_d] += 1; _k.append(p)
+    kept = _k
+    _cap = len(kept)
     for p in band_picks:
         s, ko, imp = p['s'], p['ko'], p['f']['imp']
-        tag = ("PICK (user's call, Under 2.5 at %.2f)" % p['under'] if p.get('user') else 'PICK (band, table: %d pts/%d v %d pts/%d = %.2f v %.2f a game, Under 2.5 at %.2f)' % (*p['table'], p['ppg'][0], p['ppg'][1], p['under'])) if p in kept[:BAND_CAP] else ('skip: ' + p.get('why', 'over the cap'))
-        if p in kept[:BAND_CAP] and not p.get('user') and on_pattern(p):
+        tag = ("PICK (user's call, Under 2.5 at %.2f)" % p['under'] if p.get('user') else 'PICK (band, table: %d pts/%d v %d pts/%d = %.2f v %.2f a game, Under 2.5 at %.2f)' % (*p['table'], p['ppg'][0], p['ppg'][1], p['under'])) if p in kept[:_cap] else ('skip: ' + p.get('why', 'over the cap'))
+        if p in kept[:_cap] and not p.get('user') and on_pattern(p):
             tag += '  <- PATTERN'
         print(f"  {ko:%a %H:%M}  {'-':3} {s['home'][:22]:22} v {s['away'][:22]:22} sporty {s['ox']:.2f} own implied {imp:.0%}  {tag}")
-    picks += kept[:BAND_CAP]
-    pattern = [p for p in kept[:BAND_CAP] if not p.get('user') and on_pattern(p)]
+    picks += kept[:_cap]
+    pattern = [p for p in kept[:_cap] if not p.get('user') and on_pattern(p)]
     print(f"\n{seen} fixtures matched, {len(picks)} draw singles, {len(pattern)} on the user's pattern (Under 1.38 or 1.50, 1.41-1.43 at gap 0.13, or 1.29 at gap 0.00)" + (' (dry run)' if dry else ''))
     if dry or not picks:
         return

@@ -32,7 +32,7 @@ Usage: python3 acca.py            # full run + books a code per day/time bucket
        python3 acca.py --dry --limit 60
        python3 acca.py --only AFTERNOON,EVENING,NIGHT
 """
-import os, sys, time, json, re, urllib.request, urllib.error
+import os, sys, time, json, re, urllib.request, urllib.error, urllib.parse
 from math import exp as mexp, factorial
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
@@ -113,6 +113,13 @@ def log_booking(code, url, label, legs):
     sessions - no need to paste the games back. legs = [(ts, match, label, odds, stat_lines)];
     stat_lines (from stat_block) is optional but always passed by the booking scripts."""
     if not code: return
+    path = os.environ.get('BOOKINGS_PATH') or os.path.join(os.path.dirname(os.path.abspath(__file__)), 'bookings.md')
+    try:
+        already = f"code {code}" in open(path, encoding='utf-8', errors='replace').read()
+    except OSError:
+        already = False
+    if not already:
+        _push_code(code, url, label, legs)
     out = [f"\n## {datetime.now(WAT):%Y-%m-%d %H:%M} WAT  |  {label}  |  code {code}"]
     if url: out.append(url)
     for lg in legs:
@@ -120,7 +127,31 @@ def log_booking(code, url, label, legs):
         out.append(f"- {datetime.fromtimestamp(ts, tz=WAT):%a %H:%M}  {match}  -  {lab} @{odds:.2f}")
         if len(lg) > 4 and lg[4]:                                  # the full per-pick stat block
             out += [f"    {line}" for line in lg[4]]
-    open(os.environ.get('BOOKINGS_PATH') or os.path.join(os.path.dirname(os.path.abspath(__file__)), 'bookings.md'), 'a', encoding='utf-8').write("\n".join(out) + "\n")
+    open(path, 'a', encoding='utf-8').write("\n".join(out) + "\n")
+
+
+def _push_code(code, url, label, legs):
+    """5 Oct, user's call: every booked code goes straight to Telegram (TELEGRAM_TOKEN +
+    TELEGRAM_CHAT, both set on Railway) - the 09:22 draw slip VUHFB5 went 3 of 3 at
+    25.2x and was never shown. Once per code; a push failure never stops a booking."""
+    tok, chat = os.environ.get('TELEGRAM_TOKEN', '').strip(), os.environ.get('TELEGRAM_CHAT', '').strip()
+    if not tok or not chat:
+        return
+    try:
+        combo = 1.0
+        for lg in legs:
+            combo *= float(lg[3])
+        lines = [f"NEW CODE {code}  -  {combo:,.2f}x, {len(legs)} legs", label, url or '']
+        for lg in sorted(legs, key=lambda x: x[0]):
+            lines.append(f"{datetime.fromtimestamp(lg[0], tz=WAT):%a %H:%M}  {lg[1]}  -  {lg[2]} @{float(lg[3]):.2f}")
+        text = "\n".join(l for l in lines if l)
+        for i in range(0, len(text), 3500):
+            data = urllib.parse.urlencode({'chat_id': chat, 'text': text[i:i + 3500],
+                                           'disable_web_page_preview': 'true'}).encode()
+            urllib.request.urlopen(urllib.request.Request(
+                f"https://api.telegram.org/bot{tok}/sendMessage", data=data), timeout=20).read()
+    except Exception as e:
+        print(f"telegram push failed for {code}: {type(e).__name__}", flush=True)
 
 def fetch_events_full():
     """Full bettable market menu per event (1X2, DC, O/U ladder, GG/NG) in one paged walk."""
