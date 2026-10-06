@@ -82,6 +82,8 @@ def main():
     until = int(sys.argv[sys.argv.index('--until') + 1]) if '--until' in sys.argv else 23
     days = int(sys.argv[sys.argv.index('--days') + 1]) if '--days' in sys.argv else 0
     now = dt.datetime.now(A.WAT); start = now + dt.timedelta(hours=1)   # standing rule: an hour out
+    if '--from' in sys.argv:                    # --from HH: only games from that hour on (e.g. one kickoff block)
+        start = max(start, now.replace(hour=int(sys.argv[sys.argv.index('--from') + 1]), minute=0, second=0, microsecond=0) - dt.timedelta(seconds=1))
     cut = now.replace(hour=until, minute=59, second=59, microsecond=0)
     if cut <= now:
         cut += dt.timedelta(days=1)
