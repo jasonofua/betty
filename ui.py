@@ -336,6 +336,19 @@ def scheduler():
                             BA.ladder_for('today')
                         except Exception as e:
                             print(f'scheduler every-game ladder: {type(e).__name__}: {e}', flush=True)
+                    elif path == '/api/onemarket':
+                        # 9 Oct: one market per code to a target on the book's own numbers (book_onemarket) -
+                        # draw after 5 minutes, 0-0 at 10 minutes, 1H Over 0.5, 1H Under 2.5
+                        args = ['book_onemarket.py', '--until', str(body.get('until', 23)),
+                                '--markets', ','.join(body['markets']),
+                                '--targets', ','.join(str(t) for t in body.get('targets', [300]))]
+                        if body.get('max'):
+                            args += ['--max', ','.join(body['max'])]
+                        script_job('onemarket', args, 'one market to a target (scheduled)')
+                        try:
+                            BA.ladder_for('today')
+                        except Exception as e:
+                            print(f'scheduler one-market ladder: {type(e).__name__}: {e}', flush=True)
                     elif path == '/api/run':
                         run_job(float(body.get('target', 50)), int(body['until']), int(body.get('days', 0)), False,
                                 bool(body.get('rollover')), 'composite', bool(body.get('maxodds')),
