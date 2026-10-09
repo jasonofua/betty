@@ -19,7 +19,7 @@ _lock = threading.Lock()
 _grade_cache = {}          # code -> (ts, result)
 _book_cache = {'sig': None, 'val': []}
 
-PRODUCTS = ['Live', 'Winners', 'Draws', 'Half-time draw', 'Points sports', 'Max odds', 'All games', 'Bet of the day', 'Rollover', 'By market']
+PRODUCTS = ['Live', 'Winners', 'Draws', 'Half-time draw', 'Points sports', 'Max odds', 'Every game', 'All games', 'Bet of the day', 'Rollover', 'By market']
 SPORT_LABEL = {'american football': 'American football', 'nfl': 'American football', 'ncaa': 'American football',
                'basketball': 'Basketball', 'ice hockey': 'Ice hockey', 'hockey': 'Ice hockey', 'handball': 'Handball'}
 
@@ -55,6 +55,8 @@ def product_of(label):
         return 'Rollover'
     if l.startswith('one market:'):
         return 'By market'
+    if l.startswith('every game'):        # 9 Oct: book_allgames - one pick on every game, plus the 2k+ target codes
+        return 'Every game'
     if sport_of(label):
         return 'Points sports'
     if 'winner' in l:                 # before 'draw': "3+ venue draws -> double chance" is a winners slip
@@ -670,8 +672,8 @@ def nest_code(code, target):
         target = float(target)
     except (TypeError, ValueError):
         return dict(error='target must be a number')
-    if target < 1.5 or target > 5000:
-        return dict(error='target must be between 1.5 and 5000')
+    if target < 1.5 or target > 10000:
+        return dict(error='target must be between 1.5 and 10000')
     if target == int(target):
         target = int(target)
     key = f"{code}:{target:g}"
@@ -732,7 +734,7 @@ def nest_code(code, target):
     return res
 
 
-LADDER = [3, 5, 10, 25, 50, 100]
+LADDER = [3, 5, 10, 25, 50, 100, 2000, 5000, 10000]     # 9 Oct, user: "I need 2k odds upwards too"
 
 
 def build_ladder(code):
@@ -774,6 +776,13 @@ def ladder_for(day='today', build=True):
                     rungs[t] = r
                 else:
                     break
+        # 9 Oct: a base slip booked AT a high multiplier (the every-game 2,000x / 5,000x /
+        # 10,000x codes) is that rung itself - no rung can be cut from it at its own odds
+        for t in LADDER:
+            if t >= 1000 and t not in rungs and d['odds'] and t * 0.95 <= d['odds'] <= t * 1.5:
+                rungs[t] = dict(code=c['code'], url=c['url'], odds=d['odds'], target=t,
+                                first=f"{d['legs'][0]['day']} {d['legs'][0]['ko']}",
+                                legs=[dict(match=l['match'], sel=l['sel'], price=l['price'], ko=f"{l['day']} {l['ko']}") for l in d['legs']])
         # the rungs carry the live state of their legs from the graded base slip
         bykey = {_key(l['match'].split(' v ')[0])[:10]: l for l in d['legs']}
         for r in rungs.values():
@@ -804,7 +813,7 @@ def combined_code(slot='am'):
     for c in parse_bookings():
         if _day_of(c['when']) != today or c['nested_from'] or c['superseded_by'] or not c['legs']:
             continue
-        if c['product'] in ('Live', 'All games'):
+        if c['product'] in ('Live', 'All games', 'Every game'):
             continue
         g = graded(c['code'], force=True)
         for l in g.get('legs') or []:
@@ -935,7 +944,7 @@ def best_of_day(dry=False):
     for c in parse_bookings():
         if _day_of(c['when']) != today or c['nested_from'] or c['superseded_by'] or not c['legs']:
             continue
-        if c['product'] in ('Live', 'All games', 'Bet of the day', 'Rollover', 'By market'):
+        if c['product'] in ('Live', 'All games', 'Bet of the day', 'Rollover', 'By market', 'Every game'):
             continue
         graded(c['code'], force=True)
         for l in decorate(c)['legs']:
@@ -1065,7 +1074,7 @@ def rollover_of_day(dry=False):
     for c in parse_bookings():
         if _day_of(c['when']) != today or c['nested_from'] or c['superseded_by'] or not c['legs']:
             continue
-        if c['product'] in ('Live', 'All games', 'Bet of the day', 'Rollover', 'By market'):
+        if c['product'] in ('Live', 'All games', 'Bet of the day', 'Rollover', 'By market', 'Every game'):
             continue
         graded(c['code'], force=True)
         for l in decorate(c)['legs']:
@@ -1228,6 +1237,11 @@ RULES = [
          plain="Instead of one slip mixing an Over with a handicap and a double chance, every slip carries a single option repeated across the board: all the Over 1.5 games on one code, all the first-half Over 0.5 games on another, all the second-half Under 2.5 games on a third. Football only. Each match is still scored on its own two teams' records and contributes only the options that record backs, so a game appears on a slip because it earned that option, not because the slip needed filling. Any option two or more matches support becomes its own code, one leg per match, up to fifty legs.",
          thresholds=[dict(k='Sports', v='football only'), dict(k='Games per market', v='two or more'), dict(k='Legs per match', v='one'), dict(k='Slip cap', v='50 legs'), dict(k='Runs at', v='09:58, games until 23:00')],
          measured="The legs come from the same evaluator as Max odds - each outcome scored against the home side's home games and the away side's away games, ranked by support, with the same family bans and cushion gates."),
+    dict(product='Every game', tag='one pick on every football game',
+         plain="Every football game from an hour after the run to midnight gets one pick: the option SportyBet itself makes most likely (its price with the margin taken out), at 1.15 or more so no leg is a 1.01. No form is read first - the book's pick won what its price said on 38,716 matches, and PW6EAL went 39 of 43 on it. The picks are split by kickoff into codes of up to 50 games. From the same picks, three more codes are booked at 2,000x, 5,000x and 10,000x: for each, the set of games that reaches it with the highest chance of every leg landing on the book's own numbers.",
+         thresholds=[dict(k='Sports', v='football only'), dict(k='Price floor', v='1.15'), dict(k='Markets', v='1X2, double chance, full-time / first-half / second-half totals (.5 lines), GG/NG'),
+                     dict(k='Codes', v='up to 50 games each, split by kickoff'), dict(k='Target codes', v='2,000x, 5,000x, 10,000x'), dict(k='Runs at', v='10:22, after the rest of the morning set')],
+         measured="Hand-booked since 6 Oct: book-pick legs won 86 of 102 (84%) against the book's 77%. Target codes are new on 9 Oct."),
     dict(product='Max odds', tag='composite engine',
          plain="The goal-and-stats accumulator: over and unders, team totals, corners, bookings, shots, offsides, fouls, saves, and half markets. Cushion gates and blank-rate tables decide what goes on, family bans stop correlated legs, and the daily rollover follows the biggest slip that lands one time in three.",
          thresholds=[dict(k='Modes', v='strict, unders-only, goals-only, target odds, rollover'), dict(k='Highest price on a leg', v='1.35'), dict(k='Stat Under cushion', v='line above the sample max'), dict(k='Stat Over cushion', v='line below the sample min'),
@@ -1236,6 +1250,7 @@ RULES = [
 ]
 
 CHANGELOG = [
+    dict(date='9 Oct', txt="New product, Every game: one pick on every football game (the book's most likely option at 1.15+), booked by the server at 10:22 in codes of up to 50 games, plus the best-chance 2,000x, 5,000x and 10,000x codes from the same picks. The Codes page odds bar gains 2k, 5k and 10k. Until now the morning set only carried the games that cleared each product's form gates - 18 of about 140 on 9 Oct - so most rungs topped out near 3x."),
     dict(date='6 Oct', txt="'Every game' slips (one pick per game) now take the option the book itself makes most likely at 1.15 or more, not the option with the best venue record. On 5 Oct the record-picked legs won 15 of 25 and the price-picked legs 31 of 36. Tested on 38,716 priced matches 2021-26 with venue windows cut at kickoff: the highest venue rate won 71.3%, the book's most likely option 75.0%, and every rule won what the book's price said to within a point on both halves of the data - including picks where the record claimed 10+ points more than the book (69.5% won, book 69.7%). Script: book_allgames.py; only .5 lines, so no leg can push."),
     dict(date='5 Oct', txt="Every booked code now goes straight to Telegram the moment it books - code, multiplier and every leg - once per code, from every product (scheduled morning runs, the draw slip, rollover, by-market, first-half Unders, anything booked by hand). The 09:22 draw slip VUHFB5 went 3 of 3 at 25.2x on 4 Oct and was never shown. The draw scanner can also cover several days now (fixtures for the whole window, the 12-game cap applied per day)."),
     dict(date='4 Oct', txt="Tested tonight on 315 fresh fixtures - every finished game in our leagues 30 Sep - 4 Oct, none of them booked, venue windows cut at kickoff. The first-half Under 2.5 goalless gate is confirmed on games it never saw: kept 71 of 73 (97%), dropped 64 of 82 (78%), the same on both halves. At first-half Under 1.5 it added nothing once the attack and column rules are on (the games it dropped won 11 of 12), and in the by-market engine's spotless Under 2.5 it changed nothing (18 of 19 either way) - removed from both, so those slips keep their legs. Team first-half Under 1.5 now needs the gate too: 265 of 293 (90%) before, below its 1.07-1.12 price; 131 of 139 (94%) with it, 96% and 94% on the two halves; 134 of 154 (87%) for the games it drops. That takes out Danubio and Montevideo Wanderers, both lost today. Handball totals could not be tested: Flashscore's history feed for a finished handball game holds only a stub, so nothing is changed there."),
@@ -1520,6 +1535,11 @@ SCHEDULE = [
     ('10:07', 'h1-under-best-line', '/api/h1unders', dict(until=23, days=0, combined=True)),
     ('10:12', 'bet-of-the-day', '/api/best', dict()),
     ('10:18', 'rollover', '/api/roll', dict()),
+    # 9 Oct, user: "I can't be always having 3x" / "I need 2k odds upwards too". Every
+    # football game, the book's most likely option at 1.15+ (PW6EAL), in codes of up
+    # to 50, plus the best-chance 2,000x / 5,000x / 10,000x codes from the same picks.
+    # Last, so the merged code, bet of the day and rollover are built as before.
+    ('10:22', 'every-game', '/api/allgames', dict(until=23, targets=[2000, 5000, 10000])),
     # 18 Sep, user: one set a day - the morning. The 16:35 / 16:50 / 17:10 evening
     # runs (games until 06:00) are gone; an evening code is booked only when asked.
 ]

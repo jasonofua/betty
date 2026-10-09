@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """EVERY GAME, ONE PICK EACH - the option the book itself makes most likely.
 
-  python3 book_allgames.py [--until HH] [--days N] [--floor 1.15] [--dry]
+  python3 book_allgames.py [--until HH] [--days N] [--floor 1.15] [--targets 2000,...] [--dry]
 
 6 Oct, measured. The hand-read slips on 5 Oct picked each game's option by its
 venue record (the highest rate of ~14 options on 5-7 games a side): those legs won
@@ -17,13 +17,63 @@ the venue record adds nothing to the price in either direction on these markets,
 and ranking by it chooses lower-chance legs. So each game takes the option with the
 highest no-margin chance at a price of at least --floor (default 1.15, so a leg is
 never a 1.01), and the slip is split into codes of at most 50 legs.
+
+9 Oct, user's call ("I need 2k odds upwards"): --targets books one more code per
+multiplier from the same picks - the set of games that reaches the target with the
+highest chance of every leg landing on the book's own numbers (exact, see to_target).
+It takes the longer prices among the picks: a leg's margin is paid per leg, so
+fewer legs at longer prices reach the same multiplier at a better chance (WCH45X).
 """
-import sys, datetime as dt
+import sys, math, datetime as dt
 import os as _o; sys.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
 import acca as A
 import book_v3 as B
 
 MAX_LEGS = 50
+
+
+def to_target(legs, target, cap=MAX_LEGS):
+    """The legs whose prices multiply to at least `target` with the highest product of
+    book chances: a knapsack on log-odds. Prices sit on a grid, so the bar is raised a
+    step at a time until the chosen legs clear the target at their real prices. None
+    when every leg together falls short."""
+    if math.prod(l['odds'] for l in legs) < target:
+        return None
+    T0 = round(math.log(target) * 1000)
+    for extra in range(0, 400):
+        pick = _knapsack(legs, T0 + extra)
+        if pick is None:
+            return None
+        if math.prod(l['odds'] for l in pick) >= target:
+            return sorted(pick, key=lambda l: l['ts']) if len(pick) <= cap else None
+    return None
+
+
+def _knapsack(legs, T, R=1000):
+    NEG = -1e18
+    if sum(round(math.log(l['odds']) * R) for l in legs) < T:
+        return None
+    dp = [0.0] + [NEG] * T                       # dp[c]: best sum of log-chances at log-odds bucket c (capped at T)
+    took = []
+    for l in legs:
+        a, b = round(math.log(l['odds']) * R), math.log(l['chance'])
+        nxt, mark = dp[:], [False] * (T + 1)
+        for c in range(T + 1):
+            if dp[c] > NEG:
+                nc = min(T, c + a)
+                if dp[c] + b > nxt[nc]:
+                    nxt[nc] = dp[c] + b; mark[nc] = True
+        took.append((mark, dp)); dp = nxt
+    c, out = T, []
+    for i in range(len(legs) - 1, -1, -1):
+        mark, prev = took[i]
+        if not mark[c]:
+            continue
+        l = legs[i]; a, b = round(math.log(l['odds']) * R), math.log(l['chance'])
+        c = next(pc for pc in ([c - a] if c < T else range(max(0, T - a), T + 1)) if pc >= 0 and prev[pc] > NEG
+                 and abs(prev[pc] + b - (took[i + 1][1][c] if i + 1 < len(legs) else dp[c])) < 1e-9)
+        out.append(l)
+    return out
 TWO_WAY = (('Over/Under', 'Over', 'Under'), ('1st Half - Over/Under', 'Over', 'Under'),
            ('2nd Half - Total', 'Over', 'Under'))
 
@@ -81,6 +131,8 @@ def main():
     floor = float(sys.argv[sys.argv.index('--floor') + 1]) if '--floor' in sys.argv else 1.15
     until = int(sys.argv[sys.argv.index('--until') + 1]) if '--until' in sys.argv else 23
     days = int(sys.argv[sys.argv.index('--days') + 1]) if '--days' in sys.argv else 0
+    targets = ([float(t) for t in sys.argv[sys.argv.index('--targets') + 1].split(',') if t.strip()]
+               if '--targets' in sys.argv else [])
     now = dt.datetime.now(A.WAT); start = now + dt.timedelta(hours=1)   # standing rule: an hour out
     if '--from' in sys.argv:                    # --from HH: only games from that hour on (e.g. one kickoff block)
         start = max(start, now.replace(hour=int(sys.argv[sys.argv.index('--from') + 1]), minute=0, second=0, microsecond=0) - dt.timedelta(seconds=1))
@@ -106,20 +158,25 @@ def main():
     if len(parts) > 1:                                  # balance the parts instead of 50 + a stub
         k = len(parts); size = -(-len(legs) // k)
         parts = [legs[i:i + size] for i in range(0, len(legs), size)]
-    for n, part in enumerate(parts, 1):
-        combo = 1.0
-        for l in part:
-            combo *= l['odds']
-        print(f"\n=== part {n}: {len(part)} games, {combo:,.2f}x, book chance of every leg landing {pow(10, sum(__import__('math').log10(l['chance']) for l in part)):.2%}")
+    slips = [(f"part {n}", part, f"the highest of this game's options at {floor}+") for n, part in enumerate(parts, 1)]
+    for t in targets:
+        pick = to_target(legs, t)
+        if not pick:
+            print(f"\n=== {t:,.0f}x target: the {len(legs)} picks cannot reach it within {MAX_LEGS} games - not booked")
+            continue
+        slips.append((f"{t:,.0f}x target", pick, f"one of the {len(pick)} picks reaching {t:,.0f}x with the highest chance of all landing"))
+    for name, part, why in slips:
+        combo = math.prod(l['odds'] for l in part)
+        print(f"\n=== {name}: {len(part)} games, {combo:,.2f}x, book chance of every leg landing {math.prod(l['chance'] for l in part):.2%}")
         for l in part:
             print(f"   {dt.datetime.fromtimestamp(l['ts'], tz=A.WAT):%a %H:%M}  {l['match'][:42]:42} {l['sel'][-30:]:30} @{l['odds']:<5} book {l['chance']:.0%}")
         if dry or len(part) < 2:
             continue
         bk = A.book([l['ids'] for l in part])
         if bk and bk.get('code'):
-            print(f"\n   >> CODE {bk['code']}   {bk['url']}")
-            A.log_booking(bk['code'], bk['url'], f"every game, the book's most likely option at {floor}+ - part {n} - {combo:,.2f}x ({len(part)} games)",
-                          [(l['ts'], l['match'], l['sel'], l['odds'], [f"book's no-margin chance {l['chance']:.0%} - the highest of this game's options at {floor}+"]) for l in part])
+            print(f"\n   >> code {bk['code']}   {bk['url']}")          # lower case: the server's job log reads 'code XXXXXX'
+            A.log_booking(bk['code'], bk['url'], f"every game, the book's most likely option at {floor}+ - {name} - {combo:,.2f}x ({len(part)} games)",
+                          [(l['ts'], l['match'], l['sel'], l['odds'], [f"book's no-margin chance {l['chance']:.0%} - {why}"]) for l in part])
         else:
             print(f"   >> booking failed: {bk.get('msg') if bk else 'no selections'}")
 

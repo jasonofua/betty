@@ -325,6 +325,17 @@ def scheduler():
                         args = ['book_bymarket.py', '--until', str(body.get('until', 23)),
                                 '--days', str(body.get('days', 0))]
                         script_job('bymarket', args, 'one market per slip (scheduled)')
+                    elif path == '/api/allgames':
+                        # 9 Oct: every game, the book's most likely option (book_allgames), plus the
+                        # 2k+ target codes; the Codes page rungs are built straight after, not on first load
+                        args = ['book_allgames.py', '--until', str(body.get('until', 23))]
+                        if body.get('targets'):
+                            args += ['--targets', ','.join(str(t) for t in body['targets'])]
+                        script_job('allgames', args, 'every game (scheduled)')
+                        try:
+                            BA.ladder_for('today')
+                        except Exception as e:
+                            print(f'scheduler every-game ladder: {type(e).__name__}: {e}', flush=True)
                     elif path == '/api/run':
                         run_job(float(body.get('target', 50)), int(body['until']), int(body.get('days', 0)), False,
                                 bool(body.get('rollover')), 'composite', bool(body.get('maxodds')),
