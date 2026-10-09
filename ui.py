@@ -344,6 +344,8 @@ def scheduler():
                                 '--targets', ','.join(str(t) for t in body.get('targets', [300]))]
                         if body.get('max'):
                             args += ['--max', ','.join(body['max'])]
+                        if body.get('short'):
+                            args += ['--short', ','.join(body['short'])]
                         script_job('onemarket', args, 'one market to a target (scheduled)')
                         try:
                             BA.ladder_for('today')

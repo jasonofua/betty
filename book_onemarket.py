@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ONE MARKET TO A TARGET - one option on every game that offers it, on the book's own numbers.
 
-  python3 book_onemarket.py --markets d5,g10,h1o05,h1u25 [--targets 300] [--max d5] [--until HH] [--dry]
+  python3 book_onemarket.py --markets d5,g10,h1o05,h1u25 [--targets 300] [--max d5,g10] [--short g10] [--until HH] [--dry]
 
 9 Oct, user's call for Saturday: "the 5 mins draw up to 300x and above and 10 mins
 draw too, and other options that you see are playing well". Settled legs since
@@ -18,7 +18,9 @@ Each market takes every game in the window that offers it, priced by the book's
 no-margin chance (the option's share of its own market). For each --targets
 multiplier the code is the set of games reaching it with the highest chance of
 every leg landing (book_allgames.to_target, exact, at most 50). --max also books
-the 50 longest prices of a market - the most the board allows on one code.
+the 50 longest prices of a market - the most the board allows on one code - and
+--short the 50 most likely (9 Oct, user: "book the shortest and the longest 50"
+of the 10-minute draw).
 """
 import sys, math, datetime as dt
 import os as _o; sys.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
@@ -85,7 +87,7 @@ def book(key, name, part, why, dry):
         print(f"   >> booking failed: {bk.get('msg') if bk else 'no selections'}")
 
 
-def run(keys, targets, maxkeys, start, cut, dry):
+def run(keys, targets, maxkeys, start, cut, dry, shortkeys=()):
     evs = board(sorted({MARKETS[k]['mid'] for k in keys}), start, cut)
     print(f"window {start:%a %H:%M} -> {cut:%a %H:%M}")
     for key in keys:
@@ -97,6 +99,9 @@ def run(keys, targets, maxkeys, start, cut, dry):
                 print(f"=== {t:,.0f}x: the {len(legs)} games cannot reach it within {MAX_LEGS} - not booked")
                 continue
             book(key, f"{t:,.0f}x target", pick, f"one of the {len(pick)} games reaching {t:,.0f}x with the highest chance of all landing", dry)
+        if key in shortkeys and len(legs) >= 2:
+            top = sorted(sorted(legs, key=lambda l: (-l['chance'], -l['odds']))[:MAX_LEGS], key=lambda l: l['ts'])
+            book(key, f"the {len(top)} most likely", top, f"among the {len(top)} most likely on the board", dry)
         if key in maxkeys and len(legs) >= 2:
             top = sorted(sorted(legs, key=lambda l: -l['odds'])[:MAX_LEGS], key=lambda l: l['ts'])
             book(key, f"the {len(top)} longest prices", top, f"among the {len(top)} longest prices on the board", dry)
@@ -107,12 +112,13 @@ def main():
     keys = [k for k in arg('--markets', 'd5').split(',') if k in MARKETS]
     targets = [float(t) for t in arg('--targets', '300').split(',') if t.strip()]
     maxkeys = [k for k in arg('--max', '').split(',') if k]
+    shortkeys = [k for k in arg('--short', '').split(',') if k]
     until = int(arg('--until', 23))
     now = dt.datetime.now(A.WAT); start = now + dt.timedelta(hours=1)   # standing rule: an hour out
     cut = now.replace(hour=until, minute=59, second=59, microsecond=0)
     if cut <= now:
         cut += dt.timedelta(days=1)
-    run(keys, targets, maxkeys, start, cut, '--dry' in sys.argv)
+    run(keys, targets, maxkeys, start, cut, '--dry' in sys.argv, shortkeys)
 
 
 if __name__ == '__main__':
