@@ -32,6 +32,7 @@ import acca as A
 import book_v3 as B
 import dynamic_v4 as D
 import fetcher_v2 as F2
+import findings as FD
 
 LINE = 2.5
 MIN_RATE = 0.90          # the count bar, used at 2.5 where the count orders correctly
@@ -196,10 +197,14 @@ def scan(until_h=23, days=0, min_rate=MIN_RATE, verbose=True, line=None, min_mod
     if verbose:
         print(f"window {start:%a %H:%M} -> {cut:%a %H:%M}  |  sportybet {len(evs)}  joined {len(pairs)}", flush=True)
     out = []
+    if FD.active():
+        FD.prepare([ev for ev, _f, _s in pairs])
     for ev, f, _s in pairs:
         got = under_market(ev, line)
         if not got:
             continue
+        if not FD.ok(ev, '68', f'total={line}', f'Under {line}')[0]:
+            continue                                 # 10 Oct: the winners' finding (findings.py)
         gap = venue_gap(f['id'], int(f['ts']))
         if gap is None or gap > SEASON_GAP_DAYS:
             continue                                 # off-season window, see SEASON_GAP_DAYS

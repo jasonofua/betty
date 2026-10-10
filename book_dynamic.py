@@ -18,6 +18,7 @@ import sys, datetime as dt, collections
 
 import os as _o; sys.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
 import acca as A
+import findings as FD
 import book_v3 as B
 import fetcher_v2 as F2
 import dynamic_v4 as D
@@ -70,6 +71,8 @@ def build(until_h=10, floor=None, verbose=True, days=0, cap=None, all_options=Fa
         print(f"sportybet in window {len(evs)}  |  joined to flashscore {len(pairs)}", flush=True)
 
     board, st = [], collections.Counter()
+    if FD.active():
+        FD.prepare([ev for ev, _f, _s in pairs])
     for ev, f, _s in pairs:
         h, a = D.records_for(f['id'])
         if not h or not h.quantities() or not a.quantities():
@@ -83,6 +86,9 @@ def build(until_h=10, floor=None, verbose=True, days=0, cap=None, all_options=Fa
         D.set_league(f.get('league'))
         picks = (D.every_option(ev.get('markets') or [], h, a, **kw) if all_options
                  else D.best_three(ev.get('markets') or [], h, a, **kw))
+        if picks and FD.active():
+            # 10 Oct, user: every game booked today follows the winners' finding (findings.py)
+            picks = [p for p in picks if FD.ok(ev, p['mid'], p['spec'], A._desc_of(p['mid'], p['oid'], p['spec']) or '')[0]]
         if not picks:
             st['nothing supported'] += 1
             continue

@@ -28,6 +28,7 @@ import sys, math, datetime as dt
 import os as _o; sys.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
 import acca as A
 import book_v3 as B
+import findings as FD
 
 MAX_LEGS = 50
 
@@ -144,14 +145,19 @@ def main():
            if start < dt.datetime.fromtimestamp(int(e.get('estimateStartTime', 0)) / 1000, tz=A.WAT) <= cut
            and 'SRL' not in (e.get('homeTeamName') or '')]                 # simulated games have no real form
     legs, none = [], []
+    if FD.active():
+        FD.prepare(evs)
     for ev in evs:
         c = [x for x in candidates(ev) if x[1] >= floor]
+        # 10 Oct, user: every game booked today follows the winners' finding - the
+        # book's most likely option among those the match's own record backs.
+        c = [x + (FD.ok(ev, x[5]['marketId'], x[3], x[4])[1],) for x in c if FD.ok(ev, x[5]['marketId'], x[3], x[4])[0]]
         if not c:
             none.append(f"{ev['homeTeamName']} v {ev['awayTeamName']}"); continue
-        chance, price, mname, spec, desc, ids = max(c, key=lambda x: (round(x[0], 3), x[1]))
+        chance, price, mname, spec, desc, ids, rec = max(c, key=lambda x: (round(x[0], 3), x[1]))
         ts = int(ev['estimateStartTime']) / 1000
         legs.append(dict(ts=ts, match=f"{ev['homeTeamName']} v {ev['awayTeamName']}",
-                         sel=f"{mname} / {desc}", odds=price, chance=chance, ids=ids))
+                         sel=f"{mname} / {desc}", odds=price, chance=chance, ids=ids, rec=rec))
     legs.sort(key=lambda l: l['ts'])
     print(f"window {start:%a %H:%M} -> {cut:%a %H:%M}  |  {len(evs)} games, {len(legs)} picked, {len(none)} with nothing at {floor}+")
     parts = [legs[i:i + MAX_LEGS] for i in range(0, len(legs), MAX_LEGS)]
@@ -176,7 +182,8 @@ def main():
         if bk and bk.get('code'):
             print(f"\n   >> code {bk['code']}   {bk['url']}")          # lower case: the server's job log reads 'code XXXXXX'
             A.log_booking(bk['code'], bk['url'], f"every game, the book's most likely option at {floor}+ - {name} - {combo:,.2f}x ({len(part)} games)",
-                          [(l['ts'], l['match'], l['sel'], l['odds'], [f"book's no-margin chance {l['chance']:.0%} - {why}"]) for l in part])
+                          [(l['ts'], l['match'], l['sel'], l['odds'], [f"book's no-margin chance {l['chance']:.0%} - {why}"]
+                            + ([f"match record backs it: {l['rec']}"] if FD.active() else [])) for l in part])
         else:
             print(f"   >> booking failed: {bk.get('msg') if bk else 'no selections'}")
 

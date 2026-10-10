@@ -27,6 +27,7 @@ import os as _o; sys.path.insert(0, _o.path.dirname(_o.path.abspath(__file__)))
 import acca as A
 import book_v3 as B
 import book_allgames as G
+import findings as FD
 
 MAX_LEGS = 50
 MARKETS = {
@@ -51,9 +52,12 @@ def legs_for(key, evs):
             o = {x.get('desc'): x for x in m.get('outcomes') or [] if x.get('isActive', 1)}
             if not all(k in o for k in (mk['want'],) + mk['other']):
                 continue
+            fits, rec = FD.ok(ev, m['id'], m.get('specifier'), mk['want'])
+            if not fits:
+                break                                    # 10 Oct: the match's record has to back the option (findings.py)
             p = {k: 1 / float(o[k]['odds']) for k in (mk['want'],) + mk['other']}
             out.append(dict(ts=int(ev['estimateStartTime']) / 1000, match=f"{ev['homeTeamName']} v {ev['awayTeamName']}",
-                            sel=mk['sel'], odds=float(o[mk['want']]['odds']), chance=p[mk['want']] / sum(p.values()),
+                            sel=mk['sel'], odds=float(o[mk['want']]['odds']), chance=p[mk['want']] / sum(p.values()), rec=rec,
                             ids=dict(eventId=ev['eventId'], productId=3, marketId=str(m['id']),
                                      specifier=m.get('specifier'), outcomeId=str(o[mk['want']]['id']))))
             break
@@ -82,7 +86,8 @@ def book(key, name, part, why, dry):
     if bk and bk.get('code'):
         print(f"\n   >> code {bk['code']}   {bk['url']}")          # lower case: the server's job log reads 'code XXXXXX'
         A.log_booking(bk['code'], bk['url'], f"one market: {MARKETS[key]['sel']} - {name} - {combo:,.2f}x ({len(part)} games)",
-                      [(l['ts'], l['match'], l['sel'], l['odds'], [f"book's no-margin chance {l['chance']:.0%} - {why}"]) for l in part])
+                      [(l['ts'], l['match'], l['sel'], l['odds'], [f"book's no-margin chance {l['chance']:.0%} - {why}"]
+                        + ([f"match record backs it: {l['rec']}"] if FD.active() else [])) for l in part])
     else:
         print(f"   >> booking failed: {bk.get('msg') if bk else 'no selections'}")
 
@@ -90,6 +95,8 @@ def book(key, name, part, why, dry):
 def run(keys, targets, maxkeys, start, cut, dry, shortkeys=()):
     evs = board(sorted({MARKETS[k]['mid'] for k in keys}), start, cut)
     print(f"window {start:%a %H:%M} -> {cut:%a %H:%M}")
+    if FD.active():
+        FD.prepare([e for v in evs.values() for e in v])
     for key in keys:
         legs = legs_for(key, evs[MARKETS[key]['mid']])
         print(f"\n{MARKETS[key]['name']}: offered on {len(legs)} games")

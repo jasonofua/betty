@@ -20,6 +20,7 @@ Rule (12 Sep, first look - NOT a measured instrument yet):
 """
 import sys, re, json, urllib.request, datetime as dt, collections
 import acca as A
+A.FINDINGS_EXEMPT = True      # 10 Oct: the winners' finding (findings.py) is football only
 import fetcher_v3 as F
 
 BASE = 'https://www.sportybet.com/api/ng/factsCenter/'

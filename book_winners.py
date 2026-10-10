@@ -17,6 +17,7 @@ One slip, every qualifying game in the window. Window opens one hour ahead.
 """
 import collections, re, sys, datetime as dt, json
 import acca as A
+import findings as FD
 import fetcher_v2 as F2
 import dynamic_v4 as D
 import book_draw as DRW          # venue_form(): df_hh Home/Away tabs cut at kickoff
@@ -173,6 +174,8 @@ def build(until_h, days=0, verbose=True):
     print(f"window {start:%a %H:%M} -> {cutoff:%a %d %H:%M} WAT", flush=True)
     evs = [e for e in A.fetch_events_full()
            if start < dt.datetime.fromtimestamp(int(e.get('estimateStartTime', 0)) / 1000, tz=A.WAT) <= cutoff]
+    if FD.active():
+        FD.prepare(evs)
     seen, fx = set(), []
     for off in range(max(2, (cutoff.date() - now.date()).days) + 1):
         for f in F2.get_fixtures(off):
@@ -276,6 +279,12 @@ def build(until_h, days=0, verbose=True):
             row['flags'] = warnings_for(row, w)
             if row['flags']:
                 row['why'] = 'flagged: ' + '; '.join(row['flags']); row['pick'] = None
+        if row['pick']:
+            # 10 Oct, user: every game booked today follows the winners' finding (findings.py)
+            want = side if row['pick'] == 'win' else ('Home or Draw' if side == 'Home' else 'Draw or Away')
+            fits, rec_ = FD.ok(ev, '1' if row['pick'] == 'win' else '10', '', want)
+            if not fits:
+                row['why'] = f'match record does not back it: {rec_}'; row['pick'] = None
         rows.append(row)
     rows.sort(key=lambda r: (r['league'], r['ts']))
     return rows

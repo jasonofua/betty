@@ -99,9 +99,57 @@ def verify(code):
     except Exception:
         return 0
 
+FINDINGS_EXEMPT = False    # set by the points-sports scripts: the finding is football only
+
+
+def _desc_of(mid, oid, spec):
+    """The outcome label for a selection's ids, on the markets the finding covers."""
+    mid, oid = str(mid), str(oid)
+    if mid in ('1', '900069'):
+        return {'1': 'Home', '2': 'Draw', '3': 'Away'}.get(oid)
+    if mid == '10':
+        return {'9': 'Home or Draw', '10': 'Home or Away', '11': 'Draw or Away'}.get(oid)
+    if mid == '29':
+        return {'74': 'Yes', '76': 'No'}.get(oid)
+    m = re.search(r'total=([\d.]+)', spec or '')
+    if not m:
+        return None
+    side = {'12': 'Over', '13': 'Under', '30': 'Over', '31': 'Under'}.get(oid)
+    return f"{side} {m.group(1)}" if side else None
+
+
+def findings_refusals(sels):
+    """10 Oct, user: "make sure all the games booked today follows this finding" - every
+    leg of every code has to be one the match's own record backs (findings.py). The
+    scripts filter their own candidates first; this is the last check, and a code with
+    any leg it cannot confirm is not booked at all rather than booked short."""
+    if FINDINGS_EXEMPT:
+        return []
+    try:
+        import findings as FD
+    except Exception:
+        return []
+    if not FD.active():
+        return []
+    bad = []
+    for s in sels:
+        mid, spec = str(s.get('marketId')), s.get('specifier') or ''
+        desc = _desc_of(mid, s.get('outcomeId'), spec)
+        ok, why = (False, 'no finding for this market') if desc is None else FD.ok({'eventId': s.get('eventId')}, mid, spec, desc)
+        if not ok:
+            bad.append(f"{s.get('eventId')} {mid} {spec} {desc}: {why}")
+    return bad
+
+
 def book(selections):
     if not selections: return None
     sels = selections[:MAX_CODE]
+    bad = findings_refusals(sels)
+    if bad:
+        print(f"  ! finding check refused this code - {len(bad)} of {len(sels)} legs not backed by their record:", flush=True)
+        for b in bad[:10]:
+            print(f"      {b}", flush=True)
+        return dict(code=None, url=None, booked=0, req=len(sels), msg=f'finding check: {len(bad)} legs not backed', verified=0)
     resp = post('https://www.sportybet.com/api/ng/orders/share', {'selections': sels})
     d = resp.get('data') or {}
     code = d.get('shareCode')
