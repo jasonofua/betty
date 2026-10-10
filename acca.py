@@ -129,13 +129,16 @@ def findings_refusals(sels):
         import findings as FD
     except Exception:
         return []
-    if not FD.active():
+    if not FD.any_active():
         return []
     bad = []
     for s in sels:
         mid, spec = str(s.get('marketId')), s.get('specifier') or ''
         desc = _desc_of(mid, s.get('outcomeId'), spec)
-        ok, why = (False, 'no finding for this market') if desc is None else FD.ok({'eventId': s.get('eventId')}, mid, spec, desc)
+        if desc is None:
+            ok, why = (False, 'no finding for this market') if FD.active() else (True, 'finding off')
+        else:
+            ok, why = FD.ok({'eventId': s.get('eventId')}, mid, spec, desc)
         if not ok:
             bad.append(f"{s.get('eventId')} {mid} {spec} {desc}: {why}")
     return bad

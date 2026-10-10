@@ -39,10 +39,13 @@ import fetcher_v2 as F2
 import fetcher_v3 as F3
 
 ON_DAYS = {'2026-10-10'}     # user, 10 Oct: "all the games booked today"
+# 10 Oct evening, user: "Apply it" - the minute-market record check (draw after 5 min,
+# 0-0 at 10 min) stays on every day from here, with the three fixes in verdict().
+MINUTE_FROM = '2026-10-10'
 ROOT = os.path.dirname(os.path.abspath(__file__))
 WINDOW = 7                   # venue games a side
 MIN_SIDE = 3                 # games a side needed to read a record at all
-MIN_EARLY = 6                # games (both sides) with every goal timed, for the minute markets
+MIN_SIDE_TIMED = 3           # minute markets: games EACH side whose early-goal question is answered
 DEFAULT_FLOOR = 0.75         # a line with no won legs of its own to set a floor
 # Lower quartile of the won legs' hit rates, 25 Sep - 10 Oct (findings_floors in
 # the scratch analysis). Three in four winners of each option cleared these.
@@ -60,6 +63,33 @@ FLOORS = {
 
 def active():
     return dt.datetime.now(A.WAT).date().isoformat() in ON_DAYS
+
+
+MINUTE_FAMS = ('draw after', '0-0 at')
+
+
+def active_for(fam):
+    """Whether the check applies to this option today: minute markets every day from
+    MINUTE_FROM, everything else only on ON_DAYS."""
+    if fam and fam.startswith(MINUTE_FAMS):
+        return dt.datetime.now(A.WAT).date().isoformat() >= MINUTE_FROM
+    return active()
+
+
+def any_active():
+    return active() or dt.datetime.now(A.WAT).date().isoformat() >= MINUTE_FROM
+
+
+def _early(g, lim):
+    """A record game's answer to 'a goal by minute lim?': True early, False clean, None unknown.
+    A known early goal counts even when another goal in that game has no minute
+    (10 Oct: Bristol Rovers 5-3 Newport had a 1' goal and was dropped whole)."""
+    if g.get('first') is not None:
+        return g['first'] <= lim
+    known = g.get('known')
+    if known is not None and known <= lim:
+        return True
+    return None
 
 
 # ── which option a selection is ─────────────────────────────────────────────
@@ -84,12 +114,12 @@ def option_of(mid, spec, desc):
     if mid == '29':
         return None                       # GG/NG: no won legs to read a finding from (0 of 2)
     if mid == '900069' and spec == 'minute=5' and desc == 'Draw':
-        return 'draw after 5 min', lambda g: None if g['first'] is None else g['first'] > 5
+        return 'draw after 5 min', lambda g: (lambda e: None if e is None else not e)(_early(g, 5))
     if mid == '900313' and m and m.group(1) == 'Under' and m.group(2) == '0.5':
         mm = re.match(r'minute=(\d+)\|total=0\.5$', spec)
         if mm:
             x = int(mm.group(1))
-            return f'0-0 at {x} min', lambda g: None if g['first'] is None else g['first'] > x
+            return f'0-0 at {x} min', lambda g, x=x: (lambda e: None if e is None else not e)(_early(g, x))
         return None
     if not m or not m.group(2).endswith('.5'):
         return None
@@ -126,7 +156,9 @@ def record(fid, ko):
     """The two venue windows as record games in today's roles:
     [dict(side, h, a, hh, ah, first)] - h/a today's home/away columns, hh/ah at half-time
     (None when the half is unknown), first = minute of the first goal (99 for 0-0,
-    None when the goals were not all timed)."""
+    None when the goals were not all timed), known = the earliest goal minute that IS
+    timed (None when none is) - a known early goal settles the minute markets even
+    when another goal in the game has no minute."""
     raw = F2.fetch(f"df_hh_1_{fid}")
     if not raw:
         return None
@@ -137,13 +169,15 @@ def record(fid, ko):
             s = F3.parse_match_summary(r['match_id'], r['hg'], r['ag'])
             # r['hg']/r['ag'] are the past match's true home/away goals, and the side
             # played it at the same venue it plays today - so the columns line up as is.
-            g = dict(side=side, h=r['hg'], a=r['ag'], hh=None, ah=None, first=None)
+            g = dict(side=side, h=r['hg'], a=r['ag'], hh=None, ah=None, first=None, known=None)
+            if r['hg'] + r['ag'] == 0:
+                g['first'] = 99                       # 0-0: no goal to time
             if s:
                 g['hh'], g['ah'] = s['ht_home'], s['ht_away']
-                if s.get('goals_ok'):
-                    mins = [x['minute'] for x in s['goals'] if x.get('minute') is not None]
-                    if len(mins) == len(s['goals']):
-                        g['first'] = min(mins) if mins else 99
+                mins = [x['minute'] for x in s['goals'] if x.get('minute') is not None]
+                g['known'] = min(mins) if mins else None
+                if s.get('goals_ok') and len(mins) == len(s['goals']):
+                    g['first'] = min(mins) if mins else 99
             out.append(g)
     return out
 
@@ -160,13 +194,27 @@ def hit_rate(games, test):
 
 def verdict(games, fam, test):
     """(ok, why) for one option on one record."""
+    if fam.startswith(MINUTE_FAMS):
+        # 10 Oct evening fixes, from the four 5-min draw losses (Plzen, Augsburg,
+        # Bristol Rovers, Barcelona) - backtested on 88 settled 5-min draws: legs this
+        # passes won 37/37, legs it stops 47/51 (0-0 at 10: 29/33 v 28/35).
+        #   each side needs MIN_SIDE_TIMED answered games of its own (not 6 between them),
+        #   a game with no answer counts AGAINST the option instead of vanishing.
+        if not games:
+            return False, 'no record'
+        res = [(g['side'], test(g)) for g in games]
+        per = {s: sum(1 for x, v in res if x == s and v is not None) for s in ('home', 'away')}
+        if per['home'] < MIN_SIDE_TIMED or per['away'] < MIN_SIDE_TIMED:
+            return False, f"only {per['home']}+{per['away']} timed games (need {MIN_SIDE_TIMED} a side)"
+        rate = sum(1 for _, v in res if v is True) / len(res)
+        floor = FLOORS.get(fam, DEFAULT_FLOOR)
+        unk = sum(1 for _, v in res if v is None)
+        why = f"record {rate:.0%} of {len(res)}" + (f" ({unk} untimed counted against)" if unk else '') + f" (floor {floor:.0%})"
+        return rate >= floor, why
     rate, n, per = hit_rate(games, test)
     if rate is None:
         return False, 'no record'
-    if fam.startswith(('draw after', '0-0 at')):
-        if n < MIN_EARLY:
-            return False, f'only {n} timed games'
-    elif per.get('home', 0) < MIN_SIDE or per.get('away', 0) < MIN_SIDE:
+    if per.get('home', 0) < MIN_SIDE or per.get('away', 0) < MIN_SIDE:
         return False, f"only {per.get('home', 0)}+{per.get('away', 0)} games"
     floor = FLOORS.get(fam, DEFAULT_FLOOR)
     why = f"record {rate:.0%} of {n} (floor {floor:.0%})"
@@ -250,10 +298,11 @@ def prepare(evs, threads=8):
 
 
 def ok(ev, mid, spec, desc):
-    """(allowed, why). Everything is allowed when the finding is not switched on today."""
-    if not active():
-        return True, 'finding off'
+    """(allowed, why). Everything is allowed when the finding is not switched on today
+    for this option (minute markets from MINUTE_FROM, the rest on ON_DAYS)."""
     opt = option_of(mid, spec, desc)
+    if not active_for(opt[0] if opt else None):
+        return True, 'finding off'
     if not opt:
         return False, 'no finding for this market'
     rec = _load().get(str(ev.get('eventId')))

@@ -87,7 +87,7 @@ def book(key, name, part, why, dry):
         print(f"\n   >> code {bk['code']}   {bk['url']}")          # lower case: the server's job log reads 'code XXXXXX'
         A.log_booking(bk['code'], bk['url'], f"one market: {MARKETS[key]['sel']} - {name} - {combo:,.2f}x ({len(part)} games)",
                       [(l['ts'], l['match'], l['sel'], l['odds'], [f"book's no-margin chance {l['chance']:.0%} - {why}"]
-                        + ([f"match record backs it: {l['rec']}"] if FD.active() else [])) for l in part])
+                        + ([f"match record backs it: {l['rec']}"] if l['rec'] != 'finding off' else [])) for l in part])
     else:
         print(f"   >> booking failed: {bk.get('msg') if bk else 'no selections'}")
 
@@ -95,7 +95,7 @@ def book(key, name, part, why, dry):
 def run(keys, targets, maxkeys, start, cut, dry, shortkeys=()):
     evs = board(sorted({MARKETS[k]['mid'] for k in keys}), start, cut)
     print(f"window {start:%a %H:%M} -> {cut:%a %H:%M}")
-    if FD.active():
+    if FD.any_active():                          # minute markets are checked every day from 10 Oct
         FD.prepare([e for v in evs.values() for e in v])
     for key in keys:
         legs = legs_for(key, evs[MARKETS[key]['mid']])
