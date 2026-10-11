@@ -99,6 +99,18 @@ def get(url):
                       .read().decode('utf-8', 'replace'))
 
 
+def preseason(e, tour):
+    """11 Oct, user ("apply"): basketball pre-season and friendly games are skipped.
+    Rotations there are a coach's choice the price cannot know - on 10-11 Oct both NBA
+    pre-season legs lost (Pistons +3.5 after overtime, Spurs to win) and the club
+    friendly Taiwan Beer v Taishin missed its total. Those legs were on the hand-booked
+    JLR7TK; this script already skipped friendlies by the Flashscore league name (main),
+    and this adds SportyBet's own tournament name. Only 24 basketball legs are settled,
+    so this is a judgement call, not a measured rule."""
+    name = ' '.join([tour or '', ((e.get('sport') or {}).get('category') or {}).get('tournament', {}).get('name') or '']).lower()
+    return any(k in name for k in ('preseason', 'pre-season', 'friendl'))
+
+
 def sb_board():
     """18 Sep: option=1 hid most of the board - 33 of 155 American-football events
     (20 of 123 NCAA games) although the hidden ones carry priced winner, total and
@@ -125,7 +137,11 @@ def sb_board():
                 for e in t.get('events', []):
                     if e['eventId'] in seen:
                         continue
-                    seen.add(e['eventId']); e['_tour'] = t.get('name'); evs.append(e); new += 1
+                    seen.add(e['eventId'])
+                    if SPORT['sb'] == 'sr:sport:2' and preseason(e, t.get('name')):
+                        new += 1                            # counted as seen, so paging carries on
+                        continue
+                    e['_tour'] = t.get('name'); evs.append(e); new += 1
             if not ts_ or not new:
                 break
     return evs

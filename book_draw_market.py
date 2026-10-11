@@ -180,6 +180,7 @@ def main():
     only = [x.strip().lower() for x in sys.argv[sys.argv.index('--only') + 1].split(',') if x.strip()] if '--only' in sys.argv else []   # user's call: these games, checks waived
     now = dt.datetime.now(tz=A.WAT)
     fx = fixtures(); board = SNAP.board()
+    board = [b for b in board if b['comp'].split(':')[0] not in A.S.SKIP_COUNTRIES]   # 11 Oct: Uruguay and Russia skipped (sportybet.SKIP_COUNTRIES)
     print(f"fixtures.csv {len(fx)} priced main-league fixtures | SportyBet board {len(board)} games")
     picks, seen = [], 0
     for f in fx:

@@ -19,7 +19,7 @@ _lock = threading.Lock()
 _grade_cache = {}          # code -> (ts, result)
 _book_cache = {'sig': None, 'val': []}
 
-PRODUCTS = ['Live', 'Winners', 'Draws', 'Half-time draw', 'Points sports', 'Max odds', 'Every game', 'All games', 'Bet of the day', 'Rollover', 'By market']
+PRODUCTS = ['Live', 'Winners', 'Draws', 'Half-time draw', 'Points sports', 'Max odds', 'Strong groups', 'Every game', 'All games', 'Bet of the day', 'Rollover', 'By market']
 SPORT_LABEL = {'american football': 'American football', 'nfl': 'American football', 'ncaa': 'American football',
                'basketball': 'Basketball', 'ice hockey': 'Ice hockey', 'hockey': 'Ice hockey', 'handball': 'Handball'}
 
@@ -57,6 +57,8 @@ def product_of(label):
         return 'By market'
     if l.startswith('every game'):        # 9 Oct: book_allgames - one pick on every game, plus the 2k+ target codes
         return 'Every game'
+    if l.startswith('strong groups'):     # 11 Oct: book_strong - 5-min draw, 0-0 at 10, England and Scotland games
+        return 'Strong groups'
     if sport_of(label):
         return 'Points sports'
     if 'winner' in l:                 # before 'draw': "3+ venue draws -> double chance" is a winners slip
@@ -813,7 +815,7 @@ def combined_code(slot='am'):
     for c in parse_bookings():
         if _day_of(c['when']) != today or c['nested_from'] or c['superseded_by'] or not c['legs']:
             continue
-        if c['product'] in ('Live', 'All games', 'Every game'):
+        if c['product'] in ('Live', 'All games', 'Every game', 'Strong groups'):
             continue
         g = graded(c['code'], force=True)
         for l in g.get('legs') or []:
@@ -944,7 +946,7 @@ def best_of_day(dry=False):
     for c in parse_bookings():
         if _day_of(c['when']) != today or c['nested_from'] or c['superseded_by'] or not c['legs']:
             continue
-        if c['product'] in ('Live', 'All games', 'Bet of the day', 'Rollover', 'By market', 'Every game'):
+        if c['product'] in ('Live', 'All games', 'Bet of the day', 'Rollover', 'By market', 'Every game', 'Strong groups'):
             continue
         graded(c['code'], force=True)
         for l in decorate(c)['legs']:
@@ -1074,7 +1076,7 @@ def rollover_of_day(dry=False):
     for c in parse_bookings():
         if _day_of(c['when']) != today or c['nested_from'] or c['superseded_by'] or not c['legs']:
             continue
-        if c['product'] in ('Live', 'All games', 'Bet of the day', 'Rollover', 'By market', 'Every game'):
+        if c['product'] in ('Live', 'All games', 'Bet of the day', 'Rollover', 'By market', 'Every game', 'Strong groups'):
             continue
         graded(c['code'], force=True)
         for l in decorate(c)['legs']:
@@ -1237,6 +1239,12 @@ RULES = [
          plain="Instead of one slip mixing an Over with a handicap and a double chance, every slip carries a single option repeated across the board: all the Over 1.5 games on one code, all the first-half Over 0.5 games on another, all the second-half Under 2.5 games on a third. Football only. Each match is still scored on its own two teams' records and contributes only the options that record backs, so a game appears on a slip because it earned that option, not because the slip needed filling. Any option two or more matches support becomes its own code, one leg per match, up to fifty legs. From 10 Oct a second run at 10:26 books four markets to 300x on the book's own numbers, with no form read: the draw after 5 minutes (plus its 50 longest prices), 0-0 at 10 minutes (SportyBet has no 10-minute result market, so this is goals from minute 1 to 10 Under 0.5; plus its 50 most likely and its 50 longest prices), first half Over 0.5 and first half Under 2.5. Each code is the set of games reaching 300x with the highest chance of every leg landing.",
          thresholds=[dict(k='Sports', v='football only'), dict(k='Games per market', v='two or more'), dict(k='Legs per match', v='one'), dict(k='Slip cap', v='50 legs'), dict(k='Runs at', v='09:58, games until 23:00; 10:26 for the 300x codes, games until midnight')],
          measured="The legs come from the same evaluator as Max odds - each outcome scored against the home side's home games and the away side's away games, ranked by support, with the same family bans and cushion gates."),
+    dict(product='Strong groups', tag='only the legs that beat their price',
+         plain="Every leg we booked from 1 to 11 Oct was measured against SportyBet's own chance for it (the price with the margin taken out). The board as a whole won 81% against 77% priced and no market type lost more than its price, but four groups won well above it on both halves of the data: the draw after 5 minutes, 0-0 at 10 minutes, and England and Scotland games. This slip takes only those. Each game gets one leg, the most likely of its draw after 5 minutes, its 0-0 at 10 minutes (any league, and only where the match record passes the minute check) and, for England and Scotland games, the book's most likely option at 1.15 or more. Every such game goes on, in codes of up to 50; past 50 the 50 longest prices book as one more code; and each target from 300x to 10,000x books when the strong games can reach it. On a quiet day the slip is small - it is only as big as the strong games on the board.",
+         thresholds=[dict(k='Groups', v='5-min draw, 0-0 at 10 min, England and Scotland games'), dict(k='Legs per match', v='one, the most likely'),
+                     dict(k='Price floor (England/Scotland picks)', v='1.15'), dict(k='Codes', v='up to 50 games each, plus the 50 longest past that'),
+                     dict(k='Target codes', v='300x, 2,000x, 5,000x, 10,000x where reachable'), dict(k='Runs at', v='10:30, games until midnight')],
+         measured="Settled legs 1-11 Oct: draw after 5 minutes 129 of 134 (96%, priced 82%); England games, other markets 87 of 99 (88%, priced 77%; 94% and 85% on the two halves); Scotland 29 of 33 (88%, priced 79%); 0-0 at 10 minutes 72 of 85 (85%, priced 75%). A slip of only these, one leg per game, would have gone 42 of 42 on 9 Oct (96x), 14 of 14 on 6 Oct and 23 of 24 on 3 Oct."),
     dict(product='Every game', tag='one pick on every football game',
          plain="Every football game from an hour after the run to midnight gets one pick: the option SportyBet itself makes most likely (its price with the margin taken out), at 1.15 or more so no leg is a 1.01. No form is read first - the book's pick won what its price said on 38,716 matches, and PW6EAL went 39 of 43 on it. The picks are split by kickoff into codes of up to 50 games. From the same picks, three more codes are booked at 2,000x, 5,000x and 10,000x: for each, the set of games that reaches it with the highest chance of every leg landing on the book's own numbers.",
          thresholds=[dict(k='Sports', v='football only'), dict(k='Price floor', v='1.15'), dict(k='Markets', v='1X2, double chance, full-time / first-half / second-half totals (.5 lines), GG/NG'),
@@ -1250,6 +1258,7 @@ RULES = [
 ]
 
 CHANGELOG = [
+    dict(date='11 Oct', txt="New product, Strong groups (10:30): only the legs from the groups that won above their price on both halves of 1-11 Oct - the draw after 5 minutes (129 of 134, priced 82%), 0-0 at 10 minutes (72 of 85, priced 75%), England and Scotland games (116 of 132, priced 77-79%) - one leg per game, every such game in codes of up to 50, plus 300x to 10,000x where the board reaches it. 1,548 settled legs won 81% against 77% priced and no market type lost more than its price; the losses sat in which games were picked. Same day: football games from Uruguay (30 of 44, priced 78%) and Russia (20 of 31, priced 72%) are skipped by every product - below the price on both halves, small samples, re-measured as they come; basketball pre-season and friendly games are skipped by SportyBet's tournament name too (the two NBA pre-season legs lost on the hand-booked JLR7TK)."),
     dict(date='10 Oct', txt="The 5-minute draw and 0-0 at 10 minutes keep the match-record check every day from now, with three fixes after today's four 5-minute draw losses (Plzen, Augsburg, Bristol Rovers, Barcelona), each beaten by a goal inside 4 minutes. A known early goal in a past game now counts even when another goal in that game has no minute (Bristol Rovers 5-3 Newport had a 1' goal and was dropped whole); each side needs 3 timed games of its own, not 6 between the two (Augsburg and Barcelona had 2, Plzen 3); and a past game with no timing counts against the pick instead of vanishing. Backtested on every settled leg since 25 Sep: 5-minute draws the new check passes won 37 of 37, the ones it stops 47 of 51 - all four losses stopped; 0-0 at 10 minutes 29 of 33 against 28 of 35. Fewer games pass (about 4 in 10 five-minute draws), so the 5-minute draw codes reach lower odds. Script: findings.py."),
     dict(date='10 Oct', txt="Today every football code follows the winners' finding (user's call). 866 won legs since 25 Sep showed each option winning in the matches whose own record was already doing that thing, so an option now goes on a code only when the record backs it: the home side's last 7 home games and the away side's last 7 away games, each read as if it were today's match, must have won the option at least as often as that option's own winners did (their lower quartile). Draw after 5 minutes 83% of games with no goal by minute 5; 0-0 at 10 minutes 73%; first-half Under 2.5 89% plus a goalless first half in each side's window; first-half Under 1.5 64%; first-half Over 0.5 71%; Over 1.5 75%; Home or Draw 67%; Draw or Away 57%; Home or Away 79%. Markets with no won legs to learn from (straight draws, GG, corners, cards) are off for the day, as is any game without a record. Every product filters its own picks first, and the booking step refuses a code with any leg it cannot confirm. The 5-minute draw is booked to 400x and the 10-minute draw as high as its games allow. Script: findings.py."),
     dict(date='9 Oct', txt="From 10 Oct, By market adds four codes at 300x, booked at 10:26 on the book's own numbers: the draw after 5 minutes (34 of 34 settled legs since 25 Sep, price said 90%), plus its 50 longest prices for the biggest code the board allows; 0-0 at 10 minutes, since SportyBet's minute-result market skips from 5 to 15, plus its 50 most likely and 50 longest prices; first half Over 0.5 (17 of 20); first half Under 2.5 (238 of 264). Each is the set of games reaching 300x with the highest chance of all landing, at most 50."),
@@ -1550,6 +1559,11 @@ SCHEDULE = [
     # user, same evening: "book the shortest and the longest 50" of it as well.
     ('10:26', 'one-market-300x', '/api/onemarket', dict(until=23, markets=['d5', 'g10', 'h1o05', 'h1u25'], targets=[300],
                                                           max=['d5', 'g10'], short=['g10'])),
+    # 11 Oct, user: "all this losses what is the fix" / "Apply". Only the groups that won
+    # above their price on both halves of 1-11 Oct: the 5-minute draw (129/134), 0-0 at 10
+    # minutes (72/85), England and Scotland games (116/132). One leg per game; every game in
+    # codes of up to 50, the 50 longest past that, and the user's targets where reachable.
+    ('10:30', 'strong-groups', '/api/strong', dict(until=23, targets=[300, 2000, 5000, 10000])),
     # 18 Sep, user: one set a day - the morning. The 16:35 / 16:50 / 17:10 evening
     # runs (games until 06:00) are gone; an evening code is booked only when asked.
 ]

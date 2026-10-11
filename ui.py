@@ -336,6 +336,17 @@ def scheduler():
                             BA.ladder_for('today')
                         except Exception as e:
                             print(f'scheduler every-game ladder: {type(e).__name__}: {e}', flush=True)
+                    elif path == '/api/strong':
+                        # 11 Oct: the strong-group legs only (book_strong) - 5-min draw, 0-0 at 10,
+                        # England and Scotland games; one leg per game, plus the targets it can reach
+                        args = ['book_strong.py', '--until', str(body.get('until', 23))]
+                        if body.get('targets'):
+                            args += ['--targets', ','.join(str(t) for t in body['targets'])]
+                        script_job('strong', args, 'strong groups (scheduled)')
+                        try:
+                            BA.ladder_for('today')
+                        except Exception as e:
+                            print(f'scheduler strong-groups ladder: {type(e).__name__}: {e}', flush=True)
                     elif path == '/api/onemarket':
                         # 9 Oct: one market per code to a target on the book's own numbers (book_onemarket) -
                         # draw after 5 minutes, 0-0 at 10 minutes, 1H Over 0.5, 1H Under 2.5

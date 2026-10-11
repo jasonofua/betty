@@ -220,6 +220,8 @@ def fetch_events_full():
         if not tours: break
         for t in tours:
             for e in t.get('events', []):
+                if S.skipped(e):            # 11 Oct: Uruguay and Russia skipped (sportybet.SKIP_COUNTRIES)
+                    continue
                 e['_tournament'] = t['name']
                 out.append(e)
         if pg * 100 >= d.get('totalNum', 0): break

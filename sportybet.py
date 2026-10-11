@@ -17,6 +17,21 @@ HDRS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0 Sa
         'Accept': 'application/json', 'Referer': 'https://www.sportybet.com/ng/sport/football'}
 STOP = {'fc', 'sc', 'afc', 'cf', 'bk', 'jk', 'ii', 'united', 'city', 'club', 'the', 'de', 'el'}
 
+# 11 Oct, user ("apply"): football games from these countries are skipped by every
+# booking script. Settled legs 1-11 Oct (1,548, every product) won against what the
+# book's no-margin price said: Uruguay 30 of 44 (68%, priced 78%), Russia 20 of 31
+# (65%, priced 72%) - below the price on both halves of the data (1-6 / 7-11 Oct),
+# while the board as a whole won 81% against 77% priced. Small samples; re-measure.
+SKIP_COUNTRIES = ('Uruguay', 'Russia')
+
+
+def skipped(ev):
+    """True for a football event from a skipped country (SportyBet category name)."""
+    sp = ev.get('sport') or {}
+    return (sp.get('id') in (None, 'sr:sport:1')
+            and ((sp.get('category') or {}).get('name') or '') in SKIP_COUNTRIES)
+
+
 def _get(url):
     return json.loads(urllib.request.urlopen(urllib.request.Request(url, headers=HDRS), timeout=25).read().decode('utf-8', 'replace'))
 
@@ -40,6 +55,8 @@ def fetch_events():
             break
         for t in tours:
             for e in t.get('events', []):
+                if skipped(e):
+                    continue
                 e['_tournament'] = t['name']
                 out.append(e)
         if pg * 100 >= d.get('totalNum', 0):
