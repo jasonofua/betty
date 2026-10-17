@@ -197,7 +197,19 @@ def market_quantity(name, available):
         for word in (base,) + ALIASES.get(base, ()):
             if word in n and (best is None or len(word) > best[1]):
                 best = (base, len(word))
-    return best[0] if best else 'goals'
+    if not best:
+        # 13 Oct: a stat market whose stat this record does not hold used to fall
+        # through to 'goals' - "1st Half - Total Corners Under 4.5" was scored as
+        # first-half GOALS Under 4.5. A stat-named market with no series is now
+        # unanswerable, and evaluate() skips it.
+        return 'unavailable' if any(w in n for w in STAT_WORDS) else 'goals'
+    if best[0] == 'yellow' and 'point' in n:
+        return 'booking_points'      # 13 Oct: 10 a yellow, 25 a red - not a card count, and no series holds it
+    return best[0]
+
+
+STAT_WORDS = ('corner', 'card', 'booking', 'shot', 'offside', 'foul', 'save', 'throw',
+              'tackle', 'possession', 'goal kick', 'free kick', 'xg')
 
 
 def _names_team(market_name, team):
@@ -246,6 +258,10 @@ def parse_market(name, available=(), teams=(None, None)):
     elif _names_team(name, teams[0]): s = 'home'
     elif _names_team(name, teams[1]): s = 'away'
     else:                           s = 'match'
+    # SportyBet writes the team version "Home Highest Scoring Half", which the alias
+    # 'team highest scoring half' misses: it was counted on both teams' goals (14 Oct).
+    if q == 'hsh_match' and s in ('home', 'away'):
+        q = 'hsh'
     return q, p, s
 
 
@@ -513,6 +529,34 @@ def _mirror(pairs):
     return [(a, f) for f, a in pairs]
 
 
+# Series whose two slots are the two HALVES, not (for, against): swapping them for the away
+# side turns "1st half" into "2nd half". 14 Oct: Charlotte's away games had the 1st half higher
+# 3 times, the 2nd once, level 3 times - the count read 1, 3, 3 (Highest Scoring Half), and the
+# same swap hit Both Halves Over/Under (lowest half, highest half).
+HALF_PAIRS = ('hsh', 'hsh_match', 'bh_line')
+
+
+def oriented(home_rec, away_rec, quantity, side):
+    """The two series a market is counted on, both written from the side the market is about.
+      - team markets: the away team's record is mirrored for a home market and vice versa, so
+        its `for` slot holds what the subject team would face;
+      - match markets are written from the HOME side ("Home or Draw" is f >= a with f = home
+        goals), so the away team's record is mirrored - without it "Home or Draw" asked of the
+        away team's games counted the games they WON. Symmetric markets (Over/Under, GG/NG) are
+        unchanged by the mirror;
+      - half-pair series are never mirrored: match ones (hsh_match, bh_line) are already both
+        teams' goals by half, and a team's own goals by half (hsh) is answered from the other
+        side's record by what it CONCEDED by half (hsh_conc)."""
+    H, A = home_rec.pairs(quantity), away_rec.pairs(quantity)
+    if quantity == 'hsh' and side in ('home', 'away'):
+        return (H, away_rec.pairs('hsh_conc')) if side == 'home' else (home_rec.pairs('hsh_conc'), A)
+    if quantity in HALF_PAIRS:
+        return H, A
+    if side == 'away':
+        return _mirror(H), A
+    return H, _mirror(A)
+
+
 def count_outcome(home_rec, away_rec, quantity, side, test):
     """(hits_h, n_h, hits_a, n_a, primary) or None when the records are too thin.
 
@@ -526,27 +570,19 @@ def count_outcome(home_rec, away_rec, quantity, side, test):
 
     For match totals neither series is primary: the line depends on both teams,
     so both still have to clear the bar."""
-    H = home_rec.pairs(quantity)
-    A = away_rec.pairs(quantity)
+    seq_h, seq_a = oriented(home_rec, away_rec, quantity, side)
     rf, ra = reads(test)
-    if side == 'home':
-        seq_h, seq_a = H, _mirror(A)
+    if quantity in HALF_PAIRS:
+        primary = None
+    elif side == 'home':
         # reads FOR only -> the home team's own production decides.
         # reads AGAINST only -> the AWAY team's production decides (mirrored into
         # seq_a's `against` slot), so gate there instead.
         primary = 0 if (rf and not ra) else (1 if (ra and not rf) else None)
     elif side == 'away':
-        seq_h, seq_a = _mirror(H), A
         primary = 1 if (rf and not ra) else (0 if (ra and not rf) else None)
     else:
-        # Match markets are written from the HOME side ("Home or Draw" is f >= a
-        # with f = home goals), so the away team's own record has to be mirrored
-        # before the same predicate is applied to it. Without this, "Home or Draw"
-        # asked of the away team's games counted the games they WON as successes,
-        # when those are exactly the games where the bet would have lost.
-        # Symmetric markets (Over/Under, GG/NG, Odd/Even) are unchanged by the
-        # mirror, so this is safe for all of them.
-        seq_h, seq_a, primary = H, _mirror(A), None
+        primary = None
     if len(seq_h) < MIN_GAMES or len(seq_a) < MIN_GAMES:
         return None
     hh = sum(1 for f, a in seq_h if test(f, a))
@@ -825,8 +861,31 @@ EXCLUDE_EXACT = ('multigoals', 'home multigoals', 'away multigoals')
 UNDER_MIN, UNDER_MAX = 1.10, 1.19
 
 
+def _highest_under(out):
+    """Within one market and side keep only the highest qualifying Under line (see
+    the notes at the end of evaluate)."""
+    best_line = {}
+    for r in out:
+        mm = re.match(r'^under\s+([\d.]+)$', (r['outcome'] or '').strip().lower())
+        if not mm:
+            continue
+        k = (re.sub(r'\s*[\d.]+', '', r['market']).strip().lower(), r['side'])
+        if float(mm.group(1)) > best_line.get(k, 0):
+            best_line[k] = float(mm.group(1))
+    keep = []
+    for r in out:
+        d = (r['outcome'] or '').strip().lower()
+        m = re.match(r'^under\s+([\d.]+)$', d)
+        if m:
+            key = (re.sub(r'\s*[\d.]+', '', r['market']).strip().lower(), r['side'])
+            if float(m.group(1)) < best_line.get(key, 0):
+                continue
+        keep.append(r)
+    return keep
+
+
 def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
-             teams=(None, None)):
+             teams=(None, None), prune=True):
     """Score every offered outcome. Returns the best-supported first.
 
     `markets` is the event's own market list, straight from SportyBet, so the
@@ -1475,24 +1534,10 @@ def evaluate(markets, home_rec, away_rec, min_odds=1.0, max_odds=None,
     # fails most often. That cost 1,461 markets on one board. A lower line is
     # still allowed now, it just cannot be taken while a higher one is also
     # playable.
-    best_line = {}
-    for r in out:
-        mm = re.match(r'^under\s+([\d.]+)$', (r['outcome'] or '').strip().lower())
-        if not mm:
-            continue
-        k = (re.sub(r'\s*[\d.]+', '', r['market']).strip().lower(), r['side'])
-        if float(mm.group(1)) > best_line.get(k, 0):
-            best_line[k] = float(mm.group(1))
-    keep = []
-    for r in out:
-        d = (r['outcome'] or '').strip().lower()
-        m = re.match(r'^under\s+([\d.]+)$', d)
-        if m:
-            key = (re.sub(r'\s*[\d.]+', '', r['market']).strip().lower(), r['side'])
-            if float(m.group(1)) < best_line.get(key, 0):
-                continue
-        keep.append(r)
-    out = keep
+    # prune=False hands back every qualifying line, so backed_by_both() can keep the
+    # lines BOTH windows back before taking the highest of them.
+    if prune:
+        out = _highest_under(out)
 
     # STAT MARKETS FIRST. M0347R was corners, fouls and offsides with not one
     # goal leg on it and went 8 from 8, while the two codes from the same board
@@ -1579,7 +1624,27 @@ def correlated(cand, chosen):
     return False
 
 
-def every_option(markets, home_rec, away_rec, **kw):
+def backed_by_both(markets, home_rec, away_rec, home_10, away_10, **kw):
+    """13 Oct, user: an option goes on only when BOTH windows back it - the venue
+    games (home side at home, away side away) AND each team's own last 10 games at
+    any venue. evaluate() runs on each window with every gate it has; an outcome
+    stays only if it clears both, carrying the lower of the two model chances and
+    edges. The highest-Under-line rule is applied afterwards, to what both back."""
+    key = lambda r: (str(r['mid']), r['spec'] or '', str(r['oid']))
+    ten = {key(r): r for r in evaluate(markets, home_10, away_10, prune=False, **kw)}
+    out = []
+    for r in evaluate(markets, home_rec, away_rec, prune=False, **kw):
+        t = ten.get(key(r))
+        if t is None:
+            continue
+        out.append(dict(r, rate=min(r['rate'], t['rate']), edge=min(r['edge'], t['edge']),
+                        rate_venue=r['rate'], rate_last10=t['rate'], tally_last10=t['tally']))
+    out = _highest_under(out)
+    out.sort(key=lambda x: (x['is_goal'], -x['rate'], -x['n'], x['odds']))
+    return out
+
+
+def every_option(markets, home_rec, away_rec, rows=None, **kw):
     """EVERY outcome this match's own record supports, not just the best three.
 
     26 Sep, user's call, for the one-market-per-slip product: the three-option
@@ -1591,14 +1656,14 @@ def every_option(markets, home_rec, away_rec, **kw):
     product every plausible one is returned. The correlated() guard still runs,
     so a match never contributes two outcomes that are the same bet."""
     picked = []
-    for r in evaluate(markets, home_rec, away_rec, **kw):
+    for r in (rows if rows is not None else evaluate(markets, home_rec, away_rec, **kw)):
         if not plausible(r) or correlated(r, picked):
             continue
         picked.append(r)
     return picked
 
 
-def best_three(markets, home_rec, away_rec, **kw):
+def best_three(markets, home_rec, away_rec, rows=None, **kw):
     """The three best-supported outcomes, ONE PER QUANTITY, so a match spreads
     across what it measures instead of repeating one thing three ways.
 
@@ -1617,7 +1682,7 @@ def best_three(markets, home_rec, away_rec, **kw):
     first-half corner count - one needed Brann to win a corner, the other needed
     Apollon not to win three, and a one-sided half beat both."""
     seen, picked = set(), []
-    for r in evaluate(markets, home_rec, away_rec, **kw):
+    for r in (rows if rows is not None else evaluate(markets, home_rec, away_rec, **kw)):
         if not plausible(r):
             continue                    # market flatly disagrees - take the next
         fam = _base_quantity(r['qkey'])
@@ -1635,8 +1700,12 @@ def best_three(markets, home_rec, away_rec, **kw):
 # ─────────────────────────────────────────────────────────────────────────────
 # Live data: build both Records straight from Flashscore
 # ─────────────────────────────────────────────────────────────────────────────
-def records_for(fixture_id, raw=None):
+def records_for(fixture_id, raw=None, season=True, overall=False):
     """(home_record, away_record) for a Flashscore fixture id.
+
+    13 Oct, user: season=False drops the 45-day off-season cut (last 7 venue games
+    whatever the date); overall=True gives each team's own last 10 games at any
+    venue instead of the venue split. Defaults are unchanged for every other caller.
 
     Home team's HOME games and away team's AWAY games, most recent first, cut
     at any season break. EVERY series the fetcher produced is carried through -
@@ -1652,13 +1721,20 @@ def records_for(fixture_id, raw=None):
     hr, ar, _h2h = A.recent_kc(raw)
     if not hr or not ar:
         return None, None
-    hr = F3.trim_at_season_gap(hr)[:F3.RECENT_WINDOW]
-    ar = F3.trim_at_season_gap(ar)[:F3.RECENT_WINDOW]
-    rows = {'home': [r for r in hr if r.get('ks') == 'home'],
-            'away': [r for r in ar if r.get('ks') == 'away']}
+    if overall:
+        rows = {'home': [r for r in hr if not r.get('friendly')][:F3.OVERALL_GAMES],
+                'away': [r for r in ar if not r.get('friendly')][:F3.OVERALL_GAMES]}
+    elif not season:
+        rows = {'home': [r for r in hr if r.get('ks') == 'home' and not r.get('friendly')][:F3.MAX_DEEP_GAMES],
+                'away': [r for r in ar if r.get('ks') == 'away' and not r.get('friendly')][:F3.MAX_DEEP_GAMES]}
+    else:
+        hr = F3.trim_at_season_gap(hr)[:F3.RECENT_WINDOW]
+        ar = F3.trim_at_season_gap(ar)[:F3.RECENT_WINDOW]
+        rows = {'home': [r for r in hr if r.get('ks') == 'home'],
+                'away': [r for r in ar if r.get('ks') == 'away']}
 
     try:
-        _, _, rich = F3.fetch_rich_history(fixture_id, raw=raw)
+        _, _, rich = F3.fetch_rich_history(fixture_id, raw=raw, season=season, overall=overall)
     except Exception:
         rich = {}
 
@@ -1695,6 +1771,7 @@ def records_for(fixture_id, raw=None):
             #   scored" -> (1st-half count, 2nd-half count) IS a (for, against)
             #   pair: "1st half" is f > a, "2nd half" is f < a, "Equal" is f == a.
             ser['hsh'] = ([h1f[i] for i in range(n)], [h2f[i] for i in range(n)])
+            ser['hsh_conc'] = ([h1a[i] for i in range(n)], [h2a[i] for i in range(n)])
             ser['hsh_match'] = ([h1f[i] + h1a[i] for i in range(n)],
                                 [h2f[i] + h2a[i] for i in range(n)])
             #   Both Halves Over/Under X  "the number of goals scored in EACH

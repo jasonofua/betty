@@ -238,7 +238,7 @@ def _comp_key(name):
     return re.sub(r'[^a-z0-9]', '', n.lower())
 
 
-def venue_games(mid, kickoff, team, suffix, comp=None):
+def venue_games(mid, kickoff, team, suffix, comp=None, n=7):
     """The side's last 7 games at this venue. 15 Sep: SAME COMPETITION ONLY.
     Breogan (ACB) v Rilski Sportist (Bulgarian league) was a pre-season friendly;
     "12 of 14 venue games agree" compared two histories against different
@@ -256,14 +256,16 @@ def venue_games(mid, kickoff, team, suffix, comp=None):
                 d = dict(re.findall(r'([A-Z]{2,3})÷([^¬]*)', g))
                 if 'KC' not in d or not d.get('KU') or not d.get('KT') or int(d['KC']) >= kickoff - 3600:
                     continue
+                if int(d['KC']) < SEASON_START:
+                    continue                          # 13 Oct, user: this season's games only
                 if want and _comp_key(d.get('KF') or d.get('KI')) != want and _comp_key(d.get('KI')) != want:
                     continue                          # a different competition tells us nothing here
                 home_is_team = d.get('KJ', '').lstrip('*') == team
                 pf, pa = int(d['KU']), int(d['KT'])
                 if not home_is_team:
                     pf, pa = pa, pf
-                out.append(dict(id=d.get('KP'), pf=pf, pa=pa, home=home_is_team, ts=int(d['KC'])))
-    return out[:7]
+                out.append(dict(id=d.get('KP'), pf=pf, pa=pa, home=home_is_team, ts=int(d['KC']), comp=d.get('KF') or d.get('KI') or ''))
+    return out[:n]
 
 
 def season_games(mid, kickoff, team, comp=None):
@@ -514,14 +516,17 @@ def main():
             skipped['friendly / pre-season'] += 1; print(f"  {t:%a %H:%M}  {name:52} skip: {f.get('lg')}"); continue
         hg = venue_games(f['id'], f['ts'], f['h'], '- Home', f.get('lg')); ag = venue_games(f['id'], f['ts'], f['a'], '- Away', f.get('lg'))
         src = ''
+        # 13 Oct, user: "enough time has passed for it to have enough data for this
+        # season" - the venue window is THIS season's games only (from SEASON_START),
+        # 5+ a side or the game is skipped. Last season's games no longer fill it.
         if len(hg) < 5:
-            tp = team_page_games(f.get('px'), f.get('wu'), f['ts'], f['h'], True, f.get('lg'))
+            tp = [g for g in team_page_games(f.get('px'), f.get('wu'), f['ts'], f['h'], True, f.get('lg')) if g.get('ts', 0) >= SEASON_START]
             if len(tp) > len(hg): hg = tp; src += ' [home from team page]'
         if len(ag) < 5:
-            tp = team_page_games(f.get('py'), f.get('wv'), f['ts'], f['a'], False, f.get('lg'))
+            tp = [g for g in team_page_games(f.get('py'), f.get('wv'), f['ts'], f['a'], False, f.get('lg')) if g.get('ts', 0) >= SEASON_START]
             if len(tp) > len(ag): ag = tp; src += ' [away from team page]'
         if len(hg) < 5 or len(ag) < 5:
-            skipped['no venue form in this competition'] += 1; print(f"  {t:%a %H:%M}  {name:52} skip: venue form in {f.get('lg')} {len(hg)}/{len(ag)}"); continue
+            skipped['under 5 venue games this season'] += 1; print(f"  {t:%a %H:%M}  {name:52} skip: venue games this season in {f.get('lg')} {len(hg)}/{len(ag)}"); continue
         for g in hg + ag:
             if 'fh' not in g:
                 g['fh'] = first_half(g['id'], g['home']) if g['id'] else None

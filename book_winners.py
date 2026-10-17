@@ -72,6 +72,27 @@ def fmt(pairs):
     return ' '.join(f"{a}:{b}" for a, b in pairs)
 
 
+LAST10_MIN = 5         # each team's own last 10 must hold at least this many games
+
+
+def windows(f):
+    """13 Oct, user: "it throws away a lot of data". The two windows every pick must
+    pass, both cut an hour before kickoff, friendlies out, NO season cut:
+      venue   - home side's last 7 HOME games, away side's last 7 AWAY games
+      last 10 - each team's own last 10 games at any venue
+    Returns ([(gf, ga), ...] x 4): home venue, away venue, home last 10, away last 10.
+    (Was book_draw.venue_form: the Home/Away tabs with friendlies left in.)"""
+    import fetcher_v3 as F3
+    raw = F3.fetch(f"df_hh_1_{f['id']}", ttl=3600)
+    hr, ar, _ = F3.parse_history(raw)
+    cut = f['ts'] - 3600
+    keep = lambda rows: [x for x in rows if 0 < x['kc'] < cut and not x.get('friendly')]
+    hr, ar = keep(hr), keep(ar)
+    pair = lambda xs: [(x['gf'], x['ga']) for x in xs]
+    return (pair([x for x in hr if x['venue'] == 'home'][:7]), pair([x for x in ar if x['venue'] == 'away'][:7]),
+            pair(hr[:10]), pair(ar[:10]))
+
+
 def wider_sheet(f):
     """12 Sep: the three columns the 12 Sep losses had and the rule never read.
     overall  - last 10 games at any venue: (W, D, L)
@@ -86,7 +107,7 @@ def wider_sheet(f):
         hr, ar, _ = F3.parse_history(raw)
         cut = f['ts'] - 3600
         for key, rows in (('h_all', hr), ('a_all', ar)):
-            g = [x for x in rows if 0 < x['kc'] < cut][:10]
+            g = [x for x in rows if 0 < x['kc'] < cut and not x.get('friendly')][:10]   # 13 Oct: friendlies out, as in windows()
             if len(g) >= 5:
                 out[key] = (sum(x['gf'] > x['ga'] for x in g), sum(x['gf'] == x['ga'] for x in g), sum(x['gf'] < x['ga'] for x in g))
         seen = set()
@@ -192,14 +213,16 @@ def build(until_h, days=0, verbose=True):
             continue
         o1, o2 = float(m1['Home']['odds']), float(m1['Away']['odds'])
         try:
-            hp, ap = DRW.venue_form(f['id'], f['ts'])
+            hp, ap, h10, a10 = windows(f)
         except Exception:
-            hp, ap = [], []
+            hp, ap, h10, a10 = [], [], [], []
         row = dict(ev=ev, f=f, ts=f['ts'], league=f.get('league') or '?', home=f['home'], away=f['away'],
                    o1=o1, ox=float(m1['Draw']['odds']) if 'Draw' in m1 else None, o2=o2, hp=hp, ap=ap,
-                   pick=None, why='')
+                   h10=h10, a10=a10, pick=None, why='')
         if len(hp) < 4 or len(ap) < 4:
             row['why'] = 'no venue form'; rows.append(row); continue
+        if len(h10) < LAST10_MIN or len(a10) < LAST10_MIN:
+            row['why'] = f'no last-10 form ({len(h10)}/{len(a10)} games)'; rows.append(row); continue
         if o1 == o2:
             # 13 Sep: River Plate URU v Fenix at 2.65 / 2.95 / 2.65 - a dead heat has
             # no favourite; the tie used to break to Home and the cover lost 0-1.
@@ -232,6 +255,16 @@ def build(until_h, days=0, verbose=True):
         need = MARGIN_HOME if side == 'Home' else MARGIN_AWAY
         if margin < need:
             row['why'] = f"venue margin {margin:+.2f} below {need:.1f} ({side.lower()} favourite)"
+            rows.append(row); continue
+        # 13 Oct, user: both windows must back it. The same margin on each team's own
+        # last 10 at any venue. football-data 2015-26, favourites 1.30-1.60 that pass
+        # the venue rule: home favourites with last-10 margin >= 1.0 won 68.4% (book
+        # 65.5%) v 66.4% (64.1%) below it; away favourites >= 1.5 won 69.4% (66.3%)
+        # v 60.6% (64.5%, n 132) below it.
+        m10 = (gd(h10) - gd(a10)) if side == 'Home' else (gd(a10) - gd(h10))
+        row['margin10'] = m10
+        if m10 < need:
+            row['why'] = f"last-10 margin {m10:+.2f} below {need:.1f} (venue margin {margin:+.2f} passed)"
             rows.append(row); continue
         fav_pairs = hp if side == 'Home' else ap
         opp_pairs = ap if side == 'Home' else hp
@@ -379,6 +412,9 @@ def main():
         if r['hp'] and r['ap']:
             print(f"      {r['home'][:20]:20} HOME {fmt(r['hp']):32} {rec(r['hp'])}")
             print(f"      {r['away'][:20]:20} AWAY {fmt(r['ap']):32} {rec(r['ap'])}")
+        if r.get('h10') and r.get('a10'):
+            print(f"      {r['home'][:20]:20} LAST10 {fmt(r['h10']):30} {rec(r['h10'])}")
+            print(f"      {r['away'][:20]:20} LAST10 {fmt(r['a10']):30} {rec(r['a10'])}")
         w = r.get('wide')
         if w:
             h2 = '  '.join(f"{a}:{b}" for _, a, b in w['h2h']) or 'none'
@@ -393,7 +429,7 @@ def main():
     print(f"\n{SEP}\nSLIP - {len(picks)} legs  ~{combo:,.0f}x\n{SEP}")
     for r in picks:
         t = dt.datetime.fromtimestamp(r['ts'], tz=A.WAT)
-        print(f"  {t:%a %H:%M}  {r['home']} v {r['away']:26} {r['label']:30} @{float(r['o']['odds']):.2f}   margin {r['margin']:+.2f}")
+        print(f"  {t:%a %H:%M}  {r['home']} v {r['away']:26} {r['label']:30} @{float(r['o']['odds']):.2f}   margin {r['margin']:+.2f}  last-10 {r['margin10']:+.2f}")
     if dry:
         print("\n(dry run - nothing booked)"); return
     sels = [dict(eventId=r['ev']['eventId'], productId=3, marketId=('10' if r['pick'] == 'dc' else '1'),
@@ -403,12 +439,13 @@ def main():
     if bk and bk.get('code'):
         legs = [(r['ts'], f"{r['ev']['homeTeamName']} v {r['ev']['awayTeamName']}", r['label'], float(r['o']['odds']),
                  [f"{r['home']} HOME {fmt(r['hp'])} {rec(r['hp'])}", f"{r['away']} AWAY {fmt(r['ap'])} {rec(r['ap'])}",
-                  f"1X2 {r['o1']}/{r['ox']}/{r['o2']}  favourite {r['side']} venue margin {r['margin']:+.2f}",
+                  f"{r['home']} LAST10 {fmt(r['h10'])} {rec(r['h10'])}", f"{r['away']} LAST10 {fmt(r['a10'])} {rec(r['a10'])}",
+                  f"1X2 {r['o1']}/{r['ox']}/{r['o2']}  favourite {r['side']} venue margin {r['margin']:+.2f}  last-10 margin {r['margin10']:+.2f}",
                   f"overall last10 home {r.get('wide', {}).get('h_all')} away {r.get('wide', {}).get('a_all')}  h2h {[(a, b) for _, a, b in r.get('wide', {}).get('h2h', [])]}  "
                   f"SoT home {r.get('wide', {}).get('h_sot')} away {r.get('wide', {}).get('a_sot')}"])
                 for r in picks]
         A.log_booking(bk['code'], bk.get('url'),
-                      f"winners slip {combo:,.0f}x ({len(picks)} legs) until {until}:00 - fix v3: favourite at 1.30-1.60, margin >=1.0 home / >=1.5 away, straight win, cover only when draw-prone",
+                      f"winners slip {combo:,.0f}x ({len(picks)} legs) until {until}:00 - fix v4: favourite at 1.30-1.60, margin >=1.0 home / >=1.5 away on the venue games AND each team's last 10, straight win, cover only when draw-prone",
                       legs)
         print(f"code {bk['code']}  {bk.get('url')}   ({bk.get('booked')}/{bk.get('req')} legs, verified {bk.get('verified')})")
 

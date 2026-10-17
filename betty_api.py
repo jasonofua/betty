@@ -19,7 +19,7 @@ _lock = threading.Lock()
 _grade_cache = {}          # code -> (ts, result)
 _book_cache = {'sig': None, 'val': []}
 
-PRODUCTS = ['Live', 'Winners', 'Draws', 'Half-time draw', 'Points sports', 'Max odds', 'Strong groups', 'Every game', 'All games', 'Bet of the day', 'Rollover', 'By market']
+PRODUCTS = ['Five options', 'Live', 'Winners', 'Draws', 'Half-time draw', 'Points sports', 'Max odds', 'Strong groups', 'Every game', 'All games', 'Bet of the day', 'Rollover', 'By market']
 SPORT_LABEL = {'american football': 'American football', 'nfl': 'American football', 'ncaa': 'American football',
                'basketball': 'Basketball', 'ice hockey': 'Ice hockey', 'hockey': 'Ice hockey', 'handball': 'Handball'}
 
@@ -57,6 +57,8 @@ def product_of(label):
         return 'By market'
     if l.startswith('every game'):        # 9 Oct: book_allgames - one pick on every game, plus the 2k+ target codes
         return 'Every game'
+    if l.startswith('five options'):      # 17 Oct: book_five - 100x-200x codes from the five options that paid
+        return 'Five options'
     if l.startswith('strong groups'):     # 11 Oct: book_strong - 5-min draw, 0-0 at 10, England and Scotland games
         return 'Strong groups'
     if sport_of(label):
@@ -815,7 +817,7 @@ def combined_code(slot='am'):
     for c in parse_bookings():
         if _day_of(c['when']) != today or c['nested_from'] or c['superseded_by'] or not c['legs']:
             continue
-        if c['product'] in ('Live', 'All games', 'Every game', 'Strong groups'):
+        if c['product'] in ('Live', 'All games', 'Every game', 'Strong groups', 'Five options'):
             continue
         g = graded(c['code'], force=True)
         for l in g.get('legs') or []:
@@ -946,7 +948,7 @@ def best_of_day(dry=False):
     for c in parse_bookings():
         if _day_of(c['when']) != today or c['nested_from'] or c['superseded_by'] or not c['legs']:
             continue
-        if c['product'] in ('Live', 'All games', 'Bet of the day', 'Rollover', 'By market', 'Every game', 'Strong groups'):
+        if c['product'] in ('Live', 'All games', 'Bet of the day', 'Rollover', 'By market', 'Every game', 'Strong groups', 'Five options'):
             continue
         graded(c['code'], force=True)
         for l in decorate(c)['legs']:
@@ -1076,7 +1078,7 @@ def rollover_of_day(dry=False):
     for c in parse_bookings():
         if _day_of(c['when']) != today or c['nested_from'] or c['superseded_by'] or not c['legs']:
             continue
-        if c['product'] in ('Live', 'All games', 'Bet of the day', 'Rollover', 'By market', 'Every game', 'Strong groups'):
+        if c['product'] in ('Live', 'All games', 'Bet of the day', 'Rollover', 'By market', 'Every game', 'Strong groups', 'Five options'):
             continue
         graded(c['code'], force=True)
         for l in decorate(c)['legs']:
@@ -1258,6 +1260,7 @@ RULES = [
 ]
 
 CHANGELOG = [
+    dict(date='17 Oct', txt="The morning schedule now books only what has paid. On the site's own settled legs 3-17 Oct (3,827, each counted once, staked as singles at the booked price) five options returned more than was put in: the draw after 5 minutes (163 of 171, 106 back per 100), the 10-minute draw (57 of 60, 106), the minute Unders (126 of 152, 104), Draw or Away (79 of 92, 104) and the home win (55 of 71, about 108 with one 24.0 fluke left out). Over/Under goals, half goals, Home or Draw and Home or Away won often and paid back 88 to 99. New product, Five options (09:30): one leg per game - a minute leg only where both sides' past games back it, Home or Draw or Away only where it is the book's most likely option at 1.15-2.00 - in codes of 100x to 200x, best chance first, until the board runs out. The draw slip (09:20) keeps only the user's Under 2.5 at 1.38 rung (7 of 8 since 16 Sep). Winners, Max odds, By market, first-half Unders, Every game, Strong groups, All games, Bet of the day, Rollover and the points sports are off the schedule, and the live half-time watcher no longer starts on its own (/live starts it). Script: book_five.py."),
     dict(date='11 Oct', txt="New product, Strong groups (10:30): only the legs from the groups that won above their price on both halves of 1-11 Oct - the draw after 5 minutes (129 of 134, priced 82%), 0-0 at 10 minutes (72 of 85, priced 75%), England and Scotland games (116 of 132, priced 77-79%) - one leg per game, every such game in codes of up to 50, plus 300x to 10,000x where the board reaches it. 1,548 settled legs won 81% against 77% priced and no market type lost more than its price; the losses sat in which games were picked. Same day: football games from Uruguay (30 of 44, priced 78%) and Russia (20 of 31, priced 72%) are skipped by every product - below the price on both halves, small samples, re-measured as they come; basketball pre-season and friendly games are skipped by SportyBet's tournament name too (the two NBA pre-season legs lost on the hand-booked JLR7TK)."),
     dict(date='10 Oct', txt="The 5-minute draw and 0-0 at 10 minutes keep the match-record check every day from now, with three fixes after today's four 5-minute draw losses (Plzen, Augsburg, Bristol Rovers, Barcelona), each beaten by a goal inside 4 minutes. A known early goal in a past game now counts even when another goal in that game has no minute (Bristol Rovers 5-3 Newport had a 1' goal and was dropped whole); each side needs 3 timed games of its own, not 6 between the two (Augsburg and Barcelona had 2, Plzen 3); and a past game with no timing counts against the pick instead of vanishing. Backtested on every settled leg since 25 Sep: 5-minute draws the new check passes won 37 of 37, the ones it stops 47 of 51 - all four losses stopped; 0-0 at 10 minutes 29 of 33 against 28 of 35. Fewer games pass (about 4 in 10 five-minute draws), so the 5-minute draw codes reach lower odds. Script: findings.py."),
     dict(date='10 Oct', txt="Today every football code follows the winners' finding (user's call). 866 won legs since 25 Sep showed each option winning in the matches whose own record was already doing that thing, so an option now goes on a code only when the record backs it: the home side's last 7 home games and the away side's last 7 away games, each read as if it were today's match, must have won the option at least as often as that option's own winners did (their lower quartile). Draw after 5 minutes 83% of games with no goal by minute 5; 0-0 at 10 minutes 73%; first-half Under 2.5 89% plus a goalless first half in each side's window; first-half Under 1.5 64%; first-half Over 0.5 71%; Over 1.5 75%; Home or Draw 67%; Draw or Away 57%; Home or Away 79%. Markets with no won legs to learn from (straight draws, GG, corners, cards) are off for the day, as is any game without a record. Every product filters its own picks first, and the booking step refuses a code with any leg it cannot confirm. The 5-minute draw is booked to 400x and the 10-minute draw as high as its games allow. Script: findings.py."),
@@ -1534,36 +1537,14 @@ SCHEDULE = [
     # (time WAT, job id, POST endpoint, body) - the codes are generated every day
     ('08:50', 'sporty-calibration', '/api/calib', dict()),
     ('08:55', 'odds-snapshot', '/api/snapshot', dict()),
-    ('09:05', 'winners-am', '/api/winners', dict(until=23, days=0)),
-    ('09:20', 'draws', '/api/drawsmkt', dict()),
-    ('09:28', 'max', '/api/run', dict(target=6, until=23, days=0, maxodds=True)),
-    ('09:40', 'points-basketball', '/api/points', dict(sport='basketball', days=0)),
-    ('09:45', 'points-hockey', '/api/points', dict(sport='hockey', days=0)),
-    ('09:50', 'points-handball', '/api/points', dict(sport='handball', days=0)),
-    ('09:58', 'by-market', '/api/bymarket', dict(until=23, days=0)),
-    ('10:02', 'h1-under-2.5', '/api/h1unders', dict(until=23, days=0, line=2.5)),
-    ('10:04', 'h1-under-1.5', '/api/h1unders', dict(until=23, days=0, line=1.5)),
-    ('10:05', 'all-games-am', '/api/combined', dict(slot='am')),
-    ('10:07', 'h1-under-best-line', '/api/h1unders', dict(until=23, days=0, combined=True)),
-    ('10:12', 'bet-of-the-day', '/api/best', dict()),
-    ('10:18', 'rollover', '/api/roll', dict()),
-    # 9 Oct, user: "I can't be always having 3x" / "I need 2k odds upwards too". Every
-    # football game, the book's most likely option at 1.15+ (PW6EAL), in codes of up
-    # to 50, plus the best-chance 2,000x / 5,000x / 10,000x codes from the same picks.
-    # Last, so the merged code, bet of the day and rollover are built as before.
-    ('10:22', 'every-game', '/api/allgames', dict(until=23, targets=[2000, 5000, 10000])),
-    # 9 Oct, user: "the 5 mins draw up to 300x and above and 10 mins draw too, and other
-    # options that you see are playing well". One market per code at 300x on the book's
-    # own numbers, plus the 5-minute draw's 50 longest prices. No 10-minute result market
-    # exists on SportyBet, so the 10-minute draw is 0-0 at ten minutes (goals 1-10 Under 0.5);
-    # user, same evening: "book the shortest and the longest 50" of it as well.
-    ('10:26', 'one-market-300x', '/api/onemarket', dict(until=23, markets=['d5', 'g10', 'h1o05', 'h1u25'], targets=[300],
-                                                          max=['d5', 'g10'], short=['g10'])),
-    # 11 Oct, user: "all this losses what is the fix" / "Apply". Only the groups that won
-    # above their price on both halves of 1-11 Oct: the 5-minute draw (129/134), 0-0 at 10
-    # minutes (72/85), England and Scotland games (116/132). One leg per game; every game in
-    # codes of up to 50, the 50 longest past that, and the user's targets where reachable.
-    ('10:30', 'strong-groups', '/api/strong', dict(until=23, targets=[300, 2000, 5000, 10000])),
+    # 17 Oct, user: "I am getting tired of all this losses" / "Ok do that" / "Redeploy, but I need
+    # at least 100-200 odds from this 5". On the site's settled legs 3-17 Oct only five options
+    # returned more than staked (5-min draw 163/171, 10-min draw 57/60, minute Unders 126/152,
+    # Draw or Away 79/92, Home 55/71); every other product is off the schedule. The draw slip
+    # keeps only the user's 1.38 rung (7 of 8 since 16 Sep), and book_five.py books codes of
+    # 100x-200x from the five options, best chance first, until the board runs out.
+    ('09:20', 'draws', '/api/drawsmkt', dict(rung=[1.38])),
+    ('09:30', 'five-options', '/api/five', dict(until=23, lo=100, hi=200)),
     # 18 Sep, user: one set a day - the morning. The 16:35 / 16:50 / 17:10 evening
     # runs (games until 06:00) are gone; an evening code is booked only when asked.
 ]

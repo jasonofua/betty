@@ -205,63 +205,66 @@ def scan(until_h=23, days=0, min_rate=MIN_RATE, verbose=True, line=None, min_mod
             continue
         if not FD.ok(ev, '68', f'total={line}', f'Under {line}')[0]:
             continue                                 # 10 Oct: the winners' finding (findings.py)
-        gap = venue_gap(f['id'], int(f['ts']))
-        if gap is None or gap > SEASON_GAP_DAYS:
-            continue                                 # off-season window, see SEASON_GAP_DAYS
-        h, a = D.records_for(f['id'])
-        if not h or not a:
+        # 13 Oct, user: "it throws away a lot of data" - no season filter (the 35-day
+        # venue-gap check is gone: it was a season cut, and it counted friendlies),
+        # and BOTH windows must back the leg: the venue first halves (home side's last
+        # 7 at home, away side's last 7 away) AND each team's own last 10 first halves
+        # at any venue. Every gate for the line runs on each window separately.
+        h, a = D.records_for(f['id'], season=False)
+        h10, a10 = D.records_for(f['id'], season=False, overall=True)
+        if not h or not a or not h10 or not a10:
             continue
         hp, ap = h.pairs('h1'), a.pairs('h1')
-        if len(hp) < MIN_GAMES or len(ap) < MIN_GAMES:
+        hp10, ap10 = h10.pairs('h1'), a10.pairs('h1')
+        if min(len(hp), len(ap), len(hp10), len(ap10)) < MIN_GAMES:
             continue
-        tot = [x + y for x, y in hp] + [x + y for x, y in ap]
-        hits = sum(1 for v in tot if v <= cap)
-        rate = hits / len(tot)
         odds, ids = got
-        lam = expected_half(hp, ap)
-        model = poisson_under(lam, cap)
-        # 3 Oct, user's number: the two ATTACKS only - home first-half goals scored per
-        # home game plus away first-half goals scored per away game. On 84 settled
-        # Under 1.5 legs 26 Sep - 3 Oct: under 0.8 34/39 = 87%, 0.8-1.1 70%, 1.1-1.4
-        # 69%, 1.4+ 3/9 = 33%, holding on both halves (85% / 6 of 6 under 0.8). Our
-        # blended model (scoring with conceding) read 85% / 72% - it let Reading v
-        # Bradford (attacks 1.43) through at 1.07 because both sides concede little.
-        attack = sum(x for x, _ in hp) / len(hp) + sum(x for x, _ in ap) / len(ap)
+
+        def read(hp, ap):
+            """Every number the gates use, for one window."""
+            tot = [x + y for x, y in hp] + [x + y for x, y in ap]
+            hb = sum(1 for x, y in hp if x + y > cap)      # home halves that broke the line
+            ab = sum(1 for x, y in ap if x + y > cap)      # away halves that broke the line
+            lam = expected_half(hp, ap)
+            return dict(
+                rate=sum(1 for v in tot if v <= cap) / len(tot), lam=lam, model=poisson_under(lam, cap),
+                # 3 Oct, user's number: the two ATTACKS only - home first-half goals scored per
+                # home game plus away first-half goals scored per away game. On 84 settled
+                # Under 1.5 legs 26 Sep - 3 Oct: under 0.8 34/39 = 87%, 0.8-1.1 70%, 1.1-1.4
+                # 69%, 1.4+ 3/9 = 33%.
+                attack=sum(x for x, _ in hp) / len(hp) + sum(x for x, _ in ap) / len(ap),
+                window='clean' if not hb and not ab else 'one-breach' if bool(hb) != bool(ab) else 'both-breach',
+                two=sum(1 for v in tot if v >= 2) / len(tot),
+                blanks=min(sum(1 for x, y in hp if x + y == 0), sum(1 for x, y in ap if x + y == 0)),
+                side=min(sum(1 for x, y in hp if x + y <= cap) / len(hp), sum(1 for x, y in ap if x + y <= cap) / len(ap)),
+                series=f"{sum(1 for x, y in hp if x + y <= cap)}/{len(hp)}+{sum(1 for x, y in ap if x + y <= cap)}/{len(ap)}")
+
+        def passes(r):
+            if cap >= 2:
+                # a side that almost never has a goalless half (see MIN_BLANK_HALVES); 27 Sep,
+                # user's call: both sides breaching is never taken
+                return r['blanks'] >= MIN_BLANK_HALVES and r['window'] != 'both-breach' and r['rate'] >= min_rate
+            # 1.5: the price cap, the expected-goals bar, the attack bar, and each side's own
+            # venue halves (see MAX_PRICE_15, BUSY_DROP_15, MIN_SIDE_15)
+            return (odds <= MAX_PRICE_15 and r['model'] >= min_model and r['attack'] < BUSY_DROP_15
+                    and r['side'] >= MIN_SIDE_15 - 1e-9)
+
+        v, t = read(hp, ap), read(hp10, ap10)
+        if not passes(v) or not passes(t):
+            continue
         share = same_comp_share(f['id'], int(f['ts']), f.get('league'))
-        hb = sum(1 for x, y in hp if x + y > cap)      # home halves that broke the line
-        ab = sum(1 for x, y in ap if x + y > cap)      # away halves that broke the line
-        window = 'clean' if not hb and not ab else 'one-breach' if bool(hb) != bool(ab) else 'both-breach'
-        two = sum(1 for v in tot if v >= 2) / len(tot)   # halves one goal (or less) from 3
-        if cap >= 2 and min(sum(1 for x, y in hp if x + y == 0), sum(1 for x, y in ap if x + y == 0)) < MIN_BLANK_HALVES:
-            continue                                 # a side that almost never has a goalless half (see MIN_BLANK_HALVES)
-        if cap >= 2:
-            # 27 Sep, user's call: clean windows first, then one-breach legs to fill.
-            # Settled 26-27 Sep: neither side with a 3-goal half 35/36 = 97%, one
-            # side with one 29/33 = 88%. Both sides breaching is never taken.
-            if window == 'both-breach' or rate < min_rate:
-                continue
-            if window == 'clean' and share is not None and share < CROSS_COMP:
-                window = 'cross-comp'                # clean count, but of other competitions
-        else:
-            # 1.5: the price cap and the expected-goals bar. A "model must beat the
-            # price by two points" test was added on 27 Sep and removed the same
-            # day - it cut 23 of the 55 games inside the cap and nothing measured
-            # supports it. The measured fact is the price band itself: on the 26
-            # Sep board, legs at 1.25 or shorter went 7 of 8, 1.25-1.43 went 10 of
-            # 13, 1.43+ went 4 of 9 - and that holds whether or not our number
-            # happens to sit above the book's.
-            if odds > MAX_PRICE_15 or model < min_model or attack >= BUSY_DROP_15:
-                continue
-            if min(sum(1 for x, y in hp if x + y <= cap) / len(hp),
-                   sum(1 for x, y in ap if x + y <= cap) / len(ap)) < MIN_SIDE_15 - 1e-9:
-                continue                             # one side's own venue halves too busy
+        window = v['window']
+        if cap >= 2 and window == 'clean' and t['window'] != 'clean':
+            window = 'one-breach'                    # clean only when the last 10 are clean too
+        if cap >= 2 and window == 'clean' and share is not None and share < CROSS_COMP:
+            window = 'cross-comp'                    # clean count, but of other competitions
         ts = dt.datetime.fromtimestamp(int(ev['estimateStartTime']) / 1000, tz=A.WAT)
         out.append(dict(ts=ts.timestamp(), when=ts.strftime('%a %H:%M'),
                         match=f"{f['home']} v {f['away']}", lg=f.get('league', ''),
-                        odds=odds, rate=rate, lam=lam, model=model, ids=ids, window=window, share=share,
-                        attack=attack, two=two,
-                        series=f"{sum(1 for v in [x + y for x, y in hp] if v <= cap)}/{len(hp)}+"
-                               f"{sum(1 for v in [x + y for x, y in ap] if v <= cap)}/{len(ap)}"))
+                        odds=odds, rate=min(v['rate'], t['rate']), rate_venue=v['rate'], rate10=t['rate'],
+                        lam=max(v['lam'], t['lam']), model=min(v['model'], t['model']), ids=ids, window=window, share=share,
+                        attack=max(v['attack'], t['attack']), two=max(v['two'], t['two']),
+                        series=v['series'], series10=t['series']))
     if cap >= 2:
         out.sort(key=lambda r: (r['window'] != 'clean', -r['rate'], r['odds']))
     else:
@@ -454,7 +457,7 @@ def _book_line(legs, line, title):
         A.log_booking(bk['code'], bk['url'],
                       f"one market: 1st Half - Over/Under / Under {line} - {title} - {combo:,.2f}x ({len(legs)} games)",
                       [(l['ts'], l['match'], f"1st Half - Over/Under / Under {line}", l['odds'],
-                        [f"first halves under {line}: {l['series']} = {l['rate']*100:.0f}% - {l['window']}",
+                        [f"first halves under {line}: venue {l['series']} = {l['rate_venue']*100:.0f}%, last 10 {l['series10']} = {l['rate10']*100:.0f}% - {l['window']}",
                          f"expected first-half goals {l['lam']:.2f}, model {l['model']*100:.0f}% v book {1/l['odds']*100:.0f}%"])
                        for l in legs])
     else:
@@ -479,7 +482,7 @@ def _book(legs, title):
         A.log_booking(bk['code'], bk['url'],
                       f"one market: 1st Half Unders, best line per game - {title} - {combo:,.2f}x ({len(legs)} games)",
                       [(l['ts'], l['match'], f"1st Half - Over/Under / Under {l['line']}", l['odds'],
-                        [f"first halves under {l['line']}: {l['series']} = {l['rate']*100:.0f}% - {l['window']}",
+                        [f"first halves under {l['line']}: venue {l['series']} = {l['rate_venue']*100:.0f}%, last 10 {l['series10']} = {l['rate10']*100:.0f}% - {l['window']}",
                          f"expected first-half goals {l['lam']:.2f}, model {l['model']*100:.0f}% v book {1/l['odds']*100:.0f}%"])
                        for l in legs])
     else:

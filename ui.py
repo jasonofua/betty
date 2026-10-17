@@ -280,7 +280,8 @@ def scheduler():
     time.sleep(20)
     while True:
         try:
-            if LIVE.get('wanted', True) and LIVE['state'] != 'running':
+            # 17 Oct, user: only the five options that paid - the half-time watcher waits for /live
+            if LIVE.get('wanted', False) and LIVE['state'] != 'running':
                 # 17 Sep: a watcher that dies is restarted at most every five minutes, and
                 # after three crashes in half an hour it stays down until /live - the
                 # restart-every-minute loop re-read and re-sent the same half-times
@@ -313,7 +314,13 @@ def scheduler():
                     elif path == '/api/draws':
                         draw_job(body['until'], body.get('days', 0), False, bool(body.get('half')))
                     elif path == '/api/drawsmkt':
-                        script_job('draws', ['book_draw_market.py'], 'draw slip (market band)')
+                        args = ['book_draw_market.py'] + (['--rung', ','.join(str(r) for r in body['rung'])] if body.get('rung') else [])
+                        script_job('draws', args, 'draw slip (market band)')
+                    elif path == '/api/five':
+                        # 17 Oct: codes of 100x-200x from the five options that paid (book_five)
+                        args = ['book_five.py', '--until', str(body.get('until', 23)),
+                                '--lo', str(body.get('lo', 100)), '--hi', str(body.get('hi', 200))]
+                        script_job('five', args, 'five options (scheduled)')
                     elif path == '/api/h1unders':
                         args = ['book_h1unders.py', '--until', str(body.get('until', 23)),
                                 '--days', str(body.get('days', 0)), '--line', str(body.get('line', 2.5))]

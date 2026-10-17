@@ -74,9 +74,17 @@ def build(until_h=10, floor=None, verbose=True, days=0, cap=None, all_options=Fa
     if FD.active():
         FD.prepare([ev for ev, _f, _s in pairs])
     for ev, f, _s in pairs:
-        h, a = D.records_for(f['id'])
+        # 13 Oct, user: "it throws away a lot of data". Two windows, no season cut:
+        # the venue games (home side's last 7 at home, away side's last 7 away) and
+        # each team's own last 10 at any venue. An option must clear every gate on
+        # BOTH (D.backed_by_both).
+        h, a = D.records_for(f['id'], season=False)
         if not h or not h.quantities() or not a.quantities():
             st['no record'] += 1
+            continue
+        h10, a10 = D.records_for(f['id'], season=False, overall=True)
+        if not h10 or not h10.quantities() or not a10.quantities():
+            st['no last-10 record'] += 1
             continue
         kw = {'min_odds': floor} if floor else {}
         kw['max_odds'] = MAX_PRICE if cap is None else cap
@@ -84,8 +92,9 @@ def build(until_h=10, floor=None, verbose=True, days=0, cap=None, all_options=Fa
         # to that team instead of being read as a match total
         kw['teams'] = (ev.get('homeTeamName'), ev.get('awayTeamName'))
         D.set_league(f.get('league'))
-        picks = (D.every_option(ev.get('markets') or [], h, a, **kw) if all_options
-                 else D.best_three(ev.get('markets') or [], h, a, **kw))
+        both = D.backed_by_both(ev.get('markets') or [], h, a, h10, a10, **kw)
+        picks = (D.every_option(ev.get('markets') or [], h, a, rows=both, **kw) if all_options
+                 else D.best_three(ev.get('markets') or [], h, a, rows=both, **kw))
         if picks and FD.active():
             # 10 Oct, user: every game booked today follows the winners' finding (findings.py)
             picks = [p for p in picks if FD.ok(ev, p['mid'], p['spec'], A._desc_of(p['mid'], p['oid'], p['spec']) or '')[0]]
@@ -109,7 +118,7 @@ def build(until_h=10, floor=None, verbose=True, days=0, cap=None, all_options=Fa
                     pass
                 break
         board.append({
-            'ts': ts, 'eid': ev['eventId'], 'fx': f, 'rec': h, 'rec_a': a,
+            'ts': ts, 'eid': ev['eventId'], 'fx': f, 'rec': h, 'rec_a': a, 'rec10': h10, 'rec10_a': a10,
             'games': len(h.pairs('goals')), 'picks': picks, 'fav': fav,
         })
     board.sort(key=lambda x: x['ts'])
@@ -141,12 +150,14 @@ def stat_lines(m, pick):
     q, per, side = D.parse_market(pick['market'],
                                   set(m['rec'].quantities()) | set(m['rec_a'].quantities()))
     qk = q if per == 'ft' else (per if q == 'goals' else f'{q}_{per}')
-    out.append(f"support {pick['rate']:.0%}  tally {pick['tally']}  "
-               f"reads '{qk}'  book implies {1 / pick['odds']:.0%}"
+    out.append(f"support {pick['rate']:.0%}  tally {pick['tally']}"
+               + (f"  last-10 tally {pick['tally_last10']}" if pick.get('tally_last10') else "")
+               + f"  reads '{qk}'  book implies {1 / pick['odds']:.0%}"
                + (f"  1X2 fav @{m['fav']:.2f}" if m.get('fav') else ""))
     out.append(f"DECIDED BY  {qk}:")
-    for tag, rec in (('home', m['rec']), ('away', m['rec_a'])):
-        pr = rec.pairs(qk)
+    for tag, rec in (('home', m['rec']), ('away', m['rec_a']),
+                     ('home last 10', m.get('rec10')), ('away last 10', m.get('rec10_a'))):
+        pr = rec.pairs(qk) if rec else []
         if pr:
             out.append(f"   {tag} for {_fmt([f for f, _ in pr])}  "
                        f"against {_fmt([a for _, a in pr])}")

@@ -40,6 +40,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 import fetcher_v2 as F
 import predict_all as PA
 import sportybet as S
+import ratings as _R
 
 MIN_CONF = 0.00      # a leg must NOT-LOSE (win or push) with at least this model prob
 MIN_ODDS = 1.05      # ignore near-1.0 legs (lets the form's safe goals line through, e.g. Over1.5 @1.06)
@@ -248,7 +249,7 @@ def recent_kc(raw):
             # was 21 May, three months before kickoff, which is the record the
             # engine bet Zakynthos v Kifisia on. Every match now counts; rows are
             # tagged so a caller can still weight or exclude them.
-            friendly = bool(re.search(r'Friendl', comp, re.I))
+            friendly = _R.is_friendly(comp, s.get('KH', ''))   # 14 Oct: pre-season tournaments too (Trofeo Colombino, Indonesian President Cup)
             gf, ga = (ku, kt) if v == 'home' else (kt, ku)
             # Half-time goals from KX/KY - gives 100% HT coverage from this feed
             try: ht_h_g = int(s.get('KX', ''))

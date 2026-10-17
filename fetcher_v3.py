@@ -40,6 +40,7 @@ Usage:
 
 import os, sys, re, time, json, hashlib, urllib.request
 from collections import defaultdict
+import ratings as _R
 
 # ── constants ──────────────────────────────────────────────────────────────────
 BASE     = "https://global.flashscore.ninja/2030/x/feed/"
@@ -74,6 +75,9 @@ VENUE_WINDOW = 16
 # in which it scored 2, the exact number that beat the leg - was filtered out for
 # being an away game.
 SEASON_GAP_DAYS = 45
+# 13 Oct, user: each team's own last 10 games at any venue, read next to the venue
+# games (fetch_rich_history overall=True). Friendlies out, no season cut.
+OVERALL_GAMES = 10
 
 
 def trim_at_season_gap(rows, gap_days=SEASON_GAP_DAYS):
@@ -410,7 +414,7 @@ def parse_history(raw):
             # kc lets the consistency scanner tell a season break from a normal
             # week; the parser did not capture it before 4 Aug.
             row = dict(gf=gf, ga=ga, res=res, venue=venue, match_id=match_id,
-                       hg=hg, ag=ag, kc=kc, friendly=bool(re.search(r'Friendl', _comp, re.I)))
+                       hg=hg, ag=ag, kc=kc, friendly=_R.is_friendly(_comp, f.get('KH', '')))   # 14 Oct: pre-season tournaments too
             blocks[blk].append(row)
             if match_id:
                 past_ids[blk].append(match_id)
@@ -657,8 +661,18 @@ def parse_match_stats(match_id):
 
 
 # ── venue-split history with deep HT/goal-minute stats ────────────────────────
-def fetch_rich_history(fixture_id, verbose=False, raw=None, with_stats=FETCH_STATS):
+def fetch_rich_history(fixture_id, verbose=False, raw=None, with_stats=FETCH_STATS, season=True, overall=False):
     """
+    13 Oct, user: "it throws away a lot of data". Two switches for Winners, Max odds
+    and By market:
+      season=False   no 45-day off-season cut and no 16-game cap: the venue series
+                     are the last MAX_DEEP_GAMES venue games whatever the date.
+      overall=True   each team's own last OVERALL_GAMES games at ANY venue instead of
+                     the venue split (friendlies still out). Only the *_series keys
+                     and the *_stats profiles are per-team correct in this mode;
+                     the *_avg / *_first_goal style keys assume the venue split.
+    Every other caller keeps the defaults and gets exactly what it got before.
+
     Full enriched history for a fixture.
     Pass `raw` when the caller has already pulled df_hh_1_{fixture_id} (book_v3 does)
     to avoid fetching the same feed twice through two separate caches.
@@ -730,11 +744,12 @@ def fetch_rich_history(fixture_id, verbose=False, raw=None, with_stats=FETCH_STA
         workable minimum. The split is now applied downstream, where it can fall
         back to the full sample when it would leave too little."""
         nonlocal rejected
-        for row in trim_at_season_gap(rows)[:window]:
+        src = trim_at_season_gap(rows) if season else rows
+        for row in (src[:window] if window else src):
             mid = row.get("match_id", "")
             if not mid or (venue is not None and row["venue"] != venue):
                 continue
-            if venue is not None and row.get("friendly"):
+            if (venue is not None or overall) and row.get("friendly"):
                 continue                    # 4 Oct: a pre-season friendly is not venue form
             if len(sink) >= budget:
                 break
@@ -759,8 +774,13 @@ def fetch_rich_history(fixture_id, verbose=False, raw=None, with_stats=FETCH_STA
     # Each team gets its own budget - a home team with few home games used to leave
     # the away team free to burn the whole allowance.
     home_venues, away_venues, home_kc, away_kc = [], [], [], []
-    collect(home_rows, "home", MAX_DEEP_GAMES, home_deep_stats, home_stat_rows, home_venues, home_kc, VENUE_WINDOW)
-    collect(away_rows, "away", MAX_DEEP_GAMES, away_deep_stats, away_stat_rows, away_venues, away_kc, VENUE_WINDOW)
+    if overall:
+        collect(home_rows, None, OVERALL_GAMES, home_deep_stats, home_stat_rows, home_venues, home_kc, None)
+        collect(away_rows, None, OVERALL_GAMES, away_deep_stats, away_stat_rows, away_venues, away_kc, None)
+    else:
+        win = VENUE_WINDOW if season else None
+        collect(home_rows, "home", MAX_DEEP_GAMES, home_deep_stats, home_stat_rows, home_venues, home_kc, win)
+        collect(away_rows, "away", MAX_DEEP_GAMES, away_deep_stats, away_stat_rows, away_venues, away_kc, win)
     rich["home_game_venues"] = home_venues
     rich["away_game_venues"] = away_venues
     rich["home_game_kc"] = home_kc

@@ -295,6 +295,10 @@ def main():
         print(f"  {ko:%a %H:%M}  {'-':3} {s['home'][:22]:22} v {s['away'][:22]:22} sporty {s['ox']:.2f} own implied {imp:.0%}  {tag}")
     picks += kept[:_cap]
     pattern = [p for p in kept[:_cap] if not p.get('user') and on_pattern(p)]
+    if '--rung' in sys.argv:                      # 17 Oct, user: only the 1.38 rung (7 of 8 since 16 Sep)
+        rungs = [float(x) for x in sys.argv[sys.argv.index('--rung') + 1].split(',')]
+        pattern = [p for p in pattern if round(p['under'], 2) in rungs]
+        print(f"rung {rungs}: {len(pattern)} game(s) kept")
     print(f"\n{seen} fixtures matched, {len(picks)} draw singles, {len(pattern)} on the user's pattern (Under 1.38 or 1.50, 1.41-1.43 at gap 0.13, or 1.29 at gap 0.00)" + (' (dry run)' if dry else ''))
     if dry or not picks:
         return

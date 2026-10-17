@@ -296682,3 +296682,8175 @@ http://www.sportybet.com/ng/?shareCode=V2SEF5
 - Wed 21:00  Independiente FBC v Nacional Asuncion  -  1st Half - Over/Under / Under 1.5 @1.39
     first halves under 1.5: 5/7+6/7 = 79% - fill window
     expected first-half goals 0.79, model 81% v book 72%
+
+## 2026-10-01 07:39 WAT  |  one market: 1st Half - Over/Under / Under 2.5 - 1.77x (6 games)  |  code TQW8GP
+http://www.sportybet.com/ng/?shareCode=TQW8GP
+- Thu 21:30  Envigado v Orsomarso  -  1st Half - Over/Under / Under 2.5 @1.05
+    first halves under 2.5: 6/7+7/7 = 93% - one-breach window
+    expected first-half goals 0.79, model 95% v book 95%
+- Thu 19:45  Bastia v Orleans  -  1st Half - Over/Under / Under 2.5 @1.06
+    first halves under 2.5: 6/7+7/7 = 93% - one-breach window
+    expected first-half goals 1.29, model 86% v book 94%
+- Thu 17:45  Austria Vienna W v Inter W  -  1st Half - Over/Under / Under 2.5 @1.10
+    first halves under 2.5: 7/7+6/7 = 93% - one-breach window
+    expected first-half goals 1.14, model 89% v book 91%
+- Thu 23:00  Olimpia Asuncion v Sp. Luqueno  -  1st Half - Over/Under / Under 2.5 @1.10
+    first halves under 2.5: 6/7+7/7 = 93% - one-breach window
+    expected first-half goals 1.43, model 83% v book 91%
+- Thu 17:00  SC Ashdod v M. Herzliya  -  1st Half - Over/Under / Under 2.5 @1.13
+    first halves under 2.5: 7/7+6/7 = 93% - one-breach window
+    expected first-half goals 1.43, model 83% v book 88%
+- Thu 17:00  Bnei Yehuda v Kiryat Gat  -  1st Half - Over/Under / Under 2.5 @1.16
+    first halves under 2.5: 6/7+7/7 = 93% - one-breach window
+    expected first-half goals 1.14, model 89% v book 86%
+
+## 2026-10-01 07:50 WAT  |  one market: 1st Half Unders, best line per game - high % - 1.35x (3 games)  |  code JPWVSR
+http://www.sportybet.com/ng/?shareCode=JPWVSR
+- Thu 17:45  Austria Vienna W v Inter W  -  1st Half - Over/Under / Under 2.5 @1.10
+    first halves under 2.5: 7/7+6/7 = 93% - one-breach
+    expected first-half goals 1.14, model 89% v book 91%
+- Thu 17:00  Bnei Yehuda v Kiryat Gat  -  1st Half - Over/Under / Under 2.5 @1.16
+    first halves under 2.5: 6/7+7/7 = 93% - one-breach
+    expected first-half goals 1.14, model 89% v book 86%
+- Thu 19:45  Bastia v Orleans  -  1st Half - Over/Under / Under 2.5 @1.06
+    first halves under 2.5: 6/7+7/7 = 93% - one-breach
+    expected first-half goals 1.29, model 86% v book 94%
+
+## 2026-10-01 07:50 WAT  |  one market: 1st Half Unders, best line per game - 40-50 legs - 2.21x (6 games)  |  code JS5A00
+http://www.sportybet.com/ng/?shareCode=JS5A00
+- Thu 17:45  Austria Vienna W v Inter W  -  1st Half - Over/Under / Under 2.5 @1.10
+    first halves under 2.5: 7/7+6/7 = 93% - one-breach
+    expected first-half goals 1.14, model 89% v book 91%
+- Thu 17:00  Bnei Yehuda v Kiryat Gat  -  1st Half - Over/Under / Under 2.5 @1.16
+    first halves under 2.5: 6/7+7/7 = 93% - one-breach
+    expected first-half goals 1.14, model 89% v book 86%
+- Thu 19:45  Bastia v Orleans  -  1st Half - Over/Under / Under 2.5 @1.06
+    first halves under 2.5: 6/7+7/7 = 93% - one-breach
+    expected first-half goals 1.29, model 86% v book 94%
+- Thu 23:00  Olimpia Asuncion v Sp. Luqueno  -  1st Half - Over/Under / Under 2.5 @1.11
+    first halves under 2.5: 6/7+7/7 = 93% - one-breach
+    expected first-half goals 1.43, model 83% v book 90%
+- Thu 17:00  SC Ashdod v M. Herzliya  -  1st Half - Over/Under / Under 2.5 @1.13
+    first halves under 2.5: 7/7+6/7 = 93% - one-breach
+    expected first-half goals 1.43, model 83% v book 88%
+- Thu 21:30  Envigado v Orsomarso  -  1st Half - Over/Under / Under 1.5 @1.30
+    first halves under 1.5: 5/7+7/7 = 86% - fill
+    expected first-half goals 0.79, model 81% v book 77%
+
+## 2026-10-01 08:21 WAT  |  one market: 1st Half - Over/Under / Under 2.5 - 6.66x (31 games)  |  code ZUY5V6
+http://www.sportybet.com/ng/?shareCode=ZUY5V6
+- Sat 19:00  San Miguel v CA Mitre  -  1st Half - Over/Under / Under 2.5 @1.02
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 0.64, model 97% v book 98%
+- Sat 21:00  Atl. Tucuman v Barracas Central  -  1st Half - Over/Under / Under 2.5 @1.03
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 0.57, model 98% v book 97%
+- Sat 19:00  Defensores Unidos v Argentino de Quilmes  -  1st Half - Over/Under / Under 2.5 @1.03
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 0.36, model 99% v book 97%
+- Fri 23:00  Ferro v Deportivo Madryn  -  1st Half - Over/Under / Under 2.5 @1.03
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 0.79, model 95% v book 97%
+- Sat 19:00  Acassuso v Ciudad Bolivar  -  1st Half - Over/Under / Under 2.5 @1.03
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 0.36, model 99% v book 97%
+- Sat 19:00  Tristan Suarez v Quilmes  -  1st Half - Over/Under / Under 2.5 @1.03
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 0.57, model 98% v book 97%
+- Sat 19:00  Deportivo Moron v All Boys  -  1st Half - Over/Under / Under 2.5 @1.03
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 0.64, model 97% v book 97%
+- Fri 23:15  Independiente v Instituto  -  1st Half - Over/Under / Under 2.5 @1.04
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 0.43, model 99% v book 96%
+- Sat 18:45  Defensa y Justicia v San Lorenzo  -  1st Half - Over/Under / Under 2.5 @1.04
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 0.50, model 99% v book 96%
+- Sat 21:00  Newells Old Boys v Lanus  -  1st Half - Over/Under / Under 2.5 @1.04
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 0.50, model 99% v book 96%
+- Sat 19:00  Villa San Carlos v Arsenal Sarandi  -  1st Half - Over/Under / Under 2.5 @1.05
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 0.79, model 95% v book 95%
+- Sat 19:00  Liniers v Excursionistas  -  1st Half - Over/Under / Under 2.5 @1.05
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 1.07, model 91% v book 95%
+- Sat 19:00  San Martin Burzaco v Argentino de Merlo  -  1st Half - Over/Under / Under 2.5 @1.05
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 1.00, model 92% v book 95%
+- Sat 19:00  Deportivo Camioneros v Laferrere  -  1st Half - Over/Under / Under 2.5 @1.05
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 1.21, model 88% v book 95%
+- Sat 19:00  Temperley v Gimnasia Jujuy  -  1st Half - Over/Under / Under 2.5 @1.05
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 0.93, model 93% v book 95%
+- Sat 16:30  Arzignano v Pergolettese  -  1st Half - Over/Under / Under 2.5 @1.06
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 0.50, model 99% v book 94%
+- Sat 19:45  Concarneau v Paris 13 Atl.  -  1st Half - Over/Under / Under 2.5 @1.06
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 0.79, model 95% v book 94%
+- Sat 21:30  Real Santander v U. Magdalena  -  1st Half - Over/Under / Under 2.5 @1.06
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 0.79, model 95% v book 94%
+- Sat 13:30  Gubbio v Perugia  -  1st Half - Over/Under / Under 2.5 @1.06
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 1.36, model 84% v book 94%
+- Sat 19:45  Cannes v Quevilly Rouen  -  1st Half - Over/Under / Under 2.5 @1.07
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 1.00, model 92% v book 93%
+- Fri 23:00  Atletico F.C. v Real Cundinamarca  -  1st Half - Over/Under / Under 2.5 @1.07
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 1.00, model 92% v book 93%
+- Sat 15:00  Kidderminster v Sutton  -  1st Half - Over/Under / Under 2.5 @1.07
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 1.00, model 92% v book 93%
+- Sat 01:35  Fortaleza v Nautico  -  1st Half - Over/Under / Under 2.5 @1.08
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 1.07, model 91% v book 93%
+- Sat 20:30  Guarani v San Lorenzo  -  1st Half - Over/Under / Under 2.5 @1.08
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 0.86, model 94% v book 93%
+- Sat 13:30  Sorrento v Casarano  -  1st Half - Over/Under / Under 2.5 @1.08
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 0.71, model 96% v book 93%
+- Sat 15:00  Liverpool M. v Progreso  -  1st Half - Over/Under / Under 2.5 @1.09
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 0.86, model 94% v book 92%
+- Sat 19:45  La Roche v Aubagne  -  1st Half - Over/Under / Under 2.5 @1.10
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 0.79, model 95% v book 91%
+- Sat 15:00  Crewe v Bristol Rovers  -  1st Half - Over/Under / Under 2.5 @1.11
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 1.29, model 86% v book 90%
+- Sat 15:00  Barrow v Wealdstone  -  1st Half - Over/Under / Under 2.5 @1.13
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 1.07, model 91% v book 88%
+- Sat 15:00  Glentoran v Dungannon  -  1st Half - Over/Under / Under 2.5 @1.13
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 0.79, model 95% v book 88%
+- Sat 09:00  Tochigi City v Imabari  -  1st Half - Over/Under / Under 2.5 @1.15
+    first halves under 2.5: 7/7+7/7 = 100% - clean window
+    expected first-half goals 1.14, model 89% v book 87%
+
+## 2026-10-03 09:49 WAT  |  one market: 1st Half Unders, best line per game - 500x target - 503.07x (44 games)  |  code KUW5Y0
+http://www.sportybet.com/ng/?shareCode=KUW5Y0
+- Sat 12:00  Stockholm Internazionale v Assyriska FF  -  1st Half - Over/Under / Under 2.5 @1.17
+    group: one-breach
+- Sat 13:00  HFC v Quick Boys  -  1st Half - Over/Under / Under 2.5 @1.15
+    group: one-breach
+- Sat 13:30  RKAV Volendam v Jong Almere City  -  1st Half - Over/Under / Under 2.5 @1.19
+    group: one-breach
+- Sat 14:30  Llandudno v Cardiff Metropolitan  -  1st Half - Over/Under / Under 2.5 @1.14
+    group: one-breach
+- Sat 15:00  Barrow v Wealdstone  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: clean
+- Sat 15:00  Glentoran v Dungannon  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: clean
+- Sat 15:00  Crewe v Bristol Rovers  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 15:00  Liverpool M. v Progreso  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 15:00  Kidderminster v Sutton  -  1st Half - Over/Under / Under 2.5 @1.07
+    group: clean
+- Sat 15:00  Rochdale v Swindon  -  1st Half - Over/Under / Under 2.5 @1.14
+    group: one-breach
+- Sat 15:00  Reading v Bradford City  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 15:00  Livingston v Ayr  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: one-breach
+- Sat 15:00  Partick Thistle v Arbroath  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: one-breach
+- Sat 16:30  Arzignano v Pergolettese  -  1st Half - Over/Under / Under 2.5 @1.07
+    group: clean
+- Sat 16:30  Magallanes v Curico Unido  -  1st Half - Over/Under / Under 1.5 @1.39
+    group: fill
+- Sat 17:00  Sandecja Nowy S. v Zielona Gora  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: one-breach
+- Sat 17:30  Hamilton v Peterhead  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: one-breach
+- Sat 18:45  Defensa y Justicia v San Lorenzo  -  1st Half - Over/Under / Under 2.5 @1.05
+    group: clean
+- Sat 19:00  Copiapo v D. Puerto Montt  -  1st Half - Over/Under / Under 2.5 @1.09
+    group: clean
+- Sat 19:00  Recoleta v S. Wanderers  -  1st Half - Over/Under / Under 2.5 @1.08
+    group: clean
+- Sat 19:00  Temperley v Gimnasia Jujuy  -  1st Half - Over/Under / Under 2.5 @1.05
+    group: clean
+- Sat 19:00  Deportivo Camioneros v Laferrere  -  1st Half - Over/Under / Under 2.5 @1.05
+    group: clean
+- Sat 19:00  San Martin Burzaco v Argentino de Merlo  -  1st Half - Over/Under / Under 1.5 @1.24
+    group: short
+- Sat 19:00  Liniers v Excursionistas  -  1st Half - Over/Under / Under 2.5 @1.04
+    group: clean
+- Sat 19:00  Dock Sud v Deportivo Armenio  -  1st Half - Over/Under / Under 2.5 @1.04
+    group: clean
+- Sat 19:00  Villa San Carlos v Arsenal Sarandi  -  1st Half - Over/Under / Under 1.5 @1.22
+    group: short
+- Sat 19:00  Real Pilar v Villa Dalmine  -  1st Half - Over/Under / Under 1.5 @1.22
+    group: short
+- Sat 19:00  Defensores Unidos v Argentino de Quilmes  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  Acassuso v Ciudad Bolivar  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  Tristan Suarez v Quilmes  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  San Miguel v CA Mitre  -  1st Half - Over/Under / Under 1.5 @1.20
+    group: short
+- Sat 19:00  Colon Santa Fe v CA Estudiantes  -  1st Half - Over/Under / Under 1.5 @1.20
+    group: short
+- Sat 19:00  Deportivo Moron v All Boys  -  1st Half - Over/Under / Under 1.5 @1.19
+    group: short
+- Sat 19:30  Ospitaletto v Renate  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 19:45  La Roche v Aubagne  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 19:45  Cannes v Quevilly Rouen  -  1st Half - Over/Under / Under 2.5 @1.08
+    group: clean
+- Sat 19:45  Concarneau v Paris 13 Atl.  -  1st Half - Over/Under / Under 2.5 @1.06
+    group: clean
+- Sat 21:00  Guarani v San Lorenzo  -  1st Half - Over/Under / Under 2.5 @1.08
+    group: clean
+- Sat 21:00  Newells Old Boys v Lanus  -  1st Half - Over/Under / Under 1.5 @1.24
+    group: short
+- Sat 21:00  Atl. Tucuman v Barracas Central  -  1st Half - Over/Under / Under 1.5 @1.23
+    group: short
+- Sat 21:30  Deportes Temuco v Cobreloa  -  1st Half - Over/Under / Under 2.5 @1.09
+    group: clean
+- Sat 21:30  Real Santander v U. Magdalena  -  1st Half - Over/Under / Under 2.5 @1.07
+    group: clean
+- Sat 22:00  Maldonado v Central Esp.  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 23:00  Chattanooga Red Wolves v Corpus Christi FC  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+
+## 2026-10-03 09:49 WAT  |  one market: 1st Half Unders, best line per game - 600x target - 631.05x (46 games)  |  code ZLDGUQ
+http://www.sportybet.com/ng/?shareCode=ZLDGUQ
+- Sat 12:00  Stockholm Internazionale v Assyriska FF  -  1st Half - Over/Under / Under 2.5 @1.17
+    group: one-breach
+- Sat 13:00  HFC v Quick Boys  -  1st Half - Over/Under / Under 2.5 @1.15
+    group: one-breach
+- Sat 13:30  RKAV Volendam v Jong Almere City  -  1st Half - Over/Under / Under 2.5 @1.19
+    group: one-breach
+- Sat 14:30  Llandudno v Cardiff Metropolitan  -  1st Half - Over/Under / Under 2.5 @1.14
+    group: one-breach
+- Sat 15:00  Barrow v Wealdstone  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: clean
+- Sat 15:00  Glentoran v Dungannon  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: clean
+- Sat 15:00  Crewe v Bristol Rovers  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 15:00  Liverpool M. v Progreso  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 15:00  Kidderminster v Sutton  -  1st Half - Over/Under / Under 2.5 @1.07
+    group: clean
+- Sat 15:00  Rochdale v Swindon  -  1st Half - Over/Under / Under 2.5 @1.14
+    group: one-breach
+- Sat 15:00  Reading v Bradford City  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 15:00  Livingston v Ayr  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: one-breach
+- Sat 15:00  Partick Thistle v Arbroath  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: one-breach
+- Sat 15:00  Portadown v Limavady  -  1st Half - Over/Under / Under 2.5 @1.12
+    group: one-breach
+- Sat 16:30  Arzignano v Pergolettese  -  1st Half - Over/Under / Under 2.5 @1.07
+    group: clean
+- Sat 16:30  Magallanes v Curico Unido  -  1st Half - Over/Under / Under 1.5 @1.39
+    group: fill
+- Sat 17:00  Sandecja Nowy S. v Zielona Gora  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: one-breach
+- Sat 17:30  Hamilton v Peterhead  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: one-breach
+- Sat 18:45  Defensa y Justicia v San Lorenzo  -  1st Half - Over/Under / Under 2.5 @1.05
+    group: clean
+- Sat 19:00  Copiapo v D. Puerto Montt  -  1st Half - Over/Under / Under 2.5 @1.09
+    group: clean
+- Sat 19:00  Recoleta v S. Wanderers  -  1st Half - Over/Under / Under 2.5 @1.08
+    group: clean
+- Sat 19:00  Temperley v Gimnasia Jujuy  -  1st Half - Over/Under / Under 2.5 @1.05
+    group: clean
+- Sat 19:00  Deportivo Camioneros v Laferrere  -  1st Half - Over/Under / Under 2.5 @1.05
+    group: clean
+- Sat 19:00  San Martin Burzaco v Argentino de Merlo  -  1st Half - Over/Under / Under 1.5 @1.24
+    group: short
+- Sat 19:00  Liniers v Excursionistas  -  1st Half - Over/Under / Under 2.5 @1.04
+    group: clean
+- Sat 19:00  Dock Sud v Deportivo Armenio  -  1st Half - Over/Under / Under 2.5 @1.04
+    group: clean
+- Sat 19:00  Villa San Carlos v Arsenal Sarandi  -  1st Half - Over/Under / Under 1.5 @1.22
+    group: short
+- Sat 19:00  Real Pilar v Villa Dalmine  -  1st Half - Over/Under / Under 1.5 @1.22
+    group: short
+- Sat 19:00  Defensores Unidos v Argentino de Quilmes  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  Acassuso v Ciudad Bolivar  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  Tristan Suarez v Quilmes  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  San Miguel v CA Mitre  -  1st Half - Over/Under / Under 1.5 @1.20
+    group: short
+- Sat 19:00  Colon Santa Fe v CA Estudiantes  -  1st Half - Over/Under / Under 1.5 @1.20
+    group: short
+- Sat 19:00  Deportivo Moron v All Boys  -  1st Half - Over/Under / Under 1.5 @1.19
+    group: short
+- Sat 19:30  Ospitaletto v Renate  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 19:45  La Roche v Aubagne  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 19:45  Cannes v Quevilly Rouen  -  1st Half - Over/Under / Under 2.5 @1.08
+    group: clean
+- Sat 19:45  Concarneau v Paris 13 Atl.  -  1st Half - Over/Under / Under 2.5 @1.06
+    group: clean
+- Sat 21:00  Guarani v San Lorenzo  -  1st Half - Over/Under / Under 2.5 @1.08
+    group: clean
+- Sat 21:00  Newells Old Boys v Lanus  -  1st Half - Over/Under / Under 1.5 @1.24
+    group: short
+- Sat 21:00  Atl. Tucuman v Barracas Central  -  1st Half - Over/Under / Under 1.5 @1.23
+    group: short
+- Sat 21:30  Deportes Temuco v Cobreloa  -  1st Half - Over/Under / Under 2.5 @1.09
+    group: clean
+- Sat 21:30  Real Santander v U. Magdalena  -  1st Half - Over/Under / Under 2.5 @1.07
+    group: clean
+- Sat 22:00  Maldonado v Central Esp.  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 22:30  Atletico-MG v Bragantino  -  1st Half - Over/Under / Under 2.5 @1.12
+    group: one-breach
+- Sat 23:00  Chattanooga Red Wolves v Corpus Christi FC  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+
+## 2026-10-03 14:08 WAT  |  one market: 1st Half Unders, best line per game - 3000x target (price-aware) - 3,409.55x (47 games)  |  code M6SLLN
+http://www.sportybet.com/ng/?shareCode=M6SLLN
+- Sat 15:00  Crewe v Bristol Rovers  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 15:00  Liverpool M. v Progreso  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 15:00  Kidderminster v Sutton  -  1st Half - Over/Under / Under 2.5 @1.07
+    group: clean
+- Sat 15:00  Reading v Bradford City  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 15:00  Barrow v Wealdstone  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: clean
+- Sat 15:00  Glentoran v Dungannon  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: clean
+- Sat 15:00  Rochdale v Swindon  -  1st Half - Over/Under / Under 2.5 @1.14
+    group: one-breach
+- Sat 15:00  Livingston v Ayr  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: one-breach
+- Sat 15:00  Partick Thistle v Arbroath  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: one-breach
+- Sat 15:00  Portadown v Limavady  -  1st Half - Over/Under / Under 2.5 @1.12
+    group: one-breach
+- Sat 15:00  Grimsby v Shrewsbury  -  1st Half - Over/Under / Under 2.5 @1.11
+    group: one-breach
+- Sat 16:30  Arzignano v Pergolettese  -  1st Half - Over/Under / Under 2.5 @1.07
+    group: clean
+- Sat 16:30  Magallanes v Curico Unido  -  1st Half - Over/Under / Under 1.5 @1.39
+    group: fill
+- Sat 17:00  Sandecja Nowy S. v Zielona Gora  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: one-breach
+- Sat 17:30  Cadiz CF v Leganes  -  1st Half - Over/Under / Under 1.5 @1.32
+    group: fill
+- Sat 17:30  Hamilton v Peterhead  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: one-breach
+- Sat 18:45  Defensa y Justicia v San Lorenzo  -  1st Half - Over/Under / Under 1.5 @1.28
+    group: fill
+- Sat 19:00  Copiapo v D. Puerto Montt  -  1st Half - Over/Under / Under 2.5 @1.09
+    group: clean
+- Sat 19:00  Recoleta v S. Wanderers  -  1st Half - Over/Under / Under 2.5 @1.08
+    group: clean
+- Sat 19:00  Temperley v Gimnasia Jujuy  -  1st Half - Over/Under / Under 1.5 @1.29
+    group: fill
+- Sat 19:00  Deportivo Camioneros v Laferrere  -  1st Half - Over/Under / Under 2.5 @1.05
+    group: clean
+- Sat 19:00  San Martin Burzaco v Argentino de Merlo  -  1st Half - Over/Under / Under 1.5 @1.24
+    group: short
+- Sat 19:00  Liniers v Excursionistas  -  1st Half - Over/Under / Under 1.5 @1.26
+    group: fill
+- Sat 19:00  Dock Sud v Deportivo Armenio  -  1st Half - Over/Under / Under 1.5 @1.27
+    group: fill
+- Sat 19:00  Villa San Carlos v Arsenal Sarandi  -  1st Half - Over/Under / Under 1.5 @1.22
+    group: short
+- Sat 19:00  Real Pilar v Villa Dalmine  -  1st Half - Over/Under / Under 1.5 @1.22
+    group: short
+- Sat 19:00  Defensores Unidos v Argentino de Quilmes  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  Acassuso v Ciudad Bolivar  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  Tristan Suarez v Quilmes  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  San Miguel v CA Mitre  -  1st Half - Over/Under / Under 1.5 @1.20
+    group: short
+- Sat 19:00  Colon Santa Fe v CA Estudiantes  -  1st Half - Over/Under / Under 1.5 @1.20
+    group: short
+- Sat 19:00  Deportivo Moron v All Boys  -  1st Half - Over/Under / Under 1.5 @1.19
+    group: short
+- Sat 19:30  Ospitaletto v Renate  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 19:30  Folgore Caratese v Desenzano  -  1st Half - Over/Under / Under 1.5 @1.30
+    group: fill
+- Sat 19:45  La Roche v Aubagne  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 19:45  Cannes v Quevilly Rouen  -  1st Half - Over/Under / Under 2.5 @1.08
+    group: clean
+- Sat 19:45  Concarneau v Paris 13 Atl.  -  1st Half - Over/Under / Under 1.5 @1.32
+    group: fill
+- Sat 19:45  Versailles v Valenciennes  -  1st Half - Over/Under / Under 2.5 @1.11
+    group: one-breach
+- Sat 21:00  Guarani v San Lorenzo  -  1st Half - Over/Under / Under 2.5 @1.08
+    group: clean
+- Sat 21:00  Newells Old Boys v Lanus  -  1st Half - Over/Under / Under 1.5 @1.24
+    group: short
+- Sat 21:00  Atl. Tucuman v Barracas Central  -  1st Half - Over/Under / Under 1.5 @1.23
+    group: short
+- Sat 21:30  Deportes Temuco v Cobreloa  -  1st Half - Over/Under / Under 2.5 @1.09
+    group: clean
+- Sat 21:30  Real Santander v U. Magdalena  -  1st Half - Over/Under / Under 1.5 @1.36
+    group: fill
+- Sat 21:30  Patriotas v Ind. Valle del Cauca  -  1st Half - Over/Under / Under 1.5 @1.33
+    group: fill
+- Sat 22:00  Maldonado v Central Esp.  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 22:30  Atletico-MG v Bragantino  -  1st Half - Over/Under / Under 2.5 @1.12
+    group: one-breach
+- Sat 23:00  Chattanooga Red Wolves v Corpus Christi FC  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+
+## 2026-10-03 14:08 WAT  |  one market: 1st Half Unders, best line per game - 2000x target (price-aware) - 2,154.14x (47 games)  |  code QCGASW
+http://www.sportybet.com/ng/?shareCode=QCGASW
+- Sat 15:00  Crewe v Bristol Rovers  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 15:00  Liverpool M. v Progreso  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 15:00  Kidderminster v Sutton  -  1st Half - Over/Under / Under 2.5 @1.07
+    group: clean
+- Sat 15:00  Reading v Bradford City  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 15:00  Barrow v Wealdstone  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: clean
+- Sat 15:00  Glentoran v Dungannon  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: clean
+- Sat 15:00  Rochdale v Swindon  -  1st Half - Over/Under / Under 2.5 @1.14
+    group: one-breach
+- Sat 15:00  Livingston v Ayr  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: one-breach
+- Sat 15:00  Partick Thistle v Arbroath  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: one-breach
+- Sat 15:00  Portadown v Limavady  -  1st Half - Over/Under / Under 2.5 @1.12
+    group: one-breach
+- Sat 15:00  Grimsby v Shrewsbury  -  1st Half - Over/Under / Under 2.5 @1.11
+    group: one-breach
+- Sat 16:30  Arzignano v Pergolettese  -  1st Half - Over/Under / Under 2.5 @1.07
+    group: clean
+- Sat 16:30  Magallanes v Curico Unido  -  1st Half - Over/Under / Under 1.5 @1.39
+    group: fill
+- Sat 17:00  Sandecja Nowy S. v Zielona Gora  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: one-breach
+- Sat 17:30  Cadiz CF v Leganes  -  1st Half - Over/Under / Under 1.5 @1.32
+    group: fill
+- Sat 17:30  Hamilton v Peterhead  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: one-breach
+- Sat 18:45  Defensa y Justicia v San Lorenzo  -  1st Half - Over/Under / Under 1.5 @1.28
+    group: fill
+- Sat 19:00  Copiapo v D. Puerto Montt  -  1st Half - Over/Under / Under 2.5 @1.09
+    group: clean
+- Sat 19:00  Recoleta v S. Wanderers  -  1st Half - Over/Under / Under 2.5 @1.08
+    group: clean
+- Sat 19:00  Temperley v Gimnasia Jujuy  -  1st Half - Over/Under / Under 1.5 @1.29
+    group: fill
+- Sat 19:00  Deportivo Camioneros v Laferrere  -  1st Half - Over/Under / Under 2.5 @1.05
+    group: clean
+- Sat 19:00  San Martin Burzaco v Argentino de Merlo  -  1st Half - Over/Under / Under 1.5 @1.24
+    group: short
+- Sat 19:00  Liniers v Excursionistas  -  1st Half - Over/Under / Under 1.5 @1.26
+    group: fill
+- Sat 19:00  Dock Sud v Deportivo Armenio  -  1st Half - Over/Under / Under 1.5 @1.27
+    group: fill
+- Sat 19:00  Villa San Carlos v Arsenal Sarandi  -  1st Half - Over/Under / Under 1.5 @1.22
+    group: short
+- Sat 19:00  Real Pilar v Villa Dalmine  -  1st Half - Over/Under / Under 1.5 @1.22
+    group: short
+- Sat 19:00  Defensores Unidos v Argentino de Quilmes  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  Acassuso v Ciudad Bolivar  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  Tristan Suarez v Quilmes  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  San Miguel v CA Mitre  -  1st Half - Over/Under / Under 1.5 @1.20
+    group: short
+- Sat 19:00  Colon Santa Fe v CA Estudiantes  -  1st Half - Over/Under / Under 1.5 @1.20
+    group: short
+- Sat 19:00  Deportivo Moron v All Boys  -  1st Half - Over/Under / Under 1.5 @1.19
+    group: short
+- Sat 19:30  Ospitaletto v Renate  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 19:30  Folgore Caratese v Desenzano  -  1st Half - Over/Under / Under 1.5 @1.30
+    group: fill
+- Sat 19:45  La Roche v Aubagne  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 19:45  Cannes v Quevilly Rouen  -  1st Half - Over/Under / Under 2.5 @1.08
+    group: clean
+- Sat 19:45  Concarneau v Paris 13 Atl.  -  1st Half - Over/Under / Under 2.5 @1.06
+    group: clean
+- Sat 19:45  Versailles v Valenciennes  -  1st Half - Over/Under / Under 2.5 @1.11
+    group: one-breach
+- Sat 21:00  Guarani v San Lorenzo  -  1st Half - Over/Under / Under 2.5 @1.08
+    group: clean
+- Sat 21:00  Newells Old Boys v Lanus  -  1st Half - Over/Under / Under 1.5 @1.24
+    group: short
+- Sat 21:00  Atl. Tucuman v Barracas Central  -  1st Half - Over/Under / Under 1.5 @1.23
+    group: short
+- Sat 21:30  Deportes Temuco v Cobreloa  -  1st Half - Over/Under / Under 2.5 @1.09
+    group: clean
+- Sat 21:30  Real Santander v U. Magdalena  -  1st Half - Over/Under / Under 2.5 @1.07
+    group: clean
+- Sat 21:30  Patriotas v Ind. Valle del Cauca  -  1st Half - Over/Under / Under 1.5 @1.33
+    group: fill
+- Sat 22:00  Maldonado v Central Esp.  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 22:30  Atletico-MG v Bragantino  -  1st Half - Over/Under / Under 2.5 @1.12
+    group: one-breach
+- Sat 23:00  Chattanooga Red Wolves v Corpus Christi FC  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+
+## 2026-10-03 14:08 WAT  |  one market: 1st Half Unders, best line per game - 1000x target (price-aware) - 1,187.18x (47 games)  |  code ZALP6F
+http://www.sportybet.com/ng/?shareCode=ZALP6F
+- Sat 15:00  Crewe v Bristol Rovers  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 15:00  Liverpool M. v Progreso  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 15:00  Kidderminster v Sutton  -  1st Half - Over/Under / Under 2.5 @1.07
+    group: clean
+- Sat 15:00  Reading v Bradford City  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 15:00  Barrow v Wealdstone  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: clean
+- Sat 15:00  Glentoran v Dungannon  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: clean
+- Sat 15:00  Rochdale v Swindon  -  1st Half - Over/Under / Under 2.5 @1.14
+    group: one-breach
+- Sat 15:00  Livingston v Ayr  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: one-breach
+- Sat 15:00  Partick Thistle v Arbroath  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: one-breach
+- Sat 15:00  Portadown v Limavady  -  1st Half - Over/Under / Under 2.5 @1.12
+    group: one-breach
+- Sat 15:00  Grimsby v Shrewsbury  -  1st Half - Over/Under / Under 2.5 @1.11
+    group: one-breach
+- Sat 16:30  Arzignano v Pergolettese  -  1st Half - Over/Under / Under 2.5 @1.07
+    group: clean
+- Sat 16:30  Magallanes v Curico Unido  -  1st Half - Over/Under / Under 1.5 @1.39
+    group: fill
+- Sat 17:00  Sandecja Nowy S. v Zielona Gora  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: one-breach
+- Sat 17:30  Cadiz CF v Leganes  -  1st Half - Over/Under / Under 1.5 @1.32
+    group: fill
+- Sat 17:30  Hamilton v Peterhead  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: one-breach
+- Sat 18:45  Defensa y Justicia v San Lorenzo  -  1st Half - Over/Under / Under 2.5 @1.05
+    group: clean
+- Sat 19:00  Copiapo v D. Puerto Montt  -  1st Half - Over/Under / Under 2.5 @1.09
+    group: clean
+- Sat 19:00  Recoleta v S. Wanderers  -  1st Half - Over/Under / Under 2.5 @1.08
+    group: clean
+- Sat 19:00  Temperley v Gimnasia Jujuy  -  1st Half - Over/Under / Under 2.5 @1.05
+    group: clean
+- Sat 19:00  Deportivo Camioneros v Laferrere  -  1st Half - Over/Under / Under 2.5 @1.05
+    group: clean
+- Sat 19:00  San Martin Burzaco v Argentino de Merlo  -  1st Half - Over/Under / Under 1.5 @1.24
+    group: short
+- Sat 19:00  Liniers v Excursionistas  -  1st Half - Over/Under / Under 2.5 @1.04
+    group: clean
+- Sat 19:00  Dock Sud v Deportivo Armenio  -  1st Half - Over/Under / Under 1.5 @1.27
+    group: fill
+- Sat 19:00  Villa San Carlos v Arsenal Sarandi  -  1st Half - Over/Under / Under 1.5 @1.22
+    group: short
+- Sat 19:00  Real Pilar v Villa Dalmine  -  1st Half - Over/Under / Under 1.5 @1.22
+    group: short
+- Sat 19:00  Defensores Unidos v Argentino de Quilmes  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  Acassuso v Ciudad Bolivar  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  Tristan Suarez v Quilmes  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  San Miguel v CA Mitre  -  1st Half - Over/Under / Under 1.5 @1.20
+    group: short
+- Sat 19:00  Colon Santa Fe v CA Estudiantes  -  1st Half - Over/Under / Under 1.5 @1.20
+    group: short
+- Sat 19:00  Deportivo Moron v All Boys  -  1st Half - Over/Under / Under 1.5 @1.19
+    group: short
+- Sat 19:30  Ospitaletto v Renate  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 19:30  Folgore Caratese v Desenzano  -  1st Half - Over/Under / Under 1.5 @1.30
+    group: fill
+- Sat 19:45  La Roche v Aubagne  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 19:45  Cannes v Quevilly Rouen  -  1st Half - Over/Under / Under 2.5 @1.08
+    group: clean
+- Sat 19:45  Concarneau v Paris 13 Atl.  -  1st Half - Over/Under / Under 2.5 @1.06
+    group: clean
+- Sat 19:45  Versailles v Valenciennes  -  1st Half - Over/Under / Under 2.5 @1.11
+    group: one-breach
+- Sat 21:00  Guarani v San Lorenzo  -  1st Half - Over/Under / Under 2.5 @1.08
+    group: clean
+- Sat 21:00  Newells Old Boys v Lanus  -  1st Half - Over/Under / Under 1.5 @1.24
+    group: short
+- Sat 21:00  Atl. Tucuman v Barracas Central  -  1st Half - Over/Under / Under 1.5 @1.23
+    group: short
+- Sat 21:30  Deportes Temuco v Cobreloa  -  1st Half - Over/Under / Under 2.5 @1.09
+    group: clean
+- Sat 21:30  Real Santander v U. Magdalena  -  1st Half - Over/Under / Under 2.5 @1.07
+    group: clean
+- Sat 21:30  Patriotas v Ind. Valle del Cauca  -  1st Half - Over/Under / Under 1.5 @1.33
+    group: fill
+- Sat 22:00  Maldonado v Central Esp.  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 22:30  Atletico-MG v Bragantino  -  1st Half - Over/Under / Under 2.5 @1.12
+    group: one-breach
+- Sat 23:00  Chattanooga Red Wolves v Corpus Christi FC  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+
+## 2026-10-03 14:10 WAT  |  one market: 1st Half Unders, best line per game - 3000x target (v3) - 3,376.98x (38 games)  |  code R5DRLF
+http://www.sportybet.com/ng/?shareCode=R5DRLF
+- Sat 15:00  Crewe v Bristol Rovers  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 15:00  Liverpool M. v Progreso  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 15:00  Kidderminster v Sutton  -  1st Half - Over/Under / Under 1.5 @1.35
+    group: fill
+- Sat 15:00  Reading v Bradford City  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 15:00  Barrow v Wealdstone  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: clean
+- Sat 15:00  Glentoran v Dungannon  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: clean
+- Sat 16:30  Arzignano v Pergolettese  -  1st Half - Over/Under / Under 1.5 @1.34
+    group: fill
+- Sat 16:30  Magallanes v Curico Unido  -  1st Half - Over/Under / Under 1.5 @1.39
+    group: fill
+- Sat 17:30  Cadiz CF v Leganes  -  1st Half - Over/Under / Under 1.5 @1.32
+    group: fill
+- Sat 18:45  Defensa y Justicia v San Lorenzo  -  1st Half - Over/Under / Under 2.5 @1.05
+    group: clean
+- Sat 19:00  Copiapo v D. Puerto Montt  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 19:00  Recoleta v S. Wanderers  -  1st Half - Over/Under / Under 1.5 @1.37
+    group: fill
+- Sat 19:00  Temperley v Gimnasia Jujuy  -  1st Half - Over/Under / Under 1.5 @1.29
+    group: fill
+- Sat 19:00  Deportivo Camioneros v Laferrere  -  1st Half - Over/Under / Under 2.5 @1.05
+    group: clean
+- Sat 19:00  San Martin Burzaco v Argentino de Merlo  -  1st Half - Over/Under / Under 1.5 @1.24
+    group: short
+- Sat 19:00  Liniers v Excursionistas  -  1st Half - Over/Under / Under 2.5 @1.04
+    group: clean
+- Sat 19:00  Dock Sud v Deportivo Armenio  -  1st Half - Over/Under / Under 1.5 @1.27
+    group: fill
+- Sat 19:00  Villa San Carlos v Arsenal Sarandi  -  1st Half - Over/Under / Under 1.5 @1.22
+    group: short
+- Sat 19:00  Real Pilar v Villa Dalmine  -  1st Half - Over/Under / Under 1.5 @1.22
+    group: short
+- Sat 19:00  Defensores Unidos v Argentino de Quilmes  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  Acassuso v Ciudad Bolivar  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  Tristan Suarez v Quilmes  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  San Miguel v CA Mitre  -  1st Half - Over/Under / Under 1.5 @1.20
+    group: short
+- Sat 19:00  Colon Santa Fe v CA Estudiantes  -  1st Half - Over/Under / Under 1.5 @1.20
+    group: short
+- Sat 19:00  Deportivo Moron v All Boys  -  1st Half - Over/Under / Under 1.5 @1.19
+    group: short
+- Sat 19:30  Ospitaletto v Renate  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 19:30  Folgore Caratese v Desenzano  -  1st Half - Over/Under / Under 1.5 @1.30
+    group: fill
+- Sat 19:45  La Roche v Aubagne  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 19:45  Cannes v Quevilly Rouen  -  1st Half - Over/Under / Under 1.5 @1.36
+    group: fill
+- Sat 19:45  Concarneau v Paris 13 Atl.  -  1st Half - Over/Under / Under 1.5 @1.32
+    group: fill
+- Sat 21:00  Guarani v San Lorenzo  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 21:00  Newells Old Boys v Lanus  -  1st Half - Over/Under / Under 1.5 @1.24
+    group: short
+- Sat 21:00  Atl. Tucuman v Barracas Central  -  1st Half - Over/Under / Under 1.5 @1.23
+    group: short
+- Sat 21:30  Deportes Temuco v Cobreloa  -  1st Half - Over/Under / Under 2.5 @1.09
+    group: clean
+- Sat 21:30  Real Santander v U. Magdalena  -  1st Half - Over/Under / Under 1.5 @1.36
+    group: fill
+- Sat 21:30  Patriotas v Ind. Valle del Cauca  -  1st Half - Over/Under / Under 1.5 @1.33
+    group: fill
+- Sat 22:00  Maldonado v Central Esp.  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 23:00  Chattanooga Red Wolves v Corpus Christi FC  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+
+## 2026-10-03 14:10 WAT  |  one market: 1st Half Unders, best line per game - 2000x target (v3) - 2,250.91x (38 games)  |  code SUANKA
+http://www.sportybet.com/ng/?shareCode=SUANKA
+- Sat 15:00  Crewe v Bristol Rovers  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 15:00  Liverpool M. v Progreso  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 15:00  Kidderminster v Sutton  -  1st Half - Over/Under / Under 1.5 @1.35
+    group: fill
+- Sat 15:00  Reading v Bradford City  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 15:00  Barrow v Wealdstone  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: clean
+- Sat 15:00  Glentoran v Dungannon  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: clean
+- Sat 16:30  Arzignano v Pergolettese  -  1st Half - Over/Under / Under 1.5 @1.34
+    group: fill
+- Sat 16:30  Magallanes v Curico Unido  -  1st Half - Over/Under / Under 1.5 @1.39
+    group: fill
+- Sat 17:30  Cadiz CF v Leganes  -  1st Half - Over/Under / Under 1.5 @1.32
+    group: fill
+- Sat 18:45  Defensa y Justicia v San Lorenzo  -  1st Half - Over/Under / Under 2.5 @1.05
+    group: clean
+- Sat 19:00  Copiapo v D. Puerto Montt  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 19:00  Recoleta v S. Wanderers  -  1st Half - Over/Under / Under 1.5 @1.37
+    group: fill
+- Sat 19:00  Temperley v Gimnasia Jujuy  -  1st Half - Over/Under / Under 2.5 @1.05
+    group: clean
+- Sat 19:00  Deportivo Camioneros v Laferrere  -  1st Half - Over/Under / Under 2.5 @1.05
+    group: clean
+- Sat 19:00  San Martin Burzaco v Argentino de Merlo  -  1st Half - Over/Under / Under 1.5 @1.24
+    group: short
+- Sat 19:00  Liniers v Excursionistas  -  1st Half - Over/Under / Under 2.5 @1.04
+    group: clean
+- Sat 19:00  Dock Sud v Deportivo Armenio  -  1st Half - Over/Under / Under 2.5 @1.04
+    group: clean
+- Sat 19:00  Villa San Carlos v Arsenal Sarandi  -  1st Half - Over/Under / Under 1.5 @1.22
+    group: short
+- Sat 19:00  Real Pilar v Villa Dalmine  -  1st Half - Over/Under / Under 1.5 @1.22
+    group: short
+- Sat 19:00  Defensores Unidos v Argentino de Quilmes  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  Acassuso v Ciudad Bolivar  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  Tristan Suarez v Quilmes  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  San Miguel v CA Mitre  -  1st Half - Over/Under / Under 1.5 @1.20
+    group: short
+- Sat 19:00  Colon Santa Fe v CA Estudiantes  -  1st Half - Over/Under / Under 1.5 @1.20
+    group: short
+- Sat 19:00  Deportivo Moron v All Boys  -  1st Half - Over/Under / Under 1.5 @1.19
+    group: short
+- Sat 19:30  Ospitaletto v Renate  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 19:30  Folgore Caratese v Desenzano  -  1st Half - Over/Under / Under 1.5 @1.30
+    group: fill
+- Sat 19:45  La Roche v Aubagne  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 19:45  Cannes v Quevilly Rouen  -  1st Half - Over/Under / Under 1.5 @1.36
+    group: fill
+- Sat 19:45  Concarneau v Paris 13 Atl.  -  1st Half - Over/Under / Under 1.5 @1.32
+    group: fill
+- Sat 21:00  Guarani v San Lorenzo  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 21:00  Newells Old Boys v Lanus  -  1st Half - Over/Under / Under 1.5 @1.24
+    group: short
+- Sat 21:00  Atl. Tucuman v Barracas Central  -  1st Half - Over/Under / Under 1.5 @1.23
+    group: short
+- Sat 21:30  Deportes Temuco v Cobreloa  -  1st Half - Over/Under / Under 2.5 @1.09
+    group: clean
+- Sat 21:30  Real Santander v U. Magdalena  -  1st Half - Over/Under / Under 1.5 @1.36
+    group: fill
+- Sat 21:30  Patriotas v Ind. Valle del Cauca  -  1st Half - Over/Under / Under 1.5 @1.33
+    group: fill
+- Sat 22:00  Maldonado v Central Esp.  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 23:00  Chattanooga Red Wolves v Corpus Christi FC  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+
+## 2026-10-03 14:10 WAT  |  one market: 1st Half Unders, best line per game - 1000x target (v3) - 1,146.18x (38 games)  |  code XZB23U
+http://www.sportybet.com/ng/?shareCode=XZB23U
+- Sat 15:00  Crewe v Bristol Rovers  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 15:00  Liverpool M. v Progreso  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 15:00  Kidderminster v Sutton  -  1st Half - Over/Under / Under 1.5 @1.35
+    group: fill
+- Sat 15:00  Reading v Bradford City  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 15:00  Barrow v Wealdstone  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: clean
+- Sat 15:00  Glentoran v Dungannon  -  1st Half - Over/Under / Under 2.5 @1.13
+    group: clean
+- Sat 16:30  Arzignano v Pergolettese  -  1st Half - Over/Under / Under 2.5 @1.07
+    group: clean
+- Sat 16:30  Magallanes v Curico Unido  -  1st Half - Over/Under / Under 1.5 @1.39
+    group: fill
+- Sat 17:30  Cadiz CF v Leganes  -  1st Half - Over/Under / Under 1.5 @1.32
+    group: fill
+- Sat 18:45  Defensa y Justicia v San Lorenzo  -  1st Half - Over/Under / Under 2.5 @1.05
+    group: clean
+- Sat 19:00  Copiapo v D. Puerto Montt  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 19:00  Recoleta v S. Wanderers  -  1st Half - Over/Under / Under 1.5 @1.37
+    group: fill
+- Sat 19:00  Temperley v Gimnasia Jujuy  -  1st Half - Over/Under / Under 2.5 @1.05
+    group: clean
+- Sat 19:00  Deportivo Camioneros v Laferrere  -  1st Half - Over/Under / Under 2.5 @1.05
+    group: clean
+- Sat 19:00  San Martin Burzaco v Argentino de Merlo  -  1st Half - Over/Under / Under 1.5 @1.24
+    group: short
+- Sat 19:00  Liniers v Excursionistas  -  1st Half - Over/Under / Under 2.5 @1.04
+    group: clean
+- Sat 19:00  Dock Sud v Deportivo Armenio  -  1st Half - Over/Under / Under 2.5 @1.04
+    group: clean
+- Sat 19:00  Villa San Carlos v Arsenal Sarandi  -  1st Half - Over/Under / Under 1.5 @1.22
+    group: short
+- Sat 19:00  Real Pilar v Villa Dalmine  -  1st Half - Over/Under / Under 1.5 @1.22
+    group: short
+- Sat 19:00  Defensores Unidos v Argentino de Quilmes  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  Acassuso v Ciudad Bolivar  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  Tristan Suarez v Quilmes  -  1st Half - Over/Under / Under 1.5 @1.21
+    group: short
+- Sat 19:00  San Miguel v CA Mitre  -  1st Half - Over/Under / Under 1.5 @1.20
+    group: short
+- Sat 19:00  Colon Santa Fe v CA Estudiantes  -  1st Half - Over/Under / Under 1.5 @1.20
+    group: short
+- Sat 19:00  Deportivo Moron v All Boys  -  1st Half - Over/Under / Under 1.5 @1.19
+    group: short
+- Sat 19:30  Ospitaletto v Renate  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 19:30  Folgore Caratese v Desenzano  -  1st Half - Over/Under / Under 1.5 @1.30
+    group: fill
+- Sat 19:45  La Roche v Aubagne  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+- Sat 19:45  Cannes v Quevilly Rouen  -  1st Half - Over/Under / Under 2.5 @1.08
+    group: clean
+- Sat 19:45  Concarneau v Paris 13 Atl.  -  1st Half - Over/Under / Under 2.5 @1.06
+    group: clean
+- Sat 21:00  Guarani v San Lorenzo  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 21:00  Newells Old Boys v Lanus  -  1st Half - Over/Under / Under 1.5 @1.24
+    group: short
+- Sat 21:00  Atl. Tucuman v Barracas Central  -  1st Half - Over/Under / Under 1.5 @1.23
+    group: short
+- Sat 21:30  Deportes Temuco v Cobreloa  -  1st Half - Over/Under / Under 2.5 @1.09
+    group: clean
+- Sat 21:30  Real Santander v U. Magdalena  -  1st Half - Over/Under / Under 1.5 @1.36
+    group: fill
+- Sat 21:30  Patriotas v Ind. Valle del Cauca  -  1st Half - Over/Under / Under 1.5 @1.33
+    group: fill
+- Sat 22:00  Maldonado v Central Esp.  -  1st Half - Over/Under / Under 1.5 @1.40
+    group: fill
+- Sat 23:00  Chattanooga Red Wolves v Corpus Christi FC  -  1st Half - Over/Under / Under 2.5 @1.10
+    group: clean
+
+## 2026-10-03 17:57 WAT  |  one market: Team 1st Half Under 0.5 - 7.35x (7 games)  |  code XEYZ5F
+http://www.sportybet.com/ng/?shareCode=XEYZ5F
+- Sat 18:45  Defensa y Justicia v San Lorenzo  -  1st Half - Away O/U / Under 0.5 (San Lorenzo) @1.35
+    San Lorenzo first halves under 0.5 and opponent's: 7/7+6/7
+- Sat 19:00  Defensores Unidos v Argentino de Quilmes  -  1st Half - Away O/U / Under 0.5 (Argentino de Quilmes) @1.37
+    Argentino de Quilmes first halves under 0.5 and opponent's: 6/7+7/7
+- Sat 19:00  Deportivo Moron v All Boys  -  1st Half - Away O/U / Under 0.5 (All Boys) @1.24
+    All Boys first halves under 0.5 and opponent's: 6/7+6/7
+- Sat 21:00  Atl. Tucuman v Barracas Central  -  1st Half - Away O/U / Under 0.5 (Barracas Central) @1.26
+    Barracas Central first halves under 0.5 and opponent's: 6/7+6/7
+- Sat 19:45  Rouen v Bourg en Bresse  -  1st Half - Away O/U / Under 0.5 (Bourg en Bresse) @1.29
+    Bourg en Bresse first halves under 0.5 and opponent's: 6/7+6/7
+- Sat 19:00  Villa San Carlos v Arsenal Sarandi  -  1st Half - Home O/U / Under 0.5 (Villa San Carlos) @1.35
+    Villa San Carlos first halves under 0.5 and opponent's: 6/7+6/7
+- Sat 21:00  Newells Old Boys v Lanus  -  1st Half - Home O/U / Under 0.5 (Newells Old Boys) @1.46
+    Newells Old Boys first halves under 0.5 and opponent's: 6/7+6/7
+
+## 2026-10-03 17:57 WAT  |  one market: Team 1st Half Under 1.5 - 7.12x (22 games)  |  code KBRTK8
+http://www.sportybet.com/ng/?shareCode=KBRTK8
+- Sat 21:00  Cuiaba v Ponte Preta  -  1st Half - Away O/U / Under 1.5 (Ponte Preta) @1.01
+    Ponte Preta first halves under 1.5 and opponent's: 7/7+7/7
+- Sat 19:45  Cannes v Quevilly Rouen  -  1st Half - Away O/U / Under 1.5 (Quevilly Rouen) @1.03
+    Quevilly Rouen first halves under 1.5 and opponent's: 7/7+7/7
+- Sat 19:45  Concarneau v Paris 13 Atl.  -  1st Half - Away O/U / Under 1.5 (Paris 13 Atl.) @1.03
+    Paris 13 Atl. first halves under 1.5 and opponent's: 7/7+7/7
+- Sat 22:00  Maldonado v Central Esp.  -  1st Half - Away O/U / Under 1.5 (Central Esp.) @1.03
+    Central Esp. first halves under 1.5 and opponent's: 7/7+7/7
+- Sat 21:00  Newells Old Boys v Lanus  -  1st Half - Home O/U / Under 1.5 (Newells Old Boys) @1.04
+    Newells Old Boys first halves under 1.5 and opponent's: 7/7+7/7
+- Sat 19:45  Versailles v Valenciennes  -  1st Half - Away O/U / Under 1.5 (Valenciennes) @1.06
+    Valenciennes first halves under 1.5 and opponent's: 7/7+7/7
+- Sat 18:45  Defensa y Justicia v San Lorenzo  -  1st Half - Home O/U / Under 1.5 (Defensa y Justicia) @1.09
+    Defensa y Justicia first halves under 1.5 and opponent's: 7/7+7/7
+- Sat 21:00  Atl. Tucuman v Barracas Central  -  1st Half - Home O/U / Under 1.5 (Atl. Tucuman) @1.09
+    Atl. Tucuman first halves under 1.5 and opponent's: 7/7+7/7
+- Sat 19:45  La Roche v Aubagne  -  1st Half - Home O/U / Under 1.5 (La Roche) @1.16
+    La Roche first halves under 1.5 and opponent's: 7/7+7/7
+- Sat 20:00  Aguilas v Jaguares de Cordoba  -  1st Half - Home O/U / Under 1.5 (Aguilas) @1.21
+    Aguilas first halves under 1.5 and opponent's: 7/7+7/7
+- Sat 19:45  Rouen v Bourg en Bresse  -  1st Half - Away O/U / Under 1.5 (Bourg en Bresse) @1.01
+    Bourg en Bresse first halves under 1.5 and opponent's: 7/7+6/7
+- Sat 22:30  Botafogo SP v Vila Nova FC  -  1st Half - Away O/U / Under 1.5 (Vila Nova FC) @1.04
+    Vila Nova FC first halves under 1.5 and opponent's: 7/7+6/7
+- Sat 19:45  Amiens v Villefranche  -  1st Half - Away O/U / Under 1.5 (Villefranche) @1.04
+    Villefranche first halves under 1.5 and opponent's: 6/7+7/7
+- Sat 19:45  Le Puy-en-Velay v Thionville  -  1st Half - Away O/U / Under 1.5 (Thionville) @1.04
+    Thionville first halves under 1.5 and opponent's: 6/7+7/7
+- Sat 19:00  Albion v Defensor Sp.  -  1st Half - Home O/U / Under 1.5 (Albion) @1.06
+    Albion first halves under 1.5 and opponent's: 7/7+6/7
+- Sat 22:30  Atletico-MG v Bragantino  -  1st Half - Away O/U / Under 1.5 (Bragantino) @1.07
+    Bragantino first halves under 1.5 and opponent's: 6/7+7/7
+- Sat 19:00  Waalwijk v FC Emmen  -  1st Half - Away O/U / Under 1.5 (FC Emmen) @1.12
+    FC Emmen first halves under 1.5 and opponent's: 6/7+7/7
+- Sat 19:45  Fleury 91 v Caen  -  1st Half - Home O/U / Under 1.5 (Fleury 91) @1.12
+    Fleury 91 first halves under 1.5 and opponent's: 6/7+7/7
+- Sat 19:00  Eindhoven FC v De Graafschap  -  1st Half - Away O/U / Under 1.5 (De Graafschap) @1.18
+    De Graafschap first halves under 1.5 and opponent's: 7/7+6/7
+- Sat 19:00  Almere City v FC Volendam  -  1st Half - Home O/U / Under 1.5 (Almere City) @1.24
+    Almere City first halves under 1.5 and opponent's: 7/7+6/7
+- Sat 22:05  Deportes Tolima v Chico  -  1st Half - Home O/U / Under 1.5 (Deportes Tolima) @1.29
+    Deportes Tolima first halves under 1.5 and opponent's: 7/7+6/7
+- Sat 19:00  Den Bosch v Dordrecht  -  1st Half - Away O/U / Under 1.5 (Dordrecht) @1.15
+    Dordrecht first halves under 1.5 and opponent's: 6/7+6/7
+
+## 2026-10-03 18:09 WAT  |  one market: Match Result after 5 Minutes / Draw - 1.35x (4 games)  |  code KYK5SJ
+http://www.sportybet.com/ng/?shareCode=KYK5SJ
+- Sat 20:00  Aguilas v Jaguares de Cordoba  -  Match Result after 5 Minutes / Draw @1.09
+    level at 5 minutes in 5/5+6/6 of both sides' venue games
+- Sat 21:00  Atl. Tucuman v Barracas Central  -  Match Result after 5 Minutes / Draw @1.06
+    level at 5 minutes in 7/7+6/6 of both sides' venue games
+- Sat 21:00  Newells Old Boys v Lanus  -  Match Result after 5 Minutes / Draw @1.06
+    level at 5 minutes in 6/6+6/6 of both sides' venue games
+- Sat 22:30  Atletico-MG v Bragantino  -  Match Result after 5 Minutes / Draw @1.10
+    level at 5 minutes in 6/6+5/5 of both sides' venue games
+
+## 2026-10-04 04:19 WAT  |  one market: Team 1st Half Under 0.5 - 16.16x (9 games)  |  code LCMTFB
+http://www.sportybet.com/ng/?shareCode=LCMTFB
+- Sun 12:45  Pyrgos v Panionios  -  1st Half - Home O/U / Under 0.5 (Pyrgos) @1.22
+    Pyrgos first halves under 0.5 and opponent's: 5/5+6/6
+- Sun 20:00  San Martin Formosa v Biblioteca Atenas  -  1st Half - Away O/U / Under 0.5 (Biblioteca Atenas) @1.15
+    Biblioteca Atenas first halves under 0.5 and opponent's: 6/7+6/7
+- Sun 17:30  Castellon v Ceuta  -  1st Half - Away O/U / Under 0.5 (Ceuta) @1.36
+    Ceuta first halves under 0.5 and opponent's: 6/7+6/7
+- Sun 11:30  Treviso v Giana Erminio  -  1st Half - Away O/U / Under 0.5 (Giana Erminio) @1.37
+    Giana Erminio first halves under 0.5 and opponent's: 6/7+6/7
+- Sun 16:00  Lysekloster v Jerv  -  1st Half - Home O/U / Under 0.5 (Lysekloster) @1.40
+    Lysekloster first halves under 0.5 and opponent's: 6/7+6/7
+- Sun 13:30  Pianese v Ravenna  -  1st Half - Home O/U / Under 0.5 (Pianese) @1.40
+    Pianese first halves under 0.5 and opponent's: 6/7+6/7
+- Sun 21:30  Atl. Rafaela v Atletico Atlanta  -  1st Half - Home O/U / Under 0.5 (Atl. Rafaela) @1.44
+    Atl. Rafaela first halves under 0.5 and opponent's: 6/7+6/7
+- Sun 21:00  Talleres Cordoba v Belgrano  -  1st Half - Away O/U / Under 0.5 (Belgrano) @1.46
+    Belgrano first halves under 0.5 and opponent's: 6/7+6/7
+- Sun 16:30  Dolomiti Bellunesi v Novara  -  1st Half - Away O/U / Under 0.5 (Novara) @1.50
+    Novara first halves under 0.5 and opponent's: 6/7+6/7
+
+## 2026-10-04 04:19 WAT  |  one market: Team 1st Half Under 1.5 - 3.42x (18 games)  |  code GR1CAD
+http://www.sportybet.com/ng/?shareCode=GR1CAD
+- Sun 17:30  Castellon v Ceuta  -  1st Half - Away O/U / Under 1.5 (Ceuta) @1.02
+    Ceuta first halves under 1.5 and opponent's: 7/7+7/7
+- Sun 15:15  Gijon v Celta Vigo B  -  1st Half - Away O/U / Under 1.5 (Celta Vigo B) @1.03
+    Celta Vigo B first halves under 1.5 and opponent's: 7/7+7/7
+- Sun 22:05  Cucuta v Pereira  -  1st Half - Away O/U / Under 1.5 (Pereira) @1.03
+    Pereira first halves under 1.5 and opponent's: 7/7+7/7
+- Sun 05:00  Vanraure v Yokohama FC  -  1st Half - Home O/U / Under 1.5 (Vanraure) @1.04
+    Vanraure first halves under 1.5 and opponent's: 7/7+7/7
+- Sun 12:30  Veles Moscow v Ulyanovsk  -  1st Half - Away O/U / Under 1.5 (Ulyanovsk) @1.05
+    Ulyanovsk first halves under 1.5 and opponent's: 7/7+7/7
+- Sun 21:00  Talleres Cordoba v Belgrano  -  1st Half - Home O/U / Under 1.5 (Talleres Cordoba) @1.06
+    Talleres Cordoba first halves under 1.5 and opponent's: 7/7+7/7
+- Sun 14:00  Danubio v Cerro Largo  -  1st Half - Home O/U / Under 1.5 (Danubio) @1.09
+    Danubio first halves under 1.5 and opponent's: 7/7+7/7
+- Sun 17:30  Las Palmas v Valladolid  -  1st Half - Home O/U / Under 1.5 (Las Palmas) @1.10
+    Las Palmas first halves under 1.5 and opponent's: 7/7+7/7
+- Sun 14:30  Hamburger SV (Ger) v FC Copenhagen (Den)  -  1st Half - Home O/U / Under 1.5 (Hamburger SV (Ger)) @1.12
+    Hamburger SV (Ger) first halves under 1.5 and opponent's: 7/7+7/7
+- Sun 15:00  Bangor FC v Coleraine  -  1st Half - Home O/U / Under 1.5 (Bangor FC) @1.02
+    Bangor FC first halves under 1.5 and opponent's: 7/7+6/7
+- Sun 20:00  CA Cerro v Wanderers  -  1st Half - Away O/U / Under 1.5 (Wanderers) @1.07
+    Wanderers first halves under 1.5 and opponent's: 6/7+7/7
+- Sun 13:00  Real Sociedad B v Granada CF  -  1st Half - Away O/U / Under 1.5 (Granada CF) @1.08
+    Granada CF first halves under 1.5 and opponent's: 7/7+6/7
+- Sun 17:00  Boston River v Juventud  -  1st Half - Home O/U / Under 1.5 (Boston River) @1.08
+    Boston River first halves under 1.5 and opponent's: 6/7+7/7
+- Sun 06:00  Blaublitz v Sagan Tosu  -  1st Half - Away O/U / Under 1.5 (Sagan Tosu) @1.09
+    Sagan Tosu first halves under 1.5 and opponent's: 7/7+6/7
+- Sun 18:45  Huracan v Aldosivi  -  1st Half - Home O/U / Under 1.5 (Huracan) @1.11
+    Huracan first halves under 1.5 and opponent's: 7/7+6/7
+- Sun 05:00  Hokkaido Consadole Sapporo v Iwaki  -  1st Half - Home O/U / Under 1.5 (Hokkaido Consadole Sapporo) @1.12
+    Hokkaido Consadole Sapporo first halves under 1.5 and opponent's: 7/7+6/7
+- Sun 20:00  Girona v Mallorca  -  1st Half - Away O/U / Under 1.5 (Mallorca) @1.07
+    Mallorca first halves under 1.5 and opponent's: 6/7+6/7
+- Sun 11:00  Tegevajaro Miyazaki v Omiya Ardija  -  1st Half - Away O/U / Under 1.5 (Omiya Ardija) @1.10
+    Omiya Ardija first halves under 1.5 and opponent's: 6/7+6/7
+
+## 2026-10-04 04:19 WAT  |  one market: Match Result after 5 Minutes / Draw - 1.34x (3 games)  |  code GUQ6A4
+http://www.sportybet.com/ng/?shareCode=GUQ6A4
+- Sun 14:00  Danubio v Cerro Largo  -  Match Result after 5 Minutes / Draw @1.07
+    level at 5 minutes in 6/6+7/7 of both sides' venue games
+- Sun 17:00  Kosovo v Austria  -  Match Result after 5 Minutes / Draw @1.10
+    level at 5 minutes in 6/6+7/7 of both sides' venue games
+- Sun 19:45  Portugal v Norway  -  Match Result after 5 Minutes / Draw @1.14
+    level at 5 minutes in 6/6+6/6 of both sides' venue games
+
+## 2026-10-04 04:19 WAT  |  all options mixed, one per game - 500x target - 634.52x (33 games)  |  code GVAZMK
+http://www.sportybet.com/ng/?shareCode=GVAZMK
+- Sun 05:00  Hokkaido Consadole Sapporo v Iwaki  -  1st Half - Home O/U / Under 1.5 (Hokkaido Consadole Sapporo) @1.12
+    Hokkaido Consadole Sapporo first halves under 1.5 and opponent's: 7/7+6/7
+- Sun 11:00  Tegevajaro Miyazaki v Omiya Ardija  -  1st Half - Away O/U / Under 1.5 (Omiya Ardija) @1.10
+    Omiya Ardija first halves under 1.5 and opponent's: 6/7+6/7
+- Sun 11:30  Treviso v Giana Erminio  -  1st Half - Away O/U / Under 0.5 (Giana Erminio) @1.37
+    Giana Erminio first halves under 0.5 and opponent's: 6/7+6/7
+- Sun 12:30  Veles Moscow v Ulyanovsk  -  1st Half - Over/Under / Under 1.5 @1.32
+    first halves under 1.5: 6/7+5/7 - quiet
+- Sun 12:45  Pyrgos v Panionios  -  1st Half - Home O/U / Under 0.5 (Pyrgos) @1.22
+    Pyrgos first halves under 0.5 and opponent's: 5/5+6/6
+- Sun 13:30  Pianese v Ravenna  -  1st Half - Home O/U / Under 0.5 (Pianese) @1.40
+    Pianese first halves under 0.5 and opponent's: 6/7+6/7
+- Sun 13:30  Campobasso v Torres  -  1st Half - Over/Under / Under 2.5 @1.09
+    first halves under 2.5: 7/7+7/7 - clean
+- Sun 13:30  Cosenza v Foggia  -  1st Half - Over/Under / Under 1.5 @1.34
+    first halves under 1.5: 6/7+5/7 - quiet
+- Sun 14:00  Danubio v Cerro Largo  -  1st Half - Over/Under / Under 1.5 @1.30
+    first halves under 1.5: 7/7+6/7 - quiet
+- Sun 14:30  Hamburger SV (Ger) v FC Copenhagen (Den)  -  1st Half - Home O/U / Under 1.5 (Hamburger SV (Ger)) @1.12
+    Hamburger SV (Ger) first halves under 1.5 and opponent's: 7/7+7/7
+- Sun 16:00  Lysekloster v Jerv  -  1st Half - Home O/U / Under 0.5 (Lysekloster) @1.40
+    Lysekloster first halves under 0.5 and opponent's: 6/7+6/7
+- Sun 16:30  Dolomiti Bellunesi v Novara  -  1st Half - Away O/U / Under 0.5 (Novara) @1.50
+    Novara first halves under 0.5 and opponent's: 6/7+6/7
+- Sun 16:30  Antofagasta v Rangers  -  1st Half - Over/Under / Under 2.5 @1.10
+    first halves under 2.5: 7/7+6/7 - one-breach
+- Sun 17:00  Boston River v Juventud  -  1st Half - Over/Under / Under 2.5 @1.09
+    first halves under 2.5: 6/7+7/7 - one-breach
+- Sun 17:30  Castellon v Ceuta  -  1st Half - Away O/U / Under 0.5 (Ceuta) @1.36
+    Ceuta first halves under 0.5 and opponent's: 6/7+6/7
+- Sun 17:30  Las Palmas v Valladolid  -  1st Half - Home O/U / Under 1.5 (Las Palmas) @1.10
+    Las Palmas first halves under 1.5 and opponent's: 7/7+7/7
+- Sun 18:45  Huracan v Aldosivi  -  1st Half - Home O/U / Under 1.5 (Huracan) @1.11
+    Huracan first halves under 1.5 and opponent's: 7/7+6/7
+- Sun 19:00  San Felipe v Deportes Iquique  -  1st Half - Over/Under / Under 1.5 @1.39
+    first halves under 1.5: 7/7+5/7 - quiet
+- Sun 19:00  Agropecuario v Midland  -  1st Half - Over/Under / Under 1.5 @1.26
+    first halves under 1.5: 7/7+6/7 - quiet
+- Sun 19:00  Comunicaciones v Flandria  -  1st Half - Over/Under / Under 2.5 @1.03
+    first halves under 2.5: 7/7+7/7 - clean
+- Sun 19:30  San Telmo v Almirante Brown  -  1st Half - Over/Under / Under 1.5 @1.20
+    first halves under 1.5: 6/7+6/7 - quiet
+- Sun 19:30  Alcione Milano v Trento  -  1st Half - Over/Under / Under 1.5 @1.37
+    first halves under 1.5: 5/7+5/7 - busy
+- Sun 19:45  Portugal v Norway  -  Match Result after 5 Minutes / Draw @1.14
+    level at 5 minutes in 6/6+6/6 of both sides' venue games
+- Sun 20:00  Girona v Mallorca  -  1st Half - Over/Under / Under 2.5 @1.10
+    first halves under 2.5: 7/7+7/7 - clean
+- Sun 20:00  Zaragoza v Teruel  -  1st Half - Over/Under / Under 1.5 @1.38
+    first halves under 1.5: 6/7+5/7 - quiet
+- Sun 20:00  CA Cerro v Wanderers  -  1st Half - Over/Under / Under 2.5 @1.06
+    first halves under 2.5: 7/7+7/7 - clean
+- Sun 20:00  San Martin Formosa v Biblioteca Atenas  -  1st Half - Away O/U / Under 0.5 (Biblioteca Atenas) @1.15
+    Biblioteca Atenas first halves under 0.5 and opponent's: 6/7+6/7
+- Sun 20:30  Central Norte v Racing Cordoba  -  1st Half - Over/Under / Under 1.5 @1.21
+    first halves under 1.5: 6/7+5/7 - quiet
+- Sun 21:00  Talleres Cordoba v Belgrano  -  1st Half - Away O/U / Under 0.5 (Belgrano) @1.46
+    Belgrano first halves under 0.5 and opponent's: 6/7+6/7
+- Sun 21:00  Chaco For Ever v Def. de Belgrano  -  1st Half - Over/Under / Under 2.5 @1.03
+    first halves under 2.5: 7/7+7/7 - clean
+- Sun 21:30  Atl. Rafaela v Atletico Atlanta  -  1st Half - Home O/U / Under 0.5 (Atl. Rafaela) @1.44
+    Atl. Rafaela first halves under 0.5 and opponent's: 6/7+6/7
+- Sun 21:30  San Luis v U. Espanola  -  1st Half - Over/Under / Under 2.5 @1.10
+    first halves under 2.5: 7/7+6/7 - one-breach
+- Sun 22:00  Tigres v Inter Palmira  -  1st Half - Over/Under / Under 2.5 @1.04
+    first halves under 2.5: 7/7+7/7 - clean
+
+## 2026-10-04 17:29 WAT  |  one market: Team 1st Half Under 0.5 - 1.81x (2 games)  |  code KR7UW6
+http://www.sportybet.com/ng/?shareCode=KR7UW6
+- Sun 19:00  Puerto Nuevo v Justo Jose de Urquiza  -  1st Half - Away O/U / Under 0.5 (Justo Jose de Urquiza) @1.36
+    Justo Jose de Urquiza first halves under 0.5 and opponent's: 7/7+6/7
+- Sun 19:00  Central Cordoba v Yupanqui  -  1st Half - Away O/U / Under 0.5 (Yupanqui) @1.33
+    Yupanqui first halves under 0.5 and opponent's: 6/7+6/7
+
+## 2026-10-04 17:29 WAT  |  one market: Team 1st Half Under 1.5 - 1.12x (2 games)  |  code SN70YY
+http://www.sportybet.com/ng/?shareCode=SN70YY
+- Sun 21:00  Talleres Cordoba v Belgrano  -  1st Half - Home O/U / Under 1.5 (Talleres Cordoba) @1.06
+    Talleres Cordoba first halves under 1.5 and opponent's: 5/5+5/5
+- Sun 20:00  CA Cerro v Wanderers  -  1st Half - Away O/U / Under 1.5 (Wanderers) @1.06
+    Wanderers first halves under 1.5 and opponent's: 7/7+7/7
+
+## 2026-10-04 17:29 WAT  |  all options mixed, one per game - 500x target - 8.12x (16 games)  |  code XNXSNW
+http://www.sportybet.com/ng/?shareCode=XNXSNW
+- Sun 19:00  Puerto Nuevo v Justo Jose de Urquiza  -  1st Half - Away O/U / Under 0.5 (Justo Jose de Urquiza) @1.36
+    Justo Jose de Urquiza first halves under 0.5 and opponent's: 7/7+6/7
+- Sun 19:00  San Felipe v Deportes Iquique  -  1st Half - Over/Under / Under 2.5 @1.08
+    first halves under 2.5: 7/7+7/7 - clean
+- Sun 19:00  Central Cordoba v Yupanqui  -  1st Half - Away O/U / Under 0.5 (Yupanqui) @1.33
+    Yupanqui first halves under 0.5 and opponent's: 6/7+6/7
+- Sun 19:00  Sportivo Italiano v Talleres (R.E)  -  1st Half - Over/Under / Under 1.5 @1.21
+    first halves under 1.5: 5/7+7/7 - busy
+- Sun 19:30  Chacarita Juniors v Patronato  -  1st Half - Over/Under / Under 1.5 @1.24
+    first halves under 1.5: 7/7+7/7 - busy
+- Sun 19:30  San Telmo v Almirante Brown  -  1st Half - Over/Under / Under 2.5 @1.03
+    first halves under 2.5: 7/7+7/7 - clean
+- Sun 19:30  Alvarado v Defensores Belgrano VR  -  1st Half - Over/Under / Under 2.5 @1.05
+    first halves under 2.5: 6/7+7/7 - one-breach
+- Sun 19:45  Portugal v Norway  -  Match Result after 5 Minutes / Draw @1.14
+    level at 5 minutes in 6/6+6/6 of both sides' venue games
+- Sun 20:00  CA Cerro v Wanderers  -  1st Half - Over/Under / Under 2.5 @1.06
+    first halves under 2.5: 7/7+6/7 - one-breach
+- Sun 20:30  Central Norte v Racing Cordoba  -  1st Half - Over/Under / Under 2.5 @1.03
+    first halves under 2.5: 7/7+7/7 - clean
+- Sun 21:00  Talleres Cordoba v Belgrano  -  1st Half - Over/Under / Under 1.5 @1.29
+    first halves under 1.5: 4/5+5/5 - quiet
+- Sun 21:00  Chaco For Ever v Def. de Belgrano  -  1st Half - Over/Under / Under 1.5 @1.21
+    first halves under 1.5: 7/7+6/7 - busy
+- Sun 21:00  Club A. Guemes v Colegiales  -  1st Half - Over/Under / Under 2.5 @1.05
+    first halves under 2.5: 6/7+7/7 - one-breach
+- Sun 22:00  Tigres v Inter Palmira  -  1st Half - Over/Under / Under 2.5 @1.05
+    first halves under 2.5: 6/6+5/5 - clean
+- Sun 22:30  San Martin T. v Gimnasia y Tiro  -  1st Half - Over/Under / Under 2.5 @1.04
+    first halves under 2.5: 6/7+7/7 - one-breach
+- Sun 23:00  New Mexico v Phoenix Rising  -  1st Half - Over/Under / Under 2.5 @1.15
+    first halves under 2.5: 7/7+6/7 - one-breach
+
+## 2026-10-04 23:01 WAT  |  hand-read picks, every game to 06:00 - 37.70x (18 games)  |  code JJUV1U
+http://www.sportybet.com/ng/?shareCode=JJUV1U
+- Sun 23:15  Argentinos Juniors v CA Tigre  -  Double Chance / Home or Draw @1.21
+    Argentinos unbeaten 4/4 home; Tigre lost 4/7 away
+- Sun 23:30  Racing Club Montevideo v CA Penarol Montevideo  -  1st Half - Over/Under / Under 2.5 @1.05
+    14/14 venue first halves 2 or fewer; goalless gate 3/7, 2/7
+- Mon 00:00  Aruba v Anguilla  -  2nd Half - Total / Over 0.5 @1.11
+    mismatch: 1.03 favourite
+- Mon 00:00  CD Guadalajara v FC Juarez  -  Double Chance / Home or Away @1.32
+    no draws in 8 venue games
+- Mon 00:00  CD Guastatoya v Aurora FC  -  2nd Half - Total / Over 0.5 @1.25
+    engine pick 5/5+5/5
+- Mon 00:00  Houston Dash v Washington Spirit  -  Over/Under / Under 3.5 @1.41
+    12/13 venue games 3 or fewer
+- Mon 00:00  Inter Santa Tecla v CD Fuerte San Francisco Morazan  -  Double Chance / Home or Draw @1.13
+    Santa Tecla unbeaten 6/6 home; Fuerte winless 7/7 away
+- Mon 00:10  CA Bucaramanga v CD Junior FC  -  Double Chance / Home or Draw @1.31
+    Bucaramanga unbeaten 4/4 home; Junior lost 6/7 away
+- Mon 00:15  CA Independiente de La Chorrera v CD Arabe Unido  -  Double Chance / Draw or Away @1.31
+    Arabe unbeaten 4/4 away; La Chorrera drew 3/5 home
+- Mon 00:30  Independiente Petrolero v Club Bolivar  -  GG/NG / Yes @1.38
+    Bolivar scored 7/7 away; Petrolero scored 6/7 home
+- Mon 01:00  Costa Rica v Haiti  -  Over/Under / Over 1.5 @1.19
+    both venue games 5+ goals
+- Mon 01:30  CD Guadalajara v CF America  -  Over/Under / Over 1.5 @1.18
+    friendly, no stats - price only
+- Mon 01:30  Estudiantes Rio Cuarto v Racing Club Avellaneda  -  Over/Under / Under 3.5 @1.15
+    Estudiantes home 5/5 0-2 goals; Racing away 3,4,3,0
+- Mon 01:30  Mount Pleasant FC v Cavalier FC  -  Over/Under / Under 3.5 @1.26
+    8/9 venue games 3 or fewer
+- Mon 02:00  Comunicaciones FC  v CD Suchitepequez  -  Over/Under / Over 1.5 @1.28
+    9/11; Suchitepequez away games all 2+ goals
+- Mon 02:06  CF Pachuca v Deportivo Toluca FC  -  2nd Half - Total / Over 0.5 @1.10
+    8/8 venue games had a 2nd-half goal
+- Mon 02:15  Llaneros FC v America de Cali  -  Over/Under / Under 3.5 @1.27
+    9/11 venue games 3 or fewer
+- Mon 03:00  Nicaragua v Dominican Republic  -  Double Chance / Draw or Away @1.18
+    Nicaragua lost 0-3 at home; DR won away
+
+## 2026-10-05 11:08 WAT  |  hand-read picks, today's board - 61.95x (17 games)  |  code KXC2BM
+http://www.sportybet.com/ng/?shareCode=KXC2BM
+- Mon 15:00  FK Napredak Krusevac v FK Loznica  -  Double Chance / Home or Away @1.29
+    12: no draws in 6/6 Napredak home + 3/5 Loznica away
+- Mon 16:00  MFK Tatran Liptovsky Mikulas v FC STK 1914 Samorin  -  Double Chance / Draw or Away @1.57
+    X2: Samorin won 6/6 away; Tatran home 3/4 not winning
+- Mon 18:00  Moss FK v Kongsvinger IL Toppfotball  -  GG/NG / Yes @1.28
+    GG: both scored in 7/7 Moss home + 6/7 Kongsvinger away
+- Mon 19:00  CD UAI Urquiza v CA Ituzaingo  -  Over/Under / Under 3.5 @1.17
+    Under 3.5: 7/7 + 6/7
+- Mon 19:00  Campos AA RJ v SE Buzios RJ  -  Double Chance / Home or Away @1.24
+    12: 6/7 + 7/7
+- Mon 19:00  Club El Porvenir v Canuelas FC  -  Double Chance / Draw or Away @1.29
+    X2: 6/7 + 6/7; Canuelas won 6/7 away
+- Mon 19:00  Deportivo Paraguayo v Club Mercedes  -  Double Chance / Home or Away @1.35
+    12: 5/7 + 7/7 (Mercedes no draws away)
+- Mon 19:30  Cordoba CF v Tenerife CD  -  Over/Under / Over 1.5 @1.30
+    Over 1.5: 5/5 + 3/3
+- Mon 19:45  Carshalton Athletic FC v Eastbourne Borough  -  Double Chance / Home or Away @1.25
+    12: 5/5 + 4/5
+- Mon 20:45  Deportivo Riestra AFBC v CA Central Cordoba SE  -  Over/Under / Under 3.5 @1.14
+    Under 3.5: 5/5 + 4/5
+- Mon 21:00  Nueva Chicago v CD Maipu  -  1st Half - Over/Under / Under 1.5 @1.21
+    1H Under 1.5: 6/7 + 6/7
+- Mon 21:00  Sportivo Trinidense v Sportivo Luqueno  -  Over/Under / Under 3.5 @1.30
+    Under 3.5: 6/6 + 6/7
+- Mon 23:00  Bogota FC v Envigado FC  -  Over/Under / Under 3.5 @1.16
+    Under 3.5: 5/5 + 5/6
+- Mon 23:00  Estudiantes de La Plata v Gimnasia y Esgrima Mendoza  -  2nd Half - Total / Over 0.5 @1.29
+    2H Over 0.5: 6/7 + 5/5
+- Mon 23:00  Velez Sarsfield v CA Platense  -  Over/Under / Under 3.5 @1.14
+    Under 3.5: 4/5 + 6/6
+- Mon 23:15  Cerro Porteno v CS 2 de Mayo  -  Over/Under / Under 3.5 @1.26
+    Under 3.5: 7/7 + 5/7
+- Mon 23:30  Club Fernando de La Mora v Club General Caballero JLM  -  Double Chance / Home or Draw @1.51
+    1X: Fernando unbeaten 7/7 home; Caballero away 4/7 not winning
+
+## 2026-10-05 12:01 WAT  |  all of today's board, part A - 834.07x (32 games)  |  code ZNVDD4
+http://www.sportybet.com/ng/?shareCode=ZNVDD4
+- Mon 12:30  Emami East Bengal FC v NorthEast United  -  Over/Under / Over 1.5 @1.28
+    price pick - no venue record (book 78%)
+- Mon 12:45  PAOK Thessaloniki B v Hellas Syrou  -  Over/Under / Under 3.5 @1.21
+    price pick - no venue record (book 83%)
+- Mon 13:00  Nestos Chrysoupoli FC v GS Marko  -  Double Chance / Draw or Away @1.18
+    price pick - no venue record (book 85%)
+- Mon 13:30  FSK Mariupol v FC Niva Ternopil  -  Double Chance / Home or Away @1.29
+    venue 6/7+4/7 = 71% (book 78%)
+- Mon 14:00  Uganda v Congo DR  -  Over/Under / Under 3.5 @1.21
+    price pick - no venue record (book 83%)
+- Mon 14:00  FK Smederevo 1924 v FK Vozdovac Belgrade  -  Double Chance / Home or Away @1.27
+    venue 5/6+3/5 = 73% (book 79%)
+- Mon 14:00  Sheffield United U21 v Bolton Wanderers  -  Double Chance / Home or Draw @1.40
+    price pick - no venue record (book 71%)
+- Mon 14:00  Montevideo Wanderers v Juventud de Las Piedras  -  Over/Under / Over 1.5 @1.19
+    price pick - no venue record (book 84%)
+- Mon 14:00  Indonesia v Thailand  -  Double Chance / Home or Draw @1.25
+    price pick - no venue record (book 80%)
+- Mon 15:00  FK Napredak Krusevac v FK Loznica  -  Double Chance / Home or Away @1.27
+    venue record (from the 17)
+- Mon 15:00  Georgia v Latvia  -  Over/Under / Under 4.5 @1.16
+    price pick - no venue record (book 86%)
+- Mon 15:30  Montenegro v Armenia  -  Over/Under / Under 4.5 @1.17
+    price pick - no venue record (book 85%)
+- Mon 16:00  MFK Tatran Liptovsky Mikulas v FC STK 1914 Samorin  -  Double Chance / Draw or Away @1.57
+    venue record (from the 17)
+- Mon 16:30  Mouna FC v Yamoussoukro FC  -  Double Chance / Home or Draw @1.18
+    price pick - no venue record (book 85%)
+- Mon 17:00  Cyprus v Latvia  -  Double Chance / Home or Draw @1.15
+    price pick - no venue record (book 87%)
+- Mon 17:00  Rwanda v Kenya  -  Over/Under / Under 3.5 @1.17
+    price pick - no venue record (book 85%)
+- Mon 17:00  Fana IL v Aasane Fotball 2  -  Double Chance / Home or Draw @1.26
+    price pick - no venue record (book 79%)
+- Mon 17:00  Sanliurfaspor v Belediye Derincespor  -  Over/Under / Under 4.5 @1.22
+    price pick - no venue record (book 82%)
+- Mon 17:00  Serbia v Russia  -  Over/Under / Under 4.5 @1.14
+    price pick - no venue record (book 88%)
+- Mon 17:00  Torreense v Estoril Praia  -  Over/Under / Over 1.5 @1.19
+    price pick - no venue record (book 84%)
+- Mon 17:15  Italy v Poland  -  Over/Under / Under 4.5 @1.15
+    price pick - no venue record (book 87%)
+- Mon 17:30  Sweden v North Macedonia  -  Over/Under / Over 1.5 @1.18
+    price pick - no venue record (book 85%)
+- Mon 18:00  Moss FK v Kongsvinger IL Toppfotball  -  GG/NG / Yes @1.28
+    venue record (from the 17)
+- Mon 18:00  Herrestads AIF v Grebbestads IF  -  Over/Under / Under 4.5 @1.26
+    price pick - no venue record (book 79%)
+- Mon 18:00  Club Oriental de Football v Central Espanol Reserve  -  Over/Under / Over 1.5 @1.20
+    price pick - no venue record (book 83%)
+- Mon 18:00  La Luz FC Reserves v Racing Club Montevideo  -  Over/Under / Over 1.5 @1.23
+    price pick - no venue record (book 81%)
+- Mon 18:00  Lyn 1896 FK II v Raade IL  -  Double Chance / Home or Draw @1.39
+    price pick - no venue record (book 72%)
+- Mon 19:00  CD UAI Urquiza v CA Ituzaingo  -  Over/Under / Under 3.5 @1.20
+    venue record (from the 17)
+- Mon 19:00  Club El Porvenir v Canuelas FC  -  Double Chance / Draw or Away @1.27
+    venue record (from the 17)
+- Mon 19:00  Club Lujan v CA General Lamadrid  -  Over/Under / Under 3.5 @1.16
+    venue 5/7+6/7 = 79% (book 86%)
+- Mon 19:00  Deportivo Paraguayo v Club Mercedes  -  Double Chance / Home or Away @1.34
+    venue record (from the 17)
+- Mon 19:00  Cerro Largo FC v Deportivo Maldonado Reserve  -  Over/Under / Over 1.5 @1.16
+    price pick - no venue record (book 86%)
+
+## 2026-10-05 12:01 WAT  |  all of today's board, part B - 500.78x (32 games)  |  code QRBU8L
+http://www.sportybet.com/ng/?shareCode=QRBU8L
+- Mon 19:00  Defensor Sporting v Boston River  -  Over/Under / Over 1.5 @1.19
+    price pick - no venue record (book 84%)
+- Mon 19:00  Progreso v Liverpool Montevideo  -  Over/Under / Over 1.5 @1.21
+    price pick - no venue record (book 83%)
+- Mon 19:00  Barra Mansa FC RJ v Cardoso Moreira RJ  -  Double Chance / Draw or Away @1.24
+    venue 5/7+6/7 = 79% (book 81%)
+- Mon 19:00  Campos AA RJ v SE Buzios RJ  -  Double Chance / Home or Away @1.24
+    venue record (from the 17)
+- Mon 19:00  SE Paraty RJ v FC Rio de Janeiro RJ  -  Double Chance / Home or Away @1.25
+    venue 3/3+2/3 = 83% (book 80%)
+- Mon 19:00  Serra Macaense FC RJ v Santa Cruz FC RJ  -  Double Chance / Home or Away @1.28
+    venue 3/3+3/3 = 100% (book 78%)
+- Mon 19:30  Cordoba CF v Tenerife CD  -  Over/Under / Over 1.5 @1.30
+    venue record (from the 17)
+- Mon 19:45  Bosnia & Herzegovina v Poland  -  Over/Under / Under 4.5 @1.16
+    price pick - no venue record (book 86%)
+- Mon 19:45  France v Belgium  -  Double Chance / Home or Draw @1.14
+    price pick - no venue record (book 88%)
+- Mon 19:45  Italy v Turkiye  -  Over/Under / Over 1.5 @1.17
+    price pick - no venue record (book 85%)
+- Mon 19:45  Montenegro v Armenia  -  Double Chance / Home or Draw @1.14
+    price pick - no venue record (book 88%)
+- Mon 19:45  Northern Ireland v Georgia  -  Over/Under / Under 3.5 @1.17
+    price pick - no venue record (book 85%)
+- Mon 19:45  Romania v Sweden  -  Over/Under / Over 1.5 @1.18
+    price pick - no venue record (book 85%)
+- Mon 19:45  Ukraine v Hungary  -  Over/Under / Under 3.5 @1.23
+    price pick - no venue record (book 81%)
+- Mon 19:45  Carshalton Athletic FC v Eastbourne Borough  -  Double Chance / Home or Away @1.25
+    venue record (from the 17)
+- Mon 19:45  Redbridge v Concord Rangers  -  Over/Under / Under 4.5 @1.21
+    price pick - no venue record (book 83%)
+- Mon 20:00  Guadeloupe v Saint Lucia  -  Over/Under / Over 1.5 @1.20
+    price pick - no venue record (book 83%)
+- Mon 20:45  Deportivo Riestra AFBC v CA Central Cordoba SE  -  Over/Under / Under 3.5 @1.14
+    venue record (from the 17)
+- Mon 21:00  Nueva Chicago v CD Maipu  -  1st Half - Over/Under / Under 1.5 @1.21
+    venue record (from the 17)
+- Mon 21:00  Sportivo Trinidense v Sportivo Luqueno  -  Over/Under / Under 3.5 @1.30
+    venue record (from the 17)
+- Mon 21:00  12 de Junio de Villa Hayes v Sol de America Villa Elisa  -  Double Chance / Home or Away @1.29
+    venue 6/7+5/7 = 79% (book 79%)
+- Mon 21:00  Recoleta FC Reserves v Club Libertad Asunción Reserves  -  Over/Under / Over 1.5 @1.23
+    price pick - no venue record (book 81%)
+- Mon 22:00  Cuba v Saint Kitts and Nevis  -  Over/Under / Over 1.5 @1.17
+    price pick - no venue record (book 85%)
+- Mon 23:00  Martinique v El Salvador  -  Over/Under / Under 4.5 @1.13
+    price pick - no venue record (book 88%)
+- Mon 23:00  Estudiantes de La Plata v Gimnasia y Esgrima Mendoza  -  2nd Half - Total / Over 0.5 @1.29
+    venue record (from the 17)
+- Mon 23:00  Velez Sarsfield v CA Platense  -  Over/Under / Under 3.5 @1.14
+    venue record (from the 17)
+- Mon 23:00  Bogota FC v Envigado FC  -  Over/Under / Under 3.5 @1.16
+    venue record (from the 17)
+- Mon 23:00  Deportivo Merlo v CA Brown de Adrogue  -  Over/Under / Under 3.5 @1.11
+    venue 5/7+7/7 = 86% (book 90%)
+- Mon 23:05  Chapelton Maroons FC v Waterhouse FC  -  Over/Under / Under 3.5 @1.23
+    price pick - no venue record (book 81%)
+- Mon 23:15  Cerro Porteno v CS 2 de Mayo  -  Over/Under / Under 3.5 @1.26
+    venue record (from the 17)
+- Mon 23:30  Club Fernando de La Mora v Club General Caballero JLM  -  Double Chance / Home or Draw @1.51
+    venue record (from the 17)
+- Mon 23:30  Nacional AC Muriae MG v EC Nova Lavras MG  -  Double Chance / Home or Draw @1.20
+    price pick - no venue record (book 83%)
+
+## 2026-10-06 17:40 WAT  |  every game, the book's most likely option at 1.15+ - part 1 - 1,502.26x (43 games)  |  code PW6EAL
+http://www.sportybet.com/ng/?shareCode=PW6EAL
+- Tue 19:00  Saudi Arabia v United Arab Emirates  -  1st Half - Over/Under / Under 1.5 @1.23
+    book's no-margin chance 75% - the highest of this game's options at 1.15+
+- Tue 19:00  Accrington Stanley v Salford City  -  Over/Under / Over 1.5 @1.17
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+- Tue 19:00  AFC Wimbledon v Barnet FC  -  1st Half - Over/Under / Under 2.5 @1.15
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+- Tue 19:00  Blackpool FC v Crewe Alexandra  -  1st Half - Over/Under / Over 0.5 @1.19
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+- Tue 19:00  Cambridge United v Northampton Town  -  Over/Under / Under 4.5 @1.18
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+- Tue 19:00  Doncaster Rovers v Liverpool U21  -  Double Chance / Home or Draw @1.15
+    book's no-margin chance 83% - the highest of this game's options at 1.15+
+- Tue 19:00  Exeter City v Oxford United  -  Over/Under / Under 4.5 @1.19
+    book's no-margin chance 79% - the highest of this game's options at 1.15+
+- Tue 19:00  Fleetwood Town v Barnsley FC  -  Double Chance / Home or Away @1.23
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+- Tue 19:00  Grimsby Town v Burton Albion  -  1st Half - Over/Under / Under 2.5 @1.15
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+- Tue 19:00  Huddersfield v Rochdale AFC  -  1st Half - Over/Under / Under 2.5 @1.20
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+- Tue 19:00  Milton Keynes Dons v Brentford U21  -  Double Chance / Home or Away @1.21
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+- Tue 19:15  Union Minas v Union Comercio  -  Double Chance / Home or Away @1.24
+    book's no-margin chance 74% - the highest of this game's options at 1.15+
+- Tue 19:45  Albania v San Marino  -  2nd Half - Total / Under 3.5 @1.21
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+- Tue 19:45  Belarus v Finland  -  Over/Under / Under 3.5 @1.18
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+- Tue 19:45  Croatia v Spain  -  Over/Under / Over 1.5 @1.15
+    book's no-margin chance 84% - the highest of this game's options at 1.15+
+- Tue 19:45  England v Czechia  -  2nd Half - Total / Under 3.5 @1.17
+    book's no-margin chance 82% - the highest of this game's options at 1.15+
+- Tue 19:45  Estonia v Iceland  -  Double Chance / Draw or Away @1.16
+    book's no-margin chance 83% - the highest of this game's options at 1.15+
+- Tue 19:45  Luxembourg v Bulgaria  -  Over/Under / Under 3.5 @1.16
+    book's no-margin chance 83% - the highest of this game's options at 1.15+
+- Tue 19:45  Moldova v Slovakia  -  Over/Under / Under 4.5 @1.17
+    book's no-margin chance 82% - the highest of this game's options at 1.15+
+- Tue 19:45  Scotland v Slovenia  -  Over/Under / Under 3.5 @1.17
+    book's no-margin chance 82% - the highest of this game's options at 1.15+
+- Tue 19:45  Switzerland v North Macedonia  -  Over/Under / Over 1.5 @1.15
+    book's no-margin chance 84% - the highest of this game's options at 1.15+
+- Tue 19:45  Halesowen Town FC v Stafford Rangers  -  Over/Under / Over 1.5 @1.19
+    book's no-margin chance 79% - the highest of this game's options at 1.15+
+- Tue 19:45  Scarborough Athletic v Macclesfield FC  -  Over/Under / Over 1.5 @1.16
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+- Tue 19:45  Spalding United v Bury Town FC  -  Double Chance / Home or Away @1.26
+    book's no-margin chance 76% - the highest of this game's options at 1.15+
+- Tue 19:45  Wingate & Finchley v Bedford Town Football Club  -  Double Chance / Home or Away @1.22
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+- Tue 19:45  Braintree Town FC v Walton and Hersham FC  -  Double Chance / Home or Away @1.21
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+- Tue 19:45  Ebbsfleet United FC v Folkestone Invicta  -  1st Half - Over/Under / Under 2.5 @1.15
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+- Tue 19:45  Farnham Town v Truro City  -  Over/Under / Over 1.5 @1.17
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+- Tue 19:45  AFC Emley v Bamber Bridge  -  Over/Under / Over 1.5 @1.16
+    book's no-margin chance 79% - the highest of this game's options at 1.15+
+- Tue 19:45  Alfreton Town FC v FC United of Manchester  -  Over/Under / Over 1.5 @1.19
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+- Tue 19:45  Cleethorpes Town FC v Hyde United FC  -  Double Chance / Home or Draw @1.15
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+- Tue 19:45  Curzon Ashton FC v Redcar Athletic FC  -  Over/Under / Over 1.5 @1.21
+    book's no-margin chance 76% - the highest of this game's options at 1.15+
+- Tue 19:45  Ilkeston Town FC v Guiseley FC  -  Double Chance / Home or Away @1.25
+    book's no-margin chance 75% - the highest of this game's options at 1.15+
+- Tue 19:45  Leek Town FC v Warrington Rylands 1906 FC  -  Over/Under / Over 1.5 @1.22
+    book's no-margin chance 75% - the highest of this game's options at 1.15+
+- Tue 19:45  Quorn FC v Ashton United FC  -  Over/Under / Over 1.5 @1.19
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+- Tue 19:45  Stockton Town v Bury FC  -  Over/Under / Over 1.5 @1.17
+    book's no-margin chance 79% - the highest of this game's options at 1.15+
+- Tue 19:45  Warrington Town v Workington AFC  -  Over/Under / Over 1.5 @1.16
+    book's no-margin chance 79% - the highest of this game's options at 1.15+
+- Tue 19:45  Whitby Town v Gainsborough Trinity  -  Double Chance / Draw or Away @1.23
+    book's no-margin chance 76% - the highest of this game's options at 1.15+
+- Tue 19:45  Chatham Town v Leatherhead FC  -  Over/Under / Over 1.5 @1.17
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+- Tue 19:45  Cheshunt FC v Aveley FC  -  Over/Under / Over 1.5 @1.18
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+- Tue 19:45  Dartford FC v Ramsgate FC  -  Over/Under / Over 1.5 @1.17
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+- Tue 19:45  Maldon & Tiptree FC v Welling United  -  Double Chance / Draw or Away @1.16
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+- Tue 19:45  Stanway Rovers v Enfield Town  -  Double Chance / Home or Away @1.21
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+
+## 2026-10-06 18:01 WAT  |  19:00 block, book's most likely option, five legs swapped where the form disagreed - 1,836.88x (42 games)  |  code P965KS
+http://www.sportybet.com/ng/?shareCode=P965KS
+- Tue 19:00  Accrington Stanley v Salford City  -  Over/Under / Over 1.5 @1.17
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:00  Blackpool FC v Crewe Alexandra  -  1st Half - Over/Under / Over 0.5 @1.20
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:00  Cambridge United v Northampton Town  -  Over/Under / Under 4.5 @1.19
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:00  Doncaster Rovers v Liverpool U21  -  1st Half - Over/Under / Under 2.5 @1.28
+    SWAPPED: record 5/5+2/2 = 100% agrees with book 72% (was Double Chance / Home or Draw)
+- Tue 19:00  Exeter City v Oxford United  -  Over/Under / Under 4.5 @1.20
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:00  Fleetwood Town v Barnsley FC  -  Double Chance / Home or Away @1.22
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:00  Grimsby Town v Burton Albion  -  1st Half - Over/Under / Under 2.5 @1.15
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:00  Huddersfield v Rochdale AFC  -  1st Half - Over/Under / Under 2.5 @1.20
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:00  Milton Keynes Dons v Brentford U21  -  1st Half - Over/Under / Under 2.5 @1.22
+    SWAPPED: record 4/4+3/4 = 88% agrees with book 76% (was Double Chance / Home or Away)
+- Tue 19:00  Saudi Arabia v United Arab Emirates  -  1st Half - Over/Under / Under 1.5 @1.22
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:15  Union Minas v Union Comercio  -  Double Chance / Home or Away @1.24
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  AFC Emley v Bamber Bridge  -  Over/Under / Over 1.5 @1.16
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Albania v San Marino  -  2nd Half - Total / Under 3.5 @1.21
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Alfreton Town FC v FC United of Manchester  -  Over/Under / Over 1.5 @1.19
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Belarus v Finland  -  Double Chance / Home or Away @1.36
+    SWAPPED: record 1/1+1/1 = 100% agrees with book 70% (was Over/Under / Under 3.5)
+- Tue 19:45  Braintree Town FC v Walton and Hersham FC  -  Double Chance / Home or Away @1.21
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Chatham Town v Leatherhead FC  -  Over/Under / Over 1.5 @1.17
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Cheshunt FC v Aveley FC  -  Over/Under / Over 1.5 @1.18
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Cleethorpes Town FC v Hyde United FC  -  Double Chance / Home or Draw @1.15
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Croatia v Spain  -  Over/Under / Over 1.5 @1.15
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Curzon Ashton FC v Redcar Athletic FC  -  Over/Under / Over 1.5 @1.21
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Dartford FC v Ramsgate FC  -  Over/Under / Over 1.5 @1.17
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Ebbsfleet United FC v Folkestone Invicta  -  1st Half - Over/Under / Under 2.5 @1.14
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  England v Czechia  -  2nd Half - Total / Under 3.5 @1.17
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Estonia v Iceland  -  Double Chance / Draw or Away @1.16
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Farnham Town v Truro City  -  Over/Under / Over 1.5 @1.17
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Halesowen Town FC v Stafford Rangers  -  Over/Under / Over 1.5 @1.19
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Ilkeston Town FC v Guiseley FC  -  Double Chance / Home or Away @1.25
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Leek Town FC v Warrington Rylands 1906 FC  -  Over/Under / Over 1.5 @1.21
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Luxembourg v Bulgaria  -  Over/Under / Under 3.5 @1.16
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Maldon & Tiptree FC v Welling United  -  Double Chance / Home or Away @1.19
+    SWAPPED: record 6/6+4/5 = 91% agrees with book 78% (was Double Chance / Draw or Away)
+- Tue 19:45  Moldova v Slovakia  -  Over/Under / Under 4.5 @1.16
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Quorn FC v Ashton United FC  -  Over/Under / Over 1.5 @1.19
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Scarborough Athletic v Macclesfield FC  -  Over/Under / Under 4.5 @1.25
+    SWAPPED: record 4/5+6/6 = 91% agrees with book 76% (was Over/Under / Over 1.5)
+- Tue 19:45  Scotland v Slovenia  -  Over/Under / Under 3.5 @1.17
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Spalding United v Bury Town FC  -  Double Chance / Home or Away @1.26
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Stanway Rovers v Enfield Town  -  Double Chance / Home or Away @1.21
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Stockton Town v Bury FC  -  Over/Under / Over 1.5 @1.17
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Switzerland v North Macedonia  -  Over/Under / Over 1.5 @1.15
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Warrington Town v Workington AFC  -  Over/Under / Over 1.5 @1.16
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Whitby Town v Gainsborough Trinity  -  Double Chance / Draw or Away @1.23
+    book's most likely option (unchanged from PW6EAL)
+- Tue 19:45  Wingate & Finchley v Bedford Town Football Club  -  Double Chance / Home or Away @1.22
+    book's most likely option (unchanged from PW6EAL)
+
+## 2026-10-06 19:47 WAT  |  rest of tonight, book's most likely option, swapped where the form disagreed - 5.65x (9 games)  |  code UTN96P
+http://www.sportybet.com/ng/?shareCode=UTN96P
+- Tue 21:00  Montserrat v Turks and Caicos Islands  -  Over/Under / Under 4.5 @1.15
+    book's most likely option
+- Tue 21:00  Saint-Martin v Bahamas  -  Over/Under / Under 7.5 @1.19
+    book's most likely option
+- Tue 21:00  Sportivo Ameliano v Rubio Nu  -  2nd Half - Total / Over 0.5 @1.26
+    SWAPPED from Over/Under / Under 3.5 (form 5/6+4/7 69% v book 75%): form 6/6+6/7 92% v book 73%
+- Tue 21:00  Club Dr Benjamin Aceval v Independiente Campo Grande  -  Over/Under / Over 1.5 @1.19
+    form 7/7+7/7 100% agrees with book 77%
+- Tue 21:30  CDU San Martin v CSDC Alianza Universidad  -  Double Chance / Home or Draw @1.33
+    SWAPPED from Over/Under / Over 1.5 (form 5/6+3/7 62% v book 73%): form 5/6+6/7 85% v book 69%
+- Tue 22:00  Saint Vincent and the Grenadines v Sint Maarten  -  Over/Under / Over 1.5 @1.16
+    book's most likely option
+- Tue 23:15  Club Olimpia v Nacional Asuncion  -  Over/Under / Under 3.5 @1.22
+    form 5/7+6/7 79% agrees with book 77%
+- Tue 23:30  SC Recife PE v Sao Bernardo FC  -  2nd Half - Total / Under 2.5 @1.17
+    form 6/7+6/7 86% agrees with book 80%
+- Tue 23:30  Deportivo Santani v Guairena FC  -  Double Chance / Home or Away @1.25
+    SWAPPED from Double Chance / Home or Draw (form 4/7+7/7 79% v book 81%): form 7/7+4/7 79% v book 74%
+
+## 2026-10-07 01:10 WAT  |  overnight, every game to 07:00, book's most likely option - 1,376.80x (17 games)  |  code XFLRZN
+http://www.sportybet.com/ng/?shareCode=XFLRZN
+- Wed 01:30  Chicago Fire v Vancouver Whitecaps FC  -  1st Half - Over/Under total=2.5 / Under 2.5 @1.22
+    book 78%; form: -
+- Wed 01:35  AA Ponte Preta SP v EC Juventude RS  -  Double Chance  / Home or Away @1.16
+    book 81%; form: -
+- Wed 02:00  Utah Jazz v Denver Nuggets  -  Winner (incl. overtime)  / Away @1.87
+    book 50%; form: -
+- Wed 02:15  El Calor de Cancun v Lobos de Puebla  -  Winner (incl. overtime)  / Away @1.50
+    book 63%; form: -
+- Wed 02:30  Caribbean Storm Islands v Paisas Basktball  -  Winner (incl. overtime)  / Home @9.00
+    book 10%; form: -
+- Wed 02:35  Penticton Vees v Swift Current Broncos  -  1X2  / Home @1.31
+    book 69%; form: -
+- Wed 02:40  Seattle Kraken v Vegas Golden Knights  -  Over/Under total=7.5 / Under 7.5 @1.30
+    book 73%; form: -
+- Wed 03:00  French Guiana v Belize  -  Over/Under total=3.5 / Under 3.5 @1.21
+    book 78%; form: -
+- Wed 03:00  Freseros de Irapuato v Dorados de Chihuahua  -  Winner (incl. overtime)  / Away @1.86
+    book 51%; form: -
+- Wed 03:00  Mineros de Zacatecas v Santos de San Luis  -  Winner (incl. overtime)  / Home @1.33
+    book 71%; form: -
+- Wed 03:00  Golden State Warriors v Los Angeles Lakers  -  Winner (incl. overtime)  / Home @1.50
+    book 61%; form: -
+- Wed 03:00  Vancouver Giants v Brandon Wheat Kings  -  1X2  / Away @1.68
+    book 54%; form: -
+- Wed 03:00  Los Angeles Kings v Florida Panthers  -  Over/Under total=7.5 / Under 7.5 @1.27
+    book 75%; form: -
+- Wed 03:15  Astros de Jalisco v Gambusinos De Fresnillo  -  1X2  / Home @1.17
+    book 79%; form: -
+- Wed 03:30  Mexico v Chile  -  Double Chance  / Home or Draw @1.15
+    book 83%; form: -
+- Wed 03:30  Panteras de Aguascalientes v Diablos Rojos Del Mexico  -  Winner (incl. overtime)  / Home @1.33
+    book 71%; form: -
+- Wed 04:00  Soles de Mexicali v Fuerza Regia  -  Winner (incl. overtime)  / Home @1.32
+    book 71%; form: -
+
+## 2026-10-07 01:15 WAT  |  overnight, every game to 07:00 (replaces XFLRZN), book's most likely option - 44.98x (17 games)  |  code YGGPBQ
+http://www.sportybet.com/ng/?shareCode=YGGPBQ
+- Wed 01:30  Chicago Fire v Vancouver Whitecaps FC  -  1st Half - Over/Under total=2.5 / Under 2.5 @1.22
+    book 78%; form: -
+- Wed 01:35  AA Ponte Preta SP v EC Juventude RS  -  Double Chance  / Home or Away @1.16
+    book 81%; form: -
+- Wed 02:00  Utah Jazz v Denver Nuggets  -  Handicap (incl. overtime) -7.5 hcp=-7.5 / Away (+7.5) @1.37
+    book 68%; form: -
+- Wed 02:15  El Calor de Cancun v Lobos de Puebla  -  Over/Under (incl. overtime) 153.5 total=153.5 / Over 153.5 @1.20
+    book 78%; form: -
+- Wed 02:30  Caribbean Storm Islands v Paisas Basktball  -  Handicap (incl. overtime) 20.5 hcp=20.5 / Home (+20.5) @1.74
+    book 53%; form: -
+- Wed 02:35  Penticton Vees v Swift Current Broncos  -  1X2  / Home @1.31
+    book 69%; form: -
+- Wed 02:40  Seattle Kraken v Vegas Golden Knights  -  Double Chance  / Home or Away @1.22
+    book 78%; form: -
+- Wed 03:00  French Guiana v Belize  -  Over/Under total=3.5 / Under 3.5 @1.21
+    book 78%; form: -
+- Wed 03:00  Freseros de Irapuato v Dorados de Chihuahua  -  Over/Under (incl. overtime) 158.5 total=158.5 / Over 158.5 @1.22
+    book 77%; form: -
+- Wed 03:00  Mineros de Zacatecas v Santos de San Luis  -  Over/Under (incl. overtime) 162.5 total=162.5 / Over 162.5 @1.22
+    book 77%; form: -
+- Wed 03:00  Golden State Warriors v Los Angeles Lakers  -  Handicap (incl. overtime) 3.5 hcp=3.5 / Home (+3.5) @1.35
+    book 68%; form: -
+- Wed 03:00  Vancouver Giants v Brandon Wheat Kings  -  Double Chance  / Draw or Away @1.19
+    book 75%; form: -
+- Wed 03:00  Los Angeles Kings v Florida Panthers  -  Double Chance  / Home or Away @1.23
+    book 77%; form: -
+- Wed 03:15  Astros de Jalisco v Gambusinos De Fresnillo  -  1X2  / Home @1.17
+    book 79%; form: -
+- Wed 03:30  Mexico v Chile  -  Double Chance  / Home or Draw @1.15
+    book 83%; form: -
+- Wed 03:30  Panteras de Aguascalientes v Diablos Rojos Del Mexico  -  Over/Under (incl. overtime) 159.5 total=159.5 / Over 159.5 @1.20
+    book 78%; form: -
+- Wed 04:00  Soles de Mexicali v Fuerza Regia  -  Over/Under (incl. overtime) 149.5 total=149.5 / Over 149.5 @1.21
+    book 78%; form: -
+
+## 2026-10-07 07:41 WAT  |  overnight, every game to 07:00 (replaces XFLRZN), book's most likely option - 1,023.77x (32 games)  |  code RELY0F
+http://www.sportybet.com/ng/?shareCode=RELY0F
+- Wed 09:00  Georgia v Bulgaria  -  Over/Under total=3.5 / Under 3.5 @1.83
+    book 50%; form: -
+- Wed 09:00  Taian Tiankuang v Ganzhou Ruishi FC  -  Double Chance  / Home or Away @1.16
+    book 77%; form: -
+- Wed 09:00  Sakhalinskie Akuly v Krasnaya Armiya  -  Double Chance  / Draw or Away @1.15
+    book 78%; form: -
+- Wed 09:30  Adelaide 36ers v Melbourne United  -  Over/Under (incl. overtime) 168.5 total=168.5 / Over 168.5 @1.23
+    book 76%; form: -
+- Wed 10:00  Urawa Red Diamonds v RB Omiya Ardija  -  Over/Under total=4.5 / Under 4.5 @1.18
+    book 80%; form: -
+- Wed 10:00  FK Mlada Boleslav B v FK Varnsdorf  -  Double Chance  / Home or Away @1.22
+    book 77%; form: -
+- Wed 10:00  Jukurit Mikkeli v Assat Pori  -  Over/Under total=6.5 / Under 6.5 @1.25
+    book 76%; form: -
+- Wed 10:00  HC Taifun v JHC Spartak Moskow  -  Double Chance  / Home or Away @1.15
+    book 79%; form: -
+- Wed 10:30  Avispa Fukuoka v Yokohama FC  -  Over/Under total=3.5 / Under 3.5 @1.17
+    book 81%; form: -
+- Wed 10:30  Cerezo Osaka v Kagoshima United  -  Over/Under total=4.5 / Under 4.5 @1.18
+    book 80%; form: -
+- Wed 10:30  Sanfrecce Hiroshima v Iwaki FC  -  2nd Half - Total total=0.5 / Over 0.5 @1.15
+    book 82%; form: -
+- Wed 11:00  Fagiano Okayama v JEF United Chiba  -  Double Chance  / Home or Draw @1.18
+    book 81%; form: -
+- Wed 11:00  FC Tokyo v Shonan Bellmare  -  Over/Under total=4.5 / Under 4.5 @1.15
+    book 82%; form: -
+- Wed 11:00  Gainare Tottori v Tokyo Verdy  -  Over/Under total=4.5 / Under 4.5 @1.18
+    book 80%; form: -
+- Wed 11:00  Kawasaki Frontale v Tegevajaro Miyazaki  -  1X2  / Home @1.61
+    book 59%; form: -
+- Wed 11:00  Shimizu S-Pulse v V-Varen Nagasaki  -  2nd Half - Total total=2.5 / Under 2.5 @1.16
+    book 81%; form: -
+- Wed 11:00  Real Madrid C v CD Guadalajara  -  Double Chance  / Home or Away @1.30
+    book 71%; form: -
+- Wed 11:00  Dinamo-Neva St Petersburg v Biryusa Krasnoyarsk  -  Double Chance  / Home or Away @1.17
+    book 77%; form: -
+- Wed 11:05  Ibaraki Robots v Hiroshima Dragonflies  -  Over/Under (incl. overtime) 151.5 total=151.5 / Over 151.5 @1.21
+    book 77%; form: -
+- Wed 11:05  Osaka Evessa v Yokohama B-Corsairs  -  Over/Under (incl. overtime) 145.5 total=145.5 / Over 145.5 @1.20
+    book 78%; form: -
+- Wed 11:05  Sendai 89Ers v Altiri Chiba  -  Over/Under (incl. overtime) 152.5 total=152.5 / Over 152.5 @1.21
+    book 77%; form: -
+- Wed 11:05  Shiga Lakestars v Sun Rockers Shibuya  -  Over/Under (incl. overtime) 159.5 total=159.5 / Over 159.5 @1.22
+    book 77%; form: -
+- Wed 11:05  Shimane Susanoo Magic v Levanga Hokkaido  -  Over/Under (incl. overtime) 161.5 total=161.5 / Over 161.5 @1.21
+    book 77%; form: -
+- Wed 11:05  Toyama Grouses v Kyoto Hannaryz  -  Over/Under (incl. overtime) 156.5 total=156.5 / Over 156.5 @1.23
+    book 76%; form: -
+- Wed 12:00  Nigde Belediyesi Spor v Agrispor 1970 SK  -  2nd Half - Total total=2.5 / Under 2.5 @1.15
+    book 81%; form: -
+- Wed 12:00  Pazarspor v Erbaaspor  -  Over/Under total=4.5 / Under 4.5 @1.19
+    book 79%; form: -
+- Wed 12:00  Somaspor v Alanya Kestelspor  -  Over/Under total=4.5 / Under 4.5 @1.18
+    book 80%; form: -
+- Wed 12:00  Zonguldak Komurspor v Duzcespor  -  2nd Half - Total total=2.5 / Under 2.5 @1.15
+    book 81%; form: -
+- Wed 12:00  England v Denmark  -  Double Chance  / Home or Away @1.23
+    book 75%; form: -
+- Wed 12:00  Switzerland v Bosnia and Herzegovina  -  Over/Under total=4.5 / Under 4.5 @1.69
+    book 54%; form: -
+- Wed 12:00  Shenzhen Juniors FC v Guandong GZ-Power FC  -  Over/Under total=4.5 / Under 4.5 @1.18
+    book 80%; form: -
+- Wed 12:00  HC Kometa Brno v HC Skoda Plzen Youth  -  1X2  / Home @1.57
+    book 57%; form: -
+
+## 2026-10-07 07:45 WAT  |  overnight, every game to 07:00 (replaces XFLRZN), book's most likely option - 593.49x (32 games)  |  code TGCS2K
+http://www.sportybet.com/ng/?shareCode=TGCS2K
+- Wed 09:00  Georgia v Bulgaria  -  Double Chance  / Home or Away @1.05
+    book 88%; form: -
+- Wed 09:00  Taian Tiankuang v Ganzhou Ruishi FC  -  Double Chance  / Home or Away @1.16
+    book 78%; form: -
+- Wed 09:00  Sakhalinskie Akuly v Krasnaya Armiya  -  Double Chance  / Draw or Away @1.15
+    book 78%; form: -
+- Wed 09:30  Adelaide 36ers v Melbourne United  -  Over/Under (incl. overtime) 194.5 total=194.5 / Under 194.5 @1.22
+    book 77%; form: -
+- Wed 10:00  Urawa Red Diamonds v RB Omiya Ardija  -  Over/Under total=4.5 / Under 4.5 @1.18
+    book 80%; form: -
+- Wed 10:00  FK Mlada Boleslav B v FK Varnsdorf  -  Double Chance  / Home or Away @1.22
+    book 77%; form: -
+- Wed 10:00  Jukurit Mikkeli v Assat Pori  -  Over/Under total=6.5 / Under 6.5 @1.25
+    book 76%; form: -
+- Wed 10:00  HC Taifun v JHC Spartak Moskow  -  Double Chance  / Home or Away @1.15
+    book 79%; form: -
+- Wed 10:30  Avispa Fukuoka v Yokohama FC  -  Over/Under total=3.5 / Under 3.5 @1.17
+    book 81%; form: -
+- Wed 10:30  Cerezo Osaka v Kagoshima United  -  Over/Under total=4.5 / Under 4.5 @1.18
+    book 80%; form: -
+- Wed 10:30  Sanfrecce Hiroshima v Iwaki FC  -  2nd Half - Total total=0.5 / Over 0.5 @1.15
+    book 82%; form: -
+- Wed 11:00  Fagiano Okayama v JEF United Chiba  -  Double Chance  / Home or Draw @1.18
+    book 81%; form: -
+- Wed 11:00  FC Tokyo v Shonan Bellmare  -  Over/Under total=4.5 / Under 4.5 @1.15
+    book 82%; form: -
+- Wed 11:00  Gainare Tottori v Tokyo Verdy  -  Over/Under total=4.5 / Under 4.5 @1.18
+    book 80%; form: -
+- Wed 11:00  Kawasaki Frontale v Tegevajaro Miyazaki  -  1X2  / Home @1.64
+    book 58%; form: -
+- Wed 11:00  Shimizu S-Pulse v V-Varen Nagasaki  -  2nd Half - Total total=2.5 / Under 2.5 @1.16
+    book 81%; form: -
+- Wed 11:00  Real Madrid C v CD Guadalajara  -  Double Chance  / Home or Away @1.30
+    book 71%; form: -
+- Wed 11:00  Dinamo-Neva St Petersburg v Biryusa Krasnoyarsk  -  Double Chance  / Home or Away @1.17
+    book 77%; form: -
+- Wed 11:05  Ibaraki Robots v Hiroshima Dragonflies  -  Over/Under (incl. overtime) 151.5 total=151.5 / Over 151.5 @1.21
+    book 77%; form: -
+- Wed 11:05  Osaka Evessa v Yokohama B-Corsairs  -  Over/Under (incl. overtime) 145.5 total=145.5 / Over 145.5 @1.20
+    book 78%; form: -
+- Wed 11:05  Sendai 89Ers v Altiri Chiba  -  Over/Under (incl. overtime) 152.5 total=152.5 / Over 152.5 @1.21
+    book 77%; form: -
+- Wed 11:05  Shiga Lakestars v Sun Rockers Shibuya  -  Over/Under (incl. overtime) 159.5 total=159.5 / Over 159.5 @1.22
+    book 77%; form: -
+- Wed 11:05  Shimane Susanoo Magic v Levanga Hokkaido  -  Over/Under (incl. overtime) 161.5 total=161.5 / Over 161.5 @1.21
+    book 77%; form: -
+- Wed 11:05  Toyama Grouses v Kyoto Hannaryz  -  Over/Under (incl. overtime) 156.5 total=156.5 / Over 156.5 @1.23
+    book 76%; form: -
+- Wed 12:00  Nigde Belediyesi Spor v Agrispor 1970 SK  -  2nd Half - Total total=2.5 / Under 2.5 @1.15
+    book 81%; form: -
+- Wed 12:00  Pazarspor v Erbaaspor  -  Over/Under total=4.5 / Under 4.5 @1.19
+    book 79%; form: -
+- Wed 12:00  Somaspor v Alanya Kestelspor  -  Over/Under total=4.5 / Under 4.5 @1.18
+    book 80%; form: -
+- Wed 12:00  Zonguldak Komurspor v Duzcespor  -  2nd Half - Total total=2.5 / Under 2.5 @1.15
+    book 81%; form: -
+- Wed 12:00  England v Denmark  -  Double Chance  / Home or Away @1.23
+    book 75%; form: -
+- Wed 12:00  Switzerland v Bosnia and Herzegovina  -  Over/Under total=4.5 / Under 4.5 @1.69
+    book 54%; form: -
+- Wed 12:00  Shenzhen Juniors FC v Guandong GZ-Power FC  -  Over/Under total=4.5 / Under 4.5 @1.18
+    book 80%; form: -
+- Wed 12:00  HC Kometa Brno v HC Skoda Plzen Youth  -  1X2  / Home @1.57
+    book 57%; form: -
+
+## 2026-10-07 07:52 WAT  |  every game to 12:00, the book's most likely option (replaces RELY0F and TGCS2K) - 138.65x (29 games)  |  code VH3XVX
+http://www.sportybet.com/ng/?shareCode=VH3XVX
+- Wed 09:00  Georgia v Bulgaria  -  Double Chance  / Home or Away @1.05
+    book 88%; form: -
+- Wed 09:00  Taian Tiankuang v Ganzhou Ruishi FC  -  Double Chance  / Home or Away @1.16
+    book 78%; form: -
+- Wed 09:00  Sakhalinskie Akuly v Krasnaya Armiya  -  Double Chance  / Draw or Away @1.15
+    book 78%; form: -
+- Wed 09:30  Adelaide 36ers v Melbourne United  -  Over/Under (incl. overtime) 168.5 total=168.5 / Over 168.5 @1.22
+    book 77%; form: -
+- Wed 10:00  Urawa Red Diamonds v RB Omiya Ardija  -  Over/Under total=4.5 / Under 4.5 @1.18
+    book 80%; form: -
+- Wed 10:00  FK Mlada Boleslav B v FK Varnsdorf  -  Double Chance  / Home or Away @1.22
+    book 77%; form: -
+- Wed 10:00  Jukurit Mikkeli v Assat Pori  -  Over/Under total=6.5 / Under 6.5 @1.25
+    book 76%; form: -
+- Wed 10:00  HC Taifun v JHC Spartak Moskow  -  Double Chance  / Home or Away @1.15
+    book 79%; form: -
+- Wed 10:30  Avispa Fukuoka v Yokohama FC  -  Over/Under total=3.5 / Under 3.5 @1.17
+    book 81%; form: -
+- Wed 10:30  Cerezo Osaka v Kagoshima United  -  Over/Under total=4.5 / Under 4.5 @1.18
+    book 80%; form: -
+- Wed 10:30  Sanfrecce Hiroshima v Iwaki FC  -  2nd Half - Total total=0.5 / Over 0.5 @1.15
+    book 82%; form: -
+- Wed 11:00  Fagiano Okayama v JEF United Chiba  -  Double Chance  / Home or Draw @1.18
+    book 81%; form: -
+- Wed 11:00  FC Tokyo v Shonan Bellmare  -  Over/Under total=4.5 / Under 4.5 @1.15
+    book 82%; form: -
+- Wed 11:00  Gainare Tottori v Tokyo Verdy  -  Over/Under total=4.5 / Under 4.5 @1.18
+    book 80%; form: -
+- Wed 11:00  Shimizu S-Pulse v V-Varen Nagasaki  -  2nd Half - Total total=2.5 / Under 2.5 @1.16
+    book 81%; form: -
+- Wed 11:00  Real Madrid C v CD Guadalajara  -  Double Chance  / Home or Away @1.30
+    book 71%; form: -
+- Wed 11:00  Dinamo-Neva St Petersburg v Biryusa Krasnoyarsk  -  Double Chance  / Home or Away @1.17
+    book 77%; form: -
+- Wed 11:05  Ibaraki Robots v Hiroshima Dragonflies  -  Over/Under (incl. overtime) 177.5 total=177.5 / Under 177.5 @1.22
+    book 77%; form: -
+- Wed 11:05  Osaka Evessa v Yokohama B-Corsairs  -  Over/Under (incl. overtime) 145.5 total=145.5 / Over 145.5 @1.20
+    book 78%; form: -
+- Wed 11:05  Sendai 89Ers v Altiri Chiba  -  Over/Under (incl. overtime) 152.5 total=152.5 / Over 152.5 @1.21
+    book 77%; form: -
+- Wed 11:05  Shiga Lakestars v Sun Rockers Shibuya  -  Over/Under (incl. overtime) 159.5 total=159.5 / Over 159.5 @1.22
+    book 77%; form: -
+- Wed 11:05  Shimane Susanoo Magic v Levanga Hokkaido  -  Over/Under (incl. overtime) 161.5 total=161.5 / Over 161.5 @1.22
+    book 77%; form: -
+- Wed 11:05  Toyama Grouses v Kyoto Hannaryz  -  Over/Under (incl. overtime) 156.5 total=156.5 / Over 156.5 @1.23
+    book 76%; form: -
+- Wed 12:00  Nigde Belediyesi Spor v Agrispor 1970 SK  -  2nd Half - Total total=2.5 / Under 2.5 @1.15
+    book 81%; form: -
+- Wed 12:00  Pazarspor v Erbaaspor  -  Over/Under total=4.5 / Under 4.5 @1.19
+    book 79%; form: -
+- Wed 12:00  Somaspor v Alanya Kestelspor  -  Over/Under total=4.5 / Under 4.5 @1.18
+    book 80%; form: -
+- Wed 12:00  Zonguldak Komurspor v Duzcespor  -  2nd Half - Total total=2.5 / Under 2.5 @1.15
+    book 81%; form: -
+- Wed 12:00  England v Denmark  -  Double Chance  / Home or Away @1.23
+    book 75%; form: -
+- Wed 12:00  Shenzhen Juniors FC v Guandong GZ-Power FC  -  Over/Under total=4.5 / Under 4.5 @1.18
+    book 80%; form: -
+
+## 2026-10-07 16:42 WAT  |  every game 18:00-20:00, the book's most likely option - part 1 of 2 - 305.95x (29 games)  |  code NYSQQB
+http://www.sportybet.com/ng/?shareCode=NYSQQB
+- Wed 18:00  Athinaikos v AEO Proteas Voulas  -  Over/Under (incl. overtime) 158.5 total=158.5 / Under 158.5 @1.39
+    book 66%; form: -
+- Wed 18:00  BC Aris Thessaloniki v CB San Pablo Burgos  -  Handicap (incl. overtime) 4.5 hcp=4.5 / Home (+4.5) @1.15
+    book 84%; form: -
+- Wed 18:00  Niners Chemnitz v BC Neptunas Klaipeda  -  Over/Under (incl. overtime) 163.5 total=163.5 / Over 163.5 @1.40
+    book 66%; form: -
+- Wed 18:00  KB Bashkimi v Valmiera Glass Via  -  Over/Under (incl. overtime) 154.5 total=154.5 / Over 154.5 @1.22
+    book 77%; form: -
+- Wed 18:00  Wilki Morskie Szczecin v Nitra Blue Wings  -  Over/Under (incl. overtime) 158.5 total=158.5 / Over 158.5 @1.21
+    book 77%; form: -
+- Wed 18:00  Fluminense FC RJ v Caxias Do Sul  -  Over/Under (incl. overtime) 141.5 total=141.5 / Over 141.5 @1.40
+    book 66%; form: -
+- Wed 18:00  BC Juventus Utena v CB Malaga  -  Over/Under (incl. overtime) 156.5 total=156.5 / Over 156.5 @1.20
+    book 78%; form: -
+- Wed 18:00  Zenit Saint Petersburg v Parma Permsky Kray  -  Over/Under (incl. overtime) 155.5 total=155.5 / Over 155.5 @1.41
+    book 66%; form: -
+- Wed 18:00  Dalia Sportive de Grombalia v CS Sfaxien  -  Over/Under (incl. overtime) 128.5 total=128.5 / Over 128.5 @1.39
+    book 67%; form: -
+- Wed 18:00  Etoile Sportive Rades v US Ansar  -  Winner (incl. overtime)  / Home @1.16
+    book 80%; form: -
+- Wed 18:00  Comet v Gruner IL Oslo  -  Double Chance  / Home or Away @1.13
+    book 80%; form: -
+- Wed 18:00  Lorenskog IK v Gjovik Mammuts  -  Double Chance  / Home or Away @1.13
+    book 80%; form: -
+- Wed 18:00  Manglerud Star Oslo v Ski Ishockey Elite  -  Double Chance  / Home or Draw @1.17
+    book 77%; form: -
+- Wed 18:00  Almtuna IS v Visby-Roma HK  -  Double Chance  / Home or Draw @1.11
+    book 82%; form: -
+- Wed 18:00  BIK Karlskoga v Mora IK  -  Double Chance  / Home or Draw @1.17
+    book 76%; form: -
+- Wed 18:00  IK Oskarshamn v AIK IF  -  Double Chance  / Home or Away @1.15
+    book 78%; form: -
+- Wed 18:00  Leksands IF v Nybro Vikings IF  -  1X2  / Home @1.35
+    book 67%; form: -
+- Wed 18:00  MODO Hockey v Sodertalje SK  -  Double Chance  / Home or Away @1.17
+    book 78%; form: -
+- Wed 18:00  Vasteras IK v Ostersunds IK  -  Double Chance  / Home or Away @1.16
+    book 78%; form: -
+- Wed 18:00  Vimmerby HC v Kalmar HC  -  Double Chance  / Home or Away @1.15
+    book 79%; form: -
+- Wed 18:30  Vasas Akademia v Nke Csata  -  Winner (incl. overtime)  / Away @1.08
+    book 85%; form: -
+- Wed 18:30  Derthona Basket v Le Mans Sarthe Basket  -  Handicap (incl. overtime) 7.5 hcp=7.5 / Home (+7.5) @1.16
+    book 83%; form: -
+- Wed 18:30  Goztepe SK v Balikesir Buyuksehir Belediyesi Spor  -  Winner (incl. overtime)  / Home @1.09
+    book 84%; form: -
+- Wed 18:30  Adler Mannheim v Gorniczy Klub Sportowy Tychy  -  1X2  / Home @1.14
+    book 80%; form: -
+- Wed 18:30  Kolner Haie v Herning Blue Fox  -  1X2  / Home @1.22
+    book 75%; form: -
+- Wed 18:45  HC Lausanne v HC Lugano  -  Over/Under total=3.5 / Over 3.5 @1.17
+    book 81%; form: -
+- Wed 19:00  Gladsaxe v Svendborg Rabbits  -  Over/Under (incl. overtime) 155.5 total=155.5 / Over 155.5 @1.21
+    book 77%; form: -
+- Wed 19:00  BC La Tronche Meylan v SAS Toulouse Metropole  -  Over/Under (incl. overtime) 127.5 total=127.5 / Over 127.5 @1.38
+    book 67%; form: -
+- Wed 19:00  Charnay Basket Bourgogne Sud v Asvel Feminin  -  Over/Under (incl. overtime) 138.5 total=138.5 / Over 138.5 @1.39
+    book 66%; form: -
+
+## 2026-10-07 16:42 WAT  |  every game 18:00-20:00, the book's most likely option - part 2 of 2 - 227.58x (28 games)  |  code UN57RC
+http://www.sportybet.com/ng/?shareCode=UN57RC
+- Wed 19:00  ESB Villeneuve dÂ´Ascq v Landerneau Bretagne Basket  -  Winner (incl. overtime)  / Home @1.33
+    book 70%; form: -
+- Wed 19:00  Tango Bourges Basket v C Chartres Basket Feminin  -  Over/Under (incl. overtime) 137.5 total=137.5 / Over 137.5 @1.38
+    book 67%; form: -
+- Wed 19:00  UF Angers Basket 49 v Basket Lattes Montpellier  -  Over/Under (incl. overtime) 139.5 total=139.5 / Over 139.5 @1.40
+    book 66%; form: -
+- Wed 19:00  BC Roma Spqr v BC Lietkabelis Panevezys  -  Handicap (incl. overtime) -1.5 hcp=-1.5 / Home (-1.5) @1.15
+    book 84%; form: -
+- Wed 19:00  Elan Chalon v Manchester Basketball  -  Over/Under (incl. overtime) 151.5 total=151.5 / Over 151.5 @1.19
+    book 78%; form: -
+- Wed 19:00  TBB Trier v BC Batumi 2010  -  Over/Under (incl. overtime) 164.5 total=164.5 / Over 164.5 @1.19
+    book 78%; form: -
+- Wed 19:00  Antwerp Giants v Falco KC Szombathely  -  Over/Under (incl. overtime) 154.5 total=154.5 / Over 154.5 @1.21
+    book 77%; form: -
+- Wed 19:00  Baskets Bonn v FC Porto  -  Winner (incl. overtime)  / Home @1.20
+    book 79%; form: -
+- Wed 19:00  Spartak Subotica v Rasta Vechta  -  Over/Under (incl. overtime) 155.5 total=155.5 / Over 155.5 @1.21
+    book 77%; form: -
+- Wed 19:00  Widzew Lodz v MKS Pruszkow  -  Winner (incl. overtime)  / Home @1.05
+    book 87%; form: -
+- Wed 19:00  Gernika Kesb v Basket Zaragoza 2002  -  Winner (incl. overtime)  / Away @1.15
+    book 81%; form: -
+- Wed 19:00  Valencia BC v CB Avenida Salamanca  -  Over/Under (incl. overtime) 147.5 total=147.5 / Under 147.5 @1.37
+    book 68%; form: -
+- Wed 19:15  Las Rozas CF v Rayo Ciudad Alcobendas  -  Double Chance  / Home or Draw @1.25
+    book 75%; form: -
+- Wed 19:15  Bordeaux GHC v HC Pardubice  -  1X2  / Away @1.25
+    book 73%; form: -
+- Wed 19:20  Red Bull Salzburg v Eisbaren Berlin  -  Double Chance  / Home or Away @1.15
+    book 79%; form: -
+- Wed 19:30  Sport Huancayo Reserve v Club Ada Jaen  -  Double Chance  / Home or Draw @1.22
+    book 77%; form: -
+- Wed 19:30  FC Cartagena v Real Murcia CF  -  Over/Under total=3.5 / Under 3.5 @1.22
+    book 75%; form: -
+- Wed 19:30  Flammes Carolo Basket v Basket Landes  -  Over/Under (incl. overtime) 143.5 total=143.5 / Under 143.5 @1.39
+    book 66%; form: -
+- Wed 19:30  Basquet Manresa v Ratiopharm Ulm  -  Handicap (incl. overtime) 7.5 hcp=7.5 / Home (+7.5) @1.15
+    book 84%; form: -
+- Wed 19:30  Sporting Cp v Rilski Sportist  -  Over/Under (incl. overtime) 152.5 total=152.5 / Over 152.5 @1.21
+    book 78%; form: -
+- Wed 19:30  UCAM Murcia v Pallacanestro Varese  -  Over/Under (incl. overtime) 157.5 total=157.5 / Over 157.5 @1.21
+    book 77%; form: -
+- Wed 19:30  Geneve Elite Basket v Helios Vs Basket  -  Winner (incl. overtime)  / Home @1.19
+    book 77%; form: -
+- Wed 19:30  Dundee Stars v Manchester Storm  -  Double Chance  / Home or Away @1.15
+    book 79%; form: -
+- Wed 19:30  Fife Flyers v Coventry Blaze  -  Double Chance  / Draw or Away @1.10
+    book 83%; form: -
+- Wed 19:45  Avro FC v Lancaster City  -  Double Chance  / Home or Draw @1.20
+    book 78%; form: -
+- Wed 19:45  Gosport Borough v Poole Town  -  Over/Under total=1.5 / Over 1.5 @1.23
+    book 75%; form: -
+- Wed 19:45  Paris Basketball v ASVEL Lyon-Villeurbanne  -  Handicap (incl. overtime) 7.5 hcp=7.5 / Home (+7.5) @1.15
+    book 84%; form: -
+- Wed 20:00  Deportivo Miranda v Atletico Avila FC  -  Double Chance  / Home or Draw @1.17
+    book 79%; form: -
+
+## 2026-10-09 08:02 WAT  |  one market: 1st Half - Over/Under / Under 1.5 - the book's 50 most likely at 1.15+ - 46,507,762.25x (50 games)  |  code X3D633
+http://www.sportybet.com/ng/?shareCode=X3D633
+- Fri 09:30  Persik Kediri v Madura United  -  1st Half - Over/Under / Under 1.5 @1.46
+    book's no-margin chance 63% - among the 50 highest on the board
+- Fri 10:30  SC Sagamihara v Kamatamare Sanuki  -  1st Half - Over/Under / Under 1.5 @1.44
+    book's no-margin chance 64% - among the 50 highest on the board
+- Fri 11:00  Kashiwa Reysol v Vissel Kobe  -  1st Half - Over/Under / Under 1.5 @1.45
+    book's no-margin chance 65% - among the 50 highest on the board
+- Fri 11:00  FC Osaka v Zweigen Kanazawa  -  1st Half - Over/Under / Under 1.5 @1.44
+    book's no-margin chance 63% - among the 50 highest on the board
+- Fri 13:30  Veres Rivne v Shakhtar D  -  1st Half - Over/Under / Under 1.5 @1.47
+    book's no-margin chance 63% - among the 50 highest on the board
+- Fri 14:10  Ajman Club v Baniyas Club  -  1st Half - Over/Under / Under 1.5 @1.42
+    book's no-margin chance 65% - among the 50 highest on the board
+- Fri 15:00  Sivasspor v Pendikspor  -  1st Half - Over/Under / Under 1.5 @1.42
+    book's no-margin chance 65% - among the 50 highest on the board
+- Fri 15:00  Bodrum FK v Ankara Keciorengucu  -  1st Half - Over/Under / Under 1.5 @1.49
+    book's no-margin chance 62% - among the 50 highest on the board
+- Fri 16:00  FC Corvinul Hunedoara 1921 v SC FC Voluntari  -  1st Half - Over/Under / Under 1.5 @1.50
+    book's no-margin chance 62% - among the 50 highest on the board
+- Fri 16:00  Seinajoen JK v FC Lahti  -  1st Half - Over/Under / Under 1.5 @1.48
+    book's no-margin chance 62% - among the 50 highest on the board
+- Fri 16:30  Finland v Serbia  -  1st Half - Over/Under / Under 1.5 @1.41
+    book's no-margin chance 66% - among the 50 highest on the board
+- Fri 16:45  Sharjah FC v Al Jazira (UAE)  -  1st Half - Over/Under / Under 1.5 @1.54
+    book's no-margin chance 60% - among the 50 highest on the board
+- Fri 17:00  Turkiye v Slovenia  -  1st Half - Over/Under / Under 1.5 @1.36
+    book's no-margin chance 69% - among the 50 highest on the board
+- Fri 17:00  Slovakia v Ukraine  -  1st Half - Over/Under / Under 1.5 @1.37
+    book's no-margin chance 68% - among the 50 highest on the board
+- Fri 17:00  FC Silon Taborsko v MFK Karvina  -  1st Half - Over/Under / Under 1.5 @1.46
+    book's no-margin chance 63% - among the 50 highest on the board
+- Fri 17:00  HNK Gorica v NK Rudes Zagreb  -  1st Half - Over/Under / Under 1.5 @1.48
+    book's no-margin chance 63% - among the 50 highest on the board
+- Fri 17:00  FK Usti nad Labem v SFC Opava  -  1st Half - Over/Under / Under 1.5 @1.49
+    book's no-margin chance 62% - among the 50 highest on the board
+- Fri 17:00  Wieczysta Krakow v Wisla Plock  -  1st Half - Over/Under / Under 1.5 @1.55
+    book's no-margin chance 60% - among the 50 highest on the board
+- Fri 17:30  FK Rostov v FK Akron Tolyatti  -  1st Half - Over/Under / Under 1.5 @1.40
+    book's no-margin chance 67% - among the 50 highest on the board
+- Fri 18:00  Umraniyespor v Sariyer SK  -  1st Half - Over/Under / Under 1.5 @1.35
+    book's no-margin chance 69% - among the 50 highest on the board
+- Fri 18:00  FC Penafiel v AVS Futebol SAD  -  1st Half - Over/Under / Under 1.5 @1.36
+    book's no-margin chance 68% - among the 50 highest on the board
+- Fri 18:00  Van Spor FK v Bandirmaspor  -  1st Half - Over/Under / Under 1.5 @1.38
+    book's no-margin chance 67% - among the 50 highest on the board
+- Fri 18:00  Czech Republic v Scotland  -  1st Half - Over/Under / Under 1.5 @1.42
+    book's no-margin chance 66% - among the 50 highest on the board
+- Fri 18:00  Sundby BK v Ishoej IF  -  1st Half - Over/Under / Under 1.5 @1.49
+    book's no-margin chance 61% - among the 50 highest on the board
+- Fri 18:00  AB Gladsaxe v Aarhus Fremad  -  1st Half - Over/Under / Under 1.5 @1.54
+    book's no-margin chance 61% - among the 50 highest on the board
+- Fri 18:30  CA Aldosivi v CA Sarmiento Junin  -  1st Half - Over/Under / Under 1.5 @1.26
+    book's no-margin chance 74% - among the 50 highest on the board
+- Fri 18:45  Moreirense FC v Gil Vicente Barcelos  -  1st Half - Over/Under / Under 1.5 @1.31
+    book's no-margin chance 73% - among the 50 highest on the board
+- Fri 19:00  Sochaux-Montbeliard v US Boulogne  -  1st Half - Over/Under / Under 1.5 @1.33
+    book's no-margin chance 71% - among the 50 highest on the board
+- Fri 19:00  Montpellier v Grenoble Foot  -  1st Half - Over/Under / Under 1.5 @1.40
+    book's no-margin chance 67% - among the 50 highest on the board
+- Fri 19:00  Pau FC v Stade Lavallois MFC  -  1st Half - Over/Under / Under 1.5 @1.41
+    book's no-margin chance 66% - among the 50 highest on the board
+- Fri 19:00  Nancy-Lorraine v EA Guingamp  -  1st Half - Over/Under / Under 1.5 @1.46
+    book's no-margin chance 64% - among the 50 highest on the board
+- Fri 19:00  USL Dunkerque v FC Annecy  -  1st Half - Over/Under / Under 1.5 @1.48
+    book's no-margin chance 63% - among the 50 highest on the board
+- Fri 19:00  ACS Sepsi OSK Sfantu Gheorghe v FC Dinamo Bucuresti 1948  -  1st Half - Over/Under / Under 1.5 @1.48
+    book's no-margin chance 63% - among the 50 highest on the board
+- Fri 19:30  US Avellino v Sampdoria Genoa  -  1st Half - Over/Under / Under 1.5 @1.38
+    book's no-margin chance 68% - among the 50 highest on the board
+- Fri 19:30  Podbeskidzie Bielsko-Biała v Pogon Siedlce  -  1st Half - Over/Under / Under 1.5 @1.44
+    book's no-margin chance 64% - among the 50 highest on the board
+- Fri 19:30  First Vienna FC 1894 v SKN St Polten  -  1st Half - Over/Under / Under 1.5 @1.47
+    book's no-margin chance 63% - among the 50 highest on the board
+- Fri 19:30  Union Brescia v Pro Vercelli 1892  -  1st Half - Over/Under / Under 1.5 @1.49
+    book's no-margin chance 62% - among the 50 highest on the board
+- Fri 19:45  Sutton United v Boreham Wood FC  -  1st Half - Over/Under / Under 1.5 @1.47
+    book's no-margin chance 63% - among the 50 highest on the board
+- Fri 19:45  Briton Ferry v Connah`s Quay Nomads FC  -  1st Half - Over/Under / Under 1.5 @1.49
+    book's no-margin chance 62% - among the 50 highest on the board
+- Fri 19:45  Pen-y-Bont FC v Barry Town United FC  -  1st Half - Over/Under / Under 1.5 @1.49
+    book's no-margin chance 62% - among the 50 highest on the board
+- Fri 19:45  Haverfordwest County AFC v Caernarfon Town FC  -  1st Half - Over/Under / Under 1.5 @1.51
+    book's no-margin chance 61% - among the 50 highest on the board
+- Fri 20:00  Malaga CF v Espanyol  -  1st Half - Over/Under / Under 1.5 @1.41
+    book's no-margin chance 68% - among the 50 highest on the board
+- Fri 20:00  UD Ibiza v Real Madrid Castilla  -  1st Half - Over/Under / Under 1.5 @1.39
+    book's no-margin chance 66% - among the 50 highest on the board
+- Fri 20:15  Braga v Sporting  -  1st Half - Over/Under / Under 1.5 @1.42
+    book's no-margin chance 67% - among the 50 highest on the board
+- Fri 21:00  Moghreb Athletic de Tetouan v FUS Rabat  -  1st Half - Over/Under / Under 1.5 @1.24
+    book's no-margin chance 75% - among the 50 highest on the board
+- Fri 21:00  Montevideo City Torque v Danubio FC  -  1st Half - Over/Under / Under 1.5 @1.37
+    book's no-margin chance 68% - among the 50 highest on the board
+- Fri 21:00  Real Cundinamarca v CD Real Santander  -  1st Half - Over/Under / Under 1.5 @1.46
+    book's no-margin chance 63% - among the 50 highest on the board
+- Fri 22:00  Gimnasia y Esgrima La Plata v Atletico Tucuman  -  1st Half - Over/Under / Under 1.5 @1.30
+    book's no-margin chance 71% - among the 50 highest on the board
+- Fri 22:00  Platense FC Puerto Cortes v Juticalpa FC  -  1st Half - Over/Under / Under 1.5 @1.40
+    book's no-margin chance 65% - among the 50 highest on the board
+- Fri 23:30  Instituto AC Cordoba v Boca Juniors  -  1st Half - Over/Under / Under 1.5 @1.24
+    book's no-margin chance 75% - among the 50 highest on the board
+
+## 2026-10-09 08:02 WAT  |  every game, the book's most likely option at 1.15+ - the 50 most likely - 1,403.72x (50 games)  |  code QT78RJ
+http://www.sportybet.com/ng/?shareCode=QT78RJ
+- Fri 09:30  Persik Kediri v Madura United  -  Over/Under / Under 4.5 @1.15
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 11:00  Kashima Antlers v Gamba Osaka  -  Over/Under / Over 1.5 @1.19
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 12:35  Qingdao Hainiu FC v Beijing Guoan  -  Over/Under / Under 5.5 @1.15
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 12:35  Shenzhen Peng City v Henan  -  1st Half - Over/Under / Under 2.5 @1.16
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 13:00  Adhyaksa Farmel FC v Persebaya Surabaya  -  Over/Under / Over 1.5 @1.15
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 14:10  Al Wahda FC (UAE) v Al Dhafra SSC  -  Double Chance / Home or Draw @1.16
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 14:50  Al-Kholood v Al Qadsiah  -  Double Chance / Draw or Away @1.16
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 15:55  Al-Fateh SC v Al Ahli Saudi FC  -  Double Chance / Draw or Away @1.15
+    book's no-margin chance 83% - among the 50 highest on the board
+- Fri 16:00  FC Corvinul Hunedoara 1921 v SC FC Voluntari  -  Over/Under / Under 4.5 @1.16
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 16:30  Finland v Serbia  -  Double Chance / Home or Draw @1.15
+    book's no-margin chance 83% - among the 50 highest on the board
+- Fri 17:00  Vejle BK v Hvidovre IF  -  Over/Under / Over 1.5 @1.15
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 17:00  Albania v Wales  -  1X2 / Away @1.15
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 17:00  HNK Gorica v NK Rudes Zagreb  -  Double Chance / Home or Draw @1.16
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 17:00  Turkiye v Slovenia  -  2nd Half - Total / Under 2.5 @1.15
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 17:00  FC Zlin v Slavia Prague  -  1st Half - Over/Under / Under 2.5 @1.15
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 17:00  Slovakia v Ukraine  -  2nd Half - Total / Under 2.5 @1.15
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 17:15  Belarus v Italy  -  Over/Under / Under 5.5 @1.16
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 17:30  Eintracht Braunschweig v Holstein Kiel  -  Over/Under / Over 1.5 @1.15
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 17:30  FK Rostov v FK Akron Tolyatti  -  2nd Half - Total / Under 2.5 @1.16
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 17:45  Croatia v Iceland  -  2nd Half - Total / Over 0.5 @1.15
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 18:00  Nordsjaelland v Odense Boldklub  -  Double Chance / Home or Draw @1.15
+    book's no-margin chance 83% - among the 50 highest on the board
+- Fri 18:00  SK Brann v Viking FK  -  Over/Under / Under 5.5 @1.16
+    book's no-margin chance 83% - among the 50 highest on the board
+- Fri 18:00  Galatasaray Istanbul v Kasimpasa Istanbul  -  Over/Under / Over 1.5 @1.16
+    book's no-margin chance 83% - among the 50 highest on the board
+- Fri 18:00  Romania v Norway  -  Over/Under / Under 5.5 @1.15
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 18:00  IFK Goteborg v Vasteraas SK  -  Over/Under / Over 1.5 @1.16
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 18:30  Neuchatel Xamax v FC Winterthur  -  Over/Under / Over 1.5 @1.15
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 19:00  Montpellier v Grenoble Foot  -  Double Chance / Home or Draw @1.15
+    book's no-margin chance 83% - among the 50 highest on the board
+- Fri 19:00  PSV Eindhoven v SC Heerenveen  -  Over/Under / Under 6.5 @1.16
+    book's no-margin chance 83% - among the 50 highest on the board
+- Fri 19:00  Heracles Almelo v RKC Waalwijk  -  Double Chance / Home or Draw @1.15
+    book's no-margin chance 83% - among the 50 highest on the board
+- Fri 19:00  Almere City FC v FC Eindhoven  -  Double Chance / Home or Away @1.15
+    book's no-margin chance 83% - among the 50 highest on the board
+- Fri 19:00  ACS Sepsi OSK Sfantu Gheorghe v FC Dinamo Bucuresti 1948  -  Double Chance / Draw or Away @1.16
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 19:00  FC Dordrecht v FC Emmen  -  Over/Under / Over 1.5 @1.15
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 19:00  Al Nassr Club v Diriyah Club  -  Double Chance / Home or Away @1.16
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 19:00  USL Dunkerque v FC Annecy  -  Over/Under / Under 4.5 @1.15
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 19:00  Southampton U21 v Queens Park Rangers U21  -  Over/Under / Under 5.5 @1.15
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 19:00  Peterborough United U21 v Nottingham Forest U21  -  Over/Under / Under 5.5 @1.15
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 19:00  TOP Oss v Helmond Sport  -  1st Half - Over/Under / Under 2.5 @1.15
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 19:00  Burnley Reserves v Preston North End Reserves  -  Over/Under / Over 1.5 @1.15
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 19:15  FC Stade Nyonnais v FC Aarau  -  Double Chance / Draw or Away @1.15
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 19:30  Borussia Dortmund v Werder Bremen  -  Over/Under / Under 5.5 @1.16
+    book's no-margin chance 83% - among the 50 highest on the board
+- Fri 19:30  Germany v Australia  -  Over/Under / Over 1.5 @1.15
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 19:30  Rakow Czestochowa v GKS Katowice  -  Over/Under / Over 1.5 @1.16
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 19:30  Union Brescia v Pro Vercelli 1892  -  Over/Under / Under 4.5 @1.15
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 19:45  Lens v Lyon  -  Over/Under / Over 1.5 @1.16
+    book's no-margin chance 83% - among the 50 highest on the board
+- Fri 19:45  Cambrian United v Ammanford  -  Double Chance / Home or Away @1.15
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 19:45  Bohemians Dublin FC v Waterford FC  -  Double Chance / Home or Draw @1.16
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 19:45  Cardiff Metropolitan University FC v Trefelin BGC  -  Double Chance / Home or Away @1.16
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 19:45  KV Waasland-Beveren v Lommel SK  -  1st Half - Over/Under / Under 2.5 @1.17
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 20:00  Malaga CF v Espanyol  -  2nd Half - Total / Under 2.5 @1.18
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 20:00  West Ham v Queens Park Rangers  -  Over/Under / Over 1.5 @1.18
+    book's no-margin chance 82% - among the 50 highest on the board
+
+## 2026-10-09 08:02 WAT  |  one market: Match Result after 5 Minutes / Draw - the book's 50 most likely - 25.21x (30 games)  |  code S53NJY
+http://www.sportybet.com/ng/?shareCode=S53NJY
+- Fri 11:00  Kashiwa Reysol v Vissel Kobe  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 84% - among the 50 highest on the board
+- Fri 11:00  Kashima Antlers v Gamba Osaka  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 12:35  Shenzhen Peng City v Henan  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 12:35  Qingdao Hainiu FC v Beijing Guoan  -  Match Result after 5 Minutes / Draw @1.14
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 13:00  Zhejiang FC v Shanghai Port FC  -  Match Result after 5 Minutes / Draw @1.15
+    book's no-margin chance 80% - among the 50 highest on the board
+- Fri 17:00  Wieczysta Krakow v Wisla Plock  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 17:00  FC Zlin v Slavia Prague  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 18:00  IFK Goteborg v Vasteraas SK  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 18:00  SK Brann v Viking FK  -  Match Result after 5 Minutes / Draw @1.14
+    book's no-margin chance 80% - among the 50 highest on the board
+- Fri 18:00  Galatasaray Istanbul v Kasimpasa Istanbul  -  Match Result after 5 Minutes / Draw @1.13
+    book's no-margin chance 80% - among the 50 highest on the board
+- Fri 18:00  Nordsjaelland v Odense Boldklub  -  Match Result after 5 Minutes / Draw @1.13
+    book's no-margin chance 80% - among the 50 highest on the board
+- Fri 18:30  CA Aldosivi v CA Sarmiento Junin  -  Match Result after 5 Minutes / Draw @1.06
+    book's no-margin chance 85% - among the 50 highest on the board
+- Fri 18:45  Moreirense FC v Gil Vicente Barcelos  -  Match Result after 5 Minutes / Draw @1.08
+    book's no-margin chance 84% - among the 50 highest on the board
+- Fri 19:00  PSV Eindhoven v SC Heerenveen  -  Match Result after 5 Minutes / Draw @1.19
+    book's no-margin chance 76% - among the 50 highest on the board
+- Fri 19:30  Rakow Czestochowa v GKS Katowice  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 19:30  Borussia Dortmund v Werder Bremen  -  Match Result after 5 Minutes / Draw @1.14
+    book's no-margin chance 80% - among the 50 highest on the board
+- Fri 19:45  Lens v Lyon  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 19:45  Pen-y-Bont FC v Barry Town United FC  -  Match Result after 5 Minutes / Draw @1.09
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 19:45  KV Waasland-Beveren v Lommel SK  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - among the 50 highest on the board
+- Fri 19:45  Briton Ferry v Connah`s Quay Nomads FC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 19:45  Haverfordwest County AFC v Caernarfon Town FC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 19:45  Llandudno FC v Airbus UK Broughton  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 19:45  Cardiff Metropolitan University FC v Trefelin BGC  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 80% - among the 50 highest on the board
+- Fri 19:45  Holywell Town v The New Saints FC  -  Match Result after 5 Minutes / Draw @1.20
+    book's no-margin chance 76% - among the 50 highest on the board
+- Fri 20:00  Malaga CF v Espanyol  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 84% - among the 50 highest on the board
+- Fri 20:00  West Ham v Queens Park Rangers  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 81% - among the 50 highest on the board
+- Fri 20:15  Braga v Sporting  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 83% - among the 50 highest on the board
+- Fri 21:00  Montevideo City Torque v Danubio FC  -  Match Result after 5 Minutes / Draw @1.08
+    book's no-margin chance 83% - among the 50 highest on the board
+- Fri 22:00  Gimnasia y Esgrima La Plata v Atletico Tucuman  -  Match Result after 5 Minutes / Draw @1.07
+    book's no-margin chance 84% - among the 50 highest on the board
+- Fri 23:30  Instituto AC Cordoba v Boca Juniors  -  Match Result after 5 Minutes / Draw @1.06
+    book's no-margin chance 85% - among the 50 highest on the board
+
+## 2026-10-09 08:32 WAT  |  one market: 1st Half - Over/Under / Under 1.5 - best 20,000x cut of X3D633 - 20,160.61x (26 games)  |  code WCH45X
+http://www.sportybet.com/ng/?shareCode=WCH45X
+- Fri 11:00  Kashiwa Reysol v Vissel Kobe  -  1st Half - Over/Under / Under 1.5 @1.45
+    book's no-margin chance 65%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 13:30  Veres Rivne v Shakhtar D  -  1st Half - Over/Under / Under 1.5 @1.47
+    book's no-margin chance 63%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 15:00  Bodrum FK v Ankara Keciorengucu  -  1st Half - Over/Under / Under 1.5 @1.49
+    book's no-margin chance 62%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 16:00  Seinajoen JK v FC Lahti  -  1st Half - Over/Under / Under 1.5 @1.49
+    book's no-margin chance 62%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 16:00  FC Corvinul Hunedoara 1921 v SC FC Voluntari  -  1st Half - Over/Under / Under 1.5 @1.50
+    book's no-margin chance 62%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 16:30  Finland v Serbia  -  1st Half - Over/Under / Under 1.5 @1.42
+    book's no-margin chance 66%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 16:45  Sharjah FC v Al Jazira (UAE)  -  1st Half - Over/Under / Under 1.5 @1.54
+    book's no-margin chance 60%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 17:00  Wieczysta Krakow v Wisla Plock  -  1st Half - Over/Under / Under 1.5 @1.55
+    book's no-margin chance 60%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 17:00  FK Usti nad Labem v SFC Opava  -  1st Half - Over/Under / Under 1.5 @1.49
+    book's no-margin chance 62%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 17:00  HNK Gorica v NK Rudes Zagreb  -  1st Half - Over/Under / Under 1.5 @1.48
+    book's no-margin chance 63%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 17:30  FK Rostov v FK Akron Tolyatti  -  1st Half - Over/Under / Under 1.5 @1.40
+    book's no-margin chance 67%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 18:00  AB Gladsaxe v Aarhus Fremad  -  1st Half - Over/Under / Under 1.5 @1.54
+    book's no-margin chance 61%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 18:00  Czech Republic v Scotland  -  1st Half - Over/Under / Under 1.5 @1.42
+    book's no-margin chance 66%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 18:45  Moreirense FC v Gil Vicente Barcelos  -  1st Half - Over/Under / Under 1.5 @1.31
+    book's no-margin chance 73%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 19:00  ACS Sepsi OSK Sfantu Gheorghe v FC Dinamo Bucuresti 1948  -  1st Half - Over/Under / Under 1.5 @1.48
+    book's no-margin chance 63%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 19:00  USL Dunkerque v FC Annecy  -  1st Half - Over/Under / Under 1.5 @1.48
+    book's no-margin chance 63%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 19:00  Nancy-Lorraine v EA Guingamp  -  1st Half - Over/Under / Under 1.5 @1.46
+    book's no-margin chance 64%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 19:00  Montpellier v Grenoble Foot  -  1st Half - Over/Under / Under 1.5 @1.40
+    book's no-margin chance 67%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 19:30  Union Brescia v Pro Vercelli 1892  -  1st Half - Over/Under / Under 1.5 @1.49
+    book's no-margin chance 62%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 19:30  First Vienna FC 1894 v SKN St Polten  -  1st Half - Over/Under / Under 1.5 @1.47
+    book's no-margin chance 63%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 19:45  Haverfordwest County AFC v Caernarfon Town FC  -  1st Half - Over/Under / Under 1.5 @1.51
+    book's no-margin chance 61%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 19:45  Pen-y-Bont FC v Barry Town United FC  -  1st Half - Over/Under / Under 1.5 @1.49
+    book's no-margin chance 62%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 19:45  Briton Ferry v Connah`s Quay Nomads FC  -  1st Half - Over/Under / Under 1.5 @1.49
+    book's no-margin chance 62%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 19:45  Sutton United v Boreham Wood FC  -  1st Half - Over/Under / Under 1.5 @1.46
+    book's no-margin chance 64%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 20:00  Malaga CF v Espanyol  -  1st Half - Over/Under / Under 1.5 @1.41
+    book's no-margin chance 68%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+- Fri 20:15  Braga v Sporting  -  1st Half - Over/Under / Under 1.5 @1.40
+    book's no-margin chance 68%
+    from X3D633: the set reaching 20,000x with the highest chance of every leg landing
+
+## 2026-10-09 08:33 WAT  |  draw slip (draw band) 69,216.2x (10 legs) - draw band, sides close in the table, home not weaker, Under 2.5 <= 1.70  |  code K4FQ9A
+http://www.sportybet.com/ng/?shareCode=K4FQ9A
+- Sat 19:30  Club Almagro v Chacarita Juniors  -  1X2 / Draw @2.85
+    SportyBet 2.40/2.85/3.10 -> draw 32% after the overround (band 27%+); Under 2.5 at 1.40
+    table this season: 38 pts from 32 v 33 pts from 32 = 1.19 v 1.03 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Fri 15:00  FC Neftekhimik Nizhnekamsk v FC Chelyabinsk  -  1X2 / Draw @3.00
+    SportyBet 2.55/3.00/2.90 -> draw 31% after the overround (band 27%+); Under 2.5 at 1.51
+    table this season: 12 pts from 12 v 12 pts from 12 = 1.0 v 1.0 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Sat 00:00  CA Talleres de Remedios v Deportivo Camioneros  -  1X2 / Draw @3.00
+    SportyBet 1.94/3.00/4.30 -> draw 31% after the overround (band 27%+); Under 2.5 at 1.44
+    table this season: 67 pts from 38 v 63 pts from 38 = 1.76 v 1.66 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Sat 19:30  CD Armenio v Club Comunicaciones  -  1X2 / Draw @3.00
+    SportyBet 2.25/3.00/3.25 -> draw 31% after the overround (band 27%+); Under 2.5 at 1.46
+    table this season: 60 pts from 38 v 55 pts from 38 = 1.58 v 1.45 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Sat 19:00  CSD Flandria v CA Defensores Unidos  -  1X2 / Draw @3.00
+    SportyBet 2.00/3.00/3.90 -> draw 31% after the overround (band 27%+); Under 2.5 at 1.48
+    table this season: 39 pts from 38 v 41 pts from 38 = 1.03 v 1.08 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Sat 20:30  CA Ferrocarril Midland v Atletico de Rafaela  -  1X2 / Draw @3.00
+    SportyBet 1.78/3.00/5.00 -> draw 30% after the overround (band 27%+); Under 2.5 at 1.35
+    table this season: 48 pts from 32 v 42 pts from 32 = 1.5 v 1.31 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Sat 12:00  Suzhou Dongwu v Shijiazhuang Gongfu FC  -  1X2 / Draw @3.10
+    SportyBet 2.10/3.10/3.50 -> draw 30% after the overround (band 27%+); Under 2.5 at 1.69
+    table this season: 30 pts from 25 v 34 pts from 25 = 1.2 v 1.36 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Sat 19:00  CSCD Laferrere v Deportivo Merlo  -  1X2 / Draw @3.10
+    SportyBet 2.05/3.10/3.50 -> draw 29% after the overround (band 27%+); Under 2.5 at 1.55
+    table this season: 51 pts from 38 v 44 pts from 38 = 1.34 v 1.16 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Sat 14:00  CA River Plate (URU) v Club Oriental de Football  -  1X2 / Draw @3.20
+    SportyBet 2.05/3.20/3.40 -> draw 29% after the overround (band 27%+); Under 2.5 at 1.66
+    table this season: 30 pts from 21 v 32 pts from 21 = 1.43 v 1.52 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Sat 20:00  Quilmes AC v Agropecuario Argentino  -  1X2 / Draw @3.25
+    SportyBet 1.76/3.25/4.70 -> draw 28% after the overround (band 27%+); Under 2.5 at 1.50
+    table this season: 39 pts from 32 v 37 pts from 32 = 1.22 v 1.16 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+
+## 2026-10-09 21:18 WAT  |  one market: Match Result after 5 Minutes / Draw - overnight to Sat 08:00, every game offering it - 2.55x (11 games)  |  code XM4TH8
+http://www.sportybet.com/ng/?shareCode=XM4TH8
+- Fri 23:30  Instituto AC Cordoba v Boca Juniors  -  Match Result after 5 Minutes / Draw @1.06
+    book's no-margin chance 85% - every game offering it overnight
+- Sat 00:00  Deportivo Maldonado v Liverpool Montevideo  -  Match Result after 5 Minutes / Draw @1.08
+    book's no-margin chance 83% - every game offering it overnight
+- Sat 01:45  Union de Santa Fe v Defensa y Justicia  -  Match Result after 5 Minutes / Draw @1.08
+    book's no-margin chance 83% - every game offering it overnight
+- Sat 02:00  Club Puebla v Club Leon  -  Match Result after 5 Minutes / Draw @1.09
+    book's no-margin chance 83% - every game offering it overnight
+- Sat 02:00  Deportivo Garcilaso v Sport Huancayo  -  Match Result after 5 Minutes / Draw @1.09
+    book's no-margin chance 82% - every game offering it overnight
+- Sat 02:10  CD Once Caldas v Llaneros FC  -  Match Result after 5 Minutes / Draw @1.08
+    book's no-margin chance 82% - every game offering it overnight
+- Sat 04:00  Tigres UANL v Deportivo Toluca FC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - every game offering it overnight
+- Sat 06:00  Cerezo Osaka v Yokohama F Marinos  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - every game offering it overnight
+- Sat 06:00  FC Seoul v Jeju SK FC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - every game offering it overnight
+- Sat 07:00  Avispa Fukuoka v Fagiano Okayama  -  Match Result after 5 Minutes / Draw @1.08
+    book's no-margin chance 85% - every game offering it overnight
+- Sat 07:00  FC Tokyo v Urawa Red Diamonds  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - every game offering it overnight
+
+## 2026-10-09 21:18 WAT  |  one market: Total Goals from 1 to 10 min / Under 0.5 - overnight to Sat 08:00, every game offering it - 6.42x (9 games)  |  code T91VM8
+http://www.sportybet.com/ng/?shareCode=T91VM8
+- Fri 23:30  Instituto AC Cordoba v Boca Juniors  -  Total Goals from 1 to 10 min / Under 0.5 @1.16
+    book's no-margin chance 80% - every game offering it overnight
+- Sat 01:45  Union de Santa Fe v Defensa y Justicia  -  Total Goals from 1 to 10 min / Under 0.5 @1.21
+    book's no-margin chance 77% - every game offering it overnight
+- Sat 02:00  Club Puebla v Club Leon  -  Total Goals from 1 to 10 min / Under 0.5 @1.24
+    book's no-margin chance 76% - every game offering it overnight
+- Sat 02:00  Deportivo Garcilaso v Sport Huancayo  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76% - every game offering it overnight
+- Sat 02:10  CD Once Caldas v Llaneros FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76% - every game offering it overnight
+- Sat 04:00  Tigres UANL v Deportivo Toluca FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 75% - every game offering it overnight
+- Sat 06:00  Cerezo Osaka v Yokohama F Marinos  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 75% - every game offering it overnight
+- Sat 07:00  Avispa Fukuoka v Fagiano Okayama  -  Total Goals from 1 to 10 min / Under 0.5 @1.20
+    book's no-margin chance 79% - every game offering it overnight
+- Sat 07:00  FC Tokyo v Urawa Red Diamonds  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74% - every game offering it overnight
+
+## 2026-10-09 21:18 WAT  |  one market: 1st Half - Over/Under / Over 0.5 - overnight to Sat 08:00, every game offering it - 51,112.32x (33 games)  |  code VS3U95
+http://www.sportybet.com/ng/?shareCode=VS3U95
+- Fri 23:30  Instituto AC Cordoba v Boca Juniors  -  1st Half - Over/Under / Over 0.5 @1.60
+    book's no-margin chance 58% - every game offering it overnight
+- Sat 00:00  Alianza FC Valledupar v Aguilas Doradas Rionegro  -  1st Half - Over/Under / Over 0.5 @1.46
+    book's no-margin chance 64% - every game offering it overnight
+- Sat 00:00  CA Excursionistas v CA Villa San Carlos  -  1st Half - Over/Under / Over 0.5 @1.40
+    book's no-margin chance 65% - every game offering it overnight
+- Sat 00:00  CA Talleres de Remedios v Deportivo Camioneros  -  1st Half - Over/Under / Over 0.5 @1.49
+    book's no-margin chance 62% - every game offering it overnight
+- Sat 00:00  Deportivo Maldonado v Liverpool Montevideo  -  1st Half - Over/Under / Over 0.5 @1.44
+    book's no-margin chance 64% - every game offering it overnight
+- Sat 00:00  CD Tapatio v Club Atletico La Paz  -  1st Half - Over/Under / Over 0.5 @1.23
+    book's no-margin chance 75% - every game offering it overnight
+- Sat 00:30  Lexington SC v FC Tulsa  -  1st Half - Over/Under / Over 0.5 @1.32
+    book's no-margin chance 69% - every game offering it overnight
+- Sat 01:30  AC San Martin de Mendoza v CD Argentino Monte Maiz  -  1st Half - Over/Under / Over 0.5 @1.56
+    book's no-margin chance 59% - every game offering it overnight
+- Sat 01:45  Union de Santa Fe v Defensa y Justicia  -  1st Half - Over/Under / Over 0.5 @1.44
+    book's no-margin chance 64% - every game offering it overnight
+- Sat 02:00  Club Puebla v Club Leon  -  1st Half - Over/Under / Over 0.5 @1.40
+    book's no-margin chance 67% - every game offering it overnight
+- Sat 02:00  Juventud Antoniana v CA Huracan Las Heras  -  1st Half - Over/Under / Over 0.5 @1.53
+    book's no-margin chance 60% - every game offering it overnight
+- Sat 02:00  Deportivo Garcilaso v Sport Huancayo  -  1st Half - Over/Under / Over 0.5 @1.39
+    book's no-margin chance 67% - every game offering it overnight
+- Sat 02:00  Tepatitlan FC v Atletico Morelia  -  1st Half - Over/Under / Over 0.5 @1.23
+    book's no-margin chance 75% - every game offering it overnight
+- Sat 02:10  CD Once Caldas v Llaneros FC  -  1st Half - Over/Under / Over 0.5 @1.37
+    book's no-margin chance 68% - every game offering it overnight
+- Sat 03:00  Sporting FC v CS Cartagines  -  1st Half - Over/Under / Over 0.5 @1.41
+    book's no-margin chance 65% - every game offering it overnight
+- Sat 04:00  Tigres UANL v Deportivo Toluca FC  -  1st Half - Over/Under / Over 0.5 @1.33
+    book's no-margin chance 71% - every game offering it overnight
+- Sat 05:00  Criacao Shinjuku v Reinmeer Aomori  -  1st Half - Over/Under / Over 0.5 @1.44
+    book's no-margin chance 63% - every game offering it overnight
+- Sat 05:00  Okinawa SV v J-Lease FC  -  1st Half - Over/Under / Over 0.5 @1.39
+    book's no-margin chance 66% - every game offering it overnight
+- Sat 06:00  Cerezo Osaka v Yokohama F Marinos  -  1st Half - Over/Under / Over 0.5 @1.35
+    book's no-margin chance 71% - every game offering it overnight
+- Sat 06:00  FC Seoul v Jeju SK FC  -  1st Half - Over/Under / Over 0.5 @1.32
+    book's no-margin chance 71% - every game offering it overnight
+- Sat 06:00  RB Omiya Ardija v Vanraure Hachinohe FC  -  1st Half - Over/Under / Over 0.5 @1.31
+    book's no-margin chance 71% - every game offering it overnight
+- Sat 06:00  Sagan Tosu v Fujieda MYFC  -  1st Half - Over/Under / Over 0.5 @1.42
+    book's no-margin chance 66% - every game offering it overnight
+- Sat 06:00  Tokushima Vortis v FC Imabari  -  1st Half - Over/Under / Over 0.5 @1.41
+    book's no-margin chance 66% - every game offering it overnight
+- Sat 06:00  Yokohama FC v Oita Trinita  -  1st Half - Over/Under / Over 0.5 @1.42
+    book's no-margin chance 66% - every game offering it overnight
+- Sat 06:00  Kochi United SC v AC Nagano Parceiro  -  1st Half - Over/Under / Over 0.5 @1.45
+    book's no-margin chance 63% - every game offering it overnight
+- Sat 06:00  Nara Club v Giravanz Kitakyushu  -  1st Half - Over/Under / Over 0.5 @1.28
+    book's no-margin chance 72% - every game offering it overnight
+- Sat 06:00  Thespa Gunma v FC Ryukyu  -  1st Half - Over/Under / Over 0.5 @1.27
+    book's no-margin chance 72% - every game offering it overnight
+- Sat 06:00  Changwon City FC v Pocheon Citizen FC  -  1st Half - Over/Under / Over 0.5 @1.43
+    book's no-margin chance 64% - every game offering it overnight
+- Sat 07:00  Avispa Fukuoka v Fagiano Okayama  -  1st Half - Over/Under / Over 0.5 @1.52
+    book's no-margin chance 63% - every game offering it overnight
+- Sat 07:00  FC Tokyo v Urawa Red Diamonds  -  1st Half - Over/Under / Over 0.5 @1.31
+    book's no-margin chance 73% - every game offering it overnight
+- Sat 08:00  Ventforet Kofu v Tochigi City FC  -  1st Half - Over/Under / Over 0.5 @1.34
+    book's no-margin chance 70% - every game offering it overnight
+- Sat 08:00  Fukushima United FC v Mio Biwako Shiga  -  1st Half - Over/Under / Over 0.5 @1.26
+    book's no-margin chance 73% - every game offering it overnight
+- Sat 08:00  Azul Claro Numazu v Vonds Ichihara FC  -  1st Half - Over/Under / Over 0.5 @1.41
+    book's no-margin chance 64% - every game offering it overnight
+
+## 2026-10-09 21:18 WAT  |  one market: 1st Half - Over/Under / Under 2.5 - overnight to Sat 08:00, every game offering it - 15.01x (29 games)  |  code YURL2V
+http://www.sportybet.com/ng/?shareCode=YURL2V
+- Fri 23:30  Instituto AC Cordoba v Boca Juniors  -  1st Half - Over/Under / Under 2.5 @1.04
+    book's no-margin chance 89% - every game offering it overnight
+- Sat 00:00  Alianza FC Valledupar v Aguilas Doradas Rionegro  -  1st Half - Over/Under / Under 2.5 @1.07
+    book's no-margin chance 87% - every game offering it overnight
+- Sat 00:00  CA Excursionistas v CA Villa San Carlos  -  1st Half - Over/Under / Under 2.5 @1.07
+    book's no-margin chance 86% - every game offering it overnight
+- Sat 00:00  CA Talleres de Remedios v Deportivo Camioneros  -  1st Half - Over/Under / Under 2.5 @1.05
+    book's no-margin chance 87% - every game offering it overnight
+- Sat 00:00  Deportivo Maldonado v Liverpool Montevideo  -  1st Half - Over/Under / Under 2.5 @1.07
+    book's no-margin chance 86% - every game offering it overnight
+- Sat 00:00  CD Tapatio v Club Atletico La Paz  -  1st Half - Over/Under / Under 2.5 @1.18
+    book's no-margin chance 78% - every game offering it overnight
+- Sat 00:30  Lexington SC v FC Tulsa  -  1st Half - Over/Under / Under 2.5 @1.10
+    book's no-margin chance 83% - every game offering it overnight
+- Sat 01:30  AC San Martin de Mendoza v CD Argentino Monte Maiz  -  1st Half - Over/Under / Under 2.5 @1.04
+    book's no-margin chance 88% - every game offering it overnight
+- Sat 01:45  Union de Santa Fe v Defensa y Justicia  -  1st Half - Over/Under / Under 2.5 @1.07
+    book's no-margin chance 87% - every game offering it overnight
+- Sat 02:00  Club Puebla v Club Leon  -  1st Half - Over/Under / Under 2.5 @1.10
+    book's no-margin chance 86% - every game offering it overnight
+- Sat 02:00  Juventud Antoniana v CA Huracan Las Heras  -  1st Half - Over/Under / Under 2.5 @1.04
+    book's no-margin chance 88% - every game offering it overnight
+- Sat 02:00  Deportivo Garcilaso v Sport Huancayo  -  1st Half - Over/Under / Under 2.5 @1.09
+    book's no-margin chance 85% - every game offering it overnight
+- Sat 02:00  Tepatitlan FC v Atletico Morelia  -  1st Half - Over/Under / Under 2.5 @1.17
+    book's no-margin chance 79% - every game offering it overnight
+- Sat 02:10  CD Once Caldas v Llaneros FC  -  1st Half - Over/Under / Under 2.5 @1.09
+    book's no-margin chance 85% - every game offering it overnight
+- Sat 03:00  Sporting FC v CS Cartagines  -  1st Half - Over/Under / Under 2.5 @1.07
+    book's no-margin chance 85% - every game offering it overnight
+- Sat 04:00  Tigres UANL v Deportivo Toluca FC  -  1st Half - Over/Under / Under 2.5 @1.13
+    book's no-margin chance 83% - every game offering it overnight
+- Sat 06:00  Cerezo Osaka v Yokohama F Marinos  -  1st Half - Over/Under / Under 2.5 @1.14
+    book's no-margin chance 84% - every game offering it overnight
+- Sat 06:00  FC Seoul v Jeju SK FC  -  1st Half - Over/Under / Under 2.5 @1.13
+    book's no-margin chance 83% - every game offering it overnight
+- Sat 06:00  RB Omiya Ardija v Vanraure Hachinohe FC  -  1st Half - Over/Under / Under 2.5 @1.13
+    book's no-margin chance 83% - every game offering it overnight
+- Sat 06:00  Sagan Tosu v Fujieda MYFC  -  1st Half - Over/Under / Under 2.5 @1.08
+    book's no-margin chance 86% - every game offering it overnight
+- Sat 06:00  Tokushima Vortis v FC Imabari  -  1st Half - Over/Under / Under 2.5 @1.09
+    book's no-margin chance 86% - every game offering it overnight
+- Sat 06:00  Yokohama FC v Oita Trinita  -  1st Half - Over/Under / Under 2.5 @1.08
+    book's no-margin chance 86% - every game offering it overnight
+- Sat 06:00  Kochi United SC v AC Nagano Parceiro  -  1st Half - Over/Under / Under 2.5 @1.06
+    book's no-margin chance 87% - every game offering it overnight
+- Sat 06:00  Nara Club v Giravanz Kitakyushu  -  1st Half - Over/Under / Under 2.5 @1.14
+    book's no-margin chance 81% - every game offering it overnight
+- Sat 06:00  Thespa Gunma v FC Ryukyu  -  1st Half - Over/Under / Under 2.5 @1.14
+    book's no-margin chance 80% - every game offering it overnight
+- Sat 07:00  Avispa Fukuoka v Fagiano Okayama  -  1st Half - Over/Under / Under 2.5 @1.07
+    book's no-margin chance 89% - every game offering it overnight
+- Sat 07:00  FC Tokyo v Urawa Red Diamonds  -  1st Half - Over/Under / Under 2.5 @1.15
+    book's no-margin chance 83% - every game offering it overnight
+- Sat 08:00  Ventforet Kofu v Tochigi City FC  -  1st Half - Over/Under / Under 2.5 @1.12
+    book's no-margin chance 84% - every game offering it overnight
+- Sat 08:00  Fukushima United FC v Mio Biwako Shiga  -  1st Half - Over/Under / Under 2.5 @1.15
+    book's no-margin chance 80% - every game offering it overnight
+
+## 2026-10-09 21:44 WAT  |  one market: 1st Half - Over/Under / Over 0.5 - 5,000x target - 5,020.16x (24 games)  |  code QZBL36
+http://www.sportybet.com/ng/?shareCode=QZBL36
+- Fri 23:30  Instituto AC Cordoba v Boca Juniors  -  1st Half - Over/Under / Over 0.5 @1.60
+    book's no-margin chance 58% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 00:00  Deportivo Maldonado v Liverpool Montevideo  -  1st Half - Over/Under / Over 0.5 @1.44
+    book's no-margin chance 64% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 00:00  CA Talleres de Remedios v Deportivo Camioneros  -  1st Half - Over/Under / Over 0.5 @1.48
+    book's no-margin chance 62% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 00:00  CA Excursionistas v CA Villa San Carlos  -  1st Half - Over/Under / Over 0.5 @1.40
+    book's no-margin chance 65% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 00:00  Alianza FC Valledupar v Aguilas Doradas Rionegro  -  1st Half - Over/Under / Over 0.5 @1.46
+    book's no-margin chance 64% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 01:30  AC San Martin de Mendoza v CD Argentino Monte Maiz  -  1st Half - Over/Under / Over 0.5 @1.62
+    book's no-margin chance 56% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 01:45  Union de Santa Fe v Defensa y Justicia  -  1st Half - Over/Under / Over 0.5 @1.44
+    book's no-margin chance 64% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 02:00  Deportivo Garcilaso v Sport Huancayo  -  1st Half - Over/Under / Over 0.5 @1.39
+    book's no-margin chance 67% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 02:00  Juventud Antoniana v CA Huracan Las Heras  -  1st Half - Over/Under / Over 0.5 @1.53
+    book's no-margin chance 60% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 02:00  Club Puebla v Club Leon  -  1st Half - Over/Under / Over 0.5 @1.40
+    book's no-margin chance 67% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 02:10  CD Once Caldas v Llaneros FC  -  1st Half - Over/Under / Over 0.5 @1.37
+    book's no-margin chance 68% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 03:00  Sporting FC v CS Cartagines  -  1st Half - Over/Under / Over 0.5 @1.41
+    book's no-margin chance 65% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 04:00  Tigres UANL v Deportivo Toluca FC  -  1st Half - Over/Under / Over 0.5 @1.33
+    book's no-margin chance 71% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 05:00  Criacao Shinjuku v Reinmeer Aomori  -  1st Half - Over/Under / Over 0.5 @1.44
+    book's no-margin chance 63% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 06:00  Changwon City FC v Pocheon Citizen FC  -  1st Half - Over/Under / Over 0.5 @1.43
+    book's no-margin chance 64% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 06:00  Kochi United SC v AC Nagano Parceiro  -  1st Half - Over/Under / Over 0.5 @1.45
+    book's no-margin chance 63% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 06:00  Yokohama FC v Oita Trinita  -  1st Half - Over/Under / Over 0.5 @1.42
+    book's no-margin chance 66% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 06:00  Tokushima Vortis v FC Imabari  -  1st Half - Over/Under / Over 0.5 @1.41
+    book's no-margin chance 66% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 06:00  Sagan Tosu v Fujieda MYFC  -  1st Half - Over/Under / Over 0.5 @1.42
+    book's no-margin chance 66% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 06:00  FC Seoul v Jeju SK FC  -  1st Half - Over/Under / Over 0.5 @1.32
+    book's no-margin chance 71% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 06:00  Cerezo Osaka v Yokohama F Marinos  -  1st Half - Over/Under / Over 0.5 @1.35
+    book's no-margin chance 71% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 07:00  FC Tokyo v Urawa Red Diamonds  -  1st Half - Over/Under / Over 0.5 @1.31
+    book's no-margin chance 73% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 07:00  Avispa Fukuoka v Fagiano Okayama  -  1st Half - Over/Under / Over 0.5 @1.52
+    book's no-margin chance 63% - one of the 24 games reaching 5,000x with the highest chance of all landing
+- Sat 08:00  Ventforet Kofu v Tochigi City FC  -  1st Half - Over/Under / Over 0.5 @1.34
+    book's no-margin chance 70% - one of the 24 games reaching 5,000x with the highest chance of all landing
+
+## 2026-10-10 07:36 WAT  |  one market: Total Goals from 1 to 10 min / Under 0.5 - the 50 longest prices - 215,517.60x (50 games)  |  code PGRRUA
+http://www.sportybet.com/ng/?shareCode=PGRRUA
+- Sat 12:30  Notts County v Oxford United  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76% - among the 50 longest prices on the board
+    match record backs it: record 88% of 8 (floor 73%)
+- Sat 12:35  Chengdu Rongcheng v Tianjin Jinmen Tiger  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    book's no-margin chance 74% - among the 50 longest prices on the board
+    match record backs it: record 92% of 13 (floor 73%)
+- Sat 13:45  KS Cracovia Krakow v Zaglebie Lubin  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76% - among the 50 longest prices on the board
+    match record backs it: record 88% of 8 (floor 73%)
+- Sat 14:00  AIK v IF Brommapojkarna  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74% - among the 50 longest prices on the board
+    match record backs it: record 80% of 10 (floor 73%)
+- Sat 14:00  FC Hradec Kralove v SK Artis Brno  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74% - among the 50 longest prices on the board
+    match record backs it: record 80% of 10 (floor 73%)
+- Sat 14:00  GAIS v IK Sirius  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 75% - among the 50 longest prices on the board
+    match record backs it: record 82% of 11 (floor 73%)
+- Sat 14:00  HNK Hajduk Split v GNK Dinamo Zagreb  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74% - among the 50 longest prices on the board
+    match record backs it: record 85% of 13 (floor 73%)
+- Sat 14:00  Benevento Calcio v Cesena FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.24
+    book's no-margin chance 75% - among the 50 longest prices on the board
+    match record backs it: record 86% of 7 (floor 73%)
+- Sat 14:00  FC Zbrojovka Brno v FK Jablonec  -  Total Goals from 1 to 10 min / Under 0.5 @1.24
+    book's no-margin chance 75% - among the 50 longest prices on the board
+    match record backs it: record 90% of 10 (floor 73%)
+- Sat 14:00  Genoa v Fiorentina  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 78% - among the 50 longest prices on the board
+    match record backs it: record 100% of 7 (floor 73%)
+- Sat 14:30  Augsburg v Bayern Munich  -  Total Goals from 1 to 10 min / Under 0.5 @1.50
+    book's no-margin chance 63% - among the 50 longest prices on the board
+    match record backs it: record 83% of 6 (floor 73%)
+- Sat 15:00  Rangers v Kilmarnock FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.36
+    book's no-margin chance 70% - among the 50 longest prices on the board
+    match record backs it: record 89% of 9 (floor 73%)
+- Sat 15:00  Leicester v Peterborough United  -  Total Goals from 1 to 10 min / Under 0.5 @1.34
+    book's no-margin chance 70% - among the 50 longest prices on the board
+    match record backs it: record 80% of 10 (floor 73%)
+- Sat 15:00  Crawley Town v Chesterfield FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.29
+    book's no-margin chance 72% - among the 50 longest prices on the board
+    match record backs it: record 75% of 8 (floor 73%)
+- Sat 15:00  Blackburn Rovers v Cardiff City  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74% - among the 50 longest prices on the board
+    match record backs it: record 100% of 9 (floor 73%)
+- Sat 15:00  Middlesbrough FC v Wolves  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74% - among the 50 longest prices on the board
+    match record backs it: record 75% of 8 (floor 73%)
+- Sat 15:00  Dundee United v Hibernian FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74% - among the 50 longest prices on the board
+    match record backs it: record 83% of 12 (floor 73%)
+- Sat 15:00  Milton Keynes Dons v Reading FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    book's no-margin chance 74% - among the 50 longest prices on the board
+    match record backs it: record 78% of 9 (floor 73%)
+- Sat 15:00  Sunderland AFC v Brighton  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 75% - among the 50 longest prices on the board
+    match record backs it: record 75% of 8 (floor 73%)
+- Sat 15:00  Bristol Rovers v Barnet FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74% - among the 50 longest prices on the board
+    match record backs it: record 100% of 8 (floor 73%)
+- Sat 15:00  Cheltenham Town v Salford City  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74% - among the 50 longest prices on the board
+    match record backs it: record 78% of 9 (floor 73%)
+- Sat 15:00  Falkirk FC v Dundee FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75% - among the 50 longest prices on the board
+    match record backs it: record 89% of 9 (floor 73%)
+- Sat 15:00  Livingston FC v Partick Thistle FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75% - among the 50 longest prices on the board
+    match record backs it: record 82% of 11 (floor 73%)
+- Sat 15:00  Doncaster Rovers v Burton Albion  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75% - among the 50 longest prices on the board
+    match record backs it: record 90% of 10 (floor 73%)
+- Sat 15:00  Bolton Wanderers v Stoke City  -  Total Goals from 1 to 10 min / Under 0.5 @1.24
+    book's no-margin chance 76% - among the 50 longest prices on the board
+    match record backs it: record 75% of 8 (floor 73%)
+- Sat 15:00  Bradford City FC v Leyton Orient London  -  Total Goals from 1 to 10 min / Under 0.5 @1.24
+    book's no-margin chance 75% - among the 50 longest prices on the board
+    match record backs it: record 100% of 8 (floor 73%)
+- Sat 15:00  Fleetwood Town v Walsall FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.24
+    book's no-margin chance 75% - among the 50 longest prices on the board
+    match record backs it: record 90% of 10 (floor 73%)
+- Sat 15:00  Newport County v Colchester United  -  Total Goals from 1 to 10 min / Under 0.5 @1.24
+    book's no-margin chance 75% - among the 50 longest prices on the board
+    match record backs it: record 100% of 8 (floor 73%)
+- Sat 15:15  Alaves v Atletico Madrid  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 76% - among the 50 longest prices on the board
+    match record backs it: record 88% of 8 (floor 73%)
+- Sat 15:15  FC Botosani v FC Uta Arad  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75% - among the 50 longest prices on the board
+    match record backs it: record 80% of 10 (floor 73%)
+- Sat 15:30  Go Ahead Eagles v Sparta Rotterdam  -  Total Goals from 1 to 10 min / Under 0.5 @1.35
+    book's no-margin chance 70% - among the 50 longest prices on the board
+    match record backs it: record 83% of 6 (floor 73%)
+- Sat 15:55  Al-Ettifaq FC v Al-Khaleej Club  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74% - among the 50 longest prices on the board
+    match record backs it: record 88% of 8 (floor 73%)
+- Sat 16:00  Grazer AK 1902 v Salzburg  -  Total Goals from 1 to 10 min / Under 0.5 @1.29
+    book's no-margin chance 73% - among the 50 longest prices on the board
+    match record backs it: record 100% of 9 (floor 73%)
+- Sat 16:30  Mjallby AIF v Degerfors IF  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 76% - among the 50 longest prices on the board
+    match record backs it: record 83% of 12 (floor 73%)
+- Sat 17:00  Caykur Rizespor v Fenerbahce Istanbul  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74% - among the 50 longest prices on the board
+    match record backs it: record 86% of 7 (floor 73%)
+- Sat 17:00  NK Osijek v NK Istra 1961  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74% - among the 50 longest prices on the board
+    match record backs it: record 83% of 6 (floor 73%)
+- Sat 17:00  Bohemians Prague 1905 v FC Banik Ostrava  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75% - among the 50 longest prices on the board
+    match record backs it: record 89% of 9 (floor 73%)
+- Sat 17:30  Barcelona v Getafe  -  Total Goals from 1 to 10 min / Under 0.5 @1.40
+    book's no-margin chance 68% - among the 50 longest prices on the board
+    match record backs it: record 83% of 6 (floor 73%)
+- Sat 17:30  Man Utd v Tottenham  -  Total Goals from 1 to 10 min / Under 0.5 @1.31
+    book's no-margin chance 72% - among the 50 longest prices on the board
+    match record backs it: record 83% of 6 (floor 73%)
+- Sat 17:45  Feyenoord v Alkmaar  -  Total Goals from 1 to 10 min / Under 0.5 @1.33
+    book's no-margin chance 71% - among the 50 longest prices on the board
+    match record backs it: record 75% of 8 (floor 73%)
+- Sat 18:00  Toronto FC v CF Montreal  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 73% - among the 50 longest prices on the board
+    match record backs it: record 86% of 7 (floor 73%)
+- Sat 18:30  FK Austria Wien v Sturm Graz  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 75% - among the 50 longest prices on the board
+    match record backs it: record 75% of 12 (floor 73%)
+- Sat 19:00  Al Hilal SFC v Al-Ittihad Club  -  Total Goals from 1 to 10 min / Under 0.5 @1.36
+    book's no-margin chance 69% - among the 50 longest prices on the board
+    match record backs it: record 89% of 9 (floor 73%)
+- Sat 19:00  Cobresal v Universidad de Concepcion  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74% - among the 50 longest prices on the board
+    match record backs it: record 79% of 14 (floor 73%)
+- Sat 19:15  Jagiellonia Bialystok v Gornik Zabrze  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75% - among the 50 longest prices on the board
+    match record backs it: record 90% of 10 (floor 73%)
+- Sat 19:30  Chicago Fire v New York City FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 73% - among the 50 longest prices on the board
+    match record backs it: record 77% of 13 (floor 73%)
+- Sat 20:00  Real Madrid v Villarreal  -  Total Goals from 1 to 10 min / Under 0.5 @1.40
+    book's no-margin chance 68% - among the 50 longest prices on the board
+    match record backs it: record 88% of 8 (floor 73%)
+- Sat 21:30  Huachipato v CD O'Higgins  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75% - among the 50 longest prices on the board
+    match record backs it: record 92% of 12 (floor 73%)
+- Sat 21:30  Comerciantes Unidos v Juan Pablo II College  -  Total Goals from 1 to 10 min / Under 0.5 @1.24
+    book's no-margin chance 75% - among the 50 longest prices on the board
+    match record backs it: record 85% of 13 (floor 73%)
+- Sat 22:00  CR Vasco da Gama RJ v Clube do Remo PA  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74% - among the 50 longest prices on the board
+    match record backs it: record 92% of 12 (floor 73%)
+
+## 2026-10-10 07:38 WAT  |  one market: Match Result after 5 Minutes / Draw - the 50 longest prices - 237.62x (50 games)  |  code SY1H3B
+http://www.sportybet.com/ng/?shareCode=SY1H3B
+- Sat 12:30  Swansea City v Norwich  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 91% of 11 (floor 83%)
+- Sat 12:35  Chengdu Rongcheng v Tianjin Jinmen Tiger  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - among the 50 longest prices on the board
+    match record backs it: record 92% of 13 (floor 83%)
+- Sat 14:00  Viktoria Plzen v FK Mlada Boleslav  -  Match Result after 5 Minutes / Draw @1.13
+    book's no-margin chance 80% - among the 50 longest prices on the board
+    match record backs it: record 89% of 9 (floor 83%)
+- Sat 14:00  AIK v IF Brommapojkarna  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 90% of 10 (floor 83%)
+- Sat 14:00  GAIS v IK Sirius  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - among the 50 longest prices on the board
+    match record backs it: record 100% of 11 (floor 83%)
+- Sat 14:00  FC Hradec Kralove v SK Artis Brno  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 100% of 10 (floor 83%)
+- Sat 14:30  Augsburg v Bayern Munich  -  Match Result after 5 Minutes / Draw @1.20
+    book's no-margin chance 76% - among the 50 longest prices on the board
+    match record backs it: record 83% of 6 (floor 83%)
+- Sat 15:00  Rangers v Kilmarnock FC  -  Match Result after 5 Minutes / Draw @1.15
+    book's no-margin chance 79% - among the 50 longest prices on the board
+    match record backs it: record 100% of 9 (floor 83%)
+- Sat 15:00  Leicester v Peterborough United  -  Match Result after 5 Minutes / Draw @1.14
+    book's no-margin chance 79% - among the 50 longest prices on the board
+    match record backs it: record 90% of 10 (floor 83%)
+- Sat 15:00  Crawley Town v Chesterfield FC  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 81% - among the 50 longest prices on the board
+    match record backs it: record 88% of 8 (floor 83%)
+- Sat 15:00  Aston Villa v Brentford  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - among the 50 longest prices on the board
+    match record backs it: record 83% of 6 (floor 83%)
+- Sat 15:00  Ipswich Town v Fulham  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - among the 50 longest prices on the board
+    match record backs it: record 100% of 7 (floor 83%)
+- Sat 15:00  Sunderland AFC v Brighton  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - among the 50 longest prices on the board
+    match record backs it: record 100% of 8 (floor 83%)
+- Sat 15:00  Blackburn Rovers v Cardiff City  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 100% of 9 (floor 83%)
+- Sat 15:00  Middlesbrough FC v Wolves  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 88% of 8 (floor 83%)
+- Sat 15:00  Dundee United v Hibernian FC  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 92% of 12 (floor 83%)
+- Sat 15:00  Cercle Brugge v RSC Anderlecht  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 83% of 6 (floor 83%)
+- Sat 15:00  Montrose FC v Ross County FC  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 80% - among the 50 longest prices on the board
+    match record backs it: record 83% of 12 (floor 83%)
+- Sat 15:00  Peterhead FC v Queen of the South FC  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 81% - among the 50 longest prices on the board
+    match record backs it: record 86% of 14 (floor 83%)
+- Sat 15:00  Huddersfield v Sheffield Wednesday  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 81% - among the 50 longest prices on the board
+    match record backs it: record 86% of 7 (floor 83%)
+- Sat 15:00  Bolton Wanderers v Stoke City  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 83% - among the 50 longest prices on the board
+    match record backs it: record 88% of 8 (floor 83%)
+- Sat 15:00  Preston North End v Millwall FC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 83% - among the 50 longest prices on the board
+    match record backs it: record 89% of 9 (floor 83%)
+- Sat 15:00  Falkirk FC v Dundee FC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 100% of 9 (floor 83%)
+- Sat 15:00  Livingston FC v Partick Thistle FC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 91% of 11 (floor 83%)
+- Sat 15:00  East Kilbride FC v Airdrieonians FC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 81% - among the 50 longest prices on the board
+    match record backs it: record 100% of 13 (floor 83%)
+- Sat 15:00  Bradford City FC v Leyton Orient London  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 100% of 8 (floor 83%)
+- Sat 15:00  Doncaster Rovers v Burton Albion  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 90% of 10 (floor 83%)
+- Sat 15:00  Mansfield Town v Bromley FC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 86% of 7 (floor 83%)
+- Sat 15:00  Milton Keynes Dons v Reading FC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 100% of 9 (floor 83%)
+- Sat 15:00  Bristol Rovers v Barnet FC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 100% of 8 (floor 83%)
+- Sat 15:00  Cheltenham Town v Salford City  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 89% of 9 (floor 83%)
+- Sat 15:00  Fleetwood Town v Walsall FC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 100% of 10 (floor 83%)
+- Sat 15:15  Alaves v Atletico Madrid  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 83% - among the 50 longest prices on the board
+    match record backs it: record 88% of 8 (floor 83%)
+- Sat 15:30  Go Ahead Eagles v Sparta Rotterdam  -  Match Result after 5 Minutes / Draw @1.14
+    book's no-margin chance 80% - among the 50 longest prices on the board
+    match record backs it: record 100% of 6 (floor 83%)
+- Sat 16:00  Grazer AK 1902 v Salzburg  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 81% - among the 50 longest prices on the board
+    match record backs it: record 100% of 9 (floor 83%)
+- Sat 16:00  WSG Tirol v SV Ried  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 100% of 7 (floor 83%)
+- Sat 16:30  WKS Slask Wroclaw v KKS Lech Poznan  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 80% - among the 50 longest prices on the board
+    match record backs it: record 91% of 11 (floor 83%)
+- Sat 16:30  Mjallby AIF v Degerfors IF  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 84% - among the 50 longest prices on the board
+    match record backs it: record 92% of 12 (floor 83%)
+- Sat 17:00  Caykur Rizespor v Fenerbahce Istanbul  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 86% of 7 (floor 83%)
+- Sat 17:00  Bohemians Prague 1905 v FC Banik Ostrava  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 100% of 9 (floor 83%)
+- Sat 17:30  Barcelona v Getafe  -  Match Result after 5 Minutes / Draw @1.17
+    book's no-margin chance 79% - among the 50 longest prices on the board
+    match record backs it: record 83% of 6 (floor 83%)
+- Sat 17:30  Man Utd v Tottenham  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 100% of 6 (floor 83%)
+- Sat 17:30  AEK Athens v OFI Crete  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 81% - among the 50 longest prices on the board
+    match record backs it: record 89% of 9 (floor 83%)
+- Sat 17:45  Feyenoord v Alkmaar  -  Match Result after 5 Minutes / Draw @1.13
+    book's no-margin chance 80% - among the 50 longest prices on the board
+    match record backs it: record 100% of 8 (floor 83%)
+- Sat 18:00  Toronto FC v CF Montreal  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 100% of 7 (floor 83%)
+- Sat 18:30  FK Austria Wien v Sturm Graz  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 92% of 12 (floor 83%)
+- Sat 19:00  Fortuna Sittard v FC Twente Enschede  -  Match Result after 5 Minutes / Draw @1.14
+    book's no-margin chance 80% - among the 50 longest prices on the board
+    match record backs it: record 100% of 8 (floor 83%)
+- Sat 19:30  Chicago Fire v New York City FC  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 100% of 13 (floor 83%)
+- Sat 20:00  Real Madrid v Villarreal  -  Match Result after 5 Minutes / Draw @1.16
+    book's no-margin chance 79% - among the 50 longest prices on the board
+    match record backs it: record 88% of 8 (floor 83%)
+- Sat 22:00  CR Vasco da Gama RJ v Clube do Remo PA  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - among the 50 longest prices on the board
+    match record backs it: record 92% of 12 (floor 83%)
+
+## 2026-10-10 07:51 WAT  |  one market: Match Result after 5 Minutes / Draw - best 100x from SY1H3B - 101.33x (42 games)  |  code L1P4V7
+http://www.sportybet.com/ng/?shareCode=L1P4V7
+- Sat 12:30  Swansea City v Norwich  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 91% of 11 (floor 83%)
+- Sat 12:35  Chengdu Rongcheng v Tianjin Jinmen Tiger  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 92% of 13 (floor 83%)
+- Sat 14:00  GAIS v IK Sirius  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 11 (floor 83%)
+- Sat 14:00  AIK v IF Brommapojkarna  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 90% of 10 (floor 83%)
+- Sat 14:00  FC Hradec Kralove v SK Artis Brno  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 10 (floor 83%)
+- Sat 14:30  Augsburg v Bayern Munich  -  Match Result after 5 Minutes / Draw @1.20
+    book's no-margin chance 76% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 83% of 6 (floor 83%)
+- Sat 15:00  Fleetwood Town v Walsall FC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 10 (floor 83%)
+- Sat 15:00  Crawley Town v Chesterfield FC  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 81% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 88% of 8 (floor 83%)
+- Sat 15:00  Bristol Rovers v Barnet FC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 8 (floor 83%)
+- Sat 15:00  Milton Keynes Dons v Reading FC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 9 (floor 83%)
+- Sat 15:00  Doncaster Rovers v Burton Albion  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 90% of 10 (floor 83%)
+- Sat 15:00  Bradford City FC v Leyton Orient London  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 8 (floor 83%)
+- Sat 15:00  Livingston FC v Partick Thistle FC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 91% of 11 (floor 83%)
+- Sat 15:00  Cercle Brugge v RSC Anderlecht  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 83% of 6 (floor 83%)
+- Sat 15:00  Rangers v Kilmarnock FC  -  Match Result after 5 Minutes / Draw @1.15
+    book's no-margin chance 79% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 9 (floor 83%)
+- Sat 15:00  Falkirk FC v Dundee FC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 9 (floor 83%)
+- Sat 15:00  Dundee United v Hibernian FC  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 92% of 12 (floor 83%)
+- Sat 15:00  Preston North End v Millwall FC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 83% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 89% of 9 (floor 83%)
+- Sat 15:00  Middlesbrough FC v Wolves  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 88% of 8 (floor 83%)
+- Sat 15:00  Bolton Wanderers v Stoke City  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 83% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 88% of 8 (floor 83%)
+- Sat 15:00  Blackburn Rovers v Cardiff City  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 9 (floor 83%)
+- Sat 15:00  Sunderland AFC v Brighton  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 8 (floor 83%)
+- Sat 15:00  Ipswich Town v Fulham  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 7 (floor 83%)
+- Sat 15:00  Aston Villa v Brentford  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 83% of 6 (floor 83%)
+- Sat 15:15  Alaves v Atletico Madrid  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 83% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 88% of 8 (floor 83%)
+- Sat 15:30  Go Ahead Eagles v Sparta Rotterdam  -  Match Result after 5 Minutes / Draw @1.14
+    book's no-margin chance 80% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 6 (floor 83%)
+- Sat 16:00  WSG Tirol v SV Ried  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 7 (floor 83%)
+- Sat 16:00  Grazer AK 1902 v Salzburg  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 81% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 9 (floor 83%)
+- Sat 16:30  WKS Slask Wroclaw v KKS Lech Poznan  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 80% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 91% of 11 (floor 83%)
+- Sat 16:30  Mjallby AIF v Degerfors IF  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 84% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 92% of 12 (floor 83%)
+- Sat 17:00  Bohemians Prague 1905 v FC Banik Ostrava  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 9 (floor 83%)
+- Sat 17:00  Caykur Rizespor v Fenerbahce Istanbul  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 86% of 7 (floor 83%)
+- Sat 17:30  AEK Athens v OFI Crete  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 81% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 89% of 9 (floor 83%)
+- Sat 17:30  Barcelona v Getafe  -  Match Result after 5 Minutes / Draw @1.17
+    book's no-margin chance 79% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 83% of 6 (floor 83%)
+- Sat 17:30  Man Utd v Tottenham  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 6 (floor 83%)
+- Sat 17:45  Feyenoord v Alkmaar  -  Match Result after 5 Minutes / Draw @1.13
+    book's no-margin chance 80% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 8 (floor 83%)
+- Sat 18:00  Toronto FC v CF Montreal  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 7 (floor 83%)
+- Sat 18:30  FK Austria Wien v Sturm Graz  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 92% of 12 (floor 83%)
+- Sat 19:00  Fortuna Sittard v FC Twente Enschede  -  Match Result after 5 Minutes / Draw @1.14
+    book's no-margin chance 80% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 8 (floor 83%)
+- Sat 19:30  Chicago Fire v New York City FC  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 13 (floor 83%)
+- Sat 20:00  Real Madrid v Villarreal  -  Match Result after 5 Minutes / Draw @1.16
+    book's no-margin chance 79% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 88% of 8 (floor 83%)
+- Sat 22:00  CR Vasco da Gama RJ v Clube do Remo PA  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - one of the 42 games from SY1H3B reaching 100x with the highest chance of all landing
+    match record backs it: record 92% of 12 (floor 83%)
+
+## 2026-10-10 07:51 WAT  |  one market: Total Goals from 1 to 10 min / Under 0.5 - best 30,000x from PGRRUA - 30,111.84x (41 games)  |  code VUS552
+http://www.sportybet.com/ng/?shareCode=VUS552
+- Sat 12:30  Notts County v Oxford United  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 88% of 8 (floor 73%)
+- Sat 12:35  Chengdu Rongcheng v Tianjin Jinmen Tiger  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    book's no-margin chance 74% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 92% of 13 (floor 73%)
+- Sat 14:00  HNK Hajduk Split v GNK Dinamo Zagreb  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 85% of 13 (floor 73%)
+- Sat 14:00  GAIS v IK Sirius  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 75% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 82% of 11 (floor 73%)
+- Sat 14:00  AIK v IF Brommapojkarna  -  Total Goals from 1 to 10 min / Under 0.5 @1.29
+    book's no-margin chance 73% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 80% of 10 (floor 73%)
+- Sat 14:00  FC Hradec Kralove v SK Artis Brno  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 80% of 10 (floor 73%)
+- Sat 14:00  Benevento Calcio v Cesena FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.24
+    book's no-margin chance 75% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 86% of 7 (floor 73%)
+- Sat 14:00  Genoa v Fiorentina  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 78% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 100% of 7 (floor 73%)
+- Sat 14:30  Augsburg v Bayern Munich  -  Total Goals from 1 to 10 min / Under 0.5 @1.50
+    book's no-margin chance 63% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 83% of 6 (floor 73%)
+- Sat 15:00  Crawley Town v Chesterfield FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.29
+    book's no-margin chance 72% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 75% of 8 (floor 73%)
+- Sat 15:00  Cheltenham Town v Salford City  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 78% of 9 (floor 73%)
+- Sat 15:00  Bristol Rovers v Barnet FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 100% of 8 (floor 73%)
+- Sat 15:00  Milton Keynes Dons v Reading FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    book's no-margin chance 74% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 78% of 9 (floor 73%)
+- Sat 15:00  Leicester v Peterborough United  -  Total Goals from 1 to 10 min / Under 0.5 @1.34
+    book's no-margin chance 70% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 80% of 10 (floor 73%)
+- Sat 15:00  Doncaster Rovers v Burton Albion  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 90% of 10 (floor 73%)
+- Sat 15:00  Livingston FC v Partick Thistle FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 82% of 11 (floor 73%)
+- Sat 15:00  Rangers v Kilmarnock FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.36
+    book's no-margin chance 70% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 89% of 9 (floor 73%)
+- Sat 15:00  Falkirk FC v Dundee FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 89% of 9 (floor 73%)
+- Sat 15:00  Dundee United v Hibernian FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 83% of 12 (floor 73%)
+- Sat 15:00  Middlesbrough FC v Wolves  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 75% of 8 (floor 73%)
+- Sat 15:00  Bolton Wanderers v Stoke City  -  Total Goals from 1 to 10 min / Under 0.5 @1.24
+    book's no-margin chance 76% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 75% of 8 (floor 73%)
+- Sat 15:00  Blackburn Rovers v Cardiff City  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 100% of 9 (floor 73%)
+- Sat 15:00  Sunderland AFC v Brighton  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 75% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 75% of 8 (floor 73%)
+- Sat 15:15  FC Botosani v FC Uta Arad  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 80% of 10 (floor 73%)
+- Sat 15:15  Alaves v Atletico Madrid  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 76% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 88% of 8 (floor 73%)
+- Sat 15:30  Go Ahead Eagles v Sparta Rotterdam  -  Total Goals from 1 to 10 min / Under 0.5 @1.35
+    book's no-margin chance 70% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 83% of 6 (floor 73%)
+- Sat 16:00  Grazer AK 1902 v Salzburg  -  Total Goals from 1 to 10 min / Under 0.5 @1.29
+    book's no-margin chance 73% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 100% of 9 (floor 73%)
+- Sat 16:30  Mjallby AIF v Degerfors IF  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 76% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 83% of 12 (floor 73%)
+- Sat 17:00  Bohemians Prague 1905 v FC Banik Ostrava  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 89% of 9 (floor 73%)
+- Sat 17:00  Caykur Rizespor v Fenerbahce Istanbul  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 86% of 7 (floor 73%)
+- Sat 17:30  Barcelona v Getafe  -  Total Goals from 1 to 10 min / Under 0.5 @1.40
+    book's no-margin chance 68% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 83% of 6 (floor 73%)
+- Sat 17:30  Man Utd v Tottenham  -  Total Goals from 1 to 10 min / Under 0.5 @1.31
+    book's no-margin chance 72% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 83% of 6 (floor 73%)
+- Sat 17:45  Feyenoord v Alkmaar  -  Total Goals from 1 to 10 min / Under 0.5 @1.33
+    book's no-margin chance 71% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 75% of 8 (floor 73%)
+- Sat 18:00  Toronto FC v CF Montreal  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 73% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 86% of 7 (floor 73%)
+- Sat 18:30  FK Austria Wien v Sturm Graz  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 75% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 75% of 12 (floor 73%)
+- Sat 19:00  Al Hilal SFC v Al-Ittihad Club  -  Total Goals from 1 to 10 min / Under 0.5 @1.36
+    book's no-margin chance 69% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 89% of 9 (floor 73%)
+- Sat 19:15  Jagiellonia Bialystok v Gornik Zabrze  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 90% of 10 (floor 73%)
+- Sat 19:30  Chicago Fire v New York City FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 73% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 77% of 13 (floor 73%)
+- Sat 20:00  Real Madrid v Villarreal  -  Total Goals from 1 to 10 min / Under 0.5 @1.40
+    book's no-margin chance 68% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 88% of 8 (floor 73%)
+- Sat 21:30  Huachipato v CD O'Higgins  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 92% of 12 (floor 73%)
+- Sat 22:00  CR Vasco da Gama RJ v Clube do Remo PA  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74% - one of the 41 games from PGRRUA reaching 30,000x with the highest chance of all landing
+    match record backs it: record 92% of 12 (floor 73%)
+
+## 2026-10-10 15:37 WAT  |  every game, the book's most likely option at 1.15+ - 100x target - 100.03x (19 games)  |  code L0FSZV
+http://www.sportybet.com/ng/?shareCode=L0FSZV
+- Sat 17:00  SFC Shturmi Sartichala v FC Kolkheti-1913 Poti  -  1X2 / Home @2.05
+    book's no-margin chance 44% - one of the 19 picks reaching 100x with the highest chance of all landing
+    match record backs it: record 62% of 8 (floor 50%)
+- Sat 17:00  Istanbulspor AS v Esenler Erokspor  -  Double Chance / Draw or Away @1.24
+    book's no-margin chance 76% - one of the 19 picks reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 7 (floor 57%)
+- Sat 17:00  Rosenborg BK v Sandefjord Fotball  -  Double Chance / Home or Away @1.15
+    book's no-margin chance 84% - one of the 19 picks reaching 100x with the highest chance of all landing
+    match record backs it: record 92% of 13 (floor 79%)
+- Sat 17:15  RAAL La Louviere v Club Brugge  -  Double Chance / Home or Away @1.16
+    book's no-margin chance 83% - one of the 19 picks reaching 100x with the highest chance of all landing
+    match record backs it: record 83% of 6 (floor 79%)
+- Sat 17:30  Man Utd v Tottenham  -  2nd Half - Total / Over 0.5 @1.17
+    book's no-margin chance 82% - one of the 19 picks reaching 100x with the highest chance of all landing
+    match record backs it: record 86% of 7 (floor 71%)
+- Sat 17:45  Feyenoord v Alkmaar  -  1st Half - Over/Under / Over 0.5 @1.23
+    book's no-margin chance 77% - one of the 19 picks reaching 100x with the highest chance of all landing
+    match record backs it: record 75% of 8 (floor 71%)
+- Sat 18:00  Al Ahli Doha SC v Al-Sailiya SC  -  Double Chance / Home or Away @1.23
+    book's no-margin chance 77% - one of the 19 picks reaching 100x with the highest chance of all landing
+    match record backs it: record 83% of 6 (floor 79%)
+- Sat 18:00  Toronto FC v CF Montreal  -  Over/Under / Over 1.5 @1.18
+    book's no-margin chance 82% - one of the 19 picks reaching 100x with the highest chance of all landing
+    match record backs it: record 83% of 12 (floor 75%)
+- Sat 18:00  Maritimo Madeira v Porto  -  Over/Under / Under 4.5 @1.15
+    book's no-margin chance 84% - one of the 19 picks reaching 100x with the highest chance of all landing
+    match record backs it: record 83% of 6 (floor 67%)
+- Sat 18:30  SS Arezzo v US Cremonese  -  Double Chance / Draw or Away @1.32
+    book's no-margin chance 71% - one of the 19 picks reaching 100x with the highest chance of all landing
+    match record backs it: record 67% of 6 (floor 57%)
+- Sat 19:00  Fortuna Sittard v FC Twente Enschede  -  1st Half - Over/Under / Over 0.5 @1.21
+    book's no-margin chance 79% - one of the 19 picks reaching 100x with the highest chance of all landing
+    match record backs it: record 75% of 8 (floor 71%)
+- Sat 19:30  Chicago Fire v New York City FC  -  Over/Under / Over 1.5 @1.18
+    book's no-margin chance 82% - one of the 19 picks reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 14 (floor 75%)
+- Sat 19:45  SV Zulte Waregem v Gent  -  Over/Under / Under 3.5 @1.25
+    book's no-margin chance 76% - one of the 19 picks reaching 100x with the highest chance of all landing
+    match record backs it: record 78% of 9 (floor 71%)
+- Sat 19:45  Napoli v Frosinone  -  Double Chance / Home or Away @1.20
+    book's no-margin chance 80% - one of the 19 picks reaching 100x with the highest chance of all landing
+    match record backs it: record 83% of 6 (floor 79%)
+- Sat 20:00  Real Madrid v Villarreal  -  1st Half - Over/Under / Over 0.5 @1.17
+    book's no-margin chance 82% - one of the 19 picks reaching 100x with the highest chance of all landing
+    match record backs it: record 80% of 10 (floor 71%)
+- Sat 20:30  FC Vizela v Sporting Lisbon B  -  Over/Under / Under 3.5 @1.27
+    book's no-margin chance 74% - one of the 19 picks reaching 100x with the highest chance of all landing
+    match record backs it: record 71% of 7 (floor 71%)
+- Sat 20:30  Casa Pia Lisbon v Santa Clara Azores  -  Double Chance / Draw or Away @1.29
+    book's no-margin chance 74% - one of the 19 picks reaching 100x with the highest chance of all landing
+    match record backs it: record 100% of 6 (floor 57%)
+- Sat 21:00  Gualaceo SC v Cumbaya FC  -  Double Chance / Draw or Away @1.73
+    book's no-margin chance 51% - one of the 19 picks reaching 100x with the highest chance of all landing
+    match record backs it: record 64% of 14 (floor 57%)
+- Sat 22:00  Portuguesa FC v Deportivo La Guaira  -  Double Chance / Draw or Away @1.31
+    book's no-margin chance 71% - one of the 19 picks reaching 100x with the highest chance of all landing
+    match record backs it: record 60% of 10 (floor 57%)
+
+## 2026-10-10 15:37 WAT  |  every game, the book's most likely option at 1.15+ - 50x target - 50.07x (16 games)  |  code HRCFPL
+http://www.sportybet.com/ng/?shareCode=HRCFPL
+- Sat 17:00  SFC Shturmi Sartichala v FC Kolkheti-1913 Poti  -  1X2 / Home @2.05
+    book's no-margin chance 44% - one of the 16 picks reaching 50x with the highest chance of all landing
+    match record backs it: record 62% of 8 (floor 50%)
+- Sat 17:00  Rosenborg BK v Sandefjord Fotball  -  Double Chance / Home or Away @1.15
+    book's no-margin chance 84% - one of the 16 picks reaching 50x with the highest chance of all landing
+    match record backs it: record 92% of 13 (floor 79%)
+- Sat 17:15  RAAL La Louviere v Club Brugge  -  Double Chance / Home or Away @1.16
+    book's no-margin chance 83% - one of the 16 picks reaching 50x with the highest chance of all landing
+    match record backs it: record 83% of 6 (floor 79%)
+- Sat 17:30  Man Utd v Tottenham  -  2nd Half - Total / Over 0.5 @1.17
+    book's no-margin chance 82% - one of the 16 picks reaching 50x with the highest chance of all landing
+    match record backs it: record 86% of 7 (floor 71%)
+- Sat 17:45  Feyenoord v Alkmaar  -  1st Half - Over/Under / Over 0.5 @1.23
+    book's no-margin chance 77% - one of the 16 picks reaching 50x with the highest chance of all landing
+    match record backs it: record 75% of 8 (floor 71%)
+- Sat 18:00  Toronto FC v CF Montreal  -  Over/Under / Over 1.5 @1.18
+    book's no-margin chance 82% - one of the 16 picks reaching 50x with the highest chance of all landing
+    match record backs it: record 83% of 12 (floor 75%)
+- Sat 18:00  Maritimo Madeira v Porto  -  Over/Under / Under 4.5 @1.15
+    book's no-margin chance 84% - one of the 16 picks reaching 50x with the highest chance of all landing
+    match record backs it: record 83% of 6 (floor 67%)
+- Sat 18:30  SS Arezzo v US Cremonese  -  Double Chance / Draw or Away @1.32
+    book's no-margin chance 71% - one of the 16 picks reaching 50x with the highest chance of all landing
+    match record backs it: record 67% of 6 (floor 57%)
+- Sat 19:00  Fortuna Sittard v FC Twente Enschede  -  1st Half - Over/Under / Over 0.5 @1.21
+    book's no-margin chance 79% - one of the 16 picks reaching 50x with the highest chance of all landing
+    match record backs it: record 75% of 8 (floor 71%)
+- Sat 19:30  Chicago Fire v New York City FC  -  Over/Under / Over 1.5 @1.18
+    book's no-margin chance 82% - one of the 16 picks reaching 50x with the highest chance of all landing
+    match record backs it: record 100% of 14 (floor 75%)
+- Sat 19:45  SV Zulte Waregem v Gent  -  Over/Under / Under 3.5 @1.25
+    book's no-margin chance 76% - one of the 16 picks reaching 50x with the highest chance of all landing
+    match record backs it: record 78% of 9 (floor 71%)
+- Sat 19:45  Napoli v Frosinone  -  Double Chance / Home or Away @1.20
+    book's no-margin chance 80% - one of the 16 picks reaching 50x with the highest chance of all landing
+    match record backs it: record 83% of 6 (floor 79%)
+- Sat 20:00  Real Madrid v Villarreal  -  1st Half - Over/Under / Over 0.5 @1.17
+    book's no-margin chance 82% - one of the 16 picks reaching 50x with the highest chance of all landing
+    match record backs it: record 80% of 10 (floor 71%)
+- Sat 20:30  FC Vizela v Sporting Lisbon B  -  Over/Under / Under 3.5 @1.27
+    book's no-margin chance 74% - one of the 16 picks reaching 50x with the highest chance of all landing
+    match record backs it: record 71% of 7 (floor 71%)
+- Sat 20:30  Casa Pia Lisbon v Santa Clara Azores  -  Double Chance / Draw or Away @1.29
+    book's no-margin chance 74% - one of the 16 picks reaching 50x with the highest chance of all landing
+    match record backs it: record 100% of 6 (floor 57%)
+- Sat 21:00  Gualaceo SC v Cumbaya FC  -  Double Chance / Draw or Away @1.73
+    book's no-margin chance 51% - one of the 16 picks reaching 50x with the highest chance of all landing
+    match record backs it: record 64% of 14 (floor 57%)
+
+## 2026-10-10 16:18 WAT  |  tipster picks (user's screenshots, games not started) - 834.24x (26 games)  |  code MCYZ0G
+http://www.sportybet.com/ng/?shareCode=MCYZ0G
+- Sat 17:00  Inter v Parma Calcio  -  Inter Over/Under / Over 1.5 @1.26
+    tipster: 1.5 Inter
+- Sat 17:30  RB Leipzig v Eintracht Frankfurt  -  GG/NG / Yes @1.37
+    tipster: BTTS
+- Sat 17:30  Barcelona v Getafe  -  Barcelona Over/Under / Over 1.5 @1.15
+    tipster: 1.5 Barca
+- Sat 17:30  Man Utd v Tottenham  -  Double Chance / Draw or Away @2.00
+    tipster: 2X
+- Sat 19:45  Monaco v Toulouse  -  Over/Under / Over 1.5 @1.17
+    tipster: 1.5
+- Sat 19:45  Brest v Angers  -  Double Chance / Home or Draw @1.28
+    tipster: 1X
+- Sat 19:45  Lorient v Paris FC  -  Over/Under / Under 4.5 @1.13
+    tipster: -4.5
+- Sat 19:45  Napoli v Frosinone  -  Over/Under / Over 1.5 @1.13
+    tipster: 1.5
+- Sat 20:00  Real Madrid v Villarreal  -  Real Madrid Over/Under / Over 1.5 @1.27
+    tipster: 1.5 Real
+- Sun 11:30  Como 1907 v Roma  -  Como 1907 Over/Under / Over 0.5 @1.23
+    tipster: 0.5 Como
+- Sun 13:00  Elche CF v Celta  -  Over/Under / Over 1.5 @1.31
+    tipster: 1.5
+- Sun 14:00  Nice v Strasbourg  -  Strasbourg Over/Under / Over 0.5 @1.28
+    tipster: 0.5 Stras
+- Sun 14:00  Lazio v Monza  -  Double Chance / Home or Draw @1.17
+    tipster: 1X
+- Sun 14:00  Lecce v Bologna  -  Over/Under / Under 4.5 @1.11
+    tipster: -4.5
+- Sun 14:00  Crystal Palace v Nottingham Forest  -  Double Chance / Home or Draw @1.49
+    tipster: 1X
+- Sun 14:00  Hull City v Everton  -  Hull City Over/Under / Over 0.5 @1.44
+    tipster: 0.5 Hull
+- Sun 14:30  Cologne v Borussia M´gladbach  -  Over/Under / Over 2.5 @1.50
+    tipster: 2.5
+- Sun 15:15  Real Sociedad v RC Deportivo de A Coruna  -  Double Chance / Home or Draw @1.16
+    tipster: 1X
+- Sun 16:15  Rennes v AJ Auxerre  -  Over/Under / Over 1.5 @1.15
+    tipster: 1.5
+- Sun 16:30  Liverpool v Man City  -  GG/NG / Yes @1.52
+    tipster: BTTS
+- Sun 17:00  Sassuolo v AC Milan  -  Sassuolo Over/Under / Over 0.5 @1.44
+    tipster: 0.5 Sassuolo
+- Sun 17:30  Betis v Osasuna  -  Betis Over/Under / Over 0.5 @1.13
+    tipster: 0.5 Betis
+- Sun 19:45  Troyes v Marseille  -  Double Chance / Draw or Away @1.29
+    tipster: 2X
+- Sun 19:45  Cagliari v Juventus  -  Over/Under / Over 1.5 @1.32
+    tipster: 1.5
+- Sun 20:00  Racing Santander v Valencia  -  Over/Under / Under 3.5 @1.54
+    tipster: -3.5
+- Mon 17:30  Atalanta v Venezia FC  -  Double Chance / Home or Draw @1.16
+    tipster: 1X
+
+## 2026-10-10 16:22 WAT  |  tipster picks (user's screenshots, games not started) - 972.00x (27 games)  |  code MQT44G
+http://www.sportybet.com/ng/?shareCode=MQT44G
+- Sat 17:00  Inter v Parma Calcio  -  Inter Over/Under / Over 1.5 @1.25
+    tipster: 1.5 Inter
+- Sat 17:30  RB Leipzig v Eintracht Frankfurt  -  GG/NG / Yes @1.37
+    tipster: BTTS
+- Sat 17:30  Barcelona v Getafe  -  Barcelona Over/Under / Over 1.5 @1.15
+    tipster: 1.5 Barca
+- Sat 17:30  Man Utd v Tottenham  -  Double Chance / Draw or Away @1.99
+    tipster: 2X
+- Sat 19:45  PSG v Le Mans FC  -  PSG Over/Under / Over 1.5 @1.17
+    tipster: 1.5 PSG
+- Sat 19:45  Monaco v Toulouse  -  Over/Under / Over 1.5 @1.17
+    tipster: 1.5
+- Sat 19:45  Brest v Angers  -  Double Chance / Home or Draw @1.28
+    tipster: 1X
+- Sat 19:45  Lorient v Paris FC  -  Over/Under / Under 4.5 @1.13
+    tipster: -4.5
+- Sat 19:45  Napoli v Frosinone  -  Over/Under / Over 1.5 @1.14
+    tipster: 1.5
+- Sat 20:00  Real Madrid v Villarreal  -  Real Madrid Over/Under / Over 1.5 @1.27
+    tipster: 1.5 Real
+- Sun 11:30  Como 1907 v Roma  -  Como 1907 Over/Under / Over 0.5 @1.23
+    tipster: 0.5 Como
+- Sun 13:00  Elche CF v Celta  -  Over/Under / Over 1.5 @1.31
+    tipster: 1.5
+- Sun 14:00  Nice v Strasbourg  -  Strasbourg Over/Under / Over 0.5 @1.28
+    tipster: 0.5 Stras
+- Sun 14:00  Lazio v Monza  -  Double Chance / Home or Draw @1.17
+    tipster: 1X
+- Sun 14:00  Lecce v Bologna  -  Over/Under / Under 4.5 @1.11
+    tipster: -4.5
+- Sun 14:00  Crystal Palace v Nottingham Forest  -  Double Chance / Home or Draw @1.49
+    tipster: 1X
+- Sun 14:00  Hull City v Everton  -  Hull City Over/Under / Over 0.5 @1.44
+    tipster: 0.5 Hull
+- Sun 14:30  Cologne v Borussia M´gladbach  -  Over/Under / Over 2.5 @1.50
+    tipster: 2.5
+- Sun 15:15  Real Sociedad v RC Deportivo de A Coruna  -  Double Chance / Home or Draw @1.16
+    tipster: 1X
+- Sun 16:15  Rennes v AJ Auxerre  -  Over/Under / Over 1.5 @1.15
+    tipster: 1.5
+- Sun 16:30  Liverpool v Man City  -  GG/NG / Yes @1.52
+    tipster: BTTS
+- Sun 17:00  Sassuolo v AC Milan  -  Sassuolo Over/Under / Over 0.5 @1.44
+    tipster: 0.5 Sassuolo
+- Sun 17:30  Betis v Osasuna  -  Betis Over/Under / Over 0.5 @1.13
+    tipster: 0.5 Betis
+- Sun 19:45  Troyes v Marseille  -  Double Chance / Draw or Away @1.29
+    tipster: 2X
+- Sun 19:45  Cagliari v Juventus  -  Over/Under / Over 1.5 @1.32
+    tipster: 1.5
+- Sun 20:00  Racing Santander v Valencia  -  Over/Under / Under 3.5 @1.54
+    tipster: -3.5
+- Mon 17:30  Atalanta v Venezia FC  -  Double Chance / Home or Draw @1.16
+    tipster: 1X
+
+## 2026-10-10 20:56 WAT  |  every game, the book's most likely option at 1.15+ - tonight to 06:00 football part 1 - 304.48x (34 games)  |  code KZ8CA3
+http://www.sportybet.com/ng/?shareCode=KZ8CA3
+- Sat 22:00  CR Vasco da Gama RJ v Clube do Remo PA  -  1st Half - Over/Under / Under 2.5 @1.18
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 92% of 13 (floor 89%)
+- Sat 22:00  Portuguesa FC v Deportivo La Guaira  -  Double Chance / Draw or Away @1.31
+    book's no-margin chance 71% - the highest of this game's options at 1.15+
+    match record backs it: record 60% of 10 (floor 57%)
+- Sat 22:00  Portland Hearts of Pine v AC Boise  -  Over/Under / Over 1.5 @1.15
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 93% of 14 (floor 75%)
+- Sat 22:00  Union Omaha SC v Fort Wayne FC  -  Over/Under / Over 1.5 @1.17
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 100% of 14 (floor 75%)
+- Sat 22:00  CD Genesis PN v CD Olimpia Tegucigalpa  -  2nd Half - Total / Under 2.5 @1.16
+    book's no-margin chance 79% - the highest of this game's options at 1.15+
+    match record backs it: record 73% of 11 (floor 64%)
+- Sat 22:00  Inter San Carlos v Perez Zeledon  -  Double Chance / Home or Draw @1.18
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 88% of 8 (floor 67%)
+- Sat 22:00  Aurora FC v CSD Xelaju MC  -  2nd Half - Total / Under 2.5 @1.16
+    book's no-margin chance 79% - the highest of this game's options at 1.15+
+    match record backs it: record 77% of 13 (floor 64%)
+- Sat 22:30  CA Penarol Montevideo v CA Progreso  -  Double Chance / Home or Away @1.18
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 100% of 14 (floor 79%)
+- Sat 22:30  Guayaquil City FC v CS Emelec  -  Over/Under / Under 3.5 @1.18
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+    match record backs it: record 79% of 14 (floor 71%)
+- Sat 23:00  Charleston Battery v Louisville City FC  -  Over/Under / Under 4.5 @1.16
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 71% of 14 (floor 67%)
+- Sat 23:00  Tlaxcala FC v Piratas Veracruz  -  Over/Under / Over 1.5 @1.26
+    book's no-margin chance 74% - the highest of this game's options at 1.15+
+    match record backs it: record 91% of 11 (floor 75%)
+- Sat 23:00  Paysandu FC v CA Rentistas  -  Over/Under / Under 3.5 @1.24
+    book's no-margin chance 74% - the highest of this game's options at 1.15+
+    match record backs it: record 71% of 14 (floor 71%)
+- Sat 23:15  CA Tigre v CA Banfield  -  Over/Under / Under 3.5 @1.22
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+    match record backs it: record 86% of 14 (floor 71%)
+- Sat 23:20  Sportivo Luqueno v Cerro Porteno  -  Double Chance / Draw or Away @1.22
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+    match record backs it: record 62% of 13 (floor 57%)
+- Sun 00:00  FC Juarez v Club Tijuana de Caliente  -  2nd Half - Total / Under 2.5 @1.19
+    book's no-margin chance 79% - the highest of this game's options at 1.15+
+    match record backs it: record 91% of 11 (floor 64%)
+- Sun 00:00  Queretaro FC v Atlante FC  -  Over/Under / Under 4.5 @1.15
+    book's no-margin chance 82% - the highest of this game's options at 1.15+
+    match record backs it: record 82% of 11 (floor 67%)
+- Sun 00:00  Detroit City FC v Rhode Island FC  -  Over/Under / Under 3.5 @1.24
+    book's no-margin chance 75% - the highest of this game's options at 1.15+
+    match record backs it: record 93% of 14 (floor 71%)
+- Sun 00:00  Indy Eleven v Tampa Bay Rowdies  -  Over/Under / Under 4.5 @1.15
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 93% of 14 (floor 67%)
+- Sun 00:00  Miami FC v Loudoun United FC  -  Double Chance / Home or Draw @1.24
+    book's no-margin chance 75% - the highest of this game's options at 1.15+
+    match record backs it: record 71% of 14 (floor 67%)
+- Sun 00:00  Pittsburgh Riverhounds v Hartford Athletic  -  Over/Under / Under 3.5 @1.21
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+    match record backs it: record 79% of 14 (floor 71%)
+- Sun 00:00  Charlotte Independence v New York Cosmos  -  Double Chance / Home or Draw @1.16
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 79% of 14 (floor 67%)
+- Sun 00:00  Westchester SC v Forward Madison FC  -  2nd Half - Total / Over 0.5 @1.15
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 71% of 14 (floor 71%)
+- Sun 00:00  Venados  FC v Leones Negros UDEG  -  Double Chance / Home or Away @1.25
+    book's no-margin chance 75% - the highest of this game's options at 1.15+
+    match record backs it: record 100% of 11 (floor 79%)
+- Sun 00:00  Puntarenas FC v Liga Deportiva Alajuelense  -  Over/Under / Under 4.5 @1.15
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 100% of 12 (floor 67%)
+- Sun 00:00  CD Suchitepequez v Deportivo Mixco  -  2nd Half - Total / Under 2.5 @1.17
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+    match record backs it: record 83% of 12 (floor 64%)
+- Sun 00:15  FC Motagua Tegucigalpa v CD Choloma  -  1st Half - Over/Under / Over 0.5 @1.18
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+    match record backs it: record 73% of 11 (floor 71%)
+- Sun 00:30  Atlanta United FC v FC Cincinnati  -  Over/Under / Under 5.5 @1.16
+    book's no-margin chance 83% - the highest of this game's options at 1.15+
+    match record backs it: record 100% of 11 (floor 79%)
+- Sun 00:30  Charlotte FC v FC Dallas  -  2nd Half - Total / Over 0.5 @1.15
+    book's no-margin chance 83% - the highest of this game's options at 1.15+
+    match record backs it: record 93% of 14 (floor 71%)
+- Sun 00:30  New England Revolution v Seattle Sounders  -  Over/Under / Over 1.5 @1.17
+    book's no-margin chance 82% - the highest of this game's options at 1.15+
+    match record backs it: record 83% of 12 (floor 75%)
+- Sun 00:30  New York Red Bulls v San Diego FC  -  2nd Half - Total / Under 3.5 @1.15
+    book's no-margin chance 83% - the highest of this game's options at 1.15+
+    match record backs it: record 92% of 13 (floor 75%)
+- Sun 00:30  Orlando City SC v Columbus Crew  -  Over/Under / Under 5.5 @1.15
+    book's no-margin chance 83% - the highest of this game's options at 1.15+
+    match record backs it: record 100% of 13 (floor 79%)
+- Sun 00:30  Philadelphia Union v Real Salt Lake  -  Double Chance / Home or Away @1.15
+    book's no-margin chance 84% - the highest of this game's options at 1.15+
+    match record backs it: record 86% of 14 (floor 79%)
+- Sun 00:30  Metropolitanos FC v Deportivo Rayo Zuliano  -  Double Chance / Home or Away @1.15
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 92% of 12 (floor 79%)
+- Sun 00:30  Sarasota Paradise v Richmond Kickers  -  Over/Under / Over 1.5 @1.16
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 100% of 14 (floor 75%)
+
+## 2026-10-10 20:56 WAT  |  every game, the book's most likely option at 1.15+ - tonight to 06:00 football part 2 - 238.65x (34 games)  |  code UHA0NB
+http://www.sportybet.com/ng/?shareCode=UHA0NB
+- Sun 01:00  Sao Paulo FC SP v EC Vitoria BA  -  Double Chance / Home or Draw @1.16
+    book's no-margin chance 82% - the highest of this game's options at 1.15+
+    match record backs it: record 93% of 14 (floor 67%)
+- Sun 01:00  Universitario de Deportes v FBC Melgar  -  2nd Half - Total / Under 2.5 @1.15
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 93% of 14 (floor 64%)
+- Sun 01:00  Diriangen FC Diriamba v CD Walter Ferretti  -  Double Chance / Home or Draw @1.16
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 75% of 12 (floor 67%)
+- Sun 01:30  Austin FC v Nashville SC  -  Over/Under / Under 4.5 @1.18
+    book's no-margin chance 82% - the highest of this game's options at 1.15+
+    match record backs it: record 93% of 14 (floor 67%)
+- Sun 01:30  Minnesota United FC v Houston Dynamo  -  Over/Under / Under 4.5 @1.17
+    book's no-margin chance 82% - the highest of this game's options at 1.15+
+    match record backs it: record 85% of 13 (floor 67%)
+- Sun 01:30  Sporting Kansas City v Portland Timbers  -  2nd Half - Total / Under 3.5 @1.15
+    book's no-margin chance 83% - the highest of this game's options at 1.15+
+    match record backs it: record 83% of 12 (floor 75%)
+- Sun 01:30  CA River Plate (ARG) v Estudiantes Rio Cuarto  -  1X2 / Home @1.17
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 50% of 12 (floor 50%)
+- Sun 01:30  Corpus Christi FC v FC Naples  -  2nd Half - Total / Under 2.5 @1.19
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+    match record backs it: record 86% of 14 (floor 64%)
+- Sun 02:00  Atlas FC v CD Guadalajara  -  Over/Under / Under 4.5 @1.15
+    book's no-margin chance 82% - the highest of this game's options at 1.15+
+    match record backs it: record 100% of 12 (floor 67%)
+- Sun 02:00  El Paso Locomotive FC v Orange County SC  -  Double Chance / Home or Draw @1.16
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 71% of 14 (floor 67%)
+- Sun 02:00  New Mexico United v Monterey Bay FC  -  Double Chance / Home or Draw @1.19
+    book's no-margin chance 79% - the highest of this game's options at 1.15+
+    match record backs it: record 79% of 14 (floor 67%)
+- Sun 02:00  CD Mineros de Zacatecas v Cancun FC  -  2nd Half - Total / Over 0.5 @1.19
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+    match record backs it: record 91% of 11 (floor 71%)
+- Sun 02:00  CSD Dorados Sinaloa v Cruz Azul Hidalgo  -  2nd Half - Total / Over 0.5 @1.15
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 75% of 12 (floor 71%)
+- Sun 02:00  Jaiba Brava v Alacranes de Durango  -  Over/Under / Under 3.5 @1.24
+    book's no-margin chance 75% - the highest of this game's options at 1.15+
+    match record backs it: record 91% of 11 (floor 71%)
+- Sun 02:00  CD Malacateco v CD Guastatoya  -  Over/Under / Under 3.5 @1.21
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+    match record backs it: record 83% of 12 (floor 71%)
+- Sun 02:00  Indigenas de Matagalpa FC v Real Esteli FC  -  Over/Under / Under 4.5 @1.17
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 93% of 14 (floor 67%)
+- Sun 02:15  Bogota FC v Boyaca Patriotas  -  2nd Half - Total / Under 2.5 @1.15
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 70% of 10 (floor 64%)
+- Sun 02:30  Lobos UPNFM v CD Marathon San Pedro Sula  -  2nd Half - Total / Under 2.5 @1.17
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+    match record backs it: record 90% of 10 (floor 64%)
+- Sun 03:00  Oakland Roots SC v San Antonio FC  -  2nd Half - Total / Under 2.5 @1.15
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 86% of 14 (floor 64%)
+- Sun 03:00  Phoenix Rising FC v Las Vegas Lights  -  Over/Under / Over 1.5 @1.17
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 79% of 14 (floor 75%)
+- Sun 03:00  Sacramento Republic FC v Colorado Springs Switchbacks FC  -  2nd Half - Total / Under 2.5 @1.15
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 85% of 13 (floor 64%)
+- Sun 03:00  CS Herediano v AD San Carlos  -  Double Chance / Home or Away @1.25
+    book's no-margin chance 75% - the highest of this game's options at 1.15+
+    match record backs it: record 91% of 11 (floor 79%)
+- Sun 03:30  Av Alta FC v Greenville Triumph SC  -  1st Half - Over/Under / Under 2.5 @1.15
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 93% of 14 (floor 89%)
+- Sun 04:10  CF America v CF Monterrey  -  Over/Under / Over 1.5 @1.18
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 100% of 14 (floor 75%)
+- Sun 05:00  Matsumoto Yamaga FC v Kagoshima United  -  2nd Half - Total / Under 2.5 @1.15
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 75% of 12 (floor 64%)
+- Sun 05:00  Roasso Kumamoto v Ehime FC  -  2nd Half - Total / Under 2.5 @1.18
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+    match record backs it: record 91% of 11 (floor 64%)
+- Sun 05:05  Montedio Yamagata v Vegalta Sendai  -  2nd Half - Total / Under 2.5 @1.18
+    book's no-margin chance 79% - the highest of this game's options at 1.15+
+    match record backs it: record 92% of 12 (floor 64%)
+- Sun 06:00  JEF United Chiba v V-Varen Nagasaki  -  2nd Half - Total / Under 2.5 @1.19
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 88% of 8 (floor 64%)
+- Sun 06:00  Gwangju FC v Ulsan HD FC  -  1st Half - Over/Under / Under 2.5 @1.16
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 93% of 14 (floor 89%)
+- Sun 06:00  Kataller Toyama v Tegevajaro Miyazaki  -  2nd Half - Total / Over 0.5 @1.20
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+    match record backs it: record 80% of 10 (floor 71%)
+- Sun 06:00  Gainare Tottori v FC Gifu  -  Over/Under / Under 4.5 @1.15
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 77% of 13 (floor 67%)
+- Sun 06:00  Tochigi SC v Renofa Yamaguchi  -  2nd Half - Total / Under 2.5 @1.16
+    book's no-margin chance 79% - the highest of this game's options at 1.15+
+    match record backs it: record 83% of 12 (floor 64%)
+- Sun 06:00  Suwon Bluewings v Ansan Greeners FC  -  1X2 / Home @1.20
+    book's no-margin chance 76% - the highest of this game's options at 1.15+
+    match record backs it: record 50% of 12 (floor 50%)
+- Sun 06:00  Gangneung Citizen FC v Siheung Citizen FC  -  Double Chance / Draw or Away @1.22
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+    match record backs it: record 64% of 14 (floor 57%)
+
+## 2026-10-10 20:56 WAT  |  basketball every game, the book's most likely option at 1.15+ - tonight to 06:00 part 1 - 936.73x (24 games)  |  code JLR7TK
+http://www.sportybet.com/ng/?shareCode=JLR7TK
+- Sat 22:00  Obras Sanitarias v Union Florida  -  Winner / Home @1.20
+    book's no-margin chance 76% - the highest of this game's options at 1.15+
+- Sat 23:00  Mogi das Cruzes v Sesi/Franca BC SP  -  Winner / Home @1.18
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+- Sat 23:30  Toronto Raptors v LA Clippers  -  Handicap / Home (+3.5) @1.36
+    book's no-margin chance 68% - the highest of this game's options at 1.15+
+- Sun 00:00  Indiana Pacers v Atlanta Hawks  -  Handicap / Home (+5.5) @1.34
+    book's no-margin chance 70% - the highest of this game's options at 1.15+
+- Sun 00:00  Washington Wizards v Detroit Pistons  -  Handicap / Away (+3.5) @1.39
+    book's no-margin chance 67% - the highest of this game's options at 1.15+
+- Sun 00:30  El Talar v Ferro Carril Oeste  -  Winner / Away @1.45
+    book's no-margin chance 63% - the highest of this game's options at 1.15+
+- Sun 00:30  CD Colegio Los Leones v Puerto Montt Basquetbol  -  Handicap / Home (-10.5) @1.53
+    book's no-margin chance 60% - the highest of this game's options at 1.15+
+- Sun 00:30  CD Universidad Catolica De Santiago v CD Las Animas  -  Handicap / Home (+5.5) @1.46
+    book's no-margin chance 62% - the highest of this game's options at 1.15+
+- Sun 01:00  CD Chanares v Tomas de Rocamora  -  Handicap / Home (-10.5) @1.49
+    book's no-margin chance 61% - the highest of this game's options at 1.15+
+- Sun 01:00  Argentino Junin v San Martin Corrientes  -  Total / Over 145.5 @1.22
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+- Sun 01:00  Criollos de Caguas v Monarcas Leon BC  -  Winner / Home @1.26
+    book's no-margin chance 73% - the highest of this game's options at 1.15+
+- Sun 01:00  Boston Celtics v Philadelphia 76ers  -  Handicap / Home (+2.5) @1.35
+    book's no-margin chance 70% - the highest of this game's options at 1.15+
+- Sun 01:00  Miami Heat v Minnesota Timberwolves  -  Handicap / Away (+5.5) @1.37
+    book's no-margin chance 68% - the highest of this game's options at 1.15+
+- Sun 01:05  Quimsa Santiogo Del Estero v Boca Juniors  -  Total / Over 148.5 @1.22
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+- Sun 01:30  Racing de Chivilcoy v Gimnasia de Comodoro  -  Total / Over 146.5 @1.21
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+- Sun 01:30  Golden State Warriors v Sacramento Kings  -  Handicap / Home (+2.5) @1.32
+    book's no-margin chance 71% - the highest of this game's options at 1.15+
+- Sun 02:10  CD Jorge Guzman v Regatas Corrientes  -  Total / Under 176.5 @1.41
+    book's no-margin chance 66% - the highest of this game's options at 1.15+
+- Sun 03:30  Phoenix Suns v San Antonio Spurs  -  Winner / Away @1.40
+    book's no-margin chance 67% - the highest of this game's options at 1.15+
+- Sun 05:00  Sydney Kings v Adelaide 36ers  -  Total / Over 177.5 @1.21
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+- Sun 05:00  Taoyuan Taiwan Beer Leopards v Taipei Taishin Mars  -  Total / Over 208.5 @1.40
+    book's no-margin chance 66% - the highest of this game's options at 1.15+
+- Sun 05:35  Fukushima Firebonds v Gifu Swoops  -  Winner / Home @1.25
+    book's no-margin chance 74% - the highest of this game's options at 1.15+
+- Sun 06:00  Southern Hoiho Women v Tokomanawa Queens Women  -  Handicap / Home (+1.5) @1.57
+    book's no-margin chance 59% - the highest of this game's options at 1.15+
+- Sun 06:00  Anyang Jungkwanjang Red Boosters v LG Sakers  -  Total / Over 153.5 @1.22
+    book's no-margin chance 76% - the highest of this game's options at 1.15+
+- Sun 06:00  Samsung Thunders v Goyang Skygunners  -  Total / Over 151.5 @1.22
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+
+## 2026-10-10 20:56 WAT  |  every game football + basketball, the book's most likely option at 1.15+ - tonight to 06:00 mixed part 1 - 8,156.37x (46 games)  |  code QEZZSG
+http://www.sportybet.com/ng/?shareCode=QEZZSG
+- Sat 22:00  CR Vasco da Gama RJ v Clube do Remo PA  -  1st Half - Over/Under / Under 2.5 @1.18
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 92% of 13 (floor 89%)
+- Sat 22:00  Portuguesa FC v Deportivo La Guaira  -  Double Chance / Draw or Away @1.31
+    book's no-margin chance 71% - the highest of this game's options at 1.15+
+    match record backs it: record 60% of 10 (floor 57%)
+- Sat 22:00  Portland Hearts of Pine v AC Boise  -  Over/Under / Over 1.5 @1.15
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 93% of 14 (floor 75%)
+- Sat 22:00  Union Omaha SC v Fort Wayne FC  -  Over/Under / Over 1.5 @1.17
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 100% of 14 (floor 75%)
+- Sat 22:00  CD Genesis PN v CD Olimpia Tegucigalpa  -  2nd Half - Total / Under 2.5 @1.16
+    book's no-margin chance 79% - the highest of this game's options at 1.15+
+    match record backs it: record 73% of 11 (floor 64%)
+- Sat 22:00  Inter San Carlos v Perez Zeledon  -  Double Chance / Home or Draw @1.18
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 88% of 8 (floor 67%)
+- Sat 22:00  Aurora FC v CSD Xelaju MC  -  2nd Half - Total / Under 2.5 @1.16
+    book's no-margin chance 79% - the highest of this game's options at 1.15+
+    match record backs it: record 77% of 13 (floor 64%)
+- Sat 22:00  Obras Sanitarias v Union Florida  -  Winner / Home @1.20
+    book's no-margin chance 76% - the highest of this game's options at 1.15+
+- Sat 22:30  CA Penarol Montevideo v CA Progreso  -  Double Chance / Home or Away @1.18
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 100% of 14 (floor 79%)
+- Sat 22:30  Guayaquil City FC v CS Emelec  -  Over/Under / Under 3.5 @1.18
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+    match record backs it: record 79% of 14 (floor 71%)
+- Sat 23:00  Charleston Battery v Louisville City FC  -  Over/Under / Under 4.5 @1.16
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 71% of 14 (floor 67%)
+- Sat 23:00  Tlaxcala FC v Piratas Veracruz  -  Over/Under / Over 1.5 @1.26
+    book's no-margin chance 74% - the highest of this game's options at 1.15+
+    match record backs it: record 91% of 11 (floor 75%)
+- Sat 23:00  Paysandu FC v CA Rentistas  -  Over/Under / Under 3.5 @1.24
+    book's no-margin chance 74% - the highest of this game's options at 1.15+
+    match record backs it: record 71% of 14 (floor 71%)
+- Sat 23:00  Mogi das Cruzes v Sesi/Franca BC SP  -  Winner / Home @1.18
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+- Sat 23:15  CA Tigre v CA Banfield  -  Over/Under / Under 3.5 @1.22
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+    match record backs it: record 86% of 14 (floor 71%)
+- Sat 23:20  Sportivo Luqueno v Cerro Porteno  -  Double Chance / Draw or Away @1.22
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+    match record backs it: record 62% of 13 (floor 57%)
+- Sat 23:30  Toronto Raptors v LA Clippers  -  Handicap / Home (+3.5) @1.36
+    book's no-margin chance 68% - the highest of this game's options at 1.15+
+- Sun 00:00  FC Juarez v Club Tijuana de Caliente  -  2nd Half - Total / Under 2.5 @1.19
+    book's no-margin chance 79% - the highest of this game's options at 1.15+
+    match record backs it: record 91% of 11 (floor 64%)
+- Sun 00:00  Queretaro FC v Atlante FC  -  Over/Under / Under 4.5 @1.15
+    book's no-margin chance 82% - the highest of this game's options at 1.15+
+    match record backs it: record 82% of 11 (floor 67%)
+- Sun 00:00  Detroit City FC v Rhode Island FC  -  Over/Under / Under 3.5 @1.24
+    book's no-margin chance 75% - the highest of this game's options at 1.15+
+    match record backs it: record 93% of 14 (floor 71%)
+- Sun 00:00  Indy Eleven v Tampa Bay Rowdies  -  Over/Under / Under 4.5 @1.15
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 93% of 14 (floor 67%)
+- Sun 00:00  Miami FC v Loudoun United FC  -  Double Chance / Home or Draw @1.24
+    book's no-margin chance 75% - the highest of this game's options at 1.15+
+    match record backs it: record 71% of 14 (floor 67%)
+- Sun 00:00  Pittsburgh Riverhounds v Hartford Athletic  -  Over/Under / Under 3.5 @1.21
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+    match record backs it: record 79% of 14 (floor 71%)
+- Sun 00:00  Charlotte Independence v New York Cosmos  -  Double Chance / Home or Draw @1.16
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 79% of 14 (floor 67%)
+- Sun 00:00  Westchester SC v Forward Madison FC  -  2nd Half - Total / Over 0.5 @1.15
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 71% of 14 (floor 71%)
+- Sun 00:00  Venados  FC v Leones Negros UDEG  -  Double Chance / Home or Away @1.25
+    book's no-margin chance 75% - the highest of this game's options at 1.15+
+    match record backs it: record 100% of 11 (floor 79%)
+- Sun 00:00  Puntarenas FC v Liga Deportiva Alajuelense  -  Over/Under / Under 4.5 @1.15
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 100% of 12 (floor 67%)
+- Sun 00:00  CD Suchitepequez v Deportivo Mixco  -  2nd Half - Total / Under 2.5 @1.17
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+    match record backs it: record 83% of 12 (floor 64%)
+- Sun 00:00  Indiana Pacers v Atlanta Hawks  -  Handicap / Home (+5.5) @1.34
+    book's no-margin chance 70% - the highest of this game's options at 1.15+
+- Sun 00:00  Washington Wizards v Detroit Pistons  -  Handicap / Away (+3.5) @1.39
+    book's no-margin chance 67% - the highest of this game's options at 1.15+
+- Sun 00:15  FC Motagua Tegucigalpa v CD Choloma  -  1st Half - Over/Under / Over 0.5 @1.18
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+    match record backs it: record 73% of 11 (floor 71%)
+- Sun 00:30  Atlanta United FC v FC Cincinnati  -  Over/Under / Under 5.5 @1.16
+    book's no-margin chance 83% - the highest of this game's options at 1.15+
+    match record backs it: record 100% of 11 (floor 79%)
+- Sun 00:30  Charlotte FC v FC Dallas  -  2nd Half - Total / Over 0.5 @1.15
+    book's no-margin chance 83% - the highest of this game's options at 1.15+
+    match record backs it: record 93% of 14 (floor 71%)
+- Sun 00:30  New England Revolution v Seattle Sounders  -  Over/Under / Over 1.5 @1.17
+    book's no-margin chance 82% - the highest of this game's options at 1.15+
+    match record backs it: record 83% of 12 (floor 75%)
+- Sun 00:30  New York Red Bulls v San Diego FC  -  2nd Half - Total / Under 3.5 @1.15
+    book's no-margin chance 83% - the highest of this game's options at 1.15+
+    match record backs it: record 92% of 13 (floor 75%)
+- Sun 00:30  Orlando City SC v Columbus Crew  -  Over/Under / Under 5.5 @1.15
+    book's no-margin chance 83% - the highest of this game's options at 1.15+
+    match record backs it: record 100% of 13 (floor 79%)
+- Sun 00:30  Philadelphia Union v Real Salt Lake  -  Double Chance / Home or Away @1.15
+    book's no-margin chance 84% - the highest of this game's options at 1.15+
+    match record backs it: record 86% of 14 (floor 79%)
+- Sun 00:30  Metropolitanos FC v Deportivo Rayo Zuliano  -  Double Chance / Home or Away @1.15
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 92% of 12 (floor 79%)
+- Sun 00:30  Sarasota Paradise v Richmond Kickers  -  Over/Under / Over 1.5 @1.16
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 100% of 14 (floor 75%)
+- Sun 00:30  El Talar v Ferro Carril Oeste  -  Winner / Away @1.45
+    book's no-margin chance 63% - the highest of this game's options at 1.15+
+- Sun 00:30  CD Colegio Los Leones v Puerto Montt Basquetbol  -  Handicap / Home (-10.5) @1.53
+    book's no-margin chance 60% - the highest of this game's options at 1.15+
+- Sun 00:30  CD Universidad Catolica De Santiago v CD Las Animas  -  Handicap / Home (+5.5) @1.46
+    book's no-margin chance 62% - the highest of this game's options at 1.15+
+- Sun 01:00  Sao Paulo FC SP v EC Vitoria BA  -  Double Chance / Home or Draw @1.16
+    book's no-margin chance 82% - the highest of this game's options at 1.15+
+    match record backs it: record 93% of 14 (floor 67%)
+- Sun 01:00  Universitario de Deportes v FBC Melgar  -  2nd Half - Total / Under 2.5 @1.15
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 93% of 14 (floor 64%)
+- Sun 01:00  Diriangen FC Diriamba v CD Walter Ferretti  -  Double Chance / Home or Draw @1.16
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 75% of 12 (floor 67%)
+- Sun 01:00  CD Chanares v Tomas de Rocamora  -  Handicap / Home (-10.5) @1.49
+    book's no-margin chance 61% - the highest of this game's options at 1.15+
+
+## 2026-10-10 20:56 WAT  |  every game football + basketball, the book's most likely option at 1.15+ - tonight to 06:00 mixed part 2 - 8,345.12x (46 games)  |  code ZRZ8H0
+http://www.sportybet.com/ng/?shareCode=ZRZ8H0
+- Sun 01:00  Argentino Junin v San Martin Corrientes  -  Total / Over 145.5 @1.22
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+- Sun 01:00  Criollos de Caguas v Monarcas Leon BC  -  Winner / Home @1.26
+    book's no-margin chance 73% - the highest of this game's options at 1.15+
+- Sun 01:00  Boston Celtics v Philadelphia 76ers  -  Handicap / Home (+2.5) @1.35
+    book's no-margin chance 70% - the highest of this game's options at 1.15+
+- Sun 01:00  Miami Heat v Minnesota Timberwolves  -  Handicap / Away (+5.5) @1.37
+    book's no-margin chance 68% - the highest of this game's options at 1.15+
+- Sun 01:05  Quimsa Santiogo Del Estero v Boca Juniors  -  Total / Over 148.5 @1.22
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+- Sun 01:30  Austin FC v Nashville SC  -  Over/Under / Under 4.5 @1.18
+    book's no-margin chance 82% - the highest of this game's options at 1.15+
+    match record backs it: record 93% of 14 (floor 67%)
+- Sun 01:30  Minnesota United FC v Houston Dynamo  -  Over/Under / Under 4.5 @1.17
+    book's no-margin chance 82% - the highest of this game's options at 1.15+
+    match record backs it: record 85% of 13 (floor 67%)
+- Sun 01:30  Sporting Kansas City v Portland Timbers  -  2nd Half - Total / Under 3.5 @1.15
+    book's no-margin chance 83% - the highest of this game's options at 1.15+
+    match record backs it: record 83% of 12 (floor 75%)
+- Sun 01:30  CA River Plate (ARG) v Estudiantes Rio Cuarto  -  1X2 / Home @1.17
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 50% of 12 (floor 50%)
+- Sun 01:30  Corpus Christi FC v FC Naples  -  2nd Half - Total / Under 2.5 @1.19
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+    match record backs it: record 86% of 14 (floor 64%)
+- Sun 01:30  Racing de Chivilcoy v Gimnasia de Comodoro  -  Total / Over 146.5 @1.21
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+- Sun 01:30  Golden State Warriors v Sacramento Kings  -  Handicap / Home (+2.5) @1.32
+    book's no-margin chance 71% - the highest of this game's options at 1.15+
+- Sun 02:00  Atlas FC v CD Guadalajara  -  Over/Under / Under 4.5 @1.15
+    book's no-margin chance 82% - the highest of this game's options at 1.15+
+    match record backs it: record 100% of 12 (floor 67%)
+- Sun 02:00  El Paso Locomotive FC v Orange County SC  -  Double Chance / Home or Draw @1.16
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 71% of 14 (floor 67%)
+- Sun 02:00  New Mexico United v Monterey Bay FC  -  Double Chance / Home or Draw @1.19
+    book's no-margin chance 79% - the highest of this game's options at 1.15+
+    match record backs it: record 79% of 14 (floor 67%)
+- Sun 02:00  CD Mineros de Zacatecas v Cancun FC  -  2nd Half - Total / Over 0.5 @1.19
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+    match record backs it: record 91% of 11 (floor 71%)
+- Sun 02:00  CSD Dorados Sinaloa v Cruz Azul Hidalgo  -  2nd Half - Total / Over 0.5 @1.15
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 75% of 12 (floor 71%)
+- Sun 02:00  Jaiba Brava v Alacranes de Durango  -  Over/Under / Under 3.5 @1.24
+    book's no-margin chance 75% - the highest of this game's options at 1.15+
+    match record backs it: record 91% of 11 (floor 71%)
+- Sun 02:00  CD Malacateco v CD Guastatoya  -  Over/Under / Under 3.5 @1.21
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+    match record backs it: record 83% of 12 (floor 71%)
+- Sun 02:00  Indigenas de Matagalpa FC v Real Esteli FC  -  Over/Under / Under 4.5 @1.17
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 93% of 14 (floor 67%)
+- Sun 02:10  CD Jorge Guzman v Regatas Corrientes  -  Total / Under 176.5 @1.41
+    book's no-margin chance 66% - the highest of this game's options at 1.15+
+- Sun 02:15  Bogota FC v Boyaca Patriotas  -  2nd Half - Total / Under 2.5 @1.15
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 70% of 10 (floor 64%)
+- Sun 02:30  Lobos UPNFM v CD Marathon San Pedro Sula  -  2nd Half - Total / Under 2.5 @1.17
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+    match record backs it: record 90% of 10 (floor 64%)
+- Sun 03:00  Oakland Roots SC v San Antonio FC  -  2nd Half - Total / Under 2.5 @1.15
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 86% of 14 (floor 64%)
+- Sun 03:00  Phoenix Rising FC v Las Vegas Lights  -  Over/Under / Over 1.5 @1.17
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 79% of 14 (floor 75%)
+- Sun 03:00  Sacramento Republic FC v Colorado Springs Switchbacks FC  -  2nd Half - Total / Under 2.5 @1.15
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 85% of 13 (floor 64%)
+- Sun 03:00  CS Herediano v AD San Carlos  -  Double Chance / Home or Away @1.25
+    book's no-margin chance 75% - the highest of this game's options at 1.15+
+    match record backs it: record 91% of 11 (floor 79%)
+- Sun 03:30  Av Alta FC v Greenville Triumph SC  -  1st Half - Over/Under / Under 2.5 @1.15
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 93% of 14 (floor 89%)
+- Sun 03:30  Phoenix Suns v San Antonio Spurs  -  Winner / Away @1.40
+    book's no-margin chance 67% - the highest of this game's options at 1.15+
+- Sun 04:10  CF America v CF Monterrey  -  Over/Under / Over 1.5 @1.18
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 100% of 14 (floor 75%)
+- Sun 05:00  Matsumoto Yamaga FC v Kagoshima United  -  2nd Half - Total / Under 2.5 @1.15
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 75% of 12 (floor 64%)
+- Sun 05:00  Roasso Kumamoto v Ehime FC  -  2nd Half - Total / Under 2.5 @1.18
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+    match record backs it: record 91% of 11 (floor 64%)
+- Sun 05:00  Sydney Kings v Adelaide 36ers  -  Total / Over 177.5 @1.21
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+- Sun 05:00  Taoyuan Taiwan Beer Leopards v Taipei Taishin Mars  -  Total / Over 208.5 @1.40
+    book's no-margin chance 66% - the highest of this game's options at 1.15+
+- Sun 05:05  Montedio Yamagata v Vegalta Sendai  -  2nd Half - Total / Under 2.5 @1.18
+    book's no-margin chance 79% - the highest of this game's options at 1.15+
+    match record backs it: record 92% of 12 (floor 64%)
+- Sun 05:35  Fukushima Firebonds v Gifu Swoops  -  Winner / Home @1.25
+    book's no-margin chance 74% - the highest of this game's options at 1.15+
+- Sun 06:00  JEF United Chiba v V-Varen Nagasaki  -  2nd Half - Total / Under 2.5 @1.19
+    book's no-margin chance 80% - the highest of this game's options at 1.15+
+    match record backs it: record 88% of 8 (floor 64%)
+- Sun 06:00  Gwangju FC v Ulsan HD FC  -  1st Half - Over/Under / Under 2.5 @1.16
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 93% of 14 (floor 89%)
+- Sun 06:00  Kataller Toyama v Tegevajaro Miyazaki  -  2nd Half - Total / Over 0.5 @1.20
+    book's no-margin chance 78% - the highest of this game's options at 1.15+
+    match record backs it: record 80% of 10 (floor 71%)
+- Sun 06:00  Gainare Tottori v FC Gifu  -  Over/Under / Under 4.5 @1.15
+    book's no-margin chance 81% - the highest of this game's options at 1.15+
+    match record backs it: record 77% of 13 (floor 67%)
+- Sun 06:00  Tochigi SC v Renofa Yamaguchi  -  2nd Half - Total / Under 2.5 @1.16
+    book's no-margin chance 79% - the highest of this game's options at 1.15+
+    match record backs it: record 83% of 12 (floor 64%)
+- Sun 06:00  Suwon Bluewings v Ansan Greeners FC  -  1X2 / Home @1.20
+    book's no-margin chance 76% - the highest of this game's options at 1.15+
+    match record backs it: record 50% of 12 (floor 50%)
+- Sun 06:00  Gangneung Citizen FC v Siheung Citizen FC  -  Double Chance / Draw or Away @1.22
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+    match record backs it: record 64% of 14 (floor 57%)
+- Sun 06:00  Southern Hoiho Women v Tokomanawa Queens Women  -  Handicap / Home (+1.5) @1.57
+    book's no-margin chance 59% - the highest of this game's options at 1.15+
+- Sun 06:00  Anyang Jungkwanjang Red Boosters v LG Sakers  -  Total / Over 153.5 @1.22
+    book's no-margin chance 76% - the highest of this game's options at 1.15+
+- Sun 06:00  Samsung Thunders v Goyang Skygunners  -  Total / Over 151.5 @1.22
+    book's no-margin chance 77% - the highest of this game's options at 1.15+
+
+## 2026-10-10 21:46 WAT  |  one market: Match Result after 5 Minutes / Draw - the 9 longest prices - 2.53x (9 games)  |  code YZNM5F
+http://www.sportybet.com/ng/?shareCode=YZNM5F
+- Sat 23:15  CA Tigre v CA Banfield  -  Match Result after 5 Minutes / Draw @1.07
+    book's no-margin chance 84% - among the 9 longest prices on the board
+    match record backs it: record 86% of 14 (2 untimed counted against) (floor 83%)
+- Sun 00:00  FC Juarez v Club Tijuana de Caliente  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 83% - among the 9 longest prices on the board
+    match record backs it: record 100% of 11 (floor 83%)
+- Sun 00:00  Queretaro FC v Atlante FC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 83% - among the 9 longest prices on the board
+    match record backs it: record 91% of 11 (1 untimed counted against) (floor 83%)
+- Sun 00:30  Philadelphia Union v Real Salt Lake  -  Match Result after 5 Minutes / Draw @1.14
+    book's no-margin chance 80% - among the 9 longest prices on the board
+    match record backs it: record 86% of 14 (1 untimed counted against) (floor 83%)
+- Sun 00:30  Charlotte FC v FC Dallas  -  Match Result after 5 Minutes / Draw @1.13
+    book's no-margin chance 81% - among the 9 longest prices on the board
+    match record backs it: record 86% of 14 (floor 83%)
+- Sun 00:30  New England Revolution v Seattle Sounders  -  Match Result after 5 Minutes / Draw @1.13
+    book's no-margin chance 81% - among the 9 longest prices on the board
+    match record backs it: record 92% of 12 (floor 83%)
+- Sun 01:00  Sao Paulo FC SP v EC Vitoria BA  -  Match Result after 5 Minutes / Draw @1.09
+    book's no-margin chance 84% - among the 9 longest prices on the board
+    match record backs it: record 93% of 14 (floor 83%)
+- Sun 01:30  Minnesota United FC v Houston Dynamo  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - among the 9 longest prices on the board
+    match record backs it: record 85% of 13 (1 untimed counted against) (floor 83%)
+- Sun 06:00  Gwangju FC v Ulsan HD FC  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - among the 9 longest prices on the board
+    match record backs it: record 93% of 14 (floor 83%)
+
+## 2026-10-10 21:46 WAT  |  one market: Total Goals from 1 to 10 min / Under 0.5 - the 8 longest prices - 6.84x (8 games)  |  code XVQNXD
+http://www.sportybet.com/ng/?shareCode=XVQNXD
+- Sat 23:15  CA Tigre v CA Banfield  -  Total Goals from 1 to 10 min / Under 0.5 @1.20
+    book's no-margin chance 78% - among the 8 longest prices on the board
+    match record backs it: record 79% of 14 (2 untimed counted against) (floor 73%)
+- Sun 00:00  Queretaro FC v Atlante FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 75% - among the 8 longest prices on the board
+    match record backs it: record 82% of 11 (1 untimed counted against) (floor 73%)
+- Sun 00:00  FC Juarez v Club Tijuana de Caliente  -  Total Goals from 1 to 10 min / Under 0.5 @1.24
+    book's no-margin chance 76% - among the 8 longest prices on the board
+    match record backs it: record 100% of 11 (floor 73%)
+- Sun 00:30  Philadelphia Union v Real Salt Lake  -  Total Goals from 1 to 10 min / Under 0.5 @1.35
+    book's no-margin chance 70% - among the 8 longest prices on the board
+    match record backs it: record 86% of 14 (1 untimed counted against) (floor 73%)
+- Sun 00:30  Charlotte FC v FC Dallas  -  Total Goals from 1 to 10 min / Under 0.5 @1.32
+    book's no-margin chance 72% - among the 8 longest prices on the board
+    match record backs it: record 79% of 14 (floor 73%)
+- Sun 00:30  New England Revolution v Seattle Sounders  -  Total Goals from 1 to 10 min / Under 0.5 @1.31
+    book's no-margin chance 72% - among the 8 longest prices on the board
+    match record backs it: record 92% of 12 (floor 73%)
+- Sun 01:00  Sao Paulo FC SP v EC Vitoria BA  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 78% - among the 8 longest prices on the board
+    match record backs it: record 86% of 14 (floor 73%)
+- Sun 01:30  Minnesota United FC v Houston Dynamo  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    book's no-margin chance 74% - among the 8 longest prices on the board
+    match record backs it: record 85% of 13 (1 untimed counted against) (floor 73%)
+
+## 2026-10-11 07:59 WAT  |  one market: Match Result after 5 Minutes / Draw - the 29 longest prices - 17.28x (29 games)  |  code TV95AK
+http://www.sportybet.com/ng/?shareCode=TV95AK
+- Sun 11:15  FC Utrecht v Willem II Tilburg  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 81% - among the 29 longest prices on the board
+    match record backs it: record 100% of 6 (floor 83%)
+- Sun 12:00  Southampton v Portsmouth FC  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - among the 29 longest prices on the board
+    match record backs it: record 100% of 9 (floor 83%)
+- Sun 12:00  FC Slovan Liberec v 1. FC Slovacko Uherske Hradiste  -  Match Result after 5 Minutes / Draw @1.09
+    book's no-margin chance 82% - among the 29 longest prices on the board
+    match record backs it: record 100% of 11 (floor 83%)
+- Sun 12:30  Standard Liege v Royal Charleroi SC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 83% - among the 29 longest prices on the board
+    match record backs it: record 100% of 6 (floor 83%)
+- Sun 13:00  Randers FC v Viborg FF  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - among the 29 longest prices on the board
+    match record backs it: record 90% of 10 (floor 83%)
+- Sun 13:30  PEC Zwolle v SC Cambuur  -  Match Result after 5 Minutes / Draw @1.13
+    book's no-margin chance 81% - among the 29 longest prices on the board
+    match record backs it: record 83% of 6 (floor 83%)
+- Sun 13:30  SC Telstar v ADO Den Haag  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - among the 29 longest prices on the board
+    match record backs it: record 100% of 7 (floor 83%)
+- Sun 13:30  TSV Hartberg v Austria Lustenau  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 83% - among the 29 longest prices on the board
+    match record backs it: record 89% of 9 (floor 83%)
+- Sun 14:00  Lazio v Monza  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 83% - among the 29 longest prices on the board
+    match record backs it: record 86% of 7 (floor 83%)
+- Sun 15:00  Union Gilloise v Oud-Heverlee Leuven  -  Match Result after 5 Minutes / Draw @1.13
+    book's no-margin chance 80% - among the 29 longest prices on the board
+    match record backs it: record 86% of 7 (floor 83%)
+- Sun 16:30  CD Everton Vina del Mar v Deportes La Serena  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 81% - among the 29 longest prices on the board
+    match record backs it: record 93% of 14 (floor 83%)
+- Sun 16:30  Pogon Szczecin v Korona Kielce  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - among the 29 longest prices on the board
+    match record backs it: record 90% of 10 (floor 83%)
+- Sun 17:00  Sparta Prague v FK Pardubice  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 80% - among the 29 longest prices on the board
+    match record backs it: record 83% of 12 (2 untimed counted against) (floor 83%)
+- Sun 17:00  Sassuolo v AC Milan  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - among the 29 longest prices on the board
+    match record backs it: record 86% of 7 (1 untimed counted against) (floor 83%)
+- Sun 17:30  KVC Westerlo v Royal Antwerp FC  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 81% - among the 29 longest prices on the board
+    match record backs it: record 100% of 6 (floor 83%)
+- Sun 17:30  Betis v Osasuna  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - among the 29 longest prices on the board
+    match record backs it: record 100% of 6 (floor 83%)
+- Sun 18:45  CA San Lorenzo de Almagro v Deportivo Riestra AFBC  -  Match Result after 5 Minutes / Draw @1.06
+    book's no-margin chance 85% - among the 29 longest prices on the board
+    match record backs it: record 83% of 12 (2 untimed counted against) (floor 83%)
+- Sun 19:00  UTC de Cajamarca v Sporting Cristal  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 81% - among the 29 longest prices on the board
+    match record backs it: record 86% of 14 (1 untimed counted against) (floor 83%)
+- Sun 19:00  Coquimbo Unido v Colo-Colo  -  Match Result after 5 Minutes / Draw @1.08
+    book's no-margin chance 82% - among the 29 longest prices on the board
+    match record backs it: record 93% of 14 (1 untimed counted against) (floor 83%)
+- Sun 20:00  Atletico Mineiro MG v Santos FC SP  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - among the 29 longest prices on the board
+    match record backs it: record 86% of 14 (2 untimed counted against) (floor 83%)
+- Sun 20:15  Vikingur Reykjavik v IA Akranes  -  Match Result after 5 Minutes / Draw @1.15
+    book's no-margin chance 78% - among the 29 longest prices on the board
+    match record backs it: record 93% of 14 (floor 83%)
+- Sun 20:15  Breidablik v Keflavik IF  -  Match Result after 5 Minutes / Draw @1.14
+    book's no-margin chance 79% - among the 29 longest prices on the board
+    match record backs it: record 100% of 14 (floor 83%)
+- Sun 21:00  CA Platense v Argentinos Juniors  -  Match Result after 5 Minutes / Draw @1.06
+    book's no-margin chance 85% - among the 29 longest prices on the board
+    match record backs it: record 92% of 13 (1 untimed counted against) (floor 83%)
+- Sun 21:30  CR Flamengo RJ v Fluminense FC RJ  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - among the 29 longest prices on the board
+    match record backs it: record 86% of 14 (2 untimed counted against) (floor 83%)
+- Sun 21:30  Gremio FB Porto Alegrense RS v SC Internacional RS  -  Match Result after 5 Minutes / Draw @1.09
+    book's no-margin chance 84% - among the 29 longest prices on the board
+    match record backs it: record 93% of 14 (1 untimed counted against) (floor 83%)
+- Sun 21:30  Deportes Concepcion v Deportes Union La Calera  -  Match Result after 5 Minutes / Draw @1.07
+    book's no-margin chance 83% - among the 29 longest prices on the board
+    match record backs it: record 86% of 14 (2 untimed counted against) (floor 83%)
+- Sun 22:05  Jaguares de Cordoba v CD Tolima  -  Match Result after 5 Minutes / Draw @1.09
+    book's no-margin chance 82% - among the 29 longest prices on the board
+    match record backs it: record 85% of 13 (2 untimed counted against) (floor 83%)
+- Sun 23:15  Racing Club Avellaneda v CA Belgrano de Cordoba  -  Match Result after 5 Minutes / Draw @1.07
+    book's no-margin chance 84% - among the 29 longest prices on the board
+    match record backs it: record 85% of 13 (floor 83%)
+- Sun 23:30  EC Bahia BA v Mirassol FC SP  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - among the 29 longest prices on the board
+    match record backs it: record 92% of 12 (1 untimed counted against) (floor 83%)
+
+## 2026-10-11 07:59 WAT  |  one market: Total Goals from 1 to 10 min / Under 0.5 - the 26 longest prices - 404.60x (26 games)  |  code R955UQ
+http://www.sportybet.com/ng/?shareCode=R955UQ
+- Sun 11:15  FC Utrecht v Willem II Tilburg  -  Total Goals from 1 to 10 min / Under 0.5 @1.31
+    book's no-margin chance 72% - among the 26 longest prices on the board
+    match record backs it: record 83% of 6 (floor 73%)
+- Sun 12:00  Motherwell FC v Celtic  -  Total Goals from 1 to 10 min / Under 0.5 @1.32
+    book's no-margin chance 71% - among the 26 longest prices on the board
+    match record backs it: record 75% of 12 (1 untimed counted against) (floor 73%)
+- Sun 12:00  FC Slovan Liberec v 1. FC Slovacko Uherske Hradiste  -  Total Goals from 1 to 10 min / Under 0.5 @1.24
+    book's no-margin chance 75% - among the 26 longest prices on the board
+    match record backs it: record 91% of 11 (floor 73%)
+- Sun 12:30  FC St. Pauli v Karlsruher SC  -  Total Goals from 1 to 10 min / Under 0.5 @1.32
+    book's no-margin chance 71% - among the 26 longest prices on the board
+    match record backs it: record 100% of 6 (floor 73%)
+- Sun 12:30  Standard Liege v Royal Charleroi SC  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75% - among the 26 longest prices on the board
+    match record backs it: record 100% of 6 (floor 73%)
+- Sun 13:30  SC Telstar v ADO Den Haag  -  Total Goals from 1 to 10 min / Under 0.5 @1.29
+    book's no-margin chance 73% - among the 26 longest prices on the board
+    match record backs it: record 86% of 7 (floor 73%)
+- Sun 14:30  MFK Ruzomberok v MSK Zilina  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 72% - among the 26 longest prices on the board
+    match record backs it: record 83% of 12 (floor 73%)
+- Sun 15:00  Union Gilloise v Oud-Heverlee Leuven  -  Total Goals from 1 to 10 min / Under 0.5 @1.33
+    book's no-margin chance 71% - among the 26 longest prices on the board
+    match record backs it: record 86% of 7 (floor 73%)
+- Sun 16:30  CD Everton Vina del Mar v Deportes La Serena  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74% - among the 26 longest prices on the board
+    match record backs it: record 79% of 14 (floor 73%)
+- Sun 16:30  Pogon Szczecin v Korona Kielce  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75% - among the 26 longest prices on the board
+    match record backs it: record 80% of 10 (floor 73%)
+- Sun 17:00  Sparta Prague v FK Pardubice  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 72% - among the 26 longest prices on the board
+    match record backs it: record 75% of 12 (1 untimed counted against) (floor 73%)
+- Sun 17:00  NK Slaven Belupo v HNK Rijeka  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74% - among the 26 longest prices on the board
+    match record backs it: record 90% of 10 (floor 73%)
+- Sun 17:30  KVC Westerlo v Royal Antwerp FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.31
+    book's no-margin chance 72% - among the 26 longest prices on the board
+    match record backs it: record 83% of 6 (floor 73%)
+- Sun 17:30  Betis v Osasuna  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 75% - among the 26 longest prices on the board
+    match record backs it: record 100% of 6 (floor 73%)
+- Sun 17:30  Mallorca v Las Palmas  -  Total Goals from 1 to 10 min / Under 0.5 @1.24
+    book's no-margin chance 75% - among the 26 longest prices on the board
+    match record backs it: record 75% of 8 (floor 73%)
+- Sun 18:45  CA San Lorenzo de Almagro v Deportivo Riestra AFBC  -  Total Goals from 1 to 10 min / Under 0.5 @1.15
+    book's no-margin chance 81% - among the 26 longest prices on the board
+    match record backs it: record 83% of 12 (2 untimed counted against) (floor 73%)
+- Sun 19:00  UTC de Cajamarca v Sporting Cristal  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74% - among the 26 longest prices on the board
+    match record backs it: record 79% of 14 (1 untimed counted against) (floor 73%)
+- Sun 19:00  Coquimbo Unido v Colo-Colo  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76% - among the 26 longest prices on the board
+    match record backs it: record 86% of 14 (1 untimed counted against) (floor 73%)
+- Sun 20:00  Atletico Mineiro MG v Santos FC SP  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 76% - among the 26 longest prices on the board
+    match record backs it: record 79% of 14 (2 untimed counted against) (floor 73%)
+- Sun 20:15  Breidablik v Keflavik IF  -  Total Goals from 1 to 10 min / Under 0.5 @1.37
+    book's no-margin chance 68% - among the 26 longest prices on the board
+    match record backs it: record 79% of 14 (floor 73%)
+- Sun 21:00  CA Rosario Central v Independiente Rivadavia  -  Total Goals from 1 to 10 min / Under 0.5 @1.19
+    book's no-margin chance 79% - among the 26 longest prices on the board
+    match record backs it: record 77% of 13 (3 untimed counted against) (floor 73%)
+- Sun 21:00  CA Platense v Argentinos Juniors  -  Total Goals from 1 to 10 min / Under 0.5 @1.16
+    book's no-margin chance 80% - among the 26 longest prices on the board
+    match record backs it: record 92% of 13 (1 untimed counted against) (floor 73%)
+- Sun 21:30  CR Flamengo RJ v Fluminense FC RJ  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 76% - among the 26 longest prices on the board
+    match record backs it: record 86% of 14 (2 untimed counted against) (floor 73%)
+- Sun 21:30  Gremio FB Porto Alegrense RS v SC Internacional RS  -  Total Goals from 1 to 10 min / Under 0.5 @1.22
+    book's no-margin chance 78% - among the 26 longest prices on the board
+    match record backs it: record 93% of 14 (1 untimed counted against) (floor 73%)
+- Sun 23:15  Racing Club Avellaneda v CA Belgrano de Cordoba  -  Total Goals from 1 to 10 min / Under 0.5 @1.19
+    book's no-margin chance 79% - among the 26 longest prices on the board
+    match record backs it: record 77% of 13 (floor 73%)
+- Sun 23:30  EC Bahia BA v Mirassol FC SP  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    book's no-margin chance 74% - among the 26 longest prices on the board
+    match record backs it: record 83% of 12 (1 untimed counted against) (floor 73%)
+
+## 2026-10-11 08:18 WAT  |  one market: Match Result after 5 Minutes / Draw - the 50 longest prices, record check waived (user) - 258.85x (50 games)  |  code YQGNDG
+http://www.sportybet.com/ng/?shareCode=YQGNDG
+- Sun 11:00  Qingdao West Coast FC v Dalian Yingbo FC  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): record 71% of 14 (2 untimed counted against) (floor 83%)
+- Sun 11:15  FC Utrecht v Willem II Tilburg  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 81% - among the 50 longest prices of the 81 games offering it
+    record check passed: record 100% of 6 (floor 83%)
+- Sun 11:30  Como 1907 v Roma  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): only 2+3 timed games (need 3 a side)
+- Sun 12:00  Motherwell FC v Celtic  -  Match Result after 5 Minutes / Draw @1.13
+    book's no-margin chance 81% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): record 75% of 12 (1 untimed counted against) (floor 83%)
+- Sun 12:00  Orebro SK v Ljungskile SK  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 81% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): record 64% of 14 (1 untimed counted against) (floor 83%)
+- Sun 12:00  Southampton v Portsmouth FC  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - among the 50 longest prices of the 81 games offering it
+    record check passed: record 100% of 9 (floor 83%)
+- Sun 12:35  Liaoning Tieren FC v Wuhan Three Towns FC  -  Match Result after 5 Minutes / Draw @1.13
+    book's no-margin chance 81% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): record 79% of 14 (1 untimed counted against) (floor 83%)
+- Sun 12:35  Chongqing Tonglianglong FC v Shandong Taishan FC  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): record 64% of 14 (2 untimed counted against) (floor 83%)
+- Sun 13:00  Hammarby IF v Djurgardens IF  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): no record
+- Sun 13:00  Randers FC v Viborg FF  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - among the 50 longest prices of the 81 games offering it
+    record check passed: record 90% of 10 (floor 83%)
+- Sun 13:30  PEC Zwolle v SC Cambuur  -  Match Result after 5 Minutes / Draw @1.13
+    book's no-margin chance 81% - among the 50 longest prices of the 81 games offering it
+    record check passed: record 83% of 6 (floor 83%)
+- Sun 13:30  SC Telstar v ADO Den Haag  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - among the 50 longest prices of the 81 games offering it
+    record check passed: record 100% of 7 (floor 83%)
+- Sun 13:30  SCR Altach v Wolfsberger AC  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): record 78% of 9 (1 untimed counted against) (floor 83%)
+- Sun 13:30  Fredrikstad FK v Tromsoe IL  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): no record
+- Sun 13:45  GKS Piast Gliwice v Widzew Lodz  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): only 5+2 timed games (need 3 a side)
+- Sun 14:00  IFK Varnamo v Falkenbergs FF  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 81% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): no record
+- Sun 14:00  Nice v Strasbourg  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): only 2+2 timed games (need 3 a side)
+- Sun 14:30  Cologne v Borussia M´gladbach  -  Match Result after 5 Minutes / Draw @1.13
+    book's no-margin chance 81% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): no record
+- Sun 15:00  Union Gilloise v Oud-Heverlee Leuven  -  Match Result after 5 Minutes / Draw @1.13
+    book's no-margin chance 80% - among the 50 longest prices of the 81 games offering it
+    record check passed: record 86% of 7 (floor 83%)
+- Sun 15:00  Broendby IF v Lyngby BK  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): no record
+- Sun 15:30  BK Hacken v Orgryte IS  -  Match Result after 5 Minutes / Draw @1.14
+    book's no-margin chance 80% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): record 57% of 14 (3 untimed counted against) (floor 83%)
+- Sun 15:45  Excelsior Rotterdam v FC Groningen  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 81% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): only 3+2 timed games (need 3 a side)
+- Sun 16:00  Aalesunds FK v Sarpsborg 08  -  Match Result after 5 Minutes / Draw @1.14
+    book's no-margin chance 81% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): no record
+- Sun 16:00  LASK Linz v SK Rapid  -  Match Result after 5 Minutes / Draw @1.13
+    book's no-margin chance 80% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): record 55% of 11 (2 untimed counted against) (floor 83%)
+- Sun 16:00  IK Start v HamKam  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): record 67% of 12 (1 untimed counted against) (floor 83%)
+- Sun 16:00  IK Brage v Helsingborgs IF  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): no record
+- Sun 16:15  Rennes v AJ Auxerre  -  Match Result after 5 Minutes / Draw @1.13
+    book's no-margin chance 81% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): only 3+2 timed games (need 3 a side)
+- Sun 16:30  Liverpool v Man City  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): no record
+- Sun 16:30  Freiburg v Schalke  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): only 3+2 timed games (need 3 a side)
+- Sun 16:30  CD Everton Vina del Mar v Deportes La Serena  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 81% - among the 50 longest prices of the 81 games offering it
+    record check passed: record 93% of 14 (floor 83%)
+- Sun 16:30  Pogon Szczecin v Korona Kielce  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - among the 50 longest prices of the 81 games offering it
+    record check passed: record 90% of 10 (floor 83%)
+- Sun 17:00  Sparta Prague v FK Pardubice  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 80% - among the 50 longest prices of the 81 games offering it
+    record check passed: record 83% of 12 (2 untimed counted against) (floor 83%)
+- Sun 17:00  Besiktas Istanbul v Kocaelispor  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 81% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): only 6+2 timed games (need 3 a side)
+- Sun 17:00  FC Midtjylland v Copenhagen  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): record 71% of 14 (1 untimed counted against) (floor 83%)
+- Sun 17:00  Sassuolo v AC Milan  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - among the 50 longest prices of the 81 games offering it
+    record check passed: record 86% of 7 (1 untimed counted against) (floor 83%)
+- Sun 17:30  KVC Westerlo v Royal Antwerp FC  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 81% - among the 50 longest prices of the 81 games offering it
+    record check passed: record 100% of 6 (floor 83%)
+- Sun 17:30  Betis v Osasuna  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - among the 50 longest prices of the 81 games offering it
+    record check passed: record 100% of 6 (floor 83%)
+- Sun 18:00  Benfica v Vitoria SC Guimaraes  -  Match Result after 5 Minutes / Draw @1.13
+    book's no-margin chance 80% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): record 78% of 9 (floor 83%)
+- Sun 18:15  Lillestroem SK v Molde  -  Match Result after 5 Minutes / Draw @1.14
+    book's no-margin chance 80% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): no record
+- Sun 18:15  Hapoel Ramat Gan Givatayim FC v Beitar Jerusalem FC  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 80% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): record 70% of 10 (3 untimed counted against) (floor 83%)
+- Sun 18:15  Yellow-Red KV Mechelen v St. Truidense VV  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): no record
+- Sun 19:00  UTC de Cajamarca v Sporting Cristal  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 81% - among the 50 longest prices of the 81 games offering it
+    record check passed: record 86% of 14 (1 untimed counted against) (floor 83%)
+- Sun 19:15  Legia Warszawa v Wisla Krakow  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): record 67% of 9 (1 untimed counted against) (floor 83%)
+- Sun 19:45  Troyes v Marseille  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): only 2+3 timed games (need 3 a side)
+- Sun 20:00  Racing Santander v Valencia  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - among the 50 longest prices of the 81 games offering it
+    record check FAILED (booked anyway, user): only 3+2 timed games (need 3 a side)
+- Sun 20:00  Atletico Mineiro MG v Santos FC SP  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - among the 50 longest prices of the 81 games offering it
+    record check passed: record 86% of 14 (2 untimed counted against) (floor 83%)
+- Sun 20:15  Vikingur Reykjavik v IA Akranes  -  Match Result after 5 Minutes / Draw @1.15
+    book's no-margin chance 78% - among the 50 longest prices of the 81 games offering it
+    record check passed: record 93% of 14 (floor 83%)
+- Sun 20:15  Breidablik v Keflavik IF  -  Match Result after 5 Minutes / Draw @1.14
+    book's no-margin chance 79% - among the 50 longest prices of the 81 games offering it
+    record check passed: record 100% of 14 (floor 83%)
+- Sun 21:30  CR Flamengo RJ v Fluminense FC RJ  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - among the 50 longest prices of the 81 games offering it
+    record check passed: record 86% of 14 (2 untimed counted against) (floor 83%)
+- Sun 23:30  EC Bahia BA v Mirassol FC SP  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - among the 50 longest prices of the 81 games offering it
+    record check passed: record 92% of 12 (1 untimed counted against) (floor 83%)
+
+## 2026-10-11 08:18 WAT  |  one market: Total Goals from 1 to 10 min / Under 0.5 - the 50 longest prices, record check waived (user) - 430,692.51x (50 games)  |  code JBKALP
+http://www.sportybet.com/ng/?shareCode=JBKALP
+- Sun 11:15  FC Utrecht v Willem II Tilburg  -  Total Goals from 1 to 10 min / Under 0.5 @1.31
+    book's no-margin chance 72% - among the 50 longest prices of the 99 games offering it
+    record check passed: record 83% of 6 (floor 73%)
+- Sun 11:30  Como 1907 v Roma  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): only 2+3 timed games (need 3 a side)
+- Sun 12:00  Motherwell FC v Celtic  -  Total Goals from 1 to 10 min / Under 0.5 @1.32
+    book's no-margin chance 71% - among the 50 longest prices of the 99 games offering it
+    record check passed: record 75% of 12 (1 untimed counted against) (floor 73%)
+- Sun 12:00  Southampton v Portsmouth FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): record 56% of 9 (floor 73%)
+- Sun 12:30  Hertha v Greuther Furth  -  Total Goals from 1 to 10 min / Under 0.5 @1.36
+    book's no-margin chance 70% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): only 2+3 timed games (need 3 a side)
+- Sun 12:30  FC St. Pauli v Karlsruher SC  -  Total Goals from 1 to 10 min / Under 0.5 @1.32
+    book's no-margin chance 71% - among the 50 longest prices of the 99 games offering it
+    record check passed: record 100% of 6 (floor 73%)
+- Sun 12:30  Bochum v Arminia Bielefeld  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): record 57% of 7 (1 untimed counted against) (floor 73%)
+- Sun 12:35  Liaoning Tieren FC v Wuhan Three Towns FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.32
+    book's no-margin chance 72% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): record 57% of 14 (1 untimed counted against) (floor 73%)
+- Sun 13:00  Hammarby IF v Djurgardens IF  -  Total Goals from 1 to 10 min / Under 0.5 @1.29
+    book's no-margin chance 73% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): no record
+- Sun 13:00  Randers FC v Viborg FF  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    book's no-margin chance 74% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): record 70% of 10 (floor 73%)
+- Sun 13:00  FC Andorra v CD Castellon  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): record 50% of 8 (floor 73%)
+- Sun 13:30  PEC Zwolle v SC Cambuur  -  Total Goals from 1 to 10 min / Under 0.5 @1.31
+    book's no-margin chance 72% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): record 67% of 6 (floor 73%)
+- Sun 13:30  SC Telstar v ADO Den Haag  -  Total Goals from 1 to 10 min / Under 0.5 @1.29
+    book's no-margin chance 73% - among the 50 longest prices of the 99 games offering it
+    record check passed: record 86% of 7 (floor 73%)
+- Sun 13:30  SCR Altach v Wolfsberger AC  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): record 56% of 9 (1 untimed counted against) (floor 73%)
+- Sun 14:00  Nice v Strasbourg  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): only 2+2 timed games (need 3 a side)
+- Sun 14:30  Cologne v Borussia M´gladbach  -  Total Goals from 1 to 10 min / Under 0.5 @1.32
+    book's no-margin chance 72% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): no record
+- Sun 14:30  MFK Ruzomberok v MSK Zilina  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 72% - among the 50 longest prices of the 99 games offering it
+    record check passed: record 83% of 12 (floor 73%)
+- Sun 15:00  Union Gilloise v Oud-Heverlee Leuven  -  Total Goals from 1 to 10 min / Under 0.5 @1.33
+    book's no-margin chance 71% - among the 50 longest prices of the 99 games offering it
+    record check passed: record 86% of 7 (floor 73%)
+- Sun 15:00  Broendby IF v Lyngby BK  -  Total Goals from 1 to 10 min / Under 0.5 @1.29
+    book's no-margin chance 73% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): no record
+- Sun 15:15  Almeria v Leganes  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): record 67% of 9 (1 untimed counted against) (floor 73%)
+- Sun 15:15  Real Sociedad v RC Deportivo de A Coruna  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 75% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): only 4+2 timed games (need 3 a side)
+- Sun 15:30  BK Hacken v Orgryte IS  -  Total Goals from 1 to 10 min / Under 0.5 @1.35
+    book's no-margin chance 70% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): record 50% of 14 (3 untimed counted against) (floor 73%)
+- Sun 15:45  Excelsior Rotterdam v FC Groningen  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 72% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): record 67% of 6 (floor 73%)
+- Sun 16:00  Aalesunds FK v Sarpsborg 08  -  Total Goals from 1 to 10 min / Under 0.5 @1.34
+    book's no-margin chance 71% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): no record
+- Sun 16:00  LASK Linz v SK Rapid  -  Total Goals from 1 to 10 min / Under 0.5 @1.32
+    book's no-margin chance 71% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): record 36% of 11 (2 untimed counted against) (floor 73%)
+- Sun 16:00  IK Start v HamKam  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): record 67% of 12 (1 untimed counted against) (floor 73%)
+- Sun 16:00  AFK Csikszereda Miercurea Ciuc v CS Universitatea Craiova  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    book's no-margin chance 74% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): record 73% of 11 (floor 73%)
+- Sun 16:15  Rennes v AJ Auxerre  -  Total Goals from 1 to 10 min / Under 0.5 @1.32
+    book's no-margin chance 72% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): only 3+2 timed games (need 3 a side)
+- Sun 16:30  Liverpool v Man City  -  Total Goals from 1 to 10 min / Under 0.5 @1.29
+    book's no-margin chance 73% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): no record
+- Sun 16:30  Freiburg v Schalke  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): only 3+2 timed games (need 3 a side)
+- Sun 16:30  CD Everton Vina del Mar v Deportes La Serena  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74% - among the 50 longest prices of the 99 games offering it
+    record check passed: record 79% of 14 (floor 73%)
+- Sun 17:00  Sparta Prague v FK Pardubice  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 72% - among the 50 longest prices of the 99 games offering it
+    record check passed: record 75% of 12 (1 untimed counted against) (floor 73%)
+- Sun 17:00  Besiktas Istanbul v Kocaelispor  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 72% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): only 6+2 timed games (need 3 a side)
+- Sun 17:00  FK Zeleziarne Podbrezova v Spartak Trnava  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 73% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): record 70% of 10 (2 untimed counted against) (floor 73%)
+- Sun 17:00  FC Midtjylland v Copenhagen  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): record 71% of 14 (floor 73%)
+- Sun 17:00  Sassuolo v AC Milan  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    book's no-margin chance 74% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): record 71% of 7 (1 untimed counted against) (floor 73%)
+- Sun 17:00  NK Slaven Belupo v HNK Rijeka  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74% - among the 50 longest prices of the 99 games offering it
+    record check passed: record 90% of 10 (floor 73%)
+- Sun 17:30  KVC Westerlo v Royal Antwerp FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.31
+    book's no-margin chance 72% - among the 50 longest prices of the 99 games offering it
+    record check passed: record 83% of 6 (floor 73%)
+- Sun 17:30  Betis v Osasuna  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 75% - among the 50 longest prices of the 99 games offering it
+    record check passed: record 100% of 6 (floor 73%)
+- Sun 18:00  Benfica v Vitoria SC Guimaraes  -  Total Goals from 1 to 10 min / Under 0.5 @1.32
+    book's no-margin chance 71% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): record 44% of 9 (floor 73%)
+- Sun 18:15  Lillestroem SK v Molde  -  Total Goals from 1 to 10 min / Under 0.5 @1.36
+    book's no-margin chance 70% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): no record
+- Sun 18:15  Yellow-Red KV Mechelen v St. Truidense VV  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): no record
+- Sun 19:00  Al-Shabab FC (SA) v Al-Taawoun FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 73% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): no record
+- Sun 19:00  UTC de Cajamarca v Sporting Cristal  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74% - among the 50 longest prices of the 99 games offering it
+    record check passed: record 79% of 14 (1 untimed counted against) (floor 73%)
+- Sun 19:15  Legia Warszawa v Wisla Krakow  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): record 56% of 9 (1 untimed counted against) (floor 73%)
+- Sun 19:45  Troyes v Marseille  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 73% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): only 2+3 timed games (need 3 a side)
+- Sun 20:00  Racing Santander v Valencia  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    book's no-margin chance 74% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): only 3+2 timed games (need 3 a side)
+- Sun 20:15  Vikingur Reykjavik v IA Akranes  -  Total Goals from 1 to 10 min / Under 0.5 @1.38
+    book's no-margin chance 68% - among the 50 longest prices of the 99 games offering it
+    record check FAILED (booked anyway, user): record 64% of 14 (floor 73%)
+- Sun 20:15  Breidablik v Keflavik IF  -  Total Goals from 1 to 10 min / Under 0.5 @1.37
+    book's no-margin chance 68% - among the 50 longest prices of the 99 games offering it
+    record check passed: record 79% of 14 (floor 73%)
+- Sun 23:30  EC Bahia BA v Mirassol FC SP  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    book's no-margin chance 74% - among the 50 longest prices of the 99 games offering it
+    record check passed: record 83% of 12 (1 untimed counted against) (floor 73%)
+
+## 2026-10-11 18:12 WAT  |  minute mix: 5-min draw, 10-min draw or the Minutes-tab option the record backs - every minute game - 8.28x (21 games)  |  code WG08YZ
+http://www.sportybet.com/ng/?shareCode=WG08YZ
+- Sun 19:15  Legia Warszawa v Wisla Krakow  -  Total Goals from 1 to 75 min / Over 0.5 @1.08
+    book's no-margin chance 87% - other option
+    match record backs it: record 100% of 9 (4+ answered a side, floor 90%)
+- Sun 19:15  Odra Opole v Miedz Legnica  -  10 Minutes - 1X2 / Draw @1.17
+    book's no-margin chance 77% - 10-min draw
+    match record backs it: record 88% of 8 (3+ answered a side, floor 80%)
+- Sun 19:30  CA Estudiantes v Deportivo Moron  -  10 Minutes - 1X2 / Draw @1.09
+    book's no-margin chance 82% - 10-min draw
+    match record backs it: record 93% of 14 (6+ answered a side, floor 80%)
+- Sun 19:30  Club Almirante Brown v CA San Miguel  -  10 Minutes - 1X2 / Draw @1.10
+    book's no-margin chance 81% - 10-min draw
+    match record backs it: record 86% of 14 (6+ answered a side, floor 80%)
+- Sun 20:00  Racing Santander v Valencia  -  Total Goals from 1 to 75 min / Under 4.5 @1.07
+    book's no-margin chance 89% - other option
+    match record backs it: record 100% of 6 (3+ answered a side, floor 90%)
+- Sun 20:00  Cadiz v Sporting Gijon  -  Total Goals from 1 to 25 min / Under 1.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 100% of 8 (3+ answered a side, floor 90%)
+- Sun 20:00  EC Juventude RS v Sao Bernardo FC  -  10 Minutes - 1X2 / Draw @1.15
+    book's no-margin chance 78% - 10-min draw
+    match record backs it: record 100% of 14 (7+ answered a side, floor 80%)
+- Sun 20:15  Breidablik v Keflavik IF  -  Match Result after 5 Minutes / Draw @1.15
+    book's no-margin chance 79% - 5-min draw
+    match record backs it: record 100% of 14 (7+ answered a side, floor 90%)
+- Sun 20:15  Vikingur Reykjavik v IA Akranes  -  Match Result after 5 Minutes / Draw @1.16
+    book's no-margin chance 78% - 5-min draw
+    match record backs it: record 93% of 14 (7+ answered a side, floor 90%)
+- Sun 20:30  FC Arouca v Estrela Amadora  -  Total Goals from 1 to 85 min / Over 0.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 100% of 6 (3+ answered a side, floor 90%)
+- Sun 21:00  CA Platense v Argentinos Juniors  -  Match Result after 5 Minutes / Draw @1.06
+    book's no-margin chance 85% - 5-min draw
+    match record backs it: record 92% of 13 (6+ answered a side, floor 90%)
+- Sun 21:00  CA Rosario Central v Independiente Rivadavia  -  Total Goals from 1 to 75 min / Under 3.5 @1.08
+    book's no-margin chance 87% - other option
+    match record backs it: record 100% of 13 (6+ answered a side, floor 90%)
+- Sun 21:00  Rubio Nu v Club Olimpia  -  10 Minutes - 1X2 / Draw @1.16
+    book's no-margin chance 77% - 10-min draw
+    match record backs it: record 85% of 13 (5+ answered a side, floor 80%)
+- Sun 21:30  CR Flamengo RJ v Fluminense FC RJ  -  10 Minutes - 1X2 / Draw @1.19
+    book's no-margin chance 77% - 10-min draw
+    match record backs it: record 86% of 14 (6+ answered a side, floor 80%)
+- Sun 21:30  Gremio FB Porto Alegrense RS v SC Internacional RS  -  Match Result after 5 Minutes / Draw @1.08
+    book's no-margin chance 85% - 5-min draw
+    match record backs it: record 93% of 14 (6+ answered a side, floor 90%)
+- Sun 21:30  SE Palmeiras SP v SC Corinthians SP  -  Total Goals from 1 to 20 min / Under 1.5 @1.06
+    book's no-margin chance 89% - other option
+    match record backs it: record 100% of 14 (7+ answered a side, floor 90%)
+- Sun 21:30  Sport Boys Association v Alianza Atletico  -  Total Goals from 1 to 85 min / Over 0.5 @1.08
+    book's no-margin chance 87% - other option
+    match record backs it: record 100% of 14 (7+ answered a side, floor 90%)
+- Sun 22:05  Jaguares de Cordoba v CD Tolima  -  Total Goals from 1 to 85 min / Over 0.5 @1.08
+    book's no-margin chance 87% - other option
+    match record backs it: record 92% of 13 (6+ answered a side, floor 90%)
+- Sun 23:15  Racing Club Avellaneda v CA Belgrano de Cordoba  -  Total Goals from 1 to 50 min / Under 2.5 @1.08
+    book's no-margin chance 87% - other option
+    match record backs it: record 100% of 13 (6+ answered a side, floor 90%)
+- Sun 23:20  Libertad Asuncion v Club Guarani Asuncion  -  10 Minutes - 1X2 / Draw @1.14
+    book's no-margin chance 78% - 10-min draw
+    match record backs it: record 92% of 13 (5+ answered a side, floor 80%)
+- Sun 23:30  EC Bahia BA v Mirassol FC SP  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - 5-min draw
+    match record backs it: record 92% of 12 (5+ answered a side, floor 90%)
+
+## 2026-10-11 18:19 WAT  |  minute mix: 5-min draw, 10-min draw or the Minutes-tab option the record backs - every minute game - 15.88x (29 games)  |  code ULCGTM
+http://www.sportybet.com/ng/?shareCode=ULCGTM
+- Sun 19:30  CA Estudiantes v Deportivo Moron  -  10 Minutes - 1X2 / Draw @1.09
+    book's no-margin chance 82% - 10-min draw
+    match record backs it: record 93% of 14 (6+ answered a side, floor 80%)
+- Sun 19:30  Club Almirante Brown v CA San Miguel  -  10 Minutes - 1X2 / Draw @1.10
+    book's no-margin chance 81% - 10-min draw
+    match record backs it: record 86% of 14 (6+ answered a side, floor 80%)
+- Sun 20:00  Racing Santander v Valencia  -  Total Goals from 1 to 75 min / Under 4.5 @1.07
+    book's no-margin chance 89% - other option
+    match record backs it: record 100% of 6 (3+ answered a side, floor 90%)
+- Sun 20:00  Cadiz v Sporting Gijon  -  Total Goals from 1 to 25 min / Under 1.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 100% of 8 (3+ answered a side, floor 90%)
+- Sun 20:00  EC Juventude RS v Sao Bernardo FC  -  10 Minutes - 1X2 / Draw @1.15
+    book's no-margin chance 78% - 10-min draw
+    match record backs it: record 100% of 14 (7+ answered a side, floor 80%)
+- Sun 20:15  Breidablik v Keflavik IF  -  Match Result after 5 Minutes / Draw @1.15
+    book's no-margin chance 79% - 5-min draw
+    match record backs it: record 100% of 14 (7+ answered a side, floor 90%)
+- Sun 20:15  Vikingur Reykjavik v IA Akranes  -  Match Result after 5 Minutes / Draw @1.16
+    book's no-margin chance 78% - 5-min draw
+    match record backs it: record 93% of 14 (7+ answered a side, floor 90%)
+- Sun 20:30  FC Arouca v Estrela Amadora  -  Total Goals from 1 to 85 min / Over 0.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 100% of 6 (3+ answered a side, floor 90%)
+- Sun 21:00  CA Platense v Argentinos Juniors  -  Match Result after 5 Minutes / Draw @1.06
+    book's no-margin chance 85% - 5-min draw
+    match record backs it: record 92% of 13 (6+ answered a side, floor 90%)
+- Sun 21:00  CA Rosario Central v Independiente Rivadavia  -  Total Goals from 1 to 75 min / Under 3.5 @1.08
+    book's no-margin chance 87% - other option
+    match record backs it: record 100% of 13 (6+ answered a side, floor 90%)
+- Sun 21:00  Rubio Nu v Club Olimpia  -  10 Minutes - 1X2 / Draw @1.16
+    book's no-margin chance 77% - 10-min draw
+    match record backs it: record 85% of 13 (5+ answered a side, floor 80%)
+- Sun 21:30  CR Flamengo RJ v Fluminense FC RJ  -  10 Minutes - 1X2 / Draw @1.19
+    book's no-margin chance 77% - 10-min draw
+    match record backs it: record 86% of 14 (6+ answered a side, floor 80%)
+- Sun 21:30  Gremio FB Porto Alegrense RS v SC Internacional RS  -  Match Result after 5 Minutes / Draw @1.08
+    book's no-margin chance 85% - 5-min draw
+    match record backs it: record 93% of 14 (6+ answered a side, floor 90%)
+- Sun 21:30  SE Palmeiras SP v SC Corinthians SP  -  Total Goals from 1 to 20 min / Under 1.5 @1.06
+    book's no-margin chance 89% - other option
+    match record backs it: record 100% of 14 (7+ answered a side, floor 90%)
+- Sun 21:30  Sport Boys Association v Alianza Atletico  -  Total Goals from 1 to 85 min / Over 0.5 @1.08
+    book's no-margin chance 87% - other option
+    match record backs it: record 100% of 14 (7+ answered a side, floor 90%)
+- Sun 22:05  Jaguares de Cordoba v CD Tolima  -  Total Goals from 1 to 85 min / Over 0.5 @1.08
+    book's no-margin chance 87% - other option
+    match record backs it: record 92% of 13 (6+ answered a side, floor 90%)
+- Sun 23:15  Racing Club Avellaneda v CA Belgrano de Cordoba  -  Total Goals from 1 to 50 min / Under 2.5 @1.08
+    book's no-margin chance 87% - other option
+    match record backs it: record 100% of 13 (6+ answered a side, floor 90%)
+- Sun 23:20  Libertad Asuncion v Club Guarani Asuncion  -  10 Minutes - 1X2 / Draw @1.14
+    book's no-margin chance 78% - 10-min draw
+    match record backs it: record 92% of 13 (5+ answered a side, floor 80%)
+- Sun 23:30  EC Bahia BA v Mirassol FC SP  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - 5-min draw
+    match record backs it: record 92% of 12 (5+ answered a side, floor 90%)
+- Mon 00:00  Saint Louis City SC v Los Angeles Galaxy  -  Total Goals from 1 to 50 min / Under 3.5 @1.08
+    book's no-margin chance 88% - other option
+    match record backs it: record 92% of 13 (6+ answered a side, floor 90%)
+- Mon 00:00  Atletico San Luis v Club Santos Laguna  -  Total Goals from 1 to 40 min / Under 2.5 @1.08
+    book's no-margin chance 87% - other option
+    match record backs it: record 92% of 12 (4+ answered a side, floor 90%)
+- Mon 00:00  Deportes Limache v CD Palestino  -  Total Goals from 1 to 40 min / Under 2.5 @1.08
+    book's no-margin chance 87% - other option
+    match record backs it: record 100% of 14 (7+ answered a side, floor 90%)
+- Mon 00:00  CD Escorpiones Belen v Deportivo Saprissa San Jose  -  10 Minutes - 1X2 / Draw @1.19
+    book's no-margin chance 75% - 10-min draw
+    match record backs it: record 91% of 11 (4+ answered a side, floor 80%)
+- Mon 00:10  Boyaca Chico FC v Cucuta Deportivo FC  -  Total Goals from 1 to 70 min / Under 3.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 91% of 11 (5+ answered a side, floor 90%)
+- Mon 00:10  CF Pachuca v Club Necaxa  -  Total Goals from 1 to 80 min / Under 4.5 @1.08
+    book's no-margin chance 87% - other option
+    match record backs it: record 100% of 11 (4+ answered a side, floor 90%)
+- Mon 00:30  Cusco FC v Alianza Lima  -  Match Result after 5 Minutes / Draw @1.08
+    book's no-margin chance 83% - 5-min draw
+    match record backs it: record 93% of 14 (6+ answered a side, floor 90%)
+- Mon 01:30  CA Talleres de Cordoba v CA Independiente Avellaneda  -  Match Result after 5 Minutes / Draw @1.08
+    book's no-margin chance 84% - 5-min draw
+    match record backs it: record 100% of 12 (6+ answered a side, floor 90%)
+- Mon 02:15  America de Cali v Independiente Medellin  -  Total Goals from 1 to 85 min / Over 0.5 @1.08
+    book's no-margin chance 87% - other option
+    match record backs it: record 100% of 14 (7+ answered a side, floor 90%)
+- Mon 02:15  Pumas UNAM v CF Cruz Azul  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 82% - 5-min draw
+    match record backs it: record 100% of 11 (5+ answered a side, floor 90%)
+
+## 2026-10-12 08:07 WAT  |  minute mix: 5-min draw, 10-min draw or the Minutes-tab option the record backs - every minute game - 16.67x (27 games)  |  code MMJZK6
+http://www.sportybet.com/ng/?shareCode=MMJZK6
+- Mon 13:00  Valladolid v Albacete Balompie  -  Total Goals from 1 to 85 min / Over 0.5 @1.08
+    book's no-margin chance 87% - other option
+    match record backs it: record 100% of 7 (3+ answered a side, floor 90%); options like it won 86 of 92 at a 90% record
+- Mon 15:15  Burgos CF v Granada  -  Total Goals from 1 to 85 min / Under 4.5 @1.03
+    book's no-margin chance 91% - other option
+    match record backs it: record 100% of 9 (4+ answered a side, floor 90%); options like it won 72 of 79 at a 90% record
+- Mon 16:00  PAOK v PAE PS Kalamata  -  Total Goals from 1 to 35 min / Under 2.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 100% of 9 (3+ answered a side, floor 90%); options like it won 111 of 117 at a 90% record
+- Mon 16:00  ACS Champions FC Arges v CFR Cluj  -  Total Goals from 1 to 5 min / Under 0.5 @1.08
+    book's no-margin chance 87% - other option
+    match record backs it: record 100% of 13 (6+ answered a side, floor 90%); options like it won 51 of 53 at a 90% record
+- Mon 17:00  RKS Radomiak Radom v LKP Motor Lublin  -  10 Minutes - 1X2 / Draw @1.20
+    book's no-margin chance 75% - 10-min draw
+    match record backs it: record 89% of 9 (3+ answered a side, floor 80%)
+- Mon 17:00  AC Oulu v HJK Helsinki  -  10 Minutes - 1X2 / Draw @1.18
+    book's no-margin chance 75% - 10-min draw
+    match record backs it: record 93% of 14 (6+ answered a side, floor 80%)
+- Mon 17:30  Atalanta v Venezia FC  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    book's no-margin chance 93% - other option
+    match record backs it: record 100% of 7 (3+ answered a side, floor 90%); options like it won 133 of 134 at a 90% record
+- Mon 17:30  Real Oviedo v Eibar  -  Total Goals from 1 to 85 min / Under 4.5 @1.03
+    book's no-margin chance 91% - other option
+    match record backs it: record 100% of 8 (4+ answered a side, floor 90%); options like it won 72 of 79 at a 90% record
+- Mon 18:00  Eyupspor v Goztepe Izmir  -  Total Goals from 1 to 20 min / Under 1.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 100% of 6 (3+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+- Mon 18:00  Malmo v Kalmar FF  -  Total Goals from 1 to 70 min / Under 4.5 @1.03
+    book's no-margin chance 93% - other option
+    match record backs it: record 93% of 14 (7+ answered a side, floor 90%); options like it won 111 of 117 at a 90% record
+- Mon 18:00  AGF Aarhus v SonderjyskE  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 81% - 5-min draw
+    match record backs it: record 100% of 13 (6+ answered a side, floor 90%)
+- Mon 19:00  FC Universitatea Cluj v Rapid Bucuresti 1923  -  10 Minutes - 1X2 / Draw @1.15
+    book's no-margin chance 78% - 10-min draw
+    match record backs it: record 92% of 12 (5+ answered a side, floor 80%)
+- Mon 19:00  FK Mladost Lucani v OFK Beograd  -  10 Minutes - 1X2 / Draw @1.14
+    book's no-margin chance 78% - 10-min draw
+    match record backs it: record 89% of 9 (4+ answered a side, floor 80%)
+- Mon 19:15  Al Gharafa SC v Esteghlal FC Tehran  -  10 Minutes - 1X2 / Draw @1.18
+    book's no-margin chance 76% - 10-min draw
+    match record backs it: record 100% of 8 (4+ answered a side, floor 80%)
+- Mon 19:15  Al Nassr Club v FK Neftchi Fargona  -  10 Minutes - 1X2 / Draw @1.25
+    book's no-margin chance 72% - 10-min draw
+    match record backs it: record 90% of 10 (4+ answered a side, floor 80%)
+- Mon 19:15  Al Quwa Al Jawiya v Al Ain FC  -  10 Minutes - 1X2 / Draw @1.19
+    book's no-margin chance 76% - 10-min draw
+    match record backs it: record 86% of 7 (3+ answered a side, floor 80%)
+- Mon 19:30  GKS Katowice v Wieczysta Krakow  -  Total Goals from 1 to 85 min / Under 5.5 @1.05
+    book's no-margin chance 89% - other option
+    match record backs it: record 100% of 12 (5+ answered a side, floor 90%); options like it won 109 of 112 at a 90% record
+- Mon 19:30  Delfino Pescara v Guidonia Montecelio 1937 FC  -  10 Minutes - 1X2 / Draw @1.17
+    book's no-margin chance 76% - 10-min draw
+    match record backs it: record 89% of 9 (3+ answered a side, floor 80%)
+- Mon 19:30  AZ Picerno v Cosenza Calcio  -  10 Minutes - 1X2 / Draw @1.15
+    book's no-margin chance 78% - 10-min draw
+    match record backs it: record 82% of 11 (5+ answered a side, floor 80%)
+- Mon 19:45  Dijon v Metz  -  10 Minutes - 1X2 / Draw @1.18
+    book's no-margin chance 76% - 10-min draw
+    match record backs it: record 83% of 6 (3+ answered a side, floor 80%)
+- Mon 20:00  Coventry City v Newcastle  -  Total Goals from 1 to 20 min / Under 1.5 @1.08
+    book's no-margin chance 88% - other option
+    match record backs it: record 100% of 6 (3+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+- Mon 20:00  Tenerife CD v Girona  -  Total Goals from 1 to 20 min / Under 1.5 @1.04
+    book's no-margin chance 90% - other option
+    match record backs it: record 100% of 7 (3+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+- Mon 20:00  Coritiba FC PR v Botafogo FR RJ  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 83% - 5-min draw
+    match record backs it: record 100% of 11 (5+ answered a side, floor 90%)
+- Mon 20:00  CA Lanus v Velez Sarsfield  -  10 Minutes - 1X2 / Draw @1.12
+    book's no-margin chance 80% - 10-min draw
+    match record backs it: record 83% of 12 (3+ answered a side, floor 80%)
+- Mon 21:00  Universidad de Chile v Nublense  -  Total Goals from 1 to 20 min / Under 1.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 93% of 14 (6+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+- Mon 21:00  CS 2 de Mayo v Sportivo Ameliano  -  10 Minutes - 1X2 / Draw @1.14
+    book's no-margin chance 78% - 10-min draw
+    match record backs it: record 86% of 14 (6+ answered a side, floor 80%)
+- Mon 22:30  Gimnasia y Esgrima Mendoza v Newell's Old Boys  -  Match Result after 5 Minutes / Draw @1.07
+    book's no-margin chance 84% - 5-min draw
+    match record backs it: record 90% of 10 (4+ answered a side, floor 90%)
+
+## 2026-10-12 10:45 WAT  |  0-0 at 10 only: Total Goals from 1 to 10 min / Under 0.5, 10-min record 80%+ - 4.56x (7 games)  |  code S554F9
+http://www.sportybet.com/ng/?shareCode=S554F9
+- Mon 17:00  RKS Radomiak Radom v LKP Motor Lublin  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    book's no-margin chance 74%
+    match record backs it: no goal by 10' in 89% of 9 (3+ answered a side, floor 80%)
+- Mon 18:00  AGF Aarhus v SonderjyskE  -  Total Goals from 1 to 10 min / Under 0.5 @1.31
+    book's no-margin chance 72%
+    match record backs it: no goal by 10' in 85% of 13 (6+ answered a side, floor 80%)
+- Mon 19:00  FC Universitatea Cluj v Rapid Bucuresti 1923  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76%
+    match record backs it: no goal by 10' in 92% of 12 (5+ answered a side, floor 80%)
+- Mon 19:45  Dijon v Metz  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74%
+    match record backs it: no goal by 10' in 83% of 6 (3+ answered a side, floor 80%)
+- Mon 20:00  Coritiba FC PR v Botafogo FR RJ  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    book's no-margin chance 74%
+    match record backs it: no goal by 10' in 91% of 11 (5+ answered a side, floor 80%)
+- Mon 20:00  CA Lanus v Velez Sarsfield  -  Total Goals from 1 to 10 min / Under 0.5 @1.18
+    book's no-margin chance 79%
+    match record backs it: no goal by 10' in 83% of 12 (3+ answered a side, floor 80%)
+- Mon 22:30  Gimnasia y Esgrima Mendoza v Newell's Old Boys  -  Total Goals from 1 to 10 min / Under 0.5 @1.18
+    book's no-margin chance 79%
+    match record backs it: no goal by 10' in 90% of 10 (5+ answered a side, floor 80%)
+
+## 2026-10-12 10:45 WAT  |  0-0 at 10 only: Total Goals from 1 to 10 min / Under 0.5, every game with a record - 117.82x (22 games)  |  code Z9P428
+http://www.sportybet.com/ng/?shareCode=Z9P428
+- Mon 13:00  Valladolid v Albacete Balompie  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76%
+    10-min record: no goal by 10' in 57% of 7 (1+ answered a side)
+- Mon 15:15  Burgos CF v Granada  -  Total Goals from 1 to 10 min / Under 0.5 @1.20
+    book's no-margin chance 78%
+    10-min record: no goal by 10' in 56% of 9 (3+ answered a side)
+- Mon 16:00  PAOK v PAE PS Kalamata  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 72%
+    10-min record: no goal by 10' in 78% of 9 (3+ answered a side)
+- Mon 16:00  ACS Champions FC Arges v CFR Cluj  -  Total Goals from 1 to 10 min / Under 0.5 @1.19
+    book's no-margin chance 79%
+    10-min record: no goal by 10' in 77% of 13 (6+ answered a side)
+- Mon 17:00  RKS Radomiak Radom v LKP Motor Lublin  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    book's no-margin chance 74%
+    10-min record: no goal by 10' in 89% of 9 (3+ answered a side)
+- Mon 17:30  Atalanta v Venezia FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 73%
+    10-min record: no goal by 10' in 57% of 7 (2+ answered a side)
+- Mon 17:30  Real Oviedo v Eibar  -  Total Goals from 1 to 10 min / Under 0.5 @1.20
+    book's no-margin chance 78%
+    10-min record: no goal by 10' in 62% of 8 (4+ answered a side)
+- Mon 18:00  AGF Aarhus v SonderjyskE  -  Total Goals from 1 to 10 min / Under 0.5 @1.31
+    book's no-margin chance 72%
+    10-min record: no goal by 10' in 85% of 13 (6+ answered a side)
+- Mon 18:00  Eyupspor v Goztepe Izmir  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 75%
+    10-min record: no goal by 10' in 67% of 6 (3+ answered a side)
+- Mon 18:00  Malmo v Kalmar FF  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 75%
+    10-min record: no goal by 10' in 50% of 14 (6+ answered a side)
+- Mon 19:00  FC Universitatea Cluj v Rapid Bucuresti 1923  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76%
+    10-min record: no goal by 10' in 92% of 12 (5+ answered a side)
+- Mon 19:30  GKS Katowice v Wieczysta Krakow  -  Total Goals from 1 to 10 min / Under 0.5 @1.31
+    book's no-margin chance 71%
+    10-min record: no goal by 10' in 67% of 12 (3+ answered a side)
+- Mon 19:45  Dijon v Metz  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74%
+    10-min record: no goal by 10' in 83% of 6 (3+ answered a side)
+- Mon 19:45  Torino v Udinese  -  Total Goals from 1 to 10 min / Under 0.5 @1.22
+    book's no-margin chance 78%
+    10-min record: no goal by 10' in 67% of 6 (2+ answered a side)
+- Mon 20:00  Coritiba FC PR v Botafogo FR RJ  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    book's no-margin chance 74%
+    10-min record: no goal by 10' in 91% of 11 (5+ answered a side)
+- Mon 20:00  CA Lanus v Velez Sarsfield  -  Total Goals from 1 to 10 min / Under 0.5 @1.18
+    book's no-margin chance 79%
+    10-min record: no goal by 10' in 83% of 12 (3+ answered a side)
+- Mon 20:00  Coventry City v Newcastle  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    book's no-margin chance 74%
+    10-min record: no goal by 10' in 67% of 6 (2+ answered a side)
+- Mon 20:00  Levante v Sevilla  -  Total Goals from 1 to 10 min / Under 0.5 @1.22
+    book's no-margin chance 78%
+    10-min record: no goal by 10' in 80% of 5 (2+ answered a side)
+- Mon 20:00  Tenerife CD v Girona  -  Total Goals from 1 to 10 min / Under 0.5 @1.21
+    book's no-margin chance 77%
+    10-min record: no goal by 10' in 86% of 7 (2+ answered a side)
+- Mon 20:15  FC Famalicao v Alverca Futebol  -  Total Goals from 1 to 10 min / Under 0.5 @1.22
+    book's no-margin chance 77%
+    10-min record: no goal by 10' in 25% of 8 (3+ answered a side)
+- Mon 21:00  Universidad de Chile v Nublense  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75%
+    10-min record: no goal by 10' in 71% of 14 (5+ answered a side)
+- Mon 22:30  Gimnasia y Esgrima Mendoza v Newell's Old Boys  -  Total Goals from 1 to 10 min / Under 0.5 @1.18
+    book's no-margin chance 79%
+    10-min record: no goal by 10' in 90% of 10 (5+ answered a side)
+
+## 2026-10-12 10:47 WAT  |  0-0 at 10 only: Total Goals from 1 to 10 min / Under 0.5, every game offering it - 248.89x (25 games)  |  code JH30F3
+http://www.sportybet.com/ng/?shareCode=JH30F3
+- Mon 13:00  Valladolid v Albacete Balompie  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76%
+    10-min record: record 57% of 7 (1+ a side)
+- Mon 15:15  Burgos CF v Granada  -  Total Goals from 1 to 10 min / Under 0.5 @1.20
+    book's no-margin chance 78%
+    10-min record: record 56% of 9 (3+ a side)
+- Mon 16:00  PAOK v PAE PS Kalamata  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 72%
+    10-min record: record 78% of 9 (3+ a side)
+- Mon 16:00  ACS Champions FC Arges v CFR Cluj  -  Total Goals from 1 to 10 min / Under 0.5 @1.19
+    book's no-margin chance 79%
+    10-min record: record 77% of 13 (6+ a side)
+- Mon 17:00  RKS Radomiak Radom v LKP Motor Lublin  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    book's no-margin chance 74%
+    10-min record: record 89% of 9 (3+ a side)
+- Mon 17:30  Atalanta v Venezia FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 73%
+    10-min record: record 57% of 7 (2+ a side)
+- Mon 17:30  Real Oviedo v Eibar  -  Total Goals from 1 to 10 min / Under 0.5 @1.20
+    book's no-margin chance 78%
+    10-min record: record 62% of 8 (4+ a side)
+- Mon 18:00  KFUM Oslo v Vaalerenga IF  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 73%
+    10-min record: no record
+- Mon 18:00  Eyupspor v Goztepe Izmir  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 75%
+    10-min record: record 67% of 6 (3+ a side)
+- Mon 18:00  IF Elfsborg v Halmstads BK  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 73%
+    10-min record: no record
+- Mon 18:00  Malmo v Kalmar FF  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 75%
+    10-min record: record 50% of 14 (6+ a side)
+- Mon 18:00  AGF Aarhus v SonderjyskE  -  Total Goals from 1 to 10 min / Under 0.5 @1.31
+    book's no-margin chance 72%
+    10-min record: record 85% of 13 (6+ a side)
+- Mon 19:00  FC Universitatea Cluj v Rapid Bucuresti 1923  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76%
+    10-min record: record 92% of 12 (5+ a side)
+- Mon 19:30  GKS Katowice v Wieczysta Krakow  -  Total Goals from 1 to 10 min / Under 0.5 @1.31
+    book's no-margin chance 71%
+    10-min record: record 67% of 12 (3+ a side)
+- Mon 19:45  Torino v Udinese  -  Total Goals from 1 to 10 min / Under 0.5 @1.22
+    book's no-margin chance 78%
+    10-min record: record 67% of 6 (2+ a side)
+- Mon 19:45  Dijon v Metz  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74%
+    10-min record: record 83% of 6 (3+ a side)
+- Mon 20:00  Coventry City v Newcastle  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    book's no-margin chance 74%
+    10-min record: record 67% of 6 (2+ a side)
+- Mon 20:00  Levante v Sevilla  -  Total Goals from 1 to 10 min / Under 0.5 @1.22
+    book's no-margin chance 78%
+    10-min record: record 80% of 5 (2+ a side)
+- Mon 20:00  Tenerife CD v Girona  -  Total Goals from 1 to 10 min / Under 0.5 @1.21
+    book's no-margin chance 77%
+    10-min record: record 86% of 7 (2+ a side)
+- Mon 20:00  Coritiba FC PR v Botafogo FR RJ  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    book's no-margin chance 74%
+    10-min record: record 91% of 11 (5+ a side)
+- Mon 20:00  CA Lanus v Velez Sarsfield  -  Total Goals from 1 to 10 min / Under 0.5 @1.18
+    book's no-margin chance 79%
+    10-min record: record 83% of 12 (3+ a side)
+- Mon 20:15  FC Famalicao v Alverca Futebol  -  Total Goals from 1 to 10 min / Under 0.5 @1.22
+    book's no-margin chance 77%
+    10-min record: record 25% of 8 (3+ a side)
+- Mon 21:00  Universidad de Chile v Nublense  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75%
+    10-min record: record 71% of 14 (5+ a side)
+- Mon 22:30  Gimnasia y Esgrima Mendoza v Newell's Old Boys  -  Total Goals from 1 to 10 min / Under 0.5 @1.18
+    book's no-margin chance 79%
+    10-min record: record 90% of 10 (5+ a side)
+- Mon 23:30  Chapecoense SC v CA Paranaense PR  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 76%
+    10-min record: no record
+
+## 2026-10-13 07:33 WAT  |  minute mix: 5-min draw, 10-min draw or the Minutes-tab option the record backs - every minute game - 8.71x (23 games)  |  code KEX652
+http://www.sportybet.com/ng/?shareCode=KEX652
+- Tue 13:15  Buriram United v Beijing Guoan  -  10 Minutes - 1X2 / Draw @1.18
+    book's no-margin chance 76% - 10-min draw
+    match record backs it: record 90% of 10 (3+ answered a side, floor 80%)
+- Tue 17:45  Lens v Sporting  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    book's no-margin chance 93% - other option
+    match record backs it: record 90% of 10 (4+ answered a side, floor 90%); options like it won 121 of 124 at a 90% record
+- Tue 17:45  Sabah Masazir v Slavia Prague  -  Total Goals from 1 to 85 min / Over 0.5 @1.05
+    book's no-margin chance 90% - other option
+    match record backs it: record 92% of 13 (6+ answered a side, floor 90%); options like it won 86 of 92 at a 90% record
+- Tue 18:00  Rot-Weiss Essen v Fortuna Cologne  -  10 Minutes - 1X2 / Draw @1.21
+    book's no-margin chance 74% - 10-min draw
+    match record backs it: record 89% of 9 (3+ answered a side, floor 80%)
+- Tue 18:30  Orlando Pirates FC v TS Galaxy FC  -  10 Minutes - 1X2 / Draw @1.17
+    book's no-margin chance 76% - 10-min draw
+    match record backs it: record 80% of 10 (3+ answered a side, floor 80%)
+- Tue 18:30  Richards Bay FC v Mamelodi Sundowns  -  Total Goals from 1 to 85 min / Over 0.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 100% of 10 (4+ answered a side, floor 90%); options like it won 86 of 92 at a 90% record
+- Tue 19:00  Cheltenham Town v Tottenham Hotspur U21  -  10 Minutes - 1X2 / Draw @1.28
+    book's no-margin chance 70% - 10-min draw
+    match record backs it: record 80% of 10 (3+ answered a side, floor 80%)
+- Tue 19:45  Bristol City v Blackburn Rovers  -  10 Minutes - 1X2 / Draw @1.17
+    book's no-margin chance 78% - 10-min draw
+    match record backs it: record 80% of 10 (4+ answered a side, floor 80%)
+- Tue 19:45  Burnley v Charlton Athletic  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 83% - 5-min draw
+    match record backs it: record 91% of 11 (4+ answered a side, floor 90%)
+- Tue 19:45  Cardiff City v Watford  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    book's no-margin chance 91% - other option
+    match record backs it: record 100% of 10 (4+ answered a side, floor 90%); options like it won 133 of 134 at a 90% record
+- Tue 19:45  Millwall FC v Swansea City  -  Total Goals from 1 to 85 min / Over 0.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 100% of 9 (4+ answered a side, floor 90%); options like it won 86 of 92 at a 90% record
+- Tue 19:45  Wolves v Bolton Wanderers  -  10 Minutes - 1X2 / Draw @1.22
+    book's no-margin chance 75% - 10-min draw
+    match record backs it: record 89% of 9 (4+ answered a side, floor 80%)
+- Tue 19:45  Wrexham AFC v West Bromwich Albion  -  Total Goals from 1 to 20 min / Under 1.5 @1.05
+    book's no-margin chance 90% - other option
+    match record backs it: record 100% of 12 (6+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+- Tue 19:45  Queens Park FC v Inverness Caledonian Thistle FC  -  Match Result after 5 Minutes / Draw @1.09
+    book's no-margin chance 83% - 5-min draw
+    match record backs it: record 92% of 13 (6+ answered a side, floor 90%)
+- Tue 19:45  Annan Athletic FC v Alloa Athletic FC  -  10 Minutes - 1X2 / Draw @1.16
+    book's no-margin chance 77% - 10-min draw
+    match record backs it: record 86% of 14 (6+ answered a side, floor 80%)
+- Tue 20:00  Arsenal v Lille  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    book's no-margin chance 93% - other option
+    match record backs it: record 100% of 8 (3+ answered a side, floor 90%); options like it won 133 of 134 at a 90% record
+- Tue 20:00  Atletico Madrid v Man Utd  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    book's no-margin chance 93% - other option
+    match record backs it: record 100% of 7 (3+ answered a side, floor 90%); options like it won 133 of 134 at a 90% record
+- Tue 20:00  Galatasaray Istanbul v Barcelona  -  Total Goals from 1 to 55 min / Under 4.5 @1.08
+    book's no-margin chance 88% - other option
+    match record backs it: record 100% of 8 (4+ answered a side, floor 90%); options like it won 138 of 139 at a 90% record
+- Tue 20:00  Inter v Club Brugge  -  Total Goals from 1 to 55 min / Under 4.5 @1.03
+    book's no-margin chance 93% - other option
+    match record backs it: record 100% of 8 (4+ answered a side, floor 90%); options like it won 138 of 139 at a 90% record
+- Tue 20:00  RB Leipzig v PSV Eindhoven  -  Total Goals from 1 to 75 min / Under 5.5 @1.06
+    book's no-margin chance 89% - other option
+    match record backs it: record 100% of 7 (3+ answered a side, floor 90%); options like it won 123 of 125 at a 90% record
+- Tue 20:00  Viking FK v Bayern Munich  -  Total Goals from 1 to 40 min / Under 3.5 @1.08
+    book's no-margin chance 88% - other option
+    match record backs it: record 91% of 11 (5+ answered a side, floor 90%); options like it won 134 of 136 at a 90% record
+- Tue 20:00  Birmingham City v Preston North End  -  Total Goals from 1 to 85 min / Over 0.5 @1.06
+    book's no-margin chance 89% - other option
+    match record backs it: record 100% of 9 (4+ answered a side, floor 90%); options like it won 86 of 92 at a 90% record
+- Tue 20:00  Stoke City v Middlesbrough FC  -  Total Goals from 1 to 20 min / Under 1.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 92% of 12 (5+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+
+## 2026-10-13 07:34 WAT  |  0-0 at 10 only: Total Goals from 1 to 10 min / Under 0.5, every game offering it - 243.46x (22 games)  |  code TJ9EX5
+http://www.sportybet.com/ng/?shareCode=TJ9EX5
+- Tue 17:45  Lens v Sporting  -  Total Goals from 1 to 10 min / Under 0.5 @1.29
+    book's no-margin chance 73%
+    10-min record: record 40% of 10 (1+ a side)
+- Tue 17:45  Sabah Masazir v Slavia Prague  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74%
+    10-min record: record 54% of 13 (5+ a side)
+- Tue 18:30  Durban City FC v AmaZulu FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.19
+    book's no-margin chance 79%
+    10-min record: record 62% of 8 (3+ a side)
+- Tue 18:30  Kaizer Chiefs v Stellenbosch FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.18
+    book's no-margin chance 79%
+    10-min record: record 75% of 8 (3+ a side)
+- Tue 18:30  Orlando Pirates FC v TS Galaxy FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76%
+    10-min record: record 70% of 10 (3+ a side)
+- Tue 18:30  Richards Bay FC v Mamelodi Sundowns  -  Total Goals from 1 to 10 min / Under 0.5 @1.24
+    book's no-margin chance 75%
+    10-min record: record 70% of 10 (4+ a side)
+- Tue 19:45  Bristol City v Blackburn Rovers  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76%
+    10-min record: record 80% of 10 (5+ a side)
+- Tue 19:45  Burnley v Charlton Athletic  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75%
+    10-min record: record 64% of 11 (4+ a side)
+- Tue 19:45  Cardiff City v Watford  -  Total Goals from 1 to 10 min / Under 0.5 @1.31
+    book's no-margin chance 72%
+    10-min record: record 50% of 10 (4+ a side)
+- Tue 19:45  Millwall FC v Swansea City  -  Total Goals from 1 to 10 min / Under 0.5 @1.24
+    book's no-margin chance 76%
+    10-min record: record 56% of 9 (4+ a side)
+- Tue 19:45  Wolves v Bolton Wanderers  -  Total Goals from 1 to 10 min / Under 0.5 @1.29
+    book's no-margin chance 73%
+    10-min record: record 67% of 9 (4+ a side)
+- Tue 19:45  Wrexham AFC v West Bromwich Albion  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76%
+    10-min record: record 75% of 12 (5+ a side)
+- Tue 19:45  Queens Park FC v Inverness Caledonian Thistle FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76%
+    10-min record: record 85% of 13 (6+ a side)
+- Tue 20:00  Arsenal v Lille  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 73%
+    10-min record: record 50% of 8 (2+ a side)
+- Tue 20:00  Atletico Madrid v Man Utd  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 73%
+    10-min record: record 86% of 7 (2+ a side)
+- Tue 20:00  Galatasaray Istanbul v Barcelona  -  Total Goals from 1 to 10 min / Under 0.5 @1.45
+    book's no-margin chance 65%
+    10-min record: record 75% of 8 (4+ a side)
+- Tue 20:00  Inter v Club Brugge  -  Total Goals from 1 to 10 min / Under 0.5 @1.34
+    book's no-margin chance 71%
+    10-min record: record 62% of 8 (3+ a side)
+- Tue 20:00  RB Leipzig v PSV Eindhoven  -  Total Goals from 1 to 10 min / Under 0.5 @1.40
+    book's no-margin chance 68%
+    10-min record: record 43% of 7 (3+ a side)
+- Tue 20:00  Viking FK v Bayern Munich  -  Total Goals from 1 to 10 min / Under 0.5 @1.50
+    book's no-margin chance 63%
+    10-min record: record 36% of 11 (5+ a side)
+- Tue 20:00  Villarreal v Napoli  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74%
+    10-min record: record 71% of 7 (2+ a side)
+- Tue 20:00  Birmingham City v Preston North End  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 75%
+    10-min record: record 33% of 9 (3+ a side)
+- Tue 20:00  Stoke City v Middlesbrough FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    book's no-margin chance 74%
+    10-min record: record 67% of 12 (4+ a side)
+
+## 2026-10-13 07:35 WAT  |  0-0 at 10 only: Total Goals from 1 to 10 min / Under 0.5, priced under 1.27 - 7.78x (10 games)  |  code LU14CD
+http://www.sportybet.com/ng/?shareCode=LU14CD
+- Tue 18:30  Durban City FC v AmaZulu FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.19
+    book's no-margin chance 79%
+    priced under 1.27
+- Tue 18:30  Kaizer Chiefs v Stellenbosch FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.18
+    book's no-margin chance 79%
+    priced under 1.27
+- Tue 18:30  Orlando Pirates FC v TS Galaxy FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76%
+    priced under 1.27
+- Tue 18:30  Richards Bay FC v Mamelodi Sundowns  -  Total Goals from 1 to 10 min / Under 0.5 @1.24
+    book's no-margin chance 75%
+    priced under 1.27
+- Tue 19:45  Bristol City v Blackburn Rovers  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76%
+    priced under 1.27
+- Tue 19:45  Burnley v Charlton Athletic  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75%
+    priced under 1.27
+- Tue 19:45  Millwall FC v Swansea City  -  Total Goals from 1 to 10 min / Under 0.5 @1.24
+    book's no-margin chance 76%
+    priced under 1.27
+- Tue 19:45  Wrexham AFC v West Bromwich Albion  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76%
+    priced under 1.27
+- Tue 19:45  Queens Park FC v Inverness Caledonian Thistle FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76%
+    priced under 1.27
+- Tue 20:00  Birmingham City v Preston North End  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 75%
+    priced under 1.27
+
+## 2026-10-13 07:41 WAT  |  0-0 at 10 only: Total Goals from 1 to 10 min / Under 0.5, the 50 earliest games offering it, no record check - 272,146.97x (50 games)  |  code GNPCZD
+http://www.sportybet.com/ng/?shareCode=GNPCZD
+- Tue 17:45  Lens v Sporting  -  Total Goals from 1 to 10 min / Under 0.5 @1.29
+    book's no-margin chance 73%
+    no record check (user: as many as possible)
+- Tue 17:45  Sabah Masazir v Slavia Prague  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74%
+    no record check (user: as many as possible)
+- Tue 18:30  Durban City FC v AmaZulu FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.19
+    book's no-margin chance 79%
+    no record check (user: as many as possible)
+- Tue 18:30  Kaizer Chiefs v Stellenbosch FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.18
+    book's no-margin chance 79%
+    no record check (user: as many as possible)
+- Tue 18:30  Orlando Pirates FC v TS Galaxy FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76%
+    no record check (user: as many as possible)
+- Tue 18:30  Richards Bay FC v Mamelodi Sundowns  -  Total Goals from 1 to 10 min / Under 0.5 @1.24
+    book's no-margin chance 75%
+    no record check (user: as many as possible)
+- Tue 19:45  Bristol City v Blackburn Rovers  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76%
+    no record check (user: as many as possible)
+- Tue 19:45  Burnley v Charlton Athletic  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75%
+    no record check (user: as many as possible)
+- Tue 19:45  Cardiff City v Watford  -  Total Goals from 1 to 10 min / Under 0.5 @1.31
+    book's no-margin chance 72%
+    no record check (user: as many as possible)
+- Tue 19:45  Millwall FC v Swansea City  -  Total Goals from 1 to 10 min / Under 0.5 @1.24
+    book's no-margin chance 76%
+    no record check (user: as many as possible)
+- Tue 19:45  Wolves v Bolton Wanderers  -  Total Goals from 1 to 10 min / Under 0.5 @1.29
+    book's no-margin chance 73%
+    no record check (user: as many as possible)
+- Tue 19:45  Wrexham AFC v West Bromwich Albion  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76%
+    no record check (user: as many as possible)
+- Tue 19:45  Queens Park FC v Inverness Caledonian Thistle FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76%
+    no record check (user: as many as possible)
+- Tue 20:00  Arsenal v Lille  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 73%
+    no record check (user: as many as possible)
+- Tue 20:00  Atletico Madrid v Man Utd  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 73%
+    no record check (user: as many as possible)
+- Tue 20:00  Galatasaray Istanbul v Barcelona  -  Total Goals from 1 to 10 min / Under 0.5 @1.45
+    book's no-margin chance 65%
+    no record check (user: as many as possible)
+- Tue 20:00  Inter v Club Brugge  -  Total Goals from 1 to 10 min / Under 0.5 @1.34
+    book's no-margin chance 71%
+    no record check (user: as many as possible)
+- Tue 20:00  RB Leipzig v PSV Eindhoven  -  Total Goals from 1 to 10 min / Under 0.5 @1.40
+    book's no-margin chance 68%
+    no record check (user: as many as possible)
+- Tue 20:00  Viking FK v Bayern Munich  -  Total Goals from 1 to 10 min / Under 0.5 @1.50
+    book's no-margin chance 63%
+    no record check (user: as many as possible)
+- Tue 20:00  Villarreal v Napoli  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74%
+    no record check (user: as many as possible)
+- Tue 20:00  Birmingham City v Preston North End  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 75%
+    no record check (user: as many as possible)
+- Tue 20:00  Stoke City v Middlesbrough FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    book's no-margin chance 74%
+    no record check (user: as many as possible)
+- Wed 00:30  CA Bucaramanga v Aguilas Doradas Rionegro  -  Total Goals from 1 to 10 min / Under 0.5 @1.21
+    book's no-margin chance 77%
+    no record check (user: as many as possible)
+- Wed 02:30  Millonarios FC v CD Once Caldas  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76%
+    no record check (user: as many as possible)
+- Wed 17:00  Bohemians Prague 1905 v FK Mlada Boleslav  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74%
+    no record check (user: as many as possible)
+- Wed 17:45  Feyenoord v Como 1907  -  Total Goals from 1 to 10 min / Under 0.5 @1.34
+    book's no-margin chance 71%
+    no record check (user: as many as possible)
+- Wed 19:45  Norwich v Southampton  -  Total Goals from 1 to 10 min / Under 0.5 @1.32
+    book's no-margin chance 71%
+    no record check (user: as many as possible)
+- Wed 19:45  Portsmouth FC v Sheffield United  -  Total Goals from 1 to 10 min / Under 0.5 @1.23
+    book's no-margin chance 76%
+    no record check (user: as many as possible)
+- Wed 22:30  CD Junior FC v Deportivo Pereira FC SA  -  Total Goals from 1 to 10 min / Under 0.5 @1.29
+    book's no-margin chance 72%
+    no record check (user: as many as possible)
+- Wed 23:00  CA Sarmiento Junin v CA River Plate (ARG)  -  Total Goals from 1 to 10 min / Under 0.5 @1.19
+    book's no-margin chance 79%
+    no record check (user: as many as possible)
+- Thu 00:30  CF Montreal v Atlanta United FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 73%
+    no record check (user: as many as possible)
+- Thu 00:30  Columbus Crew v Charlotte FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.31
+    book's no-margin chance 72%
+    no record check (user: as many as possible)
+- Thu 00:30  DC United v New York Red Bulls  -  Total Goals from 1 to 10 min / Under 0.5 @1.32
+    book's no-margin chance 72%
+    no record check (user: as many as possible)
+- Thu 00:30  FC Cincinnati v New England Revolution  -  Total Goals from 1 to 10 min / Under 0.5 @1.35
+    book's no-margin chance 70%
+    no record check (user: as many as possible)
+- Thu 00:30  Inter Miami CF v New York City FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.38
+    book's no-margin chance 69%
+    no record check (user: as many as possible)
+- Thu 00:30  Toronto FC v Orlando City SC  -  Total Goals from 1 to 10 min / Under 0.5 @1.34
+    book's no-margin chance 71%
+    no record check (user: as many as possible)
+- Thu 00:30  Independiente Santa Fe v Jaguares de Cordoba  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 75%
+    no record check (user: as many as possible)
+- Thu 01:30  Fluminense FC RJ v SE Palmeiras SP  -  Total Goals from 1 to 10 min / Under 0.5 @1.17
+    book's no-margin chance 81%
+    no record check (user: as many as possible)
+- Thu 01:30  Chicago Fire v Philadelphia Union  -  Total Goals from 1 to 10 min / Under 0.5 @1.33
+    book's no-margin chance 71%
+    no record check (user: as many as possible)
+- Thu 01:30  FC Dallas v Seattle Sounders  -  Total Goals from 1 to 10 min / Under 0.5 @1.30
+    book's no-margin chance 73%
+    no record check (user: as many as possible)
+- Thu 01:30  Nashville SC v Sporting Kansas City  -  Total Goals from 1 to 10 min / Under 0.5 @1.39
+    book's no-margin chance 68%
+    no record check (user: as many as possible)
+- Thu 01:30  Saint Louis City SC v Vancouver Whitecaps FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.32
+    book's no-margin chance 72%
+    no record check (user: as many as possible)
+- Thu 14:40  Al-Faisaly FC v Al-Kholood  -  Total Goals from 1 to 10 min / Under 0.5 @1.24
+    book's no-margin chance 75%
+    no record check (user: as many as possible)
+- Thu 15:50  Al-Khaleej Club v Al-Fayha FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.22
+    book's no-margin chance 77%
+    no record check (user: as many as possible)
+- Thu 16:15  Al-Hazm v Al-Fateh SC  -  Total Goals from 1 to 10 min / Under 0.5 @1.26
+    book's no-margin chance 74%
+    no record check (user: as many as possible)
+- Thu 17:45  Alkmaar v Hapoel Be`er Sheva FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.32
+    book's no-margin chance 72%
+    no record check (user: as many as possible)
+- Thu 17:45  KKS Lech Poznan v Bayer Leverkusen  -  Total Goals from 1 to 10 min / Under 0.5 @1.32
+    book's no-margin chance 72%
+    no record check (user: as many as possible)
+- Thu 17:45  Lyon v Crystal Palace  -  Total Goals from 1 to 10 min / Under 0.5 @1.28
+    book's no-margin chance 74%
+    no record check (user: as many as possible)
+- Thu 17:45  NK Celje v AC Omonia Nicosia  -  Total Goals from 1 to 10 min / Under 0.5 @1.25
+    book's no-margin chance 76%
+    no record check (user: as many as possible)
+- Thu 17:45  Salzburg v AC Milan  -  Total Goals from 1 to 10 min / Under 0.5 @1.29
+    book's no-margin chance 73%
+    no record check (user: as many as possible)
+
+## 2026-10-13 07:48 WAT  |  minute mix: 5-min draw, 10-min draw or the Minutes-tab option the record backs - part 1 - 45.15x (35 games)  |  code LNHW9R
+http://www.sportybet.com/ng/?shareCode=LNHW9R
+- Tue 13:15  Buriram United v Beijing Guoan  -  10 Minutes - 1X2 / Draw @1.18
+    book's no-margin chance 76% - 10-min draw
+    match record backs it: record 90% of 10 (3+ answered a side, floor 80%)
+- Tue 17:45  Lens v Sporting  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    book's no-margin chance 93% - other option
+    match record backs it: record 90% of 10 (4+ answered a side, floor 90%); options like it won 121 of 124 at a 90% record
+- Tue 17:45  Sabah Masazir v Slavia Prague  -  Total Goals from 1 to 85 min / Over 0.5 @1.05
+    book's no-margin chance 90% - other option
+    match record backs it: record 92% of 13 (6+ answered a side, floor 90%); options like it won 86 of 92 at a 90% record
+- Tue 18:00  Rot-Weiss Essen v Fortuna Cologne  -  10 Minutes - 1X2 / Draw @1.21
+    book's no-margin chance 74% - 10-min draw
+    match record backs it: record 89% of 9 (3+ answered a side, floor 80%)
+- Tue 18:30  Orlando Pirates FC v TS Galaxy FC  -  10 Minutes - 1X2 / Draw @1.17
+    book's no-margin chance 76% - 10-min draw
+    match record backs it: record 80% of 10 (3+ answered a side, floor 80%)
+- Tue 18:30  Richards Bay FC v Mamelodi Sundowns  -  Total Goals from 1 to 85 min / Over 0.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 100% of 10 (4+ answered a side, floor 90%); options like it won 86 of 92 at a 90% record
+- Tue 19:00  Cheltenham Town v Tottenham Hotspur U21  -  10 Minutes - 1X2 / Draw @1.28
+    book's no-margin chance 70% - 10-min draw
+    match record backs it: record 80% of 10 (3+ answered a side, floor 80%)
+- Tue 19:45  Bristol City v Blackburn Rovers  -  10 Minutes - 1X2 / Draw @1.17
+    book's no-margin chance 78% - 10-min draw
+    match record backs it: record 80% of 10 (4+ answered a side, floor 80%)
+- Tue 19:45  Burnley v Charlton Athletic  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 83% - 5-min draw
+    match record backs it: record 91% of 11 (4+ answered a side, floor 90%)
+- Tue 19:45  Cardiff City v Watford  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    book's no-margin chance 91% - other option
+    match record backs it: record 100% of 10 (4+ answered a side, floor 90%); options like it won 133 of 134 at a 90% record
+- Tue 19:45  Millwall FC v Swansea City  -  Total Goals from 1 to 85 min / Over 0.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 100% of 9 (4+ answered a side, floor 90%); options like it won 86 of 92 at a 90% record
+- Tue 19:45  Wolves v Bolton Wanderers  -  10 Minutes - 1X2 / Draw @1.22
+    book's no-margin chance 75% - 10-min draw
+    match record backs it: record 89% of 9 (4+ answered a side, floor 80%)
+- Tue 19:45  Wrexham AFC v West Bromwich Albion  -  Total Goals from 1 to 20 min / Under 1.5 @1.05
+    book's no-margin chance 90% - other option
+    match record backs it: record 100% of 12 (6+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+- Tue 19:45  Queens Park FC v Inverness Caledonian Thistle FC  -  Match Result after 5 Minutes / Draw @1.09
+    book's no-margin chance 83% - 5-min draw
+    match record backs it: record 92% of 13 (6+ answered a side, floor 90%)
+- Tue 19:45  Annan Athletic FC v Alloa Athletic FC  -  10 Minutes - 1X2 / Draw @1.16
+    book's no-margin chance 77% - 10-min draw
+    match record backs it: record 86% of 14 (6+ answered a side, floor 80%)
+- Tue 20:00  Arsenal v Lille  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    book's no-margin chance 93% - other option
+    match record backs it: record 100% of 8 (3+ answered a side, floor 90%); options like it won 133 of 134 at a 90% record
+- Tue 20:00  Atletico Madrid v Man Utd  -  Total Goals from 1 to 65 min / Under 4.5 @1.04
+    book's no-margin chance 91% - other option
+    match record backs it: record 100% of 7 (3+ answered a side, floor 90%); options like it won 121 of 124 at a 90% record
+- Tue 20:00  Galatasaray Istanbul v Barcelona  -  Total Goals from 1 to 55 min / Under 4.5 @1.08
+    book's no-margin chance 88% - other option
+    match record backs it: record 100% of 8 (4+ answered a side, floor 90%); options like it won 138 of 139 at a 90% record
+- Tue 20:00  Inter v Club Brugge  -  Total Goals from 1 to 55 min / Under 4.5 @1.03
+    book's no-margin chance 93% - other option
+    match record backs it: record 100% of 8 (4+ answered a side, floor 90%); options like it won 138 of 139 at a 90% record
+- Tue 20:00  RB Leipzig v PSV Eindhoven  -  Total Goals from 1 to 75 min / Under 5.5 @1.06
+    book's no-margin chance 89% - other option
+    match record backs it: record 100% of 7 (3+ answered a side, floor 90%); options like it won 123 of 125 at a 90% record
+- Tue 20:00  Viking FK v Bayern Munich  -  Total Goals from 1 to 40 min / Under 3.5 @1.08
+    book's no-margin chance 88% - other option
+    match record backs it: record 91% of 11 (5+ answered a side, floor 90%); options like it won 134 of 136 at a 90% record
+- Tue 20:00  Birmingham City v Preston North End  -  Total Goals from 1 to 85 min / Over 0.5 @1.06
+    book's no-margin chance 89% - other option
+    match record backs it: record 100% of 9 (4+ answered a side, floor 90%); options like it won 86 of 92 at a 90% record
+- Tue 20:00  Stoke City v Middlesbrough FC  -  Total Goals from 1 to 20 min / Under 1.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 92% of 12 (5+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+- Wed 00:00  CD Tapatio v Tepatitlan FC  -  10 Minutes - 1X2 / Draw @1.23
+    book's no-margin chance 73% - 10-min draw
+    match record backs it: record 90% of 10 (4+ answered a side, floor 80%)
+- Wed 00:30  CA Bucaramanga v Aguilas Doradas Rionegro  -  Match Result after 5 Minutes / Draw @1.08
+    book's no-margin chance 83% - 5-min draw
+    match record backs it: record 91% of 11 (4+ answered a side, floor 90%)
+- Wed 01:30  Boca Juniors v CR Vasco da Gama RJ  -  10 Minutes - 1X2 / Draw @1.12
+    book's no-margin chance 81% - 10-min draw
+    match record backs it: record 86% of 14 (7+ answered a side, floor 80%)
+- Wed 02:30  Millonarios FC v CD Once Caldas  -  Total Goals from 1 to 20 min / Under 1.5 @1.05
+    book's no-margin chance 89% - other option
+    match record backs it: record 92% of 12 (5+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+- Wed 11:00  Vissel Kobe v Jeonbuk FC  -  10 Minutes - 1X2 / Draw @1.17
+    book's no-margin chance 77% - 10-min draw
+    match record backs it: record 85% of 13 (6+ answered a side, floor 80%)
+- Wed 17:00  Bohemians Prague 1905 v FK Mlada Boleslav  -  Total Goals from 1 to 20 min / Under 1.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 91% of 11 (4+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+- Wed 17:45  Feyenoord v Como 1907  -  10 Minutes - 1X2 / Draw @1.24
+    book's no-margin chance 74% - 10-min draw
+    match record backs it: record 80% of 10 (4+ answered a side, floor 80%)
+- Wed 18:00  Stabaek IF v Sandnes Ulf  -  10 Minutes - 1X2 / Draw @1.27
+    book's no-margin chance 71% - 10-min draw
+    match record backs it: record 86% of 14 (7+ answered a side, floor 80%)
+- Wed 18:00  Antalyaspor v Kayserispor  -  10 Minutes - 1X2 / Draw @1.16
+    book's no-margin chance 77% - 10-min draw
+    match record backs it: record 90% of 10 (5+ answered a side, floor 80%)
+- Wed 18:00  SV Wehen Wiesbaden v Alemannia Aachen  -  10 Minutes - 1X2 / Draw @1.19
+    book's no-margin chance 76% - 10-min draw
+    match record backs it: record 88% of 8 (3+ answered a side, floor 80%)
+- Wed 19:15  AL Faisaly (Jor) v Al Nahda  -  10 Minutes - 1X2 / Draw @1.15
+    book's no-margin chance 78% - 10-min draw
+    match record backs it: record 83% of 6 (3+ answered a side, floor 80%)
+- Wed 19:45  Norwich v Southampton  -  Total Goals from 1 to 85 min / Under 5.5 @1.05
+    book's no-margin chance 90% - other option
+    match record backs it: record 90% of 10 (5+ answered a side, floor 90%); options like it won 109 of 112 at a 90% record
+
+## 2026-10-13 07:48 WAT  |  minute mix: 5-min draw, 10-min draw or the Minutes-tab option the record backs - part 2 - 17.06x (34 games)  |  code QM4ZYV
+http://www.sportybet.com/ng/?shareCode=QM4ZYV
+- Wed 19:45  Portsmouth FC v Sheffield United  -  Total Goals from 1 to 35 min / Under 2.5 @1.03
+    book's no-margin chance 91% - other option
+    match record backs it: record 91% of 11 (4+ answered a side, floor 90%); options like it won 111 of 117 at a 90% record
+- Wed 22:30  CD Junior FC v Deportivo Pereira FC SA  -  Total Goals from 1 to 75 min / Under 4.5 @1.08
+    book's no-margin chance 87% - other option
+    match record backs it: record 93% of 14 (7+ answered a side, floor 90%); options like it won 108 of 116 at a 90% record
+- Wed 23:00  CA Sarmiento Junin v CA River Plate (ARG)  -  Match Result after 5 Minutes / Draw @1.07
+    book's no-margin chance 84% - 5-min draw
+    match record backs it: record 100% of 11 (5+ answered a side, floor 90%)
+- Wed 23:00  Atletico Mineiro MG v Montevideo City Torque  -  10 Minutes - 1X2 / Draw @1.17
+    book's no-margin chance 78% - 10-min draw
+    match record backs it: record 86% of 14 (6+ answered a side, floor 80%)
+- Thu 00:30  CF Montreal v Atlanta United FC  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - 5-min draw
+    match record backs it: record 100% of 14 (7+ answered a side, floor 90%)
+- Thu 00:30  Columbus Crew v Charlotte FC  -  Total Goals from 1 to 85 min / Under 5.5 @1.05
+    book's no-margin chance 90% - other option
+    match record backs it: record 93% of 14 (6+ answered a side, floor 90%); options like it won 109 of 112 at a 90% record
+- Thu 00:30  FC Cincinnati v New England Revolution  -  Total Goals from 1 to 85 min / Under 5.5 @1.08
+    book's no-margin chance 88% - other option
+    match record backs it: record 100% of 14 (7+ answered a side, floor 90%); options like it won 109 of 112 at a 90% record
+- Thu 00:30  Inter Miami CF v New York City FC  -  Total Goals from 1 to 60 min / Under 4.5 @1.06
+    book's no-margin chance 89% - other option
+    match record backs it: record 100% of 14 (7+ answered a side, floor 90%); options like it won 133 of 134 at a 90% record
+- Thu 00:30  Toronto FC v Orlando City SC  -  Total Goals from 1 to 85 min / Under 5.5 @1.08
+    book's no-margin chance 88% - other option
+    match record backs it: record 92% of 13 (6+ answered a side, floor 90%); options like it won 109 of 112 at a 90% record
+- Thu 00:30  Independiente Santa Fe v Jaguares de Cordoba  -  Total Goals from 1 to 70 min / Under 4.5 @1.03
+    book's no-margin chance 91% - other option
+    match record backs it: record 92% of 12 (5+ answered a side, floor 90%); options like it won 111 of 117 at a 90% record
+- Thu 01:30  Fluminense FC RJ v SE Palmeiras SP  -  Match Result after 5 Minutes / Draw @1.06
+    book's no-margin chance 85% - 5-min draw
+    match record backs it: record 93% of 14 (6+ answered a side, floor 90%)
+- Thu 01:30  Chicago Fire v Philadelphia Union  -  Total Goals from 1 to 85 min / Under 5.5 @1.07
+    book's no-margin chance 89% - other option
+    match record backs it: record 92% of 13 (6+ answered a side, floor 90%); options like it won 109 of 112 at a 90% record
+- Thu 01:30  FC Dallas v Seattle Sounders  -  10 Minutes - 1X2 / Draw @1.22
+    book's no-margin chance 75% - 10-min draw
+    match record backs it: record 83% of 12 (5+ answered a side, floor 80%)
+- Thu 01:30  Nashville SC v Sporting Kansas City  -  10 Minutes - 1X2 / Draw @1.29
+    book's no-margin chance 71% - 10-min draw
+    match record backs it: record 86% of 14 (7+ answered a side, floor 80%)
+- Thu 14:40  Al-Faisaly FC v Al-Kholood  -  Total Goals from 1 to 85 min / Over 0.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 90% of 10 (5+ answered a side, floor 90%); options like it won 86 of 92 at a 90% record
+- Thu 15:00  FC RFS v SK Super Nova  -  10 Minutes - 1X2 / Draw @1.24
+    book's no-margin chance 72% - 10-min draw
+    match record backs it: record 80% of 10 (3+ answered a side, floor 80%)
+- Thu 15:50  Al-Khaleej Club v Al-Fayha FC  -  10 Minutes - 1X2 / Draw @1.16
+    book's no-margin chance 78% - 10-min draw
+    match record backs it: record 100% of 9 (4+ answered a side, floor 80%)
+- Thu 17:45  Alkmaar v Hapoel Be`er Sheva FC  -  Match Result after 5 Minutes / Draw @1.13
+    book's no-margin chance 81% - 5-min draw
+    match record backs it: record 91% of 11 (4+ answered a side, floor 90%)
+- Thu 17:45  Salzburg v AC Milan  -  Total Goals from 1 to 15 min / Under 1.5 @1.04
+    book's no-margin chance 91% - other option
+    match record backs it: record 90% of 10 (4+ answered a side, floor 90%); options like it won 104 of 108 at a 90% record
+- Thu 17:45  SCU Torreense v Sunderland AFC  -  Match Result after 5 Minutes / Draw @1.13
+    book's no-margin chance 81% - 5-min draw
+    match record backs it: record 100% of 8 (3+ answered a side, floor 90%)
+- Thu 17:45  Union Gilloise v Real Sociedad  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    book's no-margin chance 93% - other option
+    match record backs it: record 100% of 9 (4+ answered a side, floor 90%); options like it won 121 of 124 at a 90% record
+- Thu 17:45  CS Universitatea Craiova v Getafe  -  Total Goals from 1 to 20 min / Under 1.5 @1.05
+    book's no-margin chance 90% - other option
+    match record backs it: record 92% of 12 (5+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+- Thu 17:45  Gent v AGF Aarhus  -  Total Goals from 1 to 20 min / Under 1.5 @1.07
+    book's no-margin chance 89% - other option
+    match record backs it: record 93% of 14 (6+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+- Thu 17:45  HNK Hajduk Split v Ajax  -  Total Goals from 1 to 35 min / Under 2.5 @1.06
+    book's no-margin chance 89% - other option
+    match record backs it: record 100% of 13 (6+ answered a side, floor 90%); options like it won 111 of 117 at a 90% record
+- Thu 17:45  KF Egnatia Rrogozhine v FC Midtjylland  -  Total Goals from 1 to 85 min / Over 0.5 @1.07
+    book's no-margin chance 89% - other option
+    match record backs it: record 93% of 14 (7+ answered a side, floor 90%); options like it won 86 of 92 at a 90% record
+- Thu 17:45  Lugano v Crvena Zvezda  -  Total Goals from 1 to 70 min / Under 4.5 @1.03
+    book's no-margin chance 93% - other option
+    match record backs it: record 93% of 14 (6+ answered a side, floor 90%); options like it won 111 of 117 at a 90% record
+- Thu 17:45  Mjallby AIF v Inter Club de Escaldes  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    book's no-margin chance 93% - other option
+    match record backs it: record 92% of 12 (5+ answered a side, floor 90%); options like it won 121 of 124 at a 90% record
+- Thu 17:45  Panathinaikos v FK Borac Banja Luka  -  Match Result after 5 Minutes / Draw @1.13
+    book's no-margin chance 81% - 5-min draw
+    match record backs it: record 93% of 14 (6+ answered a side, floor 90%)
+- Thu 17:45  PFC CSKA Sofia v Monaco  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    book's no-margin chance 93% - other option
+    match record backs it: record 91% of 11 (4+ answered a side, floor 90%); options like it won 121 of 124 at a 90% record
+- Thu 17:45  Riga FC v FC Kairat Almaty  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    book's no-margin chance 93% - other option
+    match record backs it: record 93% of 14 (6+ answered a side, floor 90%); options like it won 104 of 108 at a 90% record
+- Thu 19:00  Al Ahli Saudi FC v Al Nassr Club  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    book's no-margin chance 91% - other option
+    match record backs it: record 100% of 11 (5+ answered a side, floor 90%); options like it won 121 of 124 at a 90% record
+- Thu 20:00  Benfica v Celtic  -  Total Goals from 1 to 15 min / Under 1.5 @1.06
+    book's no-margin chance 89% - other option
+    match record backs it: record 93% of 14 (6+ answered a side, floor 90%); options like it won 104 of 108 at a 90% record
+- Thu 20:00  Bournemouth v Sturm Graz  -  Match Result after 5 Minutes / Draw @1.15
+    book's no-margin chance 80% - 5-min draw
+    match record backs it: record 100% of 11 (4+ answered a side, floor 90%)
+- Thu 20:00  Mansfield Town v Oxford United  -  Total Goals from 1 to 20 min / Under 1.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 92% of 12 (5+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+
+## 2026-10-13 07:52 WAT  |  minute mix: 5-min draw, 10-min draw or the Minutes-tab option the record backs - the first 50 by kickoff - 179.86x (50 games)  |  code RKKP7B
+http://www.sportybet.com/ng/?shareCode=RKKP7B
+- Tue 13:15  Buriram United v Beijing Guoan  -  10 Minutes - 1X2 / Draw @1.18
+    book's no-margin chance 76% - 10-min draw
+    match record backs it: record 90% of 10 (3+ answered a side, floor 80%)
+- Tue 17:45  Lens v Sporting  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    book's no-margin chance 93% - other option
+    match record backs it: record 90% of 10 (4+ answered a side, floor 90%); options like it won 121 of 124 at a 90% record
+- Tue 17:45  Sabah Masazir v Slavia Prague  -  Total Goals from 1 to 85 min / Over 0.5 @1.05
+    book's no-margin chance 90% - other option
+    match record backs it: record 92% of 13 (6+ answered a side, floor 90%); options like it won 86 of 92 at a 90% record
+- Tue 18:00  Rot-Weiss Essen v Fortuna Cologne  -  10 Minutes - 1X2 / Draw @1.21
+    book's no-margin chance 74% - 10-min draw
+    match record backs it: record 89% of 9 (3+ answered a side, floor 80%)
+- Tue 18:30  Orlando Pirates FC v TS Galaxy FC  -  10 Minutes - 1X2 / Draw @1.17
+    book's no-margin chance 76% - 10-min draw
+    match record backs it: record 80% of 10 (3+ answered a side, floor 80%)
+- Tue 18:30  Richards Bay FC v Mamelodi Sundowns  -  Total Goals from 1 to 85 min / Over 0.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 100% of 10 (4+ answered a side, floor 90%); options like it won 86 of 92 at a 90% record
+- Tue 19:00  Cheltenham Town v Tottenham Hotspur U21  -  10 Minutes - 1X2 / Draw @1.28
+    book's no-margin chance 70% - 10-min draw
+    match record backs it: record 80% of 10 (3+ answered a side, floor 80%)
+- Tue 19:45  Bristol City v Blackburn Rovers  -  10 Minutes - 1X2 / Draw @1.17
+    book's no-margin chance 78% - 10-min draw
+    match record backs it: record 80% of 10 (4+ answered a side, floor 80%)
+- Tue 19:45  Burnley v Charlton Athletic  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 83% - 5-min draw
+    match record backs it: record 91% of 11 (4+ answered a side, floor 90%)
+- Tue 19:45  Cardiff City v Watford  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    book's no-margin chance 91% - other option
+    match record backs it: record 100% of 10 (4+ answered a side, floor 90%); options like it won 133 of 134 at a 90% record
+- Tue 19:45  Millwall FC v Swansea City  -  Total Goals from 1 to 85 min / Over 0.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 100% of 9 (4+ answered a side, floor 90%); options like it won 86 of 92 at a 90% record
+- Tue 19:45  Wolves v Bolton Wanderers  -  10 Minutes - 1X2 / Draw @1.22
+    book's no-margin chance 75% - 10-min draw
+    match record backs it: record 89% of 9 (4+ answered a side, floor 80%)
+- Tue 19:45  Wrexham AFC v West Bromwich Albion  -  Total Goals from 1 to 20 min / Under 1.5 @1.05
+    book's no-margin chance 90% - other option
+    match record backs it: record 100% of 12 (6+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+- Tue 19:45  Queens Park FC v Inverness Caledonian Thistle FC  -  Match Result after 5 Minutes / Draw @1.09
+    book's no-margin chance 83% - 5-min draw
+    match record backs it: record 92% of 13 (6+ answered a side, floor 90%)
+- Tue 19:45  Annan Athletic FC v Alloa Athletic FC  -  10 Minutes - 1X2 / Draw @1.16
+    book's no-margin chance 77% - 10-min draw
+    match record backs it: record 86% of 14 (6+ answered a side, floor 80%)
+- Tue 20:00  Arsenal v Lille  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    book's no-margin chance 93% - other option
+    match record backs it: record 100% of 8 (3+ answered a side, floor 90%); options like it won 133 of 134 at a 90% record
+- Tue 20:00  Atletico Madrid v Man Utd  -  Total Goals from 1 to 65 min / Under 4.5 @1.04
+    book's no-margin chance 91% - other option
+    match record backs it: record 100% of 7 (3+ answered a side, floor 90%); options like it won 121 of 124 at a 90% record
+- Tue 20:00  Galatasaray Istanbul v Barcelona  -  Total Goals from 1 to 55 min / Under 4.5 @1.08
+    book's no-margin chance 88% - other option
+    match record backs it: record 100% of 8 (4+ answered a side, floor 90%); options like it won 138 of 139 at a 90% record
+- Tue 20:00  Inter v Club Brugge  -  Total Goals from 1 to 55 min / Under 4.5 @1.03
+    book's no-margin chance 93% - other option
+    match record backs it: record 100% of 8 (4+ answered a side, floor 90%); options like it won 138 of 139 at a 90% record
+- Tue 20:00  RB Leipzig v PSV Eindhoven  -  Total Goals from 1 to 75 min / Under 5.5 @1.06
+    book's no-margin chance 89% - other option
+    match record backs it: record 100% of 7 (3+ answered a side, floor 90%); options like it won 123 of 125 at a 90% record
+- Tue 20:00  Viking FK v Bayern Munich  -  Total Goals from 1 to 40 min / Under 3.5 @1.08
+    book's no-margin chance 88% - other option
+    match record backs it: record 91% of 11 (5+ answered a side, floor 90%); options like it won 134 of 136 at a 90% record
+- Tue 20:00  Birmingham City v Preston North End  -  Total Goals from 1 to 85 min / Over 0.5 @1.06
+    book's no-margin chance 89% - other option
+    match record backs it: record 100% of 9 (4+ answered a side, floor 90%); options like it won 86 of 92 at a 90% record
+- Tue 20:00  Stoke City v Middlesbrough FC  -  Total Goals from 1 to 20 min / Under 1.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 92% of 12 (5+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+- Wed 00:00  CD Tapatio v Tepatitlan FC  -  10 Minutes - 1X2 / Draw @1.23
+    book's no-margin chance 73% - 10-min draw
+    match record backs it: record 90% of 10 (4+ answered a side, floor 80%)
+- Wed 00:30  CA Bucaramanga v Aguilas Doradas Rionegro  -  Match Result after 5 Minutes / Draw @1.08
+    book's no-margin chance 83% - 5-min draw
+    match record backs it: record 91% of 11 (4+ answered a side, floor 90%)
+- Wed 01:30  Boca Juniors v CR Vasco da Gama RJ  -  10 Minutes - 1X2 / Draw @1.12
+    book's no-margin chance 81% - 10-min draw
+    match record backs it: record 86% of 14 (7+ answered a side, floor 80%)
+- Wed 02:30  Millonarios FC v CD Once Caldas  -  Total Goals from 1 to 20 min / Under 1.5 @1.05
+    book's no-margin chance 89% - other option
+    match record backs it: record 92% of 12 (5+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+- Wed 11:00  Vissel Kobe v Jeonbuk FC  -  10 Minutes - 1X2 / Draw @1.17
+    book's no-margin chance 77% - 10-min draw
+    match record backs it: record 85% of 13 (6+ answered a side, floor 80%)
+- Wed 17:00  Bohemians Prague 1905 v FK Mlada Boleslav  -  Total Goals from 1 to 20 min / Under 1.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 91% of 11 (4+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+- Wed 17:45  Feyenoord v Como 1907  -  10 Minutes - 1X2 / Draw @1.24
+    book's no-margin chance 74% - 10-min draw
+    match record backs it: record 80% of 10 (4+ answered a side, floor 80%)
+- Wed 18:00  Stabaek IF v Sandnes Ulf  -  10 Minutes - 1X2 / Draw @1.27
+    book's no-margin chance 71% - 10-min draw
+    match record backs it: record 86% of 14 (7+ answered a side, floor 80%)
+- Wed 18:00  Antalyaspor v Kayserispor  -  10 Minutes - 1X2 / Draw @1.16
+    book's no-margin chance 77% - 10-min draw
+    match record backs it: record 90% of 10 (5+ answered a side, floor 80%)
+- Wed 18:00  SV Wehen Wiesbaden v Alemannia Aachen  -  10 Minutes - 1X2 / Draw @1.19
+    book's no-margin chance 76% - 10-min draw
+    match record backs it: record 88% of 8 (3+ answered a side, floor 80%)
+- Wed 19:15  AL Faisaly (Jor) v Al Nahda  -  10 Minutes - 1X2 / Draw @1.15
+    book's no-margin chance 78% - 10-min draw
+    match record backs it: record 83% of 6 (3+ answered a side, floor 80%)
+- Wed 19:45  Norwich v Southampton  -  Total Goals from 1 to 85 min / Under 5.5 @1.05
+    book's no-margin chance 90% - other option
+    match record backs it: record 90% of 10 (5+ answered a side, floor 90%); options like it won 109 of 112 at a 90% record
+- Wed 19:45  Portsmouth FC v Sheffield United  -  Total Goals from 1 to 35 min / Under 2.5 @1.03
+    book's no-margin chance 91% - other option
+    match record backs it: record 91% of 11 (4+ answered a side, floor 90%); options like it won 111 of 117 at a 90% record
+- Wed 22:30  CD Junior FC v Deportivo Pereira FC SA  -  Total Goals from 1 to 75 min / Under 4.5 @1.08
+    book's no-margin chance 87% - other option
+    match record backs it: record 93% of 14 (7+ answered a side, floor 90%); options like it won 108 of 116 at a 90% record
+- Wed 23:00  CA Sarmiento Junin v CA River Plate (ARG)  -  Match Result after 5 Minutes / Draw @1.07
+    book's no-margin chance 84% - 5-min draw
+    match record backs it: record 100% of 11 (5+ answered a side, floor 90%)
+- Wed 23:00  Atletico Mineiro MG v Montevideo City Torque  -  10 Minutes - 1X2 / Draw @1.17
+    book's no-margin chance 78% - 10-min draw
+    match record backs it: record 86% of 14 (6+ answered a side, floor 80%)
+- Thu 00:30  CF Montreal v Atlanta United FC  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - 5-min draw
+    match record backs it: record 100% of 14 (7+ answered a side, floor 90%)
+- Thu 00:30  Columbus Crew v Charlotte FC  -  Total Goals from 1 to 85 min / Under 5.5 @1.05
+    book's no-margin chance 90% - other option
+    match record backs it: record 93% of 14 (6+ answered a side, floor 90%); options like it won 109 of 112 at a 90% record
+- Thu 00:30  FC Cincinnati v New England Revolution  -  Total Goals from 1 to 85 min / Under 5.5 @1.08
+    book's no-margin chance 88% - other option
+    match record backs it: record 100% of 14 (7+ answered a side, floor 90%); options like it won 109 of 112 at a 90% record
+- Thu 00:30  Inter Miami CF v New York City FC  -  Total Goals from 1 to 60 min / Under 4.5 @1.06
+    book's no-margin chance 89% - other option
+    match record backs it: record 100% of 14 (7+ answered a side, floor 90%); options like it won 133 of 134 at a 90% record
+- Thu 00:30  Toronto FC v Orlando City SC  -  Total Goals from 1 to 85 min / Under 5.5 @1.08
+    book's no-margin chance 88% - other option
+    match record backs it: record 92% of 13 (6+ answered a side, floor 90%); options like it won 109 of 112 at a 90% record
+- Thu 00:30  Independiente Santa Fe v Jaguares de Cordoba  -  Total Goals from 1 to 70 min / Under 4.5 @1.03
+    book's no-margin chance 91% - other option
+    match record backs it: record 92% of 12 (5+ answered a side, floor 90%); options like it won 111 of 117 at a 90% record
+- Thu 01:30  Fluminense FC RJ v SE Palmeiras SP  -  Match Result after 5 Minutes / Draw @1.06
+    book's no-margin chance 85% - 5-min draw
+    match record backs it: record 93% of 14 (6+ answered a side, floor 90%)
+- Thu 01:30  Chicago Fire v Philadelphia Union  -  Total Goals from 1 to 85 min / Under 5.5 @1.07
+    book's no-margin chance 89% - other option
+    match record backs it: record 92% of 13 (6+ answered a side, floor 90%); options like it won 109 of 112 at a 90% record
+- Thu 01:30  FC Dallas v Seattle Sounders  -  10 Minutes - 1X2 / Draw @1.22
+    book's no-margin chance 75% - 10-min draw
+    match record backs it: record 83% of 12 (5+ answered a side, floor 80%)
+- Thu 01:30  Nashville SC v Sporting Kansas City  -  10 Minutes - 1X2 / Draw @1.29
+    book's no-margin chance 71% - 10-min draw
+    match record backs it: record 86% of 14 (7+ answered a side, floor 80%)
+- Thu 14:40  Al-Faisaly FC v Al-Kholood  -  Total Goals from 1 to 85 min / Over 0.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 90% of 10 (5+ answered a side, floor 90%); options like it won 86 of 92 at a 90% record
+
+## 2026-10-13 15:12 WAT  |  stats prediction: every game's best-supported option at 1.15+ - part 1 - 25,286.73x (49 games)  |  code Y97G1P
+http://www.sportybet.com/ng/?shareCode=Y97G1P
+- Tue 16:00  Serbia v Finland  -  1st Half - Draw No Bet / Away @1.27
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 9/10  A10 9/10
+- Tue 16:00  Ukraine v Slovakia  -  Double Chance / Home or Away @1.25
+    support 86% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 9/10  A10 10/10
+- Tue 16:00  Harju JK Laagri v FC Nomme United  -  Away O/U / Under 2.5 @1.19
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Tue 16:00  Parnu JK Vaprus v Nomme Kalju FC  -  1st Half - Over/Under / Over 0.5 @1.24
+    support 80% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 8/10  A10 8/10
+- Tue 16:15  AL Saqer FC v AL Jabalain FC  -  Away To Score In Both Halves / No @1.25
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 10/10  A10 9/10
+- Tue 16:30  SK Artis B v FC Zbrojovka Brno B  -  1st Half - GG/NG / No @1.24
+    support 71% (lowest of HH AA H10 A10)  HH 7/7  AA 5/7  H10 10/10  A10 8/10
+- Tue 16:45  Germany v Japan  -  2nd Half - GG/NG / No @1.40
+    support 71% (lowest of HH AA H10 A10)  HH 6/7  AA 5/7  H10 8/10  A10 9/10
+- Tue 17:00  Al Sadd SC v Al Hilal SFC  -  1st Half - Over/Under / Over 0.5 @1.21
+    support 86% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 10/10  A10 9/10
+- Tue 17:00  Austria v Kosovo  -  2nd Half - Home Team Total / Under 2.5 @1.27
+    support 100% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 10/10  A10 10/10
+- Tue 17:00  Norway v Romania  -  Over/Under / Under 6.5 @1.16
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Tue 17:00  Poland v Belgium  -  Home Team Win To Nil / No @1.15
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 10/10  A10 10/10
+- Tue 17:00  Al-Seeb v Al Hussein Irbid  -  HT Away to Win to Nil Yes/No / No @1.28
+    support 71% (lowest of HH AA H10 A10)  HH 7/7  AA 5/7  H10 10/10  A10 9/10
+- Tue 17:00  Peru v Philippines  -  Double Chance / Home or Away @1.30
+    support 80% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 8/10  A10 9/10
+- Tue 17:00  SC Gjilani v KF Drenica Skenderaj  -  Over/Under / Over 1.5 @1.29
+    support 70% (lowest of HH AA H10 A10)  HH 6/7  AA 5/7  H10 7/10  A10 8/10
+- Tue 17:15  Italy v Belarus  -  Over/Under / Under 6 @1.16
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Tue 17:45  Lens v Sporting  -  1st Half - Total Bookings / Over 0.5 @1.26
+    support 100% (lowest of HH AA H10 A10)  HH 5/5  AA 4/4  H10 6/6  A10 6/6
+- Tue 17:45  Sabah Masazir v Slavia Prague  -  1st Half - Total Bookings / Over 0.5 @1.29
+    support 100% (lowest of HH AA H10 A10)  HH 6/6  AA 5/5  H10 6/6  A10 6/6
+- Tue 18:00  Petrojet FC v Wadi Degla SC  -  1st Half - GG/NG / No @1.16
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 18:00  IFK Norrkoping FK v GIF Sundsvall  -  Away O/U / Under 1.5 @1.15
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 9/10  A10 9/10
+- Tue 18:00  1. FC Saarbrucken v MSV Duisburg  -  Double Chance / Home or Away @1.28
+    support 80% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 8/10  A10 9/10
+- Tue 18:00  Hansa Rostock v SV Meppen 1912  -  Home O/U / Under 3.5 @1.20
+    support 71% (lowest of HH AA H10 A10)  HH 5/7  AA 7/7  H10 8/10  A10 9/10
+- Tue 18:00  Rot-Weiss Essen v Fortuna Cologne  -  Home O/U / Under 3.5 @1.17
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Tue 18:00  TSV Havelse v FC Wurzburger Kickers  -  Over/Under / Over 1.5 @1.18
+    support 86% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 18:00  VfB Stuttgart II v TSG Hoffenheim II  -  1st Half - Over/Under / Over 0.5 @1.21
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Tue 18:00  Heming v KFUM 2  -  1st Half - Draw No Bet / Home @1.67
+    support 71% (lowest of HH AA H10 A10)  HH 6/7  AA 5/7  H10 9/10  A10 8/10
+- Tue 18:30  Iceland v Croatia  -  1st Half - Over/Under / Under 2.5 @1.18
+    support 71% (lowest of HH AA H10 A10)  HH 5/7  AA 6/7  H10 8/10  A10 9/10
+- Tue 19:00  Cheltenham Town v Tottenham Hotspur U21  -  Home O/U / Under 3.5 @1.18
+    support 86% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 10/10  A10 10/10
+- Tue 19:00  Gillingham FC v Brighton & Hove Albion U21  -  1st Half - Away O/U / Under 1.5 @1.16
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 19:00  Notts County v Nottingham Forest U21  -  1st Half - Away Total Corners / Over 0.5 @1.16
+    support 100% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 10/10  A10 10/10
+- Tue 19:00  Oldham Athletic v Leeds United U21  -  1st Half - Away Total Corners / Over 0.5 @1.20
+    support 80% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 8/10  A10 10/10
+- Tue 19:00  Reading FC v Chelsea U21  -  Home Team Total Corners / Under 7.5 @1.35
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Tue 19:00  Walsall FC v Fulham U21  -  1st Half - Away O/U / Under 1.5 @1.15
+    support 71% (lowest of HH AA H10 A10)  HH 6/7  AA 5/7  H10 9/10  A10 8/10
+- Tue 19:00  Rs Berkane v Renaissance Zemamra  -  Home To Win Both Halves / No @1.15
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 10/10  A10 9/10
+- Tue 19:00  At Rafaela Reserve v Estudiantes de Rio Cuarto Reserve  -  HT Away to Win to Nil Yes/No / No @1.19
+    support 60% (lowest of HH AA H10 A10)  HH 6/7  AA 5/7  H10 10/10  A10 6/10
+- Tue 19:00  CA Banfield v Gimnasia de la Plata Reserve  -  HT Home to Win to Nil Yes/No / No @1.22
+    support 71% (lowest of HH AA H10 A10)  HH 5/7  AA 5/7  H10 9/10  A10 8/10
+- Tue 19:00  CA Quilmes Reserve v Newells Old Boys  -  HT Home to Win to Nil Yes/No / No @1.27
+    support 80% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 10/10  A10 8/10
+- Tue 19:00  Independiente Reserve v CA Huracan  -  HT Away to Win to Nil Yes/No / No @1.15
+    support 70% (lowest of HH AA H10 A10)  HH 5/7  AA 6/7  H10 7/10  A10 7/10
+- Tue 19:15  Al-Ittihad Club v Shabab Al Ahli Dubai  -  Home To Win Both Halves / No @1.17
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 9/10  A10 10/10
+- Tue 19:15  Portugal v Northern Ireland  -  Over/Under / Over 1.5 @1.17
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 10/10  A10 9/10
+- Tue 19:15  Scotland v Czech Republic  -  2nd Half - GG/NG / No @1.20
+    support 80% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 9/10  A10 8/10
+- Tue 19:45  Bristol City v Blackburn Rovers  -  1st Half - Total Bookings / Over 0.5 @1.43
+    support 100% (lowest of HH AA H10 A10)  HH 4/4  AA 7/7  H10 6/6  A10 7/7
+- Tue 19:45  Burnley v Charlton Athletic  -  1st Half - Away Total Bookings / Under 1.5 @1.25
+    support 88% (lowest of HH AA H10 A10)  HH 5/5  AA 3/3  H10 7/8  A10 3/3
+- Tue 19:45  Cardiff City v Watford  -  1st Half - Over/Under / Over 0.5 @1.26
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 9/10  A10 10/10
+- Tue 19:45  Millwall FC v Swansea City  -  1st Half - GG/NG / No @1.19
+    support 86% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 19:45  Wolves v Bolton Wanderers  -  Home O/U / Under 3.5 @1.21
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 19:45  Wrexham AFC v West Bromwich Albion  -  1st Half - Away Total Corners / Under 3.5 @1.16
+    support 86% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 19:45  Queens Park FC v Inverness Caledonian Thistle FC  -  Away O/U / Under 2.5 @1.30
+    support 86% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 10/10  A10 9/10
+- Tue 19:45  Annan Athletic FC v Alloa Athletic FC  -  1st Half - GG/NG / No @1.18
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Tue 19:45  Berwick Rangers v Queen of the South FC  -  Away O/U / Under 3.5 @1.30
+    support 80% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 8/10  A10 8/10
+
+## 2026-10-13 15:12 WAT  |  stats prediction: every game's best-supported option at 1.15+ - part 2 - 24,058.54x (49 games)  |  code NY891Y
+http://www.sportybet.com/ng/?shareCode=NY891Y
+- Tue 19:45  Clydebank FC v Dumbarton FC  -  1st Half - Over/Under / Over 0.5 @1.21
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 19:45  Cove Rangers FC v Formartine United  -  Over/Under / Over 1.5 @1.15
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 9/10  A10 10/10
+- Tue 19:45  East Kilbride FC v Kelty Hearts FC  -  1st Half - Over/Under / Over 0.5 @1.15
+    support 71% (lowest of HH AA H10 A10)  HH 5/7  AA 7/7  H10 9/10  A10 10/10
+- Tue 19:45  Edinburgh City FC v St Mirren B  -  Over/Under / Under 5.5 @1.15
+    support 71% (lowest of HH AA H10 A10)  HH 6/7  AA 5/7  H10 9/10  A10 8/10
+- Tue 19:45  Elgin City FC v Aberdeen FC B  -  1st Half - Over/Under / Over 0.5 @1.23
+    support 100% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 10/10  A10 10/10
+- Tue 19:45  Peterhead FC v Glasgow Rangers FC B  -  Double Chance / Home or Away @1.21
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 9/10  A10 10/10
+- Tue 19:45  Ross County FC v Forfar Athletic FC  -  1st Half - GG/NG / No @1.30
+    support 86% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 10/10  A10 10/10
+- Tue 19:45  Spartans FC v Bonnyrigg Rose  -  2nd Half - Double Chance / Home or Away @1.33
+    support 86% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 19:45  Ebbsfleet United FC v AFC Totton  -  Over/Under / Under 4.5 @1.21
+    support 86% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 10/10  A10 9/10
+- Tue 19:45  Ashton United FC v Alfreton Town FC  -  Over/Under / Over 1.5 @1.21
+    support 70% (lowest of HH AA H10 A10)  HH 6/7  AA 5/7  H10 8/10  A10 7/10
+- Tue 19:45  Bamber Bridge v Warrington Town  -  Away Team Clean Sheet / No @1.23
+    support 80% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 9/10  A10 8/10
+- Tue 19:45  Gainsborough Trinity v Ilkeston Town FC  -  Over/Under / Over 1.5 @1.18
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 10/10  A10 9/10
+- Tue 19:45  Hyde United FC v Quorn FC  -  Double Chance / Home or Away @1.27
+    support 80% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 9/10  A10 8/10
+- Tue 19:45  Lancaster City v Stockton Town  -  Over/Under / Over 1.5 @1.21
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 9/10  A10 9/10
+- Tue 19:45  Redcar Athletic FC v Avro FC  -  Double Chance / Home or Away @1.25
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 9/10  A10 9/10
+- Tue 19:45  Warrington Rylands 1906 FC v Curzon Ashton FC  -  Home Team Clean Sheet / No @1.25
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 9/10  A10 10/10
+- Tue 19:45  Workington AFC v Whitby Town  -  Over/Under / Over 2.5 @1.50
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 19:45  Anstey Nomads v Rushall Olympic  -  HT Away to Win to Nil Yes/No / No @1.18
+    support 86% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 10/10  A10 9/10
+- Tue 19:45  Bromsgrove Sporting v Kettering Town  -  Over/Under / Over 1.5 @1.24
+    support 70% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 7/10  A10 9/10
+- Tue 19:45  Bury Town FC v Needham Market  -  HT Home to Win to Nil Yes/No / No @1.32
+    support 71% (lowest of HH AA H10 A10)  HH 5/7  AA 5/7  H10 8/10  A10 9/10
+- Tue 19:45  Halesowen Town FC v Alvechurch  -  Double Chance / Home or Away @1.31
+    support 71% (lowest of HH AA H10 A10)  HH 7/7  AA 5/7  H10 8/10  A10 8/10
+- Tue 19:45  Leamington FC v Redditch United  -  Home Team Clean Sheet / No @1.27
+    support 80% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 8/10  A10 9/10
+- Tue 19:45  Peterborough Sports v Banbury United  -  Over/Under / Over 1.5 @1.23
+    support 71% (lowest of HH AA H10 A10)  HH 7/7  AA 5/7  H10 9/10  A10 8/10
+- Tue 19:45  Stamford AFC v Stratford Town  -  Double Chance / Home or Away @1.23
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 10/10  A10 9/10
+- Tue 19:45  Worcester City v Stourbridge FC  -  HT Home to Win to Nil Yes/No / No @1.22
+    support 70% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 8/10  A10 7/10
+- Tue 19:45  Bracknell Town FC v Hanworth Villa  -  HT Home to Win to Nil Yes/No / No @1.22
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 19:45  Chippenham Town v Frome Town  -  Over/Under / Over 1.5 @1.20
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 19:45  Evesham United v Bath City FC  -  Double Chance / Home or Away @1.24
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 19:45  Gloucester City v Taunton Town  -  HT Away to Win to Nil Yes/No / No @1.15
+    support 71% (lowest of HH AA H10 A10)  HH 5/7  AA 6/7  H10 8/10  A10 9/10
+- Tue 19:45  Hanwell Town FC v Chertsey Town  -  Home Team Clean Sheet / No @1.19
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Tue 19:45  Havant & Waterlooville v Basingstoke Town FC  -  Away Team Clean Sheet / No @1.15
+    support 71% (lowest of HH AA H10 A10)  HH 5/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 19:45  Malvern Town v Yate Town  -  Home Team Clean Sheet / No @1.21
+    support 70% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 9/10  A10 7/10
+- Tue 19:45  Plymouth Parkway v Wimborne Town  -  Over/Under / Over 1.5 @1.18
+    support 70% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 10/10  A10 7/10
+- Tue 19:45  Sholing FC v Chichester City FC  -  Double Chance / Home or Away @1.26
+    support 80% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 8/10  A10 9/10
+- Tue 19:45  Burgess Hill Town v Dulwich Hamlet  -  Over/Under / Over 1.5 @1.20
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 19:45  Three Bridges v Lewes FC  -  Home Team Clean Sheet / No @1.17
+    support 86% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 10/10  A10 9/10
+- Tue 19:45  Wingate & Finchley v Ramsgate FC  -  Over/Under / Over 1.5 @1.17
+    support 71% (lowest of HH AA H10 A10)  HH 5/7  AA 6/7  H10 9/10  A10 8/10
+- Tue 20:00  Arsenal v Lille  -  2nd Half - Home Team Total / Under 2.5 @1.17
+    support 100% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 10/10  A10 10/10
+- Tue 20:00  Atletico Madrid v Man Utd  -  1st Half - Away Total Bookings / Under 1.5 @1.22
+    support 100% (lowest of HH AA H10 A10)  HH 4/4  AA 6/6  H10 8/8  A10 7/7
+- Tue 20:00  Galatasaray Istanbul v Barcelona  -  1st Half - Total Bookings / Over 0.5 @1.32
+    support 100% (lowest of HH AA H10 A10)  HH 7/7  AA 4/4  H10 7/7  A10 7/7
+- Tue 20:00  Inter v Club Brugge  -  Away Team Total Bookings / Under 3.5 @1.15
+    support 100% (lowest of HH AA H10 A10)  HH 6/6  AA 6/6  H10 9/9  A10 9/9
+- Tue 20:00  RB Leipzig v PSV Eindhoven  -  1st Half - Total Bookings / Over 0.5 @1.29
+    support 100% (lowest of HH AA H10 A10)  HH 6/6  AA 4/4  H10 8/8  A10 8/8
+- Tue 20:00  Viking FK v Bayern Munich  -  1st Half - Total Bookings / Over 0.5 @1.35
+    support 100% (lowest of HH AA H10 A10)  HH 5/5  AA 5/5  H10 5/5  A10 6/6
+- Tue 20:00  Villarreal v Napoli  -  1st Half - Total Bookings / Over 0.5 @1.21
+    support 100% (lowest of HH AA H10 A10)  HH 4/4  AA 3/3  H10 6/6  A10 6/6
+- Tue 20:00  Birmingham City v Preston North End  -  1st Half - Total Bookings / Over 0.5 @1.42
+    support 100% (lowest of HH AA H10 A10)  HH 6/6  AA 5/5  H10 8/8  A10 6/6
+- Tue 20:00  Stoke City v Middlesbrough FC  -  Over/Under / Under 4.5 @1.16
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Tue 21:00  FUS Rabat v Raja Casablanca Athletic  -  Over/Under / Over 0.5 @1.15
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 22:00  Venezuela v Colombia  -  Away Or Any Clean Sheet / Yes @1.31
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 9/10  A10 10/10
+- Tue 23:30  Athletic Club Sjdr MG v Londrina EC PR  -  Home O/U / Under 2.5 @1.17
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+
+## 2026-10-13 15:12 WAT  |  stats prediction: every game's best-supported option at 1.15+ - the best 50 by support - 12,791.13x (50 games)  |  code MK49C6
+http://www.sportybet.com/ng/?shareCode=MK49C6
+- Tue 16:00  Harju JK Laagri v FC Nomme United  -  Away O/U / Under 2.5 @1.19
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Tue 16:15  AL Saqer FC v AL Jabalain FC  -  Away To Score In Both Halves / No @1.25
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 10/10  A10 9/10
+- Tue 17:00  Austria v Kosovo  -  2nd Half - Home Team Total / Under 2.5 @1.27
+    support 100% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 10/10  A10 10/10
+- Tue 17:00  Norway v Romania  -  Over/Under / Under 6.5 @1.16
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Tue 17:00  Poland v Belgium  -  Home Team Win To Nil / No @1.15
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 10/10  A10 10/10
+- Tue 17:00  Al Sadd SC v Al Hilal SFC  -  1st Half - Over/Under / Over 0.5 @1.21
+    support 86% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 10/10  A10 9/10
+- Tue 17:15  Italy v Belarus  -  Over/Under / Under 6 @1.16
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Tue 17:45  Sabah Masazir v Slavia Prague  -  1st Half - Total Bookings / Over 0.5 @1.29
+    support 100% (lowest of HH AA H10 A10)  HH 6/6  AA 5/5  H10 6/6  A10 6/6
+- Tue 17:45  Lens v Sporting  -  1st Half - Total Bookings / Over 0.5 @1.26
+    support 100% (lowest of HH AA H10 A10)  HH 5/5  AA 4/4  H10 6/6  A10 6/6
+- Tue 18:00  Petrojet FC v Wadi Degla SC  -  1st Half - GG/NG / No @1.16
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 18:00  IFK Norrkoping FK v GIF Sundsvall  -  Away O/U / Under 1.5 @1.15
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 9/10  A10 9/10
+- Tue 18:00  TSV Havelse v FC Wurzburger Kickers  -  Over/Under / Over 1.5 @1.18
+    support 86% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 18:00  Rot-Weiss Essen v Fortuna Cologne  -  Home O/U / Under 3.5 @1.17
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Tue 18:00  VfB Stuttgart II v TSG Hoffenheim II  -  1st Half - Over/Under / Over 0.5 @1.21
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Tue 19:00  Notts County v Nottingham Forest U21  -  1st Half - Away Total Corners / Over 0.5 @1.16
+    support 100% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 10/10  A10 10/10
+- Tue 19:00  Rs Berkane v Renaissance Zemamra  -  Home To Win Both Halves / No @1.15
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 10/10  A10 9/10
+- Tue 19:00  Cheltenham Town v Tottenham Hotspur U21  -  Home O/U / Under 3.5 @1.18
+    support 86% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 10/10  A10 10/10
+- Tue 19:00  Gillingham FC v Brighton & Hove Albion U21  -  1st Half - Away O/U / Under 1.5 @1.16
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 19:15  Portugal v Northern Ireland  -  Over/Under / Over 1.5 @1.17
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 10/10  A10 9/10
+- Tue 19:15  Al-Ittihad Club v Shabab Al Ahli Dubai  -  Home To Win Both Halves / No @1.17
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 9/10  A10 10/10
+- Tue 19:45  Elgin City FC v Aberdeen FC B  -  1st Half - Over/Under / Over 0.5 @1.23
+    support 100% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 10/10  A10 10/10
+- Tue 19:45  Bristol City v Blackburn Rovers  -  1st Half - Total Bookings / Over 0.5 @1.43
+    support 100% (lowest of HH AA H10 A10)  HH 4/4  AA 7/7  H10 6/6  A10 7/7
+- Tue 19:45  Cove Rangers FC v Formartine United  -  Over/Under / Over 1.5 @1.15
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 9/10  A10 10/10
+- Tue 19:45  Cardiff City v Watford  -  1st Half - Over/Under / Over 0.5 @1.26
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 9/10  A10 10/10
+- Tue 19:45  Warrington Rylands 1906 FC v Curzon Ashton FC  -  Home Team Clean Sheet / No @1.25
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 9/10  A10 10/10
+- Tue 19:45  Peterhead FC v Glasgow Rangers FC B  -  Double Chance / Home or Away @1.21
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 9/10  A10 10/10
+- Tue 19:45  Burnley v Charlton Athletic  -  1st Half - Away Total Bookings / Under 1.5 @1.25
+    support 88% (lowest of HH AA H10 A10)  HH 5/5  AA 3/3  H10 7/8  A10 3/3
+- Tue 19:45  Wrexham AFC v West Bromwich Albion  -  1st Half - Away Total Corners / Under 3.5 @1.16
+    support 86% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 19:45  Millwall FC v Swansea City  -  1st Half - GG/NG / No @1.19
+    support 86% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 19:45  Wolves v Bolton Wanderers  -  Home O/U / Under 3.5 @1.21
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 19:45  Anstey Nomads v Rushall Olympic  -  HT Away to Win to Nil Yes/No / No @1.18
+    support 86% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 10/10  A10 9/10
+- Tue 19:45  Annan Athletic FC v Alloa Athletic FC  -  1st Half - GG/NG / No @1.18
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Tue 19:45  Gainsborough Trinity v Ilkeston Town FC  -  Over/Under / Over 1.5 @1.18
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 10/10  A10 9/10
+- Tue 19:45  Ebbsfleet United FC v AFC Totton  -  Over/Under / Under 4.5 @1.21
+    support 86% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 10/10  A10 9/10
+- Tue 19:45  Three Bridges v Lewes FC  -  Home Team Clean Sheet / No @1.17
+    support 86% (lowest of HH AA H10 A10)  HH 7/7  AA 6/7  H10 10/10  A10 9/10
+- Tue 19:45  Chippenham Town v Frome Town  -  Over/Under / Over 1.5 @1.20
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 19:45  Burgess Hill Town v Dulwich Hamlet  -  Over/Under / Over 1.5 @1.20
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 19:45  Clydebank FC v Dumbarton FC  -  1st Half - Over/Under / Over 0.5 @1.21
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 19:45  Lancaster City v Stockton Town  -  Over/Under / Over 1.5 @1.21
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 9/10  A10 9/10
+- Tue 20:00  Arsenal v Lille  -  2nd Half - Home Team Total / Under 2.5 @1.17
+    support 100% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 10/10  A10 10/10
+- Tue 20:00  Inter v Club Brugge  -  Away Team Total Bookings / Under 3.5 @1.15
+    support 100% (lowest of HH AA H10 A10)  HH 6/6  AA 6/6  H10 9/9  A10 9/9
+- Tue 20:00  RB Leipzig v PSV Eindhoven  -  1st Half - Total Bookings / Over 0.5 @1.29
+    support 100% (lowest of HH AA H10 A10)  HH 6/6  AA 4/4  H10 8/8  A10 8/8
+- Tue 20:00  Atletico Madrid v Man Utd  -  1st Half - Away Total Bookings / Under 1.5 @1.22
+    support 100% (lowest of HH AA H10 A10)  HH 4/4  AA 6/6  H10 8/8  A10 7/7
+- Tue 20:00  Galatasaray Istanbul v Barcelona  -  1st Half - Total Bookings / Over 0.5 @1.32
+    support 100% (lowest of HH AA H10 A10)  HH 7/7  AA 4/4  H10 7/7  A10 7/7
+- Tue 20:00  Birmingham City v Preston North End  -  1st Half - Total Bookings / Over 0.5 @1.42
+    support 100% (lowest of HH AA H10 A10)  HH 6/6  AA 5/5  H10 8/8  A10 6/6
+- Tue 20:00  Viking FK v Bayern Munich  -  1st Half - Total Bookings / Over 0.5 @1.35
+    support 100% (lowest of HH AA H10 A10)  HH 5/5  AA 5/5  H10 5/5  A10 6/6
+- Tue 20:00  Villarreal v Napoli  -  1st Half - Total Bookings / Over 0.5 @1.21
+    support 100% (lowest of HH AA H10 A10)  HH 4/4  AA 3/3  H10 6/6  A10 6/6
+- Tue 20:00  Stoke City v Middlesbrough FC  -  Over/Under / Under 4.5 @1.16
+    support 90% (lowest of HH AA H10 A10)  HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Tue 21:00  FUS Rabat v Raja Casablanca Athletic  -  Over/Under / Over 0.5 @1.15
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Tue 23:30  Athletic Club Sjdr MG v Londrina EC PR  -  Home O/U / Under 2.5 @1.17
+    support 86% (lowest of HH AA H10 A10)  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+
+## 2026-10-13 18:39 WAT  |  draw slip (user's call: the 13 Tue-Sun games passing checks 1-4, none at the exact price) 2,099,340.7x (13 legs) - draw band, sides close in the table, home not weaker, Under 2.5 <= 1.70  |  code Y01GFM
+http://www.sportybet.com/ng/?shareCode=Y01GFM
+- Thu 02:00  CD Guastatoya v Antigua GFC  -  1X2 / Draw @2.70
+    SportyBet 2.10/2.70/4.20 -> draw 34% after the overround (band 27%+); Under 2.5 at 1.62
+    table this season: 25 pts from 13 v 25 pts from 13 = 1.92 v 1.92 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Fri 00:00  CA Huracan v Gimnasia y Esgrima La Plata  -  1X2 / Draw @2.85
+    SportyBet 2.35/2.85/3.25 -> draw 32% after the overround (band 27%+); Under 2.5 at 1.47
+    table this season: 19 pts from 12 v 19 pts from 12 = 1.58 v 1.58 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Fri 19:30  Pro Vercelli 1892 v Calcio Lecco 1912  -  1X2 / Draw @3.10
+    SportyBet 2.60/3.10/2.60 -> draw 30% after the overround (band 27%+); Under 2.5 at 1.64
+    table this season: 9 pts from 9 v 10 pts from 9 = 1.0 v 1.11 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Fri 23:00  Defensa y Justicia v Instituto AC Cordoba  -  1X2 / Draw @2.95
+    SportyBet 2.70/2.95/2.65 -> draw 31% after the overround (band 27%+); Under 2.5 at 1.57
+    table this season: 24 pts from 12 v 26 pts from 12 = 2.0 v 2.17 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Sat 00:30  SC Recife PE v Fortaleza EC CE  -  1X2 / Draw @3.25
+    SportyBet 2.30/3.25/3.00 -> draw 29% after the overround (band 27%+); Under 2.5 at 1.68
+    table this season: 51 pts from 33 v 57 pts from 33 = 1.55 v 1.73 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Sat 13:30  US Pianese v ASD Pineto Calcio  -  1X2 / Draw @2.95
+    SportyBet 2.40/2.95/3.00 -> draw 31% after the overround (band 27%+); Under 2.5 at 1.57
+    table this season: 7 pts from 9 v 7 pts from 8 = 0.78 v 0.88 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Sat 13:45  Quevilly-Rouen Metropole v US Orleans  -  1X2 / Draw @3.20
+    SportyBet 2.50/3.20/2.70 -> draw 29% after the overround (band 27%+); Under 2.5 at 1.65
+    table this season: 10 pts from 9 v 9 pts from 9 = 1.11 v 1.0 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Sun 00:00  Velez Sarsfield v Gimnasia y Esgrima Mendoza  -  1X2 / Draw @3.40
+    SportyBet 1.75/3.40/4.70 -> draw 27% after the overround (band 27%+); Under 2.5 at 1.66
+    table this season: 21 pts from 12 v 20 pts from 12 = 1.75 v 1.67 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Sun 08:30  Gangwon FC v Incheon United FC  -  1X2 / Draw @3.10
+    SportyBet 2.25/3.10/3.40 -> draw 30% after the overround (band 27%+); Under 2.5 at 1.52
+    table this season: 46 pts from 31 v 42 pts from 31 = 1.48 v 1.35 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Sun 16:30  Alcione Milano v Calcio Desenzano  -  1X2 / Draw @3.00
+    SportyBet 2.00/3.00/3.75 -> draw 30% after the overround (band 27%+); Under 2.5 at 1.69
+    table this season: 12 pts from 9 v 13 pts from 9 = 1.33 v 1.44 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Sun 20:00  Aguilas Doradas Rionegro v CD Tolima  -  1X2 / Draw @3.10
+    SportyBet 2.65/3.10/2.65 -> draw 30% after the overround (band 27%+); Under 2.5 at 1.64
+    table this season: 15 pts from 12 v 20 pts from 14 = 1.25 v 1.43 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Sun 22:00  Vila Nova FC GO v Gremio Novorizontino SP  -  1X2 / Draw @3.20
+    SportyBet 2.70/3.20/2.60 -> draw 29% after the overround (band 27%+); Under 2.5 at 1.60
+    table this season: 61 pts from 33 v 60 pts from 33 = 1.85 v 1.82 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Sun 22:00  CA Bucaramanga v America de Cali  -  1X2 / Draw @3.10
+    SportyBet 2.65/3.10/2.65 -> draw 30% after the overround (band 27%+); Under 2.5 at 1.61
+    table this season: 23 pts from 11 v 27 pts from 13 = 2.09 v 2.08 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+
+## 2026-10-13 20:51 WAT  |  stats prediction (opponent-rated, rule both) at 1.15+ - every game - 5.07x (11 games)  |  code YHSXP1
+http://www.sportybet.com/ng/?shareCode=YHSXP1
+- Tue 22:00  Venezuela v Colombia  -  Away O/U / Under 2.5 @1.15
+    stats 83%, book 81%  |  expected goals from the ratings 1.33 v 1.42, book's prices 0.95 v 1.40  |  counts HH 7/7  AA 4/7  H10 10/10  A10 7/10
+- Tue 23:30  Athletic Club Sjdr MG v Londrina EC PR  -  1st Half - GG/NG / No @1.16
+    stats 87%, book 82%  |  expected goals from the ratings 1.48 v 0.70, book's prices 1.43 v 0.95  |  counts HH 4/7  AA 4/7  H10 7/10  A10 8/10
+- Wed 00:00  USA v Spain  -  Over/Under / Under 4.5 @1.18
+    stats 90%, book 79%  |  expected goals from the ratings 0.95 v 1.46, book's prices 1.35 v 1.58  |  counts HH 6/7  AA 5/7  H10 9/10  A10 8/10
+- Wed 00:00  CD Tapatio v Tepatitlan FC  -  Away To Score In Both Halves / No @1.15
+    stats 82%, book 80%  |  expected goals from the ratings 1.82 v 1.17, book's prices 2.33 v 1.10  |  counts HH 5/7  AA 7/7  H10 6/10  A10 9/10
+- Wed 00:30  CA Bucaramanga v Aguilas Doradas Rionegro  -  Away To Score In Both Halves / No @1.18
+    stats 78%, book 78%  |  expected goals from the ratings 1.31 v 1.30, book's prices 1.60 v 1.20  |  counts HH 5/7  AA 5/7  H10 8/10  A10 8/10
+- Wed 00:30  Brazil v Argentina  -  Over/Under / Over 1.5 @1.16
+    stats 83%, book 81%  |  expected goals from the ratings 1.11 v 2.10, book's prices 2.53 v 0.68  |  counts HH 5/7  AA 4/7  H10 7/10  A10 6/10
+- Wed 01:00  CS Cartagines v Puntarenas FC  -  Over/Under / Under 4.5 @1.15
+    stats 90%, book 81%  |  expected goals from the ratings 1.45 v 1.02, book's prices 1.98 v 0.88  |  counts HH 6/7  AA 5/7  H10 8/10  A10 10/10
+- Wed 01:30  Boca Juniors v CR Vasco da Gama RJ  -  2nd Half - Home Team Total / Under 1.5 @1.15
+    stats 79%, book 81%  |  expected goals from the ratings 1.44 v 0.92, book's prices 1.33 v 0.73  |  counts HH 5/7  AA 6/7  H10 7/10  A10 10/10
+- Wed 02:00  Mexico v Jamaica  -  Draw No Bet / Home @1.15
+    stats 93%, book 80%  |  expected goals from the ratings 3.31 v 0.94, book's prices 2.45 v 1.10  |  counts HH 7/7  AA 5/7  H10 9/10  A10 6/10
+- Wed 02:30  Millonarios FC v CD Once Caldas  -  2nd Half - Total / Under 2.5 @1.16
+    stats 82%, book 80%  |  expected goals from the ratings 1.50 v 1.16, book's prices 1.68 v 0.95  |  counts HH 7/7  AA 6/7  H10 8/10  A10 10/10
+- Wed 03:00  AD San Carlos v Inter San Carlos  -  2nd Half - Total / Under 2.5 @1.16
+    stats 83%, book 79%  |  expected goals from the ratings 1.96 v 0.71, book's prices 1.43 v 1.18  |  counts HH 6/7  AA 5/7  H10 9/10  A10 8/10
+
+## 2026-10-13 20:59 WAT  |  stats prediction (opponent-rated, rule both) at 1.15+ - every game - 5.38x (11 games) - replaces YHSXP1 (booked with a team-id bug: 3 picks changed)  |  code Z2RWYA
+http://www.sportybet.com/ng/?shareCode=Z2RWYA
+- Tue 22:00  Venezuela v Colombia  -  Away O/U / Under 2.5 @1.15
+    stats 83%, book 81%  |  expected goals from the ratings 1.32 v 1.43, book's prices 0.95 v 1.40  |  counts HH 7/7  AA 4/7  H10 10/10  A10 7/10
+- Tue 23:30  Athletic Club Sjdr MG v Londrina EC PR  -  1st Half - GG/NG / No @1.16
+    stats 81%, book 82%  |  expected goals from the ratings 1.39 v 1.18, book's prices 1.43 v 0.95  |  counts HH 4/7  AA 4/7  H10 7/10  A10 8/10
+- Wed 00:00  USA v Spain  -  Over/Under / Under 4.5 @1.18
+    stats 90%, book 79%  |  expected goals from the ratings 0.96 v 1.46, book's prices 1.35 v 1.58  |  counts HH 6/7  AA 5/7  H10 9/10  A10 8/10
+- Wed 00:00  CD Tapatio v Tepatitlan FC  -  Away To Score In Both Halves / No @1.15
+    stats 82%, book 80%  |  expected goals from the ratings 1.82 v 1.17, book's prices 2.33 v 1.10  |  counts HH 5/7  AA 7/7  H10 6/10  A10 9/10
+- Wed 00:30  CA Bucaramanga v Aguilas Doradas Rionegro  -  Home O/U / Over 0.5 @1.18
+    stats 83%, book 78%  |  expected goals from the ratings 1.77 v 1.01, book's prices 1.63 v 1.18  |  counts HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 00:30  Brazil v Argentina  -  Over/Under / Under 4.5 @1.23
+    stats 88%, book 76%  |  expected goals from the ratings 1.76 v 0.81, book's prices 2.53 v 0.68  |  counts HH 5/7  AA 7/7  H10 6/10  A10 9/10
+- Wed 01:00  CS Cartagines v Puntarenas FC  -  Over/Under / Under 4.5 @1.15
+    stats 87%, book 81%  |  expected goals from the ratings 1.75 v 0.91, book's prices 1.98 v 0.88  |  counts HH 6/7  AA 5/7  H10 8/10  A10 10/10
+- Wed 01:30  Boca Juniors v CR Vasco da Gama RJ  -  2nd Half - Home Team Total / Under 1.5 @1.15
+    stats 79%, book 81%  |  expected goals from the ratings 1.44 v 0.93, book's prices 1.33 v 0.73  |  counts HH 5/7  AA 6/7  H10 7/10  A10 10/10
+- Wed 02:00  Mexico v Jamaica  -  Draw No Bet / Home @1.15
+    stats 99%, book 80%  |  expected goals from the ratings 5.93 v 0.78, book's prices 2.45 v 1.10  |  counts HH 7/7  AA 5/7  H10 9/10  A10 6/10
+- Wed 02:30  Millonarios FC v CD Once Caldas  -  2nd Half - Total / Under 2.5 @1.16
+    stats 82%, book 80%  |  expected goals from the ratings 1.50 v 1.16, book's prices 1.68 v 0.95  |  counts HH 7/7  AA 6/7  H10 8/10  A10 10/10
+- Wed 03:00  AD San Carlos v Inter San Carlos  -  Home O/U / Under 2.5 @1.16
+    stats 93%, book 80%  |  expected goals from the ratings 0.95 v 1.05, book's prices 1.43 v 1.18  |  counts HH 6/7  AA 5/7  H10 10/10  A10 8/10
+
+## 2026-10-14 07:30 WAT  |  stats prediction (rule all: counts, ratings and book must all back it) at 1.15+ - part 1 - 1,883.11x (38 games)  |  code QGVT0F
+http://www.sportybet.com/ng/?shareCode=QGVT0F
+- Wed 08:45  Melbourne Victory v FC Seoul  -  2nd Half - Total / Over 0.5 @1.18
+    counts 71%, stats 82%, book 78%  |  expected goals from the ratings 1.44 v 1.60, book's prices 1.93 v 1.05  |  HH 6/7  AA 5/7  H10 10/10  A10 9/10
+- Wed 10:30  Yokohama FC v Urawa Red Diamonds  -  2nd Half - Total / Over 0.5 @1.17
+    counts 80%, stats 82%, book 80%  |  expected goals from the ratings 1.56 v 1.54, book's prices 1.28 v 1.75  |  HH 7/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 11:00  Kashiwa Reysol v Port FC  -  1st Half - Home O/U / Under 2.5 @1.16
+    counts 100%, stats 97%, book 79%  |  expected goals from the ratings 1.86 v 1.66, book's prices 3.05 v 0.83  |  HH 7/7  AA 7/7  H10 10/10  A10 10/10
+- Wed 11:00  Vissel Kobe v Jeonbuk FC  -  1st Half - GG/NG / No @1.18
+    counts 80%, stats 88%, book 79%  |  expected goals from the ratings 1.50 v 0.86, book's prices 1.83 v 0.90  |  HH 6/7  AA 7/7  H10 9/10  A10 8/10
+- Wed 11:00  Gainare Tottori v Cerezo Osaka  -  Away O/U / Under 3.5 @1.16
+    counts 90%, stats 84%, book 80%  |  expected goals from the ratings 1.14 v 2.09, book's prices 0.80 v 2.13  |  HH 7/7  AA 7/7  H10 9/10  A10 10/10
+- Wed 11:00  Jubilo Iwata v Kawasaki Frontale  -  Away To Win Both Halves / No @1.17
+    counts 80%, stats 81%, book 79%  |  expected goals from the ratings 1.29 v 2.06, book's prices 1.08 v 1.83  |  HH 6/7  AA 7/7  H10 10/10  A10 8/10
+- Wed 11:00  Matsumoto Yamaga FC v Sanfrecce Hiroshima  -  2nd Half - Away Team Total / Under 2.5 @1.16
+    counts 80%, stats 88%, book 79%  |  expected goals from the ratings 0.71 v 2.20, book's prices 0.73 v 2.60  |  HH 6/7  AA 7/7  H10 9/10  A10 8/10
+- Wed 11:00  Mito Hollyhock v FC Tokyo  -  Over/Under / Under 4.5 @1.15
+    counts 80%, stats 85%, book 82%  |  expected goals from the ratings 1.03 v 1.73, book's prices 0.95 v 1.88  |  HH 6/7  AA 7/7  H10 8/10  A10 9/10
+- Wed 11:00  Nagoya Grampus v Fagiano Okayama  -  2nd Half - Total / Over 0.5 @1.23
+    counts 86%, stats 82%, book 76%  |  expected goals from the ratings 1.69 v 1.43, book's prices 1.45 v 1.23  |  HH 6/7  AA 6/7  H10 10/10  A10 9/10
+- Wed 11:00  Sagan Tosu v Avispa Fukuoka  -  Away O/U / Under 2.5 @1.16
+    counts 71%, stats 90%, book 81%  |  expected goals from the ratings 1.19 v 1.12, book's prices 1.10 v 1.40  |  HH 5/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 11:00  Yokohama F Marinos v Shimizu S-Pulse  -  Away To Score In Both Halves / No @1.15
+    counts 86%, stats 89%, book 80%  |  expected goals from the ratings 1.62 v 0.88, book's prices 1.55 v 1.10  |  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Wed 11:00  Slask II Wroclaw v Legia Warszawa II  -  Over/Under / Over 1.5 @1.16
+    counts 86%, stats 87%, book 81%  |  expected goals from the ratings 1.75 v 1.84, book's prices 1.63 v 1.53  |  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Wed 11:00  Lech II Poznan v WDA Swiecie  -  Away To Score In Both Halves / No @1.22
+    counts 80%, stats 77%, book 75%  |  expected goals from the ratings 2.51 v 1.37, book's prices 2.00 v 1.30  |  HH 6/7  AA 7/7  H10 8/10  A10 8/10
+- Wed 12:00  FC Shakhtar Donetsk v AEK Athens  -  Over/Under / Over 1.5 @1.16
+    counts 80%, stats 77%, book 81%  |  expected goals from the ratings 2.06 v 0.77, book's prices 1.65 v 1.58  |  HH 7/7  AA 3/3  H10 8/10  A10 6/7
+- Wed 12:00  Feyenoord Rotterdam v Como 1907 U20  -  Home Team Win To Nil / No @1.27
+    counts 71%, stats 79%, book 72%  |  expected goals from the ratings 2.14 v 1.45, book's prices 2.35 v 1.25  |  HH 5/7  AA 6/7  H10 9/10  A10 9/10
+- Wed 12:00  Nongbua Pitchaya FC v Chiangmai United  -  HT Away to Win to Nil Yes/No / No @1.15
+    counts 80%, stats 83%, book 80%  |  expected goals from the ratings 2.41 v 1.83, book's prices 1.88 v 1.13  |  HH 7/7  AA 6/7  H10 9/10  A10 8/10
+- Wed 12:00  Pattaya Dolphins United v Songkhla FC  -  Over/Under / Over 1.5 @1.29
+    counts 70%, stats 67%, book 71%  |  expected goals from the ratings 1.26 v 1.07, book's prices 1.28 v 1.28  |  HH 7/7  AA 7/7  H10 7/10  A10 8/10
+- Wed 12:30  Batman Petrolspor v Istanbulspor AS  -  Over/Under / Over 1.5 @1.23
+    counts 71%, stats 91%, book 77%  |  expected goals from the ratings 2.81 v 1.17, book's prices 1.85 v 1.03  |  HH 5/7  AA 6/7  H10 10/10  A10 8/10
+- Wed 12:30  Chanthaburi v Nakhon Pathom United FC  -  Over/Under / Under 3.5 @1.18
+    counts 80%, stats 86%, book 78%  |  expected goals from the ratings 1.17 v 0.83, book's prices 1.50 v 0.78  |  HH 6/7  AA 7/7  H10 9/10  A10 8/10
+- Wed 12:45  Olympiacos Piraeus B v Kallithea FC  -  HT Home to Win to Nil Yes/No / No @1.15
+    counts 86%, stats 80%, book 80%  |  expected goals from the ratings 1.10 v 1.35, book's prices 1.00 v 1.48  |  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Wed 13:00  AS Roma v Real Madrid  -  1st Half - Over/Under / Under 2.5 @1.22
+    counts 71%, stats 86%, book 76%  |  expected goals from the ratings 1.45 v 1.69, book's prices 1.33 v 2.23  |  HH 5/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 13:00  Slovan Bratislava v VfB Stuttgart  -  Draw No Bet / Away @1.15
+    counts 80%, stats 91%, book 81%  |  expected goals from the ratings 1.58 v 4.15, book's prices 1.15 v 2.65  |  HH 4/5  AA 6/7  H10 9/10  A10 8/10
+- Wed 13:00  KF Feronikeli v KF Llapi  -  Over/Under / Over 1.5 @1.27
+    counts 80%, stats 75%, book 72%  |  expected goals from the ratings 1.52 v 1.16, book's prices 1.43 v 1.23  |  HH 6/7  AA 7/7  H10 8/10  A10 9/10
+- Wed 13:00  Kasetsart FC v Mahasarakham United FC  -  Over/Under / Under 3.5 @1.27
+    counts 71%, stats 77%, book 72%  |  expected goals from the ratings 1.21 v 1.22, book's prices 1.28 v 1.25  |  HH 5/7  AA 7/7  H10 8/10  A10 8/10
+- Wed 13:00  Leopards SC v Bandari FC  -  Home Or Any Clean Sheet / Yes @1.23
+    counts 70%, stats 80%, book 75%  |  expected goals from the ratings 1.02 v 0.63, book's prices 1.20 v 0.75  |  HH 6/7  AA 5/7  H10 8/10  A10 7/10
+- Wed 13:00  Mombasa United FC v Kakamega Homeboyz  -  Away Team Win To Nil / No @1.25
+    counts 80%, stats 83%, book 73%  |  expected goals from the ratings 1.27 v 0.97, book's prices 1.05 v 1.20  |  HH 7/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 13:15  Persib Bandung v The Cong - Viettel FC  -  1st Half - GG/NG / No @1.16
+    counts 86%, stats 86%, book 79%  |  expected goals from the ratings 1.59 v 0.76, book's prices 1.80 v 0.88  |  HH 7/7  AA 6/7  H10 9/10  A10 9/10
+- Wed 13:30  FC STK 1914 Samorin v FK Humenne  -  Over/Under / Under 4.5 @1.26
+    counts 80%, stats 80%, book 74%  |  expected goals from the ratings 1.51 v 1.56, book's prices 2.38 v 0.95  |  HH 6/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 13:30  Lok. Kosice v AS Trencin  -  1st Half - Over/Under / Under 2.5 @1.16
+    counts 86%, stats 85%, book 79%  |  expected goals from the ratings 1.27 v 1.83, book's prices 1.00 v 2.20  |  HH 7/7  AA 6/7  H10 10/10  A10 9/10
+- Wed 13:30  MSK Povazska Bystrica v FK Kosice  -  1st Half - Over/Under / Over 0.5 @1.19
+    counts 90%, stats 88%, book 77%  |  expected goals from the ratings 1.68 v 2.75, book's prices 1.48 v 2.00  |  HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 13:30  Spartak Myjava v MFK Ruzomberok  -  1st Half - GG/NG / No @1.23
+    counts 80%, stats 84%, book 76%  |  expected goals from the ratings 1.50 v 0.96, book's prices 1.00 v 2.28  |  HH 7/7  AA 6/7  H10 10/10  A10 8/10
+- Wed 13:30  TJ Slavoj Boleraz v MSK Namestovo  -  1st Half - Over/Under / Under 2.5 @1.17
+    counts 80%, stats 81%, book 78%  |  expected goals from the ratings 1.71 v 1.61, book's prices 1.03 v 2.28  |  HH 6/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 14:00  Aston Villa v Fenerbahce  -  1st Half - Over/Under / Over 0.5 @1.15
+    counts 86%, stats 90%, book 80%  |  expected goals from the ratings 2.81 v 2.36, book's prices 2.55 v 1.25  |  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Wed 14:00  Milan Futuro v Piacenza Calcio  -  Over/Under / Over 2.5 @1.78
+    counts 29%, stats 60%, book 52%  |  expected goals from the ratings 1.50 v 1.59, book's prices 1.25 v 1.48  |  HH 5/7  AA 2/7  H10 8/10  A10 5/10
+- Wed 14:00  Tropical Coriano v US Citta Di Pontedera  -  Over/Under / Under 2.5 @1.69
+    counts 29%, stats 64%, book 54%  |  expected goals from the ratings 1.39 v 0.75, book's prices 1.45 v 1.05  |  HH 6/7  AA 2/7  H10 9/10  A10 4/10
+- Wed 14:00  JK Narva Trans v FC Kuressaare  -  2nd Half - Total / Under 2.5 @1.20
+    counts 71%, stats 89%, book 76%  |  expected goals from the ratings 1.25 v 1.31, book's prices 1.63 v 1.18  |  HH 6/7  AA 5/7  H10 8/10  A10 9/10
+- Wed 14:00  Jagiellonia II Bialystok v KS Ck Troszyn  -  Home Team Clean Sheet / No @1.27
+    counts 86%, stats 76%, book 71%  |  expected goals from the ratings 1.81 v 1.44, book's prices 2.05 v 1.30  |  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Wed 14:00  MFK Vranov Nad Topou v MFk Dukla Banska Bystrica  -  1st Half - Over/Under / Under 2.5 @1.22
+    counts 71%, stats 80%, book 75%  |  expected goals from the ratings 0.92 v 2.45, book's prices 0.78 v 2.78  |  HH 6/7  AA 5/7  H10 9/10  A10 8/10
+
+## 2026-10-14 07:30 WAT  |  stats prediction (rule all: counts, ratings and book must all back it) at 1.15+ - part 2 - 984.08x (38 games)  |  code PZR8L4
+http://www.sportybet.com/ng/?shareCode=PZR8L4
+- Wed 14:00  PFK Piestany v Spartak Trnava  -  Over/Under / Under 6.5 @1.15
+    counts 80%, stats 97%, book 81%  |  expected goals from the ratings 1.08 v 1.89, book's prices 0.65 v 3.73  |  HH 6/7  AA 7/7  H10 8/10  A10 9/10
+- Wed 14:00  Kigezi Homeboyz FC v NEC FC  -  2nd Half - GG/NG / No @1.17
+    counts 80%, stats 86%, book 78%  |  expected goals from the ratings 0.66 v 1.15, book's prices 0.75 v 1.68  |  HH 7/7  AA 7/7  H10 9/10  A10 8/10
+- Wed 14:00  Uganda Police FC v SC Villa  -  Over/Under / Under 3.5 @1.18
+    counts 71%, stats 83%, book 78%  |  expected goals from the ratings 0.77 v 1.40, book's prices 0.93 v 1.35  |  HH 7/7  AA 5/7  H10 9/10  A10 8/10
+- Wed 14:30  FK Banik Most-Sous v SK Benatky Nad Jizerou  -  1st Half - GG/NG / No @1.16
+    counts 71%, stats 81%, book 79%  |  expected goals from the ratings 1.78 v 1.20, book's prices 1.48 v 1.05  |  HH 7/7  AA 5/7  H10 9/10  A10 8/10
+- Wed 14:45  PFC Nasaf v Al Wahda FC (UAE)  -  Away O/U / Under 2.5 @1.17
+    counts 90%, stats 91%, book 79%  |  expected goals from the ratings 1.20 v 1.06, book's prices 1.08 v 1.45  |  HH 7/7  AA 7/7  H10 10/10  A10 9/10
+- Wed 15:00  Real Betis Balompie v FC Porto  -  1st Half - Over/Under / Over 0.5 @1.21
+    counts 70%, stats 86%, book 77%  |  expected goals from the ratings 2.26 v 1.68, book's prices 1.98 v 1.53  |  HH 5/6  AA 6/7  H10 7/10  A10 8/10
+- Wed 15:00  Punjab FC v Odisha FC  -  2nd Half - Total / Under 2.5 @1.18
+    counts 80%, stats 74%, book 79%  |  expected goals from the ratings 1.99 v 0.99, book's prices 1.60 v 1.08  |  HH 7/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 15:00  Umraniyespor v Boluspor  -  1st Half - GG/NG / No @1.16
+    counts 80%, stats 78%, book 79%  |  expected goals from the ratings 1.47 v 0.99, book's prices 1.98 v 0.83  |  HH 6/7  AA 7/7  H10 8/10  A10 9/10
+- Wed 15:00  MO Constantine v JS Azazga  -  Over/Under / Under 3.5 @1.18
+    counts 70%, stats 80%, book 78%  |  expected goals from the ratings 0.94 v 1.37, book's prices 1.40 v 0.88  |  HH 5/7  AA 3/4  H10 7/10  A10 5/6
+- Wed 15:00  Wa Mostaganem v RC Kouba  -  Over/Under / Under 3.5 @1.16
+    counts 70%, stats 84%, book 79%  |  expected goals from the ratings 0.67 v 1.41, book's prices 0.90 v 1.28  |  HH 6/7  AA 7/7  H10 7/10  A10 8/10
+- Wed 16:00  Spartakos Kitiou FC v Krasava ENY Ypsonas FC  -  2nd Half - Total / Over 0.5 @1.22
+    counts 86%, stats 79%, book 75%  |  expected goals from the ratings 1.37 v 1.29, book's prices 1.00 v 1.68  |  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Wed 16:00  Parnu JK Vaprus II v JK Tabasalu  -  2nd Half - Draw No Bet / Home @1.21
+    counts 80%, stats 87%, book 76%  |  expected goals from the ratings 3.75 v 1.50, book's prices 2.83 v 1.23  |  HH 6/7  AA 7/7  H10 8/10  A10 8/10
+- Wed 16:00  Mezokovesd Zsory SE v FC Ajka  -  Over/Under / Under 3.5 @1.25
+    counts 71%, stats 81%, book 75%  |  expected goals from the ratings 1.37 v 0.88, book's prices 1.43 v 1.03  |  HH 5/7  AA 5/7  H10 8/10  A10 8/10
+- Wed 16:30  AL Jandal v Al-Okhdood Club  -  1st Half - GG/NG / No @1.20
+    counts 70%, stats 83%, book 76%  |  expected goals from the ratings 1.26 v 1.29, book's prices 1.28 v 1.45  |  HH 5/7  AA 6/7  H10 7/10  A10 7/10
+- Wed 17:00  Bohemians Prague 1905 v FK Mlada Boleslav  -  1st Half - Home O/U / Under 1.5 @1.15
+    counts 80%, stats 88%, book 80%  |  expected goals from the ratings 1.11 v 1.16, book's prices 1.65 v 1.38  |  HH 7/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 17:00  Al Jazira (UAE) v Arkadag FK  -  2nd Half - Home Team Total / Under 2.5 @1.17
+    counts 100%, stats 98%, book 77%  |  expected goals from the ratings 0.97 v 1.56, book's prices 2.65 v 0.93  |  HH 7/7  AA 7/7  H10 10/10  A10 10/10
+- Wed 17:00  Al-Muharraq SC v Gol Gohar Sirjan FC  -  HT Away to Win to Nil Yes/No / No @1.24
+    counts 80%, stats 84%, book 74%  |  expected goals from the ratings 1.49 v 0.68, book's prices 1.10 v 1.08  |  HH 7/7  AA 7/7  H10 9/10  A10 8/10
+- Wed 17:00  FC Levadia Tallinn v Nomme Kalju FC  -  1st Half - Draw No Bet / Home @1.21
+    counts 80%, stats 82%, book 76%  |  expected goals from the ratings 2.79 v 1.24, book's prices 2.75 v 1.23  |  HH 7/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 17:00  Paide Linnameeskond v Tartu JK Tammeka  -  2nd Half - Total / Over 0.5 @1.16
+    counts 86%, stats 82%, book 80%  |  expected goals from the ratings 1.76 v 1.22, book's prices 1.98 v 1.15  |  HH 7/7  AA 6/7  H10 10/10  A10 9/10
+- Wed 17:00  LKS Lodz II v Zabkovia Zabki  -  Home Team Clean Sheet / No @1.17
+    counts 71%, stats 84%, book 77%  |  expected goals from the ratings 1.90 v 1.81, book's prices 1.78 v 1.60  |  HH 7/7  AA 5/7  H10 9/10  A10 9/10
+- Wed 17:00  Zaglebie Sosnowiec v Rakow II Czestochowa  -  1st Half - GG/NG / No @1.22
+    counts 80%, stats 83%, book 75%  |  expected goals from the ratings 1.57 v 1.13, book's prices 2.23 v 0.95  |  HH 6/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 17:00  Bate Borisov v FC Neman Grodno  -  Away O/U / Under 2.5 @1.17
+    counts 86%, stats 92%, book 79%  |  expected goals from the ratings 0.92 v 0.99, book's prices 1.00 v 1.45  |  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Wed 17:00  Aris Limassol v Ethnikos Achnas FC  -  1st Half - Over/Under / Under 2.5 @1.15
+    counts 86%, stats 87%, book 80%  |  expected goals from the ratings 2.06 v 1.09, book's prices 2.38 v 0.68  |  HH 6/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 17:00  KF Dukagjini v KF Vushtrria  -  Over/Under / Under 3.5 @1.41
+    counts 60%, stats 81%, book 65%  |  expected goals from the ratings 1.51 v 0.76, book's prices 2.40 v 0.50  |  HH 6/7  AA 5/7  H10 8/10  A10 6/10
+- Wed 17:45  Feyenoord v Como 1907  -  Away Team Win To Nil / No @1.20
+    counts 86%, stats 82%, book 79%  |  expected goals from the ratings 1.44 v 1.51, book's prices 1.45 v 1.93  |  HH 7/7  AA 6/7  H10 10/10  A10 9/10
+- Wed 17:45  LASK Linz v Liverpool  -  Home Team Total Bookings / Under 3.5 @1.16
+    counts 86%, stats: none (not a goal market), book 81%  |  expected goals from the ratings 2.15 v 1.30, book's prices 0.98 v 2.43  |  HH 7/7  AA 6/7  H10 10/10  A10 8/9
+- Wed 18:00  Bryne FK v Raufoss IL  -  Home Or Any Clean Sheet / Yes @1.15
+    counts 86%, stats 79%, book 80%  |  expected goals from the ratings 2.22 v 0.85, book's prices 2.68 v 0.93  |  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Wed 18:00  FK Haugesund v Lyn 1896 FK  -  Home O/U / Under 4.5 @1.21
+    counts 86%, stats 82%, book 77%  |  expected goals from the ratings 2.95 v 1.52, book's prices 2.98 v 1.15  |  HH 6/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 18:00  Stabaek IF v Sandnes Ulf  -  Home To Win Both Halves / No @1.30
+    counts 71%, stats 79%, book 70%  |  expected goals from the ratings 2.25 v 1.35, book's prices 2.43 v 1.18  |  HH 6/7  AA 5/7  H10 9/10  A10 8/10
+- Wed 18:00  Al-Raed Club v Jeddah Club  -  2nd Half - GG/NG / No @1.24
+    counts 80%, stats 76%, book 74%  |  expected goals from the ratings 2.16 v 0.89, book's prices 1.83 v 0.90  |  HH 6/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 18:00  Ankara Keciorengucu v Igdir FK  -  1st Half - Home O/U / Under 1.5 @1.15
+    counts 80%, stats 79%, book 79%  |  expected goals from the ratings 1.87 v 1.28, book's prices 1.63 v 1.20  |  HH 6/7  AA 7/7  H10 8/10  A10 9/10
+- Wed 18:00  Antalyaspor v Kayserispor  -  1st Half - GG/NG / No @1.18
+    counts 86%, stats 85%, book 78%  |  expected goals from the ratings 1.29 v 1.22, book's prices 1.20 v 1.40  |  HH 6/7  AA 6/7  H10 9/10  A10 10/10
+- Wed 18:00  FC Viktoria Cologne v SG Sonnenhof Grossaspach  -  Away To Score In Both Halves / No @1.19
+    counts 71%, stats 76%, book 77%  |  expected goals from the ratings 1.75 v 1.34, book's prices 2.18 v 1.20  |  HH 5/7  AA 6/7  H10 8/10  A10 10/10
+- Wed 18:00  SC Verl v Jahn Regensburg  -  HT Away to Win to Nil Yes/No / No @1.22
+    counts 71%, stats 80%, book 75%  |  expected goals from the ratings 2.12 v 1.27, book's prices 1.88 v 1.63  |  HH 5/7  AA 5/7  H10 8/10  A10 8/10
+- Wed 18:00  SV Waldhof Mannheim 07 v FC Ingolstadt 04  -  1st Half - Over/Under / Over 0.5 @1.25
+    counts 71%, stats 78%, book 75%  |  expected goals from the ratings 1.77 v 1.58, book's prices 1.88 v 1.43  |  HH 5/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 18:00  SV Wehen Wiesbaden v Alemannia Aachen  -  Home Team Win To Nil / No @1.17
+    counts 80%, stats 87%, book 79%  |  expected goals from the ratings 1.30 v 1.70, book's prices 1.55 v 1.40  |  HH 6/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 18:00  Asker Fotball v Frigg Oslo FK  -  Over/Under / Over 3.5 @1.34
+    counts 71%, stats 80%, book 69%  |  expected goals from the ratings 3.43 v 2.04, book's prices 3.18 v 1.10  |  HH 5/7  AA 7/7  H10 8/10  A10 8/10
+- Wed 18:00  ES Setif v JS Kabylie  -  Home To Score In Both Halves / No @1.19
+    counts 70%, stats 86%, book 77%  |  expected goals from the ratings 0.97 v 1.09, book's prices 1.23 v 0.85  |  HH 5/7  AA 6/7  H10 7/10  A10 10/10
+
+## 2026-10-14 07:30 WAT  |  stats prediction (rule all: counts, ratings and book must all back it) at 1.15+ - part 3 - 4,022.30x (37 games)  |  code QYCU7N
+http://www.sportybet.com/ng/?shareCode=QYCU7N
+- Wed 18:30  Sestao River Club v Salamanca CF UDS  -  Away Team Clean Sheet / No @1.22
+    counts 80%, stats 76%, book 74%  |  expected goals from the ratings 1.43 v 0.98, book's prices 1.48 v 0.88  |  HH 6/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 19:00  UD Santarem v Gil Vicente Barcelos  -  2nd Half - Total / Under 2.5 @1.17
+    counts 86%, stats 90%, book 80%  |  expected goals from the ratings 0.97 v 1.06, book's prices 0.73 v 1.90  |  HH 6/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 19:00  CE L'Hospitalet v Cfj Mollerussa  -  Over/Under / Under 3.5 @1.25
+    counts 50%, stats 72%, book 74%  |  expected goals from the ratings 1.67 v 1.01, book's prices 1.58 v 0.90  |  HH 6/7  AA 6/7  H10 5/10  A10 9/10
+- Wed 19:00  CF Montanesa v FC L Escala  -  Over/Under / Under 3.5 @1.27
+    counts 70%, stats 77%, book 72%  |  expected goals from the ratings 1.37 v 1.09, book's prices 1.50 v 1.03  |  HH 6/7  AA 6/7  H10 7/10  A10 7/10
+- Wed 19:00  UE Cornella v CF Peralada  -  Over/Under / Under 3.5 @1.27
+    counts 70%, stats 75%, book 72%  |  expected goals from the ratings 1.42 v 1.10, book's prices 1.65 v 0.90  |  HH 5/7  AA 6/7  H10 7/10  A10 8/10
+- Wed 19:00  CA Platense v Defensa Y Justicia Reserve  -  HT Home to Win to Nil Yes/No / No @1.18
+    counts 60%, stats 79%, book 78%  |  expected goals from the ratings 1.09 v 1.38, book's prices 1.08 v 1.45  |  HH 7/7  AA 5/7  H10 9/10  A10 6/10
+- Wed 19:00  CA Tigre Reserve v Argentinos Juniors Reserve  -  HT Home to Win to Nil Yes/No / No @1.25
+    counts 70%, stats 77%, book 73%  |  expected goals from the ratings 1.01 v 1.22, book's prices 1.20 v 1.23  |  HH 6/7  AA 5/7  H10 7/10  A10 9/10
+- Wed 19:00  Colon de Santa Fe Reserve v Independiente Rivadavia de Mendoza Reserve  -  HT Away to Win to Nil Yes/No / No @1.19
+    counts 80%, stats 73%, book 77%  |  expected goals from the ratings 1.10 v 1.12, book's prices 1.33 v 1.05  |  HH 6/7  AA 6/7  H10 10/10  A10 8/10
+- Wed 19:00  Estudiantes de LP Reserve v CA Lanus  -  HT Away to Win to Nil Yes/No / No @1.19
+    counts 80%, stats 82%, book 77%  |  expected goals from the ratings 1.64 v 1.25, book's prices 1.45 v 1.20  |  HH 6/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 19:00  Rosario Central Reserve v CA Aldosivi Reserve  -  Draw No Bet / Home @1.19
+    counts 71%, stats 84%, book 76%  |  expected goals from the ratings 1.88 v 0.84, book's prices 1.88 v 0.93  |  HH 5/7  AA 7/7  H10 8/10  A10 8/10
+- Wed 19:00  San Martin de San Juan Reserve v Deportivo Riestra Afbc Reserve  -  Draw No Bet / Away @1.20
+    counts 57%, stats 84%, book 75%  |  expected goals from the ratings 0.94 v 2.06, book's prices 0.98 v 1.93  |  HH 6/7  AA 4/7  H10 8/10  A10 8/10
+- Wed 19:15  AL Faisaly (Jor) v Al Nahda  -  1st Half - GG/NG / No @1.20
+    counts 71%, stats 87%, book 76%  |  expected goals from the ratings 1.63 v 0.71, book's prices 1.55 v 1.20  |  HH 6/7  AA 5/7  H10 8/10  A10 8/10
+- Wed 19:30  RC Recreativo de Huelva v CDA Navalcarnero  -  Away Team Clean Sheet / No @1.18
+    counts 71%, stats 80%, book 76%  |  expected goals from the ratings 1.60 v 0.98, book's prices 1.55 v 1.03  |  HH 6/7  AA 5/7  H10 8/10  A10 8/10
+- Wed 19:30  CP San Cristobal v FE Grama  -  Home Team Clean Sheet / No @1.27
+    counts 71%, stats 78%, book 71%  |  expected goals from the ratings 1.03 v 1.50, book's prices 1.13 v 1.30  |  HH 5/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 19:45  Norwich v Southampton  -  Home Team Win To Nil / No @1.17
+    counts 100%, stats 88%, book 82%  |  expected goals from the ratings 1.58 v 1.86, book's prices 1.63 v 1.53  |  HH 7/7  AA 7/7  H10 10/10  A10 10/10
+- Wed 19:45  Portsmouth FC v Sheffield United  -  Home O/U / Under 2.5 @1.16
+    counts 90%, stats 86%, book 82%  |  expected goals from the ratings 1.30 v 1.56, book's prices 1.38 v 1.18  |  HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 19:45  AFC Whyteleafe v Whitehawk FC  -  Over/Under / Over 1.5 @1.17
+    counts 80%, stats 81%, book 79%  |  expected goals from the ratings 1.56 v 1.51, book's prices 1.75 v 1.33  |  HH 7/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 20:00  Aston Villa v Fenerbahce Istanbul  -  1st Half Offsides Over/Under / Under 3.5 @1.17
+    counts 80%, stats: none (not a goal market), book 79%  |  expected goals from the ratings 1.55 v 1.48, book's prices 2.05 v 1.13  |  HH 6/7  AA 7/7  H10 8/10  A10 9/10
+- Wed 20:00  Betis v Porto  -  Offsides Over/Under / Under 5.5 @1.17
+    counts 80%, stats: none (not a goal market), book 79%  |  expected goals from the ratings 1.00 v 1.41, book's prices 1.65 v 1.28  |  HH 7/7  AA 7/7  H10 9/10  A10 8/10
+- Wed 20:00  Bodoe/Glimt v Borussia Dortmund  -  Over/Under / Under 5.5 @1.19
+    counts 80%, stats 85%, book 81%  |  expected goals from the ratings 2.30 v 1.22, book's prices 1.65 v 2.00  |  HH 6/7  AA 7/7  H10 8/10  A10 10/10
+- Wed 20:00  Roma v Real Madrid  -  Over/Under / Under 5.5 @1.15
+    counts 90%, stats 93%, book 84%  |  expected goals from the ratings 1.43 v 1.43, book's prices 1.48 v 1.95  |  HH 7/7  AA 7/7  H10 10/10  A10 9/10
+- Wed 20:00  Shakhtar D v AEK Athens  -  1st Half - Away Total Corners / Under 3.5 @1.17
+    counts 90%, stats: none (not a goal market), book 81%  |  expected goals from the ratings 1.22 v 1.16, book's prices 1.35 v 1.35  |  HH 7/7  AA 7/7  H10 9/9  A10 9/10
+- Wed 20:00  Slovan Bratislava v Stuttgart  -  Away Team Total Corners / Under 8.5 @1.17
+    counts 90%, stats: none (not a goal market), book 81%  |  expected goals from the ratings 2.00 v 1.33, book's prices 1.00 v 2.78  |  HH 7/7  AA 7/7  H10 10/10  A10 9/10
+- Wed 20:00  Lincoln City v West Ham  -  1st Half - Home Total Corners / Under 3.5 @1.15
+    counts 86%, stats: none (not a goal market), book 81%  |  expected goals from the ratings 1.58 v 1.53, book's prices 1.03 v 1.85  |  HH 6/7  AA 6/7  H10 9/10  A10 10/10
+- Wed 20:00  Bolivar SC v Mineros de Guayana  -  Over/Under / Over 2.5 @1.73
+    counts 60%, stats 48%, book 53%  |  expected goals from the ratings 1.26 v 1.34, book's prices 1.33 v 1.48  |  HH 5/7  AA 5/7  H10 8/10  A10 6/10
+- Wed 20:30  Atletico Avila FC v Academia Anzoategui FC  -  Over/Under / Under 2.5 @1.78
+    counts 50%, stats 70%, book 51%  |  expected goals from the ratings 0.86 v 1.07, book's prices 1.13 v 1.50  |  HH 5/7  AA 4/7  H10 5/10  A10 6/10
+- Wed 20:30  Atletico El Vigia v Zamora FC  -  Over/Under / Over 2.5 @1.54
+    counts 43%, stats 57%, book 59%  |  expected goals from the ratings 1.21 v 1.74, book's prices 1.33 v 1.73  |  HH 5/7  AA 3/7  H10 7/10  A10 5/10
+- Wed 20:30  Club Atletico Barinas v Real Frontera FC  -  1X2 / Home @1.28
+    counts 30%, stats 70%, book 69%  |  expected goals from the ratings 2.58 v 1.06, book's prices 2.15 v 0.78  |  HH 4/7  AA 7/7  H10 3/10  A10 7/10
+- Wed 21:00  Ittihad Tanger v Maghreb AS de Fes  -  Over/Under / Under 3.5 @1.17
+    counts 90%, stats 88%, book 81%  |  expected goals from the ratings 0.77 v 1.12, book's prices 0.88 v 1.25  |  HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 21:00  Trujillanos FC v Deportivo Rayo Zuliano  -  Over/Under / Over 2.5 @2.00
+    counts 57%, stats 49%, book 46%  |  expected goals from the ratings 1.28 v 1.36, book's prices 1.23 v 1.28  |  HH 4/7  AA 5/7  H10 6/10  A10 7/10
+- Wed 21:00  Yaracuyanos FC v Barquisimeto SC  -  Draw No Bet / Home @1.43
+    counts 50%, stats 71%, book 63%  |  expected goals from the ratings 1.61 v 1.21, book's prices 1.55 v 1.13  |  HH 4/7  AA 4/7  H10 5/10  A10 6/10
+- Wed 21:00  CA Tembetary Ypane v Sol de America Villa Elisa  -  Home Team Win To Nil / No @1.15
+    counts 71%, stats 82%, book 80%  |  expected goals from the ratings 1.24 v 1.39, book's prices 1.13 v 1.30  |  HH 6/7  AA 5/7  H10 9/10  A10 8/10
+- Wed 22:30  CD Junior FC v Deportivo Pereira FC SA  -  Home O/U / Under 3.5 @1.23
+    counts 71%, stats 81%, book 75%  |  expected goals from the ratings 2.23 v 0.82, book's prices 2.35 v 0.75  |  HH 7/7  AA 5/7  H10 9/10  A10 8/10
+- Wed 23:00  CA Sarmiento Junin v CA River Plate (ARG)  -  Away Team Total Corners / Under 7.5 @1.19
+    counts 80%, stats: none (not a goal market), book 79%  |  expected goals from the ratings 1.06 v 1.37, book's prices 0.73 v 1.58  |  HH 7/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 23:00  Atletico Mineiro MG v Montevideo City Torque  -  Away Team Shots on Target O/U / Over 1.5 @1.16
+    counts 80%, stats: none (not a goal market), book 79%  |  expected goals from the ratings 1.76 v 1.07, book's prices 1.93 v 0.63  |  HH 6/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 23:00  Real Cundinamarca v Bogota FC  -  Away O/U / Under 1.5 @1.22
+    counts 70%, stats 86%, book 76%  |  expected goals from the ratings 1.47 v 0.66, book's prices 1.53 v 0.90  |  HH 6/7  AA 6/7  H10 8/10  A10 7/10
+- Wed 23:30  Cerro Porteno v Sportivo San Lorenzo  -  Over/Under / Under 4.5 @1.15
+    counts 100%, stats 93%, book 81%  |  expected goals from the ratings 1.68 v 0.48, book's prices 2.08 v 0.78  |  HH 7/7  AA 7/7  H10 10/10  A10 10/10
+
+## 2026-10-14 07:31 WAT  |  minute mix: 5-min draw, 10-min draw or the Minutes-tab option the record backs - every minute game - 9.04x (20 games)  |  code QZDJ8E
+http://www.sportybet.com/ng/?shareCode=QZDJ8E
+- Wed 11:00  Vissel Kobe v Jeonbuk FC  -  10 Minutes - 1X2 / Draw @1.18
+    book's no-margin chance 76% - 10-min draw
+    match record backs it: record 85% of 13 (6+ answered a side, floor 80%)
+- Wed 11:00  Mito Hollyhock v FC Tokyo  -  10 Minutes - 1X2 / Draw @1.19
+    book's no-margin chance 76% - 10-min draw
+    match record backs it: record 91% of 11 (5+ answered a side, floor 80%)
+- Wed 17:00  Bohemians Prague 1905 v FK Mlada Boleslav  -  Total Goals from 1 to 20 min / Under 1.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 91% of 11 (4+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+- Wed 17:45  Feyenoord v Como 1907  -  10 Minutes - 1X2 / Draw @1.23
+    book's no-margin chance 74% - 10-min draw
+    match record backs it: record 80% of 10 (4+ answered a side, floor 80%)
+- Wed 18:00  Stabaek IF v Sandnes Ulf  -  10 Minutes - 1X2 / Draw @1.25
+    book's no-margin chance 72% - 10-min draw
+    match record backs it: record 86% of 14 (7+ answered a side, floor 80%)
+- Wed 18:00  Antalyaspor v Kayserispor  -  10 Minutes - 1X2 / Draw @1.16
+    book's no-margin chance 77% - 10-min draw
+    match record backs it: record 90% of 10 (5+ answered a side, floor 80%)
+- Wed 18:00  SV Wehen Wiesbaden v Alemannia Aachen  -  10 Minutes - 1X2 / Draw @1.19
+    book's no-margin chance 76% - 10-min draw
+    match record backs it: record 88% of 8 (3+ answered a side, floor 80%)
+- Wed 19:15  AL Faisaly (Jor) v Al Nahda  -  10 Minutes - 1X2 / Draw @1.18
+    book's no-margin chance 76% - 10-min draw
+    match record backs it: record 83% of 6 (3+ answered a side, floor 80%)
+- Wed 19:45  Norwich v Southampton  -  Total Goals from 1 to 85 min / Under 5.5 @1.04
+    book's no-margin chance 91% - other option
+    match record backs it: record 90% of 10 (5+ answered a side, floor 90%); options like it won 109 of 112 at a 90% record
+- Wed 19:45  Portsmouth FC v Sheffield United  -  Total Goals from 1 to 35 min / Under 2.5 @1.03
+    book's no-margin chance 91% - other option
+    match record backs it: record 91% of 11 (4+ answered a side, floor 90%); options like it won 111 of 117 at a 90% record
+- Wed 20:00  Aston Villa v Fenerbahce Istanbul  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 82% - 5-min draw
+    match record backs it: record 90% of 10 (3+ answered a side, floor 90%)
+- Wed 20:00  Betis v Porto  -  Total Goals from 1 to 30 min / Under 2.5 @1.03
+    book's no-margin chance 93% - other option
+    match record backs it: record 100% of 8 (4+ answered a side, floor 90%); options like it won 126 of 132 at a 90% record
+- Wed 20:00  Bodoe/Glimt v Borussia Dortmund  -  Total Goals from 1 to 80 min / Under 5.5 @1.06
+    book's no-margin chance 89% - other option
+    match record backs it: record 91% of 11 (4+ answered a side, floor 90%); options like it won 117 of 121 at a 90% record
+- Wed 20:00  Roma v Real Madrid  -  Total Goals from 1 to 85 min / Under 5.5 @1.07
+    book's no-margin chance 89% - other option
+    match record backs it: record 100% of 7 (3+ answered a side, floor 90%); options like it won 109 of 112 at a 90% record
+- Wed 20:00  Shakhtar D v AEK Athens  -  Total Goals from 1 to 20 min / Under 1.5 @1.07
+    book's no-margin chance 89% - other option
+    match record backs it: record 100% of 9 (4+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+- Wed 20:00  Slovan Bratislava v Stuttgart  -  Match Result after 5 Minutes / Draw @1.15
+    book's no-margin chance 80% - 5-min draw
+    match record backs it: record 91% of 11 (3+ answered a side, floor 90%)
+- Wed 20:00  Lincoln City v West Ham  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    book's no-margin chance 91% - other option
+    match record backs it: record 100% of 9 (4+ answered a side, floor 90%); options like it won 104 of 108 at a 90% record
+- Wed 22:30  CD Junior FC v Deportivo Pereira FC SA  -  Total Goals from 1 to 75 min / Under 4.5 @1.08
+    book's no-margin chance 87% - other option
+    match record backs it: record 93% of 14 (7+ answered a side, floor 90%); options like it won 108 of 116 at a 90% record
+- Wed 23:00  CA Sarmiento Junin v CA River Plate (ARG)  -  Match Result after 5 Minutes / Draw @1.07
+    book's no-margin chance 84% - 5-min draw
+    match record backs it: record 100% of 11 (5+ answered a side, floor 90%)
+- Wed 23:00  Atletico Mineiro MG v Montevideo City Torque  -  10 Minutes - 1X2 / Draw @1.17
+    book's no-margin chance 78% - 10-min draw
+    match record backs it: record 86% of 14 (6+ answered a side, floor 80%)
+
+## 2026-10-14 12:31 WAT  |  stats prediction (opponent-rated, rule all) at 1.15+ - every game - 21,426.00x (46 games)  |  code NA7N0Y
+http://www.sportybet.com/ng/?shareCode=NA7N0Y
+- Wed 13:30  FC STK 1914 Samorin v FK Humenne  -  Over/Under / Under 4.5 @1.21
+    counts 80%, stats 80%, book 77%  |  expected goals from the ratings 1.53 v 1.54, book's prices 2.33 v 0.83  |  HH 6/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 14:00  Milan Futuro v Piacenza Calcio  -  Over/Under / Over 2.5 @1.56
+    counts 29%, stats 60%, book 59%  |  expected goals from the ratings 1.50 v 1.59, book's prices 1.40 v 1.65  |  HH 5/7  AA 2/7  H10 8/10  A10 5/10
+- Wed 14:00  Tropical Coriano v US Citta Di Pontedera  -  Over/Under / Under 2.5 @1.69
+    counts 29%, stats 64%, book 54%  |  expected goals from the ratings 1.39 v 0.75, book's prices 1.48 v 1.03  |  HH 6/7  AA 2/7  H10 9/10  A10 4/10
+- Wed 14:00  JK Narva Trans v FC Kuressaare  -  2nd Half - Total / Under 2.5 @1.20
+    counts 71%, stats 89%, book 76%  |  expected goals from the ratings 1.25 v 1.31, book's prices 1.58 v 1.23  |  HH 6/7  AA 5/7  H10 8/10  A10 9/10
+- Wed 14:00  Jagiellonia II Bialystok v KS Ck Troszyn  -  Home Team Clean Sheet / No @1.28
+    counts 86%, stats 76%, book 71%  |  expected goals from the ratings 1.81 v 1.44, book's prices 2.03 v 1.30  |  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Wed 14:30  FK Banik Most-Sous v SK Benatky Nad Jizerou  -  1st Half - GG/NG / No @1.18
+    counts 71%, stats 81%, book 78%  |  expected goals from the ratings 1.78 v 1.20, book's prices 1.53 v 1.10  |  HH 7/7  AA 5/7  H10 9/10  A10 8/10
+- Wed 15:00  Punjab FC v Odisha FC  -  Home To Win Both Halves / No @1.17
+    counts 80%, stats 78%, book 78%  |  expected goals from the ratings 1.99 v 0.99, book's prices 1.75 v 0.95  |  HH 6/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 15:00  Umraniyespor v Boluspor  -  1st Half - GG/NG / No @1.17
+    counts 80%, stats 78%, book 80%  |  expected goals from the ratings 1.47 v 0.99, book's prices 1.93 v 0.83  |  HH 6/7  AA 7/7  H10 8/10  A10 9/10
+- Wed 16:30  AL Jandal v Al-Okhdood Club  -  1st Half - GG/NG / No @1.20
+    counts 70%, stats 83%, book 76%  |  expected goals from the ratings 1.26 v 1.29, book's prices 1.25 v 1.48  |  HH 5/7  AA 6/7  H10 7/10  A10 7/10
+- Wed 17:00  Bohemians Prague 1905 v FK Mlada Boleslav  -  1st Half - Home O/U / Under 1.5 @1.15
+    counts 80%, stats 88%, book 80%  |  expected goals from the ratings 1.11 v 1.16, book's prices 1.65 v 1.38  |  HH 7/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 17:00  FC Levadia Tallinn v Nomme Kalju FC  -  1st Half - Draw No Bet / Home @1.21
+    counts 80%, stats 82%, book 76%  |  expected goals from the ratings 2.79 v 1.24, book's prices 2.75 v 1.23  |  HH 7/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 17:00  Paide Linnameeskond v Tartu JK Tammeka  -  Home O/U / Under 3.5 @1.18
+    counts 86%, stats 90%, book 79%  |  expected goals from the ratings 1.76 v 1.22, book's prices 2.15 v 1.25  |  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Wed 17:00  LKS Lodz II v Zabkovia Zabki  -  Home Team Clean Sheet / No @1.17
+    counts 71%, stats 84%, book 77%  |  expected goals from the ratings 1.90 v 1.81, book's prices 1.78 v 1.60  |  HH 7/7  AA 5/7  H10 9/10  A10 9/10
+- Wed 17:00  Zaglebie Sosnowiec v Rakow II Czestochowa  -  1st Half - GG/NG / No @1.22
+    counts 80%, stats 83%, book 75%  |  expected goals from the ratings 1.57 v 1.13, book's prices 2.23 v 0.95  |  HH 6/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 17:00  Bate Borisov v FC Neman Grodno  -  Away O/U / Under 2.5 @1.17
+    counts 86%, stats 92%, book 79%  |  expected goals from the ratings 0.92 v 0.99, book's prices 1.00 v 1.45  |  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Wed 17:00  Aris Limassol v Ethnikos Achnas FC  -  1st Half - GG/NG / No @1.15
+    counts 80%, stats 80%, book 80%  |  expected goals from the ratings 2.06 v 1.09, book's prices 2.33 v 0.70  |  HH 6/7  AA 6/7  H10 9/10  A10 8/10
+- Wed 18:00  Bryne FK v Raufoss IL  -  Home Or Any Clean Sheet / Yes @1.16
+    counts 86%, stats 79%, book 79%  |  expected goals from the ratings 2.22 v 0.85, book's prices 2.65 v 0.93  |  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Wed 18:00  FK Haugesund v Lyn 1896 FK  -  Home O/U / Under 4.5 @1.20
+    counts 86%, stats 82%, book 78%  |  expected goals from the ratings 2.95 v 1.52, book's prices 2.95 v 1.13  |  HH 6/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 18:00  Stabaek IF v Sandnes Ulf  -  Home To Win Both Halves / No @1.30
+    counts 71%, stats 79%, book 70%  |  expected goals from the ratings 2.25 v 1.35, book's prices 2.43 v 1.18  |  HH 6/7  AA 5/7  H10 9/10  A10 8/10
+- Wed 18:00  Al-Raed Club v Jeddah Club  -  2nd Half - GG/NG / No @1.24
+    counts 80%, stats 76%, book 74%  |  expected goals from the ratings 2.16 v 0.89, book's prices 1.83 v 0.90  |  HH 6/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 18:00  Ankara Keciorengucu v Igdir FK  -  2nd Half - Total / Under 2.5 @1.22
+    counts 86%, stats 78%, book 76%  |  expected goals from the ratings 1.87 v 1.28, book's prices 1.58 v 1.25  |  HH 7/7  AA 6/7  H10 9/10  A10 10/10
+- Wed 18:00  Antalyaspor v Kayserispor  -  1st Half - GG/NG / No @1.18
+    counts 86%, stats 85%, book 78%  |  expected goals from the ratings 1.29 v 1.22, book's prices 1.20 v 1.40  |  HH 6/7  AA 6/7  H10 9/10  A10 10/10
+- Wed 18:00  FC Viktoria Cologne v SG Sonnenhof Grossaspach  -  Away To Score In Both Halves / No @1.19
+    counts 71%, stats 76%, book 77%  |  expected goals from the ratings 1.75 v 1.34, book's prices 2.28 v 1.20  |  HH 5/7  AA 6/7  H10 8/10  A10 10/10
+- Wed 18:00  SC Verl v Jahn Regensburg  -  HT Away to Win to Nil Yes/No / No @1.23
+    counts 71%, stats 80%, book 75%  |  expected goals from the ratings 2.12 v 1.27, book's prices 1.85 v 1.65  |  HH 5/7  AA 5/7  H10 8/10  A10 8/10
+- Wed 18:00  SV Waldhof Mannheim 07 v FC Ingolstadt 04  -  1st Half - Over/Under / Over 0.5 @1.25
+    counts 71%, stats 78%, book 75%  |  expected goals from the ratings 1.77 v 1.58, book's prices 1.88 v 1.43  |  HH 5/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 18:00  SV Wehen Wiesbaden v Alemannia Aachen  -  Home Team Win To Nil / No @1.17
+    counts 80%, stats 87%, book 79%  |  expected goals from the ratings 1.30 v 1.70, book's prices 1.55 v 1.40  |  HH 6/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 18:30  Sestao River Club v Salamanca CF UDS  -  Away Team Clean Sheet / No @1.21
+    counts 80%, stats 76%, book 74%  |  expected goals from the ratings 1.43 v 0.98, book's prices 1.48 v 0.85  |  HH 6/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 19:00  CE L'Hospitalet v Cfj Mollerussa  -  Over/Under / Under 3.5 @1.25
+    counts 50%, stats 72%, book 74%  |  expected goals from the ratings 1.67 v 1.01, book's prices 1.60 v 0.88  |  HH 6/7  AA 6/7  H10 5/10  A10 9/10
+- Wed 19:00  CF Montanesa v FC L Escala  -  Over/Under / Under 3.5 @1.27
+    counts 70%, stats 77%, book 72%  |  expected goals from the ratings 1.37 v 1.09, book's prices 1.40 v 1.13  |  HH 6/7  AA 6/7  H10 7/10  A10 7/10
+- Wed 19:00  UE Cornella v CF Peralada  -  Over/Under / Under 3.5 @1.28
+    counts 70%, stats 75%, book 72%  |  expected goals from the ratings 1.42 v 1.10, book's prices 1.65 v 0.90  |  HH 5/7  AA 6/7  H10 7/10  A10 8/10
+- Wed 19:30  RC Recreativo de Huelva v CDA Navalcarnero  -  Away Team Clean Sheet / No @1.18
+    counts 71%, stats 80%, book 76%  |  expected goals from the ratings 1.60 v 0.98, book's prices 1.55 v 1.03  |  HH 6/7  AA 5/7  H10 8/10  A10 8/10
+- Wed 19:30  CP San Cristobal v FE Grama  -  Home Team Clean Sheet / No @1.27
+    counts 71%, stats 78%, book 71%  |  expected goals from the ratings 1.03 v 1.50, book's prices 1.08 v 1.33  |  HH 5/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 19:45  Norwich v Southampton  -  Home Team Win To Nil / No @1.16
+    counts 100%, stats 88%, book 82%  |  expected goals from the ratings 1.58 v 1.86, book's prices 1.58 v 1.53  |  HH 7/7  AA 7/7  H10 10/10  A10 10/10
+- Wed 19:45  Portsmouth FC v Sheffield United  -  Home O/U / Under 2.5 @1.16
+    counts 90%, stats 86%, book 82%  |  expected goals from the ratings 1.30 v 1.56, book's prices 1.38 v 1.18  |  HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 19:45  AFC Whyteleafe v Whitehawk FC  -  Over/Under / Over 1.5 @1.17
+    counts 80%, stats 81%, book 79%  |  expected goals from the ratings 1.56 v 1.51, book's prices 1.75 v 1.33  |  HH 7/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 20:00  Lincoln City v West Ham  -  1st Half - Home Total Corners / Under 3.5 @1.16
+    counts 86%, stats: none (not a goal market), book 80%  |  expected goals from the ratings 1.58 v 1.53, book's prices 0.95 v 1.73  |  HH 6/7  AA 6/7  H10 9/10  A10 10/10
+- Wed 20:00  Bolivar SC v Mineros de Guayana  -  Over/Under / Over 2.5 @1.73
+    counts 60%, stats 48%, book 53%  |  expected goals from the ratings 1.26 v 1.34, book's prices 1.33 v 1.48  |  HH 5/7  AA 5/7  H10 8/10  A10 6/10
+- Wed 20:30  Club Atletico Barinas v Real Frontera FC  -  1X2 / Home @1.21
+    counts 30%, stats 70%, book 73%  |  expected goals from the ratings 2.58 v 1.06, book's prices 2.48 v 0.85  |  HH 4/7  AA 7/7  H10 3/10  A10 7/10
+- Wed 21:00  Ittihad Tanger v Maghreb AS de Fes  -  Over/Under / Under 3.5 @1.16
+    counts 90%, stats 88%, book 81%  |  expected goals from the ratings 0.77 v 1.12, book's prices 0.98 v 1.13  |  HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 21:00  Trujillanos FC v Deportivo Rayo Zuliano  -  Over/Under / Over 2.5 @1.68
+    counts 57%, stats 49%, book 54%  |  expected goals from the ratings 1.28 v 1.36, book's prices 1.40 v 1.45  |  HH 4/7  AA 5/7  H10 6/10  A10 7/10
+- Wed 21:00  Yaracuyanos FC v Barquisimeto SC  -  Over/Under / Over 2.5 @1.81
+    counts 60%, stats 54%, book 51%  |  expected goals from the ratings 1.61 v 1.21, book's prices 1.63 v 1.05  |  HH 6/7  AA 5/7  H10 6/10  A10 8/10
+- Wed 21:00  CA Tembetary Ypane v Sol de America Villa Elisa  -  Home Team Win To Nil / No @1.16
+    counts 71%, stats 82%, book 79%  |  expected goals from the ratings 1.25 v 1.39, book's prices 1.28 v 1.35  |  HH 6/7  AA 5/7  H10 9/10  A10 8/10
+- Wed 22:30  CD Junior FC v Deportivo Pereira FC SA  -  2nd Half - Draw No Bet / Home @1.16
+    counts 71%, stats 88%, book 79%  |  expected goals from the ratings 2.23 v 0.82, book's prices 2.30 v 0.78  |  HH 5/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 23:00  CA Sarmiento Junin v CA River Plate (ARG)  -  1st Half - Away O/U / Under 1.5 @1.15
+    counts 80%, stats 88%, book 79%  |  expected goals from the ratings 1.06 v 1.37, book's prices 0.73 v 1.63  |  HH 7/7  AA 6/7  H10 10/10  A10 8/10
+- Wed 23:00  Real Cundinamarca v Bogota FC  -  HT Away to Win to Nil Yes/No / No @1.17
+    counts 86%, stats 87%, book 78%  |  expected goals from the ratings 1.47 v 0.66, book's prices 1.38 v 1.00  |  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Wed 23:30  Cerro Porteno v Sportivo San Lorenzo  -  1st Half - Over/Under / Under 2.5 @1.15
+    counts 90%, stats 90%, book 80%  |  expected goals from the ratings 1.68 v 0.48, book's prices 2.20 v 0.95  |  HH 7/7  AA 7/7  H10 9/10  A10 10/10
+
+## 2026-10-14 15:55 WAT  |  stats prediction (every SportyBet option checked, every stat agrees at 70%+, different leagues skipped) at 1.15+ - every game - 256.45x (32 games)  |  code GMGCTJ
+http://www.sportybet.com/ng/?shareCode=GMGCTJ
+- Wed 17:00  Bohemians Prague 1905 v FK Mlada Boleslav  -  2nd Half - Away Team Total / Under 1.5 @1.16
+    counts 86%, stats 89%, book 79%  |  expected goals from the ratings 1.11 v 1.16, book's prices 1.80 v 1.35  |  HH 6/7  AA 6/7  H10 10/10  A10 9/10
+- Wed 17:00  FC Levadia Tallinn v Nomme Kalju FC  -  Away To Score In Both Halves / No @1.20
+    counts 70%, stats 79%, book 76%  |  expected goals from the ratings 2.79 v 1.24, book's prices 3.38 v 1.25  |  HH 7/7  AA 6/7  H10 7/10  A10 9/10
+- Wed 17:00  Paide Linnameeskond v Tartu JK Tammeka  -  Home O/U / Under 3.5 @1.16
+    counts 86%, stats 90%, book 80%  |  expected goals from the ratings 1.76 v 1.22, book's prices 2.10 v 1.23  |  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Wed 17:00  LKS Lodz II v Zabkovia Zabki  -  Home Team Clean Sheet / No @1.16
+    counts 71%, stats 84%, book 78%  |  expected goals from the ratings 1.90 v 1.81, book's prices 1.80 v 1.63  |  HH 7/7  AA 5/7  H10 9/10  A10 9/10
+- Wed 17:00  Zaglebie Sosnowiec v Rakow II Czestochowa  -  1st Half - GG/NG / No @1.22
+    counts 80%, stats 83%, book 75%  |  expected goals from the ratings 1.57 v 1.13, book's prices 2.23 v 0.95  |  HH 6/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 17:00  Bate Borisov v FC Neman Grodno  -  Away O/U / Under 2.5 @1.18
+    counts 86%, stats 92%, book 79%  |  expected goals from the ratings 0.92 v 0.99, book's prices 0.98 v 1.48  |  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Wed 17:00  Aris Limassol v Ethnikos Achnas FC  -  1st Half - GG/NG / No @1.16
+    counts 80%, stats 80%, book 81%  |  expected goals from the ratings 2.06 v 1.09, book's prices 2.53 v 0.68  |  HH 6/7  AA 6/7  H10 9/10  A10 8/10
+- Wed 18:00  Bryne FK v Raufoss IL  -  Home Or Any Clean Sheet / Yes @1.15
+    counts 86%, stats 79%, book 80%  |  expected goals from the ratings 2.22 v 0.85, book's prices 2.68 v 0.90  |  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Wed 18:00  FK Haugesund v Lyn 1896 FK  -  Home O/U / Under 4.5 @1.20
+    counts 86%, stats 82%, book 78%  |  expected goals from the ratings 2.95 v 1.52, book's prices 2.95 v 1.10  |  HH 6/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 18:00  Stabaek IF v Sandnes Ulf  -  Home To Win Both Halves / No @1.30
+    counts 71%, stats 79%, book 70%  |  expected goals from the ratings 2.25 v 1.35, book's prices 2.43 v 1.18  |  HH 6/7  AA 5/7  H10 9/10  A10 8/10
+- Wed 18:00  Al-Raed Club v Jeddah Club  -  2nd Half - GG/NG / No @1.24
+    counts 80%, stats 76%, book 74%  |  expected goals from the ratings 2.16 v 0.89, book's prices 1.83 v 0.90  |  HH 6/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 18:00  Ankara Keciorengucu v Igdir FK  -  2nd Half - Total / Under 2.5 @1.22
+    counts 86%, stats 78%, book 76%  |  expected goals from the ratings 1.87 v 1.28, book's prices 1.55 v 1.28  |  HH 7/7  AA 6/7  H10 9/10  A10 10/10
+- Wed 18:00  Antalyaspor v Kayserispor  -  1st Half - GG/NG / No @1.19
+    counts 86%, stats 85%, book 78%  |  expected goals from the ratings 1.29 v 1.22, book's prices 1.20 v 1.40  |  HH 6/7  AA 6/7  H10 9/10  A10 10/10
+- Wed 18:00  FC Viktoria Cologne v SG Sonnenhof Grossaspach  -  Over/Under / Under 5.5 @1.15
+    counts 80%, stats 91%, book 82%  |  expected goals from the ratings 1.75 v 1.34, book's prices 2.30 v 1.18  |  HH 6/7  AA 7/7  H10 8/10  A10 9/10
+- Wed 18:00  SC Verl v Jahn Regensburg  -  HT Away to Win to Nil Yes/No / No @1.23
+    counts 71%, stats 80%, book 75%  |  expected goals from the ratings 2.12 v 1.27, book's prices 1.90 v 1.70  |  HH 5/7  AA 5/7  H10 8/10  A10 8/10
+- Wed 18:00  SV Waldhof Mannheim 07 v FC Ingolstadt 04  -  Home To Win Both Halves / No @1.15
+    counts 80%, stats 88%, book 80%  |  expected goals from the ratings 1.77 v 1.58, book's prices 1.93 v 1.35  |  HH 6/7  AA 7/7  H10 8/10  A10 10/10
+- Wed 18:00  SV Wehen Wiesbaden v Alemannia Aachen  -  Home Team Win To Nil / No @1.15
+    counts 80%, stats 87%, book 80%  |  expected goals from the ratings 1.30 v 1.70, book's prices 1.53 v 1.50  |  HH 6/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 18:30  Sestao River Club v Salamanca CF UDS  -  Away Team Clean Sheet / No @1.19
+    counts 80%, stats 76%, book 76%  |  expected goals from the ratings 1.43 v 0.98, book's prices 1.58 v 0.83  |  HH 6/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 19:00  CF Montanesa v FC L Escala  -  Over/Under / Under 3.5 @1.27
+    counts 70%, stats 77%, book 72%  |  expected goals from the ratings 1.37 v 1.09, book's prices 1.40 v 1.13  |  HH 6/7  AA 6/7  H10 7/10  A10 7/10
+- Wed 19:00  UE Cornella v CF Peralada  -  Over/Under / Under 3.5 @1.28
+    counts 70%, stats 75%, book 71%  |  expected goals from the ratings 1.42 v 1.10, book's prices 1.73 v 0.85  |  HH 5/7  AA 6/7  H10 7/10  A10 8/10
+- Wed 19:30  RC Recreativo de Huelva v CDA Navalcarnero  -  Away Team Clean Sheet / No @1.19
+    counts 71%, stats 80%, book 76%  |  expected goals from the ratings 1.60 v 0.98, book's prices 1.53 v 1.03  |  HH 6/7  AA 5/7  H10 8/10  A10 8/10
+- Wed 19:30  CP San Cristobal v FE Grama  -  Home Team Clean Sheet / No @1.27
+    counts 71%, stats 78%, book 71%  |  expected goals from the ratings 1.03 v 1.50, book's prices 1.08 v 1.33  |  HH 5/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 19:45  Norwich v Southampton  -  Home Team Win To Nil / No @1.17
+    counts 100%, stats 88%, book 82%  |  expected goals from the ratings 1.58 v 1.86, book's prices 1.60 v 1.50  |  HH 7/7  AA 7/7  H10 10/10  A10 10/10
+- Wed 19:45  Portsmouth FC v Sheffield United  -  Home O/U / Under 2.5 @1.17
+    counts 90%, stats 86%, book 81%  |  expected goals from the ratings 1.30 v 1.56, book's prices 1.40 v 1.20  |  HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 19:45  AFC Whyteleafe v Whitehawk FC  -  Over/Under / Over 1.5 @1.17
+    counts 80%, stats 81%, book 79%  |  expected goals from the ratings 1.56 v 1.51, book's prices 1.75 v 1.33  |  HH 7/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 20:00  Lincoln City v West Ham  -  1st Half - Home Total Corners / Under 3.5 @1.16
+    counts 86%, stats: none (not a goal market), book 80%  |  expected goals from the ratings 1.58 v 1.53, book's prices 0.93 v 1.75  |  HH 6/7  AA 6/7  H10 9/10  A10 10/10
+- Wed 21:00  Ittihad Tanger v Maghreb AS de Fes  -  Over/Under / Under 3.5 @1.16
+    counts 90%, stats 88%, book 81%  |  expected goals from the ratings 0.77 v 1.12, book's prices 0.98 v 1.10  |  HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 21:00  CA Tembetary Ypane v Sol de America Villa Elisa  -  Home Team Win To Nil / No @1.16
+    counts 71%, stats 82%, book 79%  |  expected goals from the ratings 1.25 v 1.39, book's prices 1.28 v 1.35  |  HH 6/7  AA 5/7  H10 9/10  A10 8/10
+- Wed 22:30  CD Junior FC v Deportivo Pereira FC SA  -  2nd Half - Draw No Bet / Home @1.17
+    counts 71%, stats 88%, book 78%  |  expected goals from the ratings 2.23 v 0.82, book's prices 2.28 v 0.80  |  HH 5/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 23:00  CA Sarmiento Junin v CA River Plate (ARG)  -  Away Team Total Corners / Under 7.5 @1.20
+    counts 80%, stats: none (not a goal market), book 78%  |  expected goals from the ratings 1.06 v 1.37, book's prices 0.70 v 1.73  |  HH 7/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 23:00  Real Cundinamarca v Bogota FC  -  HT Away to Win to Nil Yes/No / No @1.15
+    counts 86%, stats 87%, book 80%  |  expected goals from the ratings 1.47 v 0.66, book's prices 1.45 v 0.93  |  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Wed 23:30  Cerro Porteno v Sportivo San Lorenzo  -  1st Half - Over/Under / Under 2.5 @1.15
+    counts 90%, stats 90%, book 80%  |  expected goals from the ratings 1.68 v 0.48, book's prices 2.20 v 0.95  |  HH 7/7  AA 7/7  H10 9/10  A10 10/10
+
+## 2026-10-14 16:08 WAT  |  stats prediction (opponent-rated, rule all) at 1.15+ - every game - 57.90x (23 games)  |  code LHN1NP
+http://www.sportybet.com/ng/?shareCode=LHN1NP
+- Wed 18:00  Bryne FK v Raufoss IL  -  Home Or Any Clean Sheet / Yes @1.15
+    counts 86%, stats 79%, book 80%  |  expected goals from the ratings 2.22 v 0.85, book's prices 2.68 v 0.90  |  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Wed 18:00  FK Haugesund v Lyn 1896 FK  -  Home O/U / Under 4.5 @1.20
+    counts 86%, stats 82%, book 78%  |  expected goals from the ratings 2.95 v 1.52, book's prices 2.95 v 1.10  |  HH 6/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 18:00  Stabaek IF v Sandnes Ulf  -  Home To Win Both Halves / No @1.30
+    counts 71%, stats 79%, book 70%  |  expected goals from the ratings 2.25 v 1.35, book's prices 2.43 v 1.18  |  HH 6/7  AA 5/7  H10 9/10  A10 8/10
+- Wed 18:00  Al-Raed Club v Jeddah Club  -  2nd Half - GG/NG / No @1.24
+    counts 80%, stats 76%, book 74%  |  expected goals from the ratings 2.16 v 0.89, book's prices 1.83 v 0.90  |  HH 6/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 18:00  Ankara Keciorengucu v Igdir FK  -  2nd Half - Total / Under 2.5 @1.22
+    counts 86%, stats 78%, book 76%  |  expected goals from the ratings 1.87 v 1.28, book's prices 1.55 v 1.28  |  HH 7/7  AA 6/7  H10 9/10  A10 10/10
+- Wed 18:00  Antalyaspor v Kayserispor  -  1st Half - GG/NG / No @1.19
+    counts 86%, stats 85%, book 78%  |  expected goals from the ratings 1.29 v 1.22, book's prices 1.20 v 1.40  |  HH 6/7  AA 6/7  H10 9/10  A10 10/10
+- Wed 18:00  FC Viktoria Cologne v SG Sonnenhof Grossaspach  -  Over/Under / Under 5.5 @1.15
+    counts 80%, stats 91%, book 82%  |  expected goals from the ratings 1.75 v 1.34, book's prices 2.30 v 1.18  |  HH 6/7  AA 7/7  H10 8/10  A10 9/10
+- Wed 18:00  SC Verl v Jahn Regensburg  -  HT Away to Win to Nil Yes/No / No @1.23
+    counts 71%, stats 80%, book 75%  |  expected goals from the ratings 2.12 v 1.27, book's prices 1.90 v 1.70  |  HH 5/7  AA 5/7  H10 8/10  A10 8/10
+- Wed 18:00  SV Waldhof Mannheim 07 v FC Ingolstadt 04  -  Home To Win Both Halves / No @1.15
+    counts 80%, stats 88%, book 80%  |  expected goals from the ratings 1.77 v 1.58, book's prices 1.93 v 1.35  |  HH 6/7  AA 7/7  H10 8/10  A10 10/10
+- Wed 18:00  SV Wehen Wiesbaden v Alemannia Aachen  -  Home Team Win To Nil / No @1.15
+    counts 80%, stats 87%, book 80%  |  expected goals from the ratings 1.30 v 1.70, book's prices 1.53 v 1.50  |  HH 6/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 19:00  CF Montanesa v FC L Escala  -  Over/Under / Under 3.5 @1.27
+    counts 70%, stats 77%, book 72%  |  expected goals from the ratings 1.37 v 1.09, book's prices 1.40 v 1.13  |  HH 6/7  AA 6/7  H10 7/10  A10 7/10
+- Wed 19:00  UE Cornella v CF Peralada  -  Over/Under / Under 3.5 @1.28
+    counts 70%, stats 75%, book 71%  |  expected goals from the ratings 1.42 v 1.10, book's prices 1.75 v 0.83  |  HH 5/7  AA 6/7  H10 7/10  A10 8/10
+- Wed 19:30  CP San Cristobal v FE Grama  -  Home Team Clean Sheet / No @1.27
+    counts 71%, stats 78%, book 71%  |  expected goals from the ratings 1.03 v 1.50, book's prices 1.08 v 1.33  |  HH 5/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 19:45  Norwich v Southampton  -  Home Team Win To Nil / No @1.17
+    counts 100%, stats 88%, book 82%  |  expected goals from the ratings 1.58 v 1.86, book's prices 1.60 v 1.50  |  HH 7/7  AA 7/7  H10 10/10  A10 10/10
+- Wed 19:45  Portsmouth FC v Sheffield United  -  Home O/U / Under 2.5 @1.17
+    counts 90%, stats 86%, book 81%  |  expected goals from the ratings 1.30 v 1.56, book's prices 1.40 v 1.20  |  HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 19:45  AFC Whyteleafe v Whitehawk FC  -  Over/Under / Over 1.5 @1.17
+    counts 80%, stats 81%, book 79%  |  expected goals from the ratings 1.56 v 1.51, book's prices 1.75 v 1.33  |  HH 7/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 20:00  Lincoln City v West Ham  -  1st Half - Home Total Corners / Under 3.5 @1.16
+    counts 86%, stats: none (not a goal market), book 80%  |  expected goals from the ratings 1.58 v 1.53, book's prices 0.93 v 1.75  |  HH 6/7  AA 6/7  H10 9/10  A10 10/10
+- Wed 21:00  Ittihad Tanger v Maghreb AS de Fes  -  Over/Under / Under 3.5 @1.16
+    counts 90%, stats 88%, book 81%  |  expected goals from the ratings 0.77 v 1.12, book's prices 0.98 v 1.10  |  HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 21:00  CA Tembetary Ypane v Sol de America Villa Elisa  -  Home Team Win To Nil / No @1.16
+    counts 71%, stats 82%, book 79%  |  expected goals from the ratings 1.25 v 1.39, book's prices 1.28 v 1.38  |  HH 6/7  AA 5/7  H10 9/10  A10 8/10
+- Wed 22:30  CD Junior FC v Deportivo Pereira FC SA  -  2nd Half - Draw No Bet / Home @1.16
+    counts 71%, stats 88%, book 79%  |  expected goals from the ratings 2.23 v 0.82, book's prices 2.28 v 0.80  |  HH 5/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 23:00  CA Sarmiento Junin v CA River Plate (ARG)  -  Away Team Total Corners / Under 7.5 @1.20
+    counts 80%, stats: none (not a goal market), book 78%  |  expected goals from the ratings 1.06 v 1.37, book's prices 0.70 v 1.73  |  HH 7/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 23:00  Real Cundinamarca v Bogota FC  -  HT Away to Win to Nil Yes/No / No @1.15
+    counts 86%, stats 87%, book 80%  |  expected goals from the ratings 1.47 v 0.66, book's prices 1.45 v 0.93  |  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Wed 23:30  Cerro Porteno v Sportivo San Lorenzo  -  1st Half - Over/Under / Under 2.5 @1.16
+    counts 90%, stats 90%, book 79%  |  expected goals from the ratings 1.68 v 0.48, book's prices 2.20 v 0.95  |  HH 7/7  AA 7/7  H10 9/10  A10 10/10
+
+## 2026-10-14 16:14 WAT  |  stats prediction (opponent-rated, rule all) at 1.15+ - every game - 184.27x (30 games)  |  code Y8M37R
+http://www.sportybet.com/ng/?shareCode=Y8M37R
+- Wed 16:30  AL Jandal v Al-Okhdood Club  -  2nd Half Home to Win to Nil Y/N / No @1.20
+    counts 71%, stats 77%, book 76%  |  expected goals from the ratings 1.26 v 1.29, book's prices 1.20 v 1.50  |  HH 7/7  AA 5/7  H10 10/10  A10 8/10
+- Wed 17:00  Bohemians Prague 1905 v FK Mlada Boleslav  -  2nd Half - Away Team Total / Under 1.5 @1.16
+    counts 86%, stats 89%, book 79%  |  expected goals from the ratings 1.10 v 1.16, book's prices 1.80 v 1.35  |  HH 6/7  AA 6/7  H10 10/10  A10 9/10
+- Wed 17:00  FC Levadia Tallinn v Nomme Kalju FC  -  1st Half - Draw No Bet / Home @1.19
+    counts 80%, stats 82%, book 77%  |  expected goals from the ratings 2.79 v 1.24, book's prices 2.98 v 1.30  |  HH 7/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 17:00  Paide Linnameeskond v Tartu JK Tammeka  -  Home O/U / Under 3.5 @1.16
+    counts 86%, stats 90%, book 80%  |  expected goals from the ratings 1.76 v 1.22, book's prices 2.10 v 1.23  |  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Wed 17:00  LKS Lodz II v Zabkovia Zabki  -  Home Team Clean Sheet / No @1.16
+    counts 71%, stats 84%, book 78%  |  expected goals from the ratings 1.90 v 1.81, book's prices 1.80 v 1.63  |  HH 7/7  AA 5/7  H10 9/10  A10 9/10
+- Wed 17:00  Zaglebie Sosnowiec v Rakow II Czestochowa  -  1st Half - GG/NG / No @1.21
+    counts 80%, stats 83%, book 76%  |  expected goals from the ratings 1.57 v 1.13, book's prices 2.18 v 0.95  |  HH 6/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 17:00  Bate Borisov v FC Neman Grodno  -  Away O/U / Under 2.5 @1.18
+    counts 86%, stats 92%, book 79%  |  expected goals from the ratings 0.92 v 0.99, book's prices 0.98 v 1.48  |  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Wed 18:00  Bryne FK v Raufoss IL  -  Over/Under / Under 5.5 @1.16
+    counts 71%, stats 91%, book 81%  |  expected goals from the ratings 2.22 v 0.85, book's prices 2.68 v 0.90  |  HH 7/7  AA 5/7  H10 10/10  A10 8/10
+- Wed 18:00  FK Haugesund v Lyn 1896 FK  -  Home O/U / Under 4.5 @1.20
+    counts 86%, stats 82%, book 78%  |  expected goals from the ratings 2.95 v 1.52, book's prices 2.95 v 1.10  |  HH 6/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 18:00  Stabaek IF v Sandnes Ulf  -  Home To Win Both Halves / No @1.30
+    counts 71%, stats 79%, book 70%  |  expected goals from the ratings 2.25 v 1.35, book's prices 2.43 v 1.18  |  HH 6/7  AA 5/7  H10 9/10  A10 8/10
+- Wed 18:00  Al-Raed Club v Jeddah Club  -  2nd Half - GG/NG / No @1.24
+    counts 80%, stats 76%, book 74%  |  expected goals from the ratings 2.16 v 0.89, book's prices 1.83 v 0.90  |  HH 6/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 18:00  Ankara Keciorengucu v Igdir FK  -  2nd Half - Total / Under 2.5 @1.22
+    counts 86%, stats 78%, book 76%  |  expected goals from the ratings 1.87 v 1.28, book's prices 1.55 v 1.28  |  HH 7/7  AA 6/7  H10 9/10  A10 10/10
+- Wed 18:00  Antalyaspor v Kayserispor  -  1st Half - GG/NG / No @1.19
+    counts 86%, stats 85%, book 78%  |  expected goals from the ratings 1.29 v 1.22, book's prices 1.20 v 1.40  |  HH 6/7  AA 6/7  H10 9/10  A10 10/10
+- Wed 18:00  FC Viktoria Cologne v SG Sonnenhof Grossaspach  -  Over/Under / Under 5.5 @1.15
+    counts 80%, stats 91%, book 82%  |  expected goals from the ratings 1.75 v 1.34, book's prices 2.30 v 1.18  |  HH 6/7  AA 7/7  H10 8/10  A10 9/10
+- Wed 18:00  SC Verl v Jahn Regensburg  -  HT Away to Win to Nil Yes/No / No @1.23
+    counts 71%, stats 80%, book 75%  |  expected goals from the ratings 2.12 v 1.27, book's prices 1.90 v 1.70  |  HH 5/7  AA 5/7  H10 8/10  A10 8/10
+- Wed 18:00  SV Waldhof Mannheim 07 v FC Ingolstadt 04  -  Home To Win Both Halves / No @1.15
+    counts 80%, stats 88%, book 80%  |  expected goals from the ratings 1.77 v 1.58, book's prices 1.93 v 1.35  |  HH 6/7  AA 7/7  H10 8/10  A10 10/10
+- Wed 18:00  SV Wehen Wiesbaden v Alemannia Aachen  -  Home Team Win To Nil / No @1.15
+    counts 80%, stats 87%, book 80%  |  expected goals from the ratings 1.30 v 1.70, book's prices 1.53 v 1.50  |  HH 6/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 19:00  CF Montanesa v FC L Escala  -  Over/Under / Under 3.5 @1.27
+    counts 70%, stats 77%, book 72%  |  expected goals from the ratings 1.37 v 1.09, book's prices 1.40 v 1.13  |  HH 6/7  AA 6/7  H10 7/10  A10 7/10
+- Wed 19:00  UE Cornella v CF Peralada  -  Over/Under / Under 3.5 @1.28
+    counts 70%, stats 75%, book 71%  |  expected goals from the ratings 1.42 v 1.10, book's prices 1.75 v 0.83  |  HH 5/7  AA 6/7  H10 7/10  A10 8/10
+- Wed 19:30  CP San Cristobal v FE Grama  -  Home Team Clean Sheet / No @1.27
+    counts 71%, stats 78%, book 71%  |  expected goals from the ratings 1.03 v 1.50, book's prices 1.08 v 1.33  |  HH 5/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 19:45  Norwich v Southampton  -  Home Team Win To Nil / No @1.17
+    counts 100%, stats 88%, book 82%  |  expected goals from the ratings 1.58 v 1.86, book's prices 1.60 v 1.50  |  HH 7/7  AA 7/7  H10 10/10  A10 10/10
+- Wed 19:45  Portsmouth FC v Sheffield United  -  Home O/U / Under 2.5 @1.17
+    counts 90%, stats 86%, book 81%  |  expected goals from the ratings 1.30 v 1.56, book's prices 1.40 v 1.20  |  HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 19:45  AFC Whyteleafe v Whitehawk FC  -  Over/Under / Over 1.5 @1.17
+    counts 80%, stats 81%, book 79%  |  expected goals from the ratings 1.56 v 1.51, book's prices 1.75 v 1.33  |  HH 7/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 20:00  Lincoln City v West Ham  -  1st Half - Home Total Corners / Under 3.5 @1.16
+    counts 86%, stats: none (not a goal market), book 80%  |  expected goals from the ratings 1.58 v 1.53, book's prices 0.93 v 1.75  |  HH 6/7  AA 6/7  H10 9/10  A10 10/10
+- Wed 21:00  Ittihad Tanger v Maghreb AS de Fes  -  Over/Under / Under 3.5 @1.16
+    counts 90%, stats 88%, book 81%  |  expected goals from the ratings 0.77 v 1.12, book's prices 0.98 v 1.10  |  HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 21:00  CA Tembetary Ypane v Sol de America Villa Elisa  -  Home Team Win To Nil / No @1.16
+    counts 71%, stats 82%, book 79%  |  expected goals from the ratings 1.25 v 1.39, book's prices 1.28 v 1.38  |  HH 6/7  AA 5/7  H10 9/10  A10 8/10
+- Wed 22:30  CD Junior FC v Deportivo Pereira FC SA  -  2nd Half - Draw No Bet / Home @1.16
+    counts 71%, stats 88%, book 79%  |  expected goals from the ratings 2.23 v 0.82, book's prices 2.28 v 0.80  |  HH 5/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 23:00  CA Sarmiento Junin v CA River Plate (ARG)  -  Away Team Total Corners / Under 7.5 @1.20
+    counts 80%, stats: none (not a goal market), book 78%  |  expected goals from the ratings 1.06 v 1.37, book's prices 0.70 v 1.73  |  HH 7/7  AA 6/7  H10 8/10  A10 8/10
+- Wed 23:00  Real Cundinamarca v Bogota FC  -  HT Away to Win to Nil Yes/No / No @1.15
+    counts 86%, stats 87%, book 80%  |  expected goals from the ratings 1.47 v 0.66, book's prices 1.45 v 0.93  |  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Wed 23:30  Cerro Porteno v Sportivo San Lorenzo  -  1st Half - Over/Under / Under 2.5 @1.15
+    counts 90%, stats 90%, book 80%  |  expected goals from the ratings 1.68 v 0.48, book's prices 2.15 v 0.93  |  HH 7/7  AA 7/7  H10 9/10  A10 10/10
+
+## 2026-10-14 18:31 WAT  |  stats prediction (every option checked, every stat 70%+, flags in the rule: form, head-to-head, blowouts, other division) at 1.15+ - overnight - 138.45x (30 games)  |  code YQJ3BZ
+http://www.sportybet.com/ng/?shareCode=YQJ3BZ
+- Wed 19:00  CA Tigre Reserve v Argentinos Juniors Reserve  -  HT Home to Win to Nil Yes/No / No @1.23
+    counts 70%, stats 77%, book 75%  |  expected goals from the ratings 1.01 v 1.22, book's prices 1.10 v 1.13  |  HH 6/7  AA 5/7  H10 7/10  A10 9/10
+- Wed 19:00  Colon de Santa Fe Reserve v Independiente Rivadavia de Mendoza Reserve  -  HT Away to Win to Nil Yes/No / No @1.19
+    counts 80%, stats 73%, book 77%  |  expected goals from the ratings 1.10 v 1.12, book's prices 1.33 v 1.05  |  HH 6/7  AA 6/7  H10 10/10  A10 8/10
+- Wed 19:45  Norwich v Southampton  -  Home Team Win To Nil / No @1.17
+    counts 100%, stats 88%, book 82%  |  expected goals from the ratings 1.58 v 1.86, book's prices 1.60 v 1.50  |  HH 7/7  AA 7/7  H10 10/10  A10 10/10
+- Wed 19:45  Portsmouth FC v Sheffield United  -  Home O/U / Under 2.5 @1.17
+    counts 90%, stats 86%, book 81%  |  expected goals from the ratings 1.30 v 1.56, book's prices 1.40 v 1.20  |  HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 19:45  AFC Whyteleafe v Whitehawk FC  -  Over/Under / Over 1.5 @1.17
+    counts 80%, stats 81%, book 79%  |  expected goals from the ratings 1.56 v 1.51, book's prices 1.75 v 1.33  |  HH 7/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 21:00  Ittihad Tanger v Maghreb AS de Fes  -  Over/Under / Under 3.5 @1.16
+    counts 90%, stats 88%, book 81%  |  expected goals from the ratings 0.77 v 1.12, book's prices 1.00 v 1.10  |  HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Wed 21:00  CA Tembetary Ypane v Sol de America Villa Elisa  -  Home Team Win To Nil / No @1.16
+    counts 71%, stats 82%, book 79%  |  expected goals from the ratings 1.25 v 1.39, book's prices 1.28 v 1.38  |  HH 6/7  AA 5/7  H10 9/10  A10 8/10
+- Wed 22:30  CD Junior FC v Deportivo Pereira FC SA  -  2nd Half - Draw No Bet / Home @1.16
+    counts 71%, stats 88%, book 79%  |  expected goals from the ratings 2.24 v 0.80, book's prices 2.28 v 0.80  |  HH 5/7  AA 6/7  H10 8/10  A10 9/10
+- Wed 23:00  CA Sarmiento Junin v CA River Plate (ARG)  -  1st Half - Away O/U / Under 1.5 @1.18
+    counts 80%, stats 88%, book 77%  |  expected goals from the ratings 1.06 v 1.37, book's prices 0.73 v 1.75  |  HH 7/7  AA 6/7  H10 10/10  A10 8/10
+- Wed 23:00  Real Cundinamarca v Bogota FC  -  HT Away to Win to Nil Yes/No / No @1.15
+    counts 86%, stats 87%, book 80%  |  expected goals from the ratings 1.47 v 0.66, book's prices 1.45 v 0.93  |  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Wed 23:30  Cerro Porteno v Sportivo San Lorenzo  -  1st Half - Over/Under / Under 2.5 @1.15
+    counts 90%, stats 90%, book 80%  |  expected goals from the ratings 1.68 v 0.48, book's prices 2.15 v 0.93  |  HH 7/7  AA 7/7  H10 9/10  A10 10/10
+- Thu 00:00  Hartford Athletic v Charleston Battery  -  Home Team Win To Nil / No @1.15
+    counts 86%, stats 79%, book 80%  |  expected goals from the ratings 1.43 v 1.28, book's prices 1.40 v 1.45  |  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Thu 00:00  Sporting Jax v Birmingham Legion FC  -  1st Half - Over/Under / Over 0.5 @1.22
+    counts 80%, stats 82%, book 75%  |  expected goals from the ratings 1.61 v 2.25, book's prices 1.40 v 1.93  |  HH 6/7  AA 7/7  H10 8/10  A10 8/10
+- Thu 00:00  Greenville Triumph SC v Spokane Velocity FC  -  2nd Half - Total / Under 2.5 @1.21
+    counts 80%, stats 83%, book 76%  |  expected goals from the ratings 1.17 v 1.60, book's prices 1.35 v 1.48  |  HH 6/7  AA 7/7  H10 9/10  A10 8/10
+- Thu 00:00  Comunicaciones FC  v Aurora FC  -  2nd Half - Total / Over 0.5 @1.26
+    counts 86%, stats 73%, book 73%  |  expected goals from the ratings 1.44 v 0.98, book's prices 1.85 v 0.73  |  HH 6/7  AA 7/7  H10 9/10  A10 9/10
+- Thu 00:00  Unan Managua v Diriangen FC Diriamba  -  Over/Under / Under 4.5 @1.15
+    counts 80%, stats 82%, book 82%  |  expected goals from the ratings 1.01 v 1.97, book's prices 1.00 v 1.83  |  HH 7/7  AA 6/7  H10 10/10  A10 8/10
+- Thu 00:30  Columbus Crew v Charlotte FC  -  Home O/U / Under 3.5 @1.15
+    counts 100%, stats 95%, book 83%  |  expected goals from the ratings 1.36 v 1.42, book's prices 2.00 v 1.53  |  HH 7/7  AA 7/7  H10 10/10  A10 10/10
+- Thu 00:30  FC Cincinnati v New England Revolution  -  Away Team Total Corners / Over 2.5 @1.18
+    counts 86%, stats: none (not a goal market), book 80%  |  expected goals from the ratings 2.25 v 1.80, book's prices 2.15 v 1.55  |  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Thu 00:30  Inter Miami CF v New York City FC  -  1st Half - Home Total Corners / Under 4.5 @1.17
+    counts 100%, stats: none (not a goal market), book 81%  |  expected goals from the ratings 2.33 v 1.42, book's prices 2.25 v 1.15  |  HH 7/7  AA 7/7  H10 10/10  A10 10/10
+- Thu 00:30  Toronto FC v Orlando City SC  -  Away O/U / Over 0.5 @1.17
+    counts 100%, stats 82%, book 81%  |  expected goals from the ratings 2.00 v 1.70, book's prices 1.85 v 1.75  |  HH 7/7  AA 7/7  H10 10/10  A10 10/10
+- Thu 00:30  Rhode Island FC v Loudoun United FC  -  Home To Win Both Halves / No @1.23
+    counts 86%, stats 78%, book 75%  |  expected goals from the ratings 1.81 v 0.77, book's prices 2.03 v 1.05  |  HH 7/7  AA 6/7  H10 9/10  A10 9/10
+- Thu 01:30  Fluminense FC RJ v SE Palmeiras SP  -  Home Team Total Corners / Under 7.5 @1.16
+    counts 86%, stats: none (not a goal market), book 80%  |  expected goals from the ratings 0.96 v 1.31, book's prices 1.05 v 1.10  |  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Thu 01:30  Chicago Fire v Philadelphia Union  -  Away O/U / Over 0.5 @1.18
+    counts 86%, stats 80%, book 81%  |  expected goals from the ratings 1.86 v 1.62, book's prices 1.75 v 1.70  |  HH 6/7  AA 6/7  H10 9/10  A10 10/10
+- Thu 01:30  FC Dallas v Seattle Sounders  -  Home To Win Both Halves / No @1.17
+    counts 86%, stats 85%, book 82%  |  expected goals from the ratings 1.71 v 1.26, book's prices 1.90 v 1.30  |  HH 7/7  AA 6/7  H10 10/10  A10 10/10
+- Thu 01:30  Nashville SC v Sporting Kansas City  -  Home O/U / Under 4.5 @1.18
+    counts 100%, stats 83%, book 81%  |  expected goals from the ratings 2.90 v 0.72, book's prices 2.88 v 0.90  |  HH 7/7  AA 7/7  H10 10/10  A10 10/10
+- Thu 02:00  CD Guastatoya v Antigua GFC  -  Home Team Win To Nil / No @1.24
+    counts 71%, stats 78%, book 74%  |  expected goals from the ratings 1.62 v 1.29, book's prices 1.28 v 1.03  |  HH 5/7  AA 6/7  H10 8/10  A10 9/10
+- Thu 02:00  Indigenas de Matagalpa FC v CD Walter Ferretti  -  2nd Half - Total / Over 0.5 @1.20
+    counts 86%, stats 84%, book 76%  |  expected goals from the ratings 1.74 v 1.44, book's prices 1.35 v 1.40  |  HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Thu 02:30  Atletico Nacional v Independiente Medellin  -  Home O/U / Over 0.5 @1.15
+    counts 80%, stats 86%, book 80%  |  expected goals from the ratings 1.94 v 0.96, book's prices 1.75 v 1.00  |  HH 6/7  AA 6/7  H10 8/10  A10 9/10
+- Thu 03:00  Liga Deportiva Alajuelense v CS Herediano  -  1st Half - GG/NG / No @1.15
+    counts 86%, stats 88%, book 80%  |  expected goals from the ratings 1.30 v 0.86, book's prices 1.50 v 1.00  |  HH 6/7  AA 6/7  H10 9/10  A10 9/10
+- Thu 04:00  CD Marquense v Deportivo Mixco  -  1st Half - GG/NG / No @1.16
+    counts 80%, stats 78%, book 79%  |  expected goals from the ratings 1.25 v 1.39, book's prices 1.65 v 0.93  |  HH 6/7  AA 6/7  H10 8/10  A10 8/10
+
+## 2026-10-14 20:21 WAT  |  Highest Scoring Half only (user's call), Flashscore games only - most of every column backs it, flags, 2.00+ - every game - 4.20x (2 games)  |  code JJYGY6
+http://www.sportybet.com/ng/?shareCode=JJYGY6
+- Thu 00:30  Toronto FC v Orlando City SC  -  Highest Scoring Half / 2nd half @2.05
+    HH 4/7  AA 6/7  H10 6/10  A10 7/10
+- Thu 01:30  Chicago Fire v Philadelphia Union  -  Highest Scoring Half / 2nd half @2.05
+    HH 4/7  AA 4/7  H10 7/10  A10 8/10
+
+## 2026-10-14 20:32 WAT  |  Highest Scoring Half on every game (user's call): the half that had more goals in more of both teams' games - every game - 55,848,467,736.28x (30 games)  |  code PVFWB7
+http://www.sportybet.com/ng/?shareCode=PVFWB7
+- Wed 21:00  Ittihad Tanger v Maghreb AS de Fes  -  Highest Scoring Half / 1st half @3.30
+    games 1st higher / 2nd higher / level: HH 3-2-2  AA 3-1-3  H10 3-3-4  A10 4-3-3  |  all 13-9-12, goals 36 v 33
+- Wed 21:00  CA Tembetary Ypane v Sol de America Villa Elisa  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 2-3-2  AA 4-2-1  H10 2-6-2  A10 3-4-3  |  all 11-15-8, goals 44 v 58
+- Wed 22:30  CD Junior FC v Deportivo Pereira FC SA  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 0-5-2  AA 3-2-2  H10 3-6-1  A10 5-3-2  |  all 11-16-7, goals 49 v 53
+- Wed 23:00  CA Sarmiento Junin v CA River Plate (ARG)  -  Highest Scoring Half / 2nd half @2.20
+    games 1st higher / 2nd higher / level: HH 2-2-3  AA 0-6-1  H10 1-3-6  A10 2-5-3  |  all 5-16-13, goals 33 v 54
+- Wed 23:00  Atletico Mineiro MG v Montevideo City Torque  -  Highest Scoring Half / 2nd half @2.25
+    games 1st higher / 2nd higher / level: HH 1-5-1  AA 3-3-1  H10 1-6-3  A10 3-5-2  |  all 8-19-7, goals 35 v 57
+- Wed 23:00  Real Cundinamarca v Bogota FC  -  Highest Scoring Half / 2nd half @2.15
+    games 1st higher / 2nd higher / level: HH 1-4-2  AA 1-3-3  H10 3-4-3  A10 2-4-4  |  all 7-15-12, goals 33 v 46
+- Wed 23:30  Cerro Porteno v Sportivo San Lorenzo  -  Highest Scoring Half / 1st half @2.85
+    games 1st higher / 2nd higher / level: HH 4-2-1  AA 1-3-3  H10 6-3-1  A10 2-4-4  |  all 13-12-9, goals 36 v 33
+- Thu 00:00  Hartford Athletic v Charleston Battery  -  Highest Scoring Half / 2nd half @2.00
+    games 1st higher / 2nd higher / level: HH 4-2-1  AA 3-3-1  H10 4-4-2  A10 2-7-1  |  all 13-16-5, goals 51 v 52
+- Thu 00:00  Sporting Jax v Birmingham Legion FC  -  Highest Scoring Half / 2nd half @1.97
+    games 1st higher / 2nd higher / level: HH 1-5-1  AA 3-1-3  H10 3-5-2  A10 3-5-2  |  all 10-16-8, goals 60 v 71
+- Thu 00:00  Greenville Triumph SC v Spokane Velocity FC  -  Highest Scoring Half / 1st half @3.00
+    games 1st higher / 2nd higher / level: HH 4-2-1  AA 2-2-3  H10 6-2-2  A10 2-3-5  |  all 14-9-11, goals 58 v 49
+- Thu 00:00  Perez Zeledon v CD Escorpiones Belen  -  Highest Scoring Half / 1st half @3.00
+    games 1st higher / 2nd higher / level: HH 5-1-1  AA 3-3-1  H10 4-3-3  A10 3-4-3  |  all 15-11-8, goals 35 v 35
+- Thu 00:00  Comunicaciones FC  v Aurora FC  -  Highest Scoring Half / 2nd half @2.20
+    games 1st higher / 2nd higher / level: HH 2-4-1  AA 3-4-0  H10 3-5-2  A10 4-6-0  |  all 12-19-3, goals 49 v 63
+- Thu 00:00  Unan Managua v Diriangen FC Diriamba  -  Highest Scoring Half / 2nd half @2.05
+    games 1st higher / 2nd higher / level: HH 1-3-3  AA 2-2-3  H10 2-5-3  A10 3-4-3  |  all 8-14-12, goals 35 v 54
+- Thu 00:30  CF Montreal v Atlanta United FC  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 2-3-2  AA 2-3-2  H10 3-5-2  A10 3-4-3  |  all 10-15-9, goals 44 v 61
+- Thu 00:30  Columbus Crew v Charlotte FC  -  Highest Scoring Half / 1st half @3.10
+    games 1st higher / 2nd higher / level: HH 5-2-0  AA 3-1-3  H10 6-4-0  A10 2-4-4  |  all 16-11-7, goals 56 v 54
+- Thu 00:30  FC Cincinnati v New England Revolution  -  Highest Scoring Half / 2nd half @2.05
+    games 1st higher / 2nd higher / level: HH 2-2-3  AA 4-3-0  H10 1-6-3  A10 5-5-0  |  all 12-16-6, goals 54 v 64
+- Thu 00:30  Inter Miami CF v New York City FC  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 1-2-4  AA 3-1-3  H10 3-2-5  A10 2-4-4  |  all 9-9-16, goals 55 v 56
+- Thu 00:30  Toronto FC v Orlando City SC  -  Highest Scoring Half / 2nd half @2.05
+    games 1st higher / 2nd higher / level: HH 1-4-2  AA 1-6-0  H10 2-6-2  A10 3-7-0  |  all 7-23-4, goals 51 v 92
+- Thu 00:30  Rhode Island FC v Loudoun United FC  -  Highest Scoring Half / 2nd half @2.05
+    games 1st higher / 2nd higher / level: HH 3-2-2  AA 3-3-1  H10 3-4-3  A10 3-4-3  |  all 12-13-9, goals 40 v 43
+- Thu 01:00  Managua FC v San Marcos FC  -  Highest Scoring Half / 1st half @2.75
+    games 1st higher / 2nd higher / level: HH 4-2-1  AA 3-4-0  H10 5-4-1  A10 4-5-1  |  all 16-15-3, goals 56 v 57
+- Thu 01:30  Fluminense FC RJ v SE Palmeiras SP  -  Highest Scoring Half / 2nd half @2.25
+    games 1st higher / 2nd higher / level: HH 1-5-1  AA 2-2-3  H10 2-8-0  A10 3-3-4  |  all 8-18-8, goals 31 v 53
+- Thu 01:30  Chicago Fire v Philadelphia Union  -  Highest Scoring Half / 2nd half @2.05
+    games 1st higher / 2nd higher / level: HH 1-4-2  AA 3-4-0  H10 0-7-3  A10 2-8-0  |  all 6-23-5, goals 55 v 76
+- Thu 01:30  FC Dallas v Seattle Sounders  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 3-2-2  AA 2-3-2  H10 4-4-2  A10 0-5-5  |  all 9-14-11, goals 49 v 62
+- Thu 01:30  Nashville SC v Sporting Kansas City  -  Highest Scoring Half / 2nd half @2.05
+    games 1st higher / 2nd higher / level: HH 2-5-0  AA 5-2-0  H10 1-7-2  A10 3-4-3  |  all 11-18-5, goals 58 v 64
+- Thu 01:30  Saint Louis City SC v Vancouver Whitecaps FC  -  Highest Scoring Half / 2nd half @2.05
+    games 1st higher / 2nd higher / level: HH 2-4-1  AA 2-3-2  H10 3-4-3  A10 3-4-3  |  all 10-15-9, goals 63 v 60
+- Thu 02:00  CD Guastatoya v Antigua GFC  -  Highest Scoring Half / 2nd half @2.25
+    games 1st higher / 2nd higher / level: HH 2-4-1  AA 1-3-3  H10 2-6-2  A10 2-5-3  |  all 7-18-9, goals 38 v 68
+- Thu 02:00  Indigenas de Matagalpa FC v CD Walter Ferretti  -  Highest Scoring Half / 2nd half @2.05
+    games 1st higher / 2nd higher / level: HH 4-3-0  AA 0-5-2  H10 4-6-0  A10 1-5-4  |  all 9-19-6, goals 41 v 60
+- Thu 02:30  Atletico Nacional v Independiente Medellin  -  Highest Scoring Half / 1st half @2.95
+    games 1st higher / 2nd higher / level: HH 3-3-1  AA 3-4-0  H10 4-5-1  A10 6-4-0  |  all 16-16-2, goals 53 v 49
+- Thu 03:00  Liga Deportiva Alajuelense v CS Herediano  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 1-4-2  AA 2-3-2  H10 1-3-6  A10 2-6-2  |  all 6-16-12, goals 31 v 54
+- Thu 04:00  CD Marquense v Deportivo Mixco  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 3-3-1  AA 1-3-3  H10 4-3-3  A10 2-3-5  |  all 10-12-12, goals 49 v 54
+
+## 2026-10-14 20:40 WAT  |  Highest Scoring Half 2nd half only (user's call: PVFWB7 without its 1st-half legs) - 26,235,753.95x (23 games)  |  code SQRXUC
+http://www.sportybet.com/ng/?shareCode=SQRXUC
+- Wed 21:00  CA Tembetary Ypane v Sol de America Villa Elisa  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 2-3-2  AA 4-2-1  H10 2-6-2  A10 3-4-3  |  all 11-15-8, goals 44 v 58
+- Wed 22:30  CD Junior FC v Deportivo Pereira FC SA  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 0-5-2  AA 3-2-2  H10 3-6-1  A10 5-3-2  |  all 11-16-7, goals 49 v 53
+- Wed 23:00  CA Sarmiento Junin v CA River Plate (ARG)  -  Highest Scoring Half / 2nd half @2.20
+    games 1st higher / 2nd higher / level: HH 2-2-3  AA 0-6-1  H10 1-3-6  A10 2-5-3  |  all 5-16-13, goals 33 v 54
+- Wed 23:00  Atletico Mineiro MG v Montevideo City Torque  -  Highest Scoring Half / 2nd half @2.25
+    games 1st higher / 2nd higher / level: HH 1-5-1  AA 3-3-1  H10 1-6-3  A10 3-5-2  |  all 8-19-7, goals 35 v 57
+- Wed 23:00  Real Cundinamarca v Bogota FC  -  Highest Scoring Half / 2nd half @2.15
+    games 1st higher / 2nd higher / level: HH 1-4-2  AA 1-3-3  H10 3-4-3  A10 2-4-4  |  all 7-15-12, goals 33 v 46
+- Thu 00:00  Hartford Athletic v Charleston Battery  -  Highest Scoring Half / 2nd half @2.00
+    games 1st higher / 2nd higher / level: HH 4-2-1  AA 3-3-1  H10 4-4-2  A10 2-7-1  |  all 13-16-5, goals 51 v 52
+- Thu 00:00  Sporting Jax v Birmingham Legion FC  -  Highest Scoring Half / 2nd half @1.97
+    games 1st higher / 2nd higher / level: HH 1-5-1  AA 3-1-3  H10 3-5-2  A10 3-5-2  |  all 10-16-8, goals 60 v 71
+- Thu 00:00  Comunicaciones FC  v Aurora FC  -  Highest Scoring Half / 2nd half @2.20
+    games 1st higher / 2nd higher / level: HH 2-4-1  AA 3-4-0  H10 3-5-2  A10 4-6-0  |  all 12-19-3, goals 49 v 63
+- Thu 00:00  Unan Managua v Diriangen FC Diriamba  -  Highest Scoring Half / 2nd half @2.05
+    games 1st higher / 2nd higher / level: HH 1-3-3  AA 2-2-3  H10 2-5-3  A10 3-4-3  |  all 8-14-12, goals 35 v 54
+- Thu 00:30  CF Montreal v Atlanta United FC  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 2-3-2  AA 2-3-2  H10 3-5-2  A10 3-4-3  |  all 10-15-9, goals 44 v 61
+- Thu 00:30  FC Cincinnati v New England Revolution  -  Highest Scoring Half / 2nd half @2.05
+    games 1st higher / 2nd higher / level: HH 2-2-3  AA 4-3-0  H10 1-6-3  A10 5-5-0  |  all 12-16-6, goals 54 v 64
+- Thu 00:30  Inter Miami CF v New York City FC  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 1-2-4  AA 3-1-3  H10 3-2-5  A10 2-4-4  |  all 9-9-16, goals 55 v 56
+- Thu 00:30  Toronto FC v Orlando City SC  -  Highest Scoring Half / 2nd half @2.05
+    games 1st higher / 2nd higher / level: HH 1-4-2  AA 1-6-0  H10 2-6-2  A10 3-7-0  |  all 7-23-4, goals 51 v 92
+- Thu 00:30  Rhode Island FC v Loudoun United FC  -  Highest Scoring Half / 2nd half @2.05
+    games 1st higher / 2nd higher / level: HH 3-2-2  AA 3-3-1  H10 3-4-3  A10 3-4-3  |  all 12-13-9, goals 40 v 43
+- Thu 01:30  Fluminense FC RJ v SE Palmeiras SP  -  Highest Scoring Half / 2nd half @2.25
+    games 1st higher / 2nd higher / level: HH 1-5-1  AA 2-2-3  H10 2-8-0  A10 3-3-4  |  all 8-18-8, goals 31 v 53
+- Thu 01:30  Chicago Fire v Philadelphia Union  -  Highest Scoring Half / 2nd half @2.05
+    games 1st higher / 2nd higher / level: HH 1-4-2  AA 3-4-0  H10 0-7-3  A10 2-8-0  |  all 6-23-5, goals 55 v 76
+- Thu 01:30  FC Dallas v Seattle Sounders  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 3-2-2  AA 2-3-2  H10 4-4-2  A10 0-5-5  |  all 9-14-11, goals 49 v 62
+- Thu 01:30  Nashville SC v Sporting Kansas City  -  Highest Scoring Half / 2nd half @2.05
+    games 1st higher / 2nd higher / level: HH 2-5-0  AA 5-2-0  H10 1-7-2  A10 3-4-3  |  all 11-18-5, goals 58 v 64
+- Thu 01:30  Saint Louis City SC v Vancouver Whitecaps FC  -  Highest Scoring Half / 2nd half @2.05
+    games 1st higher / 2nd higher / level: HH 2-4-1  AA 2-3-2  H10 3-4-3  A10 3-4-3  |  all 10-15-9, goals 63 v 60
+- Thu 02:00  CD Guastatoya v Antigua GFC  -  Highest Scoring Half / 2nd half @2.25
+    games 1st higher / 2nd higher / level: HH 2-4-1  AA 1-3-3  H10 2-6-2  A10 2-5-3  |  all 7-18-9, goals 38 v 68
+- Thu 02:00  Indigenas de Matagalpa FC v CD Walter Ferretti  -  Highest Scoring Half / 2nd half @2.05
+    games 1st higher / 2nd higher / level: HH 4-3-0  AA 0-5-2  H10 4-6-0  A10 1-5-4  |  all 9-19-6, goals 41 v 60
+- Thu 03:00  Liga Deportiva Alajuelense v CS Herediano  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 1-4-2  AA 2-3-2  H10 1-3-6  A10 2-6-2  |  all 6-16-12, goals 31 v 54
+- Thu 04:00  CD Marquense v Deportivo Mixco  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 3-3-1  AA 1-3-3  H10 4-3-3  A10 2-3-5  |  all 10-12-12, goals 49 v 54
+
+## 2026-10-14 20:59 WAT  |  stats prediction (Flashscore games only: most of every column backs it, flags) at 1.15+ - the 19:41 list as shown - 293.65x (28 games)  |  code L78HCH
+http://www.sportybet.com/ng/?shareCode=L78HCH
+- Wed 21:00  Ittihad Tanger v Maghreb AS de Fes  -  Over/Under / Under 3.5 @1.16
+    HH 7/7  AA 7/7  H10 9/10  A10 9/10  H2H 7/10
+- Wed 21:00  CA Tembetary Ypane v Sol de America Villa Elisa  -  Over/Under / Over 1.5 @1.30
+    HH 7/7  AA 5/7  H10 10/10  A10 8/10
+- Wed 22:30  CD Junior FC v Deportivo Pereira FC SA  -  1st Half - Home Total Corners / Under 4.5 @1.23
+    HH 5/7  AA 7/7  H10 8/10  A10 10/10
+- Wed 23:00  CA Sarmiento Junin v CA River Plate (ARG)  -  1st Half - Away O/U / Under 1.5 @1.18
+    HH 7/7  AA 6/7  H10 10/10  A10 8/10
+- Wed 23:00  Real Cundinamarca v Bogota FC  -  1st Half - Draw No Bet / Home @1.43
+    HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Wed 23:30  Cerro Porteno v Sportivo San Lorenzo  -  Over/Under / Under 4.5 @1.21
+    HH 7/7  AA 7/7  H10 10/10  A10 10/10  H2H 8/10
+- Thu 00:00  Hartford Athletic v Charleston Battery  -  Away O/U / Over 0.5 @1.24
+    HH 6/7  AA 6/7  H10 9/10  A10 9/10  H2H 9/10
+- Thu 00:00  Sporting Jax v Birmingham Legion FC  -  1st Half - Over/Under / Over 0.5 @1.21
+    HH 6/7  AA 7/7  H10 8/10  A10 8/10
+- Thu 00:00  Greenville Triumph SC v Spokane Velocity FC  -  Away O/U / Over 0.5 @1.23
+    HH 6/7  AA 7/7  H10 9/10  A10 10/10  H2H 4/6
+- Thu 00:00  Deportivo Lara v Urena SC  -  Draw No Bet / Home @1.24
+    HH 6/7  AA 6/7  H10 9/10  A10 8/10  H2H 4/7
+- Thu 00:00  Comunicaciones FC  v Aurora FC  -  2nd Half - Total / Over 0.5 @1.26
+    HH 6/7  AA 7/7  H10 9/10  A10 9/10
+- Thu 00:00  Unan Managua v Diriangen FC Diriamba  -  Over/Under / Under 4.5 @1.15
+    HH 7/7  AA 6/7  H10 10/10  A10 8/10  H2H 9/10
+- Thu 00:30  CF Montreal v Atlanta United FC  -  Away O/U / Under 2.5 @1.21
+    HH 7/7  AA 7/7  H10 9/10  A10 10/10  H2H 6/10
+- Thu 00:30  Columbus Crew v Charlotte FC  -  Home O/U / Under 3.5 @1.15
+    HH 7/7  AA 7/7  H10 10/10  A10 10/10  H2H 8/10
+- Thu 00:30  FC Cincinnati v New England Revolution  -  1st Half - Over/Under / Over 0.5 @1.20
+    HH 7/7  AA 7/7  H10 9/10  A10 10/10
+- Thu 00:30  Inter Miami CF v New York City FC  -  1st Half - Home Total Corners / Under 4.5 @1.17
+    HH 7/7  AA 7/7  H10 10/10  A10 10/10
+- Thu 00:30  Toronto FC v Orlando City SC  -  Away O/U / Over 0.5 @1.17
+    HH 7/7  AA 7/7  H10 10/10  A10 10/10  H2H 10/10
+- Thu 00:30  Rhode Island FC v Loudoun United FC  -  1st Half - Draw No Bet / Home @1.29
+    HH 6/7  AA 7/7  H10 8/10  A10 10/10
+- Thu 01:30  Fluminense FC RJ v SE Palmeiras SP  -  Shots Over/Under / Over 22.5 @1.29
+    HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Thu 01:30  Chicago Fire v Philadelphia Union  -  1st Half - Over/Under / Over 0.5 @1.24
+    HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Thu 01:30  FC Dallas v Seattle Sounders  -  1st Half - Home Total Corners / Under 4.5 @1.18
+    HH 6/7  AA 6/7  H10 10/10  A10 9/10
+- Thu 01:30  Nashville SC v Sporting Kansas City  -  Home O/U / Under 4.5 @1.19
+    HH 7/7  AA 7/7  H10 10/10  A10 10/10  H2H 5/5
+- Thu 01:30  Saint Louis City SC v Vancouver Whitecaps FC  -  Bookings - Over/Under / Over 2.5 @1.15
+    HH 7/7  AA 7/7  H10 9/10  A10 9/10
+- Thu 02:00  CD Guastatoya v Antigua GFC  -  2nd Half - Total / Over 0.5 @1.31
+    HH 7/7  AA 7/7  H10 10/10  A10 9/10
+- Thu 02:00  Indigenas de Matagalpa FC v CD Walter Ferretti  -  2nd Half - Total / Over 0.5 @1.20
+    HH 6/7  AA 7/7  H10 9/10  A10 10/10
+- Thu 02:30  Atletico Nacional v Independiente Medellin  -  Over/Under / Over 1.5 @1.25
+    HH 6/7  AA 7/7  H10 9/10  A10 9/10  H2H 6/10
+- Thu 03:00  Liga Deportiva Alajuelense v CS Herediano  -  2nd Half - Total / Over 0.5 @1.26
+    HH 7/7  AA 5/7  H10 9/10  A10 8/10
+- Thu 04:00  CD Marquense v Deportivo Mixco  -  2nd Half - Total / Over 0.5 @1.24
+    HH 5/7  AA 6/7  H10 9/10  A10 10/10
+
+## 2026-10-15 04:50 WAT  |  Highest Scoring Half on the PVFWB7 winners' shape (user's call), 2.00+ - to 12:00 - 4.30x (2 games)  |  code H3DHKT
+http://www.sportybet.com/ng/?shareCode=H3DHKT
+- Thu 11:00  Gangwon FC v Phnom Penh Crown FC  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 1-2-4  AA 2-4-1  H10 1-3-6  A10 3-7-0  |  all 7-16-11, goals 29 v 44
+- Thu 11:00  Tai Po FC v Lion City Sailors FC  -  Highest Scoring Half / 2nd half @2.05
+    games 1st higher / 2nd higher / level: HH 2-4-1  AA 2-3-2  H10 2-6-2  A10 3-5-2  |  all 9-18-7, goals 46 v 64
+
+## 2026-10-15 08:40 WAT  |  draw slip (user's call: today's 3 games passing checks 1-4 (El Mansurah 1.43 at gap 0.125, on the line for the exact case)) 25.0x (3 legs) - draw band, sides close in the table, home not weaker, Under 2.5 <= 1.70  |  code ZMBL5F
+http://www.sportybet.com/ng/?shareCode=ZMBL5F
+- Thu 13:30  El Mansurah v Al Nasr Cairo  -  1X2 / Draw @2.60
+    SportyBet 2.65/2.60/2.90 -> draw 35% after the overround (band 27%+); Under 2.5 at 1.43
+    table this season: 14 pts from 8 v 13 pts from 8 = 1.75 v 1.62 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Fri 00:00  CA Huracan v Gimnasia y Esgrima La Plata  -  1X2 / Draw @3.00
+    SportyBet 2.50/3.00/2.95 -> draw 31% after the overround (band 27%+); Under 2.5 at 1.53
+    table this season: 19 pts from 12 v 19 pts from 12 = 1.58 v 1.58 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+- Fri 00:00  Internacional de Palmira v Orsomarso SC  -  1X2 / Draw @3.20
+    SportyBet 1.95/3.20/3.90 -> draw 29% after the overround (band 27%+); Under 2.5 at 1.60
+    table this season: 15 pts from 12 v 13 pts from 12 = 1.25 v 1.08 a game (sides close)
+    rule: the draw band + sides close in the table (8+ rounds) + home not weaker + Under 2.5 at 1.70 or shorter (each measured on football-data 2015-26, positive on both halves)
+
+## 2026-10-15 08:53 WAT  |  HSH + draws mixed (user's call: H3DHKT's 2 HSH legs + ZMBL5F's 3 draws) - 107.45x (5 legs)  |  code SZBC9N
+http://www.sportybet.com/ng/?shareCode=SZBC9N
+- Thu 11:00  Gangwon FC v Phnom Penh Crown FC  -  Highest Scoring Half / 2nd half @2.10
+    HSH winner shape (2nd half): games 1st higher / 2nd higher / level all 7-16-11, H10 1-3-6, A10 3-7-0, goals 29 v 44
+- Thu 11:00  Tai Po FC v Lion City Sailors FC  -  Highest Scoring Half / 2nd half @2.05
+    HSH winner shape (2nd half): games 1st higher / 2nd higher / level all 9-18-7, H10 2-6-2, A10 3-5-2, goals 46 v 64
+- Thu 13:30  El Mansurah v Al Nasr Cairo  -  1X2 / Draw @2.60
+    draw checks 1-4: band, table 14/8 v 13/8 = 1.75 v 1.62 (gap 0.125), home not weaker, Under 2.5 1.43
+- Fri 00:00  CA Huracan v Gimnasia y Esgrima La Plata  -  1X2 / Draw @3.00
+    draw checks 1-4: band, table 19/12 v 19/12 = 1.58 v 1.58 (gap 0.00), home not weaker, Under 2.5 1.53
+- Fri 00:00  Internacional de Palmira v Orsomarso SC  -  1X2 / Draw @3.20
+    draw checks 1-4: band, table 15/12 v 13/12 = 1.25 v 1.08 (gap 0.17), home not weaker, Under 2.5 1.60
+
+## 2026-10-15 13:14 WAT  |  Highest Scoring Half on the PVFWB7 winners' shape = H3DHKT's rule (user's call), 2.00+ - to 23:59 - 3,500,820.80x (20 games)  |  code L6145B
+http://www.sportybet.com/ng/?shareCode=L6145B
+- Thu 15:00  Mardin 1969 Spor v Fatih Karagumruk Istanbul  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 0-5-2  AA 2-2-3  H10 1-6-3  A10 3-4-3  |  all 6-17-11, goals 28 v 49
+- Thu 15:00  FC RFS v SK Super Nova  -  Highest Scoring Half / 2nd half @2.05
+    games 1st higher / 2nd higher / level: HH 3-3-1  AA 3-2-2  H10 4-5-1  A10 3-5-2  |  all 13-15-6, goals 44 v 52
+- Thu 16:30  FC Dinamo Minsk v Slavia Mozyr  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 3-3-1  AA 3-3-1  H10 3-5-2  A10 4-5-1  |  all 13-16-5, goals 40 v 41
+- Thu 17:45  Alkmaar v Hapoel Be`er Sheva FC  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 1-4-2  AA 0-6-1  H10 2-6-2  A10 3-5-2  |  all 6-21-7, goals 32 v 71
+- Thu 17:45  NK Celje v AC Omonia Nicosia  -  Highest Scoring Half / 2nd half @2.15
+    games 1st higher / 2nd higher / level: HH 2-4-1  AA 2-5-0  H10 4-4-2  A10 1-6-3  |  all 9-19-6, goals 29 v 51
+- Thu 17:45  Salzburg v AC Milan  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 1-4-2  AA 1-4-2  H10 4-4-2  A10 1-7-2  |  all 7-19-8, goals 31 v 65
+- Thu 17:45  SCU Torreense v Sunderland AFC  -  Highest Scoring Half / 2nd half @2.15
+    games 1st higher / 2nd higher / level: HH 2-2-3  AA 2-4-1  H10 2-4-4  A10 2-8-0  |  all 8-18-8, goals 41 v 56
+- Thu 17:45  Union Gilloise v Real Sociedad  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 3-2-2  AA 0-5-2  H10 4-4-2  A10 2-6-2  |  all 9-17-8, goals 51 v 62
+- Thu 17:45  CS Universitatea Craiova v Getafe  -  Highest Scoring Half / 2nd half @2.25
+    games 1st higher / 2nd higher / level: HH 3-3-1  AA 4-2-1  H10 2-7-1  A10 3-5-2  |  all 12-17-5, goals 30 v 51
+- Thu 17:45  KF Egnatia Rrogozhine v FC Midtjylland  -  Highest Scoring Half / 2nd half @2.20
+    games 1st higher / 2nd higher / level: HH 3-3-1  AA 1-2-4  H10 4-4-2  A10 2-4-4  |  all 10-13-11, goals 58 v 59
+- Thu 17:45  Lugano v Crvena Zvezda  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 2-4-1  AA 3-3-1  H10 2-8-0  A10 4-5-1  |  all 11-20-3, goals 43 v 60
+- Thu 17:45  Mjallby AIF v Inter Club de Escaldes  -  Highest Scoring Half / 2nd half @2.15
+    games 1st higher / 2nd higher / level: HH 1-6-0  AA 4-2-1  H10 3-6-1  A10 3-5-2  |  all 11-19-4, goals 41 v 63
+- Thu 17:45  Panathinaikos v FK Borac Banja Luka  -  Highest Scoring Half / 2nd half @2.15
+    games 1st higher / 2nd higher / level: HH 2-3-2  AA 1-5-1  H10 4-4-2  A10 2-5-3  |  all 9-17-8, goals 37 v 64
+- Thu 17:45  PFC CSKA Sofia v Monaco  -  Highest Scoring Half / 2nd half @2.15
+    games 1st higher / 2nd higher / level: HH 2-4-1  AA 1-5-1  H10 3-5-2  A10 1-7-2  |  all 7-21-6, goals 52 v 74
+- Thu 18:30  Maxline Vitebsk v FC Torpedo Belaz Zhodino  -  Highest Scoring Half / 2nd half @2.15
+    games 1st higher / 2nd higher / level: HH 3-1-3  AA 2-4-1  H10 3-3-4  A10 1-7-2  |  all 9-15-10, goals 42 v 54
+- Thu 19:45  SM Caen v La Roche Vendee Football  -  Highest Scoring Half / 2nd half @2.00
+    games 1st higher / 2nd higher / level: HH 3-1-3  AA 1-2-4  H10 2-5-3  A10 1-5-4  |  all 7-13-14, goals 36 v 45
+- Thu 20:00  Bournemouth v Sturm Graz  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 1-3-3  AA 3-3-1  H10 2-4-4  A10 2-5-3  |  all 8-15-11, goals 38 v 56
+- Thu 20:00  Copenhagen v Braga  -  Highest Scoring Half / 2nd half @2.20
+    games 1st higher / 2nd higher / level: HH 3-3-1  AA 1-2-4  H10 3-5-2  A10 1-4-5  |  all 8-14-12, goals 38 v 47
+- Thu 20:00  FC Twente Enschede v FC Thun  -  Highest Scoring Half / 2nd half @2.05
+    games 1st higher / 2nd higher / level: HH 2-4-1  AA 2-3-2  H10 3-6-1  A10 3-3-4  |  all 10-16-8, goals 64 v 73
+- Thu 20:00  Envigado FC v CD Real Santander  -  Highest Scoring Half / 2nd half @2.15
+    games 1st higher / 2nd higher / level: HH 1-3-3  AA 3-2-2  H10 2-4-4  A10 2-4-4  |  all 8-13-13, goals 32 v 42
+
+## 2026-10-15 13:29 WAT  |  Highest Scoring Half, best 10 of L6145B closest to the PVFWB7 2nd-half winners (user's call): 2nd-half goal lead 13+, most columns 2nd ahead - 1,876.24x (10 games)  |  code PYJ54T
+http://www.sportybet.com/ng/?shareCode=PYJ54T
+- Thu 15:00  Mardin 1969 Spor v Fatih Karagumruk Istanbul  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 0-5-2  AA 2-2-3  H10 1-6-3  A10 3-4-3  |  all 6-17-11, goals 28 v 49
+- Thu 17:45  Alkmaar v Hapoel Be`er Sheva FC  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 1-4-2  AA 0-6-1  H10 2-6-2  A10 3-5-2  |  all 6-21-7, goals 32 v 71
+- Thu 17:45  PFC CSKA Sofia v Monaco  -  Highest Scoring Half / 2nd half @2.15
+    games 1st higher / 2nd higher / level: HH 2-4-1  AA 1-5-1  H10 3-5-2  A10 1-7-2  |  all 7-21-6, goals 52 v 74
+- Thu 17:45  Salzburg v AC Milan  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 1-4-2  AA 1-4-2  H10 4-4-2  A10 1-7-2  |  all 7-19-8, goals 31 v 65
+- Thu 17:45  Panathinaikos v FK Borac Banja Luka  -  Highest Scoring Half / 2nd half @2.15
+    games 1st higher / 2nd higher / level: HH 2-3-2  AA 1-5-1  H10 4-4-2  A10 2-5-3  |  all 9-17-8, goals 37 v 64
+- Thu 17:45  NK Celje v AC Omonia Nicosia  -  Highest Scoring Half / 2nd half @2.15
+    games 1st higher / 2nd higher / level: HH 2-4-1  AA 2-5-0  H10 4-4-2  A10 1-6-3  |  all 9-19-6, goals 29 v 51
+- Thu 17:45  Mjallby AIF v Inter Club de Escaldes  -  Highest Scoring Half / 2nd half @2.15
+    games 1st higher / 2nd higher / level: HH 1-6-0  AA 4-2-1  H10 3-6-1  A10 3-5-2  |  all 11-19-4, goals 41 v 63
+- Thu 17:45  Lugano v Crvena Zvezda  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 2-4-1  AA 3-3-1  H10 2-8-0  A10 4-5-1  |  all 11-20-3, goals 43 v 60
+- Thu 17:45  SCU Torreense v Sunderland AFC  -  Highest Scoring Half / 2nd half @2.15
+    games 1st higher / 2nd higher / level: HH 2-2-3  AA 2-4-1  H10 2-4-4  A10 2-8-0  |  all 8-18-8, goals 41 v 56
+- Thu 20:00  Bournemouth v Sturm Graz  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 1-3-3  AA 3-3-1  H10 2-4-4  A10 2-5-3  |  all 8-15-11, goals 38 v 56
+
+## 2026-10-15 19:28 WAT  |  Highest Scoring Half, H3DHKT rule + HH/AA fix (user's call), 2.00+ - to Fri 06:00 - 206.20x (7 games)  |  code W51BQ8
+http://www.sportybet.com/ng/?shareCode=W51BQ8
+- Thu 20:00  Celta v Juventus  -  Highest Scoring Half / 2nd half @2.25
+    games 1st higher / 2nd higher / level: HH 1-4-2  AA 2-3-2  H10 1-4-5  A10 3-4-3  |  all 7-15-12, goals 30 v 48
+- Thu 20:00  Hoffenheim v Besiktas Istanbul  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 2-4-1  AA 1-5-1  H10 2-4-4  A10 5-5-0  |  all 10-18-6, goals 50 v 65
+- Thu 20:00  Atalanta v Pafos FC  -  Highest Scoring Half / 2nd half @2.10
+    games 1st higher / 2nd higher / level: HH 2-3-2  AA 0-7-0  H10 2-5-3  A10 0-9-1  |  all 4-24-6, goals 22 v 46
+- Thu 20:00  FC Twente Enschede v FC Thun  -  Highest Scoring Half / 2nd half @2.05
+    games 1st higher / 2nd higher / level: HH 2-4-1  AA 2-3-2  H10 3-6-1  A10 3-3-4  |  all 10-16-8, goals 64 v 73
+- Fri 00:00  Internacional de Palmira v Orsomarso SC  -  Highest Scoring Half / 2nd half @2.15
+    games 1st higher / 2nd higher / level: HH 2-3-2  AA 0-2-5  H10 3-5-2  A10 2-3-5  |  all 7-13-14, goals 20 v 40
+- Fri 00:15  CD Marathon San Pedro Sula v Olancho FC  -  Highest Scoring Half / 2nd half @2.05
+    games 1st higher / 2nd higher / level: HH 2-3-2  AA 2-3-2  H10 2-4-4  A10 2-5-3  |  all 8-15-11, goals 32 v 39
+- Fri 01:30  Estudiantes de La Plata v CR Flamengo RJ  -  Highest Scoring Half / 2nd half @2.30
+    games 1st higher / 2nd higher / level: HH 2-3-2  AA 0-5-2  H10 4-4-2  A10 1-7-2  |  all 7-19-8, goals 33 v 53
+
+## 2026-10-16 09:42 WAT  |  Highest Scoring Half / 2nd half on Sydney FC v Western Sydney (user's game, picked from the 1H/2H Over/Under prices) - 2.10x (1 game)  |  code GE485V
+http://www.sportybet.com/ng/?shareCode=GE485V
+- Fri 10:00  Sydney FC v Western Sydney Wanderers  -  Highest Scoring Half / 2nd half @2.10
+    1H O/U 0.5 1.31/3.33 1.5 2.40/1.56  2H O/U 0.5 1.18/4.60 1.5 1.87/1.90 (SportyBet 09:48); Pinnacle 1H O/U 1.5 2.47/1.56, no 2H market
+
+## 2026-10-16 11:19 WAT  |  Highest Scoring Half / 2nd half (user's call), 12:00-18:00 games with Pinnacle 1st-half Over 1.5 at 2.30-2.49 - 2,493.80x (11 games)  |  code LP60QD
+http://www.sportybet.com/ng/?shareCode=LP60QD
+- Fri 15:00  Sporting Club Delhi v Mohun Bagan Super Giant  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.36 (11:1x read)
+    1H O/U 0.5 1.24/3.60 1.5 2.15/1.62  2H O/U 0.5 1.16/4.50 1.5 1.79/1.92
+- Fri 16:30  MFK Karvina v Dukla Prague  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.38 (11:1x read)
+    1H O/U 0.5 1.28/3.25 1.5 2.25/1.54  2H O/U 0.5 1.16/4.30 1.5 1.81/1.86
+- Fri 17:00  NK Rudes Zagreb v HNK Rijeka  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.44 (11:1x read)
+    1H O/U 0.5 1.26/3.50 1.5 2.25/1.58  2H O/U 0.5 1.17/4.40 1.5 1.83/1.87
+- Fri 17:00  Wieczysta Krakow v Rakow Czestochowa  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.32 (11:1x read)
+    1H O/U 0.5 1.27/3.50 1.5 2.25/1.61  2H O/U 0.5 1.16/4.80 1.5 1.76/1.99
+- Fri 17:00  Warta Poznan v Unia Skierniewice  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.38 (11:1x read)
+    1H O/U 0.5 1.27/3.30 1.5 2.25/1.56  2H O/U 0.5 1.16/4.40 1.5 1.77/1.90
+- Fri 17:00  1.SK Prostejov v FK Usti nad Labem  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.34 (11:1x read)
+    1H O/U 0.5 1.29/3.20 1.5 2.30/1.53  2H O/U 0.5 1.16/4.30 1.5 1.81/1.86
+- Fri 17:00  FK Pribram v FK Fotbal Trinec  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.40 (11:1x read)
+    1H O/U 0.5 1.29/3.20 1.5 2.30/1.52  2H O/U 0.5 1.18/4.20 1.5 1.85/1.82
+- Fri 17:00  SFC Opava v FC Vysocina Jihlava  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.43 (11:1x read)
+    1H O/U 0.5 1.31/3.10 1.5 2.35/1.50  2H O/U 0.5 1.18/4.10 1.5 1.86/1.81
+- Fri 18:00  Corum FK v Caykur Rizespor  -  Highest Scoring Half / 2nd half @2.10
+    Pinnacle 1H Over 1.5 2.44 (11:1x read)
+    1H O/U 0.5 1.32/3.50 1.5 2.40/1.58  2H O/U 0.5 1.19/4.75 1.5 1.88/1.93
+- Fri 18:00  Aarhus Fremad v Esbjerg FB  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.39 (11:1x read)
+    1H O/U 0.5 1.29/3.40 1.5 2.30/1.58  2H O/U 0.5 1.17/4.70 1.5 1.81/1.94
+- Fri 18:00  Lunds BK v Trelleborgs FF  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.45 (11:1x read)
+    1H O/U 0.5 1.30/3.10 1.5 2.35/1.51  2H O/U 0.5 1.17/4.20 1.5 1.85/1.82
+
+## 2026-10-16 11:19 WAT  |  Highest Scoring Half / 2nd half (user's call), 12:00-18:00 games with Pinnacle 1st-half Over 1.5 at 2.00+, all - 298,320,061.13x (27 games)  |  code NMVRDG
+http://www.sportybet.com/ng/?shareCode=NMVRDG
+- Fri 12:30  Tanjong Pagar United FC v Hougang United FC  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.05 (11:1x read)
+    1H O/U 0.5 1.21/3.80 1.5 1.96/1.72  2H O/U 0.5 1.12/5.20 1.5 1.60/2.15
+- Fri 12:35  Henan v Tianjin Jinmen Tiger  -  Highest Scoring Half / 2nd half @2.20
+    Pinnacle 1H Over 1.5 2.95 (11:1x read)
+    1H O/U 0.5 1.41/2.85 1.5 2.80/1.42  2H O/U 0.5 1.25/3.80 1.5 2.15/1.67
+- Fri 13:00  Madura United v Bhayangkara Presisi Indonesia FC  -  Highest Scoring Half / 2nd half @2.10
+    Pinnacle 1H Over 1.5 2.64 (11:1x read)
+    1H O/U 0.5 1.33/2.95 1.5 2.50/1.45  2H O/U 0.5 1.20/3.90 1.5 1.95/1.73
+- Fri 14:05  Al Dhafra SSC v Dubai United FC  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.55 (11:1x read)
+    1H O/U 0.5 1.31/3.10 1.5 2.35/1.50  2H O/U 0.5 1.18/4.20 1.5 1.86/1.81
+- Fri 15:00  Sporting Club Delhi v Mohun Bagan Super Giant  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.36 (11:1x read)
+    1H O/U 0.5 1.24/3.60 1.5 2.15/1.62  2H O/U 0.5 1.16/4.50 1.5 1.79/1.92
+- Fri 16:00  ASC Otelul Galati v AFK Csikszereda Miercurea Ciuc  -  Highest Scoring Half / 2nd half @2.15
+    Pinnacle 1H Over 1.5 2.97 (11:1x read)
+    1H O/U 0.5 1.40/2.80 1.5 2.80/1.40  2H O/U 0.5 1.27/3.60 1.5 2.25/1.61
+- Fri 16:00  FK Radnik Surdulica v FK Radnicki Nis  -  Highest Scoring Half / 2nd half @2.10
+    Pinnacle 1H Over 1.5 2.97 (11:1x read)
+    1H O/U 0.5 1.43/2.60 1.5 2.90/1.36  2H O/U 0.5 1.26/3.50 1.5 2.25/1.58
+- Fri 16:00  FC Vlasim v SK Hanacka Slavia Kromeriz  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.16 (11:1x read)
+    1H O/U 0.5 1.23/3.60 1.5 2.10/1.63  2H O/U 0.5 1.14/4.70 1.5 1.71/1.98
+- Fri 16:30  MFK Karvina v Dukla Prague  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.38 (11:1x read)
+    1H O/U 0.5 1.28/3.25 1.5 2.25/1.54  2H O/U 0.5 1.16/4.30 1.5 1.81/1.86
+- Fri 17:00  NK Rudes Zagreb v HNK Rijeka  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.44 (11:1x read)
+    1H O/U 0.5 1.26/3.50 1.5 2.25/1.58  2H O/U 0.5 1.17/4.40 1.5 1.83/1.87
+- Fri 17:00  Wieczysta Krakow v Rakow Czestochowa  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.32 (11:1x read)
+    1H O/U 0.5 1.27/3.50 1.5 2.25/1.61  2H O/U 0.5 1.16/4.80 1.5 1.76/1.99
+- Fri 17:00  Warta Poznan v Unia Skierniewice  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.38 (11:1x read)
+    1H O/U 0.5 1.27/3.30 1.5 2.25/1.56  2H O/U 0.5 1.16/4.40 1.5 1.77/1.90
+- Fri 17:00  FC Yantra Gabrovo v PFC Lokomotiv Plovdiv  -  Highest Scoring Half / 2nd half @2.10
+    Pinnacle 1H Over 1.5 2.58 (11:1x read)
+    1H O/U 0.5 1.34/2.90 1.5 2.55/1.43  2H O/U 0.5 1.22/3.70 1.5 2.05/1.66
+- Fri 17:00  1.SK Prostejov v FK Usti nad Labem  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.34 (11:1x read)
+    1H O/U 0.5 1.29/3.20 1.5 2.30/1.53  2H O/U 0.5 1.16/4.30 1.5 1.81/1.86
+- Fri 17:00  FK Pribram v FK Fotbal Trinec  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.40 (11:1x read)
+    1H O/U 0.5 1.29/3.20 1.5 2.30/1.52  2H O/U 0.5 1.18/4.20 1.5 1.85/1.82
+- Fri 17:00  SFC Opava v FC Vysocina Jihlava  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.43 (11:1x read)
+    1H O/U 0.5 1.31/3.10 1.5 2.35/1.50  2H O/U 0.5 1.18/4.10 1.5 1.86/1.81
+- Fri 17:30  Holstein Kiel v Hertha  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.08 (11:1x read)
+    1H O/U 0.5 1.23/4.10 1.5 2.00/1.77  2H O/U 0.5 1.13/5.75 1.5 1.62/2.25
+- Fri 17:30  ASK Voitsberg v First Vienna FC 1894  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.56 (11:1x read)
+    1H O/U 0.5 1.32/3.10 1.5 2.45/1.49  2H O/U 0.5 1.19/4.20 1.5 1.91/1.80
+- Fri 17:30  SKN St Polten v Rapid Wien II  -  Highest Scoring Half / 2nd half @1.99
+    Pinnacle 1H Over 1.5 2.04 (11:1x read)
+    1H O/U 0.5 1.21/3.90 1.5 2.00/1.73  2H O/U 0.5 1.13/5.20 1.5 1.64/2.10
+- Fri 18:00  Corum FK v Caykur Rizespor  -  Highest Scoring Half / 2nd half @2.10
+    Pinnacle 1H Over 1.5 2.44 (11:1x read)
+    1H O/U 0.5 1.32/3.50 1.5 2.40/1.58  2H O/U 0.5 1.19/4.75 1.5 1.88/1.93
+- Fri 18:00  IF Brommapojkarna v Djurgardens IF  -  Highest Scoring Half / 2nd half @2.10
+    Pinnacle 1H Over 1.5 2.24 (11:1x read)
+    1H O/U 0.5 1.26/3.75 1.5 2.20/1.65  2H O/U 0.5 1.17/4.90 1.5 1.78/2.00
+- Fri 18:00  AC Horsens v Randers FC  -  Highest Scoring Half / 2nd half @2.10
+    Pinnacle 1H Over 1.5 2.56 (11:1x read)
+    1H O/U 0.5 1.34/3.20 1.5 2.50/1.51  2H O/U 0.5 1.20/4.40 1.5 1.95/1.82
+- Fri 18:00  Stade Lausanne Ouchy v Etoile Carouge FC  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.23 (11:1x read)
+    1H O/U 0.5 1.26/3.50 1.5 2.20/1.60  2H O/U 0.5 1.16/4.60 1.5 1.78/1.93
+- Fri 18:00  Aarhus Fremad v Esbjerg FB  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.39 (11:1x read)
+    1H O/U 0.5 1.29/3.40 1.5 2.30/1.58  2H O/U 0.5 1.17/4.70 1.5 1.81/1.94
+- Fri 18:00  Kolding IF v Vendsyssel FF  -  Highest Scoring Half / 2nd half @2.10
+    Pinnacle 1H Over 1.5 2.63 (11:1x read)
+    1H O/U 0.5 1.34/3.10 1.5 2.50/1.49  2H O/U 0.5 1.21/4.20 1.5 1.97/1.78
+- Fri 18:00  Lunds BK v Trelleborgs FF  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.45 (11:1x read)
+    1H O/U 0.5 1.30/3.10 1.5 2.35/1.51  2H O/U 0.5 1.17/4.20 1.5 1.85/1.82
+- Fri 18:00  FC Cartagena v CE Europa  -  Highest Scoring Half / 2nd half @2.15
+    Pinnacle 1H Over 1.5 2.86 (11:1x read)
+    1H O/U 0.5 -/- 1.5 2.70/1.37  2H O/U 0.5 -/- 1.5 2.15/1.57
+
+## 2026-10-16 14:21 WAT  |  Highest Scoring Half (user's call): H3DHKT rule + half prices merged, 16:00-22:00 - 3,322.84x (11 games)  |  code GPBL0P
+http://www.sportybet.com/ng/?shareCode=GPBL0P
+- Fri 16:00  ASC Otelul Galati v AFK Csikszereda Miercurea Ciuc  -  Highest Scoring Half / 2nd half @2.20
+    HH 0-6-1  AA 1-5-1  H10 2-7-1  A10 3-5-2  goals 32 v 60
+    SportyBet O1.5 1H 2.8 2H 2.25  Pinnacle 1H O1.5 2.91
+- Fri 16:30  MFK Karvina v Dukla Prague  -  Highest Scoring Half / 2nd half @2.05
+    HH 1-5-1  AA 1-6-0  H10 3-7-0  A10 3-6-1  goals 44 v 73
+    SportyBet O1.5 1H 2.25 2H 1.81  Pinnacle 1H O1.5 2.38
+- Fri 18:00  AC Horsens v Randers FC  -  Highest Scoring Half / 2nd half @2.10
+    HH 1-4-2  AA 2-4-1  H10 1-7-2  A10 3-4-3  goals 45 v 71
+    SportyBet O1.5 1H 2.5 2H 1.93  Pinnacle 1H O1.5 2.55
+- Fri 18:00  Aarhus Fremad v Esbjerg FB  -  Highest Scoring Half / 2nd half @2.05
+    HH 0-4-3  AA 1-5-1  H10 1-3-6  A10 1-7-2  goals 39 v 69
+    SportyBet O1.5 1H 2.25 2H 1.77  Pinnacle 1H O1.5 2.3
+- Fri 19:00  FC Den Bosch v TOP Oss  -  Highest Scoring Half / 2nd half @2.00
+    HH 3-4-0  AA 3-4-0  H10 5-5-0  A10 5-5-0  goals 47 v 60
+    SportyBet O1.5 1H 2.05 2H 1.65  Pinnacle 1H O1.5 2.08
+- Fri 19:30  Hellas Verona v US Catanzaro  -  Highest Scoring Half / 2nd half @2.10
+    HH 1-5-1  AA 2-3-2  H10 1-7-2  A10 2-5-3  goals 34 v 60
+    SportyBet O1.5 1H 2.5 2H 1.99  Pinnacle 1H O1.5 2.77
+- Fri 19:30  KVC Westerlo v Patro Eisden Maasmechelen  -  Highest Scoring Half / 2nd half @2.10
+    HH 1-3-3  AA 0-5-2  H10 2-3-5  A10 1-8-1  goals 50 v 76
+    SportyBet O1.5 1H 2.2 2H 1.79  Pinnacle 1H O1.5 2.12
+- Fri 19:30  Pro Vercelli 1892 v Calcio Lecco 1912  -  Highest Scoring Half / 2nd half @2.10
+    HH 2-4-1  AA 2-3-2  H10 1-6-3  A10 2-4-4  goals 30 v 50
+    SportyBet O1.5 1H 2.6 2H 2.05  Pinnacle 1H O1.5 2.75
+- Fri 19:45  Bohemians Dublin FC v Waterford FC  -  Highest Scoring Half / 2nd half @2.00
+    HH 2-3-2  AA 1-4-2  H10 2-7-1  A10 3-5-2  goals 40 v 70
+    SportyBet O1.5 1H 2.15 2H 1.73  Pinnacle 1H O1.5 2.27
+- Fri 20:00  GD Chaves v Os Marialvas  -  Highest Scoring Half / 2nd half @2.20
+    HH 1-6-0  AA 2-3-2  H10 2-5-3  A10 3-3-4  goals 35 v 48
+    SportyBet O1.5 1H 2.65 2H 2.2  Pinnacle 1H O1.5 2.58
+- Fri 22:00  Santiago Wanderers v CSD Rangers  -  Highest Scoring Half / 2nd half @2.10
+    HH 2-3-2  AA 1-6-0  H10 3-5-2  A10 4-5-1  goals 33 v 49
+    SportyBet O1.5 1H 2.8 2H 2.15  Pinnacle 1H O1.5 2.91
+
+## 2026-10-16 21:15 WAT  |  Highest Scoring Half / 2nd half (user's call): games above 3.03 goals a game, 2.00+, to Sat 06:00 - 8.61x (3 games)  |  code V7UPG1
+http://www.sportybet.com/ng/?shareCode=V7UPG1
+- Sat 02:00  Club Necaxa v Atlas FC  -  Highest Scoring Half / 2nd half @2.10
+    goals a game 3.26  goals by half 49 v 62  level 7/34  HH 1-5-1  AA 2-4-1  H10 2-5-3  A10 4-4-2
+    SportyBet O1.5 1H 2.5 2H 1.94  Pinnacle 1H O1.5 2.59
+- Sat 03:00  Ventura County FC v Minnesota United FC 2  -  Highest Scoring Half / 2nd half @2.00
+    goals a game 3.5  goals by half 45 v 74  level 4/34  HH 1-6-0  AA 2-4-1  H10 1-7-2  A10 5-4-1
+    SportyBet O1.5 1H 2.1 2H 1.67  Pinnacle 1H O1.5 2.1
+- Sat 06:00  Tochigi City FC v Yokohama FC  -  Highest Scoring Half / 2nd half @2.05
+    goals a game 3.21  goals by half 59 v 50  level 4/34  HH 3-3-1  AA 4-3-0  H10 4-3-3  A10 5-5-0
+    SportyBet O1.5 1H 2.25 2H 1.78  Pinnacle 1H O1.5 2.29
+
+## 2026-10-17 09:14 WAT  |  minute mix on today's pattern games (user's call: quiet games, model P(level halves) > 0.29) - 1.95x (6 games)  |  code UHZFJ7
+http://www.sportybet.com/ng/?shareCode=UHZFJ7
+- Sat 12:00  1 FC Kaiserslautern v Bochum  -  10 Minutes - 1X2 / Draw @1.19
+    pattern: P(level halves) 0.32, model goals 1H 0.96 2H 0.92
+    record 86% of 7 (3+ answered a side) - 10-min draw
+- Sat 15:00  Dunfermline Athletic FC v Livingston FC  -  Total Goals from 1 to 80 min / Under 4.5 @1.05
+    pattern: P(level halves) 0.29, model goals 1H 1.04 2H 1.16
+    record 92% of 12 (5+ answered a side) - other option
+- Sat 16:30  US Folgore Caratese v Treviso FBC 1993  -  10 Minutes - 1X2 / Draw @1.13
+    pattern: P(level halves) 0.30, model goals 1H 0.96 2H 1.17
+    record 100% of 9 (4+ answered a side) - 10-min draw
+- Sat 19:00  Agropecuario Argentino v CA Colegiales  -  10 Minutes - 1X2 / Draw @1.11
+    pattern: P(level halves) 0.35, model goals 1H 0.62 2H 0.96
+    record 100% of 14 (7+ answered a side) - 10-min draw
+- Sat 20:30  CSD Tristan Suarez v CA Patronato Parana  -  10 Minutes - 1X2 / Draw @1.10
+    pattern: P(level halves) 0.33, model goals 1H 0.55 2H 1.07
+    record 93% of 14 (7+ answered a side) - 10-min draw
+- Sat 22:30  SD Aucas v LDU Quito  -  10 Minutes - 1X2 / Draw @1.13
+    pattern: P(level halves) 0.31, model goals 1H 0.88 2H 1.12
+    record 93% of 14 (7+ answered a side) - 10-min draw
+
+## 2026-10-17 09:14 WAT  |  10-minute draw on today's pattern games (user's call: quiet games, model P(level halves) > 0.29) - 5.92x (14 games)  |  code QDV15Y
+http://www.sportybet.com/ng/?shareCode=QDV15Y
+- Sat 12:00  1 FC Kaiserslautern v Bochum  -  10 Minutes - 1X2 / Draw @1.19
+    pattern: P(level halves) 0.32, model goals 1H 0.96 2H 0.92
+    record 86% of 7 (3+ answered a side)
+- Sat 13:45  Paris 13 Atletico v FC Rouen  -  10 Minutes - 1X2 / Draw @1.14
+    pattern: P(level halves) 0.31, model goals 1H 0.96 2H 1.04
+    record 78% of 9 (4+ answered a side)
+- Sat 13:45  Quevilly-Rouen Metropole v US Orleans  -  10 Minutes - 1X2 / Draw @1.14
+    pattern: P(level halves) 0.31, model goals 1H 0.82 2H 1.10
+    record 78% of 9 (4+ answered a side)
+- Sat 14:00  Calcio Padova v Virtus Entella  -  10 Minutes - 1X2 / Draw @1.14
+    pattern: P(level halves) 0.30, model goals 1H 1.04 2H 1.05
+    record 57% of 7 (2+ answered a side)
+- Sat 15:00  Dunfermline Athletic FC v Livingston FC  -  10 Minutes - 1X2 / Draw @1.17
+    pattern: P(level halves) 0.29, model goals 1H 1.04 2H 1.16
+    record 50% of 12 (3+ answered a side)
+- Sat 15:00  Stenhousemuir FC v Raith Rovers FC  -  10 Minutes - 1X2 / Draw @1.12
+    pattern: P(level halves) 0.31, model goals 1H 0.99 2H 1.00
+    record 71% of 14 (5+ answered a side)
+- Sat 15:00  Colchester United v Exeter City  -  10 Minutes - 1X2 / Draw @1.15
+    pattern: P(level halves) 0.30, model goals 1H 0.55 2H 1.27
+    record 69% of 13 (4+ answered a side)
+- Sat 16:00  FC Inter Turku v AC Oulu  -  10 Minutes - 1X2 / Draw @1.17
+    pattern: P(level halves) 0.32, model goals 1H 0.78 2H 1.03
+    record 79% of 14 (6+ answered a side)
+- Sat 16:30  US Folgore Caratese v Treviso FBC 1993  -  10 Minutes - 1X2 / Draw @1.13
+    pattern: P(level halves) 0.30, model goals 1H 0.96 2H 1.17
+    record 100% of 9 (4+ answered a side)
+- Sat 18:30  Chacarita Juniors v CD Maipu  -  10 Minutes - 1X2 / Draw @1.10
+    pattern: P(level halves) 0.32, model goals 1H 0.71 2H 1.08
+    record 79% of 14 (6+ answered a side)
+- Sat 19:00  Agropecuario Argentino v CA Colegiales  -  10 Minutes - 1X2 / Draw @1.11
+    pattern: P(level halves) 0.35, model goals 1H 0.62 2H 0.96
+    record 100% of 14 (7+ answered a side)
+- Sat 20:30  CSD Tristan Suarez v CA Patronato Parana  -  10 Minutes - 1X2 / Draw @1.10
+    pattern: P(level halves) 0.33, model goals 1H 0.55 2H 1.07
+    record 93% of 14 (7+ answered a side)
+- Sat 22:00  Colon de Santa Fe v Club Almirante Brown  -  10 Minutes - 1X2 / Draw @1.11
+    pattern: P(level halves) 0.33, model goals 1H 0.92 2H 0.83
+    record 71% of 14 (6+ answered a side)
+- Sat 22:30  SD Aucas v LDU Quito  -  10 Minutes - 1X2 / Draw @1.13
+    pattern: P(level halves) 0.31, model goals 1H 0.88 2H 1.12
+    record 93% of 14 (7+ answered a side)
+
+## 2026-10-17 09:14 WAT  |  10 minutes Under 0.5 on today's pattern games (user's call: quiet games, model P(level halves) > 0.29) - 2.72x (5 games)  |  code YLWA8Q
+http://www.sportybet.com/ng/?shareCode=YLWA8Q
+- Sat 12:00  1 FC Kaiserslautern v Bochum  -  Total Goals from 1 to 10 min / Under 0.5 @1.27
+    pattern: P(level halves) 0.32, model goals 1H 0.96 2H 0.92
+    record 86% of 7 (3+ answered a side)
+- Sat 14:00  Calcio Padova v Virtus Entella  -  Total Goals from 1 to 10 min / Under 0.5 @1.20
+    pattern: P(level halves) 0.30, model goals 1H 1.04 2H 1.05
+    record 57% of 7 (2+ answered a side)
+- Sat 15:00  Dunfermline Athletic FC v Livingston FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.24
+    pattern: P(level halves) 0.29, model goals 1H 1.04 2H 1.16
+    record 50% of 12 (4+ answered a side)
+- Sat 15:00  Stenhousemuir FC v Raith Rovers FC  -  Total Goals from 1 to 10 min / Under 0.5 @1.18
+    pattern: P(level halves) 0.31, model goals 1H 0.99 2H 1.00
+    record 71% of 14 (5+ answered a side)
+- Sat 15:00  Colchester United v Exeter City  -  Total Goals from 1 to 10 min / Under 0.5 @1.22
+    pattern: P(level halves) 0.30, model goals 1H 0.55 2H 1.27
+    record 69% of 13 (4+ answered a side)
+
+## 2026-10-17 09:35 WAT  |  Minutes options 1k-2k (user's call): one record-backed Minutes-tab leg per game, most odds for the risk - 1,023.35x (50 games)  |  code X6JNZX
+http://www.sportybet.com/ng/?shareCode=X6JNZX
+- Sat 11:30  Erzurumspor FK v Eyupspor  -  Total Goals from 1 to 60 min / Over 0.5 @1.23
+    record 6 of 6 (3+ answered a side)
+    options like it won 30 of 32 at a 90% record
+- Sat 12:00  Greuther Furth v Eintracht Braunschweig  -  10 Minutes - 1X2 / Draw @1.22
+    record 6 of 7 (3+ answered a side)
+    10-min draw rung (won 34 of 37)
+- Sat 12:30  Watford v Charlton Athletic  -  Total Goals from 1 to 85 min / Over 1.5 @1.40
+    record 13 of 14 (7+ answered a side)
+    options like it won 16 of 17 at a 90% record
+- Sat 12:30  Middlesbrough FC v Cardiff City  -  Match Result after 5 Minutes / Draw @1.15
+    record 11 of 11 (5+ answered a side)
+    5-min draw rung (won 47 of 47)
+- Sat 12:30  Millwall FC v Lincoln City  -  Match Result after 5 Minutes / Draw @1.09
+    record 12 of 13 (5+ answered a side)
+    5-min draw rung (won 47 of 47)
+- Sat 12:35  Qingdao Hainiu FC v Liaoning Tieren FC  -  Match Result after 5 Minutes / Draw @1.14
+    record 13 of 14 (7+ answered a side)
+    5-min draw rung (won 47 of 47)
+- Sat 12:35  Yunnan Yukun v Chongqing Tonglianglong FC  -  10 Minutes - 1X2 / Draw @1.21
+    record 12 of 14 (5+ answered a side)
+    10-min draw rung (won 34 of 37)
+- Sat 13:00  HamKam v Bodoe/Glimt  -  Total Goals from 1 to 85 min / Under 5.5 @1.10
+    record 10 of 11 (4+ answered a side)
+    options like it won 109 of 112 at a 90% record
+- Sat 13:00  Shandong Taishan FC v Zhejiang FC  -  Total Goals from 1 to 75 min / Under 5.5 @1.07
+    record 12 of 13 (6+ answered a side)
+    options like it won 123 of 125 at a 90% record
+- Sat 13:00  Real Sociedad San Sebastian B v Almeria  -  Total Goals from 1 to 5 min / Under 0.5 @1.12
+    record 8 of 8 (4+ answered a side)
+    options like it won 51 of 53 at a 90% record
+- Sat 14:00  Venezia FC v Napoli  -  Match Result after 5 Minutes / Draw @1.11
+    record 8 of 8 (4+ answered a side)
+    5-min draw rung (won 47 of 47)
+- Sat 14:00  Slavia Prague v FC Hradec Kralove  -  Match Result after 5 Minutes / Draw @1.11
+    record 13 of 13 (6+ answered a side)
+    5-min draw rung (won 47 of 47)
+- Sat 14:00  FK Mlada Boleslav v FK Teplice  -  Match Result after 5 Minutes / Draw @1.10
+    record 9 of 10 (4+ answered a side)
+    5-min draw rung (won 47 of 47)
+- Sat 14:00  Genclerbirligi SK v Galatasaray Istanbul  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    record 8 of 8 (4+ answered a side)
+    options like it won 133 of 134 at a 90% record
+- Sat 15:00  Southampton v Bolton Wanderers  -  Match Result after 5 Minutes / Draw @1.13
+    record 11 of 12 (6+ answered a side)
+    5-min draw rung (won 47 of 47)
+- Sat 15:00  Queen of the South FC v Ross County FC  -  Match Result after 5 Minutes / Draw @1.13
+    record 13 of 14 (6+ answered a side)
+    5-min draw rung (won 47 of 47)
+- Sat 15:00  East Kilbride FC v Montrose FC  -  Match Result after 5 Minutes / Draw @1.11
+    record 13 of 14 (7+ answered a side)
+    5-min draw rung (won 47 of 47)
+- Sat 15:00  Barnsley FC v Cambridge United  -  Match Result after 5 Minutes / Draw @1.11
+    record 11 of 12 (5+ answered a side)
+    5-min draw rung (won 47 of 47)
+- Sat 15:00  Bristol City v Sheffield United  -  Match Result after 5 Minutes / Draw @1.10
+    record 12 of 13 (6+ answered a side)
+    5-min draw rung (won 47 of 47)
+- Sat 15:00  Swansea City v West Ham  -  Match Result after 5 Minutes / Draw @1.10
+    record 11 of 12 (5+ answered a side)
+    5-min draw rung (won 47 of 47)
+- Sat 15:00  Crewe Alexandra v Rochdale AFC  -  Match Result after 5 Minutes / Draw @1.10
+    record 13 of 14 (7+ answered a side)
+    5-min draw rung (won 47 of 47)
+- Sat 15:00  Oldham Athletic v Cheltenham Town  -  Match Result after 5 Minutes / Draw @1.10
+    record 11 of 12 (5+ answered a side)
+    5-min draw rung (won 47 of 47)
+- Sat 15:00  West Bromwich Albion v Blackburn Rovers  -  Total Goals from 1 to 60 min / Over 0.5 @1.22
+    record 10 of 11 (5+ answered a side)
+    options like it won 30 of 32 at a 90% record
+- Sat 15:00  East Fife FC v Alloa Athletic FC  -  Match Result after 5 Minutes / Draw @1.08
+    record 13 of 14 (6+ answered a side)
+    5-min draw rung (won 47 of 47)
+- Sat 15:00  Bradford City FC v Stevenage FC  -  Match Result after 5 Minutes / Draw @1.08
+    record 12 of 13 (6+ answered a side)
+    5-min draw rung (won 47 of 47)
+- Sat 15:00  Derby County v Stoke City  -  Total Goals from 1 to 60 min / Over 0.5 @1.21
+    record 11 of 11 (5+ answered a side)
+    options like it won 30 of 32 at a 90% record
+- Sat 15:00  Grimsby Town v Northampton Town  -  Total Goals from 1 to 60 min / Over 0.5 @1.18
+    record 12 of 13 (6+ answered a side)
+    options like it won 30 of 32 at a 90% record
+- Sat 15:00  Brentford v Liverpool  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    record 7 of 7 (3+ answered a side)
+    options like it won 133 of 134 at a 90% record
+- Sat 15:15  Villarreal v Elche CF  -  Total Goals from 1 to 75 min / Under 3.5 @1.34
+    record 8 of 8 (4+ answered a side)
+    options like it won 38 of 44 at a 90% record
+- Sat 15:30  ADO Den Haag v PSV Eindhoven  -  Total Goals from 1 to 80 min / Under 4.5 @1.27
+    record 8 of 8 (3+ answered a side)
+    options like it won 87 of 94 at a 90% record
+- Sat 15:30  FC Emmen v Almere City FC  -  Total Goals from 1 to 5 min / Under 0.5 @1.14
+    record 10 of 10 (5+ answered a side)
+    options like it won 51 of 53 at a 90% record
+- Sat 16:00  Austria Lustenau v LASK Linz  -  Match Result after 5 Minutes / Draw @1.13
+    record 11 of 11 (4+ answered a side)
+    5-min draw rung (won 47 of 47)
+- Sat 16:00  Shakhtar D v Kolos Kovalivka  -  Total Goals from 1 to 85 min / Over 1.5 @1.27
+    record 9 of 10 (5+ answered a side)
+    options like it won 16 of 17 at a 90% record
+- Sat 16:15  Mantova 1911 v Palermo FC  -  Total Goals from 1 to 85 min / Over 1.5 @1.31
+    record 6 of 6 (3+ answered a side)
+    options like it won 16 of 17 at a 90% record
+- Sat 16:30  GKS Katowice v Pogon Szczecin  -  Total Goals from 1 to 80 min / Under 3.5 @1.30
+    record 9 of 10 (4+ answered a side)
+    options like it won 29 of 33 at a 90% record
+- Sat 17:00  Bologna v Inter  -  Match Result after 5 Minutes / Draw @1.11
+    record 6 of 6 (3+ answered a side)
+    5-min draw rung (won 47 of 47)
+- Sat 17:00  Viking FK v Fredrikstad FK  -  Total Goals from 1 to 55 min / Under 4.5 @1.03
+    record 13 of 14 (7+ answered a side)
+    options like it won 138 of 139 at a 90% record
+- Sat 17:30  Bayern Munich v RB Leipzig  -  Total Goals from 1 to 65 min / Under 4.5 @1.25
+    record 7 of 7 (3+ answered a side)
+    options like it won 121 of 124 at a 90% record
+- Sat 17:30  Betis v Barcelona  -  Total Goals from 1 to 85 min / Under 5.5 @1.17
+    record 9 of 10 (4+ answered a side)
+    options like it won 109 of 112 at a 90% record
+- Sat 17:30  Newcastle v Aston Villa  -  Total Goals from 1 to 85 min / Over 1.5 @1.26
+    record 9 of 10 (4+ answered a side)
+    options like it won 16 of 17 at a 90% record
+- Sat 19:00  CA Banfield v Argentinos Juniors  -  Match Result after 5 Minutes / Draw @1.08
+    record 12 of 13 (5+ answered a side)
+    5-min draw rung (won 47 of 47)
+- Sat 19:00  Red Star FC v Saint-Etienne  -  Total Goals from 1 to 5 min / Under 0.5 @1.12
+    record 7 of 7 (3+ answered a side)
+    options like it won 51 of 53 at a 90% record
+- Sat 19:00  SC Telstar v Feyenoord  -  Total Goals from 1 to 60 min / Under 4.5 @1.04
+    record 9 of 9 (4+ answered a side)
+    options like it won 133 of 134 at a 90% record
+- Sat 19:30  Philadelphia Union v Charlotte FC  -  10 Minutes - 1X2 / Draw @1.27
+    record 12 of 14 (7+ answered a side)
+    10-min draw rung (won 34 of 37)
+- Sat 19:30  Hannover 96 v FC St. Pauli  -  Total Goals from 1 to 5 min / Under 0.5 @1.13
+    record 7 of 7 (3+ answered a side)
+    options like it won 51 of 53 at a 90% record
+- Sat 19:45  Lille v Brest  -  Total Goals from 1 to 60 min / Over 0.5 @1.17
+    record 7 of 7 (3+ answered a side)
+    options like it won 30 of 32 at a 90% record
+- Sat 20:00  Sparta Rotterdam v Willem II Tilburg  -  Match Result after 5 Minutes / Draw @1.13
+    record 8 of 8 (4+ answered a side)
+    5-min draw rung (won 47 of 47)
+- Sat 21:30  CA Platense v CA Lanus  -  Match Result after 5 Minutes / Draw @1.06
+    record 12 of 13 (6+ answered a side)
+    5-min draw rung (won 47 of 47)
+- Sat 21:30  Minnesota United FC v Saint Louis City SC  -  Total Goals from 1 to 85 min / Over 1.5 @1.22
+    record 13 of 14 (7+ answered a side)
+    options like it won 16 of 17 at a 90% record
+- Sat 22:00  Botafogo FR RJ v Chapecoense SC  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    record 14 of 14 (7+ answered a side)
+    options like it won 133 of 134 at a 90% record
+
+## 2026-10-17 09:37 WAT  |  Highest Scoring Half / Equal (user's call): the Equal pattern, quiet games, model P(level halves) > 0.29 - 3,864,554,682,381,736.50x (32 games)  |  code W05HDV
+http://www.sportybet.com/ng/?shareCode=W05HDV
+- Sat 12:00  1 FC Kaiserslautern v Bochum  -  Highest Scoring Half / Equal @3.75
+    P(level halves) 0.32
+    expected goals 1H 0.96 2H 0.92
+- Sat 12:30  Jiangxi Lushan v Shanghai Port B  -  Highest Scoring Half / Equal @3.25
+    P(level halves) 0.29
+    expected goals 1H 0.85 2H 1.23
+- Sat 13:45  Paris 13 Atletico v FC Rouen  -  Highest Scoring Half / Equal @3.20
+    P(level halves) 0.31
+    expected goals 1H 0.96 2H 1.04
+- Sat 13:45  Quevilly-Rouen Metropole v US Orleans  -  Highest Scoring Half / Equal @3.20
+    P(level halves) 0.31
+    expected goals 1H 0.82 2H 1.10
+- Sat 14:00  Calcio Padova v Virtus Entella  -  Highest Scoring Half / Equal @3.10
+    P(level halves) 0.30
+    expected goals 1H 1.04 2H 1.05
+- Sat 15:00  Atletico Clube de Portugal v FC Vizela  -  Highest Scoring Half / Equal @3.40
+    P(level halves) 0.29
+    expected goals 1H 1.04 2H 1.12
+- Sat 15:00  Florgrade FC v Portimonense SC  -  Highest Scoring Half / Equal @3.50
+    P(level halves) 0.31
+    expected goals 1H 0.91 2H 1.05
+- Sat 15:00  SC Farense v AD Marco 09  -  Highest Scoring Half / Equal @3.50
+    P(level halves) 0.32
+    expected goals 1H 0.67 2H 1.12
+- Sat 15:00  Dunfermline Athletic FC v Livingston FC  -  Highest Scoring Half / Equal @3.50
+    P(level halves) 0.29
+    expected goals 1H 1.04 2H 1.16
+- Sat 15:00  Stenhousemuir FC v Raith Rovers FC  -  Highest Scoring Half / Equal @3.10
+    P(level halves) 0.31
+    expected goals 1H 0.99 2H 1.00
+- Sat 15:00  Colchester United v Exeter City  -  Highest Scoring Half / Equal @3.33
+    P(level halves) 0.30
+    expected goals 1H 0.55 2H 1.27
+- Sat 15:00  CSD Liniers v CD UAI Urquiza  -  Highest Scoring Half / Equal @2.80
+    P(level halves) 0.31
+    expected goals 1H 0.76 2H 1.12
+- Sat 15:30  CD Lugo v RC Deportivo Fabril  -  Highest Scoring Half / Equal @3.33
+    P(level halves) 0.30
+    expected goals 1H 0.92 2H 1.12
+- Sat 16:00  FC Inter Turku v AC Oulu  -  Highest Scoring Half / Equal @3.33
+    P(level halves) 0.32
+    expected goals 1H 0.78 2H 1.03
+- Sat 16:30  US Folgore Caratese v Treviso FBC 1993  -  Highest Scoring Half / Equal @3.10
+    P(level halves) 0.30
+    expected goals 1H 0.96 2H 1.17
+- Sat 17:00  Deportivo Camioneros v Argentino de Merlo  -  Highest Scoring Half / Equal @2.85
+    P(level halves) 0.31
+    expected goals 1H 0.72 2H 1.12
+- Sat 18:30  Chacarita Juniors v CD Maipu  -  Highest Scoring Half / Equal @2.80
+    P(level halves) 0.32
+    expected goals 1H 0.71 2H 1.08
+- Sat 19:00  Kimberley de Mar Del Plata v Deportivo Rincon  -  Highest Scoring Half / Equal @2.90
+    P(level halves) 0.31
+    expected goals 1H 0.67 2H 1.17
+- Sat 19:00  Argentino de Quilmes v CSD Flandria  -  Highest Scoring Half / Equal @2.75
+    P(level halves) 0.30
+    expected goals 1H 0.70 2H 1.20
+- Sat 19:00  CA Defensores Unidos v CD Armenio  -  Highest Scoring Half / Equal @2.75
+    P(level halves) 0.32
+    expected goals 1H 0.73 2H 1.07
+- Sat 19:00  CA Villa San Carlos v Villa Dalmine  -  Highest Scoring Half / Equal @2.80
+    P(level halves) 0.36
+    expected goals 1H 0.88 2H 0.61
+- Sat 19:00  Club Comunicaciones v CA Brown de Adrogue  -  Highest Scoring Half / Equal @2.80
+    P(level halves) 0.40
+    expected goals 1H 0.72 2H 0.60
+- Sat 19:00  CS Italiano v Arsenal de Sarandi  -  Highest Scoring Half / Equal @2.90
+    P(level halves) 0.30
+    expected goals 1H 0.68 2H 1.21
+- Sat 19:00  Agropecuario Argentino v CA Colegiales  -  Highest Scoring Half / Equal @2.90
+    P(level halves) 0.35
+    expected goals 1H 0.62 2H 0.96
+- Sat 19:30  CA Huracan Las Heras v Juventud Antoniana  -  Highest Scoring Half / Equal @2.90
+    P(level halves) 0.37
+    expected goals 1H 0.67 2H 0.83
+- Sat 20:00  CAS Defensores de Belgrano v Sportivo Las Parejas  -  Highest Scoring Half / Equal @2.90
+    P(level halves) 0.36
+    expected goals 1H 0.88 2H 0.67
+- Sat 20:30  CSD Tristan Suarez v CA Patronato Parana  -  Highest Scoring Half / Equal @2.80
+    P(level halves) 0.33
+    expected goals 1H 0.55 2H 1.07
+- Sat 22:00  Gimnasia de Chivilcoy v CA Defensores de Vilelas  -  Highest Scoring Half / Equal @3.30
+    P(level halves) 0.29
+    expected goals 1H 0.81 2H 1.26
+- Sat 22:00  Colon de Santa Fe v Club Almirante Brown  -  Highest Scoring Half / Equal @2.90
+    P(level halves) 0.33
+    expected goals 1H 0.92 2H 0.83
+- Sat 22:30  SD Aucas v LDU Quito  -  Highest Scoring Half / Equal @3.10
+    P(level halves) 0.31
+    expected goals 1H 0.88 2H 1.12
+- Sat 23:00  CA Sol de America de Formosa v CA Juventud Unida Universitario San Luis  -  Highest Scoring Half / Equal @2.90
+    P(level halves) 0.33
+    expected goals 1H 0.92 2H 0.83
+- Sat 23:00  Deportivo Merlo v CA Talleres de Remedios  -  Highest Scoring Half / Equal @2.95
+    P(level halves) 0.31
+    expected goals 1H 0.71 2H 1.13
+
+## 2026-10-17 09:38 WAT  |  Highest Scoring Half / 2nd half (user's call): the price pattern, Pinnacle 1st-half Over 1.5 at 2.30-2.49 (LP60QD's rule) - 3,695,978,811,107,981.00x (50 games)  |  code XD9JAH
+http://www.sportybet.com/ng/?shareCode=XD9JAH
+- Sat 11:00  Kashiwa Reysol v Nagoya Grampus  -  Highest Scoring Half / 2nd half @2.15
+    Pinnacle 1H Over 1.5 2.47
+    1H O/U 0.5 1.30/3.50 1.5 2.35/1.59  2H O/U 0.5 1.19/4.75 1.5 1.89/1.92
+- Sat 12:00  Dalian Yingbo FC v Shenzhen Peng City  -  Highest Scoring Half / 2nd half @2.15
+    Pinnacle 1H Over 1.5 2.42
+    1H O/U 0.5 1.29/3.50 1.5 2.35/1.59  2H O/U 0.5 1.18/4.70 1.5 1.86/1.92
+- Sat 12:00  Ljungskile SK v IK Brage  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.44
+    1H O/U 0.5 1.30/3.33 1.5 2.30/1.57  2H O/U 0.5 1.17/4.60 1.5 1.83/1.91
+- Sat 12:00  Angelholms FF v Laholms FK  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.36
+    1H O/U 0.5 1.29/3.20 1.5 2.30/1.53  2H O/U 0.5 1.16/4.30 1.5 1.81/1.86
+- Sat 12:00  Tvaakers IF v FC Rosengaard 1917  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.39
+    1H O/U 0.5 1.29/3.20 1.5 2.30/1.53  2H O/U 0.5 1.17/4.25 1.5 1.82/1.85
+- Sat 12:30  Everton v Chelsea  -  Highest Scoring Half / 2nd half @2.10
+    Pinnacle 1H Over 1.5 2.39
+    1H O/U 0.5 1.31/3.60 1.5 2.35/1.62  2H O/U 0.5 1.19/5.10 1.5 1.86/1.99
+- Sat 12:30  Peterborough United v Burton Albion  -  Highest Scoring Half / 2nd half @2.10
+    Pinnacle 1H Over 1.5 2.30
+    1H O/U 0.5 1.27/3.60 1.5 2.20/1.64  2H O/U 0.5 1.16/5.00 1.5 1.77/2.00
+- Sat 12:30  Guangxi Hengchen FC v Changchun Yatai  -  Highest Scoring Half / 2nd half @2.10
+    Pinnacle 1H Over 1.5 2.45
+    1H O/U 0.5 -/- 1.5 2.25/1.52  2H O/U 0.5 -/- 1.5 1.87/1.77
+- Sat 12:35  Yunnan Yukun v Chongqing Tonglianglong FC  -  Highest Scoring Half / 2nd half @2.10
+    Pinnacle 1H Over 1.5 2.38
+    1H O/U 0.5 1.28/3.60 1.5 2.25/1.61  2H O/U 0.5 1.17/4.80 1.5 1.81/1.97
+- Sat 13:30  FK Kudrivka v FSC Bukovyna Chernivtsi  -  Highest Scoring Half / 2nd half @1.99
+    Pinnacle 1H Over 1.5 2.33
+    1H O/U 0.5 1.28/3.33 1.5 2.25/1.57  2H O/U 0.5 1.16/4.60 1.5 1.79/1.91
+- Sat 14:00  FK Mlada Boleslav v FK Teplice  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.42
+    1H O/U 0.5 1.30/3.33 1.5 2.30/1.56  2H O/U 0.5 1.18/4.60 1.5 1.84/1.90
+- Sat 14:00  Slavia Prague v FC Hradec Kralove  -  Highest Scoring Half / 2nd half @2.10
+    Pinnacle 1H Over 1.5 2.35
+    1H O/U 0.5 1.26/3.60 1.5 2.20/1.61  2H O/U 0.5 1.17/4.60 1.5 1.83/1.91
+- Sat 14:00  SV Spakenburg v K.v.v. Quick Boys  -  Highest Scoring Half / 2nd half @1.99
+    Pinnacle 1H Over 1.5 2.31
+    1H O/U 0.5 1.26/3.33 1.5 2.20/1.58  2H O/U 0.5 1.15/4.50 1.5 1.74/1.94
+- Sat 14:00  Cukaricki v FK Zemun  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.44
+    1H O/U 0.5 1.29/3.30 1.5 2.35/1.53  2H O/U 0.5 1.19/4.20 1.5 1.91/1.80
+- Sat 14:30  MFK Skalica v AS Trencin  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.42
+    1H O/U 0.5 1.29/3.30 1.5 2.30/1.56  2H O/U 0.5 1.17/4.50 1.5 1.81/1.90
+- Sat 14:30  Pogon Grodzisk Mazowiecki v Polonia Warszawa  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.43
+    1H O/U 0.5 1.28/3.25 1.5 2.25/1.54  2H O/U 0.5 1.16/4.30 1.5 1.80/1.87
+- Sat 14:30  Schwarz-Weiss Bregenz v SKU Amstetten  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.35
+    1H O/U 0.5 1.28/3.33 1.5 2.25/1.57  2H O/U 0.5 1.16/4.60 1.5 1.78/1.93
+- Sat 15:00  Brentford v Liverpool  -  Highest Scoring Half / 2nd half @2.10
+    Pinnacle 1H Over 1.5 2.30
+    1H O/U 0.5 1.29/3.80 1.5 2.25/1.67  2H O/U 0.5 1.17/5.30 1.5 1.79/2.10
+- Sat 15:00  Kilmarnock FC v Motherwell FC  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.43
+    1H O/U 0.5 1.30/3.40 1.5 2.35/1.58  2H O/U 0.5 1.18/4.75 1.5 1.83/1.94
+- Sat 15:00  East Kilbride FC v Montrose FC  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.30
+    1H O/U 0.5 1.27/3.50 1.5 2.20/1.60  2H O/U 0.5 1.16/4.60 1.5 1.77/1.95
+- Sat 15:00  Peterhead FC v Cove Rangers FC  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.41
+    1H O/U 0.5 1.32/3.10 1.5 2.40/1.51  2H O/U 0.5 1.18/4.25 1.5 1.89/1.82
+- Sat 15:00  Elgin City FC v Edinburgh City FC  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.32
+    1H O/U 0.5 1.27/3.30 1.5 2.25/1.56  2H O/U 0.5 1.16/4.40 1.5 1.77/1.90
+- Sat 15:00  Barnsley FC v Cambridge United  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.44
+    1H O/U 0.5 1.31/3.40 1.5 2.35/1.57  2H O/U 0.5 1.18/4.70 1.5 1.85/1.93
+- Sat 15:00  Leicester v Doncaster Rovers  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.33
+    1H O/U 0.5 1.29/3.50 1.5 2.25/1.61  2H O/U 0.5 1.17/4.90 1.5 1.80/1.98
+- Sat 15:00  Plymouth Argyle v Huddersfield  -  Highest Scoring Half / 2nd half @2.10
+    Pinnacle 1H Over 1.5 2.48
+    1H O/U 0.5 1.31/3.33 1.5 2.40/1.56  2H O/U 0.5 1.19/4.60 1.5 1.87/1.90
+- Sat 15:00  FBK Karlstad v Karlbergs BK  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.30
+    1H O/U 0.5 1.27/3.33 1.5 2.20/1.57  2H O/U 0.5 1.16/4.40 1.5 1.77/1.90
+- Sat 15:00  Hebburn Town v Scarborough Athletic  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.44
+    1H O/U 0.5 1.32/3.00 1.5 2.45/1.47  2H O/U 0.5 1.18/4.10 1.5 1.90/1.77
+- Sat 15:00  Merthyr Town v Kings Lynn FC  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.39
+    1H O/U 0.5 1.30/3.10 1.5 2.35/1.51  2H O/U 0.5 1.17/4.25 1.5 1.84/1.83
+- Sat 15:00  Maidstone United FC v Maidenhead United FC  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.47
+    1H O/U 0.5 1.31/3.10 1.5 2.40/1.49  2H O/U 0.5 1.18/4.10 1.5 1.88/1.79
+- Sat 15:00  Ballymena United v Crusaders FC  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.34
+    1H O/U 0.5 1.26/3.50 1.5 2.20/1.60  2H O/U 0.5 1.15/4.70 1.5 1.76/1.95
+- Sat 15:00  Glentoran FC v Limavady United FC  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.32
+    1H O/U 0.5 1.25/3.60 1.5 2.20/1.60  2H O/U 0.5 1.17/4.50 1.5 1.81/1.90
+- Sat 16:00  Shakhtar D v Kolos Kovalivka  -  Highest Scoring Half / 2nd half @2.10
+    Pinnacle 1H Over 1.5 2.35
+    1H O/U 0.5 1.27/3.40 1.5 2.30/1.56  2H O/U 0.5 1.19/4.20 1.5 1.90/1.81
+- Sat 16:00  Osters IF v IK Oddevold  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.37
+    1H O/U 0.5 1.29/3.40 1.5 2.30/1.58  2H O/U 0.5 1.17/4.70 1.5 1.80/1.94
+- Sat 16:00  FK Vojvodina Novi Sad v FK Radnicki 1923 Kragujevac  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.44
+    1H O/U 0.5 1.31/3.20 1.5 2.40/1.51  2H O/U 0.5 1.19/4.20 1.5 1.91/1.79
+- Sat 16:30  AIK v IFK Goteborg  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.30
+    1H O/U 0.5 1.28/3.60 1.5 2.25/1.64  2H O/U 0.5 1.16/5.10 1.5 1.76/2.05
+- Sat 16:30  Oud-Heverlee Leuven v Royal Francs Borains  -  Highest Scoring Half / 2nd half @2.10
+    Pinnacle 1H Over 1.5 2.31
+    1H O/U 0.5 1.30/3.40 1.5 2.40/1.56  2H O/U 0.5 1.20/4.40 1.5 1.93/1.84
+- Sat 16:30  GKS Katowice v Pogon Szczecin  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.34
+    1H O/U 0.5 1.28/3.40 1.5 2.25/1.59  2H O/U 0.5 1.17/4.70 1.5 1.80/1.95
+- Sat 16:40  Neom SC v Al-Ettifaq FC  -  Highest Scoring Half / 2nd half @2.10
+    Pinnacle 1H Over 1.5 2.43
+    1H O/U 0.5 1.30/3.40 1.5 2.35/1.57  2H O/U 0.5 1.18/4.70 1.5 1.86/1.91
+- Sat 16:45  Shabab Al Ahli Dubai v Al Ain FC  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.44
+    1H O/U 0.5 1.28/3.25 1.5 2.25/1.55  2H O/U 0.5 1.16/4.40 1.5 1.79/1.88
+- Sat 17:30  Newcastle v Aston Villa  -  Highest Scoring Half / 2nd half @2.10
+    Pinnacle 1H Over 1.5 2.33
+    1H O/U 0.5 1.29/3.75 1.5 2.30/1.66  2H O/U 0.5 1.18/5.25 1.5 1.81/2.05
+- Sat 17:30  FC Fredericia v Hobro IK  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.39
+    1H O/U 0.5 1.27/3.50 1.5 2.25/1.60  2H O/U 0.5 1.17/4.60 1.5 1.81/1.93
+- Sat 18:00  Cliftonville FC v Portadown FC  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.42
+    1H O/U 0.5 1.29/3.25 1.5 2.30/1.54  2H O/U 0.5 1.17/4.40 1.5 1.84/1.87
+- Sat 19:00  Cruz Azul Hidalgo v CD Mineros de Zacatecas  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.35
+    1H O/U 0.5 1.27/3.30 1.5 2.20/1.56  2H O/U 0.5 1.15/4.50 1.5 1.76/1.91
+- Sat 19:30  Hannover 96 v FC St. Pauli  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.39
+    1H O/U 0.5 1.30/3.40 1.5 2.35/1.58  2H O/U 0.5 1.18/4.75 1.5 1.83/1.94
+- Sat 19:45  Troyes v Lens  -  Highest Scoring Half / 2nd half @2.10
+    Pinnacle 1H Over 1.5 2.41
+    1H O/U 0.5 1.30/3.70 1.5 2.35/1.63  2H O/U 0.5 1.18/5.10 1.5 1.85/2.00
+- Sat 19:45  Sligo Rovers FC v Dundalk FC  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.33
+    1H O/U 0.5 1.27/3.40 1.5 2.25/1.58  2H O/U 0.5 1.16/4.60 1.5 1.78/1.93
+- Sat 20:00  Las Palmas v CD Castellon  -  Highest Scoring Half / 2nd half @2.05
+    Pinnacle 1H Over 1.5 2.48
+    1H O/U 0.5 1.30/3.33 1.5 2.35/1.56  2H O/U 0.5 1.18/4.50 1.5 1.85/1.89
+- Sat 20:00  Dundee FC v Rangers  -  Highest Scoring Half / 2nd half @2.10
+    Pinnacle 1H Over 1.5 2.40
+    1H O/U 0.5 1.27/3.70 1.5 2.25/1.63  2H O/U 0.5 1.18/4.75 1.5 1.83/1.94
+- Sat 21:00  New York Cosmos v One Knoxville SC  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.33
+    1H O/U 0.5 1.28/3.20 1.5 2.30/1.54  2H O/U 0.5 1.16/4.40 1.5 1.80/1.87
+- Sat 23:00  Richmond Kickers v Corpus Christi FC  -  Highest Scoring Half / 2nd half @2.00
+    Pinnacle 1H Over 1.5 2.44
+    1H O/U 0.5 1.29/3.20 1.5 2.30/1.52  2H O/U 0.5 1.17/4.30 1.5 1.82/1.85
+
+## 2026-10-17 10:03 WAT  |  Highest Scoring Half (user's call): the first pattern = the H3DHKT rule with the HH/AA fix, 2.00+ - 11,075,776,709,259,066.00x (50 games)  |  code NUM0KS
+http://www.sportybet.com/ng/?shareCode=NUM0KS
+- Sat 12:00  Ljungskile SK v IK Brage  -  Highest Scoring Half / 2nd half @2.05
+    HH 2-4-1  AA 1-4-2  H10 1-6-3  A10 4-4-2  goals 43 v 53
+    1H O/U 0.5 1.30/3.33 1.5 2.30/1.57  2H O/U 0.5 1.17/4.60 1.5 1.83/1.91
+- Sat 12:00  Holbaek B&I v Holstebro BK  -  Highest Scoring Half / 2nd half @2.00
+    HH 3-4-0  AA 1-3-3  H10 3-5-2  A10 2-5-3  goals 58 v 73
+    1H O/U 0.5 -/- 1.5 1.88/1.76  2H O/U 0.5 -/- 1.5 1.58/2.15
+- Sat 12:00  Ningbo Professional FC v Suzhou Dongwu  -  Highest Scoring Half / 2nd half @2.20
+    HH 2-4-1  AA 1-4-2  H10 2-6-2  A10 1-6-3  goals 36 v 60
+    1H O/U 0.5 1.50/2.40 1.5 3.25/1.30  2H O/U 0.5 1.32/3.10 1.5 2.45/1.48
+- Sat 12:00  Wuxi Wugou v Jiangxi Dingnan United  -  Highest Scoring Half / 2nd half @2.10
+    HH 2-5-0  AA 0-4-3  H10 2-8-0  A10 2-3-5  goals 43 v 61
+    1H O/U 0.5 1.37/2.85 1.5 2.65/1.43  2H O/U 0.5 1.22/3.90 1.5 2.05/1.70
+- Sat 12:30  Everton v Chelsea  -  Highest Scoring Half / 2nd half @2.10
+    HH 1-5-1  AA 3-4-0  H10 2-5-3  A10 4-6-0  goals 38 v 73
+    1H O/U 0.5 1.31/3.60 1.5 2.35/1.62  2H O/U 0.5 1.19/5.10 1.5 1.86/1.99
+- Sat 12:30  Millwall FC v Lincoln City  -  Highest Scoring Half / 2nd half @2.20
+    HH 0-6-1  AA 0-7-0  H10 1-6-3  A10 0-8-2  goals 28 v 63
+    1H O/U 0.5 1.42/2.90 1.5 2.90/1.42  2H O/U 0.5 1.27/3.80 1.5 2.25/1.65
+- Sat 12:30  Milton Keynes Dons v Luton  -  Highest Scoring Half / 2nd half @2.10
+    HH 1-3-3  AA 2-5-0  H10 1-5-4  A10 3-5-2  goals 56 v 78
+    1H O/U 0.5 1.32/3.33 1.5 2.40/1.55  2H O/U 0.5 1.19/4.50 1.5 1.90/1.88
+- Sat 12:30  Fleetwood Town v Rotherham United  -  Highest Scoring Half / 2nd half @2.15
+    HH 2-3-2  AA 2-4-1  H10 1-5-4  A10 4-5-1  goals 39 v 49
+    1H O/U 0.5 1.38/2.90 1.5 2.70/1.43  2H O/U 0.5 1.23/3.90 1.5 2.10/1.69
+- Sat 12:30  Aalborg BK v Vejle BK  -  Highest Scoring Half / 2nd half @2.10
+    HH 1-4-2  AA 1-2-4  H10 2-5-3  A10 2-5-3  goals 41 v 58
+    1H O/U 0.5 1.28/3.50 1.5 2.25/1.59  2H O/U 0.5 1.17/4.70 1.5 1.79/1.95
+- Sat 12:30  Jiangxi Lushan v Shanghai Port B  -  Highest Scoring Half / 2nd half @2.05
+    HH 2-4-1  AA 1-4-2  H10 3-7-0  A10 4-6-0  goals 27 v 45
+    1H O/U 0.5 1.44/2.45 1.5 -/-  2H O/U 0.5 -/- 1.5 2.25/1.52
+- Sat 12:35  Yunnan Yukun v Chongqing Tonglianglong FC  -  Highest Scoring Half / 2nd half @2.10
+    HH 0-6-1  AA 1-3-3  H10 1-8-1  A10 2-3-5  goals 41 v 63
+    1H O/U 0.5 1.28/3.60 1.5 2.25/1.61  2H O/U 0.5 1.17/4.80 1.5 1.81/1.97
+- Sat 13:00  HamKam v Bodoe/Glimt  -  Highest Scoring Half / 2nd half @2.05
+    HH 1-4-2  AA 2-3-2  H10 1-7-2  A10 3-6-1  goals 47 v 90
+    1H O/U 0.5 1.18/4.90 1.5 1.87/1.94  2H O/U 0.5 1.12/6.40 1.5 1.57/2.40
+- Sat 13:00  Metz v Sochaux-Montbeliard  -  Highest Scoring Half / 2nd half @2.15
+    HH 1-5-1  AA 0-3-4  H10 3-5-2  A10 2-3-5  goals 27 v 51
+    1H O/U 0.5 1.38/2.90 1.5 2.70/1.42  2H O/U 0.5 1.25/3.75 1.5 2.15/1.65
+- Sat 13:00  Nantes v USL Dunkerque  -  Highest Scoring Half / 2nd half @2.10
+    HH 0-5-2  AA 1-4-2  H10 1-7-2  A10 1-7-2  goals 37 v 69
+    1H O/U 0.5 1.30/3.33 1.5 2.35/1.54  2H O/U 0.5 1.19/4.30 1.5 1.91/1.83
+- Sat 13:00  Middelfart BK v FC Roskilde  -  Highest Scoring Half / 2nd half @2.05
+    HH 2-3-2  AA 2-3-2  H10 3-3-4  A10 2-6-2  goals 45 v 54
+    1H O/U 0.5 -/- 1.5 2.40/1.47  2H O/U 0.5 -/- 1.5 1.89/1.75
+- Sat 13:00  Skive IK v FA 2000  -  Highest Scoring Half / 2nd half @2.05
+    HH 1-3-3  AA 2-3-2  H10 0-6-4  A10 1-5-4  goals 35 v 57
+    1H O/U 0.5 -/- 1.5 2.65/1.38  2H O/U 0.5 -/- 1.5 2.10/1.62
+- Sat 13:00  GS Marko v Hellas Syrou  -  Highest Scoring Half / 2nd half @2.20
+    HH 2-3-2  AA 2-4-1  H10 2-6-2  A10 2-4-4  goals 28 v 47
+    1H O/U 0.5 1.41/2.55 1.5 -/-  2H O/U 0.5 -/- 1.5 2.40/1.47
+- Sat 13:00  Gorna Oryahovitsa v FK Septemvri Sofia  -  Highest Scoring Half / 2nd half @2.10
+    HH 1-4-2  AA 1-6-0  H10 2-4-4  A10 1-9-0  goals 25 v 49
+    1H O/U 0.5 1.35/2.85 1.5 2.60/1.42  2H O/U 0.5 1.22/3.70 1.5 2.05/1.65
+- Sat 13:00  PFC Rilski Sportist Samokov v FC Dunav Ruse  -  Highest Scoring Half / 2nd half @2.10
+    HH 2-3-2  AA 1-6-0  H10 3-3-4  A10 2-6-2  goals 37 v 54
+    1H O/U 0.5 1.35/2.85 1.5 2.60/1.42  2H O/U 0.5 1.23/3.70 1.5 2.05/1.65
+- Sat 13:45  LKP Motor Lublin v WKS Slask Wroclaw  -  Highest Scoring Half / 2nd half @2.10
+    HH 1-5-1  AA 1-4-2  H10 3-5-2  A10 1-7-2  goals 36 v 65
+    1H O/U 0.5 1.34/3.10 1.5 2.55/1.48  2H O/U 0.5 1.21/4.10 1.5 1.99/1.76
+- Sat 14:00  Ascoli Calcio 1898 v Empoli  -  Highest Scoring Half / 2nd half @2.15
+    HH 0-6-1  AA 0-6-1  H10 2-6-2  A10 1-7-2  goals 23 v 62
+    1H O/U 0.5 1.37/2.95 1.5 2.65/1.45  2H O/U 0.5 1.23/3.90 1.5 2.10/1.70
+- Sat 14:00  Benevento Calcio v L.R. Vicenza  -  Highest Scoring Half / 2nd half @2.10
+    HH 1-2-4  AA 1-4-2  H10 1-6-3  A10 1-7-2  goals 49 v 76
+    1H O/U 0.5 1.34/3.10 1.5 2.55/1.48  2H O/U 0.5 1.21/4.10 1.5 1.99/1.76
+- Sat 14:00  Slavia Prague v FC Hradec Kralove  -  Highest Scoring Half / 2nd half @2.10
+    HH 2-4-1  AA 2-3-2  H10 2-5-3  A10 3-4-3  goals 39 v 60
+    1H O/U 0.5 1.26/3.60 1.5 2.20/1.61  2H O/U 0.5 1.17/4.60 1.5 1.83/1.91
+- Sat 14:05  Al-Nasr Dubai CSC v Hatta SC  -  Highest Scoring Half / 2nd half @2.00
+    HH 0-5-2  AA 2-4-1  H10 0-5-5  A10 3-6-1  goals 54 v 68
+    1H O/U 0.5 1.20/3.90 1.5 1.96/1.73  2H O/U 0.5 1.12/5.00 1.5 1.63/2.10
+- Sat 14:30  Hamburger SV v Stuttgart  -  Highest Scoring Half / 2nd half @2.05
+    HH 2-4-1  AA 0-4-3  H10 2-8-0  A10 1-6-3  goals 47 v 70
+    1H O/U 0.5 1.24/4.30 1.5 2.05/1.81  2H O/U 0.5 1.14/6.10 1.5 1.66/2.30
+- Sat 14:30  SV 07 Elversberg v Augsburg  -  Highest Scoring Half / 2nd half @2.10
+    HH 3-4-0  AA 1-3-3  H10 3-5-2  A10 0-6-4  goals 54 v 74
+    1H O/U 0.5 1.28/3.90 1.5 2.20/1.70  2H O/U 0.5 1.16/5.60 1.5 1.75/2.15
+- Sat 14:30  Union Berlin v Borussia Dortmund  -  Highest Scoring Half / 2nd half @2.10
+    HH 0-4-3  AA 1-6-0  H10 0-6-4  A10 3-7-0  goals 45 v 77
+    1H O/U 0.5 1.27/4.00 1.5 2.20/1.70  2H O/U 0.5 1.17/5.30 1.5 1.79/2.10
+- Sat 14:30  KFC Komarno v MFK Ruzomberok  -  Highest Scoring Half / 2nd half @2.05
+    HH 1-4-2  AA 2-4-1  H10 1-4-5  A10 2-6-2  goals 40 v 54
+    1H O/U 0.5 1.33/3.10 1.5 2.45/1.49  2H O/U 0.5 1.19/4.10 1.5 1.92/1.79
+- Sat 14:30  MFK Skalica v AS Trencin  -  Highest Scoring Half / 2nd half @2.00
+    HH 3-4-0  AA 1-4-2  H10 2-6-2  A10 3-5-2  goals 49 v 65
+    1H O/U 0.5 1.29/3.30 1.5 2.30/1.56  2H O/U 0.5 1.17/4.50 1.5 1.81/1.90
+- Sat 15:00  Brentford v Liverpool  -  Highest Scoring Half / 2nd half @2.10
+    HH 1-3-3  AA 1-6-0  H10 3-3-4  A10 2-7-1  goals 42 v 73
+    1H O/U 0.5 1.29/3.80 1.5 2.25/1.67  2H O/U 0.5 1.17/5.30 1.5 1.79/2.10
+- Sat 15:00  Fulham v Hull City  -  Highest Scoring Half / 1st half @3.10
+    HH 4-2-1  AA 3-4-0  H10 5-3-2  A10 3-5-2  goals 40 v 43
+    1H O/U 0.5 1.35/3.33 1.5 2.55/1.54  2H O/U 0.5 1.23/4.40 1.5 2.05/1.82
+- Sat 15:00  Bristol City v Sheffield United  -  Highest Scoring Half / 2nd half @2.15
+    HH 2-3-2  AA 2-4-1  H10 3-5-2  A10 3-7-0  goals 39 v 49
+    1H O/U 0.5 1.38/3.10 1.5 2.70/1.47  2H O/U 0.5 1.24/4.10 1.5 2.10/1.75
+- Sat 15:00  Southampton v Bolton Wanderers  -  Highest Scoring Half / 2nd half @2.10
+    HH 1-3-3  AA 1-5-1  H10 1-4-5  A10 3-6-1  goals 48 v 69
+    1H O/U 0.5 1.22/4.30 1.5 2.05/1.79  2H O/U 0.5 1.14/5.70 1.5 1.68/2.20
+- Sat 15:00  Queen of the South FC v Ross County FC  -  Highest Scoring Half / 2nd half @2.00
+    HH 0-6-1  AA 2-3-2  H10 1-7-2  A10 2-7-1  goals 48 v 96
+    1H O/U 0.5 1.18/4.25 1.5 1.91/1.80  2H O/U 0.5 -/- 1.5 1.60/2.20
+- Sat 15:00  Clyde FC v Annan Athletic FC  -  Highest Scoring Half / 2nd half @2.00
+    HH 3-4-0  AA 3-4-0  H10 3-7-0  A10 2-5-3  goals 44 v 72
+    1H O/U 0.5 1.25/3.40 1.5 2.15/1.59  2H O/U 0.5 1.15/4.50 1.5 1.75/1.93
+- Sat 15:00  Barnsley FC v Cambridge United  -  Highest Scoring Half / 2nd half @2.05
+    HH 1-5-1  AA 1-2-4  H10 2-6-2  A10 2-5-3  goals 41 v 69
+    1H O/U 0.5 1.31/3.40 1.5 2.35/1.57  2H O/U 0.5 1.18/4.70 1.5 1.85/1.93
+- Sat 15:00  Stockport County FC v Bromley FC  -  Highest Scoring Half / 2nd half @2.05
+    HH 2-4-1  AA 3-4-0  H10 2-6-2  A10 3-6-1  goals 53 v 77
+    1H O/U 0.5 1.18/4.60 1.5 1.89/1.89  2H O/U 0.5 1.12/6.00 1.5 1.59/2.35
+- Sat 15:00  Wigan Athletic v Reading FC  -  Highest Scoring Half / 2nd half @2.10
+    HH 1-5-1  AA 1-4-2  H10 1-7-2  A10 4-5-1  goals 36 v 67
+    1H O/U 0.5 1.32/3.30 1.5 2.40/1.54  2H O/U 0.5 1.19/4.50 1.5 1.91/1.87
+- Sat 15:00  Colchester United v Exeter City  -  Highest Scoring Half / 2nd half @2.10
+    HH 1-5-1  AA 1-5-1  H10 2-5-3  A10 1-6-3  goals 23 v 42
+    1H O/U 0.5 1.42/2.75 1.5 2.85/1.39  2H O/U 0.5 1.25/3.70 1.5 2.20/1.63
+- Sat 15:00  Oldham Athletic v Cheltenham Town  -  Highest Scoring Half / 2nd half @2.10
+    HH 1-5-1  AA 1-5-1  H10 1-5-4  A10 2-7-1  goals 37 v 65
+    1H O/U 0.5 1.35/3.10 1.5 2.55/1.47  2H O/U 0.5 1.21/4.10 1.5 2.00/1.75
+- Sat 15:00  Salford City v Crawley Town  -  Highest Scoring Half / 2nd half @2.05
+    HH 1-6-0  AA 1-4-2  H10 3-7-0  A10 3-6-1  goals 35 v 53
+    1H O/U 0.5 1.23/3.90 1.5 2.10/1.69  2H O/U 0.5 1.15/4.90 1.5 1.73/2.05
+- Sat 15:00  FC Stockholm Internazionale v Gefle IF  -  Highest Scoring Half / 2nd half @2.00
+    HH 2-4-1  AA 2-3-2  H10 3-6-1  A10 2-6-2  goals 37 v 62
+    1H O/U 0.5 1.23/3.60 1.5 2.10/1.62  2H O/U 0.5 1.15/4.60 1.5 1.74/1.94
+- Sat 15:00  Hebburn Town v Scarborough Athletic  -  Highest Scoring Half / 2nd half @2.00
+    HH 1-3-3  AA 0-3-4  H10 3-4-3  A10 0-4-6  goals 43 v 62
+    1H O/U 0.5 1.32/3.00 1.5 2.45/1.47  2H O/U 0.5 1.18/4.10 1.5 1.90/1.77
+- Sat 15:00  Tonbridge Angels v Hemel Hempstead Town  -  Highest Scoring Half / 2nd half @2.05
+    HH 2-4-1  AA 1-2-4  H10 3-4-3  A10 1-4-5  goals 37 v 41
+    1H O/U 0.5 1.33/3.00 1.5 2.45/1.46  2H O/U 0.5 1.19/4.00 1.5 1.92/1.76
+- Sat 15:00  Ballymena United v Crusaders FC  -  Highest Scoring Half / 2nd half @2.00
+    HH 0-5-2  AA 2-5-0  H10 3-6-1  A10 2-8-0  goals 37 v 61
+    1H O/U 0.5 1.26/3.50 1.5 2.20/1.60  2H O/U 0.5 1.15/4.70 1.5 1.76/1.95
+- Sat 15:00  Carrick Rangers v Linfield FC  -  Highest Scoring Half / 2nd half @2.05
+    HH 2-5-0  AA 0-2-5  H10 5-5-0  A10 0-7-3  goals 45 v 56
+    1H O/U 0.5 1.32/3.10 1.5 2.45/1.49  2H O/U 0.5 1.19/4.10 1.5 1.93/1.78
+- Sat 15:30  AD Fazendense v Estrela Amadora  -  Highest Scoring Half / 2nd half @2.05
+    HH 0-5-1  AA 2-4-1  H10 1-7-2  A10 3-5-2  goals 43 v 73
+    1H O/U 0.5 1.18/4.50 1.5 1.88/1.86  2H O/U 0.5 -/- 1.5 1.61/2.25
+- Sat 15:30  FC Emmen v Almere City FC  -  Highest Scoring Half / 2nd half @2.00
+    HH 3-4-0  AA 0-7-0  H10 4-4-2  A10 2-7-1  goals 36 v 79
+    1H O/U 0.5 1.25/3.70 1.5 2.10/1.68  2H O/U 0.5 1.14/5.20 1.5 1.69/2.10
+- Sat 16:00  UD Leiria v GD Braganca  -  Highest Scoring Half / 2nd half @2.10
+    HH 2-3-2  AA 2-4-1  H10 4-4-2  A10 2-6-2  goals 36 v 53
+    1H O/U 0.5 1.25/3.70 1.5 2.20/1.62  2H O/U 0.5 1.18/4.60 1.5 1.84/1.90
+- Sat 16:15  Strasbourg v PSG  -  Highest Scoring Half / 2nd half @2.05
+    HH 2-5-0  AA 2-3-2  H10 3-6-1  A10 3-5-2  goals 48 v 71
+    1H O/U 0.5 1.20/4.80 1.5 1.94/1.91  2H O/U 0.5 1.13/6.50 1.5 1.60/2.40
+
+## 2026-10-17 10:03 WAT  |  Highest Scoring Half (user's call): the first pattern = the H3DHKT rule with the HH/AA fix, 2.00+ - 503,538,722,444.81x (35 games)  |  code HWYL1V
+http://www.sportybet.com/ng/?shareCode=HWYL1V
+- Sat 16:15  Mantova 1911 v Palermo FC  -  Highest Scoring Half / 2nd half @2.10
+    HH 0-6-1  AA 2-5-0  H10 0-7-3  A10 4-4-2  goals 37 v 79
+    1H O/U 0.5 1.33/3.20 1.5 2.45/1.51  2H O/U 0.5 1.20/4.25 1.5 1.93/1.81
+- Sat 16:30  KSK Heist v Royal Antwerp FC  -  Highest Scoring Half / 2nd half @2.10
+    HH 1-4-2  AA 1-3-3  H10 1-6-3  A10 0-7-3  goals 35 v 76
+    1H O/U 0.5 1.24/3.90 1.5 2.15/1.68  2H O/U 0.5 1.16/5.00 1.5 1.78/2.00
+- Sat 16:30  Oud-Heverlee Leuven v Royal Francs Borains  -  Highest Scoring Half / 2nd half @2.10
+    HH 2-3-2  AA 2-5-0  H10 1-4-5  A10 1-8-1  goals 36 v 57
+    1H O/U 0.5 1.30/3.40 1.5 2.40/1.56  2H O/U 0.5 1.20/4.40 1.5 1.93/1.84
+- Sat 16:30  R AEC Mons v Royal Charleroi SC  -  Highest Scoring Half / 2nd half @2.05
+    HH 1-3-3  AA 2-4-1  H10 2-7-1  A10 3-3-4  goals 39 v 52
+    1H O/U 0.5 1.19/4.60 1.5 1.90/1.87  2H O/U 0.5 1.12/6.00 1.5 1.59/2.30
+- Sat 16:30  Deportes Magallanes v San Luis de Quillota  -  Highest Scoring Half / 2nd half @2.05
+    HH 1-3-3  AA 2-3-2  H10 2-4-4  A10 3-4-3  goals 36 v 43
+    1H O/U 0.5 1.35/2.85 1.5 2.55/1.43  2H O/U 0.5 1.21/3.80 1.5 2.00/1.70
+- Sat 16:30  GKS Katowice v Pogon Szczecin  -  Highest Scoring Half / 2nd half @2.05
+    HH 0-6-1  AA 2-3-2  H10 2-8-0  A10 2-5-3  goals 36 v 66
+    1H O/U 0.5 1.28/3.40 1.5 2.25/1.59  2H O/U 0.5 1.17/4.70 1.5 1.80/1.95
+- Sat 17:00  Louletano DC v Rio Ave FC  -  Highest Scoring Half / 2nd half @2.10
+    HH 2-5-0  AA 1-4-2  H10 3-5-2  A10 3-4-3  goals 37 v 51
+    1H O/U 0.5 1.32/3.20 1.5 2.50/1.50  2H O/U 0.5 1.21/4.10 1.5 1.98/1.77
+- Sat 17:00  Fenerbahce Istanbul v Alanyaspor  -  Highest Scoring Half / 1st half @2.95
+    HH 5-0-2  AA 1-4-2  H10 4-1-5  A10 2-5-3  goals 49 v 46
+    1H O/U 0.5 1.24/4.10 1.5 2.15/1.71  2H O/U 0.5 1.17/5.20 1.5 1.78/2.05
+- Sat 17:00  SK Sigma Olomouc v FC Slovan Liberec  -  Highest Scoring Half / 2nd half @2.10
+    HH 2-3-2  AA 1-4-2  H10 3-5-2  A10 1-4-5  goals 37 v 52
+    1H O/U 0.5 1.38/2.90 1.5 2.70/1.43  2H O/U 0.5 1.23/3.90 1.5 2.10/1.69
+- Sat 17:00  Deportivo Camioneros v Argentino de Merlo  -  Highest Scoring Half / 2nd half @2.25
+    HH 1-4-2  AA 2-4-1  H10 2-5-3  A10 2-5-3  goals 26 v 39
+    1H O/U 0.5 1.60/2.15 1.5 3.70/1.22  2H O/U 0.5 1.40/2.65 1.5 2.90/1.35
+- Sat 17:30  Betis v Barcelona  -  Highest Scoring Half / 2nd half @2.00
+    HH 3-4-0  AA 1-5-1  H10 4-5-1  A10 2-6-2  goals 55 v 81
+    1H O/U 0.5 1.16/5.75 1.5 1.73/2.15  2H O/U 0.5 1.09/8.10 1.5 1.44/2.85
+- Sat 17:45  Aguilas FC v UD Ibiza  -  Highest Scoring Half / 2nd half @2.10
+    HH 1-3-3  AA 2-3-2  H10 2-4-4  A10 3-5-2  goals 40 v 47
+    1H O/U 0.5 1.45/2.45 1.5 -/-  2H O/U 0.5 -/- 1.5 2.30/1.51
+- Sat 17:45  CD Extremadura v Real Union de Irun  -  Highest Scoring Half / 2nd half @2.05
+    HH 0-7-0  AA 1-5-1  H10 2-7-1  A10 0-7-3  goals 25 v 78
+    1H O/U 0.5 -/- 1.5 2.55/1.41  2H O/U 0.5 -/- 1.5 2.00/1.66
+- Sat 18:30  Chacarita Juniors v CD Maipu  -  Highest Scoring Half / 2nd half @2.25
+    HH 1-4-2  AA 1-5-1  H10 4-5-1  A10 1-6-3  goals 26 v 36
+    1H O/U 0.5 1.62/2.10 1.5 3.75/1.21  2H O/U 0.5 1.40/2.65 1.5 2.90/1.35
+- Sat 19:00  SC Telstar v Feyenoord  -  Highest Scoring Half / 2nd half @2.10
+    HH 1-5-1  AA 2-5-0  H10 4-5-1  A10 3-5-2  goals 49 v 79
+    1H O/U 0.5 1.21/4.50 1.5 1.97/1.84  2H O/U 0.5 1.14/5.90 1.5 1.64/2.25
+- Sat 19:00  CS Italiano v Arsenal de Sarandi  -  Highest Scoring Half / 2nd half @2.20
+    HH 0-3-4  AA 1-4-2  H10 2-4-4  A10 2-5-3  goals 23 v 41
+    1H O/U 0.5 1.54/2.25 1.5 3.40/1.26  2H O/U 0.5 1.34/2.90 1.5 2.60/1.42
+- Sat 19:00  CD Cobreloa Calama v Deportes Recoleta  -  Highest Scoring Half / 2nd half @2.05
+    HH 0-6-1  AA 0-2-5  H10 0-9-1  A10 3-3-4  goals 23 v 53
+    1H O/U 0.5 1.35/2.85 1.5 2.55/1.43  2H O/U 0.5 1.21/3.75 1.5 2.05/1.68
+- Sat 19:00  Cruz Azul Hidalgo v CD Mineros de Zacatecas  -  Highest Scoring Half / 2nd half @2.00
+    HH 2-4-1  AA 0-6-1  H10 2-5-3  A10 1-7-2  goals 42 v 68
+    1H O/U 0.5 1.27/3.30 1.5 2.20/1.56  2H O/U 0.5 1.15/4.50 1.5 1.76/1.91
+- Sat 19:00  AD Berazategui v Club Lujan  -  Highest Scoring Half / 2nd half @2.20
+    HH 1-4-2  AA 2-4-1  H10 2-5-3  A10 3-5-2  goals 33 v 46
+    1H O/U 0.5 1.62/2.10 1.5 3.75/1.22  2H O/U 0.5 1.39/2.70 1.5 2.85/1.36
+- Sat 19:30  CA Acassuso v Deportivo Madryn  -  Highest Scoring Half / 2nd half @2.15
+    HH 0-5-2  AA 2-4-1  H10 1-7-2  A10 3-4-3  goals 19 v 48
+    1H O/U 0.5 1.53/2.30 1.5 3.33/1.27  2H O/U 0.5 1.33/3.00 1.5 2.55/1.44
+- Sat 19:30  CA San Miguel v Club Ciudad de Bolivar  -  Highest Scoring Half / 2nd half @2.25
+    HH 2-3-2  AA 2-4-1  H10 1-7-2  A10 2-6-2  goals 22 v 48
+    1H O/U 0.5 1.65/2.05 1.5 3.90/1.20  2H O/U 0.5 1.42/2.60 1.5 2.95/1.33
+- Sat 19:45  Troyes v Lens  -  Highest Scoring Half / 2nd half @2.10
+    HH 0-4-3  AA 2-4-1  H10 1-5-4  A10 3-6-1  goals 40 v 70
+    1H O/U 0.5 1.30/3.70 1.5 2.35/1.63  2H O/U 0.5 1.18/5.10 1.5 1.85/2.00
+- Sat 20:00  Valencia v Athletic Bilbao  -  Highest Scoring Half / 2nd half @2.20
+    HH 1-5-1  AA 1-3-3  H10 1-7-2  A10 1-5-4  goals 33 v 67
+    1H O/U 0.5 1.47/2.75 1.5 3.10/1.39  2H O/U 0.5 1.30/3.70 1.5 2.35/1.62
+- Sat 20:00  Sparta Rotterdam v Willem II Tilburg  -  Highest Scoring Half / 2nd half @2.10
+    HH 1-3-3  AA 1-5-1  H10 2-6-2  A10 2-7-1  goals 41 v 84
+    1H O/U 0.5 1.25/4.00 1.5 2.15/1.71  2H O/U 0.5 1.16/5.40 1.5 1.74/2.10
+- Sat 20:00  Las Palmas v CD Castellon  -  Highest Scoring Half / 2nd half @2.05
+    HH 1-4-2  AA 2-4-1  H10 2-5-3  A10 3-4-3  goals 35 v 52
+    1H O/U 0.5 1.30/3.33 1.5 2.35/1.56  2H O/U 0.5 1.18/4.50 1.5 1.85/1.89
+- Sat 20:00  Columbus Crew 2 v New England Revolution II  -  Highest Scoring Half / 2nd half @2.00
+    HH 2-3-2  AA 2-4-1  H10 3-5-2  A10 4-4-2  goals 61 v 68
+    1H O/U 0.5 1.24/3.75 1.5 2.10/1.69  2H O/U 0.5 1.14/5.25 1.5 1.67/2.10
+- Sat 20:30  Ceara SC CE v EC Juventude RS  -  Highest Scoring Half / 2nd half @2.20
+    HH 2-4-1  AA 1-4-2  H10 2-6-2  A10 3-4-3  goals 29 v 45
+    1H O/U 0.5 1.56/2.35 1.5 3.50/1.27  2H O/U 0.5 1.35/3.10 1.5 2.65/1.45
+- Sat 20:30  CSD Tristan Suarez v CA Patronato Parana  -  Highest Scoring Half / 2nd half @2.30
+    HH 0-3-4  AA 0-4-3  H10 1-2-7  A10 1-5-4  goals 19 v 36
+    1H O/U 0.5 1.62/2.10 1.5 3.80/1.21  2H O/U 0.5 1.43/2.55 1.5 3.00/1.32
+- Sat 21:00  Zamora FC v Academia Anzoategui FC  -  Highest Scoring Half / 2nd half @2.10
+    HH 2-3-2  AA 1-5-1  H10 3-3-4  A10 3-4-3  goals 38 v 52
+    1H O/U 0.5 -/- 1.5 2.60/1.40  2H O/U 0.5 -/- 1.5 2.05/1.64
+- Sat 21:00  Juan Pablo II College v Sport Boys Association  -  Highest Scoring Half / 2nd half @2.10
+    HH 1-2-4  AA 2-4-1  H10 3-5-2  A10 4-4-2  goals 45 v 48
+    1H O/U 0.5 1.37/2.85 1.5 2.65/1.43  2H O/U 0.5 1.23/3.80 1.5 2.05/1.68
+- Sat 21:00  Difaa Hassani d'el-Jadida v Moghreb Athletic de Tetouan  -  Highest Scoring Half / 1st half @3.20
+    HH 2-0-5  AA 1-3-3  H10 4-2-4  A10 1-2-7  goals 45 v 48
+    1H O/U 0.5 1.57/2.25 1.5 3.60/1.25  2H O/U 0.5 1.37/2.85 1.5 2.75/1.40
+- Sat 21:30  Minnesota United FC v Saint Louis City SC  -  Highest Scoring Half / 2nd half @2.10
+    HH 2-5-0  AA 1-2-4  H10 4-5-1  A10 3-4-3  goals 68 v 75
+    1H O/U 0.5 1.27/3.80 1.5 2.20/1.68  2H O/U 0.5 1.16/5.40 1.5 1.74/2.10
+- Sat 22:30  Atletico Mineiro MG v Coritiba FC PR  -  Highest Scoring Half / 2nd half @2.15
+    HH 2-4-1  AA 1-4-2  H10 2-5-3  A10 1-7-2  goals 34 v 68
+    1H O/U 0.5 1.34/3.20 1.5 2.55/1.50  2H O/U 0.5 1.22/4.10 1.5 2.05/1.76
+- Sat 23:00  Forward Madison FC v Portland Hearts of Pine  -  Highest Scoring Half / 2nd half @2.05
+    HH 1-3-3  AA 1-3-3  H10 1-6-3  A10 1-6-3  goals 36 v 59
+    1H O/U 0.5 1.24/3.50 1.5 2.15/1.61  2H O/U 0.5 1.15/4.50 1.5 1.75/1.93
+- Sat 23:30  Carabobo FC v Deportivo Tachira  -  Highest Scoring Half / 2nd half @2.10
+    HH 1-4-2  AA 2-4-1  H10 3-5-2  A10 1-5-4  goals 35 v 58
+    1H O/U 0.5 -/- 1.5 2.65/1.39  2H O/U 0.5 -/- 1.5 2.05/1.63
+
+## 2026-10-17 17:25 WAT  |  draw slip (user's call: the 1.38 draws for Sat-Sun - Under 2.5 at exactly 1.38 inside the four checks) 2.85x (1 legs)  |  code RL6FBQ
+http://www.sportybet.com/ng/?shareCode=RL6FBQ
+- Sun 22:00  Estudiantes Rio Cuarto v CA Aldosivi  -  1X2 / Draw @2.85
+    SportyBet 2.80/2.85/2.70 -> draw about 1 in 3 after the overround (band checks passed); Under 2.5 at 1.38
+    table this season: 6 pts from 12 v 8 pts from 12 = 0.5 v 0.67 a game (gap 0.17)
+    user's 1.38 rung: 7 of 8 drew 16 Sep - 17 Oct (only loss Ciudad de Bolivar 2-1 Chaco, 26 Sep)
+
+## 2026-10-17 17:53 WAT  |  five options (user's call: only Home, Draw or Away, 5-min draw, 10-min draw, minute Unders) - all games - 23.66x (32 games)  |  code NQBQAQ
+http://www.sportybet.com/ng/?shareCode=NQBQAQ
+- Sat 19:00  Union Clodiense Chioggia SSD v FC Calvi Noale  -  1X2 / Home @1.59
+    the book's most likely option on this game (no-margin chance 0.57), price 1.15-2.00
+- Sat 19:00  CSD San Martin v CA Excursionistas  -  Double Chance / Draw or Away @1.15
+    the book's most likely option on this game (no-margin chance 0.83), price 1.15-2.00
+- Sat 19:00  CA Victoriano Arenas v CSDC Espanol  -  Double Chance / Draw or Away @1.34
+    the book's most likely option on this game (no-margin chance 0.68), price 1.15-2.00
+- Sat 19:00  SC Telstar v Feyenoord  -  Total Goals from 1 to 60 min / Under 4.5 @1.04
+    record 9 of 9 (4+ a side) - minute Under, record 90%+ (options like it won 133 of 134)
+- Sat 19:00  Red Star FC v Saint-Etienne  -  Total Goals from 1 to 5 min / Under 0.5 @1.12
+    record 7 of 7 (3+ a side) - minute Under, record 90%+ (options like it won 51 of 53)
+- Sat 19:00  CA Banfield v Argentinos Juniors  -  Match Result after 5 Minutes / Draw @1.08
+    record 12 of 13 (5+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sat 19:00  Cruz Azul Hidalgo v CD Mineros de Zacatecas  -  10 Minutes - 1X2 / Draw @1.19
+    record 8 of 10 (4+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sat 19:00  Agropecuario Argentino v CA Colegiales  -  10 Minutes - 1X2 / Draw @1.11
+    record 14 of 14 (7+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sat 19:15  KS Cracovia Krakow v Legia Warszawa  -  Total Goals from 1 to 20 min / Under 1.5 @1.06
+    record 10 of 11 (5+ a side) - minute Under, record 90%+ (options like it won 77 of 82)
+- Sat 19:30  Hannover 96 v FC St. Pauli  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    record 7 of 7 (3+ a side) - minute Under, record 90%+ (options like it won 121 of 124)
+- Sat 19:30  Philadelphia Union v Charlotte FC  -  Total Goals from 1 to 55 min / Under 4.5 @1.04
+    record 13 of 14 (7+ a side) - minute Under, record 90%+ (options like it won 138 of 139)
+- Sat 19:30  Rapid Bucuresti 1923 v FC Corvinul Hunedoara 1921  -  Total Goals from 1 to 35 min / Under 2.5 @1.03
+    record 13 of 13 (6+ a side) - minute Under, record 90%+ (options like it won 111 of 117)
+- Sat 19:30  CA Acassuso v Deportivo Madryn  -  10 Minutes - 1X2 / Draw @1.12
+    record 12 of 14 (6+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sat 19:30  CA San Miguel v Club Ciudad de Bolivar  -  10 Minutes - 1X2 / Draw @1.10
+    record 14 of 14 (7+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sat 19:45  Lille v Brest  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    record 7 of 7 (3+ a side) - minute Under, record 90%+ (options like it won 104 of 108)
+- Sat 19:45  Troyes v Lens  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    record 7 of 7 (3+ a side) - minute Under, record 90%+ (options like it won 121 of 124)
+- Sat 20:00  CSD Macara v CSD Independiente del Valle  -  Double Chance / Draw or Away @1.18
+    the book's most likely option on this game (no-margin chance 0.80), price 1.15-2.00
+- Sat 20:00  Sparta Rotterdam v Willem II Tilburg  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    record 8 of 8 (4+ a side) - minute Under, record 90%+ (options like it won 133 of 134)
+- Sat 20:00  Las Palmas v CD Castellon  -  Total Goals from 1 to 70 min / Under 4.5 @1.03
+    record 9 of 9 (4+ a side) - minute Under, record 90%+ (options like it won 111 of 117)
+- Sat 20:00  Dundee FC v Rangers  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    record 11 of 12 (5+ a side) - minute Under, record 90%+ (options like it won 121 of 124)
+- Sat 20:30  Club Mercedes v Leones de Rosario FC  -  Double Chance / Draw or Away @1.27
+    the book's most likely option on this game (no-margin chance 0.73), price 1.15-2.00
+- Sat 20:30  Ceara SC CE v EC Juventude RS  -  10 Minutes - 1X2 / Draw @1.12
+    record 13 of 14 (7+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sat 20:30  CSD Tristan Suarez v CA Patronato Parana  -  10 Minutes - 1X2 / Draw @1.10
+    record 13 of 14 (7+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sat 21:00  Zamora FC v Academia Anzoategui FC  -  Double Chance / Draw or Away @1.20
+    the book's most likely option on this game (no-margin chance 0.78), price 1.15-2.00
+- Sat 21:00  Boyaca Chico FC v Atletico Nacional  -  Total Goals from 1 to 50 min / Under 3.5 @1.03
+    record 12 of 13 (6+ a side) - minute Under, record 90%+ (options like it won 116 of 123)
+- Sat 21:00  Juan Pablo II College v Sport Boys Association  -  Total Goals from 1 to 55 min / Under 3.5 @1.03
+    record 13 of 14 (6+ a side) - minute Under, record 90%+ (options like it won 98 of 106)
+- Sat 21:00  Club Guarani Asuncion v Nacional Asuncion  -  10 Minutes - 1X2 / Draw @1.12
+    record 12 of 14 (6+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sat 21:30  Minnesota United FC v Saint Louis City SC  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    record 14 of 14 (7+ a side) - minute Under, record 90%+ (options like it won 133 of 134)
+- Sat 21:30  CA Platense v CA Lanus  -  Match Result after 5 Minutes / Draw @1.06
+    record 12 of 13 (6+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sat 22:00  Botafogo FR RJ v Chapecoense SC  -  Total Goals from 1 to 60 min / Under 4.5 @1.04
+    record 14 of 14 (7+ a side) - minute Under, record 90%+ (options like it won 133 of 134)
+- Sat 22:30  Atletico Mineiro MG v Coritiba FC PR  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    record 11 of 12 (5+ a side) - minute Under, record 90%+ (options like it won 104 of 108)
+- Sat 22:30  SD Aucas v LDU Quito  -  10 Minutes - 1X2 / Draw @1.13
+    record 13 of 14 (7+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+
+## 2026-10-17 17:53 WAT  |  five options (user's call: only Home, Draw or Away, 5-min draw, 10-min draw, minute Unders) - 3x best chance - 3.01x (15 games)  |  code TX6EN4
+http://www.sportybet.com/ng/?shareCode=TX6EN4
+- Sat 19:00  Cruz Azul Hidalgo v CD Mineros de Zacatecas  -  10 Minutes - 1X2 / Draw @1.19
+    record 8 of 10 (4+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sat 19:00  CA Banfield v Argentinos Juniors  -  Match Result after 5 Minutes / Draw @1.08
+    record 12 of 13 (5+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sat 19:00  Red Star FC v Saint-Etienne  -  Total Goals from 1 to 5 min / Under 0.5 @1.12
+    record 7 of 7 (3+ a side) - minute Under, record 90%+ (options like it won 51 of 53)
+- Sat 19:00  SC Telstar v Feyenoord  -  Total Goals from 1 to 60 min / Under 4.5 @1.04
+    record 9 of 9 (4+ a side) - minute Under, record 90%+ (options like it won 133 of 134)
+- Sat 19:30  CA San Miguel v Club Ciudad de Bolivar  -  10 Minutes - 1X2 / Draw @1.10
+    record 14 of 14 (7+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sat 19:30  CA Acassuso v Deportivo Madryn  -  10 Minutes - 1X2 / Draw @1.12
+    record 12 of 14 (6+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sat 19:30  Philadelphia Union v Charlotte FC  -  Total Goals from 1 to 55 min / Under 4.5 @1.04
+    record 13 of 14 (7+ a side) - minute Under, record 90%+ (options like it won 138 of 139)
+- Sat 19:30  Hannover 96 v FC St. Pauli  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    record 7 of 7 (3+ a side) - minute Under, record 90%+ (options like it won 121 of 124)
+- Sat 19:45  Troyes v Lens  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    record 7 of 7 (3+ a side) - minute Under, record 90%+ (options like it won 121 of 124)
+- Sat 20:00  Sparta Rotterdam v Willem II Tilburg  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    record 8 of 8 (4+ a side) - minute Under, record 90%+ (options like it won 133 of 134)
+- Sat 20:30  Ceara SC CE v EC Juventude RS  -  10 Minutes - 1X2 / Draw @1.12
+    record 13 of 14 (7+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sat 21:30  CA Platense v CA Lanus  -  Match Result after 5 Minutes / Draw @1.06
+    record 12 of 13 (6+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sat 21:30  Minnesota United FC v Saint Louis City SC  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    record 14 of 14 (7+ a side) - minute Under, record 90%+ (options like it won 133 of 134)
+- Sat 22:00  Botafogo FR RJ v Chapecoense SC  -  Total Goals from 1 to 60 min / Under 4.5 @1.04
+    record 14 of 14 (7+ a side) - minute Under, record 90%+ (options like it won 133 of 134)
+- Sat 22:30  SD Aucas v LDU Quito  -  10 Minutes - 1X2 / Draw @1.13
+    record 13 of 14 (7+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+
+## 2026-10-17 17:57 WAT  |  five options (user's call: only Home, Draw or Away, 5-min draw, 10-min draw, minute Unders) - all games part 1 - 170.37x (48 games)  |  code U0V90P
+http://www.sportybet.com/ng/?shareCode=U0V90P
+- Sun 00:07  CD Guadalajara v Tigres UANL  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    record 12 of 12 (6+ a side) - minute Under, record 90%+ (options like it won 104 of 108)
+- Sun 00:30  Atlanta United FC v Inter Miami CF  -  Total Goals from 1 to 55 min / Under 4.5 @1.04
+    record 11 of 11 (5+ a side) - minute Under, record 90%+ (options like it won 138 of 139)
+- Sun 00:30  New England Revolution v Chicago Fire  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    record 12 of 13 (6+ a side) - minute Under, record 90%+ (options like it won 133 of 134)
+- Sun 00:30  New York City FC v Los Angeles FC  -  Total Goals from 1 to 15 min / Under 1.5 @1.04
+    record 14 of 14 (7+ a side) - minute Under, record 90%+ (options like it won 104 of 108)
+- Sun 00:30  New York Red Bulls v Toronto FC  -  Total Goals from 1 to 55 min / Under 4.5 @1.03
+    record 14 of 14 (7+ a side) - minute Under, record 90%+ (options like it won 138 of 139)
+- Sun 01:00  Sao Paulo FC SP v CR Vasco da Gama RJ  -  Match Result after 5 Minutes / Draw @1.09
+    record 14 of 14 (7+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 01:30  Austin FC v Vancouver Whitecaps FC  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    record 14 of 14 (7+ a side) - minute Under, record 90%+ (options like it won 133 of 134)
+- Sun 01:30  Houston Dynamo v FC Dallas  -  Match Result after 5 Minutes / Draw @1.11
+    record 13 of 14 (7+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 01:30  Sporting Kansas City v Real Salt Lake  -  Total Goals from 1 to 60 min / Under 4.5 @1.04
+    record 13 of 14 (6+ a side) - minute Under, record 90%+ (options like it won 133 of 134)
+- Sun 02:00  Managua FC v Indigenas de Matagalpa FC  -  1X2 / Home @1.16
+    the book's most likely option on this game (no-margin chance 0.80), price 1.15-2.00
+- Sun 02:00  Club Leon v CF America  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    record 13 of 13 (6+ a side) - minute Under, record 90%+ (options like it won 104 of 108)
+- Sun 02:00  Piratas Veracruz v Tepatitlan FC  -  10 Minutes - 1X2 / Draw @1.26
+    record 8 of 10 (4+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sun 02:10  Independiente Medellin v CD Once Caldas  -  Total Goals from 1 to 20 min / Under 1.5 @1.05
+    record 13 of 14 (6+ a side) - minute Under, record 90%+ (options like it won 77 of 82)
+- Sun 02:30  Alianza Lima v Atletico Grau  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    record 13 of 14 (6+ a side) - minute Under, record 90%+ (options like it won 104 of 108)
+- Sun 03:00  Monterey Bay FC v Colorado Springs Switchbacks FC  -  Double Chance / Draw or Away @1.15
+    the book's most likely option on this game (no-margin chance 0.82), price 1.15-2.00
+- Sun 03:00  Inter San Carlos v Liga Deportiva Alajuelense  -  10 Minutes - 1X2 / Draw @1.16
+    record 10 of 12 (5+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sun 04:10  CF Cruz Azul v FC Juarez  -  Total Goals from 1 to 65 min / Under 4.5 @1.04
+    record 13 of 14 (7+ a side) - minute Under, record 90%+ (options like it won 121 of 124)
+- Sun 05:55  Fagiano Okayama v Vissel Kobe  -  Match Result after 5 Minutes / Draw @1.09
+    record 11 of 12 (5+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 08:30  FC Pohang Steelers v FC Anyang  -  Match Result after 5 Minutes / Draw @1.09
+    record 13 of 14 (7+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 08:30  Gangwon FC v Incheon United FC  -  10 Minutes - 1X2 / Draw @1.14
+    record 12 of 14 (6+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sun 09:15  FK Pardubice B v FK Velke Hamry  -  1X2 / Home @1.30
+    the book's most likely option on this game (no-margin chance 0.70), price 1.15-2.00
+- Sun 10:00  FK Teplice B v SK Zapy  -  Double Chance / Draw or Away @1.18
+    the book's most likely option on this game (no-margin chance 0.79), price 1.15-2.00
+- Sun 10:30  SCR Pena Deportiva v UCAM Murcia  -  Double Chance / Draw or Away @1.23
+    the book's most likely option on this game (no-margin chance 0.75), price 1.15-2.00
+- Sun 10:30  Nomme Kalju FC v FC Elva  -  Double Chance / Draw or Away @1.16
+    the book's most likely option on this game (no-margin chance 0.81), price 1.15-2.00
+- Sun 11:00  CD Linares v RC Recreativo de Huelva  -  Double Chance / Draw or Away @1.25
+    the book's most likely option on this game (no-margin chance 0.73), price 1.15-2.00
+- Sun 11:00  Reus FC Reddis v Espanyol Barcelona B  -  Double Chance / Draw or Away @1.29
+    the book's most likely option on this game (no-margin chance 0.71), price 1.15-2.00
+- Sun 11:00  FC Kulykiv-Bilka v FC Oleksandriya  -  Double Chance / Draw or Away @1.23
+    the book's most likely option on this game (no-margin chance 0.75), price 1.15-2.00
+- Sun 11:00  Sporting Atletico v CD Colunga  -  1X2 / Home @1.21
+    the book's most likely option on this game (no-margin chance 0.75), price 1.15-2.00
+- Sun 11:00  Wuhan Three Towns FC v Shanghai Shenhua FC  -  Total Goals from 1 to 40 min / Under 3.5 @1.03
+    record 13 of 14 (6+ a side) - minute Under, record 90%+ (options like it won 134 of 136)
+- Sun 11:15  PEC Zwolle v Go Ahead Eagles  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    record 8 of 8 (4+ a side) - minute Under, record 90%+ (options like it won 133 of 134)
+- Sun 11:15  RKC Waalwijk v FC Volendam  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    record 10 of 10 (5+ a side) - minute Under, record 90%+ (options like it won 133 of 134)
+- Sun 11:15  Gornik Zabrze v GKS Piast Gliwice  -  Total Goals from 1 to 35 min / Under 2.5 @1.03
+    record 12 of 12 (5+ a side) - minute Under, record 90%+ (options like it won 111 of 117)
+- Sun 11:30  Udinese v Lecce  -  Match Result after 5 Minutes / Draw @1.09
+    record 9 of 9 (4+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 11:30  Kasimpasa Istanbul v Samsunspor  -  Match Result after 5 Minutes / Draw @1.09
+    record 6 of 6 (3+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 12:00  BK Olympic v Utsiktens BK  -  1X2 / Home @1.17
+    the book's most likely option on this game (no-margin chance 0.79), price 1.15-2.00
+- Sun 12:00  1. FC Slovacko Uherske Hradiste v FC Zbrojovka Brno  -  Total Goals from 1 to 75 min / Under 4.5 @1.03
+    record 9 of 10 (4+ a side) - minute Under, record 90%+ (options like it won 108 of 116)
+- Sun 12:00  Beijing Guoan v Qingdao West Coast FC  -  Total Goals from 1 to 60 min / Under 4.5 @1.04
+    record 13 of 14 (6+ a side) - minute Under, record 90%+ (options like it won 133 of 134)
+- Sun 12:30  Albirex Niigata Singapore FC v Lion City Sailors FC  -  Double Chance / Draw or Away @1.15
+    the book's most likely option on this game (no-margin chance 0.82), price 1.15-2.00
+- Sun 12:30  Dynamo Dresden v 1. FC Magdeburg  -  Total Goals from 1 to 65 min / Under 4.5 @1.04
+    record 7 of 7 (3+ a side) - minute Under, record 90%+ (options like it won 121 of 124)
+- Sun 12:30  Karlsruher SC v Darmstadt  -  Total Goals from 1 to 5 min / Under 0.5 @1.15
+    record 8 of 8 (4+ a side) - minute Under, record 90%+ (options like it won 51 of 53)
+- Sun 13:00  Tusker Football Club v Singida Black Stars FC  -  Double Chance / Draw or Away @1.23
+    the book's most likely option on this game (no-margin chance 0.76), price 1.15-2.00
+- Sun 13:00  Pas Pyrgos v Anagennisi Karditsas 1904  -  Double Chance / Draw or Away @1.24
+    the book's most likely option on this game (no-margin chance 0.75), price 1.15-2.00
+- Sun 13:00  FC Fratria Varna v POFC Botev Vratsa  -  Double Chance / Draw or Away @1.27
+    the book's most likely option on this game (no-margin chance 0.74), price 1.15-2.00
+- Sun 13:00  BK Astrio v Dalstorps IF  -  Double Chance / Draw or Away @1.15
+    the book's most likely option on this game (no-margin chance 0.81), price 1.15-2.00
+- Sun 13:00  FK Karlskrona v Rappe GOIF  -  1X2 / Home @1.21
+    the book's most likely option on this game (no-margin chance 0.75), price 1.15-2.00
+- Sun 13:00  AD Ceuta v Real Oviedo  -  Total Goals from 1 to 20 min / Under 1.5 @1.05
+    record 9 of 9 (4+ a side) - minute Under, record 90%+ (options like it won 77 of 82)
+- Sun 13:00  IK Sirius v IF Elfsborg  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    record 13 of 14 (6+ a side) - minute Under, record 90%+ (options like it won 104 of 108)
+- Sun 13:00  Lyngby BK v Nordsjaelland  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    record 12 of 12 (5+ a side) - minute Under, record 90%+ (options like it won 133 of 134)
+
+## 2026-10-17 17:57 WAT  |  five options (user's call: only Home, Draw or Away, 5-min draw, 10-min draw, minute Unders) - all games part 2 - 601.03x (48 games)  |  code RJE48P
+http://www.sportybet.com/ng/?shareCode=RJE48P
+- Sun 13:00  SonderjyskE v Silkeborg IF  -  Match Result after 5 Minutes / Draw @1.11
+    record 10 of 11 (4+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 13:30  Sarpsborg 08 v Rosenborg BK  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    record 12 of 12 (5+ a side) - minute Under, record 90%+ (options like it won 133 of 134)
+- Sun 13:30  SC Cambuur v Alkmaar  -  Total Goals from 1 to 55 min / Under 4.5 @1.03
+    record 10 of 10 (4+ a side) - minute Under, record 90%+ (options like it won 138 of 139)
+- Sun 13:30  Salzburg v SCR Altach  -  Total Goals from 1 to 85 min / Under 5.5 @1.04
+    record 12 of 12 (5+ a side) - minute Under, record 90%+ (options like it won 109 of 112)
+- Sun 13:30  Wolfsberger AC v WSG Tirol  -  Match Result after 5 Minutes / Draw @1.11
+    record 10 of 10 (4+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 13:45  Zaglebie Lubin v Jagiellonia Bialystok  -  Match Result after 5 Minutes / Draw @1.10
+    record 12 of 12 (5+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 14:00  Scottland FC v Atletico Petroleos de Luanda  -  Double Chance / Draw or Away @1.20
+    the book's most likely option on this game (no-margin chance 0.79), price 1.15-2.00
+- Sun 14:00  Pistoiese FC v Pavia Calcio 1911  -  1X2 / Home @1.17
+    the book's most likely option on this game (no-margin chance 0.78), price 1.15-2.00
+- Sun 14:00  Ancona-Matelica v Forsempronese 1949 SD ARL  -  1X2 / Home @1.45
+    the book's most likely option on this game (no-margin chance 0.63), price 1.15-2.00
+- Sun 14:00  Teramo Calcio v Termoli  -  1X2 / Home @1.34
+    the book's most likely option on this game (no-margin chance 0.68), price 1.15-2.00
+- Sun 14:00  ASD Sarnese 1926 v Citta Di Anagni  -  1X2 / Home @1.62
+    the book's most likely option on this game (no-margin chance 0.56), price 1.15-2.00
+- Sun 14:00  Unipomezia 1938 v Asd Aranova  -  1X2 / Home @1.73
+    the book's most likely option on this game (no-margin chance 0.52), price 1.15-2.00
+- Sun 14:00  Igea Virtus Barcellona v Ragusa Calcio  -  1X2 / Home @1.54
+    the book's most likely option on this game (no-margin chance 0.59), price 1.15-2.00
+- Sun 14:00  US Vibonese Calcio v Gela  -  1X2 / Home @1.36
+    the book's most likely option on this game (no-margin chance 0.67), price 1.15-2.00
+- Sun 14:00  Bournemouth v Sunderland AFC  -  Match Result after 5 Minutes / Draw @1.10
+    record 9 of 9 (4+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 14:00  Brighton v Crystal Palace  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    record 9 of 9 (4+ a side) - minute Under, record 90%+ (options like it won 133 of 134)
+- Sun 14:00  Leeds United v Man Utd  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    record 7 of 7 (3+ a side) - minute Under, record 90%+ (options like it won 121 of 124)
+- Sun 14:00  Fiorentina v Como 1907  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    record 9 of 10 (5+ a side) - minute Under, record 90%+ (options like it won 121 of 124)
+- Sun 14:00  Angers v Marseille  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    record 7 of 7 (3+ a side) - minute Under, record 90%+ (options like it won 121 of 124)
+- Sun 14:00  Kocaelispor v Goztepe Izmir  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    record 7 of 7 (3+ a side) - minute Under, record 90%+ (options like it won 104 of 108)
+- Sun 14:00  FC Banik Ostrava v Sparta Prague  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    record 10 of 11 (4+ a side) - minute Under, record 90%+ (options like it won 104 of 108)
+- Sun 14:00  HNK Hajduk Split v NK Varazdin  -  Total Goals from 1 to 35 min / Under 2.5 @1.03
+    record 13 of 13 (6+ a side) - minute Under, record 90%+ (options like it won 111 of 117)
+- Sun 14:00  PAE PS Kalamata v OFI Crete  -  Total Goals from 1 to 20 min / Under 1.5 @1.04
+    record 11 of 12 (5+ a side) - minute Under, record 90%+ (options like it won 77 of 82)
+- Sun 14:00  Kayserispor v Batman Petrolspor  -  10 Minutes - 1X2 / Draw @1.18
+    record 8 of 9 (4+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sun 14:05  Ittihad Kalba FC v Al Jazira (UAE)  -  10 Minutes - 1X2 / Draw @1.20
+    record 8 of 9 (3+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sun 14:30  Olympique de Beja v ES Sahel  -  Double Chance / Draw or Away @1.21
+    the book's most likely option on this game (no-margin chance 0.78), price 1.15-2.00
+- Sun 14:30  SCD Ligorna 1922 v AC Bra  -  1X2 / Home @1.59
+    the book's most likely option on this game (no-margin chance 0.57), price 1.15-2.00
+- Sun 14:30  FBC Gravina v FC Francavilla 1931  -  1X2 / Home @1.61
+    the book's most likely option on this game (no-margin chance 0.56), price 1.15-2.00
+- Sun 14:30  NK Vrhnika v ND Beltinci  -  Double Chance / Draw or Away @1.18
+    the book's most likely option on this game (no-margin chance 0.79), price 1.15-2.00
+- Sun 14:30  Bayer Leverkusen v Freiburg  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    record 7 of 7 (3+ a side) - minute Under, record 90%+ (options like it won 133 of 134)
+- Sun 14:30  MFk Dukla Banska Bystrica v FK Zeleziarne Podbrezova  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    record 11 of 11 (4+ a side) - minute Under, record 90%+ (options like it won 104 of 108)
+- Sun 15:00  Lusitania FC Lourosa v AD Os Limianos  -  1X2 / Home @1.21
+    the book's most likely option on this game (no-margin chance 0.78), price 1.15-2.00
+- Sun 15:00  Cp Calasancio v CD Varea  -  Double Chance / Draw or Away @1.24
+    the book's most likely option on this game (no-margin chance 0.75), price 1.15-2.00
+- Sun 15:15  Celta v Alaves  -  Match Result after 5 Minutes / Draw @1.09
+    record 8 of 8 (3+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 15:30  Malmo v BK Hacken  -  Total Goals from 1 to 65 min / Under 4.5 @1.04
+    record 13 of 14 (7+ a side) - minute Under, record 90%+ (options like it won 121 of 124)
+- Sun 15:30  Orgryte IS v GAIS  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    record 13 of 14 (7+ a side) - minute Under, record 90%+ (options like it won 121 of 124)
+- Sun 15:30  Panathinaikos v Asteras Tripolis  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    record 10 of 11 (3+ a side) - minute Under, record 90%+ (options like it won 104 of 108)
+- Sun 15:45  FC Groningen v Ajax  -  Total Goals from 1 to 55 min / Under 4.5 @1.03
+    record 11 of 11 (4+ a side) - minute Under, record 90%+ (options like it won 138 of 139)
+- Sun 15:45  MVV Maastricht v Heracles Almelo  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    record 9 of 10 (5+ a side) - minute Under, record 90%+ (options like it won 133 of 134)
+- Sun 16:00  Molde v IK Start  -  Total Goals from 1 to 55 min / Under 4.5 @1.03
+    record 12 of 12 (5+ a side) - minute Under, record 90%+ (options like it won 138 of 139)
+- Sun 16:00  Karpaty Lviv v FC Epitsentr Kamianets-Podilskyi  -  Total Goals from 1 to 5 min / Under 0.5 @1.10
+    record 9 of 10 (5+ a side) - minute Under, record 90%+ (options like it won 51 of 53)
+- Sun 16:00  Sturm Graz v Grazer AK 1902  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    record 11 of 12 (6+ a side) - minute Under, record 90%+ (options like it won 104 of 108)
+- Sun 16:15  Le Havre v AJ Auxerre  -  Match Result after 5 Minutes / Draw @1.10
+    record 6 of 6 (3+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 16:15  Lorient v Monaco  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    record 8 of 8 (3+ a side) - minute Under, record 90%+ (options like it won 104 of 108)
+- Sun 16:15  Paris FC v Rennes  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    record 6 of 6 (3+ a side) - minute Under, record 90%+ (options like it won 121 of 124)
+- Sun 16:15  Cesena FC v US Avellino  -  Total Goals from 1 to 35 min / Under 2.5 @1.03
+    record 6 of 6 (3+ a side) - minute Under, record 90%+ (options like it won 111 of 117)
+- Sun 16:15  FC Uta Arad v CFR Cluj  -  Total Goals from 1 to 5 min / Under 0.5 @1.10
+    record 12 of 12 (5+ a side) - minute Under, record 90%+ (options like it won 51 of 53)
+- Sun 16:30  Nottingham Forest v Arsenal  -  Match Result after 5 Minutes / Draw @1.10
+    record 9 of 9 (4+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+
+## 2026-10-17 17:57 WAT  |  five options (user's call: only Home, Draw or Away, 5-min draw, 10-min draw, minute Unders) - all games part 3 - 151.83x (46 games)  |  code M8CK4Z
+http://www.sportybet.com/ng/?shareCode=M8CK4Z
+- Sun 16:30  Cotillas CD v Union Molinense CF 2020  -  Double Chance / Draw or Away @1.19
+    the book's most likely option on this game (no-margin chance 0.78), price 1.15-2.00
+- Sun 16:30  Amurrio Club v CD San Ignacio  -  Double Chance / Draw or Away @1.19
+    the book's most likely option on this game (no-margin chance 0.79), price 1.15-2.00
+- Sun 16:30  Alcione Milano v Calcio Desenzano  -  10 Minutes - 1X2 / Draw @1.14
+    record 10 of 12 (4+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sun 16:30  US Albinoleffe v Novara FC  -  10 Minutes - 1X2 / Draw @1.14
+    record 8 of 9 (4+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sun 16:30  KKS Lech Poznan v Korona Kielce  -  Match Result after 5 Minutes / Draw @1.11
+    record 13 of 13 (6+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 17:00  AC Milan v Atalanta  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    record 6 of 6 (3+ a side) - minute Under, record 90%+ (options like it won 104 of 108)
+- Sun 17:00  Copenhagen v AGF Aarhus  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    record 13 of 14 (7+ a side) - minute Under, record 90%+ (options like it won 121 of 124)
+- Sun 17:00  NK Slaven Belupo v GNK Dinamo Zagreb  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    record 11 of 11 (4+ a side) - minute Under, record 90%+ (options like it won 133 of 134)
+- Sun 17:00  Sporting Cristal v Comerciantes Unidos  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    record 13 of 14 (7+ a side) - minute Under, record 90%+ (options like it won 121 of 124)
+- Sun 17:00  Tallinna FC Flora v Tartu JK Tammeka  -  10 Minutes - 1X2 / Draw @1.23
+    record 12 of 14 (6+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sun 17:30  Malaga CF v Real Sociedad  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    record 9 of 9 (4+ a side) - minute Under, record 90%+ (options like it won 104 of 108)
+- Sun 17:30  Girona v FC Andorra  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    record 9 of 9 (4+ a side) - minute Under, record 90%+ (options like it won 104 of 108)
+- Sun 17:30  Valladolid v Club Deportivo Eldense  -  Total Goals from 1 to 20 min / Under 1.5 @1.05
+    record 8 of 8 (4+ a side) - minute Under, record 90%+ (options like it won 77 of 82)
+- Sun 17:45  Al Gharafa SC v Al Rayyan SC  -  10 Minutes - 1X2 / Draw @1.23
+    record 9 of 10 (4+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sun 18:00  AE Kifisia FC v Aris Thessaloniki  -  Total Goals from 1 to 20 min / Under 1.5 @1.05
+    record 9 of 9 (4+ a side) - minute Under, record 90%+ (options like it won 77 of 82)
+- Sun 18:15  Hapoel Be`er Sheva FC v Hapoel Jerusalem FC  -  Match Result after 5 Minutes / Draw @1.11
+    record 12 of 13 (6+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 18:45  Maccabi Ironi Ashdod FC v Shimshon Tel Aviv  -  Double Chance / Draw or Away @1.26
+    the book's most likely option on this game (no-margin chance 0.74), price 1.15-2.00
+- Sun 18:45  Racing Club Avellaneda v CA Independiente Avellaneda  -  Match Result after 5 Minutes / Draw @1.07
+    record 13 of 14 (7+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 19:00  Biellese v Valenzana Mado  -  1X2 / Home @1.66
+    the book's most likely option on this game (no-margin chance 0.55), price 1.15-2.00
+- Sun 19:00  FC Twente Enschede v FC Utrecht  -  Total Goals from 1 to 55 min / Under 4.5 @1.03
+    record 11 of 11 (4+ a side) - minute Under, record 90%+ (options like it won 138 of 139)
+- Sun 19:00  NEC Nijmegen v Fortuna Sittard  -  Total Goals from 1 to 60 min / Under 4.5 @1.04
+    record 10 of 11 (4+ a side) - minute Under, record 90%+ (options like it won 133 of 134)
+- Sun 19:00  Al-Fateh SC v Al-Khaleej Club  -  Total Goals from 1 to 5 min / Under 0.5 @1.12
+    record 9 of 9 (4+ a side) - minute Under, record 90%+ (options like it won 51 of 53)
+- Sun 19:00  PAOK v POT Iraklis  -  Match Result after 5 Minutes / Draw @1.11
+    record 10 of 11 (4+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 19:00  CS Universitatea Craiova v FC Farul Constanta  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    record 14 of 14 (7+ a side) - minute Under, record 90%+ (options like it won 104 of 108)
+- Sun 19:00  NK Celik Zenica v HSK Zrinjski Mostar  -  10 Minutes - 1X2 / Draw @1.15
+    record 8 of 9 (4+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sun 19:15  FC Cajamarca v CD Moquegua  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    record 14 of 14 (7+ a side) - minute Under, record 90%+ (options like it won 104 of 108)
+- Sun 19:30  Club Atletico Los Andes v CA All Boys  -  10 Minutes - 1X2 / Draw @1.09
+    record 13 of 14 (6+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sun 19:30  KS Lechia Gdansk v MKS Arka Gdynia  -  10 Minutes - 1X2 / Draw @1.19
+    record 10 of 11 (5+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sun 19:45  Juventus v Lazio  -  Match Result after 5 Minutes / Draw @1.10
+    record 7 of 7 (3+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 20:00  Real Madrid v Sevilla  -  Total Goals from 1 to 55 min / Under 4.5 @1.03
+    record 9 of 9 (4+ a side) - minute Under, record 90%+ (options like it won 138 of 139)
+- Sun 20:00  Burgos CF v CE Sabadell FC  -  Total Goals from 1 to 5 min / Under 0.5 @1.07
+    record 9 of 10 (4+ a side) - minute Under, record 90%+ (options like it won 51 of 53)
+- Sun 20:00  Fluminense FC RJ v Santos FC SP  -  Match Result after 5 Minutes / Draw @1.10
+    record 13 of 14 (6+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 20:00  Gremio FB Porto Alegrense RS v Cruzeiro EC MG  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    record 13 of 14 (6+ a side) - minute Under, record 90%+ (options like it won 104 of 108)
+- Sun 20:00  Sao Bernardo FC v Criciuma EC SC  -  10 Minutes - 1X2 / Draw @1.13
+    record 12 of 14 (7+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sun 20:00  Aguilas Doradas Rionegro v CD Tolima  -  Total Goals from 1 to 20 min / Under 1.5 @1.04
+    record 12 of 13 (6+ a side) - minute Under, record 90%+ (options like it won 77 of 82)
+- Sun 20:30  Deportivo Rayo Zuliano v Caracas FC  -  Double Chance / Draw or Away @1.17
+    the book's most likely option on this game (no-margin chance 0.80), price 1.15-2.00
+- Sun 21:00  Cerro Porteno v Sportivo Ameliano  -  10 Minutes - 1X2 / Draw @1.16
+    record 12 of 14 (6+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sun 22:00  Chattanooga FC v New York City FC II  -  1X2 / Home @1.67
+    the book's most likely option on this game (no-margin chance 0.56), price 1.15-2.00
+- Sun 22:00  Estudiantes de La Plata v CA San Lorenzo de Almagro  -  Total Goals from 1 to 80 min / Under 3.5 @1.07
+    record 13 of 13 (6+ a side) - minute Under, record 90%+ (options like it won 29 of 33)
+- Sun 22:00  Estudiantes Rio Cuarto v CA Aldosivi  -  Total Goals from 1 to 80 min / Under 3.5 @1.06
+    record 12 of 13 (6+ a side) - minute Under, record 90%+ (options like it won 29 of 33)
+- Sun 22:00  CA Bucaramanga v America de Cali  -  Match Result after 5 Minutes / Draw @1.07
+    record 12 of 13 (5+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 22:00  San Martin de San Juan v CA Temperley  -  10 Minutes - 1X2 / Draw @1.11
+    record 12 of 14 (7+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sun 22:30  EC Bahia BA v CR Flamengo RJ  -  Match Result after 5 Minutes / Draw @1.11
+    record 13 of 13 (6+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 22:30  Barcelona SC v CD Universidad Catolica del Ecuador  -  10 Minutes - 1X2 / Draw @1.15
+    record 12 of 14 (6+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sun 22:30  San Martin de Tucuman v CA Ferrocarril Midland  -  10 Minutes - 1X2 / Draw @1.10
+    record 12 of 14 (6+ a side) - 10-min draw, record 80%+ (site 57 of 60)
+- Sun 23:30  Clube do Remo PA v Red Bull Bragantino SP  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    record 13 of 14 (6+ a side) - minute Under, record 90%+ (options like it won 104 of 108)
+
+## 2026-10-17 17:57 WAT  |  five options (user's call: only Home, Draw or Away, 5-min draw, 10-min draw, minute Unders) - 3x best chance - 3.01x (11 games)  |  code SHFLUR
+http://www.sportybet.com/ng/?shareCode=SHFLUR
+- Sun 01:30  Houston Dynamo v FC Dallas  -  Match Result after 5 Minutes / Draw @1.11
+    record 13 of 14 (7+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 13:00  SonderjyskE v Silkeborg IF  -  Match Result after 5 Minutes / Draw @1.11
+    record 10 of 11 (4+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 13:30  Wolfsberger AC v WSG Tirol  -  Match Result after 5 Minutes / Draw @1.11
+    record 10 of 10 (4+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 13:45  Zaglebie Lubin v Jagiellonia Bialystok  -  Match Result after 5 Minutes / Draw @1.10
+    record 12 of 12 (5+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 14:00  Bournemouth v Sunderland AFC  -  Match Result after 5 Minutes / Draw @1.10
+    record 9 of 9 (4+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 16:15  Le Havre v AJ Auxerre  -  Match Result after 5 Minutes / Draw @1.10
+    record 6 of 6 (3+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 16:30  KKS Lech Poznan v Korona Kielce  -  Match Result after 5 Minutes / Draw @1.11
+    record 13 of 13 (6+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 16:30  Nottingham Forest v Arsenal  -  Match Result after 5 Minutes / Draw @1.10
+    record 9 of 9 (4+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 18:15  Hapoel Be`er Sheva FC v Hapoel Jerusalem FC  -  Match Result after 5 Minutes / Draw @1.11
+    record 12 of 13 (6+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 19:00  PAOK v POT Iraklis  -  Match Result after 5 Minutes / Draw @1.11
+    record 10 of 11 (4+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+- Sun 19:45  Juventus v Lazio  -  Match Result after 5 Minutes / Draw @1.10
+    record 7 of 7 (3+ a side) - 5-min draw, record 90%+ (site 163 of 171)
