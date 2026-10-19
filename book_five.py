@@ -15,12 +15,18 @@ options returned more than was put in:
 Everything else - match and half goal lines, Home or Draw, Home or Away - won often
 and paid back 88 to 99. So this script books nothing else.
 
+19 Oct, user: "i cant keep lossing like this why did you pick home and not home or draw ?" -> "2"
+(Home or Draw instead of Home) -> "update the website and deploy it". Home or Draw REPLACES the
+home win: on the site's legs 3-19 Oct 14 of Home's 23 losses were draws (76 of 99), and on
+19 Oct Varberg 0-0, DVTK 2-2 and Diosgyori 2-2 lost as Home. Home or Draw went 224 of 278 on
+the same legs. The codes reach 100x on fewer days (lower prices); no other number changed.
+
 One leg per game, the option with the higher chance:
   minute legs  - only where the two sides' own past games back it, with the minute-mix
                  floors (book_minute_mix): 5-minute draw 90%+ of the record, 10-minute
                  draw 80%+, a minute Under 90%+ with 10+ calibrated games, 3+ answered
                  games a side. Chance = what that rung has won before.
-  Home / Draw or Away - only where it IS the book's most likely option at 1.15+, priced
+  Home or Draw / Draw or Away - only where it IS the book's most likely option at 1.15+, priced
                  2.00 or less, no record filter (the filter is how Lamelas Home @28.0
                  reached four codes on 17 Oct). Chance = the book's no-margin chance.
 Codes: the safest set of at most 50 games reaching --lo (ranged), trimmed under --hi,
@@ -61,7 +67,7 @@ def picks(start, cut):
         if not c:
             continue
         chance, price, mname, spec, desc, ids = max(c, key=lambda x: (round(x[0], 3), x[1]))
-        if (mname, desc) in (('1X2', 'Home'), ('Double Chance', 'Draw or Away')) and price <= 2.0:
+        if (mname, desc) in (('Double Chance', 'Home or Draw'), ('Double Chance', 'Draw or Away')) and price <= 2.0:
             cand[ev['eventId']].append(dict(ts=_ko(ev).timestamp(), match=name(ev), sel=f"{mname} / {desc}", odds=price, chance=chance,
                                             why=f"the book's most likely option on this game, chance {chance:.2f}"))
             cand[ev['eventId']][-1]['ids'] = ids
@@ -139,7 +145,7 @@ def main():
     cut += dt.timedelta(days=days)
     legs = picks(start, cut)
     print(f"{len(legs)} games picked: " + ', '.join(f"{k} {v}" for k, v in collections.Counter(
-        'Home' if l['sel'].endswith('/ Home') else 'Draw or Away' if 'Draw or Away' in l['sel'] else
+        'Home or Draw' if 'Home or Draw' in l['sel'] else 'Draw or Away' if 'Draw or Away' in l['sel'] else
         '5-min draw' if 'after 5' in l['sel'] else '10-min draw' if '10 Minutes' in l['sel'] else 'minute Under' for l in legs).most_common()), flush=True)
     codes, left = [], list(legs)
     while True:

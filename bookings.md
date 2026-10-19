@@ -304854,3 +304854,1428 @@ http://www.sportybet.com/ng/?shareCode=SHFLUR
     record 10 of 11 (4+ a side) - 5-min draw, record 90%+ (site 163 of 171)
 - Sun 19:45  Juventus v Lazio  -  Match Result after 5 Minutes / Draw @1.10
     record 7 of 7 (3+ a side) - 5-min draw, record 90%+ (site 163 of 171)
+
+## 2026-10-17 20:19 WAT  |  one market: 1st Half - Over/Under / Under 1.5 - 2.02x (3 games)  |  code MUCBEZ
+http://www.sportybet.com/ng/?shareCode=MUCBEZ
+- Sun 00:00  Atl. Tucuman v Rosario Central  -  1st Half - Over/Under / Under 1.5 @1.26
+    first halves under 1.5: 7/7+6/7 = 93% - busy window
+    expected first-half goals 0.71, model 84% v book 79%
+- Sat 23:00  Sol de America v Juventud U.U.  -  1st Half - Over/Under / Under 1.5 @1.19
+    first halves under 1.5: 5/7+5/7 = 71% - busy window
+    expected first-half goals 1.00, model 74% v book 84%
+- Sun 07:00  Nagano v Yamaga  -  1st Half - Over/Under / Under 1.5 @1.35
+    first halves under 1.5: 7/7+7/7 = 80% - busy window
+    expected first-half goals 0.90, model 77% v book 74%
+
+## 2026-10-17 21:05 WAT  |  one market: 1st Half - Over/Under / Under 1.5 (user's call: 50 games out of the 80, to Sun 08:00, shortest prices) - 12,758,795.13x (48 games)  |  code VBJ4HU
+http://www.sportybet.com/ng/?shareCode=VBJ4HU
+- Sat 22:00  Colon de Santa Fe v Club Almirante Brown  -  1st Half - Over/Under / Under 1.5 @1.24
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 8/10 8/10
+- Sat 22:00  CD. Cacahuatique v Alianza FC San Salvador  -  1st Half - Over/Under / Under 1.5 @1.40
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 3/7 6/10 5/10
+- Sat 22:00  Gimnasia de Chivilcoy v CA Defensores de Vilelas  -  1st Half - Over/Under / Under 1.5 @1.44
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 4/7 10/10 7/10
+- Sat 22:00  Platense FC Puerto Cortes v FC Motagua Tegucigalpa  -  1st Half - Over/Under / Under 1.5 @1.47
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 6/7 3/10 7/10
+- Sat 22:30  SD Aucas v LDU Quito  -  1st Half - Over/Under / Under 1.5 @1.29
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 6/7 9/10 8/10
+- Sat 22:30  America FC MG v Operario Ferroviario EC PR  -  1st Half - Over/Under / Under 1.5 @1.42
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 3/7 8/10 4/10
+- Sat 22:30  Atletico Mineiro MG v Coritiba FC PR  -  1st Half - Over/Under / Under 1.5 @1.50
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 8/10 7/10
+- Sat 23:00  CA Sol de America de Formosa v CA Juventud Unida Universitario San Luis  -  1st Half - Over/Under / Under 1.5 @1.19
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 8/10
+- Sat 23:00  Deportivo Merlo v CA Talleres de Remedios  -  1st Half - Over/Under / Under 1.5 @1.24
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 7/7 10/10 8/10
+- Sat 23:00  Real Pilar FC v CA Ituzaingo  -  1st Half - Over/Under / Under 1.5 @1.34
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 7/10
+- Sat 23:00  Richmond Kickers v Corpus Christi FC  -  1st Half - Over/Under / Under 1.5 @1.52
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 5/10 7/10
+- Sat 23:20  Club Olimpia v CS 2 de Mayo  -  1st Half - Over/Under / Under 1.5 @1.44
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 2/7 6/10 6/10
+- Sat 23:30  CSB Atenas v Fadep  -  1st Half - Over/Under / Under 1.5 @1.26
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sat 23:30  Carabobo FC v Deportivo Tachira  -  1st Half - Over/Under / Under 1.5 @1.39
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 5/7 8/10 5/10
+- Sat 23:30  CA Paranaense PR v SE Palmeiras SP  -  1st Half - Over/Under / Under 1.5 @1.43
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 00:00  Atletico Tucuman v CA Rosario Central  -  1st Half - Over/Under / Under 1.5 @1.27
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 6/7 10/10 9/10
+- Sun 00:00  CA Bartolome Mitre v CA Boca Unidos Corrientes  -  1st Half - Over/Under / Under 1.5 @1.27
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 8/10 8/10
+- Sun 00:00  Velez Sarsfield v Gimnasia y Esgrima Mendoza  -  1st Half - Over/Under / Under 1.5 @1.36
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 7/10 7/10
+- Sun 00:00  Unan Managua v San Marcos FC  -  1st Half - Over/Under / Under 1.5 @1.46
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 9/10 6/10
+- Sun 00:07  CD Guadalajara v Tigres UANL  -  1st Half - Over/Under / Under 1.5 @1.48
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 5/10
+- Sun 00:15  CA Independiente de La Chorrera v Veraguas United FC  -  1st Half - Over/Under / Under 1.5 @1.38
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 5/10 5/10
+- Sun 00:15  Juticalpa FC v CD Choloma  -  1st Half - Over/Under / Under 1.5 @1.49
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 2/7 6/10 5/10
+- Sun 00:30  Rhode Island FC v Pittsburgh Riverhounds  -  1st Half - Over/Under / Under 1.5 @1.25
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 7/10 7/10
+- Sun 00:30  Tampa Bay Rowdies v Detroit City FC  -  1st Half - Over/Under / Under 1.5 @1.33
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 6/7 9/10 10/10
+- Sun 00:30  New York City FC v Los Angeles FC  -  1st Half - Over/Under / Under 1.5 @1.52
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 6/10 8/10
+- Sun 00:30  Fort Wayne FC v Sarasota Paradise  -  1st Half - Over/Under / Under 1.5 @1.53
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 4/10 4/10
+- Sun 01:00  Sao Paulo FC SP v CR Vasco da Gama RJ  -  1st Half - Over/Under / Under 1.5 @1.35
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 7/7 7/10 9/10
+- Sun 01:00  FC Tulsa v Oakland Roots SC  -  1st Half - Over/Under / Under 1.5 @1.40
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 6/7 7/10 9/10
+- Sun 01:30  San Antonio FC v New Mexico United  -  1st Half - Over/Under / Under 1.5 @1.46
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 3/7 9/10 6/10
+- Sun 01:30  Houston Dynamo v FC Dallas  -  1st Half - Over/Under / Under 1.5 @1.49
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 3/7 8/10 6/10
+- Sun 02:00  Spokane Velocity FC v Chattanooga Red Wolves SC  -  1st Half - Over/Under / Under 1.5 @1.45
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 4/10 7/10
+- Sun 02:00  Club Leon v CF America  -  1st Half - Over/Under / Under 1.5 @1.52
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 3/7 10/10 3/10
+- Sun 02:10  Independiente Medellin v CD Once Caldas  -  1st Half - Over/Under / Under 1.5 @1.41
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 4/7 3/10 6/10
+- Sun 02:30  CA Independiente Siguatepeque v Lobos UPNFM  -  1st Half - Over/Under / Under 1.5 @1.43
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/4 2/7 6/9 6/10
+- Sun 03:00  Inter San Carlos v Liga Deportiva Alajuelense  -  1st Half - Over/Under / Under 1.5 @1.40
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 8/10 5/10
+- Sun 03:00  Orange County SC v Phoenix Rising FC  -  1st Half - Over/Under / Under 1.5 @1.50
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 3/7 7/10 4/10
+- Sun 03:00  Monterey Bay FC v Colorado Springs Switchbacks FC  -  1st Half - Over/Under / Under 1.5 @1.52
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 6/10 7/10
+- Sun 04:00  Alacranes de Durango v CD Tapatio  -  1st Half - Over/Under / Under 1.5 @1.46
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 5/10
+- Sun 05:00  Iwaki FC v Ventforet Kofu  -  1st Half - Over/Under / Under 1.5 @1.44
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 7/10 7/10
+- Sun 05:00  Tiamo Hirakata v Iwate Grulla Morioka  -  1st Half - Over/Under / Under 1.5 @1.48
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 05:55  Fagiano Okayama v Vissel Kobe  -  1st Half - Over/Under / Under 1.5 @1.38
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 5/10 8/10
+- Sun 06:00  Kamatamare Sanuki v Roasso Kumamoto  -  1st Half - Over/Under / Under 1.5 @1.42
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 8/10 7/10
+- Sun 06:00  Jeonbuk FC v Jeju SK FC  -  1st Half - Over/Under / Under 1.5 @1.44
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 8/10 9/10
+- Sun 06:00  Renofa Yamaguchi v Kochi United SC  -  1st Half - Over/Under / Under 1.5 @1.46
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 6/7 4/10 8/10
+- Sun 06:00  Mio Biwako Shiga v SC Sagamihara  -  1st Half - Over/Under / Under 1.5 @1.48
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 1/7 6/10 4/10
+- Sun 06:00  Suwon Bluewings v Hwaseong FC  -  1st Half - Over/Under / Under 1.5 @1.49
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 7/10
+- Sun 07:00  AC Nagano Parceiro v Matsumoto Yamaga FC  -  1st Half - Over/Under / Under 1.5 @1.35
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 7/7 8/10 8/10
+- Sun 08:00  Machida Zelvia v Avispa Fukuoka  -  1st Half - Over/Under / Under 1.5 @1.39
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 9/10 6/10
+
+## 2026-10-17 21:13 WAT  |  one market: 1st Half - Over/Under / Under 1.5 (user's call: 50 games out of the 80, to Sun 08:00, shortest prices) - 26,085,356.65x (50 games)  |  code HMSYCW
+http://www.sportybet.com/ng/?shareCode=HMSYCW
+- Sat 22:00  Colon de Santa Fe v Club Almirante Brown  -  1st Half - Over/Under / Under 1.5 @1.24
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 8/10 8/10
+- Sat 22:00  CD. Cacahuatique v Alianza FC San Salvador  -  1st Half - Over/Under / Under 1.5 @1.40
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 3/7 6/10 5/10
+- Sat 22:00  Gimnasia de Chivilcoy v CA Defensores de Vilelas  -  1st Half - Over/Under / Under 1.5 @1.44
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 4/7 10/10 7/10
+- Sat 22:00  Platense FC Puerto Cortes v FC Motagua Tegucigalpa  -  1st Half - Over/Under / Under 1.5 @1.47
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 6/7 3/10 7/10
+- Sat 22:30  SD Aucas v LDU Quito  -  1st Half - Over/Under / Under 1.5 @1.29
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 6/7 9/10 8/10
+- Sat 22:30  America FC MG v Operario Ferroviario EC PR  -  1st Half - Over/Under / Under 1.5 @1.42
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 3/7 8/10 4/10
+- Sat 22:30  Atletico Mineiro MG v Coritiba FC PR  -  1st Half - Over/Under / Under 1.5 @1.50
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 8/10 7/10
+- Sat 23:00  CA Sol de America de Formosa v CA Juventud Unida Universitario San Luis  -  1st Half - Over/Under / Under 1.5 @1.19
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 8/10
+- Sat 23:00  Deportivo Merlo v CA Talleres de Remedios  -  1st Half - Over/Under / Under 1.5 @1.24
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 7/7 10/10 8/10
+- Sat 23:00  Real Pilar FC v CA Ituzaingo  -  1st Half - Over/Under / Under 1.5 @1.34
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 7/10
+- Sat 23:00  Richmond Kickers v Corpus Christi FC  -  1st Half - Over/Under / Under 1.5 @1.52
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 5/10 7/10
+- Sat 23:20  Club Olimpia v CS 2 de Mayo  -  1st Half - Over/Under / Under 1.5 @1.44
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 2/7 6/10 6/10
+- Sat 23:30  CSB Atenas v Fadep  -  1st Half - Over/Under / Under 1.5 @1.26
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sat 23:30  Carabobo FC v Deportivo Tachira  -  1st Half - Over/Under / Under 1.5 @1.39
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 5/7 8/10 5/10
+- Sat 23:30  CA Paranaense PR v SE Palmeiras SP  -  1st Half - Over/Under / Under 1.5 @1.43
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 00:00  Atletico Tucuman v CA Rosario Central  -  1st Half - Over/Under / Under 1.5 @1.27
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 6/7 10/10 9/10
+- Sun 00:00  CA Bartolome Mitre v CA Boca Unidos Corrientes  -  1st Half - Over/Under / Under 1.5 @1.27
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 8/10 8/10
+- Sun 00:00  Velez Sarsfield v Gimnasia y Esgrima Mendoza  -  1st Half - Over/Under / Under 1.5 @1.36
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 7/10 7/10
+- Sun 00:00  Unan Managua v San Marcos FC  -  1st Half - Over/Under / Under 1.5 @1.46
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 9/10 6/10
+- Sun 00:07  CD Guadalajara v Tigres UANL  -  1st Half - Over/Under / Under 1.5 @1.48
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 5/10
+- Sun 00:15  CA Independiente de La Chorrera v Veraguas United FC  -  1st Half - Over/Under / Under 1.5 @1.38
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 5/10 5/10
+- Sun 00:15  Juticalpa FC v CD Choloma  -  1st Half - Over/Under / Under 1.5 @1.49
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 2/7 6/10 5/10
+- Sun 00:30  Rhode Island FC v Pittsburgh Riverhounds  -  1st Half - Over/Under / Under 1.5 @1.25
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 7/10 7/10
+- Sun 00:30  Tampa Bay Rowdies v Detroit City FC  -  1st Half - Over/Under / Under 1.5 @1.33
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 6/7 9/10 10/10
+- Sun 00:30  New York City FC v Los Angeles FC  -  1st Half - Over/Under / Under 1.5 @1.52
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 6/10 8/10
+- Sun 00:30  Fort Wayne FC v Sarasota Paradise  -  1st Half - Over/Under / Under 1.5 @1.53
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 4/10 4/10
+- Sun 01:00  Sao Paulo FC SP v CR Vasco da Gama RJ  -  1st Half - Over/Under / Under 1.5 @1.35
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 7/7 7/10 9/10
+- Sun 01:00  FC Tulsa v Oakland Roots SC  -  1st Half - Over/Under / Under 1.5 @1.40
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 6/7 7/10 9/10
+- Sun 01:30  San Antonio FC v New Mexico United  -  1st Half - Over/Under / Under 1.5 @1.46
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 3/7 9/10 6/10
+- Sun 01:30  Houston Dynamo v FC Dallas  -  1st Half - Over/Under / Under 1.5 @1.49
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 3/7 8/10 6/10
+- Sun 02:00  El Paso Locomotive FC v Sacramento Republic FC  -  1st Half - Over/Under / Under 1.5 @1.41
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 6/7 3/10 8/10
+- Sun 02:00  Spokane Velocity FC v Chattanooga Red Wolves SC  -  1st Half - Over/Under / Under 1.5 @1.45
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 4/10 7/10
+- Sun 02:00  AD Isidro Metapan v CD Fuerte San Francisco Morazan  -  1st Half - Over/Under / Under 1.5 @1.45
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 6/7 9/10 8/10
+- Sun 02:00  Club Leon v CF America  -  1st Half - Over/Under / Under 1.5 @1.52
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 3/7 10/10 3/10
+- Sun 02:10  Independiente Medellin v CD Once Caldas  -  1st Half - Over/Under / Under 1.5 @1.41
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 4/7 3/10 6/10
+- Sun 02:30  CA Independiente Siguatepeque v Lobos UPNFM  -  1st Half - Over/Under / Under 1.5 @1.43
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/4 2/7 6/9 6/10
+- Sun 03:00  Inter San Carlos v Liga Deportiva Alajuelense  -  1st Half - Over/Under / Under 1.5 @1.40
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 8/10 5/10
+- Sun 03:00  Orange County SC v Phoenix Rising FC  -  1st Half - Over/Under / Under 1.5 @1.50
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 3/7 7/10 4/10
+- Sun 03:00  Monterey Bay FC v Colorado Springs Switchbacks FC  -  1st Half - Over/Under / Under 1.5 @1.52
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 6/10 7/10
+- Sun 04:00  Alacranes de Durango v CD Tapatio  -  1st Half - Over/Under / Under 1.5 @1.46
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 5/10
+- Sun 05:00  Iwaki FC v Ventforet Kofu  -  1st Half - Over/Under / Under 1.5 @1.44
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 7/10 7/10
+- Sun 05:00  Tiamo Hirakata v Iwate Grulla Morioka  -  1st Half - Over/Under / Under 1.5 @1.48
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 05:55  Fagiano Okayama v Vissel Kobe  -  1st Half - Over/Under / Under 1.5 @1.38
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 5/10 8/10
+- Sun 06:00  Kamatamare Sanuki v Roasso Kumamoto  -  1st Half - Over/Under / Under 1.5 @1.42
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 8/10 7/10
+- Sun 06:00  Jeonbuk FC v Jeju SK FC  -  1st Half - Over/Under / Under 1.5 @1.44
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 8/10 9/10
+- Sun 06:00  Renofa Yamaguchi v Kochi United SC  -  1st Half - Over/Under / Under 1.5 @1.46
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 6/7 4/10 8/10
+- Sun 06:00  Mio Biwako Shiga v SC Sagamihara  -  1st Half - Over/Under / Under 1.5 @1.48
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 1/7 6/10 4/10
+- Sun 06:00  Suwon Bluewings v Hwaseong FC  -  1st Half - Over/Under / Under 1.5 @1.49
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 7/10
+- Sun 07:00  AC Nagano Parceiro v Matsumoto Yamaga FC  -  1st Half - Over/Under / Under 1.5 @1.35
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 7/7 8/10 8/10
+- Sun 08:00  Machida Zelvia v Avispa Fukuoka  -  1st Half - Over/Under / Under 1.5 @1.39
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 9/10 6/10
+
+## 2026-10-17 21:21 WAT  |  one market: 1st Half - Over/Under / Under 1.5 (user's call: best 30 of the 50 on HMSYCW - every record column at half or better, ranked by the four columns pooled, plus Tampa Bay v Detroit 28 of 34) - 16,724.17x (30 games)  |  code VAAHYQ
+http://www.sportybet.com/ng/?shareCode=VAAHYQ
+- Sat 22:00  Colon de Santa Fe v Club Almirante Brown  -  1st Half - Over/Under / Under 1.5 @1.24
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 8/10 8/10
+- Sat 22:00  Gimnasia de Chivilcoy v CA Defensores de Vilelas  -  1st Half - Over/Under / Under 1.5 @1.44
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 4/7 10/10 7/10
+- Sat 22:30  SD Aucas v LDU Quito  -  1st Half - Over/Under / Under 1.5 @1.29
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 6/7 9/10 8/10
+- Sat 22:30  Atletico Mineiro MG v Coritiba FC PR  -  1st Half - Over/Under / Under 1.5 @1.50
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 8/10 7/10
+- Sat 23:00  CA Sol de America de Formosa v CA Juventud Unida Universitario San Luis  -  1st Half - Over/Under / Under 1.5 @1.19
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 8/10
+- Sat 23:00  Deportivo Merlo v CA Talleres de Remedios  -  1st Half - Over/Under / Under 1.5 @1.24
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 7/7 10/10 8/10
+- Sat 23:00  Real Pilar FC v CA Ituzaingo  -  1st Half - Over/Under / Under 1.5 @1.34
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 7/10
+- Sat 23:00  Richmond Kickers v Corpus Christi FC  -  1st Half - Over/Under / Under 1.5 @1.52
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 5/10 7/10
+- Sat 23:30  Carabobo FC v Deportivo Tachira  -  1st Half - Over/Under / Under 1.5 @1.39
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 5/7 8/10 5/10
+- Sun 00:00  Atletico Tucuman v CA Rosario Central  -  1st Half - Over/Under / Under 1.5 @1.27
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 6/7 10/10 9/10
+- Sun 00:00  CA Bartolome Mitre v CA Boca Unidos Corrientes  -  1st Half - Over/Under / Under 1.5 @1.27
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 8/10 8/10
+- Sun 00:00  Velez Sarsfield v Gimnasia y Esgrima Mendoza  -  1st Half - Over/Under / Under 1.5 @1.36
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 7/10 7/10
+- Sun 00:00  Unan Managua v San Marcos FC  -  1st Half - Over/Under / Under 1.5 @1.46
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 9/10 6/10
+- Sun 00:07  CD Guadalajara v Tigres UANL  -  1st Half - Over/Under / Under 1.5 @1.48
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 5/10
+- Sun 00:30  Rhode Island FC v Pittsburgh Riverhounds  -  1st Half - Over/Under / Under 1.5 @1.25
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 7/10 7/10
+- Sun 00:30  Tampa Bay Rowdies v Detroit City FC  -  1st Half - Over/Under / Under 1.5 @1.33
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 6/7 9/10 10/10
+- Sun 00:30  New York City FC v Los Angeles FC  -  1st Half - Over/Under / Under 1.5 @1.52
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 6/10 8/10
+- Sun 01:00  Sao Paulo FC SP v CR Vasco da Gama RJ  -  1st Half - Over/Under / Under 1.5 @1.35
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 7/7 7/10 9/10
+- Sun 01:00  FC Tulsa v Oakland Roots SC  -  1st Half - Over/Under / Under 1.5 @1.40
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 6/7 7/10 9/10
+- Sun 02:00  AD Isidro Metapan v CD Fuerte San Francisco Morazan  -  1st Half - Over/Under / Under 1.5 @1.45
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 6/7 9/10 8/10
+- Sun 03:00  Inter San Carlos v Liga Deportiva Alajuelense  -  1st Half - Over/Under / Under 1.5 @1.40
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 8/10 5/10
+- Sun 03:00  Monterey Bay FC v Colorado Springs Switchbacks FC  -  1st Half - Over/Under / Under 1.5 @1.52
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 6/10 7/10
+- Sun 04:00  Alacranes de Durango v CD Tapatio  -  1st Half - Over/Under / Under 1.5 @1.46
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 5/10
+- Sun 05:00  Iwaki FC v Ventforet Kofu  -  1st Half - Over/Under / Under 1.5 @1.44
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 7/10 7/10
+- Sun 05:55  Fagiano Okayama v Vissel Kobe  -  1st Half - Over/Under / Under 1.5 @1.38
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 5/10 8/10
+- Sun 06:00  Kamatamare Sanuki v Roasso Kumamoto  -  1st Half - Over/Under / Under 1.5 @1.42
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 8/10 7/10
+- Sun 06:00  Jeonbuk FC v Jeju SK FC  -  1st Half - Over/Under / Under 1.5 @1.44
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 8/10 9/10
+- Sun 06:00  Suwon Bluewings v Hwaseong FC  -  1st Half - Over/Under / Under 1.5 @1.49
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 7/10
+- Sun 07:00  AC Nagano Parceiro v Matsumoto Yamaga FC  -  1st Half - Over/Under / Under 1.5 @1.35
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 7/7 8/10 8/10
+- Sun 08:00  Machida Zelvia v Avispa Fukuoka  -  1st Half - Over/Under / Under 1.5 @1.39
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 9/10 6/10
+
+## 2026-10-18 09:00 WAT  |  one market: 1st Half - Over/Under / Under 1.5 (user's call: 20-25 games, today to 23:59, shortest prices) - 80.84x (20 games)  |  code YH81ZM
+http://www.sportybet.com/ng/?shareCode=YH81ZM
+- Sun 12:00  Bac Ninh v Binh Phuoc  -  1st Half - Over/Under / Under 1.5 @1.28
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 15:00  Vitoria Setubal v Uniao Serra  -  1st Half - Over/Under / Under 1.5 @1.28
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 1/7 3/7 3/10 6/10
+- Sun 17:00  FK Decic Tuzi v FK Buducnost  -  1st Half - Over/Under / Under 1.5 @1.26
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 8/10 9/10
+- Sun 18:45  Racing Club Avellaneda v CA Independiente Avellaneda  -  1st Half - Over/Under / Under 1.5 @1.30
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 7/7 6/10 9/10
+- Sun 19:00  Wydad Temara v Kawkab Athletic Club of Marrakech  -  1st Half - Over/Under / Under 1.5 @1.21
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 8/10 7/10
+- Sun 19:00  Deportivo Moron v Mitre Santiago del Estero  -  1st Half - Over/Under / Under 1.5 @1.26
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 6/10 7/10
+- Sun 19:30  Club Atletico Los Andes v CA All Boys  -  1st Half - Over/Under / Under 1.5 @1.19
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 7/7 9/10 10/10
+- Sun 19:30  CA Alvarado v Club Cipolletti  -  1st Half - Over/Under / Under 1.5 @1.22
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 9/10 7/10
+- Sun 19:30  Sportivo General San Martin Formosa v Club Olimpo  -  1st Half - Over/Under / Under 1.5 @1.25
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 7/7 7/10 10/10
+- Sun 19:30  Nueva Chicago v Gimnasia y Esgrima de Jujuy  -  1st Half - Over/Under / Under 1.5 @1.29
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 10/10 5/10
+- Sun 20:00  Burgos CF v CE Sabadell FC  -  1st Half - Over/Under / Under 1.5 @1.24
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 7/10 5/10
+- Sun 20:00  Villa Mitre de Bahia Blanca v Costa Brava de General Pico  -  1st Half - Over/Under / Under 1.5 @1.24
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 7/10 7/10
+- Sun 20:00  Ferro Carril Oeste v CA Racing de Cordoba  -  1st Half - Over/Under / Under 1.5 @1.28
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 9/10 8/10
+- Sun 20:15  CD Argentino Monte Maiz v AC San Martin de Mendoza  -  1st Half - Over/Under / Under 1.5 @1.24
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 7/7 10/10 7/10
+- Sun 21:00  CA Chaco For Ever v CA Central Norte Salta  -  1st Half - Over/Under / Under 1.5 @1.21
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 3/7 8/10 8/10
+- Sun 22:00  Estudiantes Rio Cuarto v CA Aldosivi  -  1st Half - Over/Under / Under 1.5 @1.21
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 8/10 7/10
+- Sun 22:00  San Martin de San Juan v CA Temperley  -  1st Half - Over/Under / Under 1.5 @1.22
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 7/7 8/10 7/10
+- Sun 22:00  CD Godoy Cruz v CA Estudiantes  -  1st Half - Over/Under / Under 1.5 @1.25
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 7/7 8/10 10/10
+- Sun 22:30  San Martin de Tucuman v CA Ferrocarril Midland  -  1st Half - Over/Under / Under 1.5 @1.21
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 6/7 8/10 8/10
+- Sun 22:30  CA Sarmiento de la Banda v CS Belgrano  -  1st Half - Over/Under / Under 1.5 @1.28
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 7/7 7/10 8/10
+
+## 2026-10-18 09:00 WAT  |  one market: 1st Half - Over/Under / Under 1.5 (user's call: 20-25 games, today to 23:59, shortest prices) - 304.78x (25 games)  |  code PG1RZJ
+http://www.sportybet.com/ng/?shareCode=PG1RZJ
+- Sun 12:00  Bac Ninh v Binh Phuoc  -  1st Half - Over/Under / Under 1.5 @1.28
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 12:30  Nanjing City v Shijiazhuang Gongfu FC  -  1st Half - Over/Under / Under 1.5 @1.31
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 8/10 7/10
+- Sun 15:00  Vitoria Setubal v Uniao Serra  -  1st Half - Over/Under / Under 1.5 @1.28
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 1/7 3/7 3/10 6/10
+- Sun 15:15  Celta v Alaves  -  1st Half - Over/Under / Under 1.5 @1.31
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 8/10 7/10
+- Sun 17:00  FK Decic Tuzi v FK Buducnost  -  1st Half - Over/Under / Under 1.5 @1.26
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 8/10 9/10
+- Sun 18:45  Racing Club Avellaneda v CA Independiente Avellaneda  -  1st Half - Over/Under / Under 1.5 @1.30
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 7/7 6/10 9/10
+- Sun 19:00  Wydad Temara v Kawkab Athletic Club of Marrakech  -  1st Half - Over/Under / Under 1.5 @1.21
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 8/10 7/10
+- Sun 19:00  Deportivo Moron v Mitre Santiago del Estero  -  1st Half - Over/Under / Under 1.5 @1.26
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 6/10 7/10
+- Sun 19:30  Club Atletico Los Andes v CA All Boys  -  1st Half - Over/Under / Under 1.5 @1.19
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 7/7 9/10 10/10
+- Sun 19:30  CA Alvarado v Club Cipolletti  -  1st Half - Over/Under / Under 1.5 @1.22
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 9/10 7/10
+- Sun 19:30  Sportivo General San Martin Formosa v Club Olimpo  -  1st Half - Over/Under / Under 1.5 @1.25
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 7/7 7/10 10/10
+- Sun 19:30  Nueva Chicago v Gimnasia y Esgrima de Jujuy  -  1st Half - Over/Under / Under 1.5 @1.29
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 10/10 5/10
+- Sun 20:00  Burgos CF v CE Sabadell FC  -  1st Half - Over/Under / Under 1.5 @1.24
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 7/10 5/10
+- Sun 20:00  Villa Mitre de Bahia Blanca v Costa Brava de General Pico  -  1st Half - Over/Under / Under 1.5 @1.24
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 7/10 7/10
+- Sun 20:00  Ferro Carril Oeste v CA Racing de Cordoba  -  1st Half - Over/Under / Under 1.5 @1.28
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 9/10 8/10
+- Sun 20:00  Avai FC SC v Athletic Club Sjdr MG  -  1st Half - Over/Under / Under 1.5 @1.30
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 7/10 5/10
+- Sun 20:00  Sao Bernardo FC v Criciuma EC SC  -  1st Half - Over/Under / Under 1.5 @1.30
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 8/10 8/10
+- Sun 20:15  CD Argentino Monte Maiz v AC San Martin de Mendoza  -  1st Half - Over/Under / Under 1.5 @1.24
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 7/7 10/10 7/10
+- Sun 21:00  CA Chaco For Ever v CA Central Norte Salta  -  1st Half - Over/Under / Under 1.5 @1.21
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 3/7 8/10 8/10
+- Sun 22:00  Estudiantes Rio Cuarto v CA Aldosivi  -  1st Half - Over/Under / Under 1.5 @1.21
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 8/10 7/10
+- Sun 22:00  San Martin de San Juan v CA Temperley  -  1st Half - Over/Under / Under 1.5 @1.22
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 7/7 8/10 7/10
+- Sun 22:00  CD Godoy Cruz v CA Estudiantes  -  1st Half - Over/Under / Under 1.5 @1.25
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 7/7 8/10 10/10
+- Sun 22:00  Estudiantes de La Plata v CA San Lorenzo de Almagro  -  1st Half - Over/Under / Under 1.5 @1.30
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 9/10
+- Sun 22:30  San Martin de Tucuman v CA Ferrocarril Midland  -  1st Half - Over/Under / Under 1.5 @1.21
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 6/7 8/10 8/10
+- Sun 22:30  CA Sarmiento de la Banda v CS Belgrano  -  1st Half - Over/Under / Under 1.5 @1.28
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 7/7 7/10 8/10
+
+## 2026-10-18 09:10 WAT  |  one market: 1st Half - Over/Under / Under 1.5 (user's call: make it 30 - PG1RZJ's 25 + the next 5 shortest today) - 1,212.12x (30 games)  |  code T0LDM3
+http://www.sportybet.com/ng/?shareCode=T0LDM3
+- Sun 12:00  Bac Ninh v Binh Phuoc  -  1st Half - Over/Under / Under 1.5 @1.28
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 12:00  Karcag SE v Szeged-Csanad Grosics Akademia  -  1st Half - Over/Under / Under 1.5 @1.32
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 12:30  Nanjing City v Shijiazhuang Gongfu FC  -  1st Half - Over/Under / Under 1.5 @1.31
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 8/10 7/10
+- Sun 15:00  Vitoria Setubal v Uniao Serra  -  1st Half - Over/Under / Under 1.5 @1.28
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 1/7 3/7 3/10 6/10
+- Sun 15:00  FC Felgueiras 1932 v AD Fafe  -  1st Half - Over/Under / Under 1.5 @1.32
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 8/10 7/10
+- Sun 15:15  Celta v Alaves  -  1st Half - Over/Under / Under 1.5 @1.31
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 8/10 7/10
+- Sun 17:00  FK Decic Tuzi v FK Buducnost  -  1st Half - Over/Under / Under 1.5 @1.26
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 8/10 9/10
+- Sun 18:45  Racing Club Avellaneda v CA Independiente Avellaneda  -  1st Half - Over/Under / Under 1.5 @1.30
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 7/7 6/10 9/10
+- Sun 19:00  Wydad Temara v Kawkab Athletic Club of Marrakech  -  1st Half - Over/Under / Under 1.5 @1.21
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 8/10 7/10
+- Sun 19:00  Deportivo Moron v Mitre Santiago del Estero  -  1st Half - Over/Under / Under 1.5 @1.26
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 6/10 7/10
+- Sun 19:30  CA Alvarado v Club Cipolletti  -  1st Half - Over/Under / Under 1.5 @1.22
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 9/10 7/10
+- Sun 19:30  Sportivo General San Martin Formosa v Club Olimpo  -  1st Half - Over/Under / Under 1.5 @1.25
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 7/7 7/10 10/10
+- Sun 19:30  Club Atletico Los Andes v CA All Boys  -  1st Half - Over/Under / Under 1.5 @1.19
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 7/7 9/10 10/10
+- Sun 19:30  Nueva Chicago v Gimnasia y Esgrima de Jujuy  -  1st Half - Over/Under / Under 1.5 @1.29
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 10/10 5/10
+- Sun 20:00  Burgos CF v CE Sabadell FC  -  1st Half - Over/Under / Under 1.5 @1.24
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 7/10 5/10
+- Sun 20:00  Avai FC SC v Athletic Club Sjdr MG  -  1st Half - Over/Under / Under 1.5 @1.30
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 7/10 5/10
+- Sun 20:00  Sao Bernardo FC v Criciuma EC SC  -  1st Half - Over/Under / Under 1.5 @1.30
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 8/10 8/10
+- Sun 20:00  Villa Mitre de Bahia Blanca v Costa Brava de General Pico  -  1st Half - Over/Under / Under 1.5 @1.24
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 7/10 7/10
+- Sun 20:00  Ferro Carril Oeste v CA Racing de Cordoba  -  1st Half - Over/Under / Under 1.5 @1.28
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 9/10 8/10
+- Sun 20:00  Douglas Haig v CA Linqueno  -  1st Half - Over/Under / Under 1.5 @1.31
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 6/10 9/10
+- Sun 20:15  CD Argentino Monte Maiz v AC San Martin de Mendoza  -  1st Half - Over/Under / Under 1.5 @1.24
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 7/7 10/10 7/10
+- Sun 21:00  CA Chaco For Ever v CA Central Norte Salta  -  1st Half - Over/Under / Under 1.5 @1.21
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 3/7 8/10 8/10
+- Sun 22:00  Estudiantes de La Plata v CA San Lorenzo de Almagro  -  1st Half - Over/Under / Under 1.5 @1.30
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 9/10
+- Sun 22:00  Estudiantes Rio Cuarto v CA Aldosivi  -  1st Half - Over/Under / Under 1.5 @1.21
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 8/10 7/10
+- Sun 22:00  CD Godoy Cruz v CA Estudiantes  -  1st Half - Over/Under / Under 1.5 @1.25
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 7/7 8/10 10/10
+- Sun 22:00  San Martin de San Juan v CA Temperley  -  1st Half - Over/Under / Under 1.5 @1.22
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 7/7 8/10 7/10
+- Sun 22:00  Vila Nova FC GO v Gremio Novorizontino SP  -  1st Half - Over/Under / Under 1.5 @1.32
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 7/10 5/10
+- Sun 22:00  CA Bucaramanga v America de Cali  -  1st Half - Over/Under / Under 1.5 @1.32
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 4/10 4/10
+- Sun 22:30  CA Sarmiento de la Banda v CS Belgrano  -  1st Half - Over/Under / Under 1.5 @1.28
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 7/7 7/10 8/10
+- Sun 22:30  San Martin de Tucuman v CA Ferrocarril Midland  -  1st Half - Over/Under / Under 1.5 @1.21
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 6/7 8/10 8/10
+
+## 2026-10-18 09:16 WAT  |  one market: 1st Half - Over/Under / Under 1.5 (user's call: the HSH price pattern - Pinnacle 1st-half Over 1.5 at 2.30-2.49) - 23,979,574.12x (38 games)  |  code XM8L6S
+http://www.sportybet.com/ng/?shareCode=XM8L6S
+- Sun 11:00  CD Coria v Athletic Bilbao B  -  1st Half - Over/Under / Under 1.5 @1.51
+    Pinnacle 1st half Over 1.5 2.41 / Under 1.5 1.53
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 6/10 5/10
+- Sun 12:00  Hvidovre IF v Hillerod Fodbold  -  1st Half - Over/Under / Under 1.5 @1.58
+    Pinnacle 1st half Over 1.5 2.39 / Under 1.5 1.57
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 9/10 6/10
+- Sun 12:00  Phu Dong Ninh Binh v Hoang Anh Gia Lai  -  1st Half - Over/Under / Under 1.5 @1.56
+    Pinnacle 1st half Over 1.5 2.33 / Under 1.5 1.56
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 4/7 7/10 5/10
+- Sun 12:00  Bangkok United FC v Port FC  -  1st Half - Over/Under / Under 1.5 @1.56
+    Pinnacle 1st half Over 1.5 2.43 / Under 1.5 1.53
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 3/7 5/10 5/10
+- Sun 12:30  Dynamo Dresden v 1. FC Magdeburg  -  1st Half - Over/Under / Under 1.5 @1.58
+    Pinnacle 1st half Over 1.5 2.42 / Under 1.5 1.59
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 1/7 4/10 2/10
+- Sun 13:00  SonderjyskE v Silkeborg IF  -  1st Half - Over/Under / Under 1.5 @1.61
+    Pinnacle 1st half Over 1.5 2.34 / Under 1.5 1.61
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 4/7 5/10 7/10
+- Sun 13:00  Persib Bandung v Persik Kediri  -  1st Half - Over/Under / Under 1.5 @1.56
+    Pinnacle 1st half Over 1.5 2.41 / Under 1.5 1.57
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 8/10 5/10
+- Sun 13:00  Pattani FC v Buriram United  -  1st Half - Over/Under / Under 1.5 @1.63
+    Pinnacle 1st half Over 1.5 2.32 / Under 1.5 1.58
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 3/7 6/10 5/10
+- Sun 13:15  Cong An Ha Noi FC v Hanoi FC  -  1st Half - Over/Under / Under 1.5 @1.56
+    Pinnacle 1st half Over 1.5 2.37 / Under 1.5 1.54
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 9/10 7/10
+- Sun 13:30  Slask II Wroclaw v Avia Swidnik  -  1st Half - Over/Under / Under 1.5 @1.56
+    Pinnacle 1st half Over 1.5 2.33 / Under 1.5 1.56
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 7/10
+- Sun 14:00  Brighton v Crystal Palace  -  1st Half - Over/Under / Under 1.5 @1.68
+    Pinnacle 1st half Over 1.5 2.31 / Under 1.5 1.63
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 1/7 2/7 4/10 5/10
+- Sun 14:00  Fiorentina v Como 1907  -  1st Half - Over/Under / Under 1.5 @1.60
+    Pinnacle 1st half Over 1.5 2.43 / Under 1.5 1.58
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 3/7 6/10 5/10
+- Sun 14:00  Angers v Marseille  -  1st Half - Over/Under / Under 1.5 @1.61
+    Pinnacle 1st half Over 1.5 2.43 / Under 1.5 1.58
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 6/7 5/10 7/10
+- Sun 14:00  FC Banik Ostrava v Sparta Prague  -  1st Half - Over/Under / Under 1.5 @1.58
+    Pinnacle 1st half Over 1.5 2.4 / Under 1.5 1.56
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 2/7 7/10 5/10
+- Sun 14:00  GIF Sundsvall v IFK Varnamo  -  1st Half - Over/Under / Under 1.5 @1.60
+    Pinnacle 1st half Over 1.5 2.38 / Under 1.5 1.57
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 6/7 7/10 8/10
+- Sun 14:00  FK Liepaja v FS Jelgava  -  1st Half - Over/Under / Under 1.5 @1.54
+    Pinnacle 1st half Over 1.5 2.35 / Under 1.5 1.56
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 7/10
+- Sun 14:00  FC Dinamo Tbilisi v FC Spaeri  -  1st Half - Over/Under / Under 1.5 @1.51
+    Pinnacle 1st half Over 1.5 2.37 / Under 1.5 1.54
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 3/7 6/10 3/10
+- Sun 14:00  CWKS Resovia v Sokol Kleczew  -  1st Half - Over/Under / Under 1.5 @1.54
+    Pinnacle 1st half Over 1.5 2.43 / Under 1.5 1.52
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 14:00  Club Dr Benjamin Aceval v Sol de America Villa Elisa  -  1st Half - Over/Under / Under 1.5 @1.45
+    Pinnacle 1st half Over 1.5 2.46 / Under 1.5 1.46
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 5/10 6/10
+- Sun 14:05  Ittihad Kalba FC v Al Jazira (UAE)  -  1st Half - Over/Under / Under 1.5 @1.57
+    Pinnacle 1st half Over 1.5 2.4 / Under 1.5 1.57
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 4/10 9/10
+- Sun 14:05  Khor Fakkan Club v Al Wahda FC (UAE)  -  1st Half - Over/Under / Under 1.5 @1.56
+    Pinnacle 1st half Over 1.5 2.4 / Under 1.5 1.57
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 14:30  MFk Dukla Banska Bystrica v FK Zeleziarne Podbrezova  -  1st Half - Over/Under / Under 1.5 @1.57
+    Pinnacle 1st half Over 1.5 2.47 / Under 1.5 1.54
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 4/7 6/10 6/10
+- Sun 14:30  SK Kladno v FK Arsenal Ceska Lipa  -  1st Half - Over/Under / Under 1.5 @1.57
+    Pinnacle 1st half Over 1.5 2.32 / Under 1.5 1.57
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 5/10 5/10
+- Sun 14:30  SK Benatky Nad Jizerou v N. Byskovice  -  1st Half - Over/Under / Under 1.5 @1.52
+    Pinnacle 1st half Over 1.5 2.39 / Under 1.5 1.52
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 14:30  NK Vrhnika v ND Beltinci  -  1st Half - Over/Under / Under 1.5 @1.48
+    Pinnacle 1st half Over 1.5 2.41 / Under 1.5 1.48
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 4/7 7/10 4/10
+- Sun 15:00  CD Mafra v Santa Clara Azores  -  1st Half - Over/Under / Under 1.5 @1.55
+    Pinnacle 1st half Over 1.5 2.46 / Under 1.5 1.51
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 6/10 8/10
+- Sun 15:00  Kristianstad FC v FC Trollhattan  -  1st Half - Over/Under / Under 1.5 @1.55
+    Pinnacle 1st half Over 1.5 2.34 / Under 1.5 1.56
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 6/10 4/10
+- Sun 15:00  Gimnastic de Tarragona v Atletico Madrid B  -  1st Half - Over/Under / Under 1.5 @1.54
+    Pinnacle 1st half Over 1.5 2.36 / Under 1.5 1.55
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 5/10
+- Sun 15:00  FK Jerv v Sotra SK  -  1st Half - Over/Under / Under 1.5 @1.56
+    Pinnacle 1st half Over 1.5 2.3 / Under 1.5 1.57
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 3/7 5/10 4/10
+- Sun 16:15  Paris FC v Rennes  -  1st Half - Over/Under / Under 1.5 @1.59
+    Pinnacle 1st half Over 1.5 2.47 / Under 1.5 1.56
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 2/7 8/10 4/10
+- Sun 16:30  KKS Lech Poznan v Korona Kielce  -  1st Half - Over/Under / Under 1.5 @1.63
+    Pinnacle 1st half Over 1.5 2.36 / Under 1.5 1.59
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 3/10 7/10
+- Sun 17:00  Copenhagen v AGF Aarhus  -  1st Half - Over/Under / Under 1.5 @1.59
+    Pinnacle 1st half Over 1.5 2.46 / Under 1.5 1.56
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 3/7 6/10 5/10
+- Sun 17:30  FK Zeleznicar Pancevo v FK Partizan Belgrade  -  1st Half - Over/Under / Under 1.5 @1.56
+    Pinnacle 1st half Over 1.5 2.36 / Under 1.5 1.55
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 3/7 7/10 5/10
+- Sun 18:15  Hapoel Be`er Sheva FC v Hapoel Jerusalem FC  -  1st Half - Over/Under / Under 1.5 @1.62
+    Pinnacle 1st half Over 1.5 2.35 / Under 1.5 1.6
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 7/10 6/10
+- Sun 19:30  KS Lechia Gdansk v MKS Arka Gdynia  -  1st Half - Over/Under / Under 1.5 @1.54
+    Pinnacle 1st half Over 1.5 2.41 / Under 1.5 1.57
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 5/10 6/10
+- Sun 20:30  Deportivo Rayo Zuliano v Caracas FC  -  1st Half - Over/Under / Under 1.5 @1.50
+    Pinnacle 1st half Over 1.5 2.48 / Under 1.5 1.5
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 4/7 5/10 6/10
+- Sun 22:15  The Strongest v Always Ready  -  1st Half - Over/Under / Under 1.5 @1.56
+    Pinnacle 1st half Over 1.5 2.3 / Under 1.5 1.56
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 1/7 6/7 2/10 5/10
+- Sun 22:30  EC Bahia BA v CR Flamengo RJ  -  1st Half - Over/Under / Under 1.5 @1.57
+    Pinnacle 1st half Over 1.5 2.44 / Under 1.5 1.55
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 6/7 6/10 8/10
+
+## 2026-10-18 09:48 WAT  |  one market: 1st Half - Over/Under / Under 1.5 (user's call: best range = Pinnacle 1st-half Over 1.5 at 2.50 and up, part 1 of 3) - 286,418.76x (35 games)  |  code R98A4E
+http://www.sportybet.com/ng/?shareCode=R98A4E
+- Sun 11:00  FC Kryvbas Kriviy Rih v LNZ Cherkasy  -  1st Half - Over/Under / Under 1.5 @1.42
+    Pinnacle 1st half Over 1.5 2.73 / Under 1.5 1.43
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 7/7 7/10 9/10
+- Sun 11:00  FC Polissya Zhytomyr v FC Dynamo Kyiv  -  1st Half - Over/Under / Under 1.5 @1.41
+    Pinnacle 1st half Over 1.5 2.72 / Under 1.5 1.43
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 7/10 9/10
+- Sun 11:00  Arenas Club Getxo v Merida AD  -  1st Half - Over/Under / Under 1.5 @1.45
+    Pinnacle 1st half Over 1.5 2.55 / Under 1.5 1.47
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 6/10
+- Sun 11:00  Real Madrid Castilla v Antequera CF  -  1st Half - Over/Under / Under 1.5 @1.43
+    Pinnacle 1st half Over 1.5 2.73 / Under 1.5 1.42
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 5/10 8/10
+- Sun 11:15  Gornik Zabrze v GKS Piast Gliwice  -  1st Half - Over/Under / Under 1.5 @1.51
+    Pinnacle 1st half Over 1.5 2.55 / Under 1.5 1.52
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 7/7 8/10 7/10
+- Sun 11:30  Udinese v Lecce  -  1st Half - Over/Under / Under 1.5 @1.42
+    Pinnacle 1st half Over 1.5 3.11 / Under 1.5 1.38
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 6/10 6/10
+- Sun 11:30  Kasimpasa Istanbul v Samsunspor  -  1st Half - Over/Under / Under 1.5 @1.41
+    Pinnacle 1st half Over 1.5 3.03 / Under 1.5 1.39
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 8/10 5/10
+- Sun 11:30  ACS FC Bacau v CS Gloria Bistrita  -  1st Half - Over/Under / Under 1.5 @1.40
+    Pinnacle 1st half Over 1.5 2.74 / Under 1.5 1.4
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 7/10 7/10
+- Sun 12:00  1. FC Slovacko Uherske Hradiste v FC Zbrojovka Brno  -  1st Half - Over/Under / Under 1.5 @1.42
+    Pinnacle 1st half Over 1.5 2.88 / Under 1.5 1.41
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 10/10 7/10
+- Sun 12:00  Thisted FC v Vsk Aarhus  -  1st Half - Over/Under / Under 1.5 @1.41
+    Pinnacle 1st half Over 1.5 2.72 / Under 1.5 1.41
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 6/10 8/10
+- Sun 12:00  FC Torpedo Kutaisi v FC Rustavi  -  1st Half - Over/Under / Under 1.5 @1.39
+    Pinnacle 1st half Over 1.5 2.67 / Under 1.5 1.42
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 5/10 7/10
+- Sun 12:00  Sisaket United FC v BG Pathum United  -  1st Half - Over/Under / Under 1.5 @1.36
+    Pinnacle 1st half Over 1.5 2.99 / Under 1.5 1.35
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 7/10 6/10
+- Sun 12:00  Szentlorinc SE v Gyirmot FC Gyor  -  1st Half - Over/Under / Under 1.5 @1.42
+    Pinnacle 1st half Over 1.5 2.69 / Under 1.5 1.4
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 7/10 6/10
+- Sun 12:30  Arminia Bielefeld v VfL 1899 Osnabruck  -  1st Half - Over/Under / Under 1.5 @1.49
+    Pinnacle 1st half Over 1.5 2.68 / Under 1.5 1.5
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 5/10 5/10
+- Sun 12:30  Meizhou Hakka v Nantong Zhiyun  -  1st Half - Over/Under / Under 1.5 @1.48
+    Pinnacle 1st half Over 1.5 2.55 / Under 1.5 1.47
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 3/7 8/10 7/10
+- Sun 12:30  Nanjing City v Shijiazhuang Gongfu FC  -  1st Half - Over/Under / Under 1.5 @1.31
+    Pinnacle 1st half Over 1.5 3.15 / Under 1.5 1.32
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 8/10 7/10
+- Sun 12:30  Chiangrai United v Ratchaburi FC  -  1st Half - Over/Under / Under 1.5 @1.38
+    Pinnacle 1st half Over 1.5 2.92 / Under 1.5 1.37
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 9/10 6/10
+- Sun 13:00  Osasuna v Racing Santander  -  1st Half - Over/Under / Under 1.5 @1.59
+    Pinnacle 1st half Over 1.5 2.5 / Under 1.5 1.56
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 7/10 2/10
+- Sun 13:00  AD Ceuta v Real Oviedo  -  1st Half - Over/Under / Under 1.5 @1.42
+    Pinnacle 1st half Over 1.5 2.92 / Under 1.5 1.41
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 8/10 8/10
+- Sun 13:00  IK Sirius v IF Elfsborg  -  1st Half - Over/Under / Under 1.5 @1.51
+    Pinnacle 1st half Over 1.5 2.6 / Under 1.5 1.49
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 6/10 7/10
+- Sun 13:00  FK Novi Pazar v FK IMT Novi Beograd  -  1st Half - Over/Under / Under 1.5 @1.40
+    Pinnacle 1st half Over 1.5 2.75 / Under 1.5 1.4
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 7/7 8/10 10/10
+- Sun 13:00  FC Fratria Varna v POFC Botev Vratsa  -  1st Half - Over/Under / Under 1.5 @1.36
+    Pinnacle 1st half Over 1.5 2.82 / Under 1.5 1.34
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 7/10 7/10
+- Sun 13:00  FC Dnepr Mogilev v Bate Borisov  -  1st Half - Over/Under / Under 1.5 @1.35
+    Pinnacle 1st half Over 1.5 2.97 / Under 1.5 1.35
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 7/10 7/10
+- Sun 13:00  OFK Mladost DG v FK Jezero Plav  -  1st Half - Over/Under / Under 1.5 @1.38
+    Pinnacle 1st half Over 1.5 2.84 / Under 1.5 1.38
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 2/7 5/10 5/10
+- Sun 13:00  FK Skopje v Shkendija Tetovo  -  1st Half - Over/Under / Under 1.5 @1.45
+    Pinnacle 1st half Over 1.5 2.57 / Under 1.5 1.41
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 10/10 8/10
+- Sun 13:30  Wolfsberger AC v WSG Tirol  -  1st Half - Over/Under / Under 1.5 @1.54
+    Pinnacle 1st half Over 1.5 2.58 / Under 1.5 1.52
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 5/10 3/10
+- Sun 13:30  LKS Lodz v Podbeskidzie Bielsko-Biała  -  1st Half - Over/Under / Under 1.5 @1.51
+    Pinnacle 1st half Over 1.5 2.68 / Under 1.5 1.47
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 6/10 8/10
+- Sun 13:45  Zaglebie Lubin v Jagiellonia Bialystok  -  1st Half - Over/Under / Under 1.5 @1.49
+    Pinnacle 1st half Over 1.5 2.62 / Under 1.5 1.49
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 3/7 9/10 2/10
+- Sun 14:00  Bournemouth v Sunderland AFC  -  1st Half - Over/Under / Under 1.5 @1.45
+    Pinnacle 1st half Over 1.5 2.97 / Under 1.5 1.41
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 6/10 8/10
+- Sun 14:00  Juve Stabia v FC Sudtirol Bolzano  -  1st Half - Over/Under / Under 1.5 @1.36
+    Pinnacle 1st half Over 1.5 3.1 / Under 1.5 1.37
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 9/10 10/10
+- Sun 14:00  Kocaelispor v Goztepe Izmir  -  1st Half - Over/Under / Under 1.5 @1.41
+    Pinnacle 1st half Over 1.5 3.05 / Under 1.5 1.38
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 5/7 8/10 7/10
+- Sun 14:00  HNK Hajduk Split v NK Varazdin  -  1st Half - Over/Under / Under 1.5 @1.46
+    Pinnacle 1st half Over 1.5 2.74 / Under 1.5 1.45
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 6/10 8/10
+- Sun 14:00  PAE PS Kalamata v OFI Crete  -  1st Half - Over/Under / Under 1.5 @1.38
+    Pinnacle 1st half Over 1.5 3.05 / Under 1.5 1.38
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 6/10 8/10
+- Sun 14:00  Kayserispor v Batman Petrolspor  -  1st Half - Over/Under / Under 1.5 @1.49
+    Pinnacle 1st half Over 1.5 2.64 / Under 1.5 1.48
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 3/7 6/10 7/10
+- Sun 14:00  FC Koper v NK Brinje Grosuplje  -  1st Half - Over/Under / Under 1.5 @1.50
+    Pinnacle 1st half Over 1.5 2.63 / Under 1.5 1.48
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 8/10 8/10
+
+## 2026-10-18 09:48 WAT  |  one market: 1st Half - Over/Under / Under 1.5 (user's call: best range = Pinnacle 1st-half Over 1.5 at 2.50 and up, part 2 of 3) - 419,722.06x (35 games)  |  code PWB6DZ
+http://www.sportybet.com/ng/?shareCode=PWB6DZ
+- Sun 15:00  Brito SC v GD Vitoria Sernache  -  1st Half - Over/Under / Under 1.5 @1.49
+    Pinnacle 1st half Over 1.5 2.63 / Under 1.5 1.39
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 6/10 8/10
+- Sun 15:00  CD Tondela v Alverca Futebol  -  1st Half - Over/Under / Under 1.5 @1.42
+    Pinnacle 1st half Over 1.5 2.74 / Under 1.5 1.42
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 8/10 7/10
+- Sun 15:00  SC Olhanense v FC Oliveira do Hospital  -  1st Half - Over/Under / Under 1.5 @1.44
+    Pinnacle 1st half Over 1.5 2.67 / Under 1.5 1.38
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 3/7 7/10 3/10
+- Sun 15:00  SC Salgueiros v Estoril Praia  -  1st Half - Over/Under / Under 1.5 @1.43
+    Pinnacle 1st half Over 1.5 2.8 / Under 1.5 1.34
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 7/7 10/10 9/10
+- Sun 15:00  Northeast United FC v Kerala Blasters FC  -  1st Half - Over/Under / Under 1.5 @1.48
+    Pinnacle 1st half Over 1.5 2.63 / Under 1.5 1.49
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 15:00  Hammarby Talang FF v IF Karlstad Fotbol  -  1st Half - Over/Under / Under 1.5 @1.42
+    Pinnacle 1st half Over 1.5 2.63 / Under 1.5 1.43
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 5/7 8/10 7/10
+- Sun 15:00  UE Sant Andreu v Juventud Torremolinos CF  -  1st Half - Over/Under / Under 1.5 @1.45
+    Pinnacle 1st half Over 1.5 2.62 / Under 1.5 1.43
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 8/10 5/10
+- Sun 15:00  FC Milsami v FC Zimbru Chisinau  -  1st Half - Over/Under / Under 1.5 @1.38
+    Pinnacle 1st half Over 1.5 2.76 / Under 1.5 1.35
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 3/7 8/10 7/10
+- Sun 15:15  Granada v Cadiz  -  1st Half - Over/Under / Under 1.5 @1.40
+    Pinnacle 1st half Over 1.5 2.98 / Under 1.5 1.4
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 5/10 6/10
+- Sun 15:30  Orgryte IS v GAIS  -  1st Half - Over/Under / Under 1.5 @1.54
+    Pinnacle 1st half Over 1.5 2.58 / Under 1.5 1.5
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 4/7 5/10 6/10
+- Sun 15:30  Panathinaikos v Asteras Tripolis  -  1st Half - Over/Under / Under 1.5 @1.58
+    Pinnacle 1st half Over 1.5 2.54 / Under 1.5 1.51
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 8/10 7/10
+- Sun 16:00  Karpaty Lviv v FC Epitsentr Kamianets-Podilskyi  -  1st Half - Over/Under / Under 1.5 @1.50
+    Pinnacle 1st half Over 1.5 2.54 / Under 1.5 1.49
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 5/10 9/10
+- Sun 16:00  Sturm Graz v Grazer AK 1902  -  1st Half - Over/Under / Under 1.5 @1.53
+    Pinnacle 1st half Over 1.5 2.62 / Under 1.5 1.5
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 8/10 6/10
+- Sun 16:00  Pogon Siedlce v ZKS Stal Rzeszow  -  1st Half - Over/Under / Under 1.5 @1.47
+    Pinnacle 1st half Over 1.5 2.62 / Under 1.5 1.49
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 8/10 7/10
+- Sun 16:00  Omonia Aradippou v AEL Limassol  -  1st Half - Over/Under / Under 1.5 @1.44
+    Pinnacle 1st half Over 1.5 2.6 / Under 1.5 1.45
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 9/10 6/10
+- Sun 16:00  Soroksar SC v Fehervar FC Szekesfehervar  -  1st Half - Over/Under / Under 1.5 @1.44
+    Pinnacle 1st half Over 1.5 2.71 / Under 1.5 1.38
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 16:15  Le Havre v AJ Auxerre  -  1st Half - Over/Under / Under 1.5 @1.49
+    Pinnacle 1st half Over 1.5 2.76 / Under 1.5 1.46
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 2/7 8/10 5/10
+- Sun 16:15  Lorient v Monaco  -  1st Half - Over/Under / Under 1.5 @1.42
+    Pinnacle 1st half Over 1.5 3.01 / Under 1.5 1.4
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 6/10
+- Sun 16:15  Cesena FC v US Avellino  -  1st Half - Over/Under / Under 1.5 @1.43
+    Pinnacle 1st half Over 1.5 2.91 / Under 1.5 1.41
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 7/10 7/10
+- Sun 16:15  FC Uta Arad v CFR Cluj  -  1st Half - Over/Under / Under 1.5 @1.43
+    Pinnacle 1st half Over 1.5 2.75 / Under 1.5 1.44
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 7/10 8/10
+- Sun 16:30  Nottingham Forest v Arsenal  -  1st Half - Over/Under / Under 1.5 @1.48
+    Pinnacle 1st half Over 1.5 2.87 / Under 1.5 1.43
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 5/7 9/10 5/10
+- Sun 16:30  ACD Ospitaletto v US Pergolettese Crema  -  1st Half - Over/Under / Under 1.5 @1.35
+    Pinnacle 1st half Over 1.5 3.0 / Under 1.5 1.35
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 8/10 7/10
+- Sun 16:30  Alcione Milano v Calcio Desenzano  -  1st Half - Over/Under / Under 1.5 @1.34
+    Pinnacle 1st half Over 1.5 2.98 / Under 1.5 1.35
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 6/7 7/10 8/10
+- Sun 16:30  US Albinoleffe v Novara FC  -  1st Half - Over/Under / Under 1.5 @1.33
+    Pinnacle 1st half Over 1.5 3.07 / Under 1.5 1.34
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 5/7 5/10 9/10
+- Sun 16:30  Curico Unido v Deportes Iquique  -  1st Half - Over/Under / Under 1.5 @1.41
+    Pinnacle 1st half Over 1.5 2.68 / Under 1.5 1.42
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 8/10
+- Sun 16:30  Union San Felipe v Deportes Temuco  -  1st Half - Over/Under / Under 1.5 @1.37
+    Pinnacle 1st half Over 1.5 2.88 / Under 1.5 1.36
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 6/7 9/10 8/10
+- Sun 16:30  NK Brezice 1919 v NK Krsko Posavje  -  1st Half - Over/Under / Under 1.5 @1.43
+    Pinnacle 1st half Over 1.5 2.55 / Under 1.5 1.41
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 5/10
+- Sun 16:45  Ajman Club v Sharjah FC  -  1st Half - Over/Under / Under 1.5 @1.50
+    Pinnacle 1st half Over 1.5 2.57 / Under 1.5 1.51
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 1/7 4/7 4/10 6/10
+- Sun 17:00  AC Milan v Atalanta  -  1st Half - Over/Under / Under 1.5 @1.59
+    Pinnacle 1st half Over 1.5 2.51 / Under 1.5 1.55
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 7/10 7/10
+- Sun 17:00  FK Jablonec v Viktoria Plzen  -  1st Half - Over/Under / Under 1.5 @1.46
+    Pinnacle 1st half Over 1.5 2.72 / Under 1.5 1.45
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 4/7 9/10 5/10
+- Sun 17:00  Istanbulspor AS v Antalyaspor  -  1st Half - Over/Under / Under 1.5 @1.45
+    Pinnacle 1st half Over 1.5 2.76 / Under 1.5 1.44
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 4/10 7/10
+- Sun 17:00  Als Omonia v Anorthosis Famagusta  -  1st Half - Over/Under / Under 1.5 @1.45
+    Pinnacle 1st half Over 1.5 2.57 / Under 1.5 1.46
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 6/7 3/10 7/10
+- Sun 17:00  Aris Limassol v AEK Larnaca  -  1st Half - Over/Under / Under 1.5 @1.47
+    Pinnacle 1st half Over 1.5 2.53 / Under 1.5 1.49
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 7/10 6/10
+- Sun 17:00  FC Noah Yerevan v FC Pyunik Yerevan  -  1st Half - Over/Under / Under 1.5 @1.39
+    Pinnacle 1st half Over 1.5 2.76 / Under 1.5 1.39
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 4/10 5/10
+- Sun 17:00  NK Maribor v NK Celje  -  1st Half - Over/Under / Under 1.5 @1.51
+    Pinnacle 1st half Over 1.5 2.5 / Under 1.5 1.53
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 7/10 7/10
+
+## 2026-10-18 09:48 WAT  |  one market: 1st Half - Over/Under / Under 1.5 (user's call: best range = Pinnacle 1st-half Over 1.5 at 2.50 and up, part 3 of 3) - 133,586.56x (33 games)  |  code P04UXR
+http://www.sportybet.com/ng/?shareCode=P04UXR
+- Sun 17:00  Al-Ahli SC Manama v AL-Khaldiya SC  -  1st Half - Over/Under / Under 1.5 @1.54
+    Pinnacle 1st half Over 1.5 2.51 / Under 1.5 1.49
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 17:15  Real Aviles CF v UD Ourense  -  1st Half - Over/Under / Under 1.5 @1.38
+    Pinnacle 1st half Over 1.5 2.75 / Under 1.5 1.4
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 5/10 8/10
+- Sun 17:15  Real Murcia CF v Real Zaragoza  -  1st Half - Over/Under / Under 1.5 @1.41
+    Pinnacle 1st half Over 1.5 2.69 / Under 1.5 1.41
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 7/10 6/10
+- Sun 17:30  Malaga CF v Real Sociedad  -  1st Half - Over/Under / Under 1.5 @1.58
+    Pinnacle 1st half Over 1.5 2.53 / Under 1.5 1.54
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 5/10
+- Sun 17:30  Girona v FC Andorra  -  1st Half - Over/Under / Under 1.5 @1.49
+    Pinnacle 1st half Over 1.5 2.64 / Under 1.5 1.49
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 6/7 6/10 8/10
+- Sun 17:30  Valladolid v Club Deportivo Eldense  -  1st Half - Over/Under / Under 1.5 @1.40
+    Pinnacle 1st half Over 1.5 2.93 / Under 1.5 1.41
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 6/10 8/10
+- Sun 18:00  AE Kifisia FC v Aris Thessaloniki  -  1st Half - Over/Under / Under 1.5 @1.39
+    Pinnacle 1st half Over 1.5 3.05 / Under 1.5 1.38
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 6/10 7/10
+- Sun 18:00  CS Cartagines v Deportivo Saprissa San Jose  -  1st Half - Over/Under / Under 1.5 @1.39
+    Pinnacle 1st half Over 1.5 2.94 / Under 1.5 1.4
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 5/10 7/10
+- Sun 18:00  Maxline Vitebsk v FC Neman Grodno  -  1st Half - Over/Under / Under 1.5 @1.35
+    Pinnacle 1st half Over 1.5 3.04 / Under 1.5 1.33
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 6/10 8/10
+- Sun 18:30  Sampdoria Genoa v SS Arezzo  -  1st Half - Over/Under / Under 1.5 @1.39
+    Pinnacle 1st half Over 1.5 3.01 / Under 1.5 1.39
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 7/7 8/10 9/10
+- Sun 19:00  Al-Fateh SC v Al-Khaleej Club  -  1st Half - Over/Under / Under 1.5 @1.50
+    Pinnacle 1st half Over 1.5 2.54 / Under 1.5 1.5
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 4/10 7/10
+- Sun 19:00  PAOK v POT Iraklis  -  1st Half - Over/Under / Under 1.5 @1.54
+    Pinnacle 1st half Over 1.5 2.54 / Under 1.5 1.52
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 6/7 4/10 7/10
+- Sun 19:00  CS Universitatea Craiova v FC Farul Constanta  -  1st Half - Over/Under / Under 1.5 @1.53
+    Pinnacle 1st half Over 1.5 2.56 / Under 1.5 1.51
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 7/10 4/10
+- Sun 19:00  San Marcos de Arica v Puerto Montt  -  1st Half - Over/Under / Under 1.5 @1.33
+    Pinnacle 1st half Over 1.5 3.07 / Under 1.5 1.33
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 6/7 6/10 8/10
+- Sun 19:00  NK Celik Zenica v HSK Zrinjski Mostar  -  1st Half - Over/Under / Under 1.5 @1.36
+    Pinnacle 1st half Over 1.5 2.99 / Under 1.5 1.34
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 7/10 5/10
+- Sun 19:45  Juventus v Lazio  -  1st Half - Over/Under / Under 1.5 @1.48
+    Pinnacle 1st half Over 1.5 2.91 / Under 1.5 1.43
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 7/7 9/10 6/10
+- Sun 19:45  Lyon v Nice  -  1st Half - Over/Under / Under 1.5 @1.57
+    Pinnacle 1st half Over 1.5 2.54 / Under 1.5 1.53
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 5/7 5/10 7/10
+- Sun 20:00  Fluminense FC RJ v Santos FC SP  -  1st Half - Over/Under / Under 1.5 @1.43
+    Pinnacle 1st half Over 1.5 2.86 / Under 1.5 1.43
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 7/10 5/10
+- Sun 20:00  Gremio FB Porto Alegrense RS v Cruzeiro EC MG  -  1st Half - Over/Under / Under 1.5 @1.48
+    Pinnacle 1st half Over 1.5 2.74 / Under 1.5 1.46
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 7/10
+- Sun 20:30  Academia Puerto Cabello v Monagas SC  -  1st Half - Over/Under / Under 1.5 @1.43
+    Pinnacle 1st half Over 1.5 2.55 / Under 1.5 1.4
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 8/10 7/10
+- Sun 20:30  Estudiantes de Merida v Metropolitanos FC  -  1st Half - Over/Under / Under 1.5 @1.39
+    Pinnacle 1st half Over 1.5 2.77 / Under 1.5 1.39
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 6/10 6/10
+- Sun 20:30  UCV FC v Portuguesa FC  -  1st Half - Over/Under / Under 1.5 @1.38
+    Pinnacle 1st half Over 1.5 2.89 / Under 1.5 1.36
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 21:00  CD Santa Cruz v CD Antofagasta  -  1st Half - Over/Under / Under 1.5 @1.38
+    Pinnacle 1st half Over 1.5 2.79 / Under 1.5 1.39
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 8/10 7/10
+- Sun 21:00  Wydad AC v Union Sportif Amal Tiznit  -  1st Half - Over/Under / Under 1.5 @1.37
+    Pinnacle 1st half Over 1.5 2.95 / Under 1.5 1.35
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 9/10 5/10
+- Sun 21:00  Cerro Porteno v Sportivo Ameliano  -  1st Half - Over/Under / Under 1.5 @1.41
+    Pinnacle 1st half Over 1.5 2.84 / Under 1.5 1.42
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 7/7 5/10 9/10
+- Sun 22:00  Cocle FC v Herrera FC  -  1st Half - Over/Under / Under 1.5 @1.38
+    Pinnacle 1st half Over 1.5 2.73 / Under 1.5 1.4
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 3/7 8/10 4/10
+- Sun 22:00  HYH Sebaco FC v Art Municipal Jalapa  -  1st Half - Over/Under / Under 1.5 @1.46
+    Pinnacle 1st half Over 1.5 2.59 / Under 1.5 1.43
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 2/7 7/10 7/10
+- Sun 22:00  Atletico Balboa v CD Aguila San Miguel  -  1st Half - Over/Under / Under 1.5 @1.44
+    Pinnacle 1st half Over 1.5 2.56 / Under 1.5 1.45
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 7/7 9/10 7/10
+- Sun 22:30  Barcelona SC v CD Universidad Catolica del Ecuador  -  1st Half - Over/Under / Under 1.5 @1.39
+    Pinnacle 1st half Over 1.5 2.89 / Under 1.5 1.4
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 8/10 8/10
+- Sun 23:00  Perez Zeledon v CS Herediano  -  1st Half - Over/Under / Under 1.5 @1.42
+    Pinnacle 1st half Over 1.5 2.81 / Under 1.5 1.42
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 6/7 6/10 8/10
+- Sun 23:20  Sportivo Luqueno v Sportivo San Lorenzo  -  1st Half - Over/Under / Under 1.5 @1.38
+    Pinnacle 1st half Over 1.5 3.0 / Under 1.5 1.38
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 7/10 7/10
+- Sun 23:20  Sportivo Trinidense v Libertad Asuncion  -  1st Half - Over/Under / Under 1.5 @1.36
+    Pinnacle 1st half Over 1.5 3.02 / Under 1.5 1.37
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 7/10 5/10
+- Sun 23:30  Clube do Remo PA v Red Bull Bragantino SP  -  1st Half - Over/Under / Under 1.5 @1.51
+    Pinnacle 1st half Over 1.5 2.57 / Under 1.5 1.5
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 6/7 9/10 7/10
+
+## 2026-10-18 13:54 WAT  |  one market: 1st Half - Over/Under / Under 1.5 (user's call: option 1 - SportyBet 1st-half Under 1.5 at 1.55 and longer only, part 1 of 2) - 24,724,928,946.54x (43 games)  |  code Z5W0Z4
+http://www.sportybet.com/ng/?shareCode=Z5W0Z4
+- Sun 15:00  Alcochetense v Maritimo Madeira  -  1st Half - Over/Under / Under 1.5 @1.72
+    Pinnacle 1st half Over 1.5 2.05 / Under 1.5 1.63
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 3/7 4/10 4/10
+- Sun 15:00  CD Fatima v Academico de Viseu FC  -  1st Half - Over/Under / Under 1.5 @1.57
+    Pinnacle 1st half Over 1.5 2.37 / Under 1.5 1.48
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 3/7 6/10 6/10
+- Sun 15:00  CD Mafra v Santa Clara Azores  -  1st Half - Over/Under / Under 1.5 @1.55
+    Pinnacle 1st half Over 1.5 2.49 / Under 1.5 1.52
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 6/10 8/10
+- Sun 15:00  Celtic v Heart of Midlothian FC  -  1st Half - Over/Under / Under 1.5 @1.70
+    Pinnacle 1st half Over 1.5 - / Under 1.5 -
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 15:00  Odense Boldklub v Broendby IF  -  1st Half - Over/Under / Under 1.5 @1.59
+    Pinnacle 1st half Over 1.5 - / Under 1.5 -
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 15:00  AC Taverne v Young Boys Bern  -  1st Half - Over/Under / Under 1.5 @1.92
+    Pinnacle 1st half Over 1.5 1.94 / Under 1.5 1.76
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 3/7 6/10 4/10
+- Sun 15:00  FC Schaffhausen v FC Thun  -  1st Half - Over/Under / Under 1.5 @1.74
+    Pinnacle 1st half Over 1.5 1.99 / Under 1.5 1.79
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 3/7 5/10 5/10
+- Sun 15:00  Kristianstad FC v FC Trollhattan  -  1st Half - Over/Under / Under 1.5 @1.56
+    Pinnacle 1st half Over 1.5 2.37 / Under 1.5 1.57
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 6/10 4/10
+- Sun 15:00  Crvena Zvezda v FK Mladost Lucani  -  1st Half - Over/Under / Under 1.5 @1.90
+    Pinnacle 1st half Over 1.5 1.88 / Under 1.5 1.9
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 6/7 6/10 8/10
+- Sun 15:00  Paide Linnameeskond v JK Narva Trans  -  1st Half - Over/Under / Under 1.5 @1.59
+    Pinnacle 1st half Over 1.5 2.29 / Under 1.5 1.61
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 3/7 7/10 6/10
+- Sun 15:00  Brattvaag v Bjarg  -  1st Half - Over/Under / Under 1.5 @1.77
+    Pinnacle 1st half Over 1.5 - / Under 1.5 -
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 15:00  Lysekloster v SK Traeff  -  1st Half - Over/Under / Under 1.5 @1.63
+    Pinnacle 1st half Over 1.5 2.17 / Under 1.5 1.67
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 6/10 6/10
+- Sun 15:00  Vilnius FK Zalgiris v FC Hegelmann Kaunas  -  1st Half - Over/Under / Under 1.5 @1.61
+    Pinnacle 1st half Over 1.5 2.26 / Under 1.5 1.63
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 3/7 5/10 6/10
+- Sun 15:00  Lokomotiv Oslo v Ready Fotball  -  1st Half - Over/Under / Under 1.5 @2.05
+    Pinnacle 1st half Over 1.5 1.57 / Under 1.5 2.22
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 1/7 3/10 2/10
+- Sun 15:00  Atert Bissen v US Hostert  -  1st Half - Over/Under / Under 1.5 @1.66
+    Pinnacle 1st half Over 1.5 2.17 / Under 1.5 1.67
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 2/7 6/10 3/10
+- Sun 15:00  F91 Dudelange v Swift Hesperange  -  1st Half - Over/Under / Under 1.5 @1.95
+    Pinnacle 1st half Over 1.5 1.78 / Under 1.5 2.0
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 3/7 7/10 4/10
+- Sun 15:00  FC Victoria Rosport v FC Differdange 03  -  1st Half - Over/Under / Under 1.5 @1.69
+    Pinnacle 1st half Over 1.5 2.08 / Under 1.5 1.71
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 2/7 4/10 3/10
+- Sun 15:00  Residence Walferdange v US Rumelange  -  1st Half - Over/Under / Under 1.5 @1.77
+    Pinnacle 1st half Over 1.5 2.01 / Under 1.5 1.8
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 3/7 2/10 5/10
+- Sun 15:00  US Mondorf-Les-Bains v FC Wiltz 71  -  1st Half - Over/Under / Under 1.5 @1.79
+    Pinnacle 1st half Over 1.5 2.02 / Under 1.5 1.79
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 2/7 4/10 6/10
+- Sun 15:00  Astana v FK Kaspii Aktau  -  1st Half - Over/Under / Under 1.5 @1.60
+    Pinnacle 1st half Over 1.5 2.26 / Under 1.5 1.6
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 5/7 6/10 7/10
+- Sun 15:00  Eb/Streymur v HB Torshavn  -  1st Half - Over/Under / Under 1.5 @1.65
+    Pinnacle 1st half Over 1.5 2.14 / Under 1.5 1.68
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 3/7 6/10 6/10
+- Sun 15:00  KI Klaksvik v Tofta Itrottarfelag B68  -  1st Half - Over/Under / Under 1.5 @1.95
+    Pinnacle 1st half Over 1.5 1.85 / Under 1.5 1.93
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 15:00  NSI Runavik v 07 Vestur Sorvagur  -  1st Half - Over/Under / Under 1.5 @1.94
+    Pinnacle 1st half Over 1.5 1.85 / Under 1.5 1.93
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 6/10 5/10
+- Sun 15:30  Halmstads BK v Hammarby IF  -  1st Half - Over/Under / Under 1.5 @1.77
+    Pinnacle 1st half Over 1.5 2.14 / Under 1.5 1.7
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 15:30  Malmo v BK Hacken  -  1st Half - Over/Under / Under 1.5 @1.63
+    Pinnacle 1st half Over 1.5 2.23 / Under 1.5 1.65
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 10/10 5/10
+- Sun 15:30  Panathinaikos v Asteras Tripolis  -  1st Half - Over/Under / Under 1.5 @1.63
+    Pinnacle 1st half Over 1.5 2.39 / Under 1.5 1.56
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 8/10 7/10
+- Sun 15:30  Al Sadd SC v Al Duhail SC  -  1st Half - Over/Under / Under 1.5 @1.73
+    Pinnacle 1st half Over 1.5 2.09 / Under 1.5 1.76
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 1/7 6/7 2/10 8/10
+- Sun 15:30  MSV Duisburg v FC Viktoria Cologne  -  1st Half - Over/Under / Under 1.5 @1.66
+    Pinnacle 1st half Over 1.5 2.19 / Under 1.5 1.68
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 6/10 5/10
+- Sun 15:30  Skjetten v Finnsnes IL  -  1st Half - Over/Under / Under 1.5 @1.91
+    Pinnacle 1st half Over 1.5 1.78 / Under 1.5 1.89
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 5/7 2/10 5/10
+- Sun 15:45  FC Groningen v Ajax  -  1st Half - Over/Under / Under 1.5 @1.83
+    Pinnacle 1st half Over 1.5 1.99 / Under 1.5 1.85
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 3/10 4/10
+- Sun 15:45  MVV Maastricht v Heracles Almelo  -  1st Half - Over/Under / Under 1.5 @1.78
+    Pinnacle 1st half Over 1.5 2.04 / Under 1.5 1.79
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 6/10 4/10
+- Sun 15:45  de Graafschap v Feyenoord Rotterdam  -  1st Half - Over/Under / Under 1.5 @1.57
+    Pinnacle 1st half Over 1.5 2.17 / Under 1.5 1.6
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/4 6/7 5/8 3/10
+- Sun 16:00  Molde v IK Start  -  1st Half - Over/Under / Under 1.5 @1.87
+    Pinnacle 1st half Over 1.5 1.99 / Under 1.5 1.85
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 3/7 5/10 4/10
+- Sun 16:00  Sandefjord Fotball v Lillestroem SK  -  1st Half - Over/Under / Under 1.5 @1.62
+    Pinnacle 1st half Over 1.5 - / Under 1.5 -
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 16:00  Vaalerenga IF v SK Brann  -  1st Half - Over/Under / Under 1.5 @1.83
+    Pinnacle 1st half Over 1.5 - / Under 1.5 -
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 16:00  Aasane Fotball v Stabaek IF  -  1st Half - Over/Under / Under 1.5 @2.00
+    Pinnacle 1st half Over 1.5 - / Under 1.5 -
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 16:00  Hoedd IL v Raufoss IL  -  1st Half - Over/Under / Under 1.5 @1.64
+    Pinnacle 1st half Over 1.5 - / Under 1.5 -
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 16:00  Kongsvinger IL Toppfotball v Sandnes Ulf  -  1st Half - Over/Under / Under 1.5 @2.05
+    Pinnacle 1st half Over 1.5 1.75 / Under 1.5 2.07
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 4/7 3/10 7/10
+- Sun 16:00  Lyn 1896 FK v Moss FK  -  1st Half - Over/Under / Under 1.5 @1.74
+    Pinnacle 1st half Over 1.5 2.07 / Under 1.5 1.75
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 4/7 5/10 6/10
+- Sun 16:00  Odds BK v Stroemmen IF  -  1st Half - Over/Under / Under 1.5 @1.91
+    Pinnacle 1st half Over 1.5 - / Under 1.5 -
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 16:00  Ranheim v Bryne FK  -  1st Half - Over/Under / Under 1.5 @1.67
+    Pinnacle 1st half Over 1.5 2.11 / Under 1.5 1.72
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 1/7 5/7 4/10 7/10
+- Sun 16:00  Saldus SS/Leevon v JDFS Alberts  -  1st Half - Over/Under / Under 1.5 @1.65
+    Pinnacle 1st half Over 1.5 2.06 / Under 1.5 1.65
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 1/7 4/7 3/10 6/10
+- Sun 16:00  PFC Spartak Pleven v PFC Levski Sofia  -  1st Half - Over/Under / Under 1.5 @1.87
+    Pinnacle 1st half Over 1.5 1.92 / Under 1.5 1.78
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 7/10 8/10
+
+## 2026-10-18 13:54 WAT  |  one market: 1st Half - Over/Under / Under 1.5 (user's call: option 1 - SportyBet 1st-half Under 1.5 at 1.55 and longer only, part 2 of 2) - 1,721,383,290.01x (42 games)  |  code LEMWX4
+http://www.sportybet.com/ng/?shareCode=LEMWX4
+- Sun 16:00  MKS Znicz Pruszkow v Rekord Bielsko Biala  -  1st Half - Over/Under / Under 1.5 @1.60
+    Pinnacle 1st half Over 1.5 2.27 / Under 1.5 1.59
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 6/7 2/10 7/10
+- Sun 16:00  Hoenefoss BK v IK Junkeren  -  1st Half - Over/Under / Under 1.5 @2.20
+    Pinnacle 1st half Over 1.5 - / Under 1.5 -
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 16:00  Tarxien Rainbows FC v Zebbug Rangers FC  -  1st Half - Over/Under / Under 1.5 @1.59
+    Pinnacle 1st half Over 1.5 2.25 / Under 1.5 1.55
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 5/7 4/10 6/10
+- Sun 16:15  Paris FC v Rennes  -  1st Half - Over/Under / Under 1.5 @1.58
+    Pinnacle 1st half Over 1.5 2.47 / Under 1.5 1.57
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 2/7 8/10 4/10
+- Sun 16:30  Borussia M´gladbach v Hoffenheim  -  1st Half - Over/Under / Under 1.5 @1.88
+    Pinnacle 1st half Over 1.5 1.97 / Under 1.5 1.88
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 16:30  KKS Lech Poznan v Korona Kielce  -  1st Half - Over/Under / Under 1.5 @1.60
+    Pinnacle 1st half Over 1.5 2.37 / Under 1.5 1.59
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 3/10 7/10
+- Sun 17:00  AC Milan v Atalanta  -  1st Half - Over/Under / Under 1.5 @1.62
+    Pinnacle 1st half Over 1.5 2.42 / Under 1.5 1.58
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 7/10 7/10
+- Sun 17:00  Istanbul BB v Gaziantep FK  -  1st Half - Over/Under / Under 1.5 @1.68
+    Pinnacle 1st half Over 1.5 2.21 / Under 1.5 1.68
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 17:00  Copenhagen v AGF Aarhus  -  1st Half - Over/Under / Under 1.5 @1.59
+    Pinnacle 1st half Over 1.5 2.47 / Under 1.5 1.55
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 3/7 6/10 5/10
+- Sun 17:00  NK Slaven Belupo v GNK Dinamo Zagreb  -  1st Half - Over/Under / Under 1.5 @1.73
+    Pinnacle 1st half Over 1.5 2.13 / Under 1.5 1.71
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 1/7 4/10 3/10
+- Sun 17:00  K Beerschot VA v RSC Anderlecht  -  1st Half - Over/Under / Under 1.5 @1.59
+    Pinnacle 1st half Over 1.5 2.3 / Under 1.5 1.57
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 6/10 7/10
+- Sun 17:00  Sporting Cristal v Comerciantes Unidos  -  1st Half - Over/Under / Under 1.5 @1.63
+    Pinnacle 1st half Over 1.5 - / Under 1.5 -
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 3/7 4/10 5/10
+- Sun 17:00  Tallinna FC Flora v Tartu JK Tammeka  -  1st Half - Over/Under / Under 1.5 @1.72
+    Pinnacle 1st half Over 1.5 2.06 / Under 1.5 1.75
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 2/7 3/10 2/10
+- Sun 17:00  MSK Zilina v DAC 1904 Dunajska Streda  -  1st Half - Over/Under / Under 1.5 @1.66
+    Pinnacle 1st half Over 1.5 2.15 / Under 1.5 1.7
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 2/7 3/10 5/10
+- Sun 17:00  Kisvarda FC v Ferencvarosi Budapest  -  1st Half - Over/Under / Under 1.5 @1.62
+    Pinnacle 1st half Over 1.5 - / Under 1.5 -
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 17:00  Al-Ahli SC Manama v AL-Khaldiya SC  -  1st Half - Over/Under / Under 1.5 @1.55
+    Pinnacle 1st half Over 1.5 2.43 / Under 1.5 1.52
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 17:00  Mus 1984 Musspor v Ankaraspor  -  1st Half - Over/Under / Under 1.5 @1.55
+    Pinnacle 1st half Over 1.5 2.33 / Under 1.5 1.54
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 6/7 5/10 6/10
+- Sun 17:00  Somaspor v Aliaga Futbol  -  1st Half - Over/Under / Under 1.5 @1.61
+    Pinnacle 1st half Over 1.5 2.21 / Under 1.5 1.6
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 17:00  Atletico Madrid W v Madrid CFF  -  1st Half - Over/Under / Under 1.5 @1.62
+    Pinnacle 1st half Over 1.5 2.16 / Under 1.5 1.65
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 2/7 5/10 5/10
+- Sun 17:15  Vikingur Gota v AB Argir  -  1st Half - Over/Under / Under 1.5 @1.63
+    Pinnacle 1st half Over 1.5 2.17 / Under 1.5 1.65
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 6/10 7/10
+- Sun 17:30  Malaga CF v Real Sociedad  -  1st Half - Over/Under / Under 1.5 @1.60
+    Pinnacle 1st half Over 1.5 2.44 / Under 1.5 1.58
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 5/7 7/10 5/10
+- Sun 17:30  St. Truidense VV v Lommel SK  -  1st Half - Over/Under / Under 1.5 @1.67
+    Pinnacle 1st half Over 1.5 2.28 / Under 1.5 1.63
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 17:45  Al Gharafa SC v Al Rayyan SC  -  1st Half - Over/Under / Under 1.5 @1.67
+    Pinnacle 1st half Over 1.5 2.18 / Under 1.5 1.68
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 4/10 5/10
+- Sun 18:15  Tromsoe IL v KFUM Oslo  -  1st Half - Over/Under / Under 1.5 @1.58
+    Pinnacle 1st half Over 1.5 - / Under 1.5 -
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 18:15  Hapoel Be`er Sheva FC v Hapoel Jerusalem FC  -  1st Half - Over/Under / Under 1.5 @1.62
+    Pinnacle 1st half Over 1.5 2.34 / Under 1.5 1.6
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 7/10 6/10
+- Sun 18:30  Sandecja Nowy Sacz v Zawisza Bydgoszcz  -  1st Half - Over/Under / Under 1.5 @1.60
+    Pinnacle 1st half Over 1.5 2.26 / Under 1.5 1.6
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 2/7 6/10 6/10
+- Sun 18:30  SV Meppen 1912 v TSV Havelse  -  1st Half - Over/Under / Under 1.5 @1.74
+    Pinnacle 1st half Over 1.5 2.09 / Under 1.5 1.76
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 4/7 6/10 4/10
+- Sun 18:30  Swieqi United FC v Sirens FC  -  1st Half - Over/Under / Under 1.5 @1.55
+    Pinnacle 1st half Over 1.5 2.13 / Under 1.5 1.61
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 4/7 6/10 7/10
+- Sun 19:00  FC Twente Enschede v FC Utrecht  -  1st Half - Over/Under / Under 1.5 @1.81
+    Pinnacle 1st half Over 1.5 2.08 / Under 1.5 1.76
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 3/7 5/10 7/10
+- Sun 19:00  NEC Nijmegen v Fortuna Sittard  -  1st Half - Over/Under / Under 1.5 @1.73
+    Pinnacle 1st half Over 1.5 2.18 / Under 1.5 1.7
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 3/7 3/10 6/10
+- Sun 19:00  Leones Negros UDEG v Alebrijes de Oaxaca FC  -  1st Half - Over/Under / Under 1.5 @1.65
+    Pinnacle 1st half Over 1.5 2.25 / Under 1.5 1.65
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 5/10 9/10
+- Sun 19:00  Pumas Unam v Atlas FC  -  1st Half - Over/Under / Under 1.5 @1.76
+    Pinnacle 1st half Over 1.5 2.03 / Under 1.5 1.77
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 4/7 3/10 5/10
+- Sun 19:45  Lyon v Nice  -  1st Half - Over/Under / Under 1.5 @1.57
+    Pinnacle 1st half Over 1.5 2.54 / Under 1.5 1.53
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 5/7 5/10 7/10
+- Sun 20:00  Real Madrid v Sevilla  -  1st Half - Over/Under / Under 1.5 @1.82
+    Pinnacle 1st half Over 1.5 2.11 / Under 1.5 1.74
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 6/7 3/10 8/10
+- Sun 20:00  CA Nacional Potosi v Club Bolivar  -  1st Half - Over/Under / Under 1.5 @1.66
+    Pinnacle 1st half Over 1.5 2.12 / Under 1.5 1.65
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 7/10 7/10
+- Sun 21:00  Montego Bay United v Arnett Gardens FC  -  1st Half - Over/Under / Under 1.5 @1.57
+    Pinnacle 1st half Over 1.5 2.31 / Under 1.5 1.55
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 1/7 7/10 3/10
+- Sun 22:00  FC Cincinnati v Columbus Crew  -  1st Half - Over/Under / Under 1.5 @1.85
+    Pinnacle 1st half Over 1.5 1.96 / Under 1.5 1.88
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 2/7 6/10 3/10
+- Sun 22:00  Birmingham Legion FC v Loudoun United FC  -  1st Half - Over/Under / Under 1.5 @1.66
+    Pinnacle 1st half Over 1.5 2.15 / Under 1.5 1.7
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 4/7 4/10 6/10
+- Sun 22:00  Chattanooga FC v New York City FC II  -  1st Half - Over/Under / Under 1.5 @1.78
+    Pinnacle 1st half Over 1.5 2.02 / Under 1.5 1.76
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 1/7 7/10 2/10
+- Sun 22:00  Deportivo Mixco v CSD Coban Imperial  -  1st Half - Over/Under / Under 1.5 @1.58
+    Pinnacle 1st half Over 1.5 2.31 / Under 1.5 1.57
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 5/10 7/10
+- Sun 22:15  The Strongest v Always Ready  -  1st Half - Over/Under / Under 1.5 @1.56
+    Pinnacle 1st half Over 1.5 2.3 / Under 1.5 1.56
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 1/7 6/7 2/10 5/10
+- Sun 22:30  EC Bahia BA v CR Flamengo RJ  -  1st Half - Over/Under / Under 1.5 @1.57
+    Pinnacle 1st half Over 1.5 2.52 / Under 1.5 1.53
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 6/7 6/10 8/10
+
+## 2026-10-18 14:10 WAT  |  one market: 1st Half - Over/Under / Under 1.5 (user's call: best of both Z5W0Z4 + LEMWX4 = SportyBet 1st-half Under 1.5 at 1.65-1.79) - 5,685,321.71x (29 games)  |  code GYRHDL
+http://www.sportybet.com/ng/?shareCode=GYRHDL
+- Sun 15:00  Alcochetense v Maritimo Madeira  -  1st Half - Over/Under / Under 1.5 @1.72
+    Pinnacle 1st half Over 1.5 2.05 / Under 1.5 1.63
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 3/7 4/10 4/10
+- Sun 15:00  Celtic v Heart of Midlothian FC  -  1st Half - Over/Under / Under 1.5 @1.70
+    Pinnacle 1st half Over 1.5 - / Under 1.5 -
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 15:00  FC Schaffhausen v FC Thun  -  1st Half - Over/Under / Under 1.5 @1.74
+    Pinnacle 1st half Over 1.5 1.99 / Under 1.5 1.79
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 3/7 5/10 5/10
+- Sun 15:00  Brattvaag v Bjarg  -  1st Half - Over/Under / Under 1.5 @1.77
+    Pinnacle 1st half Over 1.5 - / Under 1.5 -
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 15:00  Atert Bissen v US Hostert  -  1st Half - Over/Under / Under 1.5 @1.66
+    Pinnacle 1st half Over 1.5 2.17 / Under 1.5 1.67
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 2/7 6/10 3/10
+- Sun 15:00  FC Victoria Rosport v FC Differdange 03  -  1st Half - Over/Under / Under 1.5 @1.69
+    Pinnacle 1st half Over 1.5 2.08 / Under 1.5 1.71
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 2/7 4/10 3/10
+- Sun 15:00  Residence Walferdange v US Rumelange  -  1st Half - Over/Under / Under 1.5 @1.77
+    Pinnacle 1st half Over 1.5 2.01 / Under 1.5 1.8
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 3/7 2/10 5/10
+- Sun 15:00  US Mondorf-Les-Bains v FC Wiltz 71  -  1st Half - Over/Under / Under 1.5 @1.79
+    Pinnacle 1st half Over 1.5 2.02 / Under 1.5 1.79
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 2/7 4/10 6/10
+- Sun 15:00  Eb/Streymur v HB Torshavn  -  1st Half - Over/Under / Under 1.5 @1.65
+    Pinnacle 1st half Over 1.5 2.14 / Under 1.5 1.68
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 3/7 6/10 6/10
+- Sun 15:30  Halmstads BK v Hammarby IF  -  1st Half - Over/Under / Under 1.5 @1.77
+    Pinnacle 1st half Over 1.5 2.14 / Under 1.5 1.7
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 15:30  Al Sadd SC v Al Duhail SC  -  1st Half - Over/Under / Under 1.5 @1.73
+    Pinnacle 1st half Over 1.5 2.09 / Under 1.5 1.76
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 1/7 6/7 2/10 8/10
+- Sun 15:30  MSV Duisburg v FC Viktoria Cologne  -  1st Half - Over/Under / Under 1.5 @1.66
+    Pinnacle 1st half Over 1.5 2.19 / Under 1.5 1.68
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 6/10 5/10
+- Sun 15:45  MVV Maastricht v Heracles Almelo  -  1st Half - Over/Under / Under 1.5 @1.78
+    Pinnacle 1st half Over 1.5 2.04 / Under 1.5 1.79
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 6/10 4/10
+- Sun 16:00  Lyn 1896 FK v Moss FK  -  1st Half - Over/Under / Under 1.5 @1.74
+    Pinnacle 1st half Over 1.5 2.07 / Under 1.5 1.75
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 4/7 5/10 6/10
+- Sun 16:00  Ranheim v Bryne FK  -  1st Half - Over/Under / Under 1.5 @1.67
+    Pinnacle 1st half Over 1.5 2.11 / Under 1.5 1.72
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 1/7 5/7 4/10 7/10
+- Sun 16:00  Saldus SS/Leevon v JDFS Alberts  -  1st Half - Over/Under / Under 1.5 @1.65
+    Pinnacle 1st half Over 1.5 2.06 / Under 1.5 1.65
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 1/7 4/7 3/10 6/10
+- Sun 17:00  Istanbul BB v Gaziantep FK  -  1st Half - Over/Under / Under 1.5 @1.68
+    Pinnacle 1st half Over 1.5 2.21 / Under 1.5 1.68
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 17:00  NK Slaven Belupo v GNK Dinamo Zagreb  -  1st Half - Over/Under / Under 1.5 @1.73
+    Pinnacle 1st half Over 1.5 2.13 / Under 1.5 1.71
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 1/7 4/10 3/10
+- Sun 17:00  Tallinna FC Flora v Tartu JK Tammeka  -  1st Half - Over/Under / Under 1.5 @1.72
+    Pinnacle 1st half Over 1.5 2.06 / Under 1.5 1.75
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 2/7 3/10 2/10
+- Sun 17:00  MSK Zilina v DAC 1904 Dunajska Streda  -  1st Half - Over/Under / Under 1.5 @1.66
+    Pinnacle 1st half Over 1.5 2.15 / Under 1.5 1.7
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 2/7 3/10 5/10
+- Sun 17:30  St. Truidense VV v Lommel SK  -  1st Half - Over/Under / Under 1.5 @1.67
+    Pinnacle 1st half Over 1.5 2.28 / Under 1.5 1.63
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Sun 17:45  Al Gharafa SC v Al Rayyan SC  -  1st Half - Over/Under / Under 1.5 @1.67
+    Pinnacle 1st half Over 1.5 2.18 / Under 1.5 1.68
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 4/10 5/10
+- Sun 18:30  SV Meppen 1912 v TSV Havelse  -  1st Half - Over/Under / Under 1.5 @1.74
+    Pinnacle 1st half Over 1.5 2.09 / Under 1.5 1.76
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 4/7 6/10 4/10
+- Sun 19:00  NEC Nijmegen v Fortuna Sittard  -  1st Half - Over/Under / Under 1.5 @1.73
+    Pinnacle 1st half Over 1.5 2.18 / Under 1.5 1.7
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 3/7 3/10 6/10
+- Sun 19:00  Leones Negros UDEG v Alebrijes de Oaxaca FC  -  1st Half - Over/Under / Under 1.5 @1.65
+    Pinnacle 1st half Over 1.5 2.25 / Under 1.5 1.65
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 5/10 9/10
+- Sun 19:00  Pumas Unam v Atlas FC  -  1st Half - Over/Under / Under 1.5 @1.76
+    Pinnacle 1st half Over 1.5 2.03 / Under 1.5 1.77
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 4/7 3/10 5/10
+- Sun 20:00  CA Nacional Potosi v Club Bolivar  -  1st Half - Over/Under / Under 1.5 @1.66
+    Pinnacle 1st half Over 1.5 2.12 / Under 1.5 1.65
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 7/10 7/10
+- Sun 22:00  Birmingham Legion FC v Loudoun United FC  -  1st Half - Over/Under / Under 1.5 @1.66
+    Pinnacle 1st half Over 1.5 2.15 / Under 1.5 1.7
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 4/7 4/10 6/10
+- Sun 22:00  Chattanooga FC v New York City FC II  -  1st Half - Over/Under / Under 1.5 @1.78
+    Pinnacle 1st half Over 1.5 2.02 / Under 1.5 1.76
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 1/7 7/10 2/10
+
+## 2026-10-18 15:54 WAT  |  five options like U0V90P (legs 1.30 or shorter) - 110.34x (46 games), to Mon 08:00  |  code LL57TR
+http://www.sportybet.com/ng/?shareCode=LL57TR
+- Sun 17:00  Tallinna FC Flora v Tartu JK Tammeka  -  10 Minutes - 1X2 / Draw @1.23
+    10-minute draw: past games 12 of 14 (6+ a side)
+- Sun 17:00  Kisvarda FC v Ferencvarosi Budapest  -  Double Chance / Draw or Away @1.15
+    the book's most likely option on this game, chance 0.83
+- Sun 17:00  Al-Ahli SC Manama v AL-Khaldiya SC  -  Double Chance / Draw or Away @1.16
+    the book's most likely option on this game, chance 0.82
+- Sun 17:00  NK Slaven Belupo v GNK Dinamo Zagreb  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    minute Under (options like it won 133 of 134): past games 11 of 11 (4+ a side)
+- Sun 17:00  AC Milan v Atalanta  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    minute Under (options like it won 121 of 124): past games 6 of 6 (3+ a side)
+- Sun 17:00  Copenhagen v AGF Aarhus  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    minute Under (options like it won 121 of 124): past games 13 of 14 (7+ a side)
+- Sun 17:00  Sporting Cristal v Comerciantes Unidos  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    minute Under (options like it won 121 of 124): past games 13 of 14 (7+ a side)
+- Sun 17:30  Malaga CF v Real Sociedad  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    minute Under (options like it won 121 of 124): past games 9 of 9 (4+ a side)
+- Sun 17:30  Valladolid v Club Deportivo Eldense  -  Total Goals from 1 to 20 min / Under 1.5 @1.05
+    minute Under (options like it won 77 of 82): past games 8 of 8 (4+ a side)
+- Sun 17:30  Girona v FC Andorra  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    minute Under (options like it won 104 of 108): past games 9 of 9 (4+ a side)
+- Sun 17:45  Al Gharafa SC v Al Rayyan SC  -  10 Minutes - 1X2 / Draw @1.21
+    10-minute draw: past games 9 of 10 (4+ a side)
+- Sun 18:15  Hapoel Be`er Sheva FC v Hapoel Jerusalem FC  -  Match Result after 5 Minutes / Draw @1.11
+    5-minute draw: past games 12 of 13 (6+ a side)
+- Sun 18:45  Racing Club Avellaneda v CA Independiente Avellaneda  -  Match Result after 5 Minutes / Draw @1.08
+    5-minute draw: past games 13 of 14 (7+ a side)
+- Sun 19:00  PAOK v POT Iraklis  -  Match Result after 5 Minutes / Draw @1.10
+    5-minute draw: past games 10 of 11 (4+ a side)
+- Sun 19:00  NK Celik Zenica v HSK Zrinjski Mostar  -  10 Minutes - 1X2 / Draw @1.15
+    10-minute draw: past games 8 of 9 (4+ a side)
+- Sun 19:00  Barra Mansa FC RJ v Serra Macaense FC RJ  -  Double Chance / Draw or Away @1.26
+    the book's most likely option on this game, chance 0.73
+- Sun 19:00  FC Twente Enschede v FC Utrecht  -  Total Goals from 1 to 60 min / Under 4.5 @1.04
+    minute Under (options like it won 133 of 134): past games 10 of 11 (4+ a side)
+- Sun 19:00  Nacao SC v Blumenau EC SC  -  Double Chance / Draw or Away @1.20
+    the book's most likely option on this game, chance 0.78
+- Sun 19:00  Nautico Capibaribe PE v Ipojuca FC PE  -  1X2 / Home @1.23
+    the book's most likely option on this game, chance 0.75
+- Sun 19:00  NEC Nijmegen v Fortuna Sittard  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    minute Under (options like it won 133 of 134): past games 10 of 11 (4+ a side)
+- Sun 19:00  Clube 1992 RS v Real SC Tramandai RS  -  Double Chance / Draw or Away @1.17
+    the book's most likely option on this game, chance 0.80
+- Sun 19:00  Al-Fateh SC v Al-Khaleej Club  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    minute Under (options like it won 104 of 108): past games 9 of 9 (4+ a side)
+- Sun 19:00  CS Universitatea Craiova v FC Farul Constanta  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    minute Under (options like it won 104 of 108): past games 14 of 14 (7+ a side)
+- Sun 19:00  EC Juventude RS v Brasil de Farroupilha RS  -  1X2 / Home @1.17
+    the book's most likely option on this game, chance 0.78
+- Sun 19:30  KS Lechia Gdansk v MKS Arka Gdynia  -  10 Minutes - 1X2 / Draw @1.19
+    10-minute draw: past games 10 of 11 (5+ a side)
+- Sun 19:30  Club Atletico Los Andes v CA All Boys  -  10 Minutes - 1X2 / Draw @1.10
+    10-minute draw: past games 13 of 14 (6+ a side)
+- Sun 19:30  Independente FSJ PR v Parana Clube PR  -  Double Chance / Draw or Away @1.17
+    the book's most likely option on this game, chance 0.80
+- Sun 19:45  Juventus v Lazio  -  Match Result after 5 Minutes / Draw @1.10
+    5-minute draw: past games 7 of 7 (3+ a side)
+- Sun 19:45  CF Os Belenenses v FC Arouca  -  Double Chance / Draw or Away @1.15
+    the book's most likely option on this game, chance 0.83
+- Sun 20:00  Fluminense FC RJ v Santos FC SP  -  Match Result after 5 Minutes / Draw @1.10
+    5-minute draw: past games 13 of 14 (6+ a side)
+- Sun 20:00  Sao Bernardo FC v Criciuma EC SC  -  10 Minutes - 1X2 / Draw @1.14
+    10-minute draw: past games 12 of 14 (7+ a side)
+- Sun 20:00  Burgos CF v CE Sabadell FC  -  Total Goals from 1 to 5 min / Under 0.5 @1.07
+    minute Under (options like it won 51 of 53): past games 9 of 10 (4+ a side)
+- Sun 20:00  Real Madrid v Sevilla  -  Total Goals from 1 to 55 min / Under 4.5 @1.03
+    minute Under (options like it won 138 of 139): past games 9 of 9 (4+ a side)
+- Sun 20:00  Gremio FB Porto Alegrense RS v Cruzeiro EC MG  -  Total Goals from 1 to 15 min / Under 1.5 @1.03
+    minute Under (options like it won 104 of 108): past games 13 of 14 (6+ a side)
+- Sun 20:30  Dynamo Puerto FC v Aragua FC  -  Double Chance / Draw or Away @1.26
+    the book's most likely option on this game, chance 0.73
+- Sun 21:00  Cerro Porteno v Sportivo Ameliano  -  10 Minutes - 1X2 / Draw @1.16
+    10-minute draw: past games 12 of 14 (6+ a side)
+- Sun 22:00  CA Bucaramanga v America de Cali  -  Match Result after 5 Minutes / Draw @1.08
+    5-minute draw: past games 12 of 13 (5+ a side)
+- Sun 22:00  San Martin de San Juan v CA Temperley  -  10 Minutes - 1X2 / Draw @1.12
+    10-minute draw: past games 12 of 14 (7+ a side)
+- Sun 22:00  Atletico Balboa v CD Aguila San Miguel  -  Double Chance / Draw or Away @1.25
+    the book's most likely option on this game, chance 0.74
+- Sun 22:00  FC Cincinnati v Columbus Crew  -  Total Goals from 1 to 55 min / Under 4.5 @1.03
+    minute Under (options like it won 138 of 139): past games 13 of 14 (7+ a side)
+- Sun 22:30  EC Bahia BA v CR Flamengo RJ  -  Match Result after 5 Minutes / Draw @1.11
+    5-minute draw: past games 13 of 13 (6+ a side)
+- Sun 22:30  Barcelona SC v CD Universidad Catolica del Ecuador  -  10 Minutes - 1X2 / Draw @1.15
+    10-minute draw: past games 12 of 14 (6+ a side)
+- Sun 22:30  San Martin de Tucuman v CA Ferrocarril Midland  -  10 Minutes - 1X2 / Draw @1.10
+    10-minute draw: past games 12 of 14 (6+ a side)
+- Sun 23:30  Clube do Remo PA v Red Bull Bragantino SP  -  Total Goals from 1 to 15 min / Under 1.5 @1.04
+    minute Under (options like it won 104 of 108): past games 13 of 14 (6+ a side)
+- Mon 00:15  CA Belgrano de Cordoba v CA River Plate (ARG)  -  Match Result after 5 Minutes / Draw @1.07
+    5-minute draw: past games 11 of 12 (5+ a side)
+- Mon 02:00  CF Monterrey v CF Pachuca  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    minute Under (options like it won 121 of 124): past games 13 of 14 (7+ a side)
+
+## 2026-10-19 17:17 WAT  |  five options, fairest legs (user: 'today 200'; minute legs + Home/Draw or Away within 5 per 100 of Pinnacle, saved 17:02) - 171.98x (29 games), Mon 18:00 to Tue 03:00  |  code G9XHD3
+http://www.sportybet.com/ng/?shareCode=G9XHD3
+- Mon 18:00  Trabzonspor v Besiktas Istanbul  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    minute Under: past games 11 of 11
+- Mon 18:00  Viborg FF v FC Midtjylland  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    minute Under: past games 11 of 12
+- Mon 18:00  Degerfors IF v Kalmar FF  -  Total Goals from 1 to 35 min / Under 2.5 @1.03
+    minute Under: past games 13 of 14
+- Mon 18:00  Bursaspor v Pendikspor  -  10 Minutes - 1X2 / Draw @1.20
+    10-min draw: past games 8 of 9
+- Mon 18:00  Esenler Erokspor v Mardin 1969 Spor  -  10 Minutes - 1X2 / Draw @1.15
+    10-min draw: past games 8 of 9
+- Mon 18:00  Wisla Plock v RKS Radomiak Radom  -  1X2 / Home @1.85
+    Pinnacle fair 1.92 (-3.8 per 100), Poland - Ekstraklasa
+- Mon 18:05  Varbergs BoIS v Helsingborgs IF  -  1X2 / Home @1.85
+    Pinnacle fair 1.93 (-4.3 per 100), Sweden - Superettan
+- Mon 19:00  Jong Ajax Amsterdam v De Graafschap  -  Total Goals from 1 to 55 min / Under 4.5 @1.03
+    minute Under: past games 9 of 10
+- Mon 19:00  Jong PSV Eindhoven v FC Dordrecht  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    minute Under: past games 9 of 10
+- Mon 19:00  SC FC Voluntari v Fotbal Club FCSB  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    minute Under: past games 13 of 13
+- Mon 19:00  Jong FC Utrecht v Roda JC Kerkrade  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    minute Under: past games 9 of 10
+- Mon 19:00  CA Lugano v Canuelas FC  -  Double Chance / Draw or Away @1.27
+    Pinnacle fair 1.33 (-4.3 per 100), Argentina - Primera C Metropol
+- Mon 19:00  Al-Shabab FC (SA) v Al-Faisaly FC  -  1X2 / Home @1.65
+    Pinnacle fair 1.73 (-4.4 per 100), Saudi Arabia - Pro League
+- Mon 19:30  AS Giana Erminio v Union Brescia  -  10 Minutes - 1X2 / Draw @1.16
+    10-min draw: past games 8 of 10
+- Mon 19:30  Dolomiti Bellunesi v AC Trento  -  10 Minutes - 1X2 / Draw @1.15
+    10-min draw: past games 9 of 9
+- Mon 19:30  Giugliano Calcio 1928 v Calcio Foggia  -  Double Chance / Draw or Away @1.33
+    Pinnacle fair 1.37 (-3.3 per 100), Italy - Serie C Group C
+- Mon 19:45  Parma Calcio v Torino  -  Total Goals from 1 to 20 min / Under 1.5 @1.04
+    minute Under: past games 8 of 8
+- Mon 19:45  Waterford FC v Galway United FC  -  1X2 / Home @1.69
+    Pinnacle fair 1.75 (-3.5 per 100), Ireland - Premier
+- Mon 20:00  Tottenham v Coventry City  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    minute Under: past games 8 of 8
+- Mon 20:00  Derry City FC v Saint Patrick´s Athletic FC  -  Double Chance / Draw or Away @1.31
+    Pinnacle fair 1.37 (-4.5 per 100), Ireland - Premier
+- Mon 20:15  Fram Reykjavik v IA Akranes  -  Total Goals from 1 to 55 min / Under 4.5 @1.04
+    minute Under: past games 14 of 14
+- Mon 20:15  Braga v Gil Vicente Barcelos  -  Total Goals from 1 to 35 min / Under 2.5 @1.03
+    minute Under: past games 9 of 10
+- Mon 23:00  CA Sarmiento Junin v CA Barracas Central  -  Match Result after 5 Minutes / Draw @1.07
+    5-min draw: past games 13 of 14
+- Mon 23:00  Newell's Old Boys v CA Central Cordoba SE  -  Total Goals from 1 to 20 min / Under 1.5 @1.04
+    minute Under: past games 11 of 12
+- Mon 23:30  Goias EC GO v Nautico PE  -  10 Minutes - 1X2 / Draw @1.18
+    10-min draw: past games 13 of 14
+- Tue 00:00  SC Corinthians SP v EC Vitoria BA  -  Total Goals from 1 to 35 min / Under 2.5 @1.03
+    minute Under: past games 14 of 14
+- Tue 00:00  Real Cartagena FC v Boyaca Patriotas  -  1X2 / Home @1.85
+    Pinnacle fair 1.94 (-4.7 per 100), Colombia - Primera B
+- Tue 02:05  AD Pasto v Alianza FC Valledupar  -  Match Result after 5 Minutes / Draw @1.08
+    5-min draw: past games 12 of 13
+- Tue 03:00  CD Escorpiones Belen v Puntarenas FC  -  10 Minutes - 1X2 / Draw @1.16
+    10-min draw: past games 9 of 10
+
+## 2026-10-19 17:31 WAT  |  best 80x (user: 'Give me the best 80 odds'; minute legs + Home/Draw or Away within 5 per 100 of Pinnacle) - 90.87x (22 games), Mon 18:30 to Tue 02:05  |  code NSTTBC
+http://www.sportybet.com/ng/?shareCode=NSTTBC
+- Mon 18:30  Diosgyori VTK v Kazincbarcikai SC  -  1X2 / Home @1.97
+    Pinnacle fair 2.07 (-4.7 per 100), Hungary - NB 2
+- Mon 19:00  Jong Ajax Amsterdam v De Graafschap  -  Total Goals from 1 to 55 min / Under 4.5 @1.03
+    minute Under: past games 9 of 10
+- Mon 19:00  Jong PSV Eindhoven v FC Dordrecht  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    minute Under: past games 9 of 10
+- Mon 19:00  SC FC Voluntari v Fotbal Club FCSB  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    minute Under: past games 13 of 13
+- Mon 19:00  Jong FC Utrecht v Roda JC Kerkrade  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    minute Under: past games 9 of 10
+- Mon 19:00  Al-Shabab FC (SA) v Al-Faisaly FC  -  1X2 / Home @1.65
+    Pinnacle fair 1.72 (-4.1 per 100), Saudi Arabia - Pro League
+- Mon 19:00  CA Lugano v Canuelas FC  -  Double Chance / Draw or Away @1.27
+    Pinnacle fair 1.33 (-4.2 per 100), Argentina - Primera C Metropol
+- Mon 19:30  Dolomiti Bellunesi v AC Trento  -  10 Minutes - 1X2 / Draw @1.15
+    10-min draw: past games 9 of 9
+- Mon 19:30  Giugliano Calcio 1928 v Calcio Foggia  -  Double Chance / Draw or Away @1.33
+    Pinnacle fair 1.38 (-3.4 per 100), Italy - Serie C Group C
+- Mon 19:45  Parma Calcio v Torino  -  Total Goals from 1 to 20 min / Under 1.5 @1.04
+    minute Under: past games 8 of 8
+- Mon 19:45  Waterford FC v Galway United FC  -  1X2 / Home @1.66
+    Pinnacle fair 1.71 (-3.0 per 100), Ireland - Premier
+- Mon 19:45  Redditch United v Worcester City  -  1X2 / Home @1.67
+    Pinnacle fair 1.74 (-4.3 per 100), England - Southern Premier Lea
+- Mon 19:45  Rodez Aveyron Football v Montpellier  -  Double Chance / Draw or Away @1.34
+    Pinnacle fair 1.40 (-4.5 per 100), France - Ligue 2
+- Mon 20:00  Tottenham v Coventry City  -  Total Goals from 1 to 65 min / Under 4.5 @1.03
+    minute Under: past games 8 of 8
+- Mon 20:00  Derry City FC v Saint Patrick´s Athletic FC  -  Double Chance / Draw or Away @1.31
+    Pinnacle fair 1.37 (-4.5 per 100), Ireland - Premier
+- Mon 20:15  Fram Reykjavik v IA Akranes  -  Total Goals from 1 to 55 min / Under 4.5 @1.04
+    minute Under: past games 14 of 14
+- Mon 20:15  Braga v Gil Vicente Barcelos  -  Total Goals from 1 to 35 min / Under 2.5 @1.03
+    minute Under: past games 9 of 10
+- Mon 23:00  CA Sarmiento Junin v CA Barracas Central  -  Match Result after 5 Minutes / Draw @1.07
+    5-min draw: past games 13 of 14
+- Mon 23:00  Newell's Old Boys v CA Central Cordoba SE  -  Total Goals from 1 to 20 min / Under 1.5 @1.04
+    minute Under: past games 11 of 12
+- Tue 00:00  SC Corinthians SP v EC Vitoria BA  -  Total Goals from 1 to 35 min / Under 2.5 @1.03
+    minute Under: past games 14 of 14
+- Tue 00:00  Real Cartagena FC v Boyaca Patriotas  -  1X2 / Home @1.85
+    Pinnacle fair 1.94 (-4.7 per 100), Colombia - Primera B
+- Tue 02:05  AD Pasto v Alianza FC Valledupar  -  Match Result after 5 Minutes / Draw @1.08
+    5-min draw: past games 12 of 13
