@@ -306279,3 +306279,255 @@ http://www.sportybet.com/ng/?shareCode=NSTTBC
     Pinnacle fair 1.94 (-4.7 per 100), Colombia - Primera B
 - Tue 02:05  AD Pasto v Alianza FC Valledupar  -  Match Result after 5 Minutes / Draw @1.08
     5-min draw: past games 12 of 13
+
+## 2026-10-20 08:02 WAT  |  minute mix: 5-min draw, 10-min draw or the Minutes-tab option the record backs - every minute game - 9.51x (26 games)  |  code MG57XS
+http://www.sportybet.com/ng/?shareCode=MG57XS
+- Tue 16:00  Diriyah Club v Al-Riyadh SC  -  10 Minutes - 1X2 / Draw @1.18
+    book's no-margin chance 77% - 10-min draw
+    match record backs it: record 83% of 12 (5+ answered a side, floor 80%)
+- Tue 17:45  Fenerbahce Istanbul v Slavia Prague  -  Total Goals from 1 to 70 min / Over 0.5 @1.08
+    book's no-margin chance 88% - other option
+    match record backs it: record 100% of 14 (7+ answered a side, floor 90%); options like it won 58 of 63 at a 90% record
+- Tue 17:45  Sabah Masazir v Borussia Dortmund  -  Total Goals from 1 to 85 min / Under 5.5 @1.06
+    book's no-margin chance 89% - other option
+    match record backs it: record 92% of 13 (6+ answered a side, floor 90%); options like it won 109 of 112 at a 90% record
+- Tue 19:00  Al Nassr Club v Neom SC  -  Total Goals from 1 to 65 min / Under 4.5 @1.04
+    book's no-margin chance 90% - other option
+    match record backs it: record 100% of 10 (5+ answered a side, floor 90%); options like it won 121 of 124 at a 90% record
+- Tue 19:00  Al-Ettifaq FC v Al-Ittihad Club  -  10 Minutes - 1X2 / Draw @1.23
+    book's no-margin chance 74% - 10-min draw
+    match record backs it: record 92% of 13 (6+ answered a side, floor 80%)
+- Tue 19:45  Wolves v Portsmouth FC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 83% - 5-min draw
+    match record backs it: record 91% of 11 (5+ answered a side, floor 90%)
+- Tue 19:45  Dunfermline Athletic FC v Partick Thistle FC  -  Total Goals from 1 to 55 min / Under 3.5 @1.03
+    book's no-margin chance 91% - other option
+    match record backs it: record 93% of 14 (6+ answered a side, floor 90%); options like it won 98 of 106 at a 90% record
+- Tue 19:45  Blackpool FC v Milton Keynes Dons  -  Total Goals from 1 to 50 min / Under 3.5 @1.04
+    book's no-margin chance 90% - other option
+    match record backs it: record 91% of 11 (5+ answered a side, floor 90%); options like it won 116 of 123 at a 90% record
+- Tue 19:45  Bromley FC v Leicester  -  Match Result after 5 Minutes / Draw @1.12
+    book's no-margin chance 81% - 5-min draw
+    match record backs it: record 92% of 12 (5+ answered a side, floor 90%)
+- Tue 19:45  Cambridge United v Wycombe Wanderers  -  Total Goals from 1 to 85 min / Over 0.5 @1.05
+    book's no-margin chance 89% - other option
+    match record backs it: record 92% of 12 (4+ answered a side, floor 90%); options like it won 86 of 92 at a 90% record
+- Tue 19:45  Doncaster Rovers v Stockport County FC  -  Match Result after 5 Minutes / Draw @1.10
+    book's no-margin chance 82% - 5-min draw
+    match record backs it: record 100% of 12 (5+ answered a side, floor 90%)
+- Tue 19:45  Huddersfield v Peterborough United  -  Total Goals from 1 to 85 min / Under 5.5 @1.05
+    book's no-margin chance 89% - other option
+    match record backs it: record 92% of 12 (5+ answered a side, floor 90%); options like it won 109 of 112 at a 90% record
+- Tue 19:45  Luton v Barnsley FC  -  Total Goals from 1 to 85 min / Under 5.5 @1.06
+    book's no-margin chance 88% - other option
+    match record backs it: record 91% of 11 (5+ answered a side, floor 90%); options like it won 109 of 112 at a 90% record
+- Tue 19:45  Notts County v Sheffield Wednesday  -  Total Goals from 1 to 20 min / Under 1.5 @1.06
+    book's no-margin chance 88% - other option
+    match record backs it: record 91% of 11 (5+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+- Tue 19:45  Barnet FC v Swindon Town  -  Total Goals from 1 to 65 min / Under 4.5 @1.04
+    book's no-margin chance 90% - other option
+    match record backs it: record 91% of 11 (5+ answered a side, floor 90%); options like it won 121 of 124 at a 90% record
+- Tue 19:45  Chesterfield FC v Colchester United  -  Match Result after 5 Minutes / Draw @1.11
+    book's no-margin chance 81% - 5-min draw
+    match record backs it: record 92% of 13 (6+ answered a side, floor 90%)
+- Tue 19:45  Crawley Town v Shrewsbury Town  -  Total Goals from 1 to 85 min / Over 0.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 92% of 12 (5+ answered a side, floor 90%); options like it won 86 of 92 at a 90% record
+- Tue 19:45  Northampton Town v Tranmere Rovers FC  -  Match Result after 5 Minutes / Draw @1.08
+    book's no-margin chance 83% - 5-min draw
+    match record backs it: record 100% of 10 (5+ answered a side, floor 90%)
+- Tue 19:45  Rochdale AFC v Grimsby Town  -  Total Goals from 1 to 20 min / Under 1.5 @1.07
+    book's no-margin chance 88% - other option
+    match record backs it: record 92% of 12 (5+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+- Tue 20:00  Liverpool v Villarreal  -  Match Result after 5 Minutes / Draw @1.13
+    book's no-margin chance 81% - 5-min draw
+    match record backs it: record 91% of 11 (5+ answered a side, floor 90%)
+- Tue 20:00  Napoli v Bodoe/Glimt  -  10 Minutes - 1X2 / Draw @1.21
+    book's no-margin chance 75% - 10-min draw
+    match record backs it: record 82% of 11 (4+ answered a side, floor 80%)
+- Tue 20:00  Porto v PSV Eindhoven  -  Total Goals from 1 to 60 min / Under 4.5 @1.03
+    book's no-margin chance 93% - other option
+    match record backs it: record 100% of 12 (6+ answered a side, floor 90%); options like it won 133 of 134 at a 90% record
+- Tue 20:00  PSG v Barcelona  -  Match Result after 5 Minutes / Draw @1.18
+    book's no-margin chance 78% - 5-min draw
+    match record backs it: record 90% of 10 (4+ answered a side, floor 90%)
+- Tue 20:00  Roma v Slovan Bratislava  -  Match Result after 5 Minutes / Draw @1.17
+    book's no-margin chance 79% - 5-min draw
+    match record backs it: record 100% of 12 (5+ answered a side, floor 90%)
+- Tue 20:00  Stuttgart v Atletico Madrid  -  Total Goals from 1 to 65 min / Under 4.5 @1.06
+    book's no-margin chance 89% - other option
+    match record backs it: record 100% of 9 (3+ answered a side, floor 90%); options like it won 121 of 124 at a 90% record
+- Tue 22:30  Deportivo Pereira FC SA v Boyaca Chico FC  -  Total Goals from 1 to 20 min / Under 1.5 @1.04
+    book's no-margin chance 90% - other option
+    match record backs it: record 100% of 12 (6+ answered a side, floor 90%); options like it won 77 of 82 at a 90% record
+
+## 2026-10-20 08:05 WAT  |  one market: 1st Half - Over/Under / Under 1.5 (user's call: the pinnacle price pattern - Pinnacle 1st-half Over 1.5 at 2.50 and up, part 1 of 1) - 5,581.58x (24 games)  |  code UFKMVF
+http://www.sportybet.com/ng/?shareCode=UFKMVF
+- Tue 09:45  Mohammedan SC Dhaka v Pwd SC  -  1st Half - Over/Under / Under 1.5 @1.44
+    Pinnacle 1st half Over 1.5 2.61 / Under 1.5 1.41
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 6/7 8/10 9/10
+- Tue 13:00  Bhayangkara Presisi Indonesia FC v Psim Yogyakarta  -  1st Half - Over/Under / Under 1.5 @1.52
+    Pinnacle 1st half Over 1.5 2.53 / Under 1.5 1.52
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 7/7 4/10 9/10
+- Tue 13:00  Paro FC v AL Ansar SC  -  1st Half - Over/Under / Under 1.5 @1.43
+    Pinnacle 1st half Over 1.5 2.55 / Under 1.5 1.41
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 3/7 5/10 6/10
+- Tue 15:45  Hajer FC v Al-Najma  -  1st Half - Over/Under / Under 1.5 @1.38
+    Pinnacle 1st half Over 1.5 2.85 / Under 1.5 1.38
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 7/10 6/10
+- Tue 16:00  Diriyah Club v Al-Riyadh SC  -  1st Half - Over/Under / Under 1.5 @1.49
+    Pinnacle 1st half Over 1.5 2.69 / Under 1.5 1.45
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 7/10 6/10
+- Tue 18:00  Talaea El Gaish v Pyramids FC  -  1st Half - Over/Under / Under 1.5 @1.35
+    Pinnacle 1st half Over 1.5 3.32 / Under 1.5 1.32
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 5/7 9/10 6/10
+- Tue 18:30  Regar-Tadaz Tursunzoda v Qadsia SC  -  1st Half - Over/Under / Under 1.5 @1.41
+    Pinnacle 1st half Over 1.5 2.7 / Under 1.5 1.37
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Tue 19:45  Dunfermline Athletic FC v Partick Thistle FC  -  1st Half - Over/Under / Under 1.5 @1.41
+    Pinnacle 1st half Over 1.5 2.96 / Under 1.5 1.4
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 8/10 7/10
+- Tue 19:45  AFC Wimbledon v Mansfield Town  -  1st Half - Over/Under / Under 1.5 @1.47
+    Pinnacle 1st half Over 1.5 2.67 / Under 1.5 1.47
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 4/7 6/10 5/10
+- Tue 19:45  Burton Albion v Bradford City FC  -  1st Half - Over/Under / Under 1.5 @1.39
+    Pinnacle 1st half Over 1.5 3.04 / Under 1.5 1.38
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 4/10 8/10
+- Tue 19:45  Cambridge United v Wycombe Wanderers  -  1st Half - Over/Under / Under 1.5 @1.50
+    Pinnacle 1st half Over 1.5 2.63 / Under 1.5 1.48
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 3/7 8/10 4/10
+- Tue 19:45  Doncaster Rovers v Stockport County FC  -  1st Half - Over/Under / Under 1.5 @1.53
+    Pinnacle 1st half Over 1.5 2.6 / Under 1.5 1.5
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 4/7 10/10 6/10
+- Tue 19:45  Notts County v Sheffield Wednesday  -  1st Half - Over/Under / Under 1.5 @1.47
+    Pinnacle 1st half Over 1.5 2.77 / Under 1.5 1.44
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 4/7 8/10 6/10
+- Tue 19:45  Oxford United v Wigan Athletic  -  1st Half - Over/Under / Under 1.5 @1.46
+    Pinnacle 1st half Over 1.5 2.82 / Under 1.5 1.43
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 5/7 9/10 8/10
+- Tue 19:45  Bristol Rovers v Salford City  -  1st Half - Over/Under / Under 1.5 @1.49
+    Pinnacle 1st half Over 1.5 2.74 / Under 1.5 1.44
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 2/7 6/10 8/10
+- Tue 19:45  Cheltenham Town v Fleetwood Town  -  1st Half - Over/Under / Under 1.5 @1.45
+    Pinnacle 1st half Over 1.5 2.72 / Under 1.5 1.45
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 5/7 5/10 8/10
+- Tue 19:45  Crawley Town v Shrewsbury Town  -  1st Half - Over/Under / Under 1.5 @1.45
+    Pinnacle 1st half Over 1.5 2.85 / Under 1.5 1.42
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 5/10 6/10
+- Tue 19:45  Exeter City v Crewe Alexandra  -  1st Half - Over/Under / Under 1.5 @1.34
+    Pinnacle 1st half Over 1.5 3.14 / Under 1.5 1.36
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 10/10 4/10
+- Tue 19:45  Northampton Town v Tranmere Rovers FC  -  1st Half - Over/Under / Under 1.5 @1.36
+    Pinnacle 1st half Over 1.5 3.1 / Under 1.5 1.36
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 7/10 10/10
+- Tue 19:45  Rochdale AFC v Grimsby Town  -  1st Half - Over/Under / Under 1.5 @1.50
+    Pinnacle 1st half Over 1.5 2.6 / Under 1.5 1.49
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 6/10 5/10
+- Tue 19:45  Rotherham United v Newport County  -  1st Half - Over/Under / Under 1.5 @1.42
+    Pinnacle 1st half Over 1.5 2.9 / Under 1.5 1.4
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 1/7 6/7 6/10 10/10
+- Tue 19:45  Walsall FC v Oldham Athletic  -  1st Half - Over/Under / Under 1.5 @1.46
+    Pinnacle 1st half Over 1.5 2.78 / Under 1.5 1.43
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 6/7 7/10 7/10
+- Tue 19:45  Larne FC v Linfield FC  -  1st Half - Over/Under / Under 1.5 @1.37
+    Pinnacle 1st half Over 1.5 3.03 / Under 1.5 1.38
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 8/10 8/10
+- Tue 23:30  Londrina EC PR v Cuiaba EC MT  -  1st Half - Over/Under / Under 1.5 @1.32
+    Pinnacle 1st half Over 1.5 3.35 / Under 1.5 1.32
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 3/7 5/10 6/10
+
+## 2026-10-20 08:05 WAT  |  one market: 1st Half - Over/Under / Under 1.5 (user's call: 20-25 games, today to 23:59, shortest prices) - 445.17x (20 games)  |  code RK1ZDN
+http://www.sportybet.com/ng/?shareCode=RK1ZDN
+- Tue 09:45  Mohammedan SC Dhaka v Pwd SC  -  1st Half - Over/Under / Under 1.5 @1.44
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 6/7 8/10 9/10
+- Tue 13:00  Paro FC v AL Ansar SC  -  1st Half - Over/Under / Under 1.5 @1.43
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 3/7 5/10 6/10
+- Tue 15:00  Zed FC v Modern Sport FC  -  1st Half - Over/Under / Under 1.5 @1.25
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 6/7 7/10 7/10
+- Tue 15:00  Asyut Petroleum v Zamalek SC  -  1st Half - Over/Under / Under 1.5 @1.33
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 6/7 9/10 8/10
+- Tue 15:45  Hajer FC v Al-Najma  -  1st Half - Over/Under / Under 1.5 @1.38
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 7/10 6/10
+- Tue 18:00  Wadi Degla SC v National Bank of Egypt SC  -  1st Half - Over/Under / Under 1.5 @1.32
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 6/7 8/10 7/10
+- Tue 18:00  Talaea El Gaish v Pyramids FC  -  1st Half - Over/Under / Under 1.5 @1.35
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 5/7 9/10 6/10
+- Tue 18:30  Regar-Tadaz Tursunzoda v Qadsia SC  -  1st Half - Over/Under / Under 1.5 @1.41
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Tue 19:45  Exeter City v Crewe Alexandra  -  1st Half - Over/Under / Under 1.5 @1.34
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 10/10 4/10
+- Tue 19:45  Northampton Town v Tranmere Rovers FC  -  1st Half - Over/Under / Under 1.5 @1.36
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 7/10 10/10
+- Tue 19:45  Larne FC v Linfield FC  -  1st Half - Over/Under / Under 1.5 @1.37
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 8/10 8/10
+- Tue 19:45  Burton Albion v Bradford City FC  -  1st Half - Over/Under / Under 1.5 @1.39
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 4/10 8/10
+- Tue 19:45  Dunfermline Athletic FC v Partick Thistle FC  -  1st Half - Over/Under / Under 1.5 @1.41
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 8/10 7/10
+- Tue 19:45  Rotherham United v Newport County  -  1st Half - Over/Under / Under 1.5 @1.42
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 1/7 6/7 6/10 10/10
+- Tue 20:15  Tigres FC v Real Cundinamarca  -  1st Half - Over/Under / Under 1.5 @1.25
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 9/10 6/10
+- Tue 21:00  Independiente Valle Del Cauca v Boca Juniors de Cali  -  1st Half - Over/Under / Under 1.5 @1.34
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 10/10 4/10
+- Tue 21:30  Atletico FC Cali v Deportes Quindio  -  1st Half - Over/Under / Under 1.5 @1.33
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 5/7 7/10 8/10
+- Tue 22:30  Deportivo Pereira FC SA v Boyaca Chico FC  -  1st Half - Over/Under / Under 1.5 @1.33
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 6/10 6/10
+- Tue 23:00  Paraguari AC v Club Fernando de La Mora  -  1st Half - Over/Under / Under 1.5 @1.38
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 6/10 6/10
+- Tue 23:30  Londrina EC PR v Cuiaba EC MT  -  1st Half - Over/Under / Under 1.5 @1.32
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 3/7 5/10 6/10
+
+## 2026-10-20 08:05 WAT  |  one market: 1st Half - Over/Under / Under 1.5 (user's call: 20-25 games, today to 23:59, shortest prices) - 2,853.41x (25 games)  |  code QBF7SZ
+http://www.sportybet.com/ng/?shareCode=QBF7SZ
+- Tue 09:45  Mohammedan SC Dhaka v Pwd SC  -  1st Half - Over/Under / Under 1.5 @1.44
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 6/7 8/10 9/10
+- Tue 13:00  Paro FC v AL Ansar SC  -  1st Half - Over/Under / Under 1.5 @1.43
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 4/7 3/7 5/10 6/10
+- Tue 15:00  Zed FC v Modern Sport FC  -  1st Half - Over/Under / Under 1.5 @1.25
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 6/7 7/10 7/10
+- Tue 15:00  Asyut Petroleum v Zamalek SC  -  1st Half - Over/Under / Under 1.5 @1.33
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 6/7 9/10 8/10
+- Tue 15:00  PFC Sogdiana v FC Andijon  -  1st Half - Over/Under / Under 1.5 @1.45
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Tue 15:45  Hajer FC v Al-Najma  -  1st Half - Over/Under / Under 1.5 @1.38
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 7/10 6/10
+- Tue 16:00  Al Ittihad Ahli of Aleppo v Ahal FC  -  1st Half - Over/Under / Under 1.5 @1.45
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 3/7 8/10 3/10
+- Tue 17:50  Al-Okhdood Club v AL Adalh FC  -  1st Half - Over/Under / Under 1.5 @1.45
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Tue 18:00  Wadi Degla SC v National Bank of Egypt SC  -  1st Half - Over/Under / Under 1.5 @1.32
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 6/7 8/10 7/10
+- Tue 18:00  Talaea El Gaish v Pyramids FC  -  1st Half - Over/Under / Under 1.5 @1.35
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 7/7 5/7 9/10 6/10
+- Tue 18:30  Regar-Tadaz Tursunzoda v Qadsia SC  -  1st Half - Over/Under / Under 1.5 @1.41
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = no record on Flashscore
+- Tue 19:45  Exeter City v Crewe Alexandra  -  1st Half - Over/Under / Under 1.5 @1.34
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 10/10 4/10
+- Tue 19:45  Northampton Town v Tranmere Rovers FC  -  1st Half - Over/Under / Under 1.5 @1.36
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 7/10 10/10
+- Tue 19:45  Larne FC v Linfield FC  -  1st Half - Over/Under / Under 1.5 @1.37
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 8/10 8/10
+- Tue 19:45  Burton Albion v Bradford City FC  -  1st Half - Over/Under / Under 1.5 @1.39
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 4/10 8/10
+- Tue 19:45  Dunfermline Athletic FC v Partick Thistle FC  -  1st Half - Over/Under / Under 1.5 @1.41
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 3/7 5/7 8/10 7/10
+- Tue 19:45  Rotherham United v Newport County  -  1st Half - Over/Under / Under 1.5 @1.42
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 1/7 6/7 6/10 10/10
+- Tue 19:45  Cheltenham Town v Fleetwood Town  -  1st Half - Over/Under / Under 1.5 @1.45
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 5/7 5/10 8/10
+- Tue 19:45  Crawley Town v Shrewsbury Town  -  1st Half - Over/Under / Under 1.5 @1.45
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 5/10 6/10
+- Tue 20:15  Tigres FC v Real Cundinamarca  -  1st Half - Over/Under / Under 1.5 @1.25
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 9/10 6/10
+- Tue 21:00  Independiente Valle Del Cauca v Boca Juniors de Cali  -  1st Half - Over/Under / Under 1.5 @1.34
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 6/7 5/7 10/10 4/10
+- Tue 21:30  Atletico FC Cali v Deportes Quindio  -  1st Half - Over/Under / Under 1.5 @1.33
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 2/7 5/7 7/10 8/10
+- Tue 22:30  Deportivo Pereira FC SA v Boyaca Chico FC  -  1st Half - Over/Under / Under 1.5 @1.33
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 4/7 6/10 6/10
+- Tue 23:00  Paraguari AC v Club Fernando de La Mora  -  1st Half - Over/Under / Under 1.5 @1.38
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 6/10 6/10
+- Tue 23:30  Londrina EC PR v Cuiaba EC MT  -  1st Half - Over/Under / Under 1.5 @1.32
+    first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 3/7 5/10 6/10

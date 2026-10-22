@@ -21,6 +21,17 @@ home win: on the site's legs 3-19 Oct 14 of Home's 23 losses were draws (76 of 9
 19 Oct Varberg 0-0, DVTK 2-2 and Diosgyori 2-2 lost as Home. Home or Draw went 224 of 278 on
 the same legs. The codes reach 100x on fewer days (lower prices); no other number changed.
 
+22 Oct, user: "Look at the stats and the result, what pointed to that result" -> "Whats the fix"
+-> "Implement them". Tested on every site leg 15-21 Oct, history cut an hour before kickoff:
+  Home or Draw is skipped when the home side lost 5+ of its last 10, or when the away side's
+  goal difference a game in its away window is as good as the home side's at home (HOD_*).
+  Those went 34 of 47 (back 87 per 100); the rest 56 of 60 (back 112), 40 of 43 on 15-17 Oct
+  and 16 of 17 on 18-21 Oct. It caught Ferro v Colon Res, Juarez v Atlante U21 and Belgrano v
+  Estudiantes Res; the away side's own form did not separate (36 of 44 when it won 4+ of 10).
+  A Home or Draw game with no Flashscore record is skipped, since the check cannot be made.
+  The 10-minute draw is booked only under D10_MAX (1.19): 26 of 29 and 39 of 46 below it
+  (back 104, 96), 14 of 19 and 11 of 15 at 1.19 or longer (back 89, 90).
+
 One leg per game, the option with the higher chance:
   minute legs  - only where the two sides' own past games back it, with the minute-mix
                  floors (book_minute_mix): 5-minute draw 90%+ of the record, 10-minute
@@ -44,6 +55,8 @@ import book_minute_mix as M
 import book_allgames as AG
 
 D5_EST, D10_EST = 48 / 49, 35 / 39          # the two draw rungs' own records (47 of 47, 34 of 37), smoothed
+D10_MAX = 1.19                               # 22 Oct: 10-minute draw only below this price
+HOD_HOME_LOSSES = 5                          # 22 Oct: no Home or Draw when the home side lost this many of its last 10
 
 
 def _ko(e):
@@ -55,6 +68,30 @@ def _skip(e):
     return 'SRL' in (e.get('homeTeamName') or '') or cat in A.S.SKIP_COUNTRIES
 
 
+def hod_check(fid, ko):
+    """None when Home or Draw may go on, else the reason it may not (22 Oct rule).
+    Home side's last 10 and both venue windows (last 7 home / last 7 away), friendlies
+    out, everything an hour before kickoff or later dropped."""
+    import fetcher_v2 as F2, fetcher_v3 as F3
+    raw = F2.fetch(f"df_hh_1_{fid}")
+    if not raw:
+        return 'no Flashscore record'
+    hr, ar, _ = F3.parse_history(raw)
+    hr = [r for r in hr if not r['friendly'] and r['kc'] < ko - 3600]
+    ar = [r for r in ar if not r['friendly'] and r['kc'] < ko - 3600]
+    hh = [r for r in hr if r['venue'] == 'home'][:7]
+    aa = [r for r in ar if r['venue'] == 'away'][:7]
+    if not hr or not ar or not hh or not aa:
+        return 'no Flashscore record'
+    lost = sum(r['res'] == 'L' for r in hr[:10])
+    if lost >= HOD_HOME_LOSSES:
+        return f"home side lost {lost} of its last {len(hr[:10])}"
+    gd = lambda rows: sum(r['gf'] - r['ga'] for r in rows) / len(rows)
+    if gd(aa) >= gd(hh):
+        return f"away side's away goal difference {gd(aa):+.1f} a game, home side's at home {gd(hh):+.1f}"
+    return None
+
+
 def picks(start, cut):
     """One leg per game from the five options, sorted by kickoff."""
     rich = [e for e in B.fetch_events_rich() if start < _ko(e) <= cut and not _skip(e)]
@@ -62,16 +99,39 @@ def picks(start, cut):
     print(f"window {start:%a %H:%M} -> {cut:%a %H:%M}: {len(rich)} games, {len(mins)} with Minutes-tab markets", flush=True)
     cand = collections.defaultdict(list)
     name = lambda e: f"{e['homeTeamName']} v {e['awayTeamName']}"
+    fx = FD._fixtures()
+    hod = []
     for ev in rich:
         c = [x for x in AG.candidates(ev) if x[1] >= 1.15]
         if not c:
             continue
         chance, price, mname, spec, desc, ids = max(c, key=lambda x: (round(x[0], 3), x[1]))
         if (mname, desc) in (('Double Chance', 'Home or Draw'), ('Double Chance', 'Draw or Away')) and price <= 2.0:
-            cand[ev['eventId']].append(dict(ts=_ko(ev).timestamp(), match=name(ev), sel=f"{mname} / {desc}", odds=price, chance=chance,
-                                            why=f"the book's most likely option on this game, chance {chance:.2f}"))
-            cand[ev['eventId']][-1]['ids'] = ids
-    pairs = D.join(mins, FD._fixtures(), _ko, lambda f: dt.datetime.fromtimestamp(f['ts'], tz=A.WAT))
+            leg = dict(ts=_ko(ev).timestamp(), match=name(ev), sel=f"{mname} / {desc}", odds=price, chance=chance,
+                       why=f"the book's most likely option on this game, chance {chance:.2f}", ids=ids)
+            if desc == 'Home or Draw':
+                hod.append((ev, leg))
+            else:
+                cand[ev['eventId']].append(leg)
+    fids = {id(e): f for e, f, _ in D.join([e for e, _ in hod], fx, _ko, lambda f: dt.datetime.fromtimestamp(f['ts'], tz=A.WAT))}
+
+    def chk(p):
+        e, leg = p
+        f = fids.get(id(e))
+        try:
+            return e, leg, hod_check(f['id'], int(_ko(e).timestamp())) if f else 'no Flashscore record'
+        except Exception as ex:
+            return e, leg, f"record failed ({ex.__class__.__name__})"
+    with ThreadPoolExecutor(10) as ex:
+        checked = list(ex.map(chk, hod))
+    for e, leg, why_not in checked:
+        if why_not:
+            print(f"   Home or Draw skipped: {leg['match'][:44]} @{leg['odds']} - {why_not}", flush=True)
+        else:
+            leg['why'] += "; home side's form and home record clear the 22 Oct check"
+            cand[e['eventId']].append(leg)
+    print(f"Home or Draw: {sum(1 for *_, w in checked if not w)} of {len(checked)} kept", flush=True)
+    pairs = D.join(mins, fx, _ko, lambda f: dt.datetime.fromtimestamp(f['ts'], tz=A.WAT))
 
     def rec(p):
         e, f, _ = p
@@ -90,7 +150,7 @@ def picks(start, cut):
                 continue
             if k == M.D5 and r >= M.FLOOR:
                 est, how = D5_EST, '5-minute draw'
-            elif k == M.D10 and r >= M.FLOOR10:
+            elif k == M.D10 and r >= M.FLOOR10 and odds < D10_MAX:
                 est, how = D10_EST, '10-minute draw'
             elif k not in (M.D5, M.D10) and k[2].startswith('Under') and r >= M.FLOOR and M.cal(k):
                 est, how = M.cal(k), f"minute Under (options like it won {M.CAL[k][0]} of {M.CAL[k][1]})"
