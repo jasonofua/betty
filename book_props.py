@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """NBA PLAYER PROPS - one prop per game, the line the player's own games back most.
 
-  python3 book_props.py [--from 'YYYY-MM-DD HH:MM'] [--until 'YYYY-MM-DD HH:MM'] [--floor 1.30] [--min 0.70] [--dry]
+  python3 book_props.py [--from 'YYYY-MM-DD HH:MM'] [--until 'YYYY-MM-DD HH:MM'] [--floor 1.30] [--min 0.70] [--each N] [--dry]
 
 23 Oct, user: "nba is back , time for props booking". SportyBet prices four player stats
 on NBA games (event group 'Players'): points, rebounds, assists and 3-pointers made, each
@@ -13,8 +13,9 @@ season and playoffs only - pre-season is out:
     NOW   this season so far (2026-27 regular season), at least 1 game
 support = the LOWEST of the three. An option goes on only when every read is --min (70%)
 or better (user's 14 Oct rule: all stats must agree, else no leg) and it is priced
---floor or more. One leg per game - the agreed option with the highest support, ties to
-the longer price - since the engine has never put two legs of one game on a code.
+--floor or more. One option per player and stat (highest support, ties to the longer
+price). 23 Oct, user: "I need multiple probs for a single game" - every agreed prop on a
+game goes on that game's own code (--each N caps it), then every game on one code.
 The window starts an hour out (standing rule) and runs to the next 06:00 WAT at least
 12 hours away, so a run on Friday covers Friday night's US games.
 """
@@ -142,10 +143,39 @@ def reads(gs, o):
     return out
 
 
+def stat_lines(o, r, gs, sup):
+    col = COL[o['stat']]
+    seas = [g for g in gs if g[4] == LAST]
+    avg = sum(g[3][col] for g in seas) / len(seas)
+    return [f"reads: last 10 {r['L10'][0]} of {r['L10'][1]}, last season {r['SEAS'][0]} of {r['SEAS'][1]}, "
+            f"this season {r['NOW'][0]} of {r['NOW'][1]} -> support {sup:.2f}",
+            f"last 10 {o['stat']}: {' '.join(str(g[3][col]) for g in gs[:10])}   (minutes {' '.join(str(g[2]) for g in gs[:10])})",
+            f"last season average {avg:.1f} over {len(seas)} games; this season "
+            + ', '.join(f"{g[3][col]} v {g[1]} in {g[2]} min" for g in gs if g[4] == THIS)]
+
+
+def book_code(legs, label, dry):
+    combo = math.prod(l['odds'] for l in legs)
+    print(f"\n=== {label}: {len(legs)} legs, {combo:,.2f}x, every leg landing about 1 in "
+          f"{1 / math.prod(l['chance'] for l in legs):,.1f} by the reads")
+    for l in legs:
+        print(f"   {dt.datetime.fromtimestamp(l['ts'], tz=A.WAT):%a %H:%M}  {l['match'][:40]:40} {l['sel'][:46]:46} @{l['odds']}")
+    if dry:
+        return
+    bk = A.book([l['ids'] for l in legs])
+    if bk and bk.get('code'):
+        print(f"   >> code {bk['code']}   {bk['url']}   ({bk.get('booked')}/{bk.get('req')} on the code, "
+              f"{bk.get('verified')} read back)", flush=True)
+        A.log_booking(bk['code'], bk['url'], f"basketball nba props - {label} - {combo:,.2f}x ({len(legs)} legs)",
+                      [(l['ts'], l['match'], l['sel'], l['odds'], l['stats']) for l in legs])
+    else:
+        print(f"   >> booking failed: {bk.get('msg') if bk else 'no selections'}", flush=True)
+
+
 def main():
     dry = '--dry' in sys.argv
     arg = lambda k, d: type(d)(sys.argv[sys.argv.index(k) + 1]) if k in sys.argv else d
-    floor, need = arg('--floor', 1.30), arg('--min', 0.70)
+    floor, need, each = arg('--floor', 1.30), arg('--min', 0.70), arg('--each', 0)
     now = dt.datetime.now(A.WAT); start = now + dt.timedelta(hours=1)        # standing rule: an hour out
     cut = now.replace(hour=6, minute=0, second=0, microsecond=0)
     while cut - now < dt.timedelta(hours=12):
@@ -156,7 +186,7 @@ def main():
         cut = dt.datetime.strptime(arg('--until', ''), '%Y-%m-%d %H:%M').replace(tzinfo=A.WAT)
     evs = events(start, cut)
     print(f"window {start:%a %H:%M} -> {cut:%a %H:%M}: {len(evs)} NBA games", flush=True)
-    legs = []
+    by_game = []
     for ko, ev in evs:
         match = f"{ev['homeTeamName']} v {ev['awayTeamName']}"
         opts = options(ev)
@@ -169,7 +199,7 @@ def main():
         with ThreadPoolExecutor(8) as ex:
             logs = dict(zip(players, ex.map(lambda p: games(found[p]) if found[p] else [], players)))
         miss = [p for p in players if not logs[p]]
-        agreed = []
+        best = {}                     # one option per player and stat: the highest support, then the longer price
         for o in opts:
             gs = logs[o['player']]
             if not gs or o['odds'] < floor:
@@ -178,41 +208,34 @@ def main():
             if any(n == 0 for _, n in r.values()) or r['L10'][1] < 5:
                 continue
             sup = min(h / n for h, n in r.values())
-            if sup >= need:
-                agreed.append((sup, o['odds'], o, r, gs))
+            k = (o['player'], o['stat'])
+            if sup >= need and (k not in best or (round(sup, 3), o['odds']) > (round(best[k][0], 3), best[k][1])):
+                best[k] = (sup, o['odds'], o, r, gs)
+        agreed = sorted(best.values(), key=lambda x: (-round(x[0], 3), -x[1]))
+        if each:
+            agreed = agreed[:each]
         print(f"\n{ko:%a %H:%M}  {match}: {len(opts)} options on {len(players)} players, "
-              f"{len(agreed)} agreed{'; no ESPN games for ' + ', '.join(miss) if miss else ''}", flush=True)
-        if not agreed:
-            continue
-        sup, odds, o, r, gs = max(agreed, key=lambda x: (round(x[0], 3), x[1]))
-        col = COL[o['stat']]
-        seas = [g for g in gs if g[4] == LAST]
-        avg = sum(g[3][col] for g in seas) / len(seas)
-        stats = [f"reads: last 10 {r['L10'][0]} of {r['L10'][1]}, last season {r['SEAS'][0]} of {r['SEAS'][1]}, "
-                 f"this season {r['NOW'][0]} of {r['NOW'][1]} -> support {sup:.2f}",
-                 f"last 10 {o['stat']}: {' '.join(str(g[3][col]) for g in gs[:10])}   (minutes {' '.join(str(g[2]) for g in gs[:10])})",
-                 f"last season average {avg:.1f} over {len(seas)} games; this season "
-                 + ', '.join(f"{g[3][col]} v {g[1]} in {g[2]} min" for g in gs if g[4] == THIS)]
-        legs.append(dict(ts=ko.timestamp(), match=match, sel=o['sel'], odds=odds, chance=sup, ids=o['ids'], stats=stats))
-        print(f"   PICK {o['sel']} @{odds}", flush=True)
-        for s in stats:
-            print(f"        {s}", flush=True)
-    if not legs:
+              f"{len(agreed)} props agreed{'; no ESPN games for ' + ', '.join(miss) if miss else ''}", flush=True)
+        legs = []
+        for sup, odds, o, r, gs in agreed:
+            stats = stat_lines(o, r, gs, sup)
+            legs.append(dict(ts=ko.timestamp(), match=match, sel=o['sel'], odds=odds, chance=sup, ids=o['ids'], stats=stats))
+            print(f"   PICK {o['sel']} @{odds}", flush=True)
+            for s in stats:
+                print(f"        {s}", flush=True)
+        if legs:
+            by_game.append((match, legs))
+    if not by_game:
         print("no leg: no option was backed by every read - nothing booked")
         return
-    combo = math.prod(l['odds'] for l in legs)
-    print(f"\n=== {len(legs)} legs, {combo:,.2f}x, every leg landing about 1 in {1 / math.prod(l['chance'] for l in legs):,.1f} by the reads")
-    for l in legs:
-        print(f"   {dt.datetime.fromtimestamp(l['ts'], tz=A.WAT):%a %H:%M}  {l['match'][:44]:44} {l['sel'][:44]:44} @{l['odds']}")
-    if dry:
-        return
-    bk = A.book([l['ids'] for l in legs])
-    if bk and bk.get('code'):
-        print(f"\n   >> code {bk['code']}   {bk['url']}   ({bk.get('booked')}/{bk.get('req')} on the code)")
-        A.log_booking(bk['code'], bk['url'], f"basketball nba props - one per game - {combo:,.2f}x ({len(legs)} games)",
-                      [(l['ts'], l['match'], l['sel'], l['odds'], l['stats']) for l in legs])
-    else:
-        print(f"   >> booking failed: {bk.get('msg') if bk else 'no selections'}")
+    # 23 Oct, user: "I need multiple probs for a single game" - every agreed prop on a game
+    # (one per player and stat) goes on that game's own code, then all games on one code.
+    for match, legs in by_game:
+        if len(legs) >= 2:
+            book_code(legs, match, dry)
+    every = sorted((l for _, ls in by_game for l in ls), key=lambda l: -l['chance'])[:50]
+    if len(by_game) > 1:
+        book_code(sorted(every, key=lambda l: l['ts']), 'every game', dry)
 
 
 if __name__ == '__main__':

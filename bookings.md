@@ -306554,3 +306554,248 @@ http://www.sportybet.com/ng/?shareCode=USMAB1
     reads: last 10 9 of 10, last season 73 of 91, this season 1 of 1 -> support 0.80
     last 10 rebounds: 3 7 5 4 9 9 6 1 4 6   (minutes 31 39 40 38 38 36 33 26 36 33)
     last season average 4.4 over 91 games; this season 3 v OKC in 31 min
+
+## 2026-10-23 01:49 WAT  |  basketball nba props - Milwaukee Bucks v Chicago Bulls - 1.78x (2 legs)  |  code Z4Q7JT
+http://www.sportybet.com/ng/?shareCode=Z4Q7JT
+- Fri 21:00  Milwaukee Bucks v Chicago Bulls  -  Giddey, Josh rebounds 6+ @1.30
+    reads: last 10 8 of 10, last season 44 of 54, this season 1 of 1 -> support 0.80
+    last 10 rebounds: 7 5 7 13 7 9 7 6 0 15   (minutes 24 26 33 35 33 33 39 37 27 34)
+    last season average 8.3 over 54 games; this season 7 v TOR in 24 min
+- Fri 21:00  Milwaukee Bucks v Chicago Bulls  -  Buzelis, Matas rebounds 5+ @1.37
+    reads: last 10 9 of 10, last season 56 of 77, this season 1 of 1 -> support 0.73
+    last 10 rebounds: 6 8 6 9 6 10 9 8 4 5   (minutes 25 27 23 29 28 39 34 30 35 33)
+    last season average 5.8 over 77 games; this season 6 v TOR in 25 min
+
+## 2026-10-23 01:49 WAT  |  basketball nba props - Boston Celtics v New York Knicks - 11.41x (5 legs)  |  code KA532X
+http://www.sportybet.com/ng/?shareCode=KA532X
+- Sat 00:00  Boston Celtics v New York Knicks  -  Tatum, Jayson points Under 25.5 @1.91
+    reads: last 10 9 of 10, last season 19 of 22, this season 1 of 1 -> support 0.86
+    last 10 points: 13 17 24 30 25 19 25 24 23 23   (minutes 38 29 41 35 42 39 32 40 39 34)
+    last season average 22.2 over 22 games; this season 13 v DET in 38 min
+- Sat 00:00  Boston Celtics v New York Knicks  -  Hauser, Sam points 5+ @1.31
+    reads: last 10 10 of 10, last season 68 of 85, this season 1 of 1 -> support 0.80
+    last 10 points: 11 11 5 8 6 6 6 12 24 6   (minutes 18 30 21 20 22 18 25 28 28 31)
+    last season average 9.1 over 85 games; this season 11 v DET in 18 min
+- Sat 00:00  Boston Celtics v New York Knicks  -  Hauser, Sam rebounds Over 2.5 @1.67
+    reads: last 10 9 of 10, last season 66 of 85, this season 1 of 1 -> support 0.78
+    last 10 rebounds: 4 3 4 5 4 3 4 7 6 2   (minutes 18 30 21 20 22 18 25 28 28 31)
+    last season average 3.9 over 85 games; this season 4 v DET in 18 min
+- Sat 00:00  Boston Celtics v New York Knicks  -  Towns, Karl-Anthony assists Under 4.5 @1.74
+    reads: last 10 8 of 10, last season 75 of 97, this season 1 of 1 -> support 0.77
+    last 10 assists: 1 1 2 1 4 4 3 7 1 5   (minutes 24 23 26 38 34 34 26 36 36 40)
+    last season average 3.3 over 97 games; this season 1 v PHI in 24 min
+- Sat 00:00  Boston Celtics v New York Knicks  -  George, Paul assists Over 2.5 @1.57
+    reads: last 10 7 of 10, last season 35 of 49, this season 1 of 1 -> support 0.70
+    last 10 assists: 3 2 3 4 3 1 3 7 1 5   (minutes 31 27 38 43 26 42 40 43 31 41)
+    last season average 3.5 over 49 games; this season 3 v DET in 31 min
+
+## 2026-10-23 01:49 WAT  |  basketball nba props - Orlando Magic v Minnesota Timberwolves - 2.26x (2 legs)  |  code SCMDGH
+http://www.sportybet.com/ng/?shareCode=SCMDGH
+- Sat 00:00  Orlando Magic v Minnesota Timberwolves  -  Wagner, Franz assists Under 5.5 @1.65
+    reads: last 10 8 of 10, last season 32 of 40, this season 1 of 1 -> support 0.80
+    last 10 assists: 5 3 6 1 4 6 3 1 4 2   (minutes 29 24 34 32 32 25 29 26 23 22)
+    last season average 3.4 over 40 games; this season 5 v ATL in 29 min
+- Sat 00:00  Orlando Magic v Minnesota Timberwolves  -  Bane, Desmond points 16+ @1.37
+    reads: last 10 8 of 10, last season 65 of 91, this season 1 of 1 -> support 0.71
+    last 10 points: 18 16 17 18 22 25 12 17 13 34   (minutes 33 38 38 34 37 38 34 35 35 40)
+    last season average 20.0 over 91 games; this season 18 v ATL in 33 min
+
+## 2026-10-23 01:49 WAT  |  basketball nba props - Miami Heat v Detroit Pistons - 3.02x (3 legs)  |  code GUAZHC
+http://www.sportybet.com/ng/?shareCode=GUAZHC
+- Sat 01:00  Miami Heat v Detroit Pistons  -  Mitchell, Davion points 8+ @1.41
+    reads: last 10 9 of 10, last season 51 of 71, this season 1 of 1 -> support 0.72
+    last 10 points: 11 28 12 15 9 12 21 9 12 2   (minutes 33 48 26 37 23 26 40 30 35 24)
+    last season average 9.6 over 71 games; this season 11 v MIN in 33 min
+- Sat 01:00  Miami Heat v Detroit Pistons  -  Collins, John assists Under 1.5 @1.50
+    reads: last 10 7 of 10, last season 54 of 70, this season 1 of 1 -> support 0.70
+    last 10 assists: 1 0 0 0 3 1 2 0 1 3   (minutes 25 21 21 13 27 28 24 25 31 35)
+    last season average 1.0 over 70 games; this season 1 v BOS in 25 min
+- Sat 01:00  Miami Heat v Detroit Pistons  -  Adebayo, Bam points 15+ @1.43
+    reads: last 10 7 of 10, last season 57 of 74, this season 1 of 1 -> support 0.70
+    last 10 points: 15 6 25 20 24 7 14 29 23 15   (minutes 31 11 29 38 37 37 24 38 42 33)
+    last season average 19.9 over 74 games; this season 15 v MIN in 31 min
+
+## 2026-10-23 01:49 WAT  |  basketball nba props - San Antonio Spurs v Houston Rockets - 69.32x (12 legs)  |  code K26MNT
+http://www.sportybet.com/ng/?shareCode=K26MNT
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Vassell, Devin rebounds 3+ @1.33
+    reads: last 10 9 of 10, last season 73 of 91, this season 1 of 1 -> support 0.80
+    last 10 rebounds: 3 7 5 4 9 9 6 1 4 6   (minutes 31 39 40 38 38 36 33 26 36 33)
+    last season average 4.4 over 91 games; this season 3 v OKC in 31 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Smith, Jabari rebounds 5+ @1.30
+    reads: last 10 10 of 10, last season 66 of 83, this season 1 of 1 -> support 0.80
+    last 10 rebounds: 5 12 7 8 6 6 12 6 5 6   (minutes 36 42 42 42 44 39 43 40 34 39)
+    last season average 7.0 over 83 games; this season 5 v DAL in 36 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Thompson, Amen assists 4+ @1.38
+    reads: last 10 9 of 10, last season 67 of 85, this season 1 of 1 -> support 0.79
+    last 10 assists: 4 3 4 7 4 9 7 7 4 8   (minutes 33 45 46 41 48 42 43 42 42 36)
+    last season average 5.3 over 85 games; this season 4 v DAL in 33 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Thompson, Amen points 14+ @1.31
+    reads: last 10 10 of 10, last season 67 of 85, this season 1 of 1 -> support 0.79
+    last 10 points: 16 18 15 23 26 16 17 41 19 22   (minutes 33 45 46 41 48 42 43 42 42 36)
+    last season average 18.3 over 85 games; this season 16 v DAL in 33 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Smart, Marcus points 6+ @1.30
+    reads: last 10 9 of 10, last season 56 of 72, this season 1 of 1 -> support 0.78
+    last 10 points: 10 5 10 14 12 7 11 9 21 25   (minutes 26 36 32 34 32 35 37 31 39 35)
+    last season average 9.8 over 72 games; this season 10 v DAL in 26 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Fox, De'Aaron assists Over 4.5 @1.65
+    reads: last 10 10 of 10, last season 70 of 97, this season 1 of 1 -> support 0.72
+    last 10 assists: 7 5 7 8 5 5 5 7 8 5   (minutes 32 37 37 37 34 38 36 26 33 31)
+    last season average 6.0 over 97 games; this season 7 v OKC in 32 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Champagnie, Julian points 8+ @1.34
+    reads: last 10 8 of 10, last season 76 of 106, this season 1 of 1 -> support 0.72
+    last 10 points: 8 14 5 12 8 16 20 10 22 2   (minutes 30 31 33 27 36 31 38 25 30 29)
+    last season average 11.1 over 106 games; this season 8 v OKC in 30 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Smith, Jabari 3-pointers Over 1.5 @1.57
+    reads: last 10 8 of 10, last season 59 of 83, this season 1 of 1 -> support 0.71
+    last 10 3-pointers: 4 1 4 2 6 3 3 2 1 5   (minutes 36 42 42 42 44 39 43 40 34 39)
+    last season average 2.4 over 83 games; this season 4 v DAL in 36 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Durant, Kevin points 22+ @1.34
+    reads: last 10 8 of 10, last season 58 of 82, this season 1 of 1 -> support 0.71
+    last 10 points: 30 23 33 29 24 31 25 19 27 20   (minutes 37 41 39 38 36 37 30 39 35 29)
+    last season average 25.1 over 82 games; this season 30 v DAL in 37 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Sengun, Alperen assists Over 4.5 @1.67
+    reads: last 10 7 of 10, last season 56 of 80, this season 1 of 1 -> support 0.70
+    last 10 assists: 5 1 8 2 6 5 6 8 4 6   (minutes 30 38 43 33 47 35 36 29 33 28)
+    last season average 6.0 over 80 games; this season 5 v DAL in 30 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Durant, Kevin 3-pointers Over 1.5 @1.58
+    reads: last 10 7 of 10, last season 58 of 82, this season 1 of 1 -> support 0.70
+    last 10 3-pointers: 2 1 0 3 5 3 2 2 4 1   (minutes 37 41 39 38 36 37 30 39 35 29)
+    last season average 2.3 over 82 games; this season 2 v DAL in 37 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Sengun, Alperen points 16+ @1.39
+    reads: last 10 7 of 10, last season 58 of 80, this season 1 of 1 -> support 0.70
+    last 10 points: 23 17 14 19 33 20 19 22 8 12   (minutes 30 38 43 33 47 35 36 29 33 28)
+    last season average 19.9 over 80 games; this season 23 v DAL in 30 min
+
+## 2026-10-23 01:49 WAT  |  basketball nba props - Utah Jazz v New Orleans Pelicans - 6.75x (4 legs)  |  code J56EP2
+http://www.sportybet.com/ng/?shareCode=J56EP2
+- Sat 02:30  Utah Jazz v New Orleans Pelicans  -  Bey, Saddiq points 10+ @1.40
+    reads: last 10 10 of 10, last season 62 of 72, this season 1 of 1 -> support 0.86
+    last 10 points: 13 32 20 15 18 19 17 18 19 20   (minutes 24 39 29 35 31 30 31 28 36 36)
+    last season average 17.7 over 72 games; this season 13 v IND in 24 min
+- Sat 02:30  Utah Jazz v New Orleans Pelicans  -  Hayes, Jaxson rebounds Under 5.5 @2.05
+    reads: last 10 9 of 10, last season 61 of 76, this season 1 of 1 -> support 0.80
+    last 10 rebounds: 5 5 2 3 6 4 1 2 4 4   (minutes 26 27 9 15 16 17 10 15 20 21)
+    last season average 4.0 over 76 games; this season 5 v MEM in 26 min
+- Sat 02:30  Utah Jazz v New Orleans Pelicans  -  Bey, Saddiq rebounds 3+ @1.40
+    reads: last 10 8 of 10, last season 65 of 72, this season 1 of 1 -> support 0.80
+    last 10 rebounds: 5 6 1 6 7 3 1 4 5 6   (minutes 24 39 29 35 31 30 31 28 36 36)
+    last season average 5.6 over 72 games; this season 5 v IND in 24 min
+- Sat 02:30  Utah Jazz v New Orleans Pelicans  -  Mathurin, Bennedict rebounds Over 2.5 @1.68
+    reads: last 10 7 of 10, last season 49 of 55, this season 1 of 1 -> support 0.70
+    last 10 rebounds: 3 3 9 0 2 6 6 7 0 6   (minutes 18 30 32 5 24 27 27 27 22 27)
+    last season average 5.4 over 55 games; this season 3 v IND in 18 min
+
+## 2026-10-23 01:50 WAT  |  basketball nba props - every game - 65,039.08x (28 legs)  |  code HC29KK
+http://www.sportybet.com/ng/?shareCode=HC29KK
+- Fri 21:00  Milwaukee Bucks v Chicago Bulls  -  Giddey, Josh rebounds 6+ @1.30
+    reads: last 10 8 of 10, last season 44 of 54, this season 1 of 1 -> support 0.80
+    last 10 rebounds: 7 5 7 13 7 9 7 6 0 15   (minutes 24 26 33 35 33 33 39 37 27 34)
+    last season average 8.3 over 54 games; this season 7 v TOR in 24 min
+- Fri 21:00  Milwaukee Bucks v Chicago Bulls  -  Buzelis, Matas rebounds 5+ @1.37
+    reads: last 10 9 of 10, last season 56 of 77, this season 1 of 1 -> support 0.73
+    last 10 rebounds: 6 8 6 9 6 10 9 8 4 5   (minutes 25 27 23 29 28 39 34 30 35 33)
+    last season average 5.8 over 77 games; this season 6 v TOR in 25 min
+- Sat 00:00  Boston Celtics v New York Knicks  -  Tatum, Jayson points Under 25.5 @1.91
+    reads: last 10 9 of 10, last season 19 of 22, this season 1 of 1 -> support 0.86
+    last 10 points: 13 17 24 30 25 19 25 24 23 23   (minutes 38 29 41 35 42 39 32 40 39 34)
+    last season average 22.2 over 22 games; this season 13 v DET in 38 min
+- Sat 00:00  Boston Celtics v New York Knicks  -  Hauser, Sam points 5+ @1.31
+    reads: last 10 10 of 10, last season 68 of 85, this season 1 of 1 -> support 0.80
+    last 10 points: 11 11 5 8 6 6 6 12 24 6   (minutes 18 30 21 20 22 18 25 28 28 31)
+    last season average 9.1 over 85 games; this season 11 v DET in 18 min
+- Sat 00:00  Orlando Magic v Minnesota Timberwolves  -  Wagner, Franz assists Under 5.5 @1.65
+    reads: last 10 8 of 10, last season 32 of 40, this season 1 of 1 -> support 0.80
+    last 10 assists: 5 3 6 1 4 6 3 1 4 2   (minutes 29 24 34 32 32 25 29 26 23 22)
+    last season average 3.4 over 40 games; this season 5 v ATL in 29 min
+- Sat 00:00  Boston Celtics v New York Knicks  -  Hauser, Sam rebounds Over 2.5 @1.67
+    reads: last 10 9 of 10, last season 66 of 85, this season 1 of 1 -> support 0.78
+    last 10 rebounds: 4 3 4 5 4 3 4 7 6 2   (minutes 18 30 21 20 22 18 25 28 28 31)
+    last season average 3.9 over 85 games; this season 4 v DET in 18 min
+- Sat 00:00  Boston Celtics v New York Knicks  -  Towns, Karl-Anthony assists Under 4.5 @1.74
+    reads: last 10 8 of 10, last season 75 of 97, this season 1 of 1 -> support 0.77
+    last 10 assists: 1 1 2 1 4 4 3 7 1 5   (minutes 24 23 26 38 34 34 26 36 36 40)
+    last season average 3.3 over 97 games; this season 1 v PHI in 24 min
+- Sat 00:00  Orlando Magic v Minnesota Timberwolves  -  Bane, Desmond points 16+ @1.37
+    reads: last 10 8 of 10, last season 65 of 91, this season 1 of 1 -> support 0.71
+    last 10 points: 18 16 17 18 22 25 12 17 13 34   (minutes 33 38 38 34 37 38 34 35 35 40)
+    last season average 20.0 over 91 games; this season 18 v ATL in 33 min
+- Sat 00:00  Boston Celtics v New York Knicks  -  George, Paul assists Over 2.5 @1.57
+    reads: last 10 7 of 10, last season 35 of 49, this season 1 of 1 -> support 0.70
+    last 10 assists: 3 2 3 4 3 1 3 7 1 5   (minutes 31 27 38 43 26 42 40 43 31 41)
+    last season average 3.5 over 49 games; this season 3 v DET in 31 min
+- Sat 01:00  Miami Heat v Detroit Pistons  -  Mitchell, Davion points 8+ @1.41
+    reads: last 10 9 of 10, last season 51 of 71, this season 1 of 1 -> support 0.72
+    last 10 points: 11 28 12 15 9 12 21 9 12 2   (minutes 33 48 26 37 23 26 40 30 35 24)
+    last season average 9.6 over 71 games; this season 11 v MIN in 33 min
+- Sat 01:00  Miami Heat v Detroit Pistons  -  Collins, John assists Under 1.5 @1.50
+    reads: last 10 7 of 10, last season 54 of 70, this season 1 of 1 -> support 0.70
+    last 10 assists: 1 0 0 0 3 1 2 0 1 3   (minutes 25 21 21 13 27 28 24 25 31 35)
+    last season average 1.0 over 70 games; this season 1 v BOS in 25 min
+- Sat 01:00  Miami Heat v Detroit Pistons  -  Adebayo, Bam points 15+ @1.43
+    reads: last 10 7 of 10, last season 57 of 74, this season 1 of 1 -> support 0.70
+    last 10 points: 15 6 25 20 24 7 14 29 23 15   (minutes 31 11 29 38 37 37 24 38 42 33)
+    last season average 19.9 over 74 games; this season 15 v MIN in 31 min
+- Sat 02:30  Utah Jazz v New Orleans Pelicans  -  Bey, Saddiq points 10+ @1.40
+    reads: last 10 10 of 10, last season 62 of 72, this season 1 of 1 -> support 0.86
+    last 10 points: 13 32 20 15 18 19 17 18 19 20   (minutes 24 39 29 35 31 30 31 28 36 36)
+    last season average 17.7 over 72 games; this season 13 v IND in 24 min
+- Sat 02:30  Utah Jazz v New Orleans Pelicans  -  Hayes, Jaxson rebounds Under 5.5 @2.05
+    reads: last 10 9 of 10, last season 61 of 76, this season 1 of 1 -> support 0.80
+    last 10 rebounds: 5 5 2 3 6 4 1 2 4 4   (minutes 26 27 9 15 16 17 10 15 20 21)
+    last season average 4.0 over 76 games; this season 5 v MEM in 26 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Vassell, Devin rebounds 3+ @1.33
+    reads: last 10 9 of 10, last season 73 of 91, this season 1 of 1 -> support 0.80
+    last 10 rebounds: 3 7 5 4 9 9 6 1 4 6   (minutes 31 39 40 38 38 36 33 26 36 33)
+    last season average 4.4 over 91 games; this season 3 v OKC in 31 min
+- Sat 02:30  Utah Jazz v New Orleans Pelicans  -  Bey, Saddiq rebounds 3+ @1.40
+    reads: last 10 8 of 10, last season 65 of 72, this season 1 of 1 -> support 0.80
+    last 10 rebounds: 5 6 1 6 7 3 1 4 5 6   (minutes 24 39 29 35 31 30 31 28 36 36)
+    last season average 5.6 over 72 games; this season 5 v IND in 24 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Smith, Jabari rebounds 5+ @1.30
+    reads: last 10 10 of 10, last season 66 of 83, this season 1 of 1 -> support 0.80
+    last 10 rebounds: 5 12 7 8 6 6 12 6 5 6   (minutes 36 42 42 42 44 39 43 40 34 39)
+    last season average 7.0 over 83 games; this season 5 v DAL in 36 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Thompson, Amen assists 4+ @1.38
+    reads: last 10 9 of 10, last season 67 of 85, this season 1 of 1 -> support 0.79
+    last 10 assists: 4 3 4 7 4 9 7 7 4 8   (minutes 33 45 46 41 48 42 43 42 42 36)
+    last season average 5.3 over 85 games; this season 4 v DAL in 33 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Thompson, Amen points 14+ @1.31
+    reads: last 10 10 of 10, last season 67 of 85, this season 1 of 1 -> support 0.79
+    last 10 points: 16 18 15 23 26 16 17 41 19 22   (minutes 33 45 46 41 48 42 43 42 42 36)
+    last season average 18.3 over 85 games; this season 16 v DAL in 33 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Smart, Marcus points 6+ @1.30
+    reads: last 10 9 of 10, last season 56 of 72, this season 1 of 1 -> support 0.78
+    last 10 points: 10 5 10 14 12 7 11 9 21 25   (minutes 26 36 32 34 32 35 37 31 39 35)
+    last season average 9.8 over 72 games; this season 10 v DAL in 26 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Fox, De'Aaron assists Over 4.5 @1.65
+    reads: last 10 10 of 10, last season 70 of 97, this season 1 of 1 -> support 0.72
+    last 10 assists: 7 5 7 8 5 5 5 7 8 5   (minutes 32 37 37 37 34 38 36 26 33 31)
+    last season average 6.0 over 97 games; this season 7 v OKC in 32 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Champagnie, Julian points 8+ @1.34
+    reads: last 10 8 of 10, last season 76 of 106, this season 1 of 1 -> support 0.72
+    last 10 points: 8 14 5 12 8 16 20 10 22 2   (minutes 30 31 33 27 36 31 38 25 30 29)
+    last season average 11.1 over 106 games; this season 8 v OKC in 30 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Smith, Jabari 3-pointers Over 1.5 @1.57
+    reads: last 10 8 of 10, last season 59 of 83, this season 1 of 1 -> support 0.71
+    last 10 3-pointers: 4 1 4 2 6 3 3 2 1 5   (minutes 36 42 42 42 44 39 43 40 34 39)
+    last season average 2.4 over 83 games; this season 4 v DAL in 36 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Durant, Kevin points 22+ @1.34
+    reads: last 10 8 of 10, last season 58 of 82, this season 1 of 1 -> support 0.71
+    last 10 points: 30 23 33 29 24 31 25 19 27 20   (minutes 37 41 39 38 36 37 30 39 35 29)
+    last season average 25.1 over 82 games; this season 30 v DAL in 37 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Sengun, Alperen assists Over 4.5 @1.67
+    reads: last 10 7 of 10, last season 56 of 80, this season 1 of 1 -> support 0.70
+    last 10 assists: 5 1 8 2 6 5 6 8 4 6   (minutes 30 38 43 33 47 35 36 29 33 28)
+    last season average 6.0 over 80 games; this season 5 v DAL in 30 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Durant, Kevin 3-pointers Over 1.5 @1.58
+    reads: last 10 7 of 10, last season 58 of 82, this season 1 of 1 -> support 0.70
+    last 10 3-pointers: 2 1 0 3 5 3 2 2 4 1   (minutes 37 41 39 38 36 37 30 39 35 29)
+    last season average 2.3 over 82 games; this season 2 v DAL in 37 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Sengun, Alperen points 16+ @1.39
+    reads: last 10 7 of 10, last season 58 of 80, this season 1 of 1 -> support 0.70
+    last 10 points: 23 17 14 19 33 20 19 22 8 12   (minutes 30 38 43 33 47 35 36 29 33 28)
+    last season average 19.9 over 80 games; this season 23 v DAL in 30 min
+- Sat 02:30  Utah Jazz v New Orleans Pelicans  -  Mathurin, Bennedict rebounds Over 2.5 @1.68
+    reads: last 10 7 of 10, last season 49 of 55, this season 1 of 1 -> support 0.70
+    last 10 rebounds: 3 3 9 0 2 6 6 7 0 6   (minutes 18 30 32 5 24 27 27 27 22 27)
+    last season average 5.4 over 55 games; this season 3 v IND in 18 min
