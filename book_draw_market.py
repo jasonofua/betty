@@ -203,7 +203,10 @@ def main():
     # second pass: everything SportyBet prices that football-data does not (South America,
     # Asia, Africa, cups) - the band rule on SportyBet's own implied draw probability
     matched_eids = {p['s']['eid'] for p in picks} | {match(f, board)['eid'] for f in fx if match(f, board)}
-    cut = now + dt.timedelta(hours=14)
+    # 23 Oct, user: "Why haven't you been booking draws with my exact patterns?" - the 14-hour
+    # window ended the 09:20 run at 23:20, so kick-offs from then to the next morning were never
+    # scanned (Ciudad de Bolivar v Colon, Sun 01:00 at 1.38). Now it runs to the next run's start.
+    cut = now + dt.timedelta(hours=24, minutes=30)
     if '--until' in sys.argv:                     # --until HH: the window ends at that hour (tomorrow if already past)
         hh = int(sys.argv[sys.argv.index('--until') + 1])
         cut = now.replace(hour=hh, minute=0, second=0, microsecond=0)
@@ -283,7 +286,7 @@ def main():
     _per = collections.Counter(); _k = []
     for p in kept:
         _d = p['ko'].date()
-        if _per[_d] < BAND_CAP:
+        if _per[_d] < BAND_CAP or (not p.get('user') and on_pattern(p)):   # 23 Oct: the cap never drops a pattern game
             _per[_d] += 1; _k.append(p)
     kept = _k
     _cap = len(kept)
