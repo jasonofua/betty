@@ -306799,3 +306799,10 @@ http://www.sportybet.com/ng/?shareCode=HC29KK
     reads: last 10 7 of 10, last season 49 of 55, this season 1 of 1 -> support 0.70
     last 10 rebounds: 3 3 9 0 2 6 6 7 0 6   (minutes 18 30 32 5 24 27 27 27 22 27)
     last season average 5.4 over 55 games; this season 3 v IND in 18 min
+
+## 2026-10-23 10:54 WAT  |  draw slip (user's pattern) 3.0x (1 legs) - user's pattern: Under 2.5 at exactly 1.38 or 1.50, 1.41-1.43 with the table gap at 0.13, or 1.29 with the gap at 0.00, inside the band checks  |  code YLK43H
+http://www.sportybet.com/ng/?shareCode=YLK43H
+- Sat 08:30  Qingdao Red Lions v Ganzhou Ruishi FC  -  1X2 / Draw @3.00
+    SportyBet 1.64/3.00/5.20 -> draw 29% after the overround (band 27%+); Under 2.5 at 1.50
+    table this season: 29 pts from 27 v 31 pts from 27 = 1.07 v 1.15 a game (sides close)
+    user's pattern: Under 2.5 at exactly 1.38 or 1.50, or 1.41-1.43 at gap 0.13 - 1.50 went 3 of 3, 1.38 2 of 2, 0.13/1.41-1.43 two 0-0s on the first 26 legs (16-21 Sep)
