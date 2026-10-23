@@ -42,7 +42,9 @@ One leg per game, the option with the higher chance:
                  reached four codes on 17 Oct). Chance = the book's no-margin chance.
 Codes: the safest set of at most 50 games reaching --lo (ranged), trimmed under --hi,
 then again from the games left, until the rest cannot reach --lo. Every game is on
-one code at most.
+one code at most. 23 Oct, user: "Even if it isn't up to 100x it should still book" - a
+day that cannot reach --lo books one short code with every game picked (Thu 22 Oct had
+28 picks and no code).
 """
 import sys, math, datetime as dt, collections
 from concurrent.futures import ThreadPoolExecutor
@@ -215,8 +217,15 @@ def main():
         codes.append(p)
         ids = {id(l) for l in p}
         left = [l for l in left if id(l) not in ids]
+    short = not codes and bool(legs)
+    if short:
+        # 23 Oct, user: "Even if it isn't up to 100x it should still book". The day cannot
+        # reach --lo, so one code from every game picked (the 50 longest prices if more).
+        codes = [sorted(sorted(legs, key=lambda l: -l['odds'])[:50], key=lambda l: l['ts'])]
+        print(f"short: the {len(legs)} games together cannot reach {lo:,.0f}x - booking them as one "
+              f"code of {math.prod(l['odds'] for l in codes[0]):,.2f}x anyway")
     if not codes:
-        print(f"no code: the {len(legs)} games together cannot reach {lo:,.0f}x within 50 legs - nothing booked")
+        print("no code: no game picked - nothing booked")
         return
     A.FINDINGS_EXEMPT = True          # every leg already carries its own record check above
     for i, part in enumerate(codes, 1):
@@ -229,7 +238,8 @@ def main():
         bk = A.book([l['ids'] for l in part])
         if bk and bk.get('code'):
             print(f"\n   >> code {bk['code']}   {bk['url']}   ({bk.get('booked')}/{bk.get('req')} on the code)")
-            A.log_booking(bk['code'], bk['url'], f"five options {lo:,.0f}-{hi:,.0f}x - code {i} of {len(codes)} - {combo:,.2f}x ({len(part)} games)",
+            what = f"short of {lo:,.0f}x, every game picked" if short else f"{lo:,.0f}-{hi:,.0f}x - code {i} of {len(codes)}"
+            A.log_booking(bk['code'], bk['url'], f"five options {what} - {combo:,.2f}x ({len(part)} games)",
                           [(l['ts'], l['match'], l['sel'], l['odds'], [l['why']]) for l in part])
         else:
             print(f"   >> booking failed: {bk.get('msg') if bk else 'no selections'}")

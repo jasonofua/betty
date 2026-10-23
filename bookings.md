@@ -306531,3 +306531,26 @@ http://www.sportybet.com/ng/?shareCode=QBF7SZ
     first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 6/7 6/10 6/10
 - Tue 23:30  Londrina EC PR v Cuiaba EC MT  -  1st Half - Over/Under / Under 1.5 @1.32
     first halves under 1.5: home@home, away@away, home last 10, away last 10 = 5/7 3/7 5/10 6/10
+
+## 2026-10-23 01:00 WAT  |  basketball nba props - one per game - 7.57x (5 games)  |  code USMAB1
+http://www.sportybet.com/ng/?shareCode=USMAB1
+- Fri 21:00  Milwaukee Bucks v Chicago Bulls  -  Giddey, Josh rebounds 6+ @1.30
+    reads: last 10 8 of 10, last season 44 of 54, this season 1 of 1 -> support 0.80
+    last 10 rebounds: 7 5 7 13 7 9 7 6 0 15   (minutes 24 26 33 35 33 33 39 37 27 34)
+    last season average 8.3 over 54 games; this season 7 v TOR in 24 min
+- Sat 00:00  Boston Celtics v New York Knicks  -  Tatum, Jayson points Under 25.5 @1.91
+    reads: last 10 9 of 10, last season 19 of 22, this season 1 of 1 -> support 0.86
+    last 10 points: 13 17 24 30 25 19 25 24 23 23   (minutes 38 29 41 35 42 39 32 40 39 34)
+    last season average 22.2 over 22 games; this season 13 v DET in 38 min
+- Sat 00:00  Orlando Magic v Minnesota Timberwolves  -  Wagner, Franz assists Under 5.5 @1.65
+    reads: last 10 8 of 10, last season 32 of 40, this season 1 of 1 -> support 0.80
+    last 10 assists: 5 3 6 1 4 6 3 1 4 2   (minutes 29 24 34 32 32 25 29 26 23 22)
+    last season average 3.4 over 40 games; this season 5 v ATL in 29 min
+- Sat 01:00  Miami Heat v Detroit Pistons  -  Mitchell, Davion points 8+ @1.41
+    reads: last 10 9 of 10, last season 51 of 71, this season 1 of 1 -> support 0.72
+    last 10 points: 11 28 12 15 9 12 21 9 12 2   (minutes 33 48 26 37 23 26 40 30 35 24)
+    last season average 9.6 over 71 games; this season 11 v MIN in 33 min
+- Sat 02:30  San Antonio Spurs v Houston Rockets  -  Vassell, Devin rebounds 3+ @1.31
+    reads: last 10 9 of 10, last season 73 of 91, this season 1 of 1 -> support 0.80
+    last 10 rebounds: 3 7 5 4 9 9 6 1 4 6   (minutes 31 39 40 38 38 36 33 26 36 33)
+    last season average 4.4 over 91 games; this season 3 v OKC in 31 min
