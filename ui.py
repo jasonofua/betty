@@ -665,6 +665,32 @@ class Handler(BaseHTTPRequestHandler):
             except OSError:
                 pass
             self._send('\n'.join(out[-20000:]), 'text/plain; charset=utf-8')
+        elif u.path == '/api/sportyodds':
+            # 25 Oct, user: "So you add the endpoint" - read-only copy of the 08:55 SportyBet
+            # 1X2 snapshots (experiments/odds_snapshot.py writes them next to bookings.md on
+            # the volume). Rows with snap > after, about 50,000 a call, always ending on a
+            # whole snapshot so the next call can page on the last snap.
+            try:
+                after = float(parse_qs(u.query).get('after', ['0'])[0])
+            except ValueError:
+                after = 0.0
+            vol = os.environ.get('BOOKINGS_PATH')
+            path = os.path.join(os.path.dirname(vol) if vol else os.path.join(ROOT, 'experiments'), 'sporty_odds.jsonl')
+            out, last = [], None
+            try:
+                with open(path) as f:
+                    for line in f:
+                        try:
+                            r = json.loads(line)
+                        except ValueError:
+                            continue
+                        if r.get('snap', 0) > after:
+                            if len(out) >= 50000 and r.get('snap') != last:
+                                break
+                            out.append(line.rstrip()); last = r.get('snap')
+            except OSError:
+                pass
+            self._send('\n'.join(out), 'text/plain; charset=utf-8')
         elif u.path == '/api/grade':
             codes = parse_qs(u.query).get('codes', [''])[0].replace(',', ' ').split()
             if not codes:
