@@ -1817,6 +1817,20 @@ JOIN_WINDOW_S = 15 * 60     # kickoffs must agree to within this
 JOIN_MIN_SCORE = 0.34       # share of tokens that must overlap, per side
 
 
+def _same_word(x, y):
+    """One word spelled two ways counts as the same word: "Mansurah"/"Mansoura", "Hazm"/"Hazem",
+    "Lillestroem"/"Lillestrom", "Bogot"/"Bogota" (accent stripped). 29 Oct: SportyBet's "El Mansurah"
+    never met Flashscore's "El Mansoura", the game read as having no record and was booked on price
+    alone (lost). Over 17 Sep-28 Oct this found 298 more games on the board, 25 of 25 checked right;
+    the cut-off sits above "Oldenburg"/"Orenburg" (0.82)."""
+    if x == y:
+        return True
+    if len(x) < 4 or len(y) < 4:
+        return False
+    import difflib
+    return x.startswith(y) or y.startswith(x) or difflib.SequenceMatcher(None, x, y).ratio() >= 0.85
+
+
 def _score(a, b):
     """Token overlap between two team names, 0..1, tolerant of the longer name
     carrying extra words: SportyBet writes "Clube do Remo PA", Flashscore "Remo"."""
@@ -1824,7 +1838,8 @@ def _score(a, b):
     ta, tb = SB.toks(a), SB.toks(b)
     if not ta or not tb:
         return 0.0
-    return len(ta & tb) / min(len(ta), len(tb))
+    small, big = (ta, tb) if len(ta) <= len(tb) else (tb, ta)
+    return sum(1 for x in small if any(_same_word(x, y) for y in big)) / len(small)
 
 
 def join(events, fixtures, ev_time, fx_time):
