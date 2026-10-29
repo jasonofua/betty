@@ -45,6 +45,11 @@ then again from the games left, until the rest cannot reach --lo. Every game is 
 one code at most. 23 Oct, user: "Even if it isn't up to 100x it should still book" - a
 day that cannot reach --lo books one short code with every game picked (Thu 22 Oct had
 28 picks and no code).
+
+29 Oct, user: "whats the fix" -> "Implement them". NE2DRW lost on Wacker Innsbruck (2. Liga) v WSG Tirol
+(Bundesliga), 10-minute draw, Tirol scoring at 5' - the "12 of 14" record was built in two divisions.
+A cup or continental game between sides from different leagues now gets no leg (predict_stats.different_leagues,
+the stats picks' 14 Oct rule). Domestic league games are not checked. Not tested on these options.
 """
 import sys, math, datetime as dt, collections
 from concurrent.futures import ThreadPoolExecutor
@@ -55,6 +60,7 @@ import findings as FD
 import dynamic_v4 as D
 import book_minute_mix as M
 import book_allgames as AG
+import predict_stats as PS
 
 D5_EST, D10_EST = 48 / 49, 35 / 39          # the two draw rungs' own records (47 of 47, 34 of 37), smoothed
 D10_MAX = 1.19                               # 22 Oct: 10-minute draw only below this price
@@ -163,6 +169,27 @@ def picks(start, cut):
             cand[ev['eventId']].append(dict(ts=_ko(ev).timestamp(), match=name(ev), sel=M.sel_name(*k), odds=odds, chance=est,
                                             why=f"{how}: past games {round(r * len(r_))} of {len(r_)} ({n}+ a side)",
                                             ids=dict(eventId=ev['eventId'], productId=3, marketId=k[0], specifier=k[1] or None, outcomeId=oid)))
+    # 29 Oct: no leg on a cup or continental game between sides from different leagues (NE2DRW lost Wacker Innsbruck,
+    # 2. Liga, v WSG Tirol, Bundesliga, on the 10-minute draw at 5'). The same check the stats picks use since 14 Oct
+    # (predict_stats.different_leagues); domestic league games are not checked. Untested on the five options.
+    def cup_game(f):
+        country, _, comp = (f.get('league') or '').partition(':')
+        return country.strip().lower() in PS.CONTINENTAL or PS.is_cup(comp, country)
+    evs = {e['eventId']: e for e in rich + mins}
+    cups = [(e, f) for e, f, _ in D.join([evs[k] for k in cand if k in evs], fx, _ko, lambda f: dt.datetime.fromtimestamp(f['ts'], tz=A.WAT))
+            if cup_game(f)]
+
+    def diff(p):
+        e, f = p
+        try:
+            return e, PS.different_leagues(f)
+        except Exception:
+            return e, None
+    with ThreadPoolExecutor(10) as ex:
+        for e, d in ex.map(diff, cups):
+            if d:
+                print(f"   different leagues, skipped: {name(e)[:44]} - {d[0]} / {d[1]}", flush=True)
+                cand.pop(e['eventId'], None)
     return sorted((max(c, key=lambda o: (o['chance'], o['odds'])) for c in cand.values()), key=lambda l: l['ts'])
 
 
